@@ -5,6 +5,11 @@
 .clearfix {
   clear: both; }
 
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .nav_0 {
   width: 100%; }
 

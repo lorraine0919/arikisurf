@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*文字陰影*/
+/*文字陰影*/
+/*文字陰影*/
+.clearfix {
+  clear: both; }
+
+.nav_0 {
+  width: 100%; }
+  .nav_0 .top {
+    background-color: #11314c;
+    width: 100%;
+    height: 16vh;
+    border-bottom: 5px solid #ed8c00;
+    position: fixed;
+    background-image: url("../images/topbg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    box-sizing: border-box; }
+  .nav_0 .navDetail {
+    width: 100%;
+    max-width: 1170px;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    box-shadow: 2px 2px 10px rbga(0, 0, 0, 0.9); }
+    .nav_0 .navDetail .navfix {
+      position: fixed;
+      width: 100%;
+      left: 0; }
+      .nav_0 .navDetail .navfix .navimg {
+        margin: 1% auto;
+        width: 100%;
+        max-width: 1170px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        background-image: url("../images/nav2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 8px;
+        position: relative;
+        padding: 0.5% 0px; }
+        .nav_0 .navDetail .navfix .navimg .logo {
+          width: 14%;
+          display: inline-block;
+          padding-top: 11vh;
+          vertical-align: middle; }
+          .nav_0 .navDetail .navfix .navimg .logo img {
+            width: 180px;
+            position: absolute;
+            top: -1vh;
+            left: 5%; }
+        .nav_0 .navDetail .navfix .navimg .iconGroup {
+          display: inline-block;
+          width: 85%;
+          text-align: right;
+          vertical-align: middle; }
+          .nav_0 .navDetail .navfix .navimg .iconGroup ul li {
+            display: inline-block;
+            margin-right: 2%;
+            vertical-align: middle; }
+            .nav_0 .navDetail .navfix .navimg .iconGroup ul li img {
+              display: block;
+              margin: auto; }
+            .nav_0 .navDetail .navfix .navimg .iconGroup ul li a {
+              color: #fff; }
+          .nav_0 .navDetail .navfix .navimg .iconGroup ul li.line {
+            width: 2px;
+            height: 5vh;
+            display: inline-block;
+            background-color: #0b0b0b;
+            vertical-align: middle;
+            box-shadow: 1px 0px 0px #5b5b5b; }
+        .nav_0 .navDetail .navfix .navimg ul.menu {
+          display: inline-block;
+          margin: 0 0 -0.3% 3vw;
+          width: 60%;
+          vertical-align: bottom; }
+          .nav_0 .navDetail .navfix .navimg ul.menu li {
+            display: inline-block;
+            border-right: 1px solid #0b0b0b;
+            box-shadow: 1px 0px 0px #5b5b5b; }
+            .nav_0 .navDetail .navfix .navimg ul.menu li a {
+              padding: 1.2vw 1vw;
+              color: #fff;
+              text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+          .nav_0 .navDetail .navfix .navimg ul.menu li:last-child {
+            border-right: none;
+            box-shadow: none; }
+        .nav_0 .navDetail .navfix .navimg .idHello {
+          display: inline-block;
+          width: 34%;
+          color: #ffb472;
+          padding: 0 20px 0 0;
+          vertical-align: bottom; }
+          .nav_0 .navDetail .navfix .navimg .idHello p {
+            text-align: right; }
+          .nav_0 .navDetail .navfix .navimg .idHello span {
+            color: #fff; }
+
+.topGround_0 {
+  width: 10%;
+  height: 16vh;
+  position: relative; }

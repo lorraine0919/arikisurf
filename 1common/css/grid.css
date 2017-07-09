@@ -20,6 +20,11 @@
 	padding: 10px;
 	box-sizing: border-box;
 }
+
+
+.row{
+	margin:0 -10px;
+}
 /*.
 .container:before,
 .container:after,

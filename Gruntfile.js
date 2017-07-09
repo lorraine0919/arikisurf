@@ -40,9 +40,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'sass/',
+          cwd: 'sass/1common',
           src: ['*.scss'],
-          dest: 'css/',
+          dest: 'css/1common',
           ext: '.css'
         }]
       }
@@ -53,7 +53,7 @@ module.exports = function (grunt) {
       dev: {
         bsFiles: {
           src: [
-            'css/*.css',
+            'css/1common/*.css',
             '*.html',
             'js/*.js'
           ]

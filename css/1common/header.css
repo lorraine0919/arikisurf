@@ -19,7 +19,7 @@
   height: 16vh;
   border-bottom: 5px solid #ed8c00;
   position: fixed;
-  background-image: url("../images/topbg.png");
+  background-image: url("../../images/1common/topbg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
@@ -44,7 +44,7 @@
   width: 100%;
   max-width: 1170px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-  background-image: url("../images/nav2.png");
+  background-image: url("../../images/1common/nav2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

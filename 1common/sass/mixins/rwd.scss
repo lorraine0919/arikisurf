@@ -1,0 +1,21 @@
+@mixin respond-rwd($breakpoint){
+	@if $breakpoint =="mobile"{
+	 
+		@media all and (max-width:$mobile){
+			@content;//之後要加進去的code
+		}
+	}@else if $breakpoint =="tablelet"{
+	 
+		@media all and (min-width:$tablelet-min)and (max-width:$tablelet){
+			@content;
+		}
+	 
+	}@else if $breakpoint =="desktop"{
+	 
+		@media all and (min-width:$desktop){
+			@content;
+		}
+	 
+	}
+ 
+}

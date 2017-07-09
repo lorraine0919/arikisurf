@@ -1,5 +1,9 @@
-		$textsha:1px 1px 5px rgba(0,0,0,0.8);/*文字陰影*/
-		$top:16vh;
+@import "base/var"; //變數在這裏面
+@import "mixins/mixin"; //mixin在這裏面
+@import "layout/mobile"; //手機
+@import "layout/desktop"; //桌機
+
+
 		// %aaa{
 		// 		font-size: 20px;
 		// 		line-height: 1.8;

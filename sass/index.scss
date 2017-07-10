@@ -16,7 +16,7 @@ $top:16vh;
 		}
 		.slogan_1{
 			width: 100%;
-			padding: 20px 0;
+			padding: 20vh 0;
 			text-align: center;
 			background-color: #11314c;
 			color: #fff;
@@ -59,25 +59,36 @@ $top:16vh;
 				img{
 					position: absolute;
 				}
+				@for $i from 1 through 4{
+					img:nth-child(#{$i}){
+						top: -230px+$i*100;
+						left: -129px;
+						z-index: 5-$i;
+					}
+				}
 			}
 			.about{
 				.word{
 					background-color: #49545d;
-					padding: 10px;
+					padding: 10px 33px;
 					margin: 10px 0;
 					position: relative;
+					p{
+						font-size: 14px;
+					}
 				}
 				.word:after{
 					content: '';
 					display: block;
 					width: 0;
 					height: 0;
-					border-top:50px solid transparent;
-					border-bottom:50px solid transparent;
-					border-right:50px solid #49545d;
+				    border-top: 24px solid transparent;
+				    border-bottom: 1px solid transparent;
+				    border-right: 50px solid #49545d;
 					position: absolute;
-					top: 0;
-					left: 0;
+				    top: 27px;
+				    left: -48px;
+
 				}
 				.photo{
 					img{

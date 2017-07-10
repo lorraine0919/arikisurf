@@ -13,7 +13,7 @@
 
 .slogan_1 {
   width: 100%;
-  padding: 20px 0;
+  padding: 20vh 0;
   text-align: center;
   background-color: #11314c;
   color: #fff;
@@ -49,21 +49,39 @@
     position: relative; }
     .coating_1 .demo img {
       position: absolute; }
+    .coating_1 .demo img:nth-child(1) {
+      top: -130px;
+      left: -129px;
+      z-index: 4; }
+    .coating_1 .demo img:nth-child(2) {
+      top: -30px;
+      left: -129px;
+      z-index: 3; }
+    .coating_1 .demo img:nth-child(3) {
+      top: 70px;
+      left: -129px;
+      z-index: 2; }
+    .coating_1 .demo img:nth-child(4) {
+      top: 170px;
+      left: -129px;
+      z-index: 1; }
   .coating_1 .about .word {
     background-color: #49545d;
-    padding: 10px;
+    padding: 10px 33px;
     margin: 10px 0;
     position: relative; }
+    .coating_1 .about .word p {
+      font-size: 14px; }
   .coating_1 .about .word:after {
     content: '';
     display: block;
     width: 0;
     height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
+    border-top: 24px solid transparent;
+    border-bottom: 1px solid transparent;
     border-right: 50px solid #49545d;
     position: absolute;
-    top: 0;
-    left: 0; }
+    top: 27px;
+    left: -48px; }
   .coating_1 .about .photo img {
     width: 100%; }

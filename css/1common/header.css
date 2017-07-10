@@ -8,7 +8,8 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  text-decoration: none; }
 
 .nav_0 {
   width: 100%; }

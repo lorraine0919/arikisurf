@@ -1,52 +1,34 @@
-@charset "UTF-8";
-/*文字陰影*/
-/*文字陰影*/
-/*文字陰影*/
-.banner_1 {
-  width: 100%;
-  height: 85vh;
-  overflow: hidden;
-  background-image: url("../images/1common/banner.png");
-  background-repeat: no-repeat;
-  background-position: center; }
+/*
+Error: Invalid CP950 character "\xE8"
+        on line 1 of sass/index.scss
 
-.slogan_1 {
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-  background-color: #11314c;
-  color: #fff;
-  background-image: url("../images/1common/sloganbg.png");
-  background-position: center;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5) inset; }
-  .slogan_1 h1 {
-    margin: 10px 0; }
-  .slogan_1 h3 {
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 28px; }
+1: @import "base/var"; //變數在這裏面
+2: @import "mixins/mixin"; //mixin在這裏面
+3: @import "layout/mobile"; //手機
+4: @import "layout/desktop"; //桌機
+5: 
+6: 		.banner_1{
 
-.coating_1 {
-  box-sizing: border-box;
-  padding: 100px 0;
-  background-color: #0e2334;
-  width: 100%;
-  background-image: url("../images/1common/screw.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: contain;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
-  .coating_1 .maxContent {
-    max-width: 1000px;
-    width: 100%;
-    margin: auto; }
-  .coating_1 .introduce h2 {
-    line-height: 50px; }
-  .coating_1 .demo {
-    position: relative; }
-    .coating_1 .demo img {
-      position: absolute; }
-  .coating_1 .about .word {
-    background-color: #49545d; }
+Backtrace:
+sass/index.scss:1
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each_with_index'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `find_encoding_error'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:930:in `check_sass_encoding'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:436:in `check_encoding!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:392:in `_to_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:281:in `render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:400:in `run'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/bin/sass:13:in `<top (required)>'
+C:/Ruby24-x64/bin/sass:22:in `load'
+C:/Ruby24-x64/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CP950 character \"\xE8\"\A         on line 1 of sass/index.scss\A \A 1: @import \"base/var\"; //變數在這裏面\A 2: @import \"mixins/mixin\"; //mixin在這裏面\A 3: @import \"layout/mobile\"; //手機\A 4: @import \"layout/desktop\"; //桌機\A 5: \A 6: 		.banner_1{"; }

@@ -1,86 +1,16 @@
-*{
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-body{
-	max-width: 1680px;
-	margin: auto;
-}
-/*============清除浮動============*/
-/*:after{
-	content: '';
-	display: block;
-	clear: both;
-}*/
-/*未使用時需註解起來*/
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 微軟正黑體; }
 
-/*==1==========圖片設定============*/
-img{
-	width: 100%;
-}
-.clearfix{
-	clear: both;
-}
-.header{
-	width: 100%;
-	height: 0;
-	padding-bottom: 15%;
-	background-color: #8af;
-}
-.footer{
-	width: 100%;
-	height: 0;
-	padding-bottom: 15%;
-	background-color: hsla(0, 40%, 40%, 1.0);
-}
+.clearfix {
+  clear: both; }
 
-@media screen and (max-width:767px){
-	
-} 
-	
-
-}/*RWD結束*/
-@media screen and (min-width:768px){
-	.banner_17 img{
-		width: 100%;
-	}
-	.Business{
-			width: 100%;
-			max-width: 1000px;
-			margin: auto;
-			background-color:#ccc;
-		}
-		.Business:after{
-			content:'';
-			display:block;
-			width: 100%;
-			clear:both;
-		}
-		.leftSide_17{
-			width: 32%;
-			float: left;
-			height: 0;
-			padding-bottom: 18%;
-			background-color:#faa;
-			position: relative;	
-		}
-		.leftSide_17 img{
-			position: absolute;	
-			top: 0;	
-			left: 0;	
-		}
-		.rightSide_17{
-			float: left;
-			padding: 20px;	
-			box-sizing:border-box;
-			background-color: #fff;
-		}
-		.rightSide_17 p{
-			line-height: 2;
-			vertical-align: middle;
-		}
-
-
-
-}/*桌機結束*/
+/*RWD結束*/
+@media screen and (min-width: 768px) {
+  .banner_17 img {
+    width: 100%; } }
+/*桌機結束*/

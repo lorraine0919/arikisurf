@@ -1,11 +1,8 @@
 @charset "UTF-8";
 /*文字陰影*/
-/*文字陰影*/
-/*文字陰影*/
-/*文字陰影*/
 .banner_1 {
   width: 100%;
-  height: 85vh;
+  height: 70vh;
   overflow: hidden;
   background-image: url("../images/1common/banner.png");
   background-repeat: no-repeat;
@@ -13,12 +10,14 @@
 
 .slogan_1 {
   width: 100%;
-  padding: 20px 0;
+  padding: 20vh 0;
   text-align: center;
   background-color: #11314c;
   color: #fff;
   background-image: url("../images/1common/sloganbg.png");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5) inset; }
   .slogan_1 h1 {
@@ -49,5 +48,63 @@
     position: relative; }
     .coating_1 .demo img {
       position: absolute; }
+    .coating_1 .demo img:nth-child(1) {
+      top: -130px;
+      left: -129px;
+      z-index: 4; }
+    .coating_1 .demo img:nth-child(2) {
+      top: -30px;
+      left: -129px;
+      z-index: 3; }
+    .coating_1 .demo img:nth-child(3) {
+      top: 70px;
+      left: -129px;
+      z-index: 2; }
+    .coating_1 .demo img:nth-child(4) {
+      top: 170px;
+      left: -129px;
+      z-index: 1; }
   .coating_1 .about .word {
-    background-color: #49545d; }
+    background-color: #49545d;
+    padding: 10px 33px;
+    margin: 10px 0;
+    position: relative; }
+    .coating_1 .about .word p {
+      font-size: 14px; }
+  .coating_1 .about .word:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-right: 50px solid #49545d;
+    position: absolute;
+    top: 27px;
+    left: -48px; }
+  .coating_1 .about .photo img {
+    width: 100%; }
+
+.picture_1 {
+  padding: 20vh 0 50vh 0;
+  background-color: #18344c;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  background-image: url("../images/1common/bglight.png");
+  position: relative;
+  overflow: hidden; }
+  .picture_1 .maxContent {
+    max-width: 1170px;
+    margin: auto; }
+  .picture_1 .button a {
+    color: #fff;
+    text-shadow: none;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-weight: bold; }
+  .picture_1 .demo .surfboard {
+    position: absolute;
+    bottom: -20px; }
+    .picture_1 .demo .surfboard img {
+      width: 100%; }

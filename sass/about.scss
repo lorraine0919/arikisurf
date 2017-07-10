@@ -1,5 +1,8 @@
 @charset "UTF-8";
-
+@import "base/var"; //變數在這裏面
+@import "mixins/mixin"; //mixin在這裏面
+@import "layout/mobile"; //手機
+@import "layout/desktop"; //桌機
 
 *{
   margin: 0;
@@ -17,15 +20,34 @@
 
 }/*RWD結束*/
 @media screen and (min-width:768px){
+  .body_17{
+    max-width: 1170px;
+    margin:auto;
+  }
   .about_title{
     text-align: center;
     font-size:48px;
-    margin-top:16vh;
+    margin-top:12vh;
   }
   .banner_17 img{
     width: 100%;
   }
-    
+  
+  .rightSide_17:before{
+    content: '';
+      display: inline-block;
+      height: 50px;
+      vertical-align: middle;
+  }
+
+  .rightSide_17{
+    p{
+     margin:30px;
+     line-height: 2;
+     vertical-align: middle;
+      display: inline-block;
+    }
+  }  
     
     
    

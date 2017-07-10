@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "base/_var.scss";
 /*文字陰影*/
 /*文字陰影*/
 /*文字陰影*/
@@ -27,7 +28,7 @@
     box-sizing: border-box; }
   .nav_0 .navDetail {
     width: 100%;
-    max-width: 1170px;
+    max-width: $navmaxwidth;
     position: fixed;
     margin: auto;
     left: 0;

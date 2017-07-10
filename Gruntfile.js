@@ -25,9 +25,8 @@ module.exports = function (grunt) {
       bake: {
             build: {
                 files: {
+                   "about.html" : "app/about.html",
                     "index.html": "app/index.html",
-                    "aboutus.html" : "app/aboutus.html",
-                    "tween.html" : "app/tween.html"
                 }
             }
         },
@@ -62,7 +61,7 @@ module.exports = function (grunt) {
           watchTask: true,
           server: {
             baseDir: './',
-            index: 'index.html'
+            index: 'about.html'
           }
         }
       }

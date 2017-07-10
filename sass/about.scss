@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+  text-decoration: none;
+  font-family: 微軟正黑體;
+}
+.clearfix {
+  clear: both; }
+@media screen and (max-width:767px){
+  
+ 
+  
+
+}/*RWD結束*/
+@media screen and (min-width:768px){
+  .about_title{
+    text-align: center;
+    font-size:48px;
+    margin-top:16vh;
+  }
+  .banner_17 img{
+    width: 100%;
+  }
+    
+    
+    
+   
+    
+
+
+
+}/*桌機結束*/

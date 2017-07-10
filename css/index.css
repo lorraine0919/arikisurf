@@ -38,6 +38,10 @@
   background-size: contain;
   color: #fff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+  .coating_1 .maxContent {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto; }
   .coating_1 .introduce h2 {
     line-height: 50px; }
   .coating_1 .demo {

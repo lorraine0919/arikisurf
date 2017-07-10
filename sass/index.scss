@@ -41,6 +41,11 @@
 			background-size: contain;
 			color: #fff;
 			text-shadow: $textsha;
+			.maxContent{
+				max-width: 1000px;
+				width: 100%;
+				margin: auto;
+			}
 			.introduce{
 				h2{
 					line-height: 50px;

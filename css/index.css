@@ -1,13 +1,13 @@
 /*
-Error: Invalid CP950 character "\xE8"
+Error: Invalid CP950 character "\xE6"
         on line 1 of sass/index.scss
 
-1: @import "base/var"; //變數在這裏面
-2: @import "mixins/mixin"; //mixin在這裏面
-3: @import "layout/mobile"; //手機
-4: @import "layout/desktop"; //桌機
-5: 
-6: 		.banner_1{
+1: $textsha:1px 1px 5px rgba(0,0,0,0.8);/*文字陰影*\/
+2: $top:16vh;
+3: 
+4: @import "base/var"; //變數在這裏面
+5: @import "mixins/mixin"; //mixin在這裏面
+6: @import "layout/mobile"; //手機
 
 Backtrace:
 sass/index.scss:1
@@ -31,4 +31,4 @@ C:/Ruby24-x64/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CP950 character \"\xE8\"\A         on line 1 of sass/index.scss\A \A 1: @import \"base/var\"; //變數在這裏面\A 2: @import \"mixins/mixin\"; //mixin在這裏面\A 3: @import \"layout/mobile\"; //手機\A 4: @import \"layout/desktop\"; //桌機\A 5: \A 6: 		.banner_1{"; }
+  content: "Error: Invalid CP950 character \"\xE6\"\A         on line 1 of sass/index.scss\A \A 1: $textsha:1px 1px 5px rgba(0,0,0,0.8);/*文字陰影*/\A 2: $top:16vh;\A 3: \A 4: @import \"base/var\"; //變數在這裏面\A 5: @import \"mixins/mixin\"; //mixin在這裏面\A 6: @import \"layout/mobile\"; //手機"; }

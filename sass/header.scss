@@ -3,8 +3,7 @@
 /*文字陰影*/
 /*文字陰影*/
 /*文字陰影*/
-.clearfix {
-  clear: both; }
+/*.clearfix {clear: both; }*/
 *{
   margin: 0;
   padding: 0;
@@ -12,7 +11,103 @@
   text-decoration: none;
   font-family: 微軟正黑體;
 }
+#control{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.hb{font-size: 0px;}
+@media screen and (max-width:767px){
+/*=========清除浮動=========*/
+.navimg:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+/*=========圖片設定=========*/
+img{width: 100%;}
 
+.navfix{
+  width: 100%;
+  background-image: url("../images/1common/nav2.png");
+}
+.navimg{
+  margin: 0% 2.6%;
+  padding: 2.6% 0%;
+  position: relative;
+  background-image: url("../images/1common/nav2.png");
+}
+.logo{
+  float: left;
+  width: 11.73%;
+  height: 0px;
+  padding-bottom:11.73%; 
+}
+.menu a{
+  height: 2em;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+.menu a:hover{
+  background-color: hsla(88, 80%, 90%, 0.4);
+}
+/*=========原max-width:767px開始處=========*/
+  .iconGroup,.idHello,.topGround_0{display: none;}
+  .hb{
+    display: block;
+    width: 10%;
+    height: 0px;
+    padding-bottom: calc(10% - 5px);
+    float: right;
+    margin-top: 0.865%;
+    position: relative;
+    cursor: pointer;
+  }
+  .hb:before{
+    content: "";
+    display: block;
+    width: 80%;
+    height: 0.6vh;
+
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 10%;
+    margin: auto;
+
+    background-color:#fff;
+    box-shadow: 0vh -2vh 0vh #fff,
+                0vh 2vh 0vh #fff; 
+  }
+  .menu{
+    width: 40vh;
+    height: 0px;
+    padding-bottom: calc(100vh - 16%);
+    background-color: hsla(180, 85%, 40%, 0.7);
+    position: fixed;
+    right: -40vh;
+    bottom: 0vh;
+    transition: .5s;
+  }
+  .menu a{
+    display: block;
+    padding: 4.5% 0%;
+    font-size: 1em;
+    line-height: 2;
+  }
+  .menu li:first-child{margin-top:15%; }
+  .menu a:hover{
+    color: yellow;
+    background-color:hsla(100, 100%, 100%, 0.1);
+  }
+  #control:checked ~ .menu{right: -1vh;}
+}
+@media screen and (min-width:768px){
+.rwd{display: none;}
 .nav_0 {
   width: 100%; }
   .nav_0 .top {
@@ -114,3 +209,4 @@
   width: 10%;
   height: 16vh;
   position: relative; }
+}

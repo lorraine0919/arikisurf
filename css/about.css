@@ -46,6 +46,10 @@
     margin-top: 12vh;
     margin-bottom: 5vh; }
 
+  .business_leftSide_17 img {
+    width: 500px;
+    height: 300px; }
+
   .business_rightSide_17:before {
     content: '';
     display: inline-block;
@@ -64,6 +68,16 @@
     margin-top: 12vh;
     margin-bottom: 5vh; }
 
+  .winning_img img {
+    width: 350px;
+    height: 350px; }
+
+  .winning_text {
+    width: 350px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc; }
+
   .global_base_title {
     text-align: center;
     font-size: 40px;
@@ -71,7 +85,8 @@
     margin-bottom: 5vh; }
 
   .global_img_1, .global_img_2, .global_img_3, .global_img_4 {
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     .global_img_1 img, .global_img_2 img, .global_img_3 img, .global_img_4 img {
       width: 270px;
       height: 215px; }
@@ -83,7 +98,7 @@
     height: 215px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    z-index: 50;
+    z-index: 5;
     left: 0;
     bottom: 5px;
     color: #fff;
@@ -96,7 +111,8 @@
     height: 40px; }
 
   .text_description_1, .text_description_2, .text_description_3, .text_description_4 {
-    padding: 10px; }
+    padding: 10px;
+    display: none; }
 
   .clock, .phone, .location {
     width: 240px;
@@ -113,5 +129,9 @@
       float: left;
       line-height: 1.8;
       height: 24px;
-      text-align: center; } }
+      text-align: center; }
+
+  .range {
+    width: 1170px;
+    height: 500px; } }
 /*桌機結束*/

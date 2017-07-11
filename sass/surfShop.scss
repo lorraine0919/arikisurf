@@ -19,10 +19,12 @@
 			content: '';
 			clear: both;
 		}
-		ul{
+		.container{
+			.changebar{
+				ul{
 			display: inline-block;
 			vertical-align:bottom;
-		}
+		   }
 		
 		li{
 			outline: 1px solid red;
@@ -31,17 +33,30 @@
 			padding:5px;
 			cursor:pointer;
 			display: inline-block;
+		  }
 		}
 		
-		.aa img{
-			max-width: 200px;
+		hr{
+		/*width:1150px;*/
+		margin:auto;
+		border:0;
+		height:3px;
+		background-color: black; 
+		color:black;
 		}
-
 		img{
 			width: 100%;
 			vertical-align: middle;
 			
 		}
+	}
+		
+		
+		.aa img{
+			max-width: 200px;
+		}
+
+		
 		.everyone{
 			outline:1px solid blue;
 		}
@@ -52,15 +67,8 @@
 			padding-bottom: 20px;
 			/*outline: 1px solid steelblue*/
 		}
-		hr{
-			/*width:1150px;*/
-			margin:auto;
-			border:0;
-			height:3px;
-			background-color: black; 
-			color:black;
-		}
-        .stroke .item,
+		
+        
         .myview .item{
           /*  width:540px;*/
             /*height:200px;*/
@@ -71,16 +79,16 @@
         .myview .item{
         	margin-bottom: 30px;
         }
-        .stroke .item .txt,
+        
         .myview .item .txt{
           padding: 5px;
         }
-        .stroke .item .txt h4,
+        
         .myview .item .txt h4{
             text-align: center;
             line-height:30px;
         }
-        .stroke .item .txt p,
+        
         .myview .item .txt p{
             padding-left: 5px;
             text-indent: 30px;

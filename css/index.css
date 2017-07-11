@@ -1,24 +1,35 @@
 @charset "UTF-8";
 /*文字陰影*/
+.slogan_1, .coating_1, .picture_1, .map_1 {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  color: #fff; }
+
+.coating_1 .maxContent, .picture_1 .maxContent, .map_1 .contentMax, .forum_1 .contentMax {
+  max-width: 1170px;
+  margin: auto; }
+
+.map_1 .contentMax .introduce .introduceWord {
+  line-height: 25px; }
+  .map_1 .contentMax .introduce .introduceWord h2 {
+    margin: 15px 0; }
+
+.banner_1, .slogan_1, .picture_1 .maxContent .photoSelect .photo, .picture_1 .maxContent .photoSelect .selected:after, .map_1 {
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .banner_1 {
   width: 100%;
   height: 70vh;
   overflow: hidden;
-  background-image: url("../images/1common/banner.png");
-  background-repeat: no-repeat;
-  background-position: center; }
+  background-image: url("../images/1common/banner.png"); }
 
 .slogan_1 {
   width: 100%;
   padding: 20vh 0;
   text-align: center;
   background-color: #11314c;
-  color: #fff;
   background-image: url("../images/1common/sloganbg.png");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: contain;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5) inset; }
   .slogan_1 h1 {
     margin: 10px 0; }
@@ -35,13 +46,10 @@
   background-image: url("../images/1common/screw.png");
   background-repeat: no-repeat;
   background-position: left;
-  background-size: contain;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+  background-size: contain; }
   .coating_1 .maxContent {
     max-width: 1000px;
-    width: 100%;
-    margin: auto; }
+    width: 100%; }
   .coating_1 .introduce h2 {
     line-height: 50px; }
   .coating_1 .demo {
@@ -87,17 +95,13 @@
 
 .picture_1 {
   background-color: #18344c;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   background-image: url("../images/1common/bglight.png");
   overflow: hidden; }
   .picture_1 .maxContent {
     padding: 20vh 0 0 0;
     background-image: url("../images/1common/picselectbg.png");
     background-repeat: no-repeat;
-    background-position: 74% -129%;
-    max-width: 1170px;
-    margin: auto; }
+    background-position: 74% -129%; }
     .picture_1 .maxContent .introduce {
       padding-left: 5%; }
       .picture_1 .maxContent .introduce .introduceMax {
@@ -110,8 +114,6 @@
       padding-top: 20%;
       display: inline-block;
       background-image: url("../images/1common/insidecircle.png");
-      background-repeat: no-repeat;
-      background-position: center;
       text-align: center;
       position: relative; }
       .picture_1 .maxContent .photoSelect .photo img {
@@ -132,8 +134,6 @@
       bottom: 0;
       right: 0;
       margin: auto;
-      background-repeat: no-repeat;
-      background-position: center;
       z-index: 2; }
     .picture_1 .maxContent .button {
       padding-left: 5%; }
@@ -157,3 +157,78 @@
           position: absolute;
           bottom: 8px;
           right: 595px; }
+
+.map_1 {
+  background-color: #0e2334;
+  padding: 20vh 0 0 0;
+  background-image: url("../images/1common/maplight.png");
+  background-size: cover; }
+  .map_1 .contentMax .introduce {
+    text-align: right; }
+    .map_1 .contentMax .introduce .introduceWord {
+      display: inline-block;
+      text-align-last: left; }
+  .map_1 .contentMax .map {
+    margin: 0 0 -20vh 0; }
+    .map_1 .contentMax .map .mapimg {
+      position: relative; }
+      .map_1 .contentMax .map .mapimg .mapimgpic {
+        width: 100%; }
+      .map_1 .contentMax .map .mapimg .pin {
+        width: 8%;
+        position: absolute;
+        top: 29%;
+        left: 37%; }
+        .map_1 .contentMax .map .mapimg .pin .pinpic {
+          width: 100%; }
+
+.forum_1 {
+  padding: 20vh 0;
+  background-color: #13324c;
+  color: #fff;
+  border-bottom: 1px solid #fff; }
+  .forum_1 .title {
+    color: #e97b23; }
+  .forum_1 .postgroup .post {
+    background-color: #223d55;
+    border-radius: 10px; }
+    .forum_1 .postgroup .post .head {
+      background: #1a191c;
+      padding: 10% 10% 10% 15%;
+      border-radius: 10px 10px 0 0; }
+      .forum_1 .postgroup .post .head h3 {
+        opacity: 0.5; }
+    .forum_1 .postgroup .post .content {
+      padding: 10% 5%;
+      text-align: center; }
+      .forum_1 .postgroup .post .content div {
+        display: inline-block;
+        vertical-align: middle; }
+      .forum_1 .postgroup .post .content .mempic {
+        width: 20%; }
+        .forum_1 .postgroup .post .content .mempic img {
+          width: 100%;
+          border-radius: 50%; }
+      .forum_1 .postgroup .post .content .postcontent {
+        width: 78%;
+        text-align: left;
+        box-sizing: border-box;
+        padding: 5%; }
+        .forum_1 .postgroup .post .content .postcontent h5 {
+          font-size: 16px; }
+        .forum_1 .postgroup .post .content .postcontent p {
+          min-height: 3em; }
+      .forum_1 .postgroup .post .content .btngorup {
+        text-align: left;
+        width: 100%;
+        margin: 20px 0; }
+        .forum_1 .postgroup .post .content .btngorup .morebtn {
+          background-color: #1a191c;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-weight: bold; }
+  .forum_1 .postgroup .selected .head {
+    background: linear-gradient(#e67a23, #c7691e); }
+  .forum_1 .postgroup .selected .content .btngorup .morebtn {
+    background-color: #e97b23; }

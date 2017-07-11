@@ -1,0 +1,342 @@
+*{
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+		.people{
+			width:1500px;
+			/*height:800px;*/
+			outline:1px solid black;
+			margin:auto;
+		}
+		.all{
+			float:left;
+		}
+		.item{
+			outline:1px solid green;
+			width:300px;
+			height:800px;
+		}
+		.details{
+			/*outline:1px solid blue;*/
+			width:1200px;
+			height:800px;
+		}
+		li{
+			/*outline: 1px solid red;*/
+			text-align: center;
+			border-bottom:1px solid black;
+			padding:30px 0;
+			cursor:pointer;
+		}
+		.icon{
+			padding-top: 30px;
+			margin:auto;
+			height:200px;
+			width:200px;
+			/*outline:1px solid orange;*/
+			vertical-align: middle;
+		}
+		img{
+			width: 100%;
+			vertical-align: middle;
+			
+		}
+		.everyone{
+			width:1200px;
+			height:1000px;
+			outline:1px solid blue;
+		}
+		.title{
+			position: relative;
+		}
+		.title .point{
+			position: absolute;
+			right: 150px;
+			bottom: 15px;
+		}
+		.title h2{
+			text-indent:60px;
+			padding-top: 30px;
+			font-size:30px;
+			padding-bottom: 20px;
+			/*outline: 1px solid steelblue*/
+		}
+		.point h4{
+			font-size: 24px;
+		}
+		hr{
+			width:1150px;
+			margin:auto;
+			border:0;
+			height:3px;
+			background-color: black; 
+			color:black;
+		}
+/*--------------會員專區-------------------*/
+		.every{
+			/*outline: 1px solid red;*/
+			padding-left:100px;
+			margin-top:50px;
+			font-size:18px;
+		}
+		
+		.every p{
+			margin-top:5px;
+			margin-bottom:20px;
+		}
+		.every input{
+			padding:5px;
+			font-size: 18px;
+		}
+		.point span{
+			color:red;
+		}
+		.give input{
+			padding: 5px;
+			font-size: 18px;
+			margin-top: 20px;
+			margin-left: 500px;
+		}
+
+/*--------------好友專區-------------------*/
+		.type{
+			height:34px;
+			padding-left:100px;
+			margin-bottom: 10px;
+			position: relative;
+		}
+		.friend{
+			padding-left:100px;
+			margin-bottom: 10px;
+			position: relative;
+		}
+		.friend .search,
+		.type .search{
+			position:absolute;
+			right:100px;
+			bottom:0;
+		}
+		
+		.friend .search input,
+		.type .search input{
+			padding:5px;
+			border-radius: 10px;
+		}
+		.friend h3{
+			font-size:20px;
+			padding-top: 10px;
+			float:left;
+			margin-right: 20px;
+		}
+		.myfriend,
+		.notfriend{
+			width:1100px;
+			height:600px;
+			/*outline:1px solid green;*/
+			margin:auto;
+		}
+		td{
+			padding:5px;
+		}
+		.addview{
+			float:right;
+			margin-top:10px;
+			margin-right:100px;
+			/*outline:1px solid oransge;*/
+		}
+		.addview h3{
+			font-size: 20px;
+			cursor:pointer;
+		}
+		.myview{
+			width:1200px;
+			height:600px;
+			/*outline:1px solid red;*/
+			margin:auto;
+			margin-top:50px;
+		}
+		.myview .views{
+			width:360px;
+			height:200px;
+			outline:1px solid gold;
+			margin:20px;
+			float:left;
+		}
+		.myview .views .pic{
+			position: relative;
+		}
+		/*.myview .views .pic .delete{
+			width:20px;
+			height:20px;
+			text-align: center;
+			position: absolute;
+			right:0px;
+			top:0;
+			background-color: white
+		}
+		.myview .views .pic .delete p{
+			font-size:20px;
+			cursor:pointer;
+		}*/
+		.myview .views .pic img{
+			border-radius:0;
+			width:100%;
+		}
+		.writesearch{
+			display:inline;
+			position:relative;
+			left:915px;
+		}
+		.writesearch input{
+			padding:5px;
+			border-radius: 10px;
+			margin-top: 5px;
+		}
+        /*.group{
+            outline: 1px solid gold
+        }*/
+        .group h3{
+            display: inline-block;
+            padding-left:50px;
+            margin-left: 50PX;
+        }
+        .ing{
+            width:1200px;
+            height:600px;
+            outline:1px solid green;
+            margin-top: 10px;
+        }
+        .ing .item{
+            position: relative;
+            margin:auto;
+            width:1000px;
+            height:200px;
+            outline:1px solid red;
+            margin-bottom: 20px;
+        }
+        .ing .item .pic{
+            width:250px;
+            height:200px;
+            outline:1px solid orange;
+            overflow:hidden;
+        }
+        .ing .item .eeee:after{
+            content: '';
+            display: block;
+            width: 0px;
+            height: 0px;
+            border-top: 20px solid #f0f;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            position: absolute;
+            left: 100px;
+            
+            bottom: 180px;
+            margin: auto;
+        }
+        .ing .item .text{
+            width:750px;
+            height:200px;
+            outline:1px solid green;
+        }
+        .ing .item .text h4{
+            font-size: 20px;
+            text-align: center;
+            line-height:30px;
+        }
+        .ing .item .text p{
+            padding-left: 5px;
+            text-indent: 30px;
+        }
+        .ing .item .button{
+            position: absolute;
+            width:750px;
+            height:50px;
+            bottom:0;
+            right:0;
+            outline:1px solid steelblue;
+            text-align: right;
+            padding-right: 50px;
+            box-sizing: border-box;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+        .gggg{
+            float:left;
+        }
+        .stroke{
+            width:1200px;
+            height:600px;
+            outline:1px solid green;
+        }
+        .stroke .item,
+        .myview .item{
+            width:540px;
+            height:200px;
+            outline: 1px solid blue;
+            float: left;
+            margin:0px 30px;
+        }
+        .myview .item{
+        	margin-bottom: 30px;
+        }
+        .stroke .item .pppp,
+        .myview .item .pppp{
+            float: left;
+        }
+        .stroke .item .pic,
+        .myview .item .pic{
+            width:200px;
+            height:200px;
+            /*outline: 1px solid red;*/
+        }
+        .stroke .item .txt,
+        .myview .item .txt{
+            width:340px;
+            height:200px;
+        }
+        .stroke .item .txt h4,
+        .myview .item .txt h4{
+            text-align: center;
+            line-height:30px;
+        }
+        .stroke .item .txt p,
+        .myview .item .txt p{
+            padding-left: 5px;
+            text-indent: 30px;
+        }
+
+        .stroke .item .txt .button,
+        .myview .item .txt .button{
+            width:340px;
+            height:60px;
+            /*outline:1px solid green;*/
+            text-align: right;
+        }
+        .myview .item .txt .button input{
+        	margin-top: 20px;
+        	padding:5px;
+        	margin-right:10px;
+        }
+        .myview .item .txt .button span{
+        	margin-right:5px;
+        }
+        .myview .item .txt .button p{
+        	margin-right: 100px;
+        	display: inline-block;
+        }
+        .stroke .item .txt .button span{
+            margin-right: 60px;
+            line-height: 60px;
+            font-size: 20px;
+        }
+		.highlight{
+			background: gold;
+		}
+		.clearfix{
+			clear: both;
+		}
+/*		#qwe tr:first-child{
+			background-color: #f00;
+		}*/

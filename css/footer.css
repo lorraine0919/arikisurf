@@ -1,0 +1,71 @@
+.footer_0 .maxContent {
+  max-width: 1170px;
+  margin: auto; }
+
+.footer_0, .footer_0 .maxContent .titlegroup .itemtitle li a, .footer_0 .maxContent .left ul li a {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  color: #fff; }
+
+.footer_0 {
+  background-image: url("../images/1common/footerlight.png");
+  background-color: #313131;
+  background-repeat: no-repeat; }
+  .footer_0 .maxContent .titlegroup {
+    text-align: center;
+    padding: 20px 10px 0px 10px; }
+    .footer_0 .maxContent .titlegroup .itemtitle {
+      width: 50%;
+      padding: 10px 0; }
+      .footer_0 .maxContent .titlegroup .itemtitle li {
+        margin: 0 20px;
+        display: inline-block; }
+        .footer_0 .maxContent .titlegroup .itemtitle li a {
+          opacity: 1; }
+  .footer_0 .maxContent .titlegroup:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #616161;
+    box-shadow: 0px 1px 0px #242424; }
+  .footer_0 .maxContent .left {
+    text-align: center;
+    padding: 0px; }
+    .footer_0 .maxContent .left ul {
+      display: inline-block;
+      margin: 0 16px;
+      text-align: center;
+      vertical-align: top; }
+      .footer_0 .maxContent .left ul li {
+        margin: 5px 0; }
+        .footer_0 .maxContent .left ul li a {
+          opacity: 0.3; }
+  .footer_0 .maxContent .right {
+    text-align: right;
+    padding: 2% 18% 5% 0;
+    position: relative; }
+    .footer_0 .maxContent .right h3 {
+      font-size: 30px; }
+    .footer_0 .maxContent .right p {
+      opacity: 0.5; }
+    .footer_0 .maxContent .right a {
+      color: #313131;
+      background-color: #fff;
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 30px 0;
+      width: 20%;
+      box-sizing: border-box;
+      text-align: center;
+      text-shadow: none;
+      font-weight: bold; }
+  .footer_0 .maxContent .right:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 150px;
+    position: absolute;
+    background-color: #666666;
+    box-shadow: -1px 0px 0px #242424;
+    left: 0; }

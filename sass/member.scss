@@ -1,0 +1,255 @@
+$F2:16px;
+$F3:16px;
+$F4:16px;
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+  text-decoration: none;
+  font-family: 微軟正黑體;
+}
+/*=========清除浮動=========*/
+.navimg:after,.option20:after,.part20:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+/*=========會員專區=========*/
+.content20{
+  background-color: #ff5;
+  background-image: url(images/7member/surfingfmember.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.option20{text-align: center;}
+.option20 h2{font-size: $F2;}
+.title20{
+  width: 100%;
+  padding-bottom: 3%;
+  font-weight: bold;
+}
+.option20 li a{
+  padding: 0% 3%;
+  font-size: $F3;
+  line-height: 2;
+  color: #fff;
+  border:2px solid #fff;
+  background-color: #8af;
+}
+.main20{
+  font-size: $F4;
+  line-height: 2.5;
+  background-color: hsla(0, 0%, 100%, 0.7);
+  border-radius: 0px 0px 7px 7px;
+}
+.main20 h3{font-size: $F3;}
+/*會員專區*/
+
+#control{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.hb{font-size: 0px;}
+
+@media screen and (max-width:767px){
+
+/*=========會員專區=========*/
+.content20{padding: 3%;}
+.option20{width: 100%;}
+.option20 li a{
+  float: left;
+  width: calc(19% - 4px);
+  letter-spacing: 2px;
+  border-radius: 7px 7px 0px 0px;
+}
+.main20{
+  padding:10%;
+  width: 80%;
+}
+.main20 .part20 span{margin-right:15px;}
+/*會員專區*/
+
+/*=========圖片設定=========*/
+img{width: 100%;}
+
+.navfix{
+  width: 100%;
+  background-color: #fa0;
+}
+.navimg{
+  margin: 0% 2.6%;
+  padding: 2.6% 0%;
+  position: relative;
+  background-color: #00a;
+}
+.logo{
+  float: left;
+  width: 11.73%;
+  height: 0px;
+  padding-bottom:11.73%;
+  background-color: #000;
+}
+.menu a{
+  height: 2em;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+.menu a:hover{background-color: hsla(88, 80%, 90%, 0.4);}
+/*=========原max-width:767px開始處=========*/
+  .iconGroup,.idHello,.topGround_0{display: none;}
+  .hb{
+    display: block;
+    width: 10%;
+    height: 0px;
+    padding-bottom: calc(10% - 5px);
+    float: right;
+    margin-top: 0.865%;
+    position: relative;
+    cursor: pointer;
+  }
+  .hb:before{
+    content: "";
+    display: block;
+    width: 80%;
+    height: 0.6vh;
+
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 10%;
+    margin: auto;
+
+    background-color:#fff;
+    box-shadow: 0vh -2vh 0vh #fff,
+                0vh 2vh 0vh #fff; 
+  }
+  .menu{
+    width: 40vh;
+    height: 0px;
+    padding-bottom: calc(100vh - 16%);
+    background-color: hsla(180, 85%, 40%, 0.7);
+    position: fixed;
+    right: -40vh;
+    bottom: 0vh;
+    transition: .5s;
+  }
+  .menu a{
+    display: block;
+    padding: 4.5% 0%;
+    font-size: 1em;
+    line-height: 2;
+  }
+  .menu li:first-child{margin-top:15%; }
+  .menu a:hover{
+    color: yellow;
+    background-color:hsla(100, 100%, 100%, 0.1);
+  }
+  #control:checked ~ .menu{right: -1vh;}
+}
+@media screen and (min-width:768px){
+
+.navimg{display: none;}
+/*=========會員專區=========*/
+.content20{
+  margin-top: 16vh;
+  height: calc(84vh - 6vh - 2% - 5px);
+  padding: 1% 15% 1% 15%;
+  position: relative;
+}
+.option20{
+  border-radius: 7px 7px 0px 0px;
+  background-color: #af0;
+}
+.title20{padding: 3vh 0vh;}
+.sidebar20{
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+}
+.option20 li a{
+  width: 8.5vw;
+  display: block;
+  margin-top: 10%;
+  border-radius: 7px;
+}
+.main20{
+  padding:2% 10% 5% 10%;
+  width: 80%;
+}
+.main20 h3{
+  margin-left: 10%;
+}
+.part20{
+  width: 100%;
+  margin: auto;
+  background-color: #fa0;
+}
+.a20,.b20{
+  width: 40%;
+  float: left;
+  margin:10% 0% 10% 10%;
+  background-color: #caf;
+}
+.b20{background-color: #acc;}
+.main20 .part20 span{margin-right:15px;}
+
+/*會員專區*/
+
+  .rwd{display: none;}
+  .nav_0 .top {
+    background-color: #11314c;
+    width: 100%;
+    height: 16vh;
+    border-bottom: 5px solid #ed8c00;
+    position: fixed;
+    top:0px;/*必須得加*/
+    box-sizing: border-box; }
+  .nav_0 .navDetail {
+    width: 100%;
+    /*max-width: $navmaxwidth;*/
+    position: fixed;
+    z-index: 21;
+   }
+  .nav_0 .navDetail .navfix {
+      position: fixed;
+      width: 100%;
+      left: 0; }
+  .nav_0 .navDetail .navfix .navimg {
+        margin: 1% auto;
+        width: 100%;
+        max-width: 1170px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+        padding: 0.5% 0px; }
+  .nav_0 .navDetail .navfix .navimg .logo {
+          width: 14%;
+          display: inline-block;
+          padding-top: 11vh;
+          vertical-align: middle; }
+  .nav_0 .navDetail .navfix .navimg ul.menu {
+          display: inline-block;
+          margin: 0 0 -0.3% 3vw;
+          width: 60%;
+          vertical-align: bottom; }
+  .nav_0 .navDetail .navfix .navimg ul.menu li {
+            display: inline-block;
+  }
+  .nav_0 .navDetail .navfix .navimg ul.menu li a {
+          padding: 1.2vw 1vw;
+          color: #fff;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  }
+  .nav_0 .navDetail .navfix .navimg .idHello {
+          display: inline-block;
+          width: 34%;
+          color: #ffb472;
+          padding: 0 20px 0 0;
+          vertical-align: bottom;
+  }
+}

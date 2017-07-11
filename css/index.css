@@ -6,7 +6,8 @@
 
 .coating_1 .maxContent, .picture_1 .maxContent, .map_1 .contentMax, .forum_1 .contentMax, .bulletin_1 .maxContent {
   max-width: 1170px;
-  margin: auto; }
+  margin: auto;
+  width: 100%; }
 
 .map_1 .contentMax .introduce .introduceWord {
   line-height: 25px; }
@@ -68,22 +69,23 @@
   .coating_1 .demo {
     position: relative; }
     .coating_1 .demo img {
-      position: absolute; }
+      position: absolute;
+      width: 100%; }
     .coating_1 .demo img:nth-child(1) {
       top: -130px;
-      left: -129px;
+      left: -90px;
       z-index: 4; }
     .coating_1 .demo img:nth-child(2) {
       top: -30px;
-      left: -129px;
+      left: -90px;
       z-index: 3; }
     .coating_1 .demo img:nth-child(3) {
       top: 70px;
-      left: -129px;
+      left: -90px;
       z-index: 2; }
     .coating_1 .demo img:nth-child(4) {
       top: 170px;
-      left: -129px;
+      left: -90px;
       z-index: 1; }
   .coating_1 .about .word {
     background-color: #49545d;
@@ -127,6 +129,7 @@
       padding-top: 20%;
       display: inline-block;
       background-image: url("../images/1common/insidecircle.png");
+      background-size: contain;
       text-align: center;
       position: relative; }
       .picture_1 .maxContent .photoSelect .photo img {
@@ -147,6 +150,7 @@
       bottom: 0;
       right: 0;
       margin: auto;
+      background-size: contain;
       z-index: 2; }
     .picture_1 .maxContent .button {
       padding-left: 5%; }
@@ -168,8 +172,9 @@
           width: 100%; }
         .picture_1 .maxContent .demo .surfboard .selectpicshow {
           position: absolute;
-          bottom: 8px;
-          right: 595px; }
+          bottom: 1%;
+          right: 39%;
+          width: 20%; }
 
 .map_1 {
   background-color: #0e2334;
@@ -206,7 +211,8 @@
     .forum_1 .postgroup .post .head {
       background: #1a191c;
       padding: 10% 10% 10% 15%;
-      border-radius: 10px 10px 0 0; }
+      border-radius: 10px 10px 0 0;
+      min-height: 4.5em; }
       .forum_1 .postgroup .post .head h3 {
         opacity: 0.5; }
     .forum_1 .postgroup .post .content {
@@ -248,7 +254,8 @@
   background-color: #12314c;
   background-image: url("../images/1common/bglight.png");
   padding: 3vh 0;
-  color: #fff; }
+  color: #fff;
+  box-sizing: border-box; }
   .bulletin_1 .maxContent .title {
     margin: 20px 0; }
   .bulletin_1 .maxContent .infoarea {
@@ -295,3 +302,5 @@
       background: rgba(0, 0, 0, 0.5); }
     .bulletin_1 .maxContent .infoarea .right {
       text-align: center; }
+      .bulletin_1 .maxContent .infoarea .right img {
+        width: 100%; }

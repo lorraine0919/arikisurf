@@ -13,6 +13,7 @@ $top:16vh;
 %navmax{
 	max-width: $navmaxwidth;
 	margin: auto;
+	width: 100%;
 } 
 %h2p{
 		line-height: 25px;
@@ -90,11 +91,12 @@ $top:16vh;
 				position: relative;
 				img{
 					position: absolute;
+					width: 100%;
 				}
 				@for $i from 1 through 4{
 					img:nth-child(#{$i}){
 						top: -230px+$i*100;
-						left: -129px;
+						left: -90px;
 						z-index: 5-$i;
 					}
 				}
@@ -157,6 +159,7 @@ $top:16vh;
 						padding-top: 20%;
 						display: inline-block;
 						background-image: url('../images/1common/insidecircle.png');
+						background-size: contain;
 						@extend %bgnrpc;
 						text-align: center;
 						position: relative;
@@ -181,6 +184,7 @@ $top:16vh;
 						right: 0;
 						margin: auto;
 						@extend %bgnrpc;
+						background-size: contain;
 						z-index: 2;
 
 					}
@@ -210,8 +214,9 @@ $top:16vh;
 						}
 						.selectpicshow{
 							position: absolute;
-							bottom: 8px;
-						    right: 595px;
+							bottom: 1%;
+						    right: 39%;
+						    width: 20%;
 						}
 					}
 
@@ -275,6 +280,7 @@ $top:16vh;
 						background: #1a191c;
 						padding: 10% 10% 10% 15%;
 						border-radius:10px 10px 0 0;
+						min-height: 4.5em;
 						h3{
 							opacity: 0.5;
 						}
@@ -341,6 +347,7 @@ $top:16vh;
 			background-image: url('../images/1common/bglight.png');
 			padding: 3vh 0;
 			color: #fff;
+			box-sizing:border-box;
 			@extend %bgnrpc;
 			.maxContent{
 				@extend %navmax;
@@ -417,6 +424,9 @@ $top:16vh;
 						
 					.right{
 						text-align: center;
+						img{
+							width: 100%;
+						}
 					}
 				}
 			}

@@ -232,3 +232,12 @@
     width: 10%;
     height: 16vh;
     position: relative; } }
+@media screen and (max-width: 910px) {
+  .nav_0 .navDetail .navfix .navimg .iconGroup {
+    width: 82%; }
+  .nav_0 .navDetail .navfix .navimg ul.menu {
+    width: 53%; }
+    .nav_0 .navDetail .navfix .navimg ul.menu li a {
+      padding: 1.2vw 0.6vw; }
+  .nav_0 .navDetail .navfix .navimg .idHello {
+    width: 40%; } }

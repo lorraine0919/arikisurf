@@ -1,24 +1,45 @@
 @charset "UTF-8";
 /*文字陰影*/
+.slogan_1, .coating_1, .picture_1, .map_1 {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  color: #fff; }
+
+.coating_1 .maxContent, .picture_1 .maxContent, .map_1 .contentMax, .forum_1 .contentMax, .bulletin_1 .maxContent {
+  max-width: 1170px;
+  margin: auto; }
+
+.map_1 .contentMax .introduce .introduceWord {
+  line-height: 25px; }
+  .map_1 .contentMax .introduce .introduceWord h2 {
+    margin: 15px 0; }
+
+.banner_1, .slogan_1, .picture_1 .maxContent .photoSelect .photo, .picture_1 .maxContent .photoSelect .selected:after, .map_1, .bulletin_1, .bulletin_1 .maxContent .infoarea {
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.forum_1 .title, .bulletin_1 .maxContent .title, .bulletin_1 .maxContent .infoarea .left .news .newcontent .date p span {
+  color: #e97b23; }
+
+.bulletin_1 .maxContent .infoarea .left .news .newcontent .btn a {
+  background-color: #1a191c;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold; }
+
 .banner_1 {
   width: 100%;
   height: 70vh;
   overflow: hidden;
-  background-image: url("../images/1common/banner.png");
-  background-repeat: no-repeat;
-  background-position: center; }
+  background-image: url("../images/1common/banner.png"); }
 
 .slogan_1 {
   width: 100%;
   padding: 20vh 0;
   text-align: center;
   background-color: #11314c;
-  color: #fff;
   background-image: url("../images/1common/sloganbg.png");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: contain;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5) inset; }
   .slogan_1 h1 {
     margin: 10px 0; }
@@ -35,13 +56,10 @@
   background-image: url("../images/1common/screw.png");
   background-repeat: no-repeat;
   background-position: left;
-  background-size: contain;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+  background-size: contain; }
   .coating_1 .maxContent {
     max-width: 1000px;
-    width: 100%;
-    margin: auto; }
+    width: 100%; }
   .coating_1 .introduce h2 {
     line-height: 50px; }
   .coating_1 .demo {
@@ -86,25 +104,191 @@
     width: 100%; }
 
 .picture_1 {
-  padding: 20vh 0 50vh 0;
   background-color: #18344c;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   background-image: url("../images/1common/bglight.png");
-  position: relative;
   overflow: hidden; }
   .picture_1 .maxContent {
-    max-width: 1170px;
-    margin: auto; }
-  .picture_1 .button a {
-    color: #fff;
-    text-shadow: none;
+    padding: 20vh 0 0 0;
+    background-image: url("../images/1common/picselectbg.png");
+    background-repeat: no-repeat;
+    background-position: 74% -129%; }
+    .picture_1 .maxContent .introduce {
+      padding-left: 5%; }
+      .picture_1 .maxContent .introduce .introduceMax {
+        width: 50%;
+        line-height: 25px; }
+        .picture_1 .maxContent .introduce .introduceMax h2 {
+          margin: 15px 0; }
+    .picture_1 .maxContent .photoSelect .photo {
+      width: 16%;
+      padding-top: 20%;
+      display: inline-block;
+      background-image: url("../images/1common/insidecircle.png");
+      text-align: center;
+      position: relative; }
+      .picture_1 .maxContent .photoSelect .photo img {
+        width: 80%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        z-index: 3; }
+    .picture_1 .maxContent .photoSelect .selected:after {
+      content: '';
+      position: absolute;
+      background-image: url("../images/1common/picselected.png");
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      z-index: 2; }
+    .picture_1 .maxContent .button {
+      padding-left: 5%; }
+      .picture_1 .maxContent .button a {
+        color: #fff;
+        text-shadow: none;
+        padding: 20px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        font-weight: bold; }
+    .picture_1 .maxContent .demo {
+      padding-top: 20%;
+      position: relative; }
+      .picture_1 .maxContent .demo .surfboard {
+        position: absolute;
+        bottom: -8%;
+        right: -31%; }
+        .picture_1 .maxContent .demo .surfboard img {
+          width: 100%; }
+        .picture_1 .maxContent .demo .surfboard .selectpicshow {
+          position: absolute;
+          bottom: 8px;
+          right: 595px; }
+
+.map_1 {
+  background-color: #0e2334;
+  padding: 20vh 0 0 0;
+  background-image: url("../images/1common/maplight.png");
+  background-size: cover; }
+  .map_1 .contentMax .introduce {
+    text-align: right; }
+    .map_1 .contentMax .introduce .introduceWord {
+      display: inline-block;
+      text-align-last: left; }
+  .map_1 .contentMax .map {
+    margin: 0 0 -20vh 0; }
+    .map_1 .contentMax .map .mapimg {
+      position: relative; }
+      .map_1 .contentMax .map .mapimg .mapimgpic {
+        width: 100%; }
+      .map_1 .contentMax .map .mapimg .pin {
+        width: 8%;
+        position: absolute;
+        top: 29%;
+        left: 37%; }
+        .map_1 .contentMax .map .mapimg .pin .pinpic {
+          width: 100%; }
+
+.forum_1 {
+  padding: 20vh 0;
+  background-color: #13324c;
+  color: #fff;
+  border-bottom: 1px solid #fff; }
+  .forum_1 .postgroup .post {
+    background-color: #223d55;
+    border-radius: 10px; }
+    .forum_1 .postgroup .post .head {
+      background: #1a191c;
+      padding: 10% 10% 10% 15%;
+      border-radius: 10px 10px 0 0; }
+      .forum_1 .postgroup .post .head h3 {
+        opacity: 0.5; }
+    .forum_1 .postgroup .post .content {
+      padding: 10% 5%;
+      text-align: center; }
+      .forum_1 .postgroup .post .content div {
+        display: inline-block;
+        vertical-align: middle; }
+      .forum_1 .postgroup .post .content .mempic {
+        width: 20%; }
+        .forum_1 .postgroup .post .content .mempic img {
+          width: 100%;
+          border-radius: 50%; }
+      .forum_1 .postgroup .post .content .postcontent {
+        width: 78%;
+        text-align: left;
+        box-sizing: border-box;
+        padding: 5%; }
+        .forum_1 .postgroup .post .content .postcontent h5 {
+          font-size: 16px; }
+        .forum_1 .postgroup .post .content .postcontent p {
+          min-height: 3em; }
+      .forum_1 .postgroup .post .content .btngorup {
+        text-align: left;
+        width: 100%;
+        margin: 20px 0; }
+        .forum_1 .postgroup .post .content .btngorup .morebtn {
+          background-color: #1a191c;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-weight: bold; }
+  .forum_1 .postgroup .selected .head {
+    background: linear-gradient(#e67a23, #c7691e); }
+  .forum_1 .postgroup .selected .content .btngorup .morebtn {
+    background-color: #e97b23; }
+
+.bulletin_1 {
+  background-color: #12314c;
+  background-image: url("../images/1common/bglight.png");
+  padding: 3vh 0;
+  color: #fff; }
+  .bulletin_1 .maxContent .title {
+    margin: 20px 0; }
+  .bulletin_1 .maxContent .infoarea {
     padding: 20px;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    font-weight: bold; }
-  .picture_1 .demo .surfboard {
-    position: absolute;
-    bottom: -20px; }
-    .picture_1 .demo .surfboard img {
-      width: 100%; }
+    background-image: url("../images/1common/bulletinbg.png"); }
+    .bulletin_1 .maxContent .infoarea .left {
+      height: 450px;
+      overflow-y: scroll;
+      padding: 10px 20px; }
+      .bulletin_1 .maxContent .infoarea .left .news {
+        padding: 10px; }
+        .bulletin_1 .maxContent .infoarea .left .news div {
+          display: inline-block;
+          vertical-align: top; }
+        .bulletin_1 .maxContent .infoarea .left .news .newsimg {
+          width: 20%;
+          margin: 0 10px; }
+          .bulletin_1 .maxContent .infoarea .left .news .newsimg img {
+            width: 100%; }
+        .bulletin_1 .maxContent .infoarea .left .news .newcontent {
+          width: 65%; }
+          .bulletin_1 .maxContent .infoarea .left .news .newcontent .date p span {
+            margin: 0 5px; }
+          .bulletin_1 .maxContent .infoarea .left .news .newcontent .btn {
+            text-align: right;
+            padding: 20px 0;
+            display: block; }
+      .bulletin_1 .maxContent .infoarea .left .news:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 80%;
+        background-color: #4d6b85;
+        box-shadow: 0px 1px 0px #0d253a;
+        margin: 10px 0; }
+    .bulletin_1 .maxContent .infoarea .left::-webkit-scrollbar {
+      width: 12px;
+      /* for vertical scrollbars */
+      height: 12px;
+      /* for horizontal scrollbars */ }
+    .bulletin_1 .maxContent .infoarea .left::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1); }
+    .bulletin_1 .maxContent .infoarea .left::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.5); }
+    .bulletin_1 .maxContent .infoarea .right {
+      text-align: center; }

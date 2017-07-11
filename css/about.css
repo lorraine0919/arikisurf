@@ -11,11 +11,58 @@
 
 /*RWD結束*/
 @media screen and (min-width: 768px) {
+  .body_17 {
+    max-width: 1170px;
+    margin: auto; }
+
   .about_title {
     text-align: center;
-    font-size: 48px;
-    margin-top: 16vh; }
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh; }
 
   .banner_17 img {
-    width: 100%; } }
+    width: 100%; }
+
+  .about_rightSide_17:before {
+    content: '';
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle; }
+
+  .about_rightSide_17 p {
+    margin: 30px;
+    line-height: 2;
+    vertical-align: middle;
+    display: inline-block; }
+
+  .business_philosophy_title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh; }
+
+  .business_rightSide_17:before {
+    content: '';
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle; }
+
+  .business_rightSide_17 p {
+    margin: 30px;
+    line-height: 2;
+    vertical-align: middle;
+    display: inline-block; }
+
+  .winning_record_title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh; }
+
+  .global_base_title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh; } }
 /*桌機結束*/

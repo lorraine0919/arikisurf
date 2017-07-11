@@ -18,6 +18,7 @@
   opacity: 0;
 }
 .hb{font-size: 0px;}
+
 @media screen and (max-width:767px){
   /*=========清除浮動=========*/
   .navimg:after{
@@ -212,3 +213,27 @@
     height: 16vh;
     position: relative; }
   }
+@media screen and (max-width:910px){
+  .nav_0{
+    .navDetail{
+      .navfix{
+        .navimg{
+          .iconGroup{
+              width: 82%;
+          }
+          ul.menu{
+              width: 53%;
+              li{
+                a{
+                   padding: 1.2vw 0.6vw;
+                }
+              }
+          }
+          .idHello{
+              width: 40%;
+          }
+        }
+      }
+    }
+  }
+}

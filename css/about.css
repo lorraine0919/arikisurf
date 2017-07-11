@@ -24,6 +24,10 @@
   .banner_17 img {
     width: 100%; }
 
+  .about_leftSide_17 img {
+    width: 500px;
+    height: 300px; }
+
   .about_rightSide_17:before {
     content: '';
     display: inline-block;
@@ -64,5 +68,50 @@
     text-align: center;
     font-size: 40px;
     margin-top: 12vh;
-    margin-bottom: 5vh; } }
+    margin-bottom: 5vh; }
+
+  .global_img_1, .global_img_2, .global_img_3, .global_img_4 {
+    position: relative; }
+    .global_img_1 img, .global_img_2 img, .global_img_3 img, .global_img_4 img {
+      width: 270px;
+      height: 215px; }
+
+  .global_text_1, .global_text_2, .global_text_3, .global_text_4 {
+    width: 270px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 215px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    bottom: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.4s cubic-bezier(0.32, 0.28, 1, 1.09); }
+
+  .global_text_1:hover, .global_text_2:hover, .global_text_3:hover, .global_text_4:hover {
+    height: 40px; }
+
+  .text_description_1, .text_description_2, .text_description_3, .text_description_4 {
+    padding: 10px; }
+
+  .clock, .phone, .location {
+    width: 240px;
+    height: 40px; }
+    .clock img, .phone img, .location img {
+      margin-top: 10px;
+      margin-left: 0px;
+      margin-right: 5px;
+      width: 24px;
+      height: 24px;
+      float: left; }
+    .clock p, .phone p, .location p {
+      margin-top: 10px;
+      float: left;
+      line-height: 1.8;
+      height: 24px;
+      text-align: center; } }
 /*桌機結束*/

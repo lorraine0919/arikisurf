@@ -64,6 +64,8 @@
   .coating_1 .maxContent {
     max-width: 1000px;
     width: 100%; }
+  .coating_1 .demorwd {
+    display: none; }
   .coating_1 .introduce h2 {
     line-height: 50px; }
   .coating_1 .demo {
@@ -311,4 +313,49 @@
   .coating_1 .maxContent .demo {
     display: none; }
   .coating_1 .maxContent .about {
-    display: none; } }
+    display: none; }
+  .coating_1 .maxContent .demorwd {
+    display: block;
+    position: relative; }
+    .coating_1 .maxContent .demorwd .demoimg {
+      width: 55%;
+      margin: auto; }
+      .coating_1 .maxContent .demorwd .demoimg img {
+        width: 100%; }
+    .coating_1 .maxContent .demorwd .arrowleft {
+      width: 150px;
+      height: 210px;
+      border-radius: 50%;
+      background-color: #3E4F5D;
+      position: absolute;
+      left: -83px;
+      top: 31%;
+      cursor: pointer; }
+      .coating_1 .maxContent .demorwd .arrowleft .arrowfix {
+        width: 27%;
+        position: absolute;
+        left: 88px;
+        top: 61px; }
+        .coating_1 .maxContent .demorwd .arrowleft .arrowfix img {
+          width: 100%; }
+    .coating_1 .maxContent .demorwd .arrowright {
+      content: '';
+      display: block;
+      width: 150px;
+      height: 210px;
+      border-radius: 50%;
+      background-color: #3E4F5D;
+      position: absolute;
+      right: -83px;
+      top: 31%;
+      cursor: pointer; }
+      .coating_1 .maxContent .demorwd .arrowright .arrowfix {
+        width: 27%;
+        position: absolute;
+        right: 88px;
+        top: 61px; }
+        .coating_1 .maxContent .demorwd .arrowright .arrowfix img {
+          width: 100%; }
+  .coating_1 .maxContent .introduce {
+    text-align: center;
+    width: 100%; } }

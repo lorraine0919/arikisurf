@@ -82,6 +82,9 @@ $top:16vh;
 				max-width: 1000px;
 				width: 100%;
 			}
+			.demorwd{
+				display: none;
+			}
 			.introduce{
 				h2{
 					line-height: 50px;
@@ -442,6 +445,62 @@ $top:16vh;
 			}
 			.about{
 				display: none;
+			}
+			.demorwd{
+				display: block;
+				position: relative;
+				.demoimg{
+					width: 55%;
+					margin: auto;
+					img{
+						width: 100%;
+					}				
+				}
+				.arrowleft{
+					width: 150px;
+					height: 210px;
+					border-radius: 50%;
+					background-color:#3E4F5D;
+					position: absolute;
+					left: -83px;
+					top: 31%;
+					cursor: pointer;
+					.arrowfix{
+					    width: 27%;
+					    position: absolute;
+					    left: 88px;
+					    top: 61px;
+						img{
+							width: 100%;
+						}
+					}
+				}
+				.arrowright{
+					content: '';
+					display: block;
+					width: 150px;
+					height: 210px;
+					border-radius: 50%;
+					background-color: #3E4F5D;
+					position: absolute;
+					right:  -83px;
+					top: 31%;
+					cursor: pointer;
+					.arrowfix{
+					    width: 27%;
+					    position: absolute;
+					    right: 88px;
+					    top: 61px;
+						img{
+							width: 100%;
+						}
+					}
+				}
+
+			}
+			.introduce {
+				text-align: center;
+				width: 100%;
 			}
 		}
 	}

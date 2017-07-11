@@ -10,31 +10,27 @@
 			max-height: 200px;
 			overflow: hidden;
 		}
-		@media screen and (max-width:767px) {
-			.all{
-				max-height: 100px;
-			}
-		}
+		
 		.item:after{
 			content: '';
 			clear: both;
 		}
 		.container{
 			.changebar{
-				ul{
+			ul{
 			display: inline-block;
 			vertical-align:bottom;
 		   }
 		
-		li{
+		   li{
 			outline: 1px solid red;
 			text-align: center;
 			border-bottom:1px solid black;
 			padding:5px;
 			cursor:pointer;
 			display: inline-block;
+		    }
 		  }
-		}
 		
 		hr{
 		/*width:1150px;*/
@@ -68,20 +64,46 @@
 			/*outline: 1px solid steelblue*/
 		}
 		
-        
+        .myview {
+        	overflow: scroll;
+        	height: 550px;	
+        }
+        .myview::-webkit-scrollbar{
+        	width: 12px;
+	      /* for vertical scrollbars */
+	      	height: 12px;
+        }
+        .myview::-webkit-scrollbar-track,
+        .myview::-webkit-scrollbar-thumb{
+        	background: rgba(0, 0, 0, 0.1);
+        }
         .myview .item{
           /*  width:540px;*/
             /*height:200px;*/
             outline: 1px solid blue;
             vertical-align: middle;
             /*margin:0px 30px;*/
+          .btngorup{
+             margin: auto;
+             text-align: center;
+          }
+         .btngorup .morebtn {
+          background-color: #1a191c;
+          padding: 5px;
+          border-radius: 5px;
+          color: #fff;
+          font-weight: bold; 
+         }
         }
         .myview .item{
-        	margin-bottom: 30px;
+        	margin: 10px 0px;
         }
         
         .myview .item .txt{
           padding: 5px;
+        }
+        .myview .item .pic{
+          padding: 10px;
         }
         
         .myview .item .txt h4{
@@ -95,4 +117,20 @@
         }
 		.clearfix{
 			clear: both;
+		}
+		@media screen and (max-width:767px) {
+			.all{
+				max-height: 100px;
+			}
+			.myview {
+        	overflow: scroll;
+        	height: 350px;	
+          }
+          .container{
+			.changebar{
+		   li{
+			font-size: 15px;
+		    }
+		   }
+		  }
 		}

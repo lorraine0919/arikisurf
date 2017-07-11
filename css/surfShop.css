@@ -1,90 +1,82 @@
+.container {
+  max-width: 1170px;
+  outline: 1px solid black; }
 
-		.container{
-			max-width: 1170px;
-			outline:1px solid black;
-		}
-		/*S*/
-		.all{
-			outline:1px solid green;
-			display: inline-block;
-			max-height: 200px;
-			overflow: hidden;
-		}
-		@media screen and (max-width:767px) {
-			.all{
-				max-height: 100px;
-			}
-		}
-		.item:after{
-			content: '';
-			clear: both;
-		}
-		ul{
-			display: inline-block;
-			vertical-align:bottom;
-		}
-		
-		li{
-			outline: 1px solid red;
-			text-align: center;
-			border-bottom:1px solid black;
-			padding:5px;
-			cursor:pointer;
-			display: inline-block;
-		}
-		
-		.aa img{
-			max-width: 200px;
-		}
+/*S*/
+.all {
+  outline: 1px solid green;
+  display: inline-block;
+  max-height: 200px;
+  overflow: hidden; }
 
-		img{
-			width: 100%;
-			vertical-align: middle;
-			
-		}
-		.everyone{
-			outline:1px solid blue;
-		}
-		.title h2{
-			text-indent:60px;
-			padding-top: 30px;
-			font-size:30px;
-			padding-bottom: 20px;
-			/*outline: 1px solid steelblue*/
-		}
-		hr{
-			/*width:1150px;*/
-			margin:auto;
-			border:0;
-			height:3px;
-			background-color: black; 
-			color:black;
-		}
-        .stroke .item,
-        .myview .item{
-          /*  width:540px;*/
-            /*height:200px;*/
-            outline: 1px solid blue;
-            vertical-align: middle;
-            /*margin:0px 30px;*/
-        }
-        .myview .item{
-        	margin-bottom: 30px;
-        }
-        .stroke .item .txt,
-        .myview .item .txt{
-          padding: 5px;
-        }
-        .stroke .item .txt h4,
-        .myview .item .txt h4{
-            text-align: center;
-            line-height:30px;
-        }
-        .stroke .item .txt p,
-        .myview .item .txt p{
-            padding-left: 5px;
-            text-indent: 30px;
-        }
-		.clearfix{
-			clear: both;
-		}
+@media screen and (max-width: 767px) {
+  .all {
+    max-height: 100px; } }
+.item:after {
+  content: '';
+  clear: both; }
+
+ul {
+  display: inline-block;
+  vertical-align: bottom; }
+
+li {
+  outline: 1px solid red;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+  display: inline-block; }
+
+.aa img {
+  max-width: 200px; }
+
+img {
+  width: 100%;
+  vertical-align: middle; }
+
+.everyone {
+  outline: 1px solid blue; }
+
+.title h2 {
+  text-indent: 60px;
+  padding-top: 30px;
+  font-size: 30px;
+  padding-bottom: 20px;
+  /*outline: 1px solid steelblue*/ }
+
+hr {
+  /*width:1150px;*/
+  margin: auto;
+  border: 0;
+  height: 3px;
+  background-color: black;
+  color: black; }
+
+.stroke .item,
+.myview .item {
+  /*  width:540px;*/
+  /*height:200px;*/
+  outline: 1px solid blue;
+  vertical-align: middle;
+  /*margin:0px 30px;*/ }
+
+.myview .item {
+  margin-bottom: 30px; }
+
+.stroke .item .txt,
+.myview .item .txt {
+  padding: 5px; }
+
+.stroke .item .txt h4,
+.myview .item .txt h4 {
+  text-align: center;
+  line-height: 30px; }
+
+.stroke .item .txt p,
+.myview .item .txt p {
+  padding-left: 5px;
+  text-indent: 30px; }
+
+.clearfix {
+  clear: both; }

@@ -17,21 +17,52 @@
 
   .about_title {
     text-align: center;
-    font-size: 48px;
-    margin-top: 12vh; }
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh; }
 
   .banner_17 img {
     width: 100%; }
 
-  .rightSide_17:before {
+  .about_rightSide_17:before {
     content: '';
     display: inline-block;
     height: 50px;
     vertical-align: middle; }
 
-  .rightSide_17 p {
+  .about_rightSide_17 p {
     margin: 30px;
     line-height: 2;
     vertical-align: middle;
-    display: inline-block; } }
+    display: inline-block; }
+
+  .business_philosophy_title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh; }
+
+  .business_rightSide_17:before {
+    content: '';
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle; }
+
+  .business_rightSide_17 p {
+    margin: 30px;
+    line-height: 2;
+    vertical-align: middle;
+    display: inline-block; }
+
+  .winning_record_title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh; }
+
+  .global_base_title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh; } }
 /*桌機結束*/

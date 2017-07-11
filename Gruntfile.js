@@ -27,6 +27,7 @@ module.exports = function (grunt) {
                 files: {
                    "about.html" : "app/about.html",
                     "index.html": "app/index.html",
+                    "surfShop.html":"app/surfShop.html"
                 }
             }
         },
@@ -61,7 +62,7 @@ module.exports = function (grunt) {
           watchTask: true,
           server: {
             baseDir: './',
-            index: 'about.html'
+            index: 'surfShop.html'
           }
         }
       }

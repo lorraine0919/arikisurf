@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@import "base/var"; //變數在這裏面
+@import "mixins/mixin"; //mixin在這裏面
+@import "layout/mobile"; //手機
+@import "layout/desktop"; //桌機
+
+%navmax{
+	max-width: $navmaxwidth;
+	margin: auto;
+} 
+%whiteword{
+	text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+	color: #fff;
+}
+.footer_0{
+	background-image: url('../images/1common/footerlight.png');
+	background-color: #313131;
+	background-repeat: no-repeat;
+	@extend %whiteword;
+	.maxContent{
+		@extend %navmax;
+		.titlegroup{
+			text-align: center;
+			padding: 20px 10px 0px 10px;
+			.itemtitle{
+				width: 50%;
+				padding: 10px 0;
+				li{
+					margin: 0 20px;
+					display: inline-block;
+					a{
+						opacity: 1;
+						@extend %whiteword;
+					}
+				}
+			}
+		}
+
+		.titlegroup:after{
+			content: '';
+			display: block;
+			height: 1px;
+			width: 100%;
+			margin: 10px 0;
+			background-color: #616161;
+			box-shadow: 0px 1px 0px #242424;
+		}
+		.left{
+			text-align: center;
+			padding: 0px;
+			ul{
+				display: inline-block;
+				margin: 0 16px;
+				text-align: center;
+				vertical-align: top;
+				li{
+					margin: 5px 0;
+					a{
+						@extend %whiteword;
+						opacity: 0.3;
+					}
+				}
+			}
+		}
+		.right{
+			text-align: right;
+			padding: 2% 18% 5% 0 ;
+			position: relative;
+			h3{
+				font-size: 30px;
+			}
+			p{
+				opacity: 0.5;
+			}
+			a{
+				color: #313131;
+				background-color: #fff;
+				display: inline-block;
+				padding:10px 20px;
+				margin: 30px 0;
+				width: 33%;
+				box-sizing:border-box;
+				text-align: center;
+				text-shadow:none;
+				font-weight: bold;
+			}
+		}
+		.right:before{
+			content: '';
+			display: inline-block;
+			width: 1px;
+			height: 150px;
+			position: absolute;
+			background-color: #666666;
+			box-shadow: -1px 0px 0px #242424;
+			left: 0; 
+		}
+	}
+}

@@ -19,194 +19,196 @@
 }
 .hb{font-size: 0px;}
 @media screen and (max-width:767px){
-/*=========清除浮動=========*/
-.navimg:after{
-  content: '';
-  display: block;
-  clear: both;
-}
-/*=========圖片設定=========*/
-img{width: 100%;}
-
-.navfix{
-  width: 100%;
-  background-image: url("../images/1common/nav2.png");
-}
-.navimg{
-  margin: 0% 2.6%;
-  padding: 2.6% 0%;
-  position: relative;
-  background-image: url("../images/1common/nav2.png");
-}
-.logo{
-  float: left;
-  width: 11.73%;
-  height: 0px;
-  padding-bottom:11.73%; 
-}
-.menu a{
-  height: 2em;
-  line-height: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-}
-.menu a:hover{
-  background-color: hsla(88, 80%, 90%, 0.4);
-}
-/*=========原max-width:767px開始處=========*/
-  .iconGroup,.idHello,.topGround_0{display: none;}
-  .hb{
+  /*=========清除浮動=========*/
+  .navimg:after{
+    content: '';
     display: block;
-    width: 10%;
-    height: 0px;
-    padding-bottom: calc(10% - 5px);
-    float: right;
-    margin-top: 0.865%;
+    clear: both;
+  }
+  /*=========圖片設定=========*/
+  img{width: 100%;}
+
+  .navfix{
+    width: 100%;
+    background-image: url("../images/1common/nav2.png");
+  }
+  .navimg{
+    margin: 0% 2.6%;
+    padding: 2.6% 0%;
     position: relative;
-    cursor: pointer;
+    background-image: url("../images/1common/nav2.png");
   }
-  .hb:before{
-    content: "";
-    display: block;
-    width: 80%;
-    height: 0.6vh;
-
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 10%;
-    margin: auto;
-
-    background-color:#fff;
-    box-shadow: 0vh -2vh 0vh #fff,
-                0vh 2vh 0vh #fff; 
-  }
-  .menu{
-    width: 40vh;
+  .logo{
+    float: left;
+    width: 11.73%;
     height: 0px;
-    padding-bottom: calc(100vh - 16%);
-    background-color: hsla(180, 85%, 40%, 0.7);
-    position: fixed;
-    right: -40vh;
-    bottom: 0vh;
-    transition: .5s;
+    padding-bottom:11.73%; 
   }
   .menu a{
-    display: block;
-    padding: 4.5% 0%;
-    font-size: 1em;
-    line-height: 2;
+    height: 2em;
+    line-height: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
   }
-  .menu li:first-child{margin-top:15%; }
   .menu a:hover{
-    color: yellow;
-    background-color:hsla(100, 100%, 100%, 0.1);
+    background-color: hsla(88, 80%, 90%, 0.4);
   }
-  #control:checked ~ .menu{right: -1vh;}
+  /*=========原max-width:767px開始處=========*/
+  .iconGroup,.idHello,.topGround_0{
+        display: none;
+  }
+    .hb{
+      display: block;
+      width: 10%;
+      height: 0px;
+      padding-bottom: calc(10% - 5px);
+      float: right;
+      margin-top: 0.865%;
+      position: relative;
+      cursor: pointer;
+    }
+    .hb:before{
+      content: "";
+      display: block;
+      width: 80%;
+      height: 0.6vh;
+
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 10%;
+      margin: auto;
+
+      background-color:#fff;
+      box-shadow: 0vh -2vh 0vh #fff,
+                  0vh 2vh 0vh #fff; 
+    }
+    .menu{
+      width: 40vh;
+      height: 0px;
+      padding-bottom: calc(100vh - 16%);
+      background-color: hsla(180, 85%, 40%, 0.7);
+      position: fixed;
+      right: -40vh;
+      bottom: 0vh;
+      transition: .5s;
+    }
+    .menu a{
+      display: block;
+      padding: 4.5% 0%;
+      font-size: 1em;
+      line-height: 2;
+    }
+    .menu li:first-child{margin-top:15%; }
+    .menu a:hover{
+      color: yellow;
+      background-color:hsla(100, 100%, 100%, 0.1);
+    }
+    #control:checked ~ .menu{right: -1vh;}
 }
 @media screen and (min-width:768px){
-.rwd{display: none;}
-.nav_0 {
-  width: 100%; }
-  .nav_0 .top {
-    background-color: #11314c;
-    width: 100%;
-    height: 16vh;
-    border-bottom: 5px solid #ed8c00;
-    position: fixed;
-    background-image: url("../images/1common/topbg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80%;
-    z-index: 20;
-    box-sizing: border-box; }
-  .nav_0 .navDetail {
-    width: 100%;
-    max-width: $navmaxwidth;
-    position: fixed;
-    z-index: 21;
-    margin: auto;
-    left: 0;
-    right: 0;
-    box-shadow: 2px 2px 10px rbga(0, 0, 0, 0.9); }
-    .nav_0 .navDetail .navfix {
-      position: fixed;
+  .rwd{display: none;}
+  .nav_0 {
+    width: 100%; }
+    .nav_0 .top {
+      background-color: #11314c;
       width: 100%;
-      left: 0; }
-      .nav_0 .navDetail .navfix .navimg {
-        margin: 1% auto;
+      height: 16vh;
+      border-bottom: 5px solid #ed8c00;
+      position: fixed;
+      background-image: url("../images/1common/topbg.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80%;
+      z-index: 20;
+      box-sizing: border-box; }
+    .nav_0 .navDetail {
+      width: 100%;
+      max-width: $navmaxwidth;
+      position: fixed;
+      z-index: 21;
+      margin: auto;
+      left: 0;
+      right: 0;
+      box-shadow: 2px 2px 10px rbga(0, 0, 0, 0.9); }
+      .nav_0 .navDetail .navfix {
+        position: fixed;
         width: 100%;
-        max-width: 1170px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        background-image: url("../images/1common/nav2.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        border-radius: 8px;
-        position: relative;
-        padding: 0.5% 0px; }
-        .nav_0 .navDetail .navfix .navimg .logo {
-          width: 14%;
-          display: inline-block;
-          padding-top: 11vh;
-          vertical-align: middle; }
-          .nav_0 .navDetail .navfix .navimg .logo img {
-            width: 180px;
-            position: absolute;
-            top: -1vh;
-            left: 5%; }
-        .nav_0 .navDetail .navfix .navimg .iconGroup {
-          display: inline-block;
-          width: 85%;
-          text-align: right;
-          vertical-align: middle; }
-          .nav_0 .navDetail .navfix .navimg .iconGroup ul li {
+        left: 0; }
+        .nav_0 .navDetail .navfix .navimg {
+          margin: 1% auto;
+          width: 100%;
+          max-width: 1170px;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+          background-image: url("../images/1common/nav2.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          border-radius: 8px;
+          position: relative;
+          padding: 0.5% 0px; }
+          .nav_0 .navDetail .navfix .navimg .logo {
+            width: 14%;
             display: inline-block;
-            margin-right: 2%;
+            padding-top: 11vh;
             vertical-align: middle; }
-            .nav_0 .navDetail .navfix .navimg .iconGroup ul li img {
-              display: block;
-              margin: auto; }
-            .nav_0 .navDetail .navfix .navimg .iconGroup ul li a {
+            .nav_0 .navDetail .navfix .navimg .logo img {
+              width: 180px;
+              position: absolute;
+              top: -1vh;
+              left: 5%; }
+          .nav_0 .navDetail .navfix .navimg .iconGroup {
+            display: inline-block;
+            width: 85%;
+            text-align: right;
+            vertical-align: middle; }
+            .nav_0 .navDetail .navfix .navimg .iconGroup ul li {
+              display: inline-block;
+              margin-right: 2%;
+              vertical-align: middle; }
+              .nav_0 .navDetail .navfix .navimg .iconGroup ul li img {
+                display: block;
+                margin: auto; }
+              .nav_0 .navDetail .navfix .navimg .iconGroup ul li a {
+                color: #fff; }
+            .nav_0 .navDetail .navfix .navimg .iconGroup ul li.line {
+              width: 2px;
+              height: 5vh;
+              display: inline-block;
+              background-color: #0b0b0b;
+              vertical-align: middle;
+              box-shadow: 1px 0px 0px #5b5b5b; }
+          .nav_0 .navDetail .navfix .navimg ul.menu {
+            display: inline-block;
+            margin: 0 0 -0.3% 3vw;
+            width: 60%;
+            vertical-align: bottom; }
+            .nav_0 .navDetail .navfix .navimg ul.menu li {
+              display: inline-block;
+              border-right: 1px solid #0b0b0b;
+              box-shadow: 1px 0px 0px #5b5b5b; }
+              .nav_0 .navDetail .navfix .navimg ul.menu li a {
+                padding: 1.2vw 1vw;
+                color: #fff;
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+            .nav_0 .navDetail .navfix .navimg ul.menu li:last-child {
+              border-right: none;
+              box-shadow: none; }
+          .nav_0 .navDetail .navfix .navimg .idHello {
+            display: inline-block;
+            width: 28%;
+            color: #ffb472;
+            padding: 0 20px 0 0;
+            vertical-align: bottom; }
+            .nav_0 .navDetail .navfix .navimg .idHello p {
+              text-align: right; }
+            .nav_0 .navDetail .navfix .navimg .idHello span {
               color: #fff; }
-          .nav_0 .navDetail .navfix .navimg .iconGroup ul li.line {
-            width: 2px;
-            height: 5vh;
-            display: inline-block;
-            background-color: #0b0b0b;
-            vertical-align: middle;
-            box-shadow: 1px 0px 0px #5b5b5b; }
-        .nav_0 .navDetail .navfix .navimg ul.menu {
-          display: inline-block;
-          margin: 0 0 -0.3% 3vw;
-          width: 60%;
-          vertical-align: bottom; }
-          .nav_0 .navDetail .navfix .navimg ul.menu li {
-            display: inline-block;
-            border-right: 1px solid #0b0b0b;
-            box-shadow: 1px 0px 0px #5b5b5b; }
-            .nav_0 .navDetail .navfix .navimg ul.menu li a {
-              padding: 1.2vw 1vw;
-              color: #fff;
-              text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
-          .nav_0 .navDetail .navfix .navimg ul.menu li:last-child {
-            border-right: none;
-            box-shadow: none; }
-        .nav_0 .navDetail .navfix .navimg .idHello {
-          display: inline-block;
-          width: 34%;
-          color: #ffb472;
-          padding: 0 20px 0 0;
-          vertical-align: bottom; }
-          .nav_0 .navDetail .navfix .navimg .idHello p {
-            text-align: right; }
-          .nav_0 .navDetail .navfix .navimg .idHello span {
-            color: #fff; }
 
-.topGround_0 {
-  width: 10%;
-  height: 16vh;
-  position: relative; }
-}
+  .topGround_0 {
+    width: 10%;
+    height: 16vh;
+    position: relative; }
+  }

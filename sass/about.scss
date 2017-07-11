@@ -1,5 +1,8 @@
 @charset "UTF-8";
-
+@import "base/var"; //變數在這裏面
+@import "mixins/mixin"; //mixin在這裏面
+@import "layout/mobile"; //手機
+@import "layout/desktop"; //桌機
 
 *{
   margin: 0;
@@ -17,19 +20,160 @@
 
 }/*RWD結束*/
 @media screen and (min-width:768px){
+  .body_17{
+    max-width: 1170px;
+    margin:auto;
+  }
   .about_title{
     text-align: center;
-    font-size:48px;
-    margin-top:16vh;
+    font-size:40px;
+    margin-top:12vh;
+    margin-bottom: 5vh;
+
   }
   .banner_17 img{
     width: 100%;
   }
-    
-    
+
+  .about_leftSide_17{
+    img{
+      width: 500px;
+      height: 300px;
+    }
+  }
+
+  
+  .about_rightSide_17:before{
+      content: '';
+      display: inline-block;
+      height: 50px;
+      vertical-align: middle;
+  }
+
+  .about_rightSide_17{
+    p{
+     margin:30px;
+     line-height: 2;
+     vertical-align: middle;
+      display: inline-block;
+    }
+  } 
+  .business_philosophy_title{
+      text-align: center;
+      font-size:40px;
+      margin-top:12vh;
+      margin-bottom: 5vh;
+  } 
+  .business_leftSide_17{
+    img{
+      width: 500px;
+      height: 300px;
+    }
+  }
+  .business_rightSide_17:before{
+      content: '';
+      display: inline-block;
+      height: 50px;
+      vertical-align: middle;
+  }
+  .business_rightSide_17{
+    p{
+     margin:30px;
+     line-height: 2;
+     vertical-align: middle;
+      display: inline-block;
+    }
+  } 
+
+  .winning_record_title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+  }
+
+  .winning_img{
+    img{
+      width: 350px;
+      height: 350px;
+    }
+  }
+  .winning_text{
+    width: 350px;
+    box-sizing:border-box;
+    padding:10px;
+    border:1px solid #ccc;
+  }
+
+  .global_base_title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+  }
+
+ .global_img_1 ,.global_img_2 ,.global_img_3 ,.global_img_4{
+  position: relative;
+  cursor: pointer;
+
+  img{
+    width: 270px;
+    height: 215px;
+  }
+ }
+ 
+
+ .global_text_1 ,.global_text_2 ,.global_text_3 ,.global_text_4{
+    width: 270px;
+    padding: 10px;
+    box-sizing:border-box;
+    height: 215px;
+    background-color:rgba(0, 0, 0, 0.5);
+    position: absolute; 
+    z-index: 5; 
+    left: 0;  
+    bottom: 5px;  
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:height .4s cubic-bezier(.32,.28,1,1.09);
+
+ } 
+ .global_text_1:hover ,.global_text_2:hover ,.global_text_3:hover ,.global_text_4:hover{
+  height: 40px;
+ }
+
+  .text_description_1 ,.text_description_2 ,.text_description_3 ,.text_description_4{
+    padding:10px;
+    display:none;  
+     }
+
+  .clock ,.phone ,.location {
+    width: 240px;
+    height: 40px;
+    img{
+      margin-top:10px;
+      margin-left:0px;
+      margin-right:5px;
+      width: 24px;
+      height: 24px;
+      float: left; }
+    p{
+      margin-top:10px;
+      float: left;
+      line-height:1.8;
+      height: 24px;
+      text-align:center;} 
+    }
+  .range{
+    width: 1170px;
+    height: 500px;
+  }
+  
     
    
-    
+
 
 
 

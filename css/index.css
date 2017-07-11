@@ -422,7 +422,7 @@
     padding: 11vh 0 0 0; }
     .map_1 .contentMax .maprwd {
       display: block;
-      margin: 0 0 -20vh 0; }
+      margin: 0 0 0 0; }
       .map_1 .contentMax .maprwd .mapimg {
         position: relative; }
         .map_1 .contentMax .maprwd .mapimg .mapimgpic {
@@ -442,7 +442,7 @@
       display: none; }
 
   .forum_1 {
-    padding: 20vh 10px 0 10px; }
+    padding: 10px 10px 0 10px; }
     .forum_1 .contentMax .title {
       display: none; }
     .forum_1 .contentMax .postgroup {
@@ -464,4 +464,16 @@
       .forum_1 .contentMax .postgroup .postfix:nth-child(2) {
         left: -71%; }
       .forum_1 .contentMax .postgroup .postfix:nth-child(3) {
-        right: -160%; } }
+        right: -160%; }
+
+  .bulletin_1 .maxContent .title {
+    text-align: center; }
+  .bulletin_1 .maxContent .infoarea {
+    background-position: top;
+    background-size: contain;
+    width: 85%;
+    margin: auto; }
+    .bulletin_1 .maxContent .infoarea .left {
+      height: auto; }
+    .bulletin_1 .maxContent .infoarea .right {
+      display: none; } }

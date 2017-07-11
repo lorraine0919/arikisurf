@@ -588,7 +588,7 @@ $top:16vh;
 		.contentMax{
 			.maprwd{
 				display: block;
-				margin: 0 0 -20vh 0;
+				margin: 0 0 0 0;
 				.mapimg{
 					position: relative;
 					.mapimgpic{
@@ -619,7 +619,7 @@ $top:16vh;
 		}
 	}
 	.forum_1{
-		padding: 20vh 10px 0 10px;
+		padding: 10px 10px 0 10px;
 		.contentMax{
 			.title{
 				display: none;
@@ -648,6 +648,25 @@ $top:16vh;
 				}
 				.postfix:nth-child(3){
 					 right: -160%;
+				}
+			}
+		}
+	}
+	.bulletin_1{
+		.maxContent{
+			.title{
+				text-align: center;
+			}
+			.infoarea{
+				background-position: top;
+				background-size: contain;
+				width: 85%;
+				margin: auto;
+				.left {
+					height: auto;
+				}
+				.right {
+					display: none;
 				}
 			}
 		}

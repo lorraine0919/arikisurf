@@ -39,6 +39,17 @@
 	width: 100%;
 	clear: both;
 }*/
+
+div[class*=col-xs-push],
+div[class*=col-sm-push],
+div[class*=col-md-push],
+div[class*=col-lg-push],
+div[class*=col-xs-pull],
+div[class*=col-sm-pull],
+div[class*=col-md-pull],
+div[class*=col-lg-pull]{
+  position: relative;
+}
 @media screen and (max-width: 767px){
 	.col-xs-1{width: 8.333333%;}
 	.col-xs-2{width: 16.666666%;}

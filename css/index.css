@@ -13,7 +13,7 @@
   .map_1 .contentMax .introduce .introduceWord h2 {
     margin: 15px 0; }
 
-.banner_1, .slogan_1, .picture_1 .maxContent .photoSelect .photo, .picture_1 .maxContent .photoSelect .selected:after, .map_1, .bulletin_1, .bulletin_1 .maxContent .infoarea {
+.banner_1, .slogan_1, .slogan_1 .gradient, .picture_1 .maxContent .photoSelect .photo, .picture_1 .maxContent .photoSelect .selected:after, .map_1, .bulletin_1, .bulletin_1 .maxContent .infoarea {
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -35,12 +35,15 @@
 
 .slogan_1 {
   width: 100%;
-  padding: 20vh 0;
   text-align: center;
   background-color: #11314c;
-  background-image: url("../images/1common/sloganbg.png");
-  background-size: cover;
+  background-image: url("../images/1common/bglighttop.png");
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5) inset; }
+  .slogan_1 .gradient {
+    width: 100%;
+    padding: 20vh 0;
+    background-size: cover;
+    background-image: url("../images/1common/sloganbg.png"); }
   .slogan_1 h1 {
     margin: 10px 0; }
   .slogan_1 h3 {

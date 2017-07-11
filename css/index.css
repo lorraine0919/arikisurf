@@ -86,25 +86,74 @@
     width: 100%; }
 
 .picture_1 {
-  padding: 20vh 0 50vh 0;
   background-color: #18344c;
   color: #fff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   background-image: url("../images/1common/bglight.png");
-  position: relative;
   overflow: hidden; }
   .picture_1 .maxContent {
+    padding: 20vh 0 0 0;
+    background-image: url("../images/1common/picselectbg.png");
+    background-repeat: no-repeat;
+    background-position: 74% -129%;
     max-width: 1170px;
     margin: auto; }
-  .picture_1 .button a {
-    color: #fff;
-    text-shadow: none;
-    padding: 20px;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    font-weight: bold; }
-  .picture_1 .demo .surfboard {
-    position: absolute;
-    bottom: -20px; }
-    .picture_1 .demo .surfboard img {
-      width: 100%; }
+    .picture_1 .maxContent .introduce {
+      padding-left: 5%; }
+      .picture_1 .maxContent .introduce .introduceMax {
+        width: 50%;
+        line-height: 25px; }
+        .picture_1 .maxContent .introduce .introduceMax h2 {
+          margin: 15px 0; }
+    .picture_1 .maxContent .photoSelect .photo {
+      width: 16%;
+      padding-top: 20%;
+      display: inline-block;
+      background-image: url("../images/1common/insidecircle.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      position: relative; }
+      .picture_1 .maxContent .photoSelect .photo img {
+        width: 80%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        z-index: 3; }
+    .picture_1 .maxContent .photoSelect .selected:after {
+      content: '';
+      position: absolute;
+      background-image: url("../images/1common/picselected.png");
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 2; }
+    .picture_1 .maxContent .button {
+      padding-left: 5%; }
+      .picture_1 .maxContent .button a {
+        color: #fff;
+        text-shadow: none;
+        padding: 20px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        font-weight: bold; }
+    .picture_1 .maxContent .demo {
+      padding-top: 20%;
+      position: relative; }
+      .picture_1 .maxContent .demo .surfboard {
+        position: absolute;
+        bottom: -8%;
+        right: -31%; }
+        .picture_1 .maxContent .demo .surfboard img {
+          width: 100%; }
+        .picture_1 .maxContent .demo .surfboard .selectpicshow {
+          position: absolute;
+          bottom: 8px;
+          right: 595px; }

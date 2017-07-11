@@ -56,7 +56,9 @@
     background-color: hsla(88, 80%, 90%, 0.4);
   }
   /*=========原max-width:767px開始處=========*/
-    .iconGroup,.idHello,.topGround_0{display: none;}
+  .iconGroup,.idHello,.topGround_0{
+        display: none;
+  }
     .hb{
       display: block;
       width: 10%;

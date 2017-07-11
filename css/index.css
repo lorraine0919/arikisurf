@@ -201,10 +201,12 @@
           width: 100%; }
 
 .forum_1 {
-  padding: 20vh 0;
+  padding: 20vh 0 0 0;
   background-color: #13324c;
-  color: #fff;
-  border-bottom: 1px solid #fff; }
+  color: #fff; }
+  .forum_1 .contentMax {
+    border-bottom: 1px solid #fff;
+    padding: 0 0 20vh 0; }
   .forum_1 .postgroup .post {
     background-color: #223d55;
     border-radius: 10px; }
@@ -304,3 +306,9 @@
       text-align: center; }
       .bulletin_1 .maxContent .infoarea .right img {
         width: 100%; }
+
+@media screen and (max-width: 960px) {
+  .coating_1 .maxContent .demo {
+    display: none; }
+  .coating_1 .maxContent .about {
+    display: none; } }

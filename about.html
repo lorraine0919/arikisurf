@@ -12,20 +12,19 @@
       <link rel="stylesheet" type="text/css" href="css/footer.css">
       <link rel="stylesheet" type="text/css" href="css/grid.css">
   
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  	<script src=".js"></script>
+      <script src="js/jquery.js"></script>
  </head>
   <!--header end-->
+  <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
+  <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+  <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+  <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+  <script type="text/javascript" src="libs/jquery.stellar/src/jquery.stellar.js"></script>
   <script src="js/6ariki.js"></script>    
   <link rel="stylesheet" type="text/css" href="css/about.css">
-        <!-- <script>
-            $(document).ready(function(){
-                $('#global_img_1').click(function(){
-                    $('#text_description_1').slideToggle();
-                });
-            });
-        </script> -->
-        
+
+       
 <body>
 <header>
     <nav class="nav_0">
@@ -68,26 +67,28 @@
 
     
     <div class="banner_17">
-		<img src="images/6ariki/pexels-photo.jpg">
+		<h2 class="main_title_17">關於酋長</h2>
+        <p class="main_title_17_content">用波里尼西亞文化 打造專屬於你的衝浪板<br>
+        以酋長的精神 喚醒對大海的靈魂</p>
     </div>
 <div class="body_17">
-    <h2 class="about_title">關於酋長</h2>
+    <h2 class="about_title">經營理念</h2>
     <div class="container">
     	<div class="row">
     		<div class="col-xs-12 col-sm-5">
     			<div class="about_img">
-    				<div class="about_leftSide_17">
-    				<img src="images/6ariki/pexels-photo-47491.jpeg">
+    				<div class="about_leftSide_17" id="about_leftSide_17">
+    				<img src="images/6ariki/pexels-photo-47491.jpeg" class="about_pic">
     				</div>
     			</div>
     	   </div>
     		<div class="col-xs-12 col-sm-7">
     			<div class="about_rightSide_17">
-				<p>酋長Surf的創辦人牟那滷豆先生，因熱愛衝浪，希望擁有一張有自己故事又堅固耐用的衝浪板，因此，在2000年9月，成立的Ariki Surf 酋長衝浪，致力成為全世界衝浪板製造商的領頭羊。就如同部落裡的酋長一樣，是最棒也是技術最好的。自此，「 Your Board Always Top」的信念，便根植於Ariki Surf的品牌靈魂。</p>
+				<p class="about_txt">酋長Surf的創辦人牟那滷豆先生，因熱愛衝浪，希望擁有一張有自己故事又堅固耐用的衝浪板，因此，在2000年9月，成立的Ariki Surf 酋長衝浪，致力成為全世界衝浪板製造商的領頭羊。就如同部落裡的酋長一樣，是最棒也是技術最好的。自此，「 Your Board Always Top」的信念，便根植於Ariki Surf的品牌靈魂。</p>
 				</div>
     		</div>
     	 </div>
-         <h2 class="business_philosophy_title">經營理念</h2>
+         <h2 class="business_philosophy_title">品牌沿革</h2>
          <div class="row">
             <div class="col-xs-12 col-sm-5 col-sm-push-7">
                 <div class="business_img">
@@ -136,14 +137,14 @@
          <h2 class="global_base_title">全球據點</h2>
          <div class="row">
          <div class="range">
-             <div class="col-xs-6 col-sm-3">
+             <div class="col-xs-12 col-sm-3">
                  <div class="global_img_1" id="global_img_1">
                      <img src="images/6ariki/shop_1.jpg">
                      <div class="global_text_1">
                          Ariki Surf台灣總店
                      </div>                
                 </div>
-                     <div class="text_description_1" id="text_description_1" >
+                     <div class="text_description_1" id="text_description_1">
                          Ariki Surf的總店，位於台灣桃園，於2000年9月成立，佳評如潮。
                         <div class="clock">
                         <img src="images/6ariki/alarm-clock.png">
@@ -158,7 +159,7 @@
                          <p>桃園市中壢區中央路300號</p></div>
                     </div>
              </div>
-             <div class="col-xs-6 col-sm-3">
+             <div class="col-xs-12 col-sm-3">
                  <div class="global_img_2" id="global_img_2">
                      <img src="images/6ariki/shop_2.jpg">
                      <div class="global_text_2" id="global_text_2">
@@ -180,7 +181,7 @@
                          <p>神奈川縣橫濱市萬代町2-4-1</p></div>
                     </div>
              </div>
-             <div class="col-xs-6 col-sm-3">
+             <div class="col-xs-12 col-sm-3">
                  <div class="global_img_3" id="global_img_3">                  
                      <img src="images/6ariki/shop_3.jpg">
                      <div class="global_text_3">
@@ -202,7 +203,7 @@
                          <p>61–63 Market Street,Sydney</p></div>
                     </div>
              </div>
-             <div class="col-xs-6 col-sm-3">
+             <div class="col-xs-12 col-sm-3">
                  <div class="global_img_4" id="global_img_4">                   
                      <img src="images/6ariki/shop_4.jpg">
                      <div class="global_text_4">

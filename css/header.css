@@ -198,6 +198,7 @@
     display: inline-block;
     margin: 0 0 -0.3% 3vw;
     width: 60%;
+    padding: 0 0 10px 0;
     vertical-align: bottom; }
 
   .nav_0 .navDetail .navfix .navimg ul.menu li {

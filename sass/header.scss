@@ -18,6 +18,7 @@
   opacity: 0;
 }
 .hb{font-size: 0px;}
+
 @media screen and (max-width:767px){
   /*=========清除浮動=========*/
   .navimg:after{
@@ -43,6 +44,7 @@
     width: 11.73%;
     height: 0px;
     padding-bottom:11.73%; 
+    display: none;
   }
   .menu a{
     height: 2em;
@@ -150,18 +152,20 @@
           position: relative;
           padding: 0.5% 0px; }
           .nav_0 .navDetail .navfix .navimg .logo {
-            width: 14%;
+            width: 13%;
             display: inline-block;
-            padding-top: 11vh;
-            vertical-align: middle; }
+            vertical-align: middle;
+            margin: 0 0 0 2%; }
+            .nav_0 .navDetail .navfix .navimg .logo .logofix{
+              // position: absolute;
+
+            }
             .nav_0 .navDetail .navfix .navimg .logo img {
-              width: 180px;
-              position: absolute;
-              top: -1vh;
-              left: 5%; }
+              width:100%;
+            }
           .nav_0 .navDetail .navfix .navimg .iconGroup {
             display: inline-block;
-            width: 85%;
+            width: 80%;
             text-align: right;
             vertical-align: middle; }
             .nav_0 .navDetail .navfix .navimg .iconGroup ul li {
@@ -212,3 +216,27 @@
     height: 16vh;
     position: relative; }
   }
+@media screen and (max-width:910px){
+  .nav_0{
+    .navDetail{
+      .navfix{
+        .navimg{
+          .iconGroup{
+              width: 82%;
+          }
+          ul.menu{
+              width: 53%;
+              li{
+                a{
+                   padding: 1.2vw 0.6vw;
+                }
+              }
+          }
+          .idHello{
+              width: 40%;
+          }
+        }
+      }
+    }
+  }
+}

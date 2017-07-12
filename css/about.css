@@ -180,7 +180,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 300px; }
+      height: 350px; }
 
   .about_txt, .business_txt {
     opacity: 0;
@@ -205,7 +205,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px; }
+    height: 350px; }
 
   .winning_record_title {
     text-align: center;

@@ -2,6 +2,11 @@
 		.container{
 			max-width: 1170px;
 			outline:1px solid black;
+			img{
+			width: 100%;
+			vertical-align: middle;
+			
+		}
 		}
 		/*S*/
 		.all{
@@ -11,12 +16,15 @@
 			overflow: hidden;
 		}
 		
+		
 		.item:after{
 			content: '';
 			clear: both;
 		}
-		.container{
+		.barbg{
+			background-color: #11314c;
 			.changebar{
+			 max-width: 1170px;
 			 padding-top: 15px;
 			 padding-bottom: 10px;
 			ul{
@@ -25,6 +33,7 @@
 		   }
 		
 		   li{
+		   	color: #fff;
 			outline: 1px solid red;
 			text-align: center;
 			border-bottom:1px solid black;
@@ -42,16 +51,12 @@
 		background-color: black; 
 		color:black;
 		}
-		img{
-			width: 100%;
-			vertical-align: middle;
-			
-		}
+		
 	  }
 	  .container22{
-	  	padding-top: 5%;
-	  	// padding-bottom: 3%;
-	  	h1,p,li{
+	  	padding-top: 8%;
+	  	padding-bottom: 2%;
+	  	h1,p{
 	  		color: #fff;
 	  	}
 	  }
@@ -164,7 +169,7 @@
         	overflow: scroll;
         	height: 350px;	
           }
-          .container{
+          .barbg{
 			.changebar{
 			 padding-bottom: 18px;
 		   li{

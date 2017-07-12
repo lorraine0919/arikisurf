@@ -59,7 +59,7 @@ var scene = new ScrollMagic.Scene({
     offset:'5px',
 })
 .setTween(wp)
-.addIndicators()
+// .addIndicators()
 .addTo(controller);
 console.log("times");
 
@@ -80,7 +80,7 @@ var scene = new ScrollMagic.Scene({
     offset:'5px',
 })
 .setTween(wp)
-.addIndicators()
+// .addIndicators()
 .addTo(controller);
 console.log("times");
 
@@ -93,7 +93,7 @@ var ourScene = new ScrollMagic.Scene({
         offset:'10px'
     })
      .setClassToggle('.about_img','fade-in')
-     .addIndicators({name :''})
+     // .addIndicators({name :''})
      .addTo(controller);
 
 var ourScene = new ScrollMagic.Scene({
@@ -101,7 +101,7 @@ var ourScene = new ScrollMagic.Scene({
         offset:'10px'
     })
      .setClassToggle('.about_txt','fade-in')
-     .addIndicators({name :''})
+     // .addIndicators({name :''})
      .addTo(controller);
 
 //fade-in 2->business
@@ -110,7 +110,7 @@ var ourScene = new ScrollMagic.Scene({
         offset:'10px'
     })
      .setClassToggle('.business_img','fade-in')
-     .addIndicators({name :''})
+     // .addIndicators({name :''})
      .addTo(controller);
 
 var ourScene = new ScrollMagic.Scene({
@@ -118,7 +118,7 @@ var ourScene = new ScrollMagic.Scene({
         offset:'10px'
     })
      .setClassToggle('.business_txt','fade-in')
-     .addIndicators({name :''})
+     // .addIndicators({name :''})
      .addTo(controller);
 
 });

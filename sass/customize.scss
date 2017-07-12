@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import "base/var"; //變數在這裏面
+@import "mixins/mixin"; //mixin在這裏面
+@import "layout/mobile"; //手機
+@import "layout/desktop"; //桌機
+%testsha{
+	text-shadow:1px 1px 5px rgba(0,0,0,0.8);
+}
+%bgrp{
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+
+
+.bg_forest_2{
+	background-image: url('../images/2board/forest.png');
+	@extend %bgrp;
+	background-size: cover;
+	width: 100%;
+	position: relative;
+	.pillar{
+		position: absolute;
+		bottom: 20%;
+		left: 20%;
+
+		img{
+			width: 100%;
+		}
+	}
+	.maxContent{
+		max-width: $navmaxwidth;
+		margin: auto;
+		padding: 10vh 0;
+		.stepbar{
+			background-image: url('../images/2board/strpbar.png');
+			@extend %bgrp;
+			width: 20%;
+			background-size: contain;
+			padding-top:1.7%;
+			margin: 0 auto 10vh auto ;
+			position: relative;
+			.circle{
+				width: 10%;
+				padding-top: 10%;
+				border-radius: 50%;
+				background: linear-gradient(#ffcf8d,#ff7b00);
+				margin-left: 13%;
+				position: relative;
+			}
+			.circle:after{
+				content:'1';
+				position: absolute;
+				color: #fff;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 30%;
+				margin: auto;
+				@extend %testsha;
+			}
+			h3{
+				color: #fff;
+				margin: 10px 0;
+			}
+		}
+		.title{
+			color: #fff;
+			width: 20%;
+			position: absolute;
+			right: 0;
+			top: 10vh;
+		}
+		.typegroup{
+			text-align: center;
+			.type{
+				width: 30%;
+				box-sizing:border-box;
+				padding: 10px;
+				display: inline-block;
+				position: relative;
+				overflow: hidden;
+				.typeimg{
+					width: 100%;
+					overflow: hidden;
+					padding-top: 80%;
+					background-position: 10% 25%;
+					background-size: cover;
+					.typeinfo{
+						text-align: left;
+						padding: 10px 20px;
+						box-sizing:border-box;
+						width: 100%;
+						color: #fff;
+						background-color: rgba(0,0,0,0.5);
+					}				
+				}
+			}
+			$images: ("longboard","shortboard","funboard","bodyboard","fishboard","gunboard");
+			@for $i from 1 through 6{
+				.type:nth-child(#{$i}) .typeimg{
+					background-image: url('../images/2board/#{nth($images,$i)}.png');
+				}
+			}
+		}
+	}
+}

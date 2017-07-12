@@ -191,6 +191,9 @@ $top:16vh;
 						z-index: 2;
 
 					}
+					.arrowrwd{
+						display: none;
+					}
 				}
 				.button{
 					padding-left: 5%;
@@ -224,6 +227,9 @@ $top:16vh;
 					}
 
 				}
+				.demorwd{
+					display: none;
+				}
 			}
 
 		}
@@ -236,12 +242,15 @@ $top:16vh;
 			background-size: cover;
 			.contentMax{
 				@extend %navmax;
+				.maprwd{
+					display: none;
+				}
 				.introduce{
 					text-align: right;
 					.introduceWord{
 						@extend %h2p;
 						display: inline-block;
-						text-align-last: left;
+						text-align: left;
 					}
 				}
 				.map{
@@ -449,6 +458,8 @@ $top:16vh;
 			.demorwd{
 				display: block;
 				position: relative;
+				width: 100%;
+				overflow: hidden;
 				.demoimg{
 					width: 55%;
 					margin: auto;
@@ -460,7 +471,7 @@ $top:16vh;
 					width: 150px;
 					height: 210px;
 					border-radius: 50%;
-					background-color:#3E4F5D;
+					background-color:rgba(255,255,255,0.1);
 					position: absolute;
 					left: -83px;
 					top: 31%;
@@ -481,7 +492,7 @@ $top:16vh;
 					width: 150px;
 					height: 210px;
 					border-radius: 50%;
-					background-color: #3E4F5D;
+					background-color: rgba(255,255,255,0.1);
 					position: absolute;
 					right:  -83px;
 					top: 31%;
@@ -501,6 +512,162 @@ $top:16vh;
 			.introduce {
 				text-align: center;
 				width: 100%;
+			}
+		}
+	}
+	.picture_1{
+		.maxContent{
+			padding: 44vh 0 20vh 0;
+			position: relative;
+			.demo{
+				display: none;
+			}
+			.demorwd{
+				display: inline-block;
+				position: relative;
+				padding-top: 40%;
+				width: 100%;
+				.surfboard{
+					width: 100%;
+				    transform: rotate(22deg);
+				    position: absolute;
+				    top: -256%;
+				    left: -46%;
+					img{
+						width: 100%;
+					}
+				}
+
+			}
+			.introduce{
+				text-align: center;
+				.introduceMax{
+					width: 100%;
+				}
+			}
+			.photoSelect {
+				.photo{
+					display: none;
+				}
+				.selected{
+					position: absolute;
+				    display: block;
+				    bottom: 45%;
+				    left: 41.5%;
+				    width: 59%;
+				    padding-top: 40%;
+				    img{
+				    	width: 60%;
+				    }
+				}
+				.arrowrwd{
+					display: block;
+					.fa-caret-left{
+						position: absolute;
+					    right: 51%;
+					    font-size: 48px;
+					    bottom: 51%;
+					}
+					.fa-caret-right{
+						position: absolute;
+					    right: 3%;
+					    font-size: 48px;
+					    bottom: 51%;
+					}
+				}
+			}
+			.button{
+				text-align: center;
+			}
+		}
+	}
+	.map_1{
+		background-image:none;
+		background-color: #13324c;
+		padding: 11vh 0 0 0;
+		.contentMax{
+			.maprwd{
+				display: block;
+				margin: 0 0 0 0;
+				.mapimg{
+					position: relative;
+					.mapimgpic{
+						width: 100%;
+					}
+					.pin{
+						width: 8%;
+						position: absolute;
+					    top: 29%;
+					    left: 37%;
+						.pinpic{
+							width: 100%;
+						}
+					}
+				}
+			}
+			.introduce{
+				.introduceWord{
+					text-align: center;
+					p{
+						text-align: center;
+					}
+				}
+			}
+			.map{
+				display: none;
+			}
+		}
+	}
+	.forum_1{
+		padding: 10px 10px 0 10px;
+		.contentMax{
+			.title{
+				display: none;
+			}
+			.postgroup{
+				overflow: hidden;
+				padding-top: 100%;
+				position: relative;
+				.postfix{
+					width: 80%;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+				.selected{
+					z-index: 3;
+					left: 0;
+					right: 0;
+					margin: auto;
+				}
+				.postfix:nth-child(4){
+					display: none;
+				}
+				.postfix:nth-child(2){
+					left: -71%;
+				}
+				.postfix:nth-child(3){
+					 right: -160%;
+				}
+			}
+		}
+	}
+	.bulletin_1{
+		.maxContent{
+			.title{
+				text-align: center;
+			}
+			.infoarea{
+				background-position: top;
+				background-size: contain;
+				width: 85%;
+				margin: auto;
+				.left {
+					height: auto;
+				}
+				.right {
+					display: none;
+				}
 			}
 		}
 	}

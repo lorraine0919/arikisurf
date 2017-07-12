@@ -137,6 +137,7 @@
       box-shadow: 2px 2px 10px rbga(0, 0, 0, 0.9); }
       .nav_0 .navDetail .navfix {
         position: fixed;
+        padding: 0 0 10px 0;
         width: 100%;
         left: 0; }
         .nav_0 .navDetail .navfix .navimg {
@@ -155,7 +156,7 @@
             width: 13%;
             display: inline-block;
             vertical-align: middle;
-            margin: 0 0 0 2%; }
+            margin: 0 0 0 6%; }
             .nav_0 .navDetail .navfix .navimg .logo .logofix{
               // position: absolute;
 
@@ -202,9 +203,9 @@
               box-shadow: none; }
           .nav_0 .navDetail .navfix .navimg .idHello {
             display: inline-block;
-            width: 28%;
+            width: 33%;
             color: #ffb472;
-            padding: 0 20px 0 0;
+            padding: 0 20px 10px 0;
             vertical-align: bottom; }
             .nav_0 .navDetail .navfix .navimg .idHello p {
               text-align: right; }
@@ -222,7 +223,7 @@
       .navfix{
         .navimg{
           .iconGroup{
-              width: 82%;
+              width: 78%;
           }
           ul.menu{
               width: 53%;

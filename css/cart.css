@@ -211,4 +211,53 @@
         height: 30px;
         background-color: #ccc;
         color: black;
-        text-align: center; } }
+        text-align: center; }
+    .cart-body_28 .cart1-phone_28 .horizontal-phone {
+      max-width: 767px;
+      width: 100%;
+      height: 20px;
+      background-color: #858789; }
+      .cart-body_28 .cart1-phone_28 .horizontal-phone .horizontal-line {
+        width: 90%;
+        height: 1px;
+        margin: 0 5%;
+        background-color: white; }
+    .cart-body_28 .cart1-phone_28 .total-phone {
+      max-width: 767px;
+      width: 100%;
+      background-color: #858789;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      padding-bottom: 5%; }
+      .cart-body_28 .cart1-phone_28 .total-phone .total-num,
+      .cart-body_28 .cart1-phone_28 .total-phone .total-money {
+        color: red;
+        font-size: 25px;
+        margin: 0 1%; }
+  .cart-body_28 .notice_28 {
+    max-width: 767px;
+    width: 100%; }
+    .cart-body_28 .notice_28 .big-title_28 {
+      text-align: center;
+      margin-top: 3%; }
+      .cart-body_28 .notice_28 .big-title_28 h2 {
+        font-size: 1.17em; }
+    .cart-body_28 .notice_28 .notice-context {
+      width: 80%;
+      margin: 0 10%; }
+      .cart-body_28 .notice_28 .notice-context ul {
+        box-sizing: border-box;
+        padding-left: 20px; }
+        .cart-body_28 .notice_28 .notice-context ul li {
+          list-style: circle; }
+  .cart-body_28 .change-page_28 {
+    max-width: 767px;
+    width: 100%; }
+    .cart-body_28 .change-page_28 .btn-item {
+      width: 80%;
+      height: 30px;
+      line-height: 30px;
+      margin: 3% 10%;
+      text-align: center;
+      background-color: #ccc; } }

@@ -1,0 +1,173 @@
+@import "base/var";
+.cen{
+  width: 100%;
+  max-width:$navmaxwidth;
+  margin: 0 auto;
+}
+
+.bc{
+  content:'';
+  display: block;
+  clear: both;
+}
+
+a{
+	text-decoration: none;
+	color:#000;
+	&:visited{
+		color:#000;
+	}
+}
+
+#content_10{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  position: fixed;
+  top:0;
+  z-index: 99;
+  display: none;
+
+  #form{
+    position: relative;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 1280px;
+    margin: 100px auto;
+    border:1px solid black; 
+    background-color:yellow;
+    font-size: 20px;
+  }
+
+  #close{
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top:-15px;
+    right: -15px;
+    cursor: pointer;
+  }
+
+}//content_10
+
+.wave_10{
+ width: 100%;	
+ background-image: url("../images/4wavepoint/bg.jpg");
+ background-size: cover;
+  .beach_10{
+   @extend .cen;
+   height:50vh;
+   position: relative;
+   
+   h1{
+   	position: absolute;
+   	top:5vh;
+   	left:1vh;
+   	z-index: 5;
+   	color:#fff;
+   }
+
+   img{
+   	width: 100%;
+   	height: 100%;
+   }
+  }//beach_10
+  
+  .info{
+   @extend .cen;
+   height: 20vh;
+   box-sizing: border-box;
+   padding: 1em;
+   background-color:#435B70;
+  }
+
+  .fourm{
+  	@extend .cen;
+  	// height: 80vh;	
+  	background-color: rgba(255,255,255,.1);
+
+  	ul{
+  		background-color: #ED8C00;
+  		&:after{
+          @extend .bc;
+  		}
+  	}
+
+  	li{
+  		display: inline-block;
+  		float: left;
+  	    margin-left: 15px;
+  	    font-size: 23px;
+  	    cursor: pointer;
+        transition: .3s;
+
+	    &:hover{
+	      color:#ccc;
+	    }
+
+	    &:last-child{
+	      float: right;
+	      background-color: yellow;
+	      box-sizing: border-box;
+	      padding: 0 .2em;
+	    }
+      
+  	}//li
+
+  	.talk{
+	  	 &:after{
+	  	 	@extend .bc;
+	  	 }	
+        padding: 1.5em;
+
+  		.item{
+        background-color: rgba(255,255,255,.5);
+  			width: 30%;
+		  	height: 380px;
+		  	border: 2px solid #ED8C00;
+		  	float: left;
+		    position: relative;
+            margin-bottom: 2%;
+
+            &:nth-child(3n-1){
+                margin:0 4%;
+            }
+
+		    .pic{
+		    	img{
+		    	  width: 100%;
+            vertical-align: top;            
+		    	}
+		    }//pic
+
+            .text{
+                padding: .2em 1em;
+            }//text
+
+  		}//item
+
+  		 .watch{
+		    width: 100%;
+		    background-color: lightblue;
+		    position: absolute;
+		    bottom: 0;
+		    margin: auto;
+		    box-sizing: border-box;
+		    padding: .2rem .5rem;
+
+		    .star{
+		    	float: right;
+		    }
+		 }//watch
+
+  	}//talk
+
+  }//fourm
+
+}//wavw_10
+

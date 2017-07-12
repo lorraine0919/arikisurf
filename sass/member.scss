@@ -1,0 +1,307 @@
+$F2:16px;
+$F3:16px;
+$F4:16px;
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+  text-decoration: none;
+  font-family: 微軟正黑體;
+}
+#control{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.hb{font-size: 0px;}
+
+/*--------------------------------會員專區--------------------------------*/
+/*=========清除浮動=========*/
+.navimg:after,.option20:after,.part20:after,.center20:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.content20{
+  background-color: #ff5;
+  background-image: url(images/7member/surfingfmember.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.option20{text-align: center;}
+.option20 .title20{
+  width: 100%;
+  letter-spacing: 12px;
+  font-size: $F2;
+  font-weight: bold;
+}
+.option20 li a{
+  padding: 2%;
+  font-size: 15px;
+  color: #fff;
+  border:2px solid #fff;
+  background-color: #8bf;
+}
+.main20{
+  line-height: 2.5;
+  font-size: $F4;
+  border-radius: 0px 0px 7px 7px;
+  background-color: hsla(0, 0%, 100%, 0.7);
+}
+/*.part20{background-color: #ccc;}*/
+.main20 .part20 h3{
+  font-size: $F3;
+  text-align: center;
+  letter-spacing: 5px;
+  /*background-color: #0cf;*/
+}
+.main20 .part20 .center20{
+  margin: 4% auto;
+  /*background: blue;*/
+}
+.main20 .part20 .send20{text-align: center;}
+.main20 .part20 .submit20{
+  width: 60px;
+  line-height: 1.5;
+  margin:0% 2% 0% 2%;
+
+  border-radius: 7px;
+  letter-spacing: 3px;
+  color: #fff;
+  background-color: #8af;
+}
+.main20 .part20 .areaB_20 .photo20{
+  width: 220px;
+}
+.main20 .part20 .areaB_20 .keyword20{
+  display: inline-block;
+  margin-right: 3%;
+  vertical-align: middle;
+}
+.main20 .part20 .areaB_20 .pic20{
+  display: inline-block;
+  height: 150px;
+  vertical-align: middle;
+  width: 7vw;
+  height: 7.83333vw;
+  min-width: 110px;
+  min-height: 123.1px;
+  background-color: #afc;
+}
+.main20 .part20 .areaB_20 .upload20{margin-top: 3%;}
+
+/*================================會員專區================================*/
+
+
+
+@media screen and (max-width:767px){
+
+/*--------------------------------會員專區rwd--------------------------------*/
+.content20{padding: 3%;}
+.option20{width: 100%;}
+.option20 li a{
+  float: left;
+  width: calc(21% - 4px);
+  border-radius: 7px 7px 0px 0px;
+}
+.main20{
+  padding:10%;
+  width: 80%;
+}
+.title20{padding: 10px 0px 15px 0px;}
+.part20 .areaA_20,.part20 .areaB_20,.part20 .areaC_20{
+  margin-bottom: 15%;
+}
+.main20 .part20 hr{margin-bottom: 10%;}
+.main20 .part20 .center20{width: 300px;}
+.main20 .part20 span{margin-right:15px;}
+.main20 .part20 .photo20{margin: auto;}
+.main20 .part20 .areaB_20 .upload20{text-align: center;}
+
+/*================================會員專區rwd================================*/
+
+img{width: 100%;}
+
+.navfix{
+  width: 100%;
+  background-color: #fa0;
+}
+.navimg{
+  margin: 0% 2.6%;
+  padding: 2.6% 0%;
+  position: relative;
+  background-color: #00a;
+}
+.logo{
+  float: left;
+  width: 11.73%;
+  height: 0px;
+  padding-bottom:11.73%;
+  background-color: #000;
+}
+.menu a{
+  height: 2em;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+.menu a:hover{background-color: hsla(88, 80%, 90%, 0.4);}
+  .iconGroup,.idHello,.topGround_0{display: none;}
+  .hb{
+    display: block;
+    width: 10%;
+    height: 0px;
+    padding-bottom: calc(10% - 5px);
+    float: right;
+    margin-top: 0.865%;
+    position: relative;
+    cursor: pointer;
+  }
+  .hb:before{
+    content: "";
+    display: block;
+    width: 80%;
+    height: 0.6vh;
+
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 10%;
+    margin: auto;
+
+    background-color:#fff;
+    box-shadow: 0vh -2vh 0vh #fff,
+                0vh 2vh 0vh #fff; 
+  }
+  .menu{
+    width: 40vh;
+    height: 0px;
+    padding-bottom: calc(100vh - 16%);
+    background-color: hsla(180, 85%, 40%, 0.7);
+    position: fixed;
+    right: -40vh;
+    bottom: 0vh;
+    transition: .5s;
+  }
+  .menu a{
+    display: block;
+    padding: 4.5% 0%;
+    font-size: 1em;
+    line-height: 2;
+  }
+  .menu li:first-child{margin-top:15%; }
+  .menu a:hover{
+    color: yellow;
+    background-color:hsla(100, 100%, 100%, 0.1);
+  }
+  #control:checked ~ .menu{right: -1vh;}
+}
+
+
+
+@media screen and (min-width:768px){
+
+.navimg{display: none;}
+/*--------------------------------會員專區desk--------------------------------*/
+.content20{
+  margin-top: 16vh;
+  height: calc(84vh - 6vh - 2% - 5px);
+  padding: 1% 13% 1% 13%;
+  position: relative;
+}
+.option20{
+  border-radius: 7px 7px 0px 0px;
+  background-color: #af0;
+}
+.title20{padding: 30px 0px;}
+.sidebar20{
+  position: absolute;
+  top: 20%;
+  left: 5vw;
+}
+.option20 li a{
+  display: block;
+  width: 12vw;
+  padding:8%;
+  margin-top: 2vh;
+  letter-spacing: 2px;
+  border-radius: 8px;
+}
+.main20{
+  width: 80%;
+  padding:4% 5% 2% 15%;
+}
+.part20 .areaA_20,.part20 .areaB_20,.part20 .areaC_20{margin-bottom: 5vw;}
+.main20 .part20 h3{margin-bottom: 3%;}
+.main20 .part20 hr{display: none;}
+.main20 .part20 span{margin-right:1vw;}
+.main20 .part20 .center20{
+  position:relative;
+  left: 10%;
+}
+.main20 .part20 .photo20,.main20 .part20 .upload20{float: left;}
+
+/*================================會員專區desk================================*/
+
+
+
+
+
+
+  
+  .rwd{display: none;}
+  .nav_0 .top {
+    background-color: #11314c;
+    width: 100%;
+    height: 16vh;
+    border-bottom: 5px solid #ed8c00;
+    position: fixed;
+    top:0px;/*必須得加*/
+    box-sizing: border-box; }
+  .nav_0 .navDetail {
+    width: 100%;
+    /*max-width: $navmaxwidth;*/
+    position: fixed;
+    z-index: 21;
+   }
+  .nav_0 .navDetail .navfix {
+      position: fixed;
+      width: 100%;
+      left: 0; }
+  .nav_0 .navDetail .navfix .navimg {
+        margin: 1% auto;
+        width: 100%;
+        max-width: 1170px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+        padding: 0.5% 0px; }
+  .nav_0 .navDetail .navfix .navimg .logo {
+          width: 14%;
+          display: inline-block;
+          padding-top: 11vh;
+          vertical-align: middle; }
+  .nav_0 .navDetail .navfix .navimg ul.menu {
+          display: inline-block;
+          margin: 0 0 -0.3% 3vw;
+          width: 60%;
+          vertical-align: bottom; }
+  .nav_0 .navDetail .navfix .navimg ul.menu li {
+            display: inline-block;
+  }
+  .nav_0 .navDetail .navfix .navimg ul.menu li a {
+          padding: 1.2vw 1vw;
+          color: #fff;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  }
+  .nav_0 .navDetail .navfix .navimg .idHello {
+          display: inline-block;
+          width: 34%;
+          color: #ffb472;
+          padding: 0 20px 0 0;
+          vertical-align: bottom;
+  }
+}

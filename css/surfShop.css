@@ -1,6 +1,9 @@
 .container {
   max-width: 1170px;
   outline: 1px solid black; }
+  .container img {
+    width: 100%;
+    vertical-align: middle; }
 
 /*S*/
 .all {
@@ -13,33 +16,35 @@
   content: '';
   clear: both; }
 
-.container .changebar {
-  padding-top: 15px;
-  padding-bottom: 10px; }
-  .container .changebar ul {
-    display: inline-block;
-    vertical-align: bottom; }
-  .container .changebar li {
-    outline: 1px solid red;
-    text-align: center;
-    border-bottom: 1px solid black;
-    padding: 5px;
-    cursor: pointer;
-    display: inline-block; }
-.container hr {
-  /*width:1150px;*/
-  margin: auto;
-  border: 0;
-  height: 3px;
-  background-color: black;
-  color: black; }
-.container img {
-  width: 100%;
-  vertical-align: middle; }
+.barbg {
+  background-color: #11314c; }
+  .barbg .changebar {
+    max-width: 1170px;
+    padding-top: 15px;
+    padding-bottom: 10px; }
+    .barbg .changebar ul {
+      display: inline-block;
+      vertical-align: bottom; }
+    .barbg .changebar li {
+      color: #fff;
+      outline: 1px solid red;
+      text-align: center;
+      border-bottom: 1px solid black;
+      padding: 5px;
+      cursor: pointer;
+      display: inline-block; }
+  .barbg hr {
+    /*width:1150px;*/
+    margin: auto;
+    border: 0;
+    height: 3px;
+    background-color: black;
+    color: black; }
 
 .container22 {
-  padding-top: 5%; }
-  .container22 h1, .container22 p, .container22 li {
+  padding-top: 8%;
+  padding-bottom: 2%; }
+  .container22 h1, .container22 p {
     color: #fff; }
 
 .bg_1 {
@@ -142,9 +147,9 @@
     overflow: scroll;
     height: 350px; }
 
-  .container .changebar {
+  .barbg .changebar {
     padding-bottom: 18px; }
-    .container .changebar li {
+    .barbg .changebar li {
       font-size: 15px; }
 
   .container22 {

@@ -142,6 +142,7 @@
 
   .nav_0 .navDetail .navfix {
     position: fixed;
+    padding: 0 0 10px 0;
     width: 100%;
     left: 0; }
 
@@ -162,7 +163,7 @@
     width: 13%;
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0 0 2%; }
+    margin: 0 0 0 6%; }
 
   .nav_0 .navDetail .navfix .navimg .logo img {
     width: 100%; }
@@ -197,6 +198,7 @@
     display: inline-block;
     margin: 0 0 -0.3% 3vw;
     width: 60%;
+    padding: 0 0 10px 0;
     vertical-align: bottom; }
 
   .nav_0 .navDetail .navfix .navimg ul.menu li {
@@ -215,9 +217,9 @@
 
   .nav_0 .navDetail .navfix .navimg .idHello {
     display: inline-block;
-    width: 28%;
+    width: 33%;
     color: #ffb472;
-    padding: 0 20px 0 0;
+    padding: 0 20px 10px 0;
     vertical-align: bottom; }
 
   .nav_0 .navDetail .navfix .navimg .idHello p {
@@ -232,7 +234,7 @@
     position: relative; } }
 @media screen and (max-width: 910px) {
   .nav_0 .navDetail .navfix .navimg .iconGroup {
-    width: 82%; }
+    width: 78%; }
   .nav_0 .navDetail .navfix .navimg ul.menu {
     width: 53%; }
     .nav_0 .navDetail .navfix .navimg ul.menu li a {

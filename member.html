@@ -40,58 +40,87 @@
     <div  class="option20">
         <div class="title20"><h2>會員專區</h2></div>
         <ul class="sidebar20">
-            <li><a href="#">資料維護</a></li>
+            <li><a href="#">個人資料</a></li>
             <li><a href="#">訂單查詢</a></li>
             <li><a href="#">我的最愛</a></li>
             <li><a href="#">我的留言</a></li>
         </ul>
     </div>
     <div class="main20">
-        <h3>個人資料維護</h3>
         <div class="part20">
-            <div class="a20">
-                <div>
-                <span>帳號</span>
-                <input type="text" maxlength="10" size="12" value="">
+            <div class="areaA_20">
+                <h3>修改個人資料</h3>
+                <hr>
+                <div class="center20">
+                    <div>
+                        <span>會員帳號</span>
+                        <input type="text" maxlength="10" size="12" value="">
+                    </div>
+                    <div>
+                        <span>姓名</span>
+                        <input type="text" maxlength="10">
+                    </div>
+                    <div>
+                        <span>性別</span>
+                        <input type="radio" name="gender"><span>男</span>
+                        <input type="radio" name="gender"><span>女</span>
+                    </div>
+                    <div>
+                        <span>連絡電話</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>電子信箱</span>
+                        <input type="email">
+                    </div>
+                    <div>
+                        <span>地址</span>
+                        <input type="text">
+                    </div>
                 </div>
-                <div>
-                    <span>姓名</span>
-                    <input type="text" maxlength="10">
-                </div>
-                <div>
-                    <span>性別</span>
-                    <input type="radio" name="gender"><span>男</span>
-                    <input type="radio" name="gender"><span>女</span>
-                </div>
-                <div>
-                    <span>連絡電話</span>
-                    <input type="text">
-                </div>
-                <div>
-                    <span>電子信箱</span>
-                    <input type="email">
-                </div>
-                <div>
-                    <span>地址</span>
-                    <input type="text">
+                <div class="send20">
+                    <input type="submit" value="送出" class="submit20">
                 </div>
             </div>
-            <div class="b20">
-                <div>
-                    <span>大頭照</span>
-                    <input type="text" maxlength="10" size="12" value="">
-                    <input type="submit" value="上傳相片">
+            <div class="areaB_20">
+                <h3>變更大頭照</h3>
+                <hr>
+                <div class="center20">
+                    <div class="photo20">
+                        <div class="keyword20">大頭照</div>
+                        <div class="pic20"><img src=""></div>
+                    </div>
+                    <div class="upload20">
+                            <input type="text" name="">
+                            <input type="submit" value="上傳" class="submit20">
+                    </div>
                 </div>
-                <div>
-                    <span>請輸入新密碼</span>
-                    <input type="password" maxlength="10" size="12" value="">
-                    <br>
+                <div class="send20">
+                    <input type="submit" value="送出" class="submit20">
                 </div>
-                <div>
-                    <span>確認新密碼</span>
-                    <input type="password" maxlength="10" size="12" value="">
+            </div>
+            <div class="areaC_20">
+                <h3>變更密碼</h3>
+                <hr>
+                <div class="center20">
+                    <div>
+                        <span>請輸入舊密碼</span>
+                        <input type="text" maxlength="10" size="12" value="">
+                    </div>
+                    <div>
+                        <span>請輸入新密碼</span>
+                        <input type="password" maxlength="10" size="12" value="">
+                        <br>
+                    </div>
+                    <div>
+                        <span>確認新密碼</span>
+                        <input type="password" maxlength="10" size="12" value="">
+                    </div>
                 </div>
-                <input type="submit" value="修改">
+                <div class="send20">
+                    <input type="submit" value="確認" class="submit20">
+                    <input type="submit" value="取消" class="submit20">
+                </div>
             </div>
         </div>
     </div>

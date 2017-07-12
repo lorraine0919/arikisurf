@@ -1,0 +1,237 @@
+@import "base/var";
+.cen{
+  width: 100%;
+  max-width:$navmaxwidth;
+  margin: 0 auto;
+}
+
+.bc{
+  content:'';
+  display: block;
+  clear: both;
+}
+
+a{
+  text-decoration: none;
+  color:#000;
+  &:visited{
+  	color:#000;
+  }
+}
+
+#lightbox_11{
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  position: fixed;
+  top:0;
+  z-index: 999;
+
+  .gun{
+    box-sizing: border-box;
+    padding: 15px;
+    width: 960px;
+    height: 150px;
+    margin: 100px auto;
+    border:1px solid black; 
+    background-color:yellow;
+    font-size: 20px;
+    position: relative;
+  }
+
+  #close{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+  }
+}//lightbox_11
+
+.bg_11{
+  background-image: url("../images/4wavepoint/bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+  .bread_11{
+  	background-color: rgba(255,255,255,.2);
+  	@extend .cen;
+  	box-sizing: border-box;
+  	padding: .5em 1.5em;
+
+  	li{
+  	  display: inline-block;	
+  	}
+  }//bread_11
+
+  .main_11{
+  	@extend .cen;
+    box-sizing: border-box;
+    padding: .5em .5em 1.5em;
+  	background-color: rgba(255,255,255,.5);  
+    box-shadow: 0px 8px 5px #888888;
+    &:after{
+      @extend .bc;
+    }
+
+    h1{
+    padding: .5em 1em;
+
+      span{
+          float: right;
+          margin: 0 5px;
+          padding: 0 10px;
+          background-color: yellow;
+          cursor: pointer;
+      }
+    }//h1
+
+    .content-l,.content-r{
+      float: left;
+    }
+
+    .content-l{
+    width: 25%;
+    text-align: center;
+
+       .icon{
+        width: 40%;
+        height: 100%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+          img{
+            width: 100%;
+            border-radius: 50%;
+          }
+       }
+
+       .user{
+        margin-bottom: 1em;
+       } 
+    }//content-l
+
+    .content-r{
+       width: 65%;
+       padding: 0 3em; 
+       position: relative;
+       &:after{
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        width: 1px;
+        height: 100%;
+        background-color: #0b0b0b;
+       }
+
+       .pic{
+        // width: 100%;
+        margin-bottom: 1em;
+       }
+    }//content-r
+
+  }//main_11
+  
+  .feedback_11{
+    @extend .cen;
+    margin-top: 1em;
+    // background-color: yellow;
+    &:after{
+      @extend .bc;
+    }
+
+    .top{
+      height: 10vh;  
+      background-color: pink;
+      div{
+        float:left;
+      } 
+      .icon{
+        width: 10%;
+        height: 100%;
+        // background-color:green;
+        text-align: center;
+        box-sizing: border-box;
+        padding: .5rem;
+
+        img{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%; 
+            line-height: 12vh;         
+        }
+      }//icon
+
+     .user{
+      // background-color: blue;
+      box-sizing: border-box;
+      padding: .5rem;
+          p{
+            margin-bottom: .5rem;
+          }
+     } 
+
+     .quit{
+      display:block;
+      width:8%;
+      height:100%;
+      // background-color: #ccc;
+      float: right;
+      box-sizing: border-box;
+      text-align: center;
+      padding: .5rem;
+     }
+    }//top
+
+    .text{
+      padding: 1rem 1.5rem;
+      background-color: rgba(255,255,255,.5);
+    }
+  }//feedback_11
+
+  .back_11{
+      @extend .cen;
+      height: 15vh;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+      background-color: green;
+      textarea{
+        width: 100%;
+        height: 100%;
+        resize: none;
+        box-sizing: border-box;
+        padding:.5rem;
+      }
+  }//back_11
+
+  .send{
+  @extend .cen;
+  // height: 10vh;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: rgba(0,0,0,.5);
+  text-align: center;
+       input{
+        width: 30%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: .4rem;
+        margin: 0 .2rem; 
+        cursor: pointer;
+       } 
+
+       #submit{
+        background-color: #ED8C00;
+       }
+  }
+}//bg_11
+
+
+

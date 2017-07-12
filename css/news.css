@@ -85,12 +85,13 @@
     border-bottom: 3px solid #ED8C00;
     border-radius: 5px;
     margin-bottom: 5px; }
-    .news_item p {
-      display: inline-block;
-      vertical-align: middle;
-      text-decoration: none;
-      color: #fff;
-      margin: 0px 10px; }
+
+  .news_item_txt {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    margin: 0px 10px; }
 
   .news_item_1 {
     margin-top: 10vh; }

@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import "base/var"; //變數在這裏面
+@import "mixins/mixin"; //mixin在這裏面
+@import "layout/mobile"; //手機
+@import "layout/desktop"; //桌機
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+  text-decoration: none;
+  font-family: 微軟正黑體;
+}
+.clearfix {
+  clear: both; }
+
+@media screen and (max-width:767px){
+
+  .banner_14{
+      background-image:url("../images/6ariki/pexels-photo.jpg");
+      background-position: center;
+      background-size:cover;
+      background-repeat: no-repeat;
+      position: relative;
+      padding-top:70%;
+      p{
+        position: absolute;
+        top: 0;
+        right: 0; 
+        bottom: 0;
+        left: 0;
+        margin-top: 25%;
+        text-align: center;
+        color:#444;
+        font-size:18px;
+      }
+    }
+
+  .news_title_14{
+    font-size:30px;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom: 0;
+    left: 0;
+    margin-top: 10%;
+    text-align: center; 
+    color:#444;
+    letter-spacing: 2px;
+  }
+
+  
+
+
+
+}/*RWD結束*/
+@media screen and (min-width:768px){
+  .body_14{
+    max-width: 1170px;
+    margin:auto;
+  }
+
+  .banner_14{
+      background-image:url("../images/5news/surf2.png");
+      background-position: center;
+      background-size:cover;
+      background-repeat: no-repeat;
+      position: relative;
+      padding-top:30%;
+      p{
+        position: absolute;
+        top: 0;
+        right: 0; 
+        bottom: 0;
+        left: 0;
+        margin-top: 15%;
+        text-align: center;
+        color:#fff;
+        font-size:20px;
+        font-weight:700;
+      }
+    }
+  
+ .news_title_14{
+    font-size:40px;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom: 0;
+    left: 0;
+    margin-top: 10%;
+    text-align: center; 
+    color:#fff;
+    letter-spacing: 2px;
+  }
+
+  
+    
+   
+
+
+
+
+}/*桌機結束*/

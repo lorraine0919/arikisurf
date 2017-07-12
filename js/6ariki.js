@@ -67,7 +67,7 @@ console.log("times");
 // winning
 var controller = new ScrollMagic.Controller();
     var wp = new TimelineMax().staggerFromTo('.winning_img',0.5, {
-        x: 550,
+        x: 150,
         opacity:0
     },{
         x:0,

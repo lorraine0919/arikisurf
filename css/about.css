@@ -65,13 +65,16 @@
     margin-top: 7vh;
     margin-bottom: 1vh; }
 
+  .winning_img img {
+    border-radius: 10px; }
+
   .winning_text {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
 
   .global_base_title {
     text-align: center;
@@ -169,19 +172,15 @@
       vertical-align: middle;
       display: inline-block; }
 
-  .about_rightSide_17:before {
-    content: '';
-    display: inline-block;
-    height: 300px;
-    vertical-align: middle; }
-
   .about_rightSide_17 {
     width: 100%; }
     .about_rightSide_17 p {
-      margin: 30px;
+      margin-left: 30px;
       line-height: 2;
-      vertical-align: middle;
-      display: inline-block; }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px; }
 
   .about_txt, .business_txt {
     opacity: 0;
@@ -200,17 +199,13 @@
   .business_leftSide_17 img {
     width: 100%; }
 
-  .business_rightSide_17:before {
-    content: '';
-    display: inline-block;
-    height: 300px;
-    vertical-align: middle; }
-
   .business_rightSide_17 p {
-    margin: 30px;
+    margin-left: 30px;
     line-height: 2;
-    vertical-align: middle;
-    display: inline-block; }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px; }
 
   .winning_record_title {
     text-align: center;
@@ -219,7 +214,8 @@
 
   .winning_img img {
     width: 350px;
-    height: 350px; }
+    height: 350px;
+    border-radius: 10px; }
 
   .winning_text {
     width: 350px;
@@ -227,7 +223,7 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
 
   .global_base_title {
     text-align: center;
@@ -245,7 +241,7 @@
     width: 270px;
     padding: 10px;
     box-sizing: border-box;
-    height: 215px;
+    height: 40px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     z-index: 5;
@@ -258,7 +254,7 @@
     transition: height 0.4s cubic-bezier(0.32, 0.28, 1, 1.09); }
 
   .global_text_1:hover, .global_text_2:hover, .global_text_3:hover, .global_text_4:hover {
-    height: 40px; }
+    height: 215px; }
 
   .text_description_1, .text_description_2, .text_description_3, .text_description_4 {
     padding: 10px;

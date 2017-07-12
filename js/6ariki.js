@@ -22,14 +22,14 @@
                 });
             });
 
-//scorll           
+//scorll banner           
 $(function (){
     TweenMax.fromTo('.main_title_17',2,
     {y:-250,
     opacity:0},
     {y:0,
     opacity:1,
-    ease:Elastic.easeOut
+    ease: Power1.easeOut
     });
     TweenMax.fromTo('.main_title_17_content',2,
     {x:-350,
@@ -37,11 +37,15 @@ $(function (){
     {x:0,
     opacity:1,
     delay:1,
-    ease:Elastic.easeOut
+    ease: Power1.easeOut
+
 });
 
+
+
+//global
 var controller = new ScrollMagic.Controller();
-    var wp = new TimelineMax().staggerFromTo('.touch01',0.5, {
+    var wp = new TimelineMax().staggerFromTo('.global_img',0.5, {
         y: -50,
         opacity:0
     },{
@@ -50,77 +54,74 @@ var controller = new ScrollMagic.Controller();
     },0.1);
 console.log("time");
 var scene = new ScrollMagic.Scene({
-    triggerElement: "#touch-1",
+    triggerElement: ".global_base_title",
     reverse:true,
-    offset:'50px',
+    offset:'5px',
 })
 .setTween(wp)
-.addIndicators()
+// .addIndicators()
 .addTo(controller);
 console.log("times");
 
+
+// winning
+var controller = new ScrollMagic.Controller();
+    var wp = new TimelineMax().staggerFromTo('.winning_img',0.5, {
+        x: 150,
+        opacity:0
+    },{
+        x:0,
+        opacity:1
+    },0.1);
+console.log("time");
+var scene = new ScrollMagic.Scene({
+    triggerElement: ".winning_record_title",
+    reverse:true,
+    offset:'5px',
+})
+.setTween(wp)
+// .addIndicators()
+.addTo(controller);
+console.log("times");
+
+
+
+
+//fade in 1->about
 var ourScene = new ScrollMagic.Scene({
-        triggerElement: "#about_leftSide_17",
+        triggerElement: ".about_title",
         offset:'10px'
     })
-     .setClassToggle('.about_pic','fade-in')
-     .addIndicators({name :'bgc start'})
+     .setClassToggle('.about_img','fade-in')
+     // .addIndicators({name :''})
      .addTo(controller);
 
 var ourScene = new ScrollMagic.Scene({
-        triggerElement: "#about_leftSide_17",
-        offset:'300px'
+        triggerElement: ".about_title",
+        offset:'10px'
     })
      .setClassToggle('.about_txt','fade-in')
-     .addIndicators({name :'bgc start'})
+     // .addIndicators({name :''})
      .addTo(controller);
 
+//fade-in 2->business
+var ourScene = new ScrollMagic.Scene({
+        triggerElement: ".business_philosophy_title",
+        offset:'10px'
+    })
+     .setClassToggle('.business_img','fade-in')
+     // .addIndicators({name :''})
+     .addTo(controller);
 
+var ourScene = new ScrollMagic.Scene({
+        triggerElement: ".business_philosophy_title",
+        offset:'10px'
+    })
+     .setClassToggle('.business_txt','fade-in')
+     // .addIndicators({name :''})
+     .addTo(controller);
 
-// //color
-// var bgcolor = new ScrollMagic.Scene({
-//         triggerElement: "#touch-3",
-//         offset:'200px'
-//     })
-//      .setClassToggle('.yyy','bg')
-//      .addIndicators({name :'bgc start'})
-//      .addTo(controller);
-
-
-// //sticky box
-// var scene_sticky = new ScrollMagic.Scene({
-//     triggerElement: "#touch-4",
-//     offset:'100',
-//     duration : '400'
-// })
-// .setPin('#sticky')
-// .addIndicators()
-// .addTo(controller);
-
-
-// //移動字
-
-//     var scene_move = new ScrollMagic.Scene({
-//             triggerElement: "#touch-5",
-//             offset: '100',
-//             duration: '400',
-//             reverse: true
-//         })
-//         .setTween(TweenMax.staggerTo('.pic-44 .ppp', 1, {
-//             x: 1350,
-//             ease: Strong.easeInOut
-//         }))
-//         .addIndicators()
-//         .addTo(controller);
-//     console.log('move ok');
-
-//  //stellar
-//   $('#container').stellar({
-//   horizontalOffset: 0,
-//   verticalOffset: 0,
-// });
-// console.log('stellar');
-
+});
 // //錨點
 //  $('a.page-scroll').click(function () {
 //         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -135,38 +136,5 @@ var ourScene = new ScrollMagic.Scene({
 //         }
 //     });
 
-});
 
-// $(function (){
-//     TweenMax.fromTo('.one',2,
-//     {y:-500,
-//     opacity:0},
-//     {y:0,
-//     opacity:1,
-//     ease: Power2.easeOut
-//     });
-//     TweenMax.fromTo('.two',2,
-//     {y:-700,
-//     opacity:0},
-//     {y:0,
-//     opacity:1,
-//     delay:0.5,
-//     ease: Power2.easeOut
-//     });
-//      TweenMax.fromTo('.three',2,
-//     {y:-700,
-//     opacity:0},
-//     {y:0,
-//     opacity:1,
-//     delay:1,
-//     ease: Power2.easeOut
-//     });
-//       TweenMax.fromTo('.four',2,
-//     {y:-700,
-//     opacity:0},
-//     {y:0,
-//     opacity:1,
-//     delay:1.5,
-//     ease: Power2.easeOut
-//     });
-// });
+

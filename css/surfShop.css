@@ -13,16 +13,18 @@
   content: '';
   clear: both; }
 
-.container .changebar ul {
-  display: inline-block;
-  vertical-align: bottom; }
-.container .changebar li {
-  outline: 1px solid red;
-  text-align: center;
-  border-bottom: 1px solid black;
-  padding: 5px;
-  cursor: pointer;
-  display: inline-block; }
+.container .changebar {
+  padding-bottom: 5px; }
+  .container .changebar ul {
+    display: inline-block;
+    vertical-align: bottom; }
+  .container .changebar li {
+    outline: 1px solid red;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+    display: inline-block; }
 .container hr {
   /*width:1150px;*/
   margin: auto;
@@ -34,8 +36,44 @@
   width: 100%;
   vertical-align: middle; }
 
-.aa img {
-  max-width: 200px; }
+.container22 {
+  padding-top: 5%;
+  padding-bottom: 3%; }
+  .container22 h1, .container22 p, .container22 li {
+    color: #fff; }
+
+.bg_1 {
+  background-image: url("../images/3accessories/roll_head.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover; }
+
+.bg_2 {
+  background-image: url("../images/3accessories/roll_head.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover; }
+
+.bg_3 {
+  background-image: url("../images/3accessories/fin_head.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover; }
+
+.bg_4 {
+  background-image: url("../images/3accessories/roll_head.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover; }
+
+.bg_5 {
+  background-image: url("../images/3accessories/roll_head.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover; }
+
+.aa {
+  max-width: 700px; }
 
 .everyone {
   outline: 1px solid blue; }
@@ -104,5 +142,15 @@
     overflow: scroll;
     height: 350px; }
 
-  .container .changebar li {
-    font-size: 15px; } }
+  .container .changebar {
+    padding-bottom: 18px; }
+    .container .changebar li {
+      font-size: 15px; }
+
+  .container22 {
+    padding-top: 16%;
+    padding-bottom: 2%; }
+    .container22 h1 {
+      font-size: 23px; }
+    .container22 p {
+      font-size: 15px; } }

@@ -10,7 +10,13 @@
 	background-repeat: no-repeat;
 	background-position: top;
 }
-
+%orangebtn{
+    background-color: #e97b23;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
 
 
 .bg_forest_2{
@@ -74,7 +80,7 @@
 		.typegroup{
 			text-align: center;
 			.type{
-				width: 30%;
+				width: 33.06%;
 				box-sizing:border-box;
 				padding: 10px;
 				display: inline-block;
@@ -101,6 +107,14 @@
 				.type:nth-child(#{$i}) .typeimg{
 					background-image: url('../images/2board/#{nth($images,$i)}.png');
 				}
+			}
+		}
+		.next{
+			padding: 5vh 0px;
+			text-align: right;
+			a{
+				@extend %orangebtn;
+				margin: 0 1% 0 0;
 			}
 		}
 	}

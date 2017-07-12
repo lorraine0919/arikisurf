@@ -1,26 +1,26 @@
-           $(document).ready(function(){
-                $('#global_img_1').click(function(){
-                    $('#text_description_1').slideToggle();
-                });
-            });
+           // $(document).ready(function(){
+           //      $('#global_img_1').click(function(){
+           //          $('#text_description_1').slideToggle();
+           //      });
+           //  });
 
-            $(document).ready(function(){
-                $('#global_img_2').click(function(){
-                    $('#text_description_2').slideToggle();
-                });
-            });
+           //  $(document).ready(function(){
+           //      $('#global_img_2').click(function(){
+           //          $('#text_description_2').slideToggle();
+           //      });
+           //  });
 
-            $(document).ready(function(){
-                $('#global_img_3').click(function(){
-                    $('#text_description_3').slideToggle();
-                });
-            });
+           //  $(document).ready(function(){
+           //      $('#global_img_3').click(function(){
+           //          $('#text_description_3').slideToggle();
+           //      });
+           //  });
 
-            $(document).ready(function(){
-                $('#global_img_4').click(function(){
-                    $('#text_description_4').slideToggle();
-                });
-            });
+           //  $(document).ready(function(){
+           //      $('#global_img_4').click(function(){
+           //          $('#text_description_4').slideToggle();
+           //      });
+           //  });
 
 //scorll banner           
 $(function (){
@@ -46,12 +46,12 @@ $(function (){
 //global
 var controller = new ScrollMagic.Controller();
     var wp = new TimelineMax().staggerFromTo('.global_img',0.5, {
-        y: -50,
+        y: -100,
         opacity:0
     },{
         y:0,
         opacity:1
-    },0.1);
+    },0.2);
 console.log("time");
 var scene = new ScrollMagic.Scene({
     triggerElement: ".global_base_title",
@@ -63,6 +63,25 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 console.log("times");
 
+//global txt
+var controller = new ScrollMagic.Controller();
+    var wp = new TimelineMax().staggerFromTo('.text_description',0.5, {
+        y: -100,
+        opacity:0
+    },{
+        y:0,
+        opacity:1
+    },0.3);
+console.log("time");
+var scene = new ScrollMagic.Scene({
+    triggerElement: ".global_base_title",
+    reverse:true,
+    offset:'5px',
+})
+.setTween(wp)
+// .addIndicators()
+.addTo(controller);
+console.log("times");
 
 // winning
 var controller = new ScrollMagic.Controller();

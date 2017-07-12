@@ -253,12 +253,8 @@
     justify-content: center;
     transition: height 0.4s cubic-bezier(0.32, 0.28, 1, 1.09); }
 
-  .global_text_1:hover, .global_text_2:hover, .global_text_3:hover, .global_text_4:hover {
-    height: 215px; }
-
   .text_description_1, .text_description_2, .text_description_3, .text_description_4 {
-    padding: 10px;
-    display: none; }
+    padding: 10px; }
 
   .clock, .phone, .location {
     width: 240px;

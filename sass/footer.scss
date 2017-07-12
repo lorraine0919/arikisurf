@@ -13,13 +13,13 @@
 	color: #fff;
 }
 .footer_0{
-	background-image: url('../images/1common/footerlight.png');
+	// background-image: url('../images/1common/footerlight.png');
 	background-color: #313131;
 	background-repeat: no-repeat;
-	position: relative;
 	overflow: hidden;
 	@extend %whiteword;
 	.maxContent{
+		position: relative;
 		@extend %navmax;
 		.titlegroup{
 			text-align: center;
@@ -98,23 +98,22 @@
 			left: 0; 
 		}
 	}
+	.maxContent:after{
+		content: '';
+		display: block;
+		width:15%;
+		padding-top: 20%;
+		background-image: url('../images/1common/footertotem.png');
+		position: absolute;
+		bottom: -50px;
+		left: 0;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
 
 }
-.footer_0:after{
-	content: '';
-	display: block;
-	width:15%;
-	padding-top: 20%;
-	background-image: url('../images/1common/footertotem.png');
-	position: absolute;
-	bottom: -100px;
-	left: 0;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
 
-
-}
 
 @media screen and (max-width:960px){
 	.footer_0{

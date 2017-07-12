@@ -69,13 +69,13 @@ $top:16vh;
 		}
 		.coating_1{
 			box-sizing:border-box;
-			padding: 100px 0;
 			background-color: #0e2334;
 			width: 100%;
 			background-image: url('../images/1common/screw.png');
 			background-repeat: no-repeat;
-			background-position: left;
-			background-size: contain;
+		    padding: 150px 0;
+		    background-position: 250%;
+		    background-size: cover;
 			@extend %whiteword;
 			.maxContent{
 				@extend %navmax;
@@ -158,7 +158,7 @@ $top:16vh;
 				}
 				.photoSelect{
 					.photo{
-						width: 16%;
+						width: 12%;
 						padding-top: 20%;
 						display: inline-block;
 						background-image: url('../images/1common/insidecircle.png');

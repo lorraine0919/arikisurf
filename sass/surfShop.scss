@@ -34,12 +34,17 @@
 		
 		   li{
 		   	color: #fff;
-			outline: 1px solid red;
+			border: 1px solid #fff;
+			border-radius: 5px;
 			text-align: center;
-			border-bottom:1px solid black;
 			padding:5px;
 			cursor:pointer;
 			display: inline-block;
+			transition: .5s;
+		    }
+		    li:hover{
+		    	color: #e97b23;
+		    	border: 1px solid #e97b23;
 		    }
 		  }
 		
@@ -123,23 +128,31 @@
         .myview .item{
           /*  width:540px;*/
             /*height:200px;*/
-            outline: 1px solid blue;
+            // outline: 1px solid blue;
+            border: 1px solid #ccc;
             vertical-align: middle;
             /*margin:0px 30px;*/
           .btngorup{
              margin: auto;
              text-align: center;
+             .morebtn {
+	          background-color: #1a191c;
+	          padding: 5px;
+	          border-radius: 5px;
+	          color: #fff;
+	          font-weight: bold; 
+	          transition: .5s;
+             }
+            .morebtn:hover{
+              background-color: #e97b23;
+            }
           }
-         .btngorup .morebtn {
-          background-color: #1a191c;
-          padding: 5px;
-          border-radius: 5px;
-          color: #fff;
-          font-weight: bold; 
-         }
         }
         .myview .item{
         	margin: 10px 0px;
+        	 box-shadow: 0px 2px 0px #888,
+        	             0px 5px 3px #aaa,
+        	             0px 10px 5px #ccc,;
         }
         
         .myview .item .txt{

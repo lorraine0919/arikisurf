@@ -14,7 +14,8 @@
   clear: both; }
 
 .container .changebar {
-  padding-bottom: 5px; }
+  padding-top: 15px;
+  padding-bottom: 10px; }
   .container .changebar ul {
     display: inline-block;
     vertical-align: bottom; }
@@ -37,8 +38,7 @@
   vertical-align: middle; }
 
 .container22 {
-  padding-top: 5%;
-  padding-bottom: 3%; }
+  padding-top: 5%; }
   .container22 h1, .container22 p, .container22 li {
     color: #fff; }
 
@@ -61,13 +61,13 @@
   background-size: cover; }
 
 .bg_4 {
-  background-image: url("../images/3accessories/roll_head.jpg");
+  background-image: url("../images/3accessories/wax_head.jpg");
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover; }
 
 .bg_5 {
-  background-image: url("../images/3accessories/roll_head.jpg");
+  background-image: url("../images/3accessories/suit_head.jpg");
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover; }
@@ -148,8 +148,10 @@
       font-size: 15px; }
 
   .container22 {
-    padding-top: 16%;
-    padding-bottom: 2%; }
+    padding-top: 10px;
+    padding-bottom: 30px; }
+    .container22 .txt {
+      display: none; }
     .container22 h1 {
       font-size: 23px; }
     .container22 p {

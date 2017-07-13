@@ -61,8 +61,11 @@
 	  .container22{
 	  	padding-top: 8%;
 	  	padding-bottom: 2%;
-	  	h1,p{
+	  	h1{
 	  		color: #fff;
+	  		text-shadow: 0px 2px 1px #888,
+        	             0px 3px 3px #aaa,
+        	             0px 5px 5px #ccc,;
 	  	}
 	  }
 		.bg_1{
@@ -116,6 +119,9 @@
         	overflow: scroll;
         	height: 550px;	
         }
+        .myview .item:nth-child(3n+1){
+        	clear: left;
+        }
         .myview::-webkit-scrollbar{
         	width: 12px;
 	      /* for vertical scrollbars */
@@ -131,7 +137,7 @@
             // outline: 1px solid blue;
             border: 1px solid #ccc;
             vertical-align: middle;
-            
+
             /*margin:0px 30px;*/
           .btngorup{
              margin: auto;

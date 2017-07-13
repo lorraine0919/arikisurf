@@ -28,7 +28,8 @@ module.exports = function (grunt) {
                    "about.html" : "app/about.html",
                     "index.html": "app/index.html",
                     "surfShop.html":"app/surfShop.html",
-                    "cart.html":"app/cart.html"
+                    "cart.html":"app/cart.html",
+                    "customize.html":"app/customize.html"
                 }
             }
         },

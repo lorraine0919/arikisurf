@@ -37,8 +37,7 @@ a {
       margin: auto;
       width: 30px;
       height: 30px;
-      border-radius: 50%;
-      animation: shine 1.9s infinite; }
+      border-radius: 50%; }
 @keyframes shine {
   0%,100% {
     background-color: rgba(255, 0, 0, 0.6); }
@@ -51,11 +50,12 @@ a {
       top: 80vh;
       left: 66vw; }
     .map_9 .center_9 .show {
-      width: 20%;
+      width: 18%;
       height: 40vh;
       position: absolute;
-      top: 22vh;
-      margin-left: 1vw; }
+      top: 26vh;
+      margin-left: 1vw;
+      display: none; }
       .map_9 .center_9 .show .pic {
         width: 100%; }
         .map_9 .center_9 .show .pic img {
@@ -75,12 +75,14 @@ a {
           height: 3vh;
           margin: 50px auto 0;
           line-height: 3vh;
-          background-color: #999;
-          padding: 1em 0; }
+          background-color: #1B334B;
+          padding: 1em 0;
+          transition: .5s; }
+          .map_9 .center_9 .show .intro .enter:hover {
+            background-color: #ED8C00; }
           .map_9 .center_9 .show .intro .enter a {
             display: block;
             width: 100%;
             height: 100%;
-            font-size: 25px; }
-            .map_9 .center_9 .show .intro .enter a:hover {
-              color: lightblue; }
+            font-size: 25px;
+            color: #fff; }

@@ -29,7 +29,13 @@ module.exports = function (grunt) {
                     "index.html": "app/index.html",
                     "surfShop.html":"app/surfShop.html",
                     "cart.html":"app/cart.html",
-                    "customize.html":"app/customize.html"
+                    "customize.html":"app/customize.html",
+                    "news":"app/news.html",
+                    "map.html":"app/map.html",
+                    "map_forum":"app/map_forum.html",
+                    "map_forum_discussion":"app/map_forum_discussion.html",
+                    "member":"app/member.html",
+                    "register":"app/register.html"
                 }
             }
         },

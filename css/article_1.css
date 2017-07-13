@@ -1,0 +1,147 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 微軟正黑體; }
+
+.clearfix {
+  clear: both; }
+
+@media screen and (max-width: 767px) {
+  .bg_15 {
+    background-image: url("../images/5news/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-color: lightblue; }
+
+  .banner_15 {
+    background-image: url("../images/5news/surf5.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 70%; }
+    .banner_15 p {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin-top: 30%;
+      text-align: center;
+      color: #fff;
+      font-size: 16px; }
+
+  .article_title_15 {
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px; }
+
+  .article_item {
+    width: 100%;
+    padding-bottom: 5vh; }
+
+  .article_item_title {
+    font-size: 18px;
+    padding: 15px 10px;
+    background-color: #1D4D66;
+    color: #fff;
+    border-bottom: 2px solid #ED8C00; }
+    .article_item_title p {
+      font-size: 16px;
+      padding: 10px 0px; }
+
+  .article_item_content_img {
+    width: 100%;
+    margin: 1vh auto; }
+    .article_item_content_img img {
+      width: 100%;
+      border: 1px solid #fff; }
+
+  .article_item_content {
+    line-height: 2;
+    padding: 30px;
+    border: 1px solid #444;
+    background-color: rgba(29, 77, 102, 0.9);
+    color: #fff;
+    font-size: 18px; } }
+/*RWD結束*/
+@media screen and (min-width: 768px) {
+  .bg_15 {
+    background-image: url("../images/5news/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-color: lightblue; }
+
+  .body_15 {
+    max-width: 1170px;
+    margin: auto; }
+
+  .banner_15 {
+    background-image: url("../images/5news/surf5.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 30%; }
+    .banner_15 p {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20%;
+      margin-top: 14%;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700; }
+
+  .article_title_15 {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px; }
+
+  .article_item {
+    width: 100%;
+    padding: 7vh 0; }
+
+  .article_item_title {
+    font-size: 28px;
+    padding: 20px;
+    background-color: #1D4D66;
+    color: #fff;
+    border-bottom: 2px solid #ED8C00; }
+    .article_item_title p {
+      font-size: 16px;
+      padding: 10px 0px; }
+
+  .article_item_content_img {
+    width: 50%;
+    margin: 1vh auto; }
+    .article_item_content_img img {
+      width: 100%;
+      border: 1px solid #fff; }
+
+  .article_item_content {
+    line-height: 2;
+    padding: 30px;
+    border: 1px solid #444;
+    background-color: rgba(29, 77, 102, 0.9);
+    color: #fff;
+    font-size: 18px; } }
+/*桌機結束*/

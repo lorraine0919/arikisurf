@@ -26,11 +26,13 @@ module.exports = function (grunt) {
             build: {
                 files: {
                    "about.html" : "app/about.html",
+                   "article.html" : "app/article.html",
+                   "article_1.html" : "app/article_1.html",
                     "index.html": "app/index.html",
                     "surfShop.html":"app/surfShop.html",
                     "cart.html":"app/cart.html",
                     "customize.html":"app/customize.html",
-                    "news":"app/news.html",
+                    "news.html":"app/news.html",
                     "map.html":"app/map.html",
                     "map_forum":"app/map_forum.html",
                     "map_forum_discussion":"app/map_forum_discussion.html",
@@ -70,7 +72,7 @@ module.exports = function (grunt) {
           watchTask: true,
           server: {
             baseDir: './',
-            index: 'cart.html'
+            index: 'article_1.html'
           }
         }
       }

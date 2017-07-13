@@ -93,7 +93,7 @@
   height: 12px; }
 
 .myview .item {
-  background: linear-gradient(#fff, #ddd);
+  background: linear-gradient(#ddd, #fff);
   border: 1px solid #ccc;
   vertical-align: middle;
   /*margin:0px 30px;*/ }

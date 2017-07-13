@@ -86,3 +86,7 @@ a {
             height: 100%;
             font-size: 25px;
             color: #fff; }
+
+@media screen and (max-width: 767px) {
+  .map_9 .center_9 .show {
+    display: ''; } }

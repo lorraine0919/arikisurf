@@ -12,4 +12,9 @@ $(document).ready(function(){
     	$("#lightbox_11").hide();
     });//click close
 
+    $('.quit').click(function(){
+        $("#lightbox_11").show();
+        console.log(123);
+    });
+
 });//ready

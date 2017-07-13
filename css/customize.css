@@ -16,7 +16,8 @@
   background-image: url("../images/2board/forest.png");
   background-size: cover;
   width: 100%;
-  position: relative; }
+  position: relative;
+  background-position: center; }
   .bg_forest_2 .pillar {
     position: absolute;
     bottom: 20%;
@@ -28,6 +29,7 @@
     margin: auto;
     padding: 10vh 0; }
     .bg_forest_2 .maxContent .stepbar {
+      text-align: left;
       background-image: url("../images/2board/strpbar.png");
       width: 20%;
       background-size: contain;
@@ -53,48 +55,94 @@
       .bg_forest_2 .maxContent .stepbar h3 {
         color: #fff;
         margin: 10px 0; }
-    .bg_forest_2 .maxContent .title {
-      color: #fff;
-      width: 20%;
-      position: absolute;
-      right: 5%;
-      top: 10vh; }
-    .bg_forest_2 .maxContent .typegroup {
-      text-align: center; }
-      .bg_forest_2 .maxContent .typegroup .type {
-        width: 25.06%;
+      .bg_forest_2 .maxContent .stepbar .title {
+        color: #fff;
+        position: absolute;
+        right: -88%;
+        top: 0; }
+    .bg_forest_2 .maxContent .picture {
+      vertical-align: top;
+      width: 100%;
+      display: inline-block;
+      width: 30%;
+      background-image: url("../images/2board/insidebox.png");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      padding: 4% 4%; }
+      .bg_forest_2 .maxContent .picture .pic {
+        border-radius: 5px;
         box-sizing: border-box;
-        padding: 10px;
         display: inline-block;
-        position: relative;
+        width: 49%;
         overflow: hidden; }
-        .bg_forest_2 .maxContent .typegroup .type .typeimg {
+        .bg_forest_2 .maxContent .picture .pic img {
+          width: 100%; }
+      .bg_forest_2 .maxContent .picture .pic:nth-child(1) {
+        width: 100%; }
+        .bg_forest_2 .maxContent .picture .pic:nth-child(1) img {
+          width: 100%; }
+    .bg_forest_2 .maxContent .demogroup {
+      vertical-align: top;
+      display: inline-block;
+      width: 33%; }
+      .bg_forest_2 .maxContent .demogroup .demo {
+        width: 30%;
+        margin: 0 0 0 16%;
+        position: relative;
+        padding-top: 89%; }
+        .bg_forest_2 .maxContent .demogroup .demo img {
           width: 100%;
-          overflow: hidden;
-          padding-top: 35%;
-          background-position: 10% 25%;
-          background-size: cover; }
-          .bg_forest_2 .maxContent .typegroup .type .typeimg .typeinfo {
-            text-align: left;
-            padding: 4% 8%;
-            box-sizing: border-box;
-            width: 100%;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.5); }
-      .bg_forest_2 .maxContent .typegroup .type:nth-child(1) .typeimg {
-        background-image: url("../images/2board/longboard.png"); }
-      .bg_forest_2 .maxContent .typegroup .type:nth-child(2) .typeimg {
-        background-image: url("../images/2board/shortboard.png"); }
-      .bg_forest_2 .maxContent .typegroup .type:nth-child(3) .typeimg {
-        background-image: url("../images/2board/funboard.png"); }
-      .bg_forest_2 .maxContent .typegroup .type:nth-child(4) .typeimg {
-        background-image: url("../images/2board/bodyboard.png"); }
-      .bg_forest_2 .maxContent .typegroup .type:nth-child(5) .typeimg {
-        background-image: url("../images/2board/fishboard.png"); }
-      .bg_forest_2 .maxContent .typegroup .type:nth-child(6) .typeimg {
-        background-image: url("../images/2board/gunboard.png"); }
+          position: absolute; }
+        .bg_forest_2 .maxContent .demogroup .demo .boarddemo {
+          top: 0;
+          left: 0;
+          z-index: 2; }
+        .bg_forest_2 .maxContent .demogroup .demo .base {
+          bottom: -37%;
+          left: -24%;
+          width: 150%; }
+    .bg_forest_2 .maxContent .selectboard {
+      display: inline-block;
+      width: 21%; }
+      .bg_forest_2 .maxContent .selectboard .boardgroup .board {
+        width: 15%;
+        display: inline-block; }
+        .bg_forest_2 .maxContent .selectboard .boardgroup .board img {
+          width: 100%; }
+      .bg_forest_2 .maxContent .selectboard .boardgroup .selected {
+        -webkit-filter: drop-shadow(1px 1px 5px rgba(240, 146, 35, 0.6));
+        filter: drop-shadow(1px 1px 5px rgba(240, 146, 35, 0.6)); }
+      .bg_forest_2 .maxContent .selectboard .boardcontent .boardname {
+        position: relative;
+        background: linear-gradient(#f09223, rgba(240, 146, 35, 0.6));
+        text-align: center;
+        padding: 6px;
+        margin: 15px 0 0 0;
+        color: #fff;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
+        .bg_forest_2 .maxContent .selectboard .boardcontent .boardname h3 {
+          font-weight: 400; }
+        .bg_forest_2 .maxContent .selectboard .boardcontent .boardname .arrow {
+          width: 0;
+          height: 0;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          border-bottom: 10px solid #f09223;
+          position: absolute;
+          top: -26%;
+          left: 70%; }
+      .bg_forest_2 .maxContent .selectboard .boardcontent .boardintroduce {
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 20px 10px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1) inset;
+        color: #444; }
+        .bg_forest_2 .maxContent .selectboard .boardcontent .boardintroduce th {
+          width: 26%; }
     .bg_forest_2 .maxContent .next {
       padding: 5vh 0px;
-      text-align: right; }
+      text-align: right;
+      max-width: 1019px;
+      margin: auto; }
       .bg_forest_2 .maxContent .next a {
         margin: 0 1% 0 0; }

@@ -25,6 +25,7 @@
 	background-size: cover;
 	width: 100%;
 	position: relative;
+	background-position: center;
 	.pillar{
 		position: absolute;
 		bottom: 20%;
@@ -38,7 +39,9 @@
 		max-width: $navmaxwidth;
 		margin: auto;
 		padding: 10vh 0;
+		// text-align: center;
 		.stepbar{
+			text-align: left;
 			background-image: url('../images/2board/strpbar.png');
 			@extend %bgrp;
 			width: 20%;
@@ -69,49 +72,159 @@
 				color: #fff;
 				margin: 10px 0;
 			}
+			.title{
+				color: #fff;
+				position: absolute;
+				right: -88%;
+				top: 0;
+			}
 		}
-		.title{
-			color: #fff;
-			width: 20%;
-			position: absolute;
-			right: 5%;
-			top: 10vh;
-		}
-		.typegroup{
-			text-align: center;
-			.type{
-				width: 25.06%;
+		// .typegroup{
+		// 	text-align: center;
+		// 	.type{
+		// 		width: 25.06%;
+		// 		box-sizing:border-box;
+		// 		padding: 10px;
+		// 		display: inline-block;
+		// 		position: relative;
+		// 		overflow: hidden;
+		// 		.typeimg{
+		// 			width: 100%;
+		// 			overflow: hidden;
+		// 			padding-top: 35%;
+		// 			background-position: 10% 25%;
+		// 			background-size: cover;
+		// 			.typeinfo{
+		// 				text-align: left;
+		// 				padding: 4% 8%;
+		// 				box-sizing:border-box;
+		// 				width: 100%;
+		// 				color: #fff;
+		// 				background-color: rgba(0,0,0,0.5);
+		// 			}				
+		// 		}
+		// 	}
+		// 	$images: ("longboard","shortboard","funboard","bodyboard","fishboard","gunboard");
+		// 	@for $i from 1 through 6{
+		// 		.type:nth-child(#{$i}) .typeimg{
+		// 			background-image: url('../images/2board/#{nth($images,$i)}.png');
+		// 		}
+		// 	}
+		// }
+		.picture{
+			vertical-align: top;
+			width: 100%;
+			display: inline-block;
+			width: 30%;
+			background-image: url('../images/2board/insidebox.png');
+			background-repeat: no-repeat;
+			background-position: top;
+			background-size: cover;
+			padding: 4% 4%;
+			.pic{
+				border-radius: 5px;
 				box-sizing:border-box;
-				padding: 10px;
 				display: inline-block;
-				position: relative;
+				width: 49%;
 				overflow: hidden;
-				.typeimg{
+				img{
 					width: 100%;
-					overflow: hidden;
-					padding-top: 35%;
-					background-position: 10% 25%;
-					background-size: cover;
-					.typeinfo{
-						text-align: left;
-						padding: 4% 8%;
-						box-sizing:border-box;
+				}				
+			}
+			.pic:nth-child(1){
+				width: 100%;
+				img{
+					width: 100%;
+				}
+			}
+
+		}
+		.demogroup{
+			vertical-align: top;
+			display: inline-block;
+			width: 33%;
+			.demo{
+				
+			    width: 30%;
+			    margin: 0 0 0 16%;
+			    position: relative;
+			    padding-top: 89%;
+				img{
+					width: 100%;
+					position: absolute;
+				}
+				.boarddemo{
+					top: 0;
+					left: 0;
+					z-index: 2;
+				}
+				.base{
+					bottom: -37%;
+				    left: -24%;
+					width: 150%;
+				}
+				
+			}			
+		}
+
+		.selectboard{
+			display: inline-block;
+			width: 21%;
+			.boardgroup{
+				.board{
+					width: 15%;
+					display: inline-block;
+					img{
 						width: 100%;
-						color: #fff;
-						background-color: rgba(0,0,0,0.5);
 					}				
 				}
-			}
-			$images: ("longboard","shortboard","funboard","bodyboard","fishboard","gunboard");
-			@for $i from 1 through 6{
-				.type:nth-child(#{$i}) .typeimg{
-					background-image: url('../images/2board/#{nth($images,$i)}.png');
+				.selected{
+					-webkit-filter: drop-shadow(1px 1px 5px rgba(240,146,35,0.6));
+  					filter: drop-shadow(1px 1px 5px rgba(240,146,35,0.6));
 				}
 			}
+			.boardcontent{
+				.boardname{
+					position: relative;
+					background: linear-gradient(#f09223,rgba(240,146,35,0.6));
+					text-align: center;
+					padding: 6px;
+					margin: 15px 0 0 0;
+					color: #fff;
+					text-shadow:1px 1px 5px rgba(0,0,0,0.3);
+					h3{
+						font-weight: 400;
+					}
+					.arrow{
+						width: 0;
+						height: 0;
+						border-right: 10px solid transparent;
+						border-left: 10px solid transparent;
+						border-bottom: 10px solid #f09223;
+						position: absolute;
+					    top: -26%;
+					    left: 70%;
+					}
+				}
+				.boardintroduce{
+					background-color: rgba(255,255,255,0.6);
+					padding: 20px 10px;
+					box-shadow: 1px 1px 10px rgba(0,0,0,0.1) inset;
+					color: #444;
+					th{
+						width:26%;
+					}
+				}
+
+			}
+
+
 		}
 		.next{
 			padding: 5vh 0px;
 			text-align: right;
+		    max-width: 1019px;
+		    margin: auto;
 			a{
 				@extend %orangebtn;
 				margin: 0 1% 0 0;

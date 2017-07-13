@@ -84,10 +84,6 @@
   padding-bottom: 20px;
   /*outline: 1px solid steelblue*/ }
 
-.myview {
-  overflow: scroll;
-  height: 550px; }
-
 .myview .item:nth-child(3n+1) {
   clear: left; }
 
@@ -95,10 +91,6 @@
   width: 12px;
   /* for vertical scrollbars */
   height: 12px; }
-
-.myview::-webkit-scrollbar-track,
-.myview::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1); }
 
 .myview .item {
   background: linear-gradient(#fff, #ddd);
@@ -142,10 +134,6 @@
 @media screen and (max-width: 767px) {
   .all {
     max-height: 100px; }
-
-  .myview {
-    overflow: scroll;
-    height: 350px; }
 
   .barbg .changebar {
     padding-bottom: 18px; }

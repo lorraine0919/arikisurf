@@ -124,11 +124,17 @@
         // 	background: rgba(0, 0, 0, 0.1);
         // }
         .myview .item{
-            background: linear-gradient(#ddd , #fff);
-            border: 1px solid #ccc;
-            vertical-align: middle;
-
-            /*margin:0px 30px;*/
+        	.box{
+        		padding: 10px;
+        		// background: linear-gradient(#ddd , #fff);
+            	border: 1px solid #ccc;
+            	vertical-align: middle;
+            	margin: 10px 0px;
+        	 	box-shadow: 0px 2px 0px rgba(0,0,0,.1),
+        	             	0px 5px 3px rgba(0,0,0,.1),
+        	             	0px 10px 5px rgba(0,0,0,.1),;
+        	}
+           /*margin:0px 30px;*/
           .btngorup{
              margin: auto;
              text-align: center;
@@ -139,19 +145,13 @@
 	          color: #fff;
 	          font-weight: bold; 
 	          transition: .5s;
+	          display: inline-block;
              }
             .morebtn:hover{
               background-color: #e97b23;
             }
           }
-        }
-        .myview .item{
-        	margin: 10px 0px;
-        	 box-shadow: 0px 2px 0px #888,
-        	             0px 5px 3px #aaa,
-        	             0px 10px 5px #ccc,;
-        }
-        
+        }   
         .myview .item .txt{
           padding: 10px;
         }

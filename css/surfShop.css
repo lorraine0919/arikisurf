@@ -112,8 +112,7 @@
   background: rgba(0, 0, 0, 0.1); }
 
 .myview .item {
-  /*  width:540px;*/
-  /*height:200px;*/
+  background: linear-gradient(#fff, #ddd);
   border: 1px solid #ccc;
   vertical-align: middle;
   /*margin:0px 30px;*/ }
@@ -135,7 +134,7 @@
   box-shadow: 0px 2px 0px #888, 0px 5px 3px #aaa, 0px 10px 5px #ccc; }
 
 .myview .item .txt {
-  padding: 5px; }
+  padding: 10px; }
 
 .myview .item .pic {
   padding: 10px; }

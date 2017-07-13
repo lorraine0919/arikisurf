@@ -132,9 +132,7 @@
         	background: rgba(0, 0, 0, 0.1);
         }
         .myview .item{
-          /*  width:540px;*/
-            /*height:200px;*/
-            // outline: 1px solid blue;
+            background: linear-gradient(#fff , #ddd);
             border: 1px solid #ccc;
             vertical-align: middle;
 
@@ -163,7 +161,7 @@
         }
         
         .myview .item .txt{
-          padding: 5px;
+          padding: 10px;
         }
         .myview .item .pic{
           padding: 10px;

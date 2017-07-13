@@ -32,7 +32,7 @@
       width: 20%;
       background-size: contain;
       padding-top: 1.7%;
-      margin: 0 auto 10vh auto;
+      margin: 0 auto 3vh auto;
       position: relative; }
       .bg_forest_2 .maxContent .stepbar .circle {
         width: 10%;
@@ -57,12 +57,12 @@
       color: #fff;
       width: 20%;
       position: absolute;
-      right: 0;
+      right: 5%;
       top: 10vh; }
     .bg_forest_2 .maxContent .typegroup {
       text-align: center; }
       .bg_forest_2 .maxContent .typegroup .type {
-        width: 33.06%;
+        width: 25.06%;
         box-sizing: border-box;
         padding: 10px;
         display: inline-block;
@@ -71,7 +71,7 @@
         .bg_forest_2 .maxContent .typegroup .type .typeimg {
           width: 100%;
           overflow: hidden;
-          padding-top: 80%;
+          padding-top: 35%;
           background-position: 10% 25%;
           background-size: cover; }
           .bg_forest_2 .maxContent .typegroup .type .typeimg .typeinfo {

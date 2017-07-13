@@ -3,7 +3,7 @@
   max-width: 1170px;
   margin: 0 auto; }
 
-.bc, .bg_11 .bread_11:after, .bg_11 .main_11:after, .bg_11 .feedback_11:after {
+.bc, .bg_11 .main_11:after, .bg_11 .feedback_11:after {
   content: '';
   display: block;
   clear: both; }
@@ -51,33 +51,24 @@ a {
   padding-top: 4rem;
   padding-bottom: 10rem; }
   .bg_11 .bread_11 {
+    background-color: rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
-    padding: .5rem 1.5em;
-    background-color: rgba(255, 255, 255, 0.2); }
+    padding: .5em 1.5em; }
     .bg_11 .bread_11 li {
-      float: left;
-      margin-left: 1.2rem; }
-      .bg_11 .bread_11 li a {
-        display: block;
-        width: 100%;
-        height: 100%; }
+      display: inline-block; }
   .bg_11 .main_11 {
     box-sizing: border-box;
     padding: .5em .5em 1.5em;
-    background-color: rgba(255, 255, 255, 0.5); }
-    .bg_11 .main_11 .title {
-      padding: .5em 1em;
-      margin-bottom: 1rem; }
-      .bg_11 .main_11 .title h1 {
-        display: inline-block;
-        font-size: 25px; }
-      .bg_11 .main_11 .title div {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 8px 5px #888888; }
+    .bg_11 .main_11 h1 {
+      padding: .5em 1em; }
+      .bg_11 .main_11 h1 span {
         float: right;
         margin: 0 5px;
         padding: 0 10px;
-        background-color: #ccc;
-        cursor: pointer;
-        font-size: 25px; }
+        background-color: yellow;
+        cursor: pointer; }
     .bg_11 .main_11 .content-l, .bg_11 .main_11 .content-r {
       float: left; }
     .bg_11 .main_11 .content-l {
@@ -87,12 +78,12 @@ a {
         width: 40%;
         height: 100%;
         margin: 0 auto;
-        margin-bottom: 1rem; }
+        margin-bottom: 1em; }
         .bg_11 .main_11 .content-l .icon img {
           width: 100%;
           border-radius: 50%; }
-      .bg_11 .main_11 .content-l .user, .bg_11 .main_11 .content-l .feedback_11 .top .quit, .bg_11 .feedback_11 .top .main_11 .content-l .quit {
-        margin-bottom: 1rem; }
+      .bg_11 .main_11 .content-l .user {
+        margin-bottom: 1em; }
     .bg_11 .main_11 .content-r {
       width: 65%;
       padding: 0 3em;
@@ -104,20 +95,14 @@ a {
         left: 0;
         width: 1px;
         height: 100%;
-        background-color: black;
-        box-shadow: 1px 0 1px #fff; }
+        background-color: #0b0b0b; }
       .bg_11 .main_11 .content-r .pic {
-        background-color: red;
-        margin-bottom: 1rem; }
-        .bg_11 .main_11 .content-r .pic img {
-          width: 100%;
-          height: 100%;
-          vertical-align: top; }
+        margin-bottom: 1em; }
   .bg_11 .feedback_11 {
     margin-top: 1em; }
     .bg_11 .feedback_11 .top {
       height: 10vh;
-      background: linear-gradient(to bottom, #80534D, #3B3E4C); }
+      background-color: pink; }
       .bg_11 .feedback_11 .top div {
         float: left; }
       .bg_11 .feedback_11 .top .icon {
@@ -131,20 +116,26 @@ a {
           height: 70px;
           border-radius: 50%;
           line-height: 12vh; }
-      .bg_11 .feedback_11 .top .user, .bg_11 .feedback_11 .top .quit {
+      .bg_11 .feedback_11 .top .user {
         box-sizing: border-box;
         padding: .5rem; }
-        .bg_11 .feedback_11 .top .user p, .bg_11 .feedback_11 .top .quit p {
+        .bg_11 .feedback_11 .top .user p {
           margin-bottom: .5rem; }
       .bg_11 .feedback_11 .top .quit {
+        display: block;
+        width: 8%;
+        height: 100%;
         float: right;
-        margin-right: 1rem; }
+        box-sizing: border-box;
+        text-align: center;
+        padding: .5rem; }
     .bg_11 .feedback_11 .text {
       padding: 1rem 1.5rem;
       background-color: rgba(255, 255, 255, 0.5); }
   .bg_11 .back_11 {
     height: 15vh;
     margin-top: 2vh;
+    margin-bottom: 2vh;
     background-color: green; }
     .bg_11 .back_11 textarea {
       width: 100%;
@@ -155,7 +146,7 @@ a {
   .bg_11 .send {
     box-sizing: border-box;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     text-align: center; }
     .bg_11 .send input {
       width: 30%;
@@ -166,59 +157,3 @@ a {
       cursor: pointer; }
     .bg_11 .send #submit {
       background-color: #ED8C00; }
-
-@media screen and (max-width: 767px) {
-  .bg_11 {
-    padding-top: .4rem; }
-    .bg_11 .bread_11 li {
-      box-sizing: border-box;
-      margin-left: .35rem;
-      padding: .5rem 0rem; }
-    .bg_11 .main_11 {
-      padding: .5em 0 0; }
-      .bg_11 .main_11 .title {
-        width: 85%;
-        padding: .5em 0em;
-        margin: 0 auto;
-        margin-bottom: 0; }
-        .bg_11 .main_11 .title h1 {
-          text-align: center;
-          display: block;
-          width: 100%; }
-        .bg_11 .main_11 .title:after {
-          content: '';
-          display: block;
-          clear: both; }
-        .bg_11 .main_11 .title div {
-          float: none;
-          display: inline-block;
-          font-size: 20px;
-          width: 40%;
-          margin: 0 auto; }
-      .bg_11 .main_11 .content-l {
-        float: none;
-        display: block;
-        background-color: rgba(255, 255, 255, 0.5);
-        width: 100%;
-        padding: 1rem 0; }
-        .bg_11 .main_11 .content-l .icon {
-          margin-bottom: .2rem; }
-        .bg_11 .main_11 .content-l .user, .bg_11 .main_11 .content-l .feedback_11 .top .quit, .bg_11 .feedback_11 .top .main_11 .content-l .quit {
-          margin-bottom: 0rem; }
-      .bg_11 .main_11 .content-r {
-        position: static;
-        float: none;
-        display: block;
-        background-color: rgba(255, 255, 255, 0.5);
-        width: 100%;
-        padding: 0; }
-        .bg_11 .main_11 .content-r:after {
-          display: none; }
-        .bg_11 .main_11 .content-r .pic {
-          width: 95%;
-          margin: 0 auto; }
-        .bg_11 .main_11 .content-r p {
-          box-sizing: border-box;
-          padding: .5rem; }
-    .bg_11 .feedback_11:after {
-      content: ''; } }

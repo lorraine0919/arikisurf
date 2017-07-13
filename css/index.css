@@ -32,7 +32,11 @@
   width: 100%;
   height: 70vh;
   overflow: hidden;
+  position: relative;
   background-image: url("../images/1common/banner.png"); }
+  .banner_1 video {
+    position: absolute;
+    top: -30vh; }
 
 .slogan_1 {
   width: 100%;
@@ -215,50 +219,89 @@
   .forum_1 .contentMax {
     border-bottom: 1px solid #fff;
     padding: 0 0 20vh 0; }
+  .forum_1 .postgroup .postfix:nth-child(1) .post .head {
+    background-image: url("../images/1common/1Pipeline.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .forum_1 .postgroup .postfix:nth-child(2) .post .head {
+    background-image: url("../images/1common/2SuperBank.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .forum_1 .postgroup .postfix:nth-child(3) .post .head {
+    background-image: url("../images/1common/3Jeffrey’s Bay.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .forum_1 .postgroup .postfix:nth-child(4) .post .head {
+    background-image: url("../images/1common/4Black Beach.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
   .forum_1 .postgroup .post {
     background-color: #223d55;
     border-radius: 10px; }
     .forum_1 .postgroup .post .head {
       background: #1a191c;
-      padding: 10% 10% 10% 15%;
+      padding: 60% 0% 0% 0%;
       border-radius: 10px 10px 0 0;
       min-height: 4.5em; }
-      .forum_1 .postgroup .post .head h3 {
-        opacity: 0.5; }
+      .forum_1 .postgroup .post .head .headword {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5% 10%; }
+        .forum_1 .postgroup .post .head .headword h3 {
+          opacity: 0.9; }
     .forum_1 .postgroup .post .content {
-      padding: 10% 5%;
       text-align: center; }
+      .forum_1 .postgroup .post .content .word {
+        color: #1a191c;
+        background-color: rgba(255, 255, 255, 0.05);
+        width: 100%;
+        color: #fff;
+        text-align: left;
+        padding: 5% 5%;
+        box-sizing: border-box; }
+        .forum_1 .postgroup .post .content .word h3 {
+          opacity: 0.5; }
       .forum_1 .postgroup .post .content div {
         display: inline-block;
         vertical-align: middle; }
-      .forum_1 .postgroup .post .content .mempic {
-        width: 20%; }
-        .forum_1 .postgroup .post .content .mempic img {
+      .forum_1 .postgroup .post .content .postcontentgroup {
+        padding: 20px; }
+        .forum_1 .postgroup .post .content .postcontentgroup .mempic {
+          width: 20%;
+          box-sizing: border-box;
+          display: inline-block;
+          vertical-align: middle; }
+          .forum_1 .postgroup .post .content .postcontentgroup .mempic img {
+            width: 100%;
+            border-radius: 50%; }
+        .forum_1 .postgroup .post .content .postcontentgroup .postcontent {
+          width: 70%;
+          padding: 5px;
+          text-align: left;
+          display: inline-block;
+          vertical-align: middle;
+          box-sizing: border-box; }
+          .forum_1 .postgroup .post .content .postcontentgroup .postcontent h5 {
+            font-size: 16px; }
+          .forum_1 .postgroup .post .content .postcontentgroup .postcontent p {
+            min-height: 3em; }
+        .forum_1 .postgroup .post .content .postcontentgroup .btngorup {
+          text-align: left;
           width: 100%;
-          border-radius: 50%; }
-      .forum_1 .postgroup .post .content .postcontent {
-        width: 78%;
-        text-align: left;
-        box-sizing: border-box;
-        padding: 5%; }
-        .forum_1 .postgroup .post .content .postcontent h5 {
-          font-size: 16px; }
-        .forum_1 .postgroup .post .content .postcontent p {
-          min-height: 3em; }
-      .forum_1 .postgroup .post .content .btngorup {
-        text-align: left;
-        width: 100%;
-        margin: 20px 0; }
-        .forum_1 .postgroup .post .content .btngorup .morebtn {
-          background-color: #1a191c;
-          padding: 10px;
-          border-radius: 5px;
-          color: #fff;
-          font-weight: bold; }
-  .forum_1 .postgroup .selected .head {
-    background: linear-gradient(#e67a23, #c7691e); }
-  .forum_1 .postgroup .selected .content .btngorup .morebtn {
-    background-color: #e97b23; }
+          margin: 20px 0; }
+          .forum_1 .postgroup .post .content .postcontentgroup .btngorup .morebtn {
+            background-color: #1a191c;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold; }
+    .forum_1 .postgroup .post .selected .word {
+      background-color: #EA8A00; }
+    .forum_1 .postgroup .post .selected .postcontentgroup .btngorup .morebtn {
+      background-color: #EA8A00; }
 
 .bulletin_1 {
   background-color: #12314c;

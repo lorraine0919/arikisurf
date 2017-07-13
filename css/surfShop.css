@@ -1,16 +1,8 @@
 .container {
-  max-width: 1170px;
-  outline: 1px solid black; }
+  max-width: 1170px; }
   .container img {
     width: 100%;
     vertical-align: middle; }
-
-/*S*/
-.all {
-  outline: 1px solid green;
-  display: inline-block;
-  max-height: 200px;
-  overflow: hidden; }
 
 .item:after {
   content: '';
@@ -84,9 +76,6 @@
 
 .aa {
   max-width: 700px; }
-
-.everyone {
-  outline: 1px solid blue; }
 
 .title h2 {
   text-indent: 60px;

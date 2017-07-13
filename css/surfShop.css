@@ -8,6 +8,12 @@
   content: '';
   clear: both; }
 
+.main_BG {
+  background-image: url("../images/4wavepoint/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover; }
+
 .barbg {
   background-color: #11314c; }
   .barbg .changebar {
@@ -96,6 +102,7 @@
   /*margin:0px 30px;*/ }
   .myview .item .box {
     padding: 10px;
+    background: linear-gradient(#fff, #fff);
     border: 1px solid #ccc;
     vertical-align: middle;
     margin: 10px 0px;

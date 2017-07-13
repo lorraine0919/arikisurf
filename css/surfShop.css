@@ -1,16 +1,8 @@
 .container {
-  max-width: 1170px;
-  outline: 1px solid black; }
+  max-width: 1170px; }
   .container img {
     width: 100%;
     vertical-align: middle; }
-
-/*S*/
-.all {
-  outline: 1px solid green;
-  display: inline-block;
-  max-height: 200px;
-  overflow: hidden; }
 
 .item:after {
   content: '';
@@ -85,9 +77,6 @@
 .aa {
   max-width: 700px; }
 
-.everyone {
-  outline: 1px solid blue; }
-
 .title h2 {
   text-indent: 60px;
   padding-top: 30px;
@@ -112,8 +101,7 @@
   background: rgba(0, 0, 0, 0.1); }
 
 .myview .item {
-  /*  width:540px;*/
-  /*height:200px;*/
+  background: linear-gradient(#fff, #ddd);
   border: 1px solid #ccc;
   vertical-align: middle;
   /*margin:0px 30px;*/ }
@@ -135,7 +123,7 @@
   box-shadow: 0px 2px 0px #888, 0px 5px 3px #aaa, 0px 10px 5px #ccc; }
 
 .myview .item .txt {
-  padding: 5px; }
+  padding: 10px; }
 
 .myview .item .pic {
   padding: 10px; }

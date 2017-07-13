@@ -1,22 +1,14 @@
 
 		.container{
 			max-width: 1170px;
-			outline:1px solid black;
+			// outline:1px solid black;
 			img{
 			width: 100%;
 			vertical-align: middle;
 			
 		}
 		}
-		/*S*/
-		.all{
-			outline:1px solid green;
-			display: inline-block;
-			max-height: 200px;
-			overflow: hidden;
-		}
-		
-		
+
 		.item:after{
 			content: '';
 			clear: both;
@@ -105,7 +97,7 @@
 
 		
 		.everyone{
-			outline:1px solid blue;
+			// outline:1px solid blue;
 		}
 		.title h2{
 			text-indent:60px;
@@ -132,9 +124,7 @@
         	background: rgba(0, 0, 0, 0.1);
         }
         .myview .item{
-          /*  width:540px;*/
-            /*height:200px;*/
-            // outline: 1px solid blue;
+            background: linear-gradient(#fff , #ddd);
             border: 1px solid #ccc;
             vertical-align: middle;
 
@@ -163,7 +153,7 @@
         }
         
         .myview .item .txt{
-          padding: 5px;
+          padding: 10px;
         }
         .myview .item .pic{
           padding: 10px;

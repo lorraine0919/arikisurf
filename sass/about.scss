@@ -17,7 +17,7 @@
 @media screen and (max-width:767px){
 
   .banner_17{
-      background-image:url("../images/6ariki/pexels-photo.jpg");
+      background-image:url("../images/5news/surf5.png");
       background-position: center;
       background-size:cover;
       background-repeat: no-repeat;
@@ -28,10 +28,10 @@
         top: 0;
         right: 0; 
         bottom: 0;
-        left: 0;
+        left: 5%;
         margin-top: 25%;
-        text-align: center;
-        color:#444;
+        
+        color:#fff;
         font-size:18px;
       }
     }
@@ -42,18 +42,27 @@
     top: 0;
     right: 0; 
     bottom: 0;
-    left: 0;
-    margin-top: 10%;
-    text-align: center; 
-    color:#444;
+    left: 5%;
+    margin-top: 10%; 
+    color:#fff;
     letter-spacing: 2px;
   }
 
   .about_title{
     text-align: center; 
-    margin-top:7vh;
+    margin-top:4vh;
     margin-bottom: 1vh;
+    color:#fff;
 
+  }
+
+  .about_bg{
+    background-color:#11314C;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top:5%;
+    padding-bottom:8%;
   }
 
   .about_rightSide_17{
@@ -61,47 +70,94 @@
      margin:20px;
      line-height: 1.8;
      display: inline-block;
+     color:#fff;
     }
   } 
  
+.about_txt ,.business_txt{
+    opacity: 0;
+    transform:translateY(50px);
+    transition:all 1s ease-out;
+  }
+
+
+  .fade-in{
+    opacity: 1;
+    transform:translateY(0);
+  }
+
  .business_philosophy_title{
       text-align: center;
-      margin-top:7vh;
+      margin-top:4vh;
       margin-bottom: 1vh;
+      color:#fff;
   } 
   
+
+  .business_bg{
+    background-color:#1D4D66;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top:5%;
+    padding-bottom:8%;
+  }
 
   .business_rightSide_17{
     p{
      margin:20px;
      line-height: 1.8;
      display: inline-block;
+     color:#fff;
     }
   } 
 
+  .winning_bg{
+    background-image:url("../images/6ariki/winning_bg.png");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top:5%;
+    padding-bottom:8%;
+  }
+
   .winning_record_title{
     text-align: center;
-    margin-top: 7vh;
+    margin-top: 4vh;
     margin-bottom: 1vh;
+    color:#fff;
   }
 
   .winning_img img{
     border-radius:10px;
+    padding-top:10px;
   }
 
   .winning_text{
     width: 100%;
     box-sizing:border-box;
-    padding:10px;
-    border:1px solid #ccc;
+    padding:20px;
+    border:1px solid #fff;
     border-radius:10px;
+    color:#fff;
     box-shadow:2px 2px 5px rgba(0,0,0,.3);
+  }
+
+
+  .global_bg{
+    background-image:url("../images/6ariki/global_bg.png");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top:5%;
+    padding-bottom:8%;
   }
 
   .global_base_title{
     text-align: center;
-    margin-top: 7vh;
+    margin-top: 4vh;
     margin-bottom: 1vh;
+    color:#fff;
   }
 
   .global_img_1 ,.global_img_2 ,.global_img_3 ,.global_img_4{
@@ -121,14 +177,14 @@
     position: absolute; 
     z-index: 5; 
     left: 0;  
-    bottom: 5px;  
+    bottom: 3px;  
     color:#fff;
     font-weight:800;
  } 
 
  .text_description_1 ,.text_description_2 ,.text_description_3 ,.text_description_4{
     padding:10px;
-      
+    color:#fff;  
      }
 
   .clock ,.phone ,.location {
@@ -154,26 +210,23 @@
 }/*RWD結束*/
 @media screen and (min-width:768px){
   .body_17{
-    max-width: 1170px;
+    // max-width: 1170px;
     margin:auto;
   }
 
   .banner_17{
-      background-image:url("../images/6ariki/pexels-photo.jpg");
+      background-image:url("../images/5news/surf5.png");
       background-position: center;
       background-size:cover;
       background-repeat: no-repeat;
       position: relative;
-      padding-top:45%;
+      padding-top:25%;
       p{
         position: absolute;
-        top: 0;
-        right: 0; 
+        top: 38%;
         bottom: 0;
-        left: 0;
-        margin-top: 15%;
-        text-align: center;
-        color:#444;
+        left: 20%;
+        color:#fff;
         font-size:20px;
       }
     }
@@ -181,89 +234,127 @@
  .main_title_17{
     font-size:40px;
     position: absolute;
-    top: 0;
-    right: 0; 
+    top: 20%;
     bottom: 0;
-    left: 0;
-    margin-top: 10%;
-    text-align: center; 
-    color:#444;
+    left: 20%;
+    color:#fff;
     letter-spacing: 2px;
   }
 
+  .about_bg{
+    background-image:url("../images/6ariki/about_bg3.png");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top:5%;
+    padding-bottom:8%;
+  }
+
+  .about_1170{
+    max-width: 1170px;
+    margin: auto;
+  }
+
   .about_title{
-    text-align: center;
-    margin-top:12vh;
-    margin-bottom: 5vh;
+    padding-top:5vh;
+    padding-bottom: 1vh;
+    color:#fff;
+    margin:0px 4%;
+
   }
 
-  .about_img ,.business_img{
-    opacity:0;
-    transform:translateY(50px);
-    transition:all 1s ease-out;
-  }
-
- 
+  
   .about_leftSide_17{
     width: 100%;
     img{
-      width: 100%;
-      vertical-align: middle;
-      display: inline-block;
+      display:none;
     }
   }
 
-  
-  
-
   .about_rightSide_17{
-    width: 100%;
-    p{
-     margin-left:30px;
+    .about_txt{
+     margin:0 5%;
      line-height: 2;
      display:flex;
-     align-items:center;
      justify-content:center;
-     height: 350px;
+     align-items:center;
+     height: 300px;
+     font-weight:700;
+     color:#fff;
     }
   }
   .about_txt ,.business_txt{
     opacity: 0;
     transform:translateY(50px);
     transition:all 1s ease-out;
-  } 
+  }
+
+ 
 
   .fade-in{
     opacity: 1;
     transform:translateY(0);
   }
+
+  .business_bg{
+    background-image:url("../images/6ariki/business_bg1.png");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top:5%;
+    padding-bottom:8%;
+  }
+
+ .business_1170{
+    max-width: 1170px;
+    margin: auto;
+  }
+
   .business_philosophy_title{
-      text-align: center;
-      margin-top:12vh;
-      margin-bottom: 5vh;
+      
+      margin-top:5vh;
+      margin-bottom: 1vh;
+      color:#fff;
   } 
   .business_leftSide_17{
     img{
       width: 100%;
-      
+      display:none;
     }
   }
  
   .business_rightSide_17{
     p{
-     margin-left:30px;
+     margin-left:0px 5%;;
      line-height: 2;
      display:flex;
      align-items:center;
      justify-content:center;
-     height: 350px;
+     height: 300px;
+     font-weight:700;
+     color:#fff;
     }
   } 
 
+  .winning_bg{
+    background-image:url("../images/6ariki/winning_bg.png");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top:5%;
+    padding-bottom:8%;
+  }
+
+  .winning_1170{
+    max-width: 1170px;
+    margin: auto;
+  }
+
   .winning_record_title{
     text-align: center;
-    margin-top: 12vh;
+    margin-top: 3vh;
     margin-bottom: 5vh;
+    color:#fff;
   }
 
   .winning_img{
@@ -277,20 +368,35 @@
     width: 350px;
     box-sizing:border-box;
     padding:10px;
-    border:1px solid #ccc;
+    border:1px solid #fff;
+    color:#fff;
     border-radius:10px;
     box-shadow:2px 2px 5px rgba(0,0,0,.3);
+  }
+
+  .global_bg{
+    background-image:url("../images/6ariki/global_bg.png");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top:5%;
+    padding-bottom:8%;
+  }
+
+  .global_1170{
+    max-width: 1170px;
+    margin: auto;
   }
 
   .global_base_title{
     text-align: center;
     margin-top: 12vh;
     margin-bottom: 5vh;
+    color:#fff;
   }
 
  .global_img_1 ,.global_img_2 ,.global_img_3 ,.global_img_4{
   position: relative;
-  cursor: pointer;
 
   img{
     width: 270px;
@@ -308,7 +414,7 @@
     position: absolute; 
     z-index: 5; 
     left: 0;  
-    bottom: 5px;  
+    bottom: 3px;  
     color:#fff;
     display:flex;
     align-items:center;
@@ -320,7 +426,7 @@
 
   .text_description_1 ,.text_description_2 ,.text_description_3 ,.text_description_4{
     padding:10px;
-      
+    color:#fff;  
      }
 
   .clock ,.phone ,.location {

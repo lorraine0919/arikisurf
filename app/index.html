@@ -5,6 +5,14 @@
   <head>
   <!--(bake module/head.html)-->
   <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="libs/jquery/dist/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.stellar/src/jquery.stellar.js"></script>
+
  </head>
   <!--header end-->
 <body>
@@ -20,7 +28,9 @@
             更代表了他在衝浪技巧上，無可取代的存在。</h3> 
         </div>
 	</div>
+    <div id="explodetrigger"></div>
 	<div class="coating_1">
+
 		<div class="maxContent">
 			<div class="empty col-xs-12 col-sm-6"></div>
             <div class="demorwd">
@@ -43,20 +53,62 @@
 				<p>酋長衝浪領先全球的烤漆與塗料技術，創造出猶如稀世珍寶的特殊質感，高雅而不失威風，讓你成為每一個浪點中，居高臨下的征服者。</p>
 			</div>
 			<div class="demo col-xs-12 col-sm-8">
-				<img src="images/1common/board1.png" alt="">
-				<img src="images/1common/board2.png" alt="">
-				<img src="images/1common/board3.png" alt="">
-				<img src="images/1common/board4.png" alt="">
+				<img src="images/1common/board1.png" class="boardlayer">
+				<img src="images/1common/board2.png" class="boardlayer">
+				<img src="images/1common/board3.png" class="boardlayer">
+				<img src="images/1common/board4.png" class="boardlayer">
 			</div>
 			<div class="about col-xs-12 col-sm-4">
-				<div class="word">
-					<h4>Outstanding Coating</h4>
-					<p>追求流暢與速度的設計</p>
-				</div>
-				<div class="photo">
-					<img src="images/1common/water.png">
-				</div>
-			</div>			
+                <div class="aboutContent">
+                    <div class="word w1">
+                        <h4>Outstanding Coating</h4>
+                        <p>追求流暢與速度的設計</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <line x1="200" y1="10" x2="110" y2="40" class="path" />
+                        </svg>
+                    </div>
+                    <div class="photo">
+                        <img src="images/1common/water.png">
+                    </div>                  
+                </div>
+                <div class="aboutContent">
+                    <div class="word w2">
+                        <h4>Outstanding Coating</h4>
+                        <p>第二個</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <line class="path"  x1="200" y1="20" x2="80" y2="120"/>
+                        </svg>
+                    </div>
+                    <div class="photo">
+                        <img src="images/1common/water.png">
+                    </div>                  
+                </div>
+                <div class="aboutContent">
+                    <div class="word w3">
+                        <h4>Outstanding Coating</h4>
+                        <p>第三個</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="500">
+                            <line class="path" x1="200" y1="20" x2="100" y2="200" />
+                        </svg>
+                    </div>
+                    <div class="photo">
+                        <img src="images/1common/water.png">
+                    </div>                  
+                </div>
+                <div class="aboutContent">
+                    <div class="word w4">
+                        <h4>Outstanding Coating</h4>
+                        <p>第四個</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  width="500" height="500">
+                            <line class="path"  x1="200" y1="20" x2="100" y2="300" />
+                        </svg>
+                    </div>
+                    <div class="photo">
+                        <img src="images/1common/water.png">
+                    </div>                  
+                </div>
+
+			</div>		
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -101,15 +153,6 @@
     </div>
     <div class="map_1">
     	<div class="contentMax">
-            <div class="maprwd col-xs-12">
-                <div class="mapimg">
-                    <img src="images/1common/map.png" class="mapimgpic">
-                    <div class="pin">
-                        <img src="images/1common/pin.png" class="pinpic">
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
     		<div class="introduce col-xs-12 col-sm-12">
     			<div class="introduceWord">
     				<h2>走向高手雲集浪點 衝破完美弧線</h2>
@@ -138,7 +181,7 @@
                 <div class="postfix col-sm-3 selected">    
                     <div class="post selected">
                         <div class="head">
-<!--                             <div class="headword">
+                            <!-- <div class="headword">
                                 <h3>現代衝浪的發源地</h3>
                                 <h4>Pipeline</h4>
                             </div> -->
@@ -308,6 +351,7 @@
             </div>
         </div>
     </div>
+    <script src="js/index.js"></script>
      <!--(bake module/footer.html)-->
 </body>
 </html>

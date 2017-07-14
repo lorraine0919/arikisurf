@@ -76,43 +76,80 @@
     position: relative; }
     .coating_1 .demo img {
       position: absolute;
-      width: 100%; }
+      width: 100%;
+      cursor: pointer; }
     .coating_1 .demo img:nth-child(1) {
-      top: -130px;
       left: -90px;
-      z-index: 4; }
+      z-index: 4;
+      transition: all 0.5s ease-out; }
     .coating_1 .demo img:nth-child(2) {
-      top: -30px;
       left: -90px;
-      z-index: 3; }
+      z-index: 3;
+      transition: all 0.5s ease-out; }
     .coating_1 .demo img:nth-child(3) {
-      top: 70px;
       left: -90px;
-      z-index: 2; }
+      z-index: 2;
+      transition: all 0.5s ease-out; }
     .coating_1 .demo img:nth-child(4) {
-      top: 170px;
       left: -90px;
-      z-index: 1; }
-  .coating_1 .about .word {
-    background-color: #49545d;
-    padding: 10px 33px;
-    margin: 10px 0;
-    position: relative; }
-    .coating_1 .about .word p {
-      font-size: 14px; }
-  .coating_1 .about .word:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 24px solid transparent;
-    border-bottom: 1px solid transparent;
-    border-right: 50px solid #49545d;
-    position: absolute;
-    top: 27px;
-    left: -48px; }
-  .coating_1 .about .photo img {
-    width: 100%; }
+      z-index: 1;
+      transition: all 0.5s ease-out; }
+    .coating_1 .demo img:nth-child(1).explode {
+      transform: translateY(-130px);
+      transition: all 0.5s ease-out;
+      opacity: 1; }
+    .coating_1 .demo img:nth-child(2).explode {
+      transform: translateY(-30px);
+      transition: all 0.5s ease-out;
+      opacity: 1; }
+    .coating_1 .demo img:nth-child(3).explode {
+      transform: translateY(70px);
+      transition: all 0.5s ease-out;
+      opacity: 1; }
+    .coating_1 .demo img:nth-child(4).explode {
+      transform: translateY(170px);
+      transition: all 0.5s ease-out;
+      opacity: 1; }
+    .coating_1 .demo img:nth-child(1) {
+      opacity: 0; }
+    .coating_1 .demo img:nth-child(3) {
+      opacity: 0; }
+  .coating_1 .about {
+    position: relative;
+    padding-top: 40%; }
+    .coating_1 .about .aboutContent {
+      position: absolute;
+      transition: 1s;
+      top: 4%;
+      left: 0;
+      opacity: 0; }
+      .coating_1 .about .aboutContent:nth-child(1) {
+        opacity: 1; }
+      .coating_1 .about .aboutContent .word {
+        background-color: #49545d;
+        padding: 10px 33px;
+        margin: 10px 0;
+        position: relative; }
+        .coating_1 .about .aboutContent .word p {
+          font-size: 14px; }
+        .coating_1 .about .aboutContent .word svg {
+          position: absolute;
+          top: 22%;
+          left: -59%; }
+          .coating_1 .about .aboutContent .word svg .path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            stroke: #49545d;
+            stroke-width: 3; }
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000; }
+  5% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
+      .coating_1 .about .aboutContent .photo img {
+        width: 100%; }
 
 .picture_1 {
   background-color: #18344c;
@@ -191,8 +228,6 @@
   padding: 20vh 0 0 0;
   background-image: url("../images/1common/maplight.png");
   background-size: cover; }
-  .map_1 .contentMax .maprwd {
-    display: none; }
   .map_1 .contentMax .introduce {
     text-align: right; }
     .map_1 .contentMax .introduce .introduceWord {
@@ -463,26 +498,24 @@
     background-image: none;
     background-color: #13324c;
     padding: 11vh 0 0 0; }
-    .map_1 .contentMax .maprwd {
-      display: block;
-      margin: 0 0 0 0; }
-      .map_1 .contentMax .maprwd .mapimg {
-        position: relative; }
-        .map_1 .contentMax .maprwd .mapimg .mapimgpic {
-          width: 100%; }
-        .map_1 .contentMax .maprwd .mapimg .pin {
-          width: 8%;
-          position: absolute;
-          top: 29%;
-          left: 37%; }
-          .map_1 .contentMax .maprwd .mapimg .pin .pinpic {
-            width: 100%; }
     .map_1 .contentMax .introduce .introduceWord {
       text-align: center; }
       .map_1 .contentMax .introduce .introduceWord p {
         text-align: center; }
     .map_1 .contentMax .map {
-      display: none; }
+      display: block;
+      margin: 0 0 0 0; }
+      .map_1 .contentMax .map .mapimg {
+        position: relative; }
+        .map_1 .contentMax .map .mapimg .mapimgpic {
+          width: 100%; }
+        .map_1 .contentMax .map .mapimg .pin {
+          width: 8%;
+          position: absolute;
+          top: 29%;
+          left: 37%; }
+          .map_1 .contentMax .map .mapimg .pin .pinpic {
+            width: 100%; }
 
   .forum_1 {
     padding: 10px 10px 0 10px; }

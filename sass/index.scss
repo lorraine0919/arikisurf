@@ -103,42 +103,84 @@ $top:16vh;
 				img{
 					position: absolute;
 					width: 100%;
+					cursor:pointer;
+
 				}
 				@for $i from 1 through 4{
 					img:nth-child(#{$i}){
-						top: -230px+$i*100;
 						left: -90px;
 						z-index: 5-$i;
+						transition:all 0.5s ease-out;
 					}
 				}
+				@for $i from 1 through 4{
+					img:nth-child(#{$i}).explode{
+						transform:translateY( #{-230px+$i*100});
+						transition:all 0.5s ease-out;
+						opacity: 1;
+					}
+				}
+				img:nth-child(1){
+					opacity: 0;
+				}
+				img:nth-child(3){
+					opacity: 0;
+				}
+
 			}
 			.about{
-				.word{
-					background-color: #49545d;
-					padding: 10px 33px;
-					margin: 10px 0;
-					position: relative;
-					p{
-						font-size: 14px;
-					}
-				}
-				.word:after{
-					content: '';
-					display: block;
-					width: 0;
-					height: 0;
-				    border-top: 24px solid transparent;
-				    border-bottom: 1px solid transparent;
-				    border-right: 50px solid #49545d;
+				
+				position: relative;
+				padding-top: 40%;
+				.aboutContent{
 					position: absolute;
-				    top: 27px;
-				    left: -48px;
-
-				}
-				.photo{
-					img{
-						width: 100%;
+					transition:1s;
+					top: 4%;
+					left: 0;
+					opacity:0;
+					&:nth-child(1){
+						opacity:1;
 					}
+					.word{
+						background-color: #49545d;
+						padding: 10px 33px;
+						margin: 10px 0;
+						position: relative;
+						p{
+							font-size: 14px;
+						}
+						svg{
+							position: absolute;
+						    top: 22%;
+						    left: -59%;
+							.path {
+							  stroke-dasharray: 1000;
+							  stroke-dashoffset: 1000;
+							  stroke:#49545d;
+							  stroke-width:3;
+							  // animation: dash 5s linear alternate forwards;
+							}
+
+							@keyframes dash {
+							  0% {
+							    stroke-dashoffset: 1000;
+							  }
+							  5%{
+							  	stroke-dashoffset: 1000;
+							  }
+							  100% {
+							    stroke-dashoffset: 0;
+							  }
+							}							
+						}
+
+					}
+					.photo{
+						img{
+							width: 100%;
+						}
+					}
+
 				}
 			}
 		}
@@ -250,9 +292,6 @@ $top:16vh;
 			background-size: cover;
 			.contentMax{
 				@extend %navmax;
-				.maprwd{
-					display: none;
-				}
 				.introduce{
 					text-align: right;
 					.introduceWord{
@@ -626,7 +665,15 @@ $top:16vh;
 		background-color: #13324c;
 		padding: 11vh 0 0 0;
 		.contentMax{
-			.maprwd{
+			.introduce{
+				.introduceWord{
+					text-align: center;
+					p{
+						text-align: center;
+					}
+				}
+			}
+			.map{
 				display: block;
 				margin: 0 0 0 0;
 				.mapimg{
@@ -644,17 +691,6 @@ $top:16vh;
 						}
 					}
 				}
-			}
-			.introduce{
-				.introduceWord{
-					text-align: center;
-					p{
-						text-align: center;
-					}
-				}
-			}
-			.map{
-				display: none;
 			}
 		}
 	}

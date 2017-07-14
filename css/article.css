@@ -74,7 +74,18 @@
     border: 1px solid #444;
     background-color: rgba(29, 77, 102, 0.9);
     color: #fff;
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  .btn_15 {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px; }
+
+  .btn_15_a {
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #fff; } }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
   .bg_15 {
@@ -143,5 +154,20 @@
     border: 1px solid #444;
     background-color: rgba(29, 77, 102, 0.9);
     color: #fff;
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  .btn_15 {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px; }
+
+  .btn_15_a {
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #fff; }
+
+  .btn_15_a:hover {
+    border: 1px solid #ED8C00;
+    color: #ED8C00; } }
 /*桌機結束*/

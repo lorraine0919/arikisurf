@@ -14,7 +14,7 @@ $(function(){
 		console.log($(this).index());
 		var index = $(this).index();
 		document.getElementsByClassName("aboutContent")[index].style.opacity=1;
-		document.getElementsByClassName("path")[index].style.animation='dash 5s linear alternate forwards';
+		document.getElementsByClassName("path")[index].style.animation='dash 2s linear alternate forwards';
 	}).mouseleave(function(){
 		var index = $(this).index();
 		document.getElementsByClassName("aboutContent")[index].style.opacity=0;

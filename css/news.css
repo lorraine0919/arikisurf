@@ -10,6 +10,13 @@
   clear: both; }
 
 @media screen and (max-width: 767px) {
+  .bg_14 {
+    background-image: url("../images/5news/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-color: lightblue; }
+
   .banner_14 {
     background-image: url("../images/5news/surf2.png");
     background-position: center;
@@ -41,11 +48,11 @@
     letter-spacing: 2px; }
 
   .news_item {
-    width: 95%;
+    width: 100%;
     height: auto;
     box-sizing: border-box;
     background-color: #11314C;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 6px 6px 0px #ED8C00;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0px 6px 0px #ED8C00;
     margin-bottom: 18px; }
 
   .news_item_txt {
@@ -61,17 +68,15 @@
       font-size: 15px;
       margin-bottom: 8px; }
 
-  .news_item_1 {
-    margin-top: 5vh; }
-
   .news_item_img {
     width: 95%;
     display: inline-block;
     vertical-align: middle;
     padding: 10px; }
 
-  .news_item_7 {
-    margin-bottom: 10vh; } }
+  .news_item_border {
+    padding-top: 5vh;
+    padding-bottom: 10vh; } }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
   .bg_14 {

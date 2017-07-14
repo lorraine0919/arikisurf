@@ -85,9 +85,8 @@ a {
   .bg_10 .beach_10 {
     box-sizing: border-box; }
     .bg_10 .beach_10 .beach_h {
-      height: 10vh;
       box-sizing: border-box;
-      padding: 1rem 2rem 0;
+      padding: 1rem 2rem 1rem;
       background-image: url("../images/4wavepoint/talk.jpg");
       background-repeat: no-repeat;
       color: #fff; }
@@ -206,8 +205,6 @@ a {
           width: 50px; }
       .bg_10 .info_10 .weather {
         text-align: center; }
-    .bg_10 .beach_10 .beach_h {
-      height: 13vh; }
     .bg_10 .fourm ul li {
       float: none;
       border-right: none;

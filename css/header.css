@@ -117,19 +117,6 @@
   .nav_0 {
     width: 100%; }
 
-  .nav_0 .top {
-    background-color: #11314c;
-    width: 100%;
-    height: 16vh;
-    border-bottom: 5px solid #ed8c00;
-    position: fixed;
-    background-image: url("../images/1common/topbg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80%;
-    z-index: 20;
-    box-sizing: border-box; }
-
   .nav_0 .navDetail {
     width: 100%;
     max-width: 1170px;
@@ -142,37 +129,45 @@
 
   .nav_0 .navDetail .navfix {
     position: fixed;
-    padding: 0 0 10px 0;
     width: 100%;
-    left: 0; }
+    left: 0;
+    background-color: #11314c;
+    border-bottom: 3px solid #ed8c00; }
 
   .nav_0 .navDetail .navfix .navimg {
-    margin: 1% auto;
+    margin: auto;
     width: 100%;
     max-width: 1170px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     background-image: url("../images/1common/nav2.png");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: 96%;
+    background-size: contain;
     border-radius: 8px;
     position: relative;
-    padding: 0.5% 0px; }
+    padding: 2% 0px 1% 0px; }
 
   .nav_0 .navDetail .navfix .navimg .logo {
-    width: 13%;
+    width: 15%;
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0 0 6%; }
+    position: relative;
+    margin: 0 0 0 6%;
+    padding-top: 6%; }
+
+  .nav_0 .navDetail .navfix .navimg .logo .logofix {
+    position: absolute;
+    width: 100%;
+    top: -63%;
+    left: 0%; }
 
   .nav_0 .navDetail .navfix .navimg .logo img {
     width: 100%; }
 
   .nav_0 .navDetail .navfix .navimg .iconGroup {
     display: inline-block;
-    width: 80%;
+    width: 20%;
     text-align: right;
-    vertical-align: middle; }
+    vertical-align: bottom; }
 
   .nav_0 .navDetail .navfix .navimg .iconGroup ul li {
     display: inline-block;
@@ -180,6 +175,7 @@
     vertical-align: middle; }
 
   .nav_0 .navDetail .navfix .navimg .iconGroup ul li img {
+    width: 30px;
     display: block;
     margin: auto; }
 
@@ -196,22 +192,20 @@
 
   .nav_0 .navDetail .navfix .navimg ul.menu {
     display: inline-block;
-    margin: 0 0 -0.3% 3vw;
-    width: 60%;
-    padding: 0 0 10px 0;
+    width: 50%;
     vertical-align: bottom; }
 
   .nav_0 .navDetail .navfix .navimg ul.menu li {
     display: inline-block;
     border-right: 1px solid #0b0b0b;
-    box-shadow: 1px 0px 0px #5b5b5b; }
+    box-shadow: 1px 0px 0px #878a8d; }
 
   .nav_0 .navDetail .navfix .navimg ul.menu li a {
     padding: 1.2vw 1vw;
     color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
 
-  .nav_0 .navDetail .navfix .navimg ul.menu li:last-child {
+  .nav_0 .navDetail .navfix .navimg ul.menu li:nth-child(5) {
     border-right: none;
     box-shadow: none; }
 
@@ -230,7 +224,7 @@
 
   .topGround_0 {
     width: 10%;
-    height: 16vh;
+    height: 11vh;
     position: relative; } }
 @media screen and (max-width: 910px) {
   .nav_0 .navDetail .navfix .navimg .iconGroup {

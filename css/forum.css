@@ -1,9 +1,9 @@
-.cen, .wave_10 .beach_10, .wave_10 .info, .wave_10 .fourm {
+.cen, .bg_10 .bread_10, .bg_10 .info_10, .bg_10 .beach_10, .bg_10 .fourm {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto; }
 
-.bc, .wave_10 .fourm ul:after, .wave_10 .fourm .talk:after {
+.bc, .bg_10 .bread_10:after, .bg_10 .info_10:after, .bg_10 .info_10 .ic:after, .bg_10 .info_10 .wave img:after, .bg_10 .fourm ul:after, .bg_10 .fourm .talk:after {
   content: '';
   display: block;
   clear: both; }
@@ -44,69 +44,191 @@ a {
     right: -15px;
     cursor: pointer; }
 
-.wave_10 {
-  width: 100%;
-  background-image: url("../images/4wavepoint/bg.jpg");
-  background-size: cover; }
-  .wave_10 .beach_10 {
-    height: 50vh;
-    position: relative; }
-    .wave_10 .beach_10 h1 {
-      position: absolute;
-      top: 5vh;
-      left: 1vh;
-      z-index: 5;
-      color: #fff; }
-    .wave_10 .beach_10 img {
+.bg_10 {
+  background-image: url("../images/4wavepoint/bg_f.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  padding-top: 4rem; }
+  .bg_10 .bread_10 {
+    box-sizing: border-box;
+    padding: .5rem 1.5em; }
+    .bg_10 .bread_10 li {
+      float: left;
+      margin-left: 1.2rem; }
+    .bg_10 .bread_10 a {
+      display: block;
       width: 100%;
       height: 100%; }
-  .wave_10 .info {
-    height: 20vh;
+  .bg_10 .info_10 {
     box-sizing: border-box;
-    padding: 1em;
-    background-color: #435B70; }
-  .wave_10 .fourm {
+    padding: 1rem 0;
+    margin-top: 10rem; }
+    .bg_10 .info_10 .ic {
+      width: 14%;
+      float: right; }
+    .bg_10 .info_10 .wave {
+      padding-left: 1rem;
+      color: #fff;
+      border-left: 1px solid #A2CBDB; }
+      .bg_10 .info_10 .wave img {
+        float: left;
+        vertical-align: top;
+        margin-right: 1rem; }
+      .bg_10 .info_10 .wave .good {
+        font-weight: bold; }
+    .bg_10 .info_10 .weather {
+      width: 9%;
+      font-size: 39px;
+      font-weight: bold;
+      color: #fff; }
+  .bg_10 .beach_10 {
+    box-sizing: border-box; }
+    .bg_10 .beach_10 .beach_h {
+      height: 10vh;
+      box-sizing: border-box;
+      padding: 1rem 2rem 0;
+      background-image: url("../images/4wavepoint/talk.jpg");
+      background-repeat: no-repeat;
+      color: #fff; }
+    .bg_10 .beach_10 .beach_txt {
+      position: relative;
+      box-sizing: border-box;
+      padding: 2rem;
+      color: #fff;
+      background: linear-gradient(#5F7F92, #29465E); }
+      .bg_10 .beach_10 .beach_txt:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 99%;
+        height: 95%;
+        border: 1px solid #95AFBA; }
+      .bg_10 .beach_10 .beach_txt p {
+        margin-bottom: .8rem; }
+  .bg_10 .fourm {
     background-color: rgba(255, 255, 255, 0.1); }
-    .wave_10 .fourm ul {
-      background-color: #ED8C00; }
-    .wave_10 .fourm li {
+    .bg_10 .fourm ul {
+      box-sizing: border-box;
+      padding: 2rem 1.5rem; }
+    .bg_10 .fourm li {
       display: inline-block;
       float: left;
-      margin-left: 15px;
-      font-size: 23px;
+      margin-right: 1rem;
+      font-size: 20px;
       cursor: pointer;
-      transition: .3s; }
-      .wave_10 .fourm li:hover {
-        color: #ccc; }
-      .wave_10 .fourm li:last-child {
-        float: right;
-        background-color: yellow;
-        box-sizing: border-box;
-        padding: 0 .2em; }
-    .wave_10 .fourm .talk {
+      transition: .3s;
+      box-sizing: border-box;
+      padding-right: 1rem;
+      border-right: 1px solid white;
+      color: #fff; }
+      .bg_10 .fourm li:hover {
+        color: #ED8C00; }
+      .bg_10 .fourm li:nth-child(5) {
+        border-right: none; }
+      .bg_10 .fourm li:last-child {
+        border-right: none;
+        float: right; }
+    .bg_10 .fourm .talk {
+      box-sizing: border-box;
       padding: 1.5em; }
-      .wave_10 .fourm .talk .item {
-        background-color: rgba(255, 255, 255, 0.5);
+      .bg_10 .fourm .talk .item {
+        box-sizing: border-box;
+        padding: .9em;
+        background-color: #3A3A3A;
         width: 30%;
-        height: 380px;
-        border: 2px solid #ED8C00;
+        height: 420px;
         float: left;
         position: relative;
         margin-bottom: 2%; }
-        .wave_10 .fourm .talk .item:nth-child(3n-1) {
+        .bg_10 .fourm .talk .item:nth-child(3n-1) {
           margin: 0 4%; }
-        .wave_10 .fourm .talk .item .pic img {
+        .bg_10 .fourm .talk .item .pic img {
           width: 100%;
           vertical-align: top; }
-        .wave_10 .fourm .talk .item .text {
-          padding: .2em 1em; }
-      .wave_10 .fourm .talk .watch {
+        .bg_10 .fourm .talk .item .text {
+          box-sizing: border-box;
+          padding: 2rem .1rem;
+          color: #fff; }
+          .bg_10 .fourm .talk .item .text .day {
+            color: #999; }
+          .bg_10 .fourm .talk .item .text .tt {
+            height: 70px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden; }
+        .bg_10 .fourm .talk .item .item_border {
+          width: 90%;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          box-sizing: border-box;
+          border-top: 1px solid #fff; }
+          .bg_10 .fourm .talk .item .item_border .star {
+            color: #FFBA01;
+            font-size: 30px;
+            text-align: left; }
+          .bg_10 .fourm .talk .item .item_border #view {
+            box-sizing: border-box;
+            padding-left: 3.8rem; }
+            .bg_10 .fourm .talk .item .item_border #view img {
+              width: 40px;
+              vertical-align: 0%; }
+          .bg_10 .fourm .talk .item .item_border .watch {
+            font-size: 20px;
+            color: white;
+            box-sizing: border-box;
+            padding-left: .6rem;
+            vertical-align: 10%; }
+
+@media screen and (max-width: 767px) {
+  .bg_10 {
+    padding: 1rem 0;
+    background-size: contain;
+    background-color: #11324C; }
+    .bg_10 .beach_10 {
+      height: 100%; }
+    .bg_10 .info_10 {
+      margin-top: 5rem; }
+      .bg_10 .info_10 .ic {
+        width: 45%;
+        height: 6vh; }
+      .bg_10 .info_10 .wave {
+        border-left: none;
+        padding-right: 1rem; }
+        .bg_10 .info_10 .wave img {
+          width: 50px; }
+      .bg_10 .info_10 .weather {
+        text-align: center; }
+    .bg_10 .beach_10 .beach_h {
+      height: 13vh; }
+    .bg_10 .fourm ul li {
+      float: none;
+      border-right: none;
+      width: 119.225px;
+      text-align: center;
+      margin: 0 auto;
+      padding: .2rem .3rem; }
+      .bg_10 .fourm ul li:last-child {
+        float: none; }
+    .bg_10 .fourm .talk {
+      padding: .0; }
+      .bg_10 .fourm .talk .item {
+        float: none;
+        display: block;
+        height: auto;
         width: 100%;
-        background-color: lightblue;
-        position: absolute;
-        bottom: 0;
-        margin: auto;
-        box-sizing: border-box;
-        padding: .2rem .5rem; }
-        .wave_10 .fourm .talk .watch .star {
-          float: right; }
+        margin: 5vh 0;
+        background: linear-gradient(to right, #1BBCB3, #37B9E9); }
+        .bg_10 .fourm .talk .item:nth-child(3n-1) {
+          margin: 0; }
+        .bg_10 .fourm .talk .item .item_border {
+          position: static; }
+          .bg_10 .fourm .talk .item .item_border #view {
+            padding-left: 7rem; } }

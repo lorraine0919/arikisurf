@@ -102,7 +102,7 @@
   /*margin:0px 30px;*/ }
   .myview .item .box {
     padding: 10px;
-    background: linear-gradient(#fff, #fff);
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
     border: 1px solid #ccc;
     vertical-align: middle;
     margin: 10px 0px;

@@ -167,36 +167,38 @@
         line-height: 25px; }
         .picture_1 .maxContent .introduce .introduceMax h2 {
           margin: 15px 0; }
-    .picture_1 .maxContent .photoSelect .photo {
-      width: 12%;
-      padding-top: 20%;
-      display: inline-block;
-      background-image: url("../images/1common/insidecircle.png");
-      background-size: contain;
-      text-align: center;
-      position: relative; }
-      .picture_1 .maxContent .photoSelect .photo img {
-        width: 80%;
+    .picture_1 .maxContent .photoSelect {
+      padding-left: 5%; }
+      .picture_1 .maxContent .photoSelect .photo {
+        width: 12%;
+        padding-top: 20%;
+        display: inline-block;
+        background-image: url("../images/1common/insidecircle.png");
+        background-size: contain;
+        text-align: center;
+        position: relative; }
+        .picture_1 .maxContent .photoSelect .photo img {
+          width: 80%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          z-index: 3; }
+      .picture_1 .maxContent .photoSelect .selected:after {
+        content: '';
         position: absolute;
+        background-image: url("../images/1common/picselected.png");
         top: 0;
-        right: 0;
-        bottom: 0;
         left: 0;
+        bottom: 0;
+        right: 0;
         margin: auto;
-        z-index: 3; }
-    .picture_1 .maxContent .photoSelect .selected:after {
-      content: '';
-      position: absolute;
-      background-image: url("../images/1common/picselected.png");
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      background-size: contain;
-      z-index: 2; }
-    .picture_1 .maxContent .photoSelect .arrowrwd {
-      display: none; }
+        background-size: contain;
+        z-index: 2; }
+      .picture_1 .maxContent .photoSelect .arrowrwd {
+        display: none; }
     .picture_1 .maxContent .button {
       padding-left: 5%; }
       .picture_1 .maxContent .button a {
@@ -207,7 +209,7 @@
         border-radius: 10px;
         font-weight: bold; }
     .picture_1 .maxContent .demo {
-      padding-top: 20%;
+      padding-top: 14%;
       position: relative; }
       .picture_1 .maxContent .demo .surfboard {
         position: absolute;

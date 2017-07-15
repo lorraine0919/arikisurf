@@ -61,7 +61,7 @@
     background-color: hsla(88, 80%, 90%, 0.4);
   }
   /*=========原max-width:767px開始處=========*/
-  .iconGroup,.idHello,.topGround_0{
+  .iconGroup,.idHello{
         display: none;
   }
     .hb{
@@ -114,6 +114,11 @@
       background-color:hsla(100, 100%, 100%, 0.1);
     }
     #control:checked ~ .menu{right: -1vh;}
+    .topGround_0 {
+      width: 10%;
+      height: 8vh;
+      position: relative;
+  }
 }
 @media screen and (min-width:768px){
   .rwd{display: none;}

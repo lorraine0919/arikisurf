@@ -25,7 +25,7 @@ $(function(){
 	});
 	/*以上是爆炸圖動畫*/
 
-
+	/*以下是換圖動畫*/
 	$('.photo').mouseover(function(){
 		var index = $(this).index()+1;
 		$(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
@@ -34,5 +34,6 @@ $(function(){
 		var index = $(this).index()+1;
 		$(this).children('img').attr('src','images/1common/picselect'+index+'.png');
 	});
+	/*以上是換圖動畫*/
 
 });//我是結尾

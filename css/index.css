@@ -193,7 +193,8 @@
           margin: auto;
           z-index: 3; }
         .picture_1 .maxContent .photoSelect .photo img:hover {
-          animation: fadeIn 0.5s; }
+          animation: fadeIn 0.5s;
+          cursor: pointer; }
       .picture_1 .maxContent .photoSelect .selected:after {
         animation: fadeIn 0.5s;
         content: '';

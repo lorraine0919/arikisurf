@@ -196,7 +196,9 @@ $top:16vh;
 				background-image: url('../images/1common/picselectbg.png');
 				background-repeat: no-repeat;
 				background-position: 74% -129%;
-				@extend %navmax;
+			    max-width: 1280px;
+			    margin: auto;
+			    width: 100%;
 				.introduce{
 					padding-left: 5%;
 					.introduceMax{
@@ -392,8 +394,12 @@ $top:16vh;
 							}
 						}
 					}
+					.head:hover{
+						background-size: 200%;
+					}
 					.content{
 						.word{
+							transition:1s;
 							color: #1a191c;
 							background-color: rgba(255,255,255,0.05);
 							width: 100%;
@@ -441,6 +447,7 @@ $top:16vh;
 								width: 100%;
 								margin: 20px 0;
 								.morebtn{
+									transition:1s;
 									background-color:  #1a191c;
 									padding: 10px;
 									border-radius: 5px;
@@ -450,21 +457,36 @@ $top:16vh;
 							}
 
 						}
-
 					}
 					.selected{
 						.word{
+								background-color: #EA8A00;
+							}
+							.postcontentgroup{
+								.btngorup{
+									.morebtn{
+										background-color: #EA8A00;
+									}
+								}
+							}
+					}
+					&:hover{
+						cursor: pointer;
+						.word{
 							background-color: #EA8A00;
+							transition:1s;
 						}
 						.postcontentgroup{
 							.btngorup{
 								.morebtn{
 									background-color: #EA8A00;
+									transition:1s;
 								}
 							}
 						}
 					}
 				}
+
 			}
 		}
 		.bulletin_1{

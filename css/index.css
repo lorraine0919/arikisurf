@@ -170,6 +170,11 @@
           margin: 15px 0; }
     .picture_1 .maxContent .photoSelect {
       padding-left: 5%; }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
       .picture_1 .maxContent .photoSelect .photo {
         width: 12%;
         padding-top: 20%;
@@ -187,7 +192,10 @@
           left: 0;
           margin: auto;
           z-index: 3; }
+        .picture_1 .maxContent .photoSelect .photo img:hover {
+          animation: fadeIn 0.5s; }
       .picture_1 .maxContent .photoSelect .selected:after {
+        animation: fadeIn 0.5s;
         content: '';
         position: absolute;
         background-image: url("../images/1common/picselected.png");

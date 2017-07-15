@@ -209,16 +209,26 @@ $top:16vh;
 				}
 				.photoSelect{
 					    padding-left: 5%;
+					 @keyframes fadeIn{
+					 	0%{
+							opacity: 0;
+					 	}
+					 	100%{
+							opacity: 1;
+					 	}
+					 }
 					.photo{
 						width: 12%;
 						padding-top: 20%;
 						display: inline-block;
 						background-image: url('../images/1common/insidecircle.png');
 						background-size: contain;
+
 						@extend %bgnrpc;
 						text-align: center;
 						position: relative;
 						img{
+							
 							width: 80%;
 							position: absolute;
 							top: 0;
@@ -228,8 +238,12 @@ $top:16vh;
 							margin: auto;
 							z-index: 3;
 						}
+						img:hover{
+							animation: fadeIn 0.5s;
+						}
 					}
 					.selected:after{
+						animation: fadeIn 0.5s;
 						content:'';
 						position: absolute;
 						background-image: url('../images/1common/picselected.png');

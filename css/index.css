@@ -33,6 +33,7 @@
   height: 70vh;
   overflow: hidden;
   position: relative;
+  z-index: -1;
   background-image: url("../images/1common/banner.png"); }
   .banner_1 video {
     position: absolute;

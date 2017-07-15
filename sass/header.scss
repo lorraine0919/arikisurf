@@ -32,6 +32,9 @@
   .navfix{
     width: 100%;
     background-image: url("../images/1common/nav2.png");
+    background: #11314c;
+    position: fixed;
+    z-index: 20;
   }
   .navimg{
     margin: 0% 2.6%;
@@ -82,7 +85,7 @@
       bottom: 0px;
       left: 10%;
       margin: auto;
-
+      z-index: 20;
       background-color:#fff;
       box-shadow: 0vh -2vh 0vh #fff,
                   0vh 2vh 0vh #fff; 
@@ -94,8 +97,10 @@
       background-color: hsla(180, 85%, 40%, 0.7);
       position: fixed;
       right: -40vh;
-      bottom: 0vh;
+      bottom: 1%;
       transition: .5s;
+      z-index: 20;
+
     }
     .menu a{
       display: block;

@@ -286,11 +286,26 @@ $top:16vh;
 							width: 100%;
 						}
 						.selectpicshow{
+							img{
+								transition:1s;
+							}
+							 @keyframes fadeIn{
+							 	0%{
+									opacity: 0;
+							 	}
+							 	100%{
+									opacity: 1;
+							 	}
+							 }
 							position: absolute;
 							bottom: 1%;
 						    right: 39%;
 						    width: 20%;
+						    .fadeIn{
+						    	animation:fadeIn 1s;
+						    }
 						}
+
 					}
 
 				}

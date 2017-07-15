@@ -34,6 +34,14 @@ $(function(){
 		var index = $(this).index()+1;
 		$(this).children('img').attr('src','images/1common/picselect'+index+'.png');
 	});
+
+	$('.photo').click(function(){
+		var index = $(this).index()+1;
+		$(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
+		$('.selectpicshow').children('img').attr('src','images/1common/piconboard_'+index+'.png');
+		$('.selectpicshow').children('img').toggleClass('fadeIn');
+		$('.maxContent').css({'background-image':'url(../images/1common/picselectbg_'+index+'.png)'});
+	});
 	/*以上是換圖動畫*/
 
 });//我是結尾

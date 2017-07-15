@@ -232,6 +232,15 @@
           bottom: 1%;
           right: 39%;
           width: 20%; }
+          .picture_1 .maxContent .demo .surfboard .selectpicshow img {
+            transition: 1s; }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+          .picture_1 .maxContent .demo .surfboard .selectpicshow .fadeIn {
+            animation: fadeIn 1s; }
     .picture_1 .maxContent .demorwd {
       display: none; }
 

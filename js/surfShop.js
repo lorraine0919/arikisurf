@@ -35,5 +35,15 @@
 		$('.4444').fadeOut(0);
 		$('.5555').fadeIn(500);
 	});
+
+	$('.pic').click(function(){
+        $('#lightbox').fadeIn(500);
+	});
+	$('.closeLb').click(function(){
+        $('#lightbox').fadeOut(0);
+	});
+	$('#closebtn').click(function(){
+        $('#lightbox').fadeOut(0);
+	});
 });
 		

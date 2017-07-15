@@ -58,8 +58,8 @@
       .bg_forest_2 .maxContent .stepbar .title {
         color: #fff;
         position: absolute;
-        right: -88%;
-        top: 0; }
+        right: -147%;
+        top: 43%; }
     .bg_forest_2 .maxContent .introduce {
       vertical-align: top;
       width: 100%;
@@ -88,7 +88,7 @@
       width: 28%; }
       .bg_forest_2 .maxContent .demogroup .demo {
         width: 35%;
-        margin: 0 0 0 19%;
+        margin: 0 0 0 28%;
         position: relative;
         padding-top: 104%; }
         .bg_forest_2 .maxContent .demogroup .demo img {
@@ -163,9 +163,7 @@
           color: #444; }
           .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardintroduce th {
             width: 26%; }
-      .bg_forest_2 .maxContent .selectAndNext .next {
-        margin: 10% 5%;
-        width: 25%;
-        float: right; }
-        .bg_forest_2 .maxContent .selectAndNext .next a {
-          margin: 0 1% 0 0; }
+      .bg_forest_2 .maxContent .selectAndNext .next a {
+        display: inline-block;
+        float: right;
+        margin: 6% 7% 0 0; }

@@ -75,8 +75,8 @@
 			.title{
 				color: #fff;
 				position: absolute;
-				right: -88%;
-				top: 0;
+			    right: -147%;
+			    top: 43%;
 			}
 		}
 		.introduce{
@@ -114,7 +114,7 @@
 			width: 28%;
 			.demo{				
 			    width: 35%;
-			    margin: 0 0 0 19%;
+			    margin: 0 0 0 28%;
 			    position: relative;
 			    padding-top: 104%;
 				img{
@@ -217,12 +217,12 @@
 
 			}
 			.next{
-				margin: 10% 5%;
-				width: 25%;
-				float: right;
+							
 				a{
+					display: inline-block;
+					float: right;
 					@extend %orangebtn;
-					margin: 0 1% 0 0;
+					margin: 6% 7% 0 0;
 				}
 			}			
 		}

@@ -5,6 +5,7 @@
   <head>
   <!--(bake module/head.html)-->
   <link  rel="stylesheet" type="text/css" href="css/cart.css">
+  <script type="text/javascript" src="js/cart_process_28.js"></script>
  </head>
   <!--header end-->
 <body class="body_28">
@@ -82,7 +83,6 @@
 			
 		
 			<div class="total_28">
-				<div class="group-del btn-item">整批刪除</div>
 				<div class="total-sum">
 					<p>共<span class="total-num">2</span>件商品，總金額<span class="total-money">200</span>元</p>
 				</div>
@@ -174,15 +174,268 @@
 		</div>
 		
 		<div class="change-page_28">
-			<div class="btn-item btn-goshop">
-				<a href="#">繼續購買</a>
+			<div class="btn-item btn-goshop" id="btn-goshop">
+				<a href="">繼續購買</a>
 			</div>
-			<div class="btn-item btn-checkout">
-				<a href="#">進行結帳</a>
-			</div>
+			<div class="btn-item btn-checkout" id="btn-checkout">進行結帳</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
+
+	<div class="InputInfo-body_29">
+		<div class="flow">
+			<div class="flow-box">
+				<ul>
+					<li>1</li>
+					<li><span>購買明細</span><div class="flowline1 line-item"></div></li>
+					<li>2</li>
+					<li><span>填寫資料</span><div class="flowline2 line-item"></div></li>
+					<li>3</li>
+					<li><span>最後確認</span><div class="flowline1 line-item"></div></li>
+					<li><div class="flag"></div></li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+		</div><!--flow-->
+
+		<div class="big-title">
+			<h2>訂購人資訊</h2>
+		</div>
+
+		<div class="buyerInfo InfoArea-Item">
+			<div class="buyerInfo-box InfoArea-box-Item">
+				<ul>
+					<li><span class="Buyspan span-item">姓名</span><input type="text" class="input-item buyerName"><span class="message-item"></span></li>
+					<li><span class="Buyspan span-item">電話</span><input type="text" class="input-item buyerTel"><span class="message-item"></span></li>
+					<li><span class="Buyspan span-item">E-mail</span><input type="text" class="input-item buyerEmail"><span class="message-item"></span></li>
+					<li><input type="checkbox" id="buy-sync-member" class="item-sync-member"><label for="buy-sync-member">同會員資料</label></li>
+				</ul>
+				
+			</div>
+		</div>
+
+		<div class="big-title">
+			<h2>收件人資訊</h2>
+		</div>
+
+		<div class="consigneeInfo InfoArea-Item">
+			<div class="consigneeInfo-box InfoArea-box-Item">
+				<ul>
+					<li><input type="checkbox" id="CS-sync-member" class="item-sync-member"><label for="CS-sync-member">同訂購人資料</label></li>
+					<li><span class="span-item">姓名</span><input type="text" class="input-item consigneeName"><span class="message-item"></span></li>
+					<li><span class="span-item">電話</span><input type="text" class="input-item consigneeTel"><span class="message-item"></span></li>
+					<li><span class="span-item">E-mail</span><input type="text" class="input-item consigneeEmail"><span class="message-item"></span></li>
+					<li><span class="span-item">收貨地址</span><input type="text" class="input-item consigneeAdress"><span class="message-item"></span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="PvNext-page-btn"><!-- Pv = previous上一頁-->
+			<div class="previous-page btn-item" id="previous-page"><span>上一頁</span></div>
+			<div class="next-page btn-item" id="next-page"><span>下一頁</span></div>
+			<div class="clearfix"></div>
+		</div>
+	</div><!--InputInfo-body_29-->
+
+	<div class="order-confirm_30">
+		<div class="flow">
+			<div class="flow-box">
+				<ul>
+					<li>1</li>
+					<li><span>購買明細</span><div class="flowline1 line-item"></div></li>
+					<li>2</li>
+					<li><span>填寫資料</span><div class="flowline2 line-item"></div></li>
+					<li>3</li>
+					<li><span>最後確認</span><div class="flowline3 line-item"></div></li>
+					<li><div class="flag"></div></li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+		</div><!--flow-->
+
+		<div class="big-title">
+			<h2>購物明細</h2>
+		</div>
+
+		<div class="ProCfirmInfo-pc">
+			<div class="ProCfirmInfo-pc-box">
+				<div class="Cfirm-title">
+					<ul>
+						<li class="col-sm-6">商品明細</li>
+						<li class="col-sm-2">金額</li>
+						<li class="col-sm-2">數量</li>
+						<li class="col-sm-2">小計</li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="Cfirm-pro">
+					<ul>
+						<li class="col-sm-6"><span class="getProName">AKUR海灘褲(紅)</span></li>
+						<li class="col-sm-2"><span class="getPrice">100</span>元</li>
+						<li class="col-sm-2"><span class="getMath">1</span></li>
+						<li class="col-sm-2"><span class="getSum">100</span></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="Cfirm-pro">
+					<ul>
+						<li class="col-sm-6"><span class="getProName">AKUR海灘褲(藍)</span></li>
+						<li class="col-sm-2"><span class="getPrice">100</span>元</li>
+						<li class="col-sm-2"><span class="getMath">1</span></li>
+						<li class="col-sm-2"><span class="getSum">100</span></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="Cfrim-total">
+					<p>共<span class="getTotalMath">2</span>項商品，總金額<span class="getTotalPrice">200</span>元</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="ProCfirmInfo-phone">
+			<div class="ProCfirmInfo-phone-box">
+				<ul>
+					<li><span class="li-tit-item">商品明細</span><span class="getProName li-get-item">AKUR海灘褲(紅)</span></li>
+					<li><span class="li-tit-item">金額</span><span class="getPrice li-get-item">100</span>元</li>
+					<li><span class="li-tit-item">數量</span><span class="getMath li-get-item">1</span></li>
+					<li><span class="li-tit-item">小計</span><span class="getSum li-get-item">100</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="big-title">
+			<h2>寄送資訊</h2>
+		</div>
+
+		<div class="OCfirmInfo"><!--O=Order,Cf=comfirm-->
+			<div class="OCfirmInfo-box">
+				<ul>
+					<li><span class="OC-li-item">收件者</span><span class="get-li-item CSget">FiveOneThree</span></li>
+					<li><span class="OC-li-item">連絡電話</span><span class="get-li-item Telget">09123456</span></li>
+					<li><span class="OC-li-item">E-mail</span><span class="get-li-item Emailget">wagasaigyuu@fmail.com</span></li>
+					<li><span class="OC-li-item">收貨地址</span><span class="get-li-item Adressget">台北縣三重市平民窟</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="PvNext-page-btn2"><!-- Pv = previous上一頁-->
+			<div class="previous-page2 btn-item" id="previous-page2"><span>上一頁</span></div>
+			<div class="next-page2 btn-item" id="next-page2"><span>確認結帳無誤</span></div>
+			<div class="clearfix"></div>
+		</div>
+	</div><!--order-confirm_30-->
+
+	<div class="order-over_31">
+		<div class="flow">
+			<div class="flow-box">
+				<ul>
+					<li>1</li>
+					<li><span>購買明細</span><div class="flowline1 line-item"></div></li>
+					<li>2</li>
+					<li><span>填寫資料</span><div class="flowline2 line-item"></div></li>
+					<li>3</li>
+					<li><span>最後確認</span><div class="flowline3 line-item"></div></li>
+					<li><div class="flag"></div></li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+		</div><!--flow-->
+
+		<div class="big-title">
+			<h2>匯款資訊</h2>
+		</div>
+
+		<div class="give-money">
+			<div class="giveInfo">
+				<ul>
+					<li><span class="give-sp-item1">戶名</span><span class="give-sp-item2">武二参</span></li>
+					<li><span class="give-sp-item1">銀行代號與名稱</span><span class="give-sp-item2">700-郵局</span></li>
+					<li><span class="give-sp-item1">分行名稱</span><span class="give-sp-item2">3重貧民窟</span></li>
+					<li><span class="give-sp-item1">帳號</span><span class="give-sp-item2">0123456789</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="big-title">
+			<h2>購物明細</h2>
+		</div>
+
+		<div class="Odover-pc">
+			<div class="Odover-pc-box">
+				<div class="Odover-title">
+					<ul>
+						<li class="col-sm-6">商品明細</li>
+						<li class="col-sm-2">金額</li>
+						<li class="col-sm-2">數量</li>
+						<li class="col-sm-2">小計</li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="Odover-pro">
+					<ul>
+						<li class="col-sm-6"><span class="getOdoName">AKUR海灘褲(紅)</span></li>
+						<li class="col-sm-2"><span class="getOdoPrice">100</span>元</li>
+						<li class="col-sm-2"><span class="getOdoMath">1</span></li>
+						<li class="col-sm-2"><span class="getOdoSum">100</span></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="Odover-pro">
+					<ul>
+						<li class="col-sm-6"><span class="getOdoName">AKUR海灘褲(藍)</span></li>
+						<li class="col-sm-2"><span class="getOdoPricee">100</span>元</li>
+						<li class="col-sm-2"><span class="getOdoMath">1</span></li>
+						<li class="col-sm-2"><span class="getOdoSum">100</span></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="Odover-total">
+					<p>共<span class="getOdoTotalMath">2</span>項商品，總金額<span class="getOdoTotalPrice">200</span>元</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="Odover-phone">
+			<div class="Odover-phone-box">
+				<ul>
+					<li><span class="li-tit-item">商品明細</span><span class="getOdoName li-get-item">AKUR海灘褲(紅)</span></li>
+					<li><span class="li-tit-item">金額</span><span class="getOdoPrice li-get-item">100</span>元</li>
+					<li><span class="li-tit-item">數量</span><span class="getOdoMath li-get-item">1</span></li>
+					<li><span class="li-tit-item">小計</span><span class="getOdoSum li-get-item">100</span></li>
+					<li><p>共<span class="getOdoTotalMath">2</span>項商品，總金額<span class="getOdoTotalPrice">200</span>元</p></li>
+				</ul>
+			</div>
+				
+		</div>
+
+		<div class="big-title">
+			<h2>注意事項</h2>
+		</div>
+
+		<div class="Odover-notice">
+			<div class="Odo-notice">
+				<ul>
+					<li>買家匯款完成才會出貨。</li>
+					<li>如未到7日，才能進行取消交易。</li>
+					<li>匯款後，無法進行取消交易。</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="Odover-PM-btn">
+			<div class="btn-box">
+				<div class="Odover-Product-btn Odover-btn-item"><a href="">繼續購買</a></div>
+				<div class="Odover-Member-btn Odover-btn-item"><a href="">會員管理</a></div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div><!--order-over_31-->
 	
 <!--(bake module/footer.html)-->
 </body>

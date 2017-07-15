@@ -39,7 +39,10 @@ $(function(){
 		var condition = 1;
 		var index = $(this).index()+1;
 		$(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
-		$('.picture_1 .selectpicshow').children('img').attr('src','images/1common/piconboard_'+index+'.png').fadeIn(700);
+		console.log($('.picture_1 .selectpicshow').children('img'));
+		$('.picture_1 .selectpicshow').fadeOut(0,function(){
+			$('.picture_1 .selectpicshow').children('img').attr('src','images/1common/piconboard_'+index+'.png');
+		}).fadeIn(1000);
 		$('.picture_1 .selectpicshow').children('img').toggleClass('fadeIn');
 		$('.picture_1 .maxContent').css({'background-image':'url(../images/1common/picselectbg_'+index+'.png)'});
 	});

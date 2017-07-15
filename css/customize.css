@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-position: top; }
 
-.bg_forest_2 .maxContent .next a {
+.bg_forest_2 .maxContent .selectAndNext .next a {
   background-color: #e97b23;
   padding: 10px;
   border-radius: 5px;
@@ -27,7 +27,7 @@
   .bg_forest_2 .maxContent {
     max-width: 1170px;
     margin: auto;
-    padding: 10vh 0; }
+    padding: 9vh 0 0vh 0; }
     .bg_forest_2 .maxContent .stepbar {
       text-align: left;
       background-image: url("../images/2board/strpbar.png");
@@ -60,37 +60,37 @@
         position: absolute;
         right: -88%;
         top: 0; }
-    .bg_forest_2 .maxContent .picture {
+    .bg_forest_2 .maxContent .introduce {
       vertical-align: top;
       width: 100%;
       display: inline-block;
-      width: 30%;
-      background-image: url("../images/2board/insidebox.png");
+      width: 25%;
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover;
-      padding: 4% 4%; }
-      .bg_forest_2 .maxContent .picture .pic {
-        border-radius: 5px;
-        box-sizing: border-box;
-        display: inline-block;
-        width: 49%;
-        overflow: hidden; }
-        .bg_forest_2 .maxContent .picture .pic img {
-          width: 100%; }
-      .bg_forest_2 .maxContent .picture .pic:nth-child(1) {
-        width: 100%; }
-        .bg_forest_2 .maxContent .picture .pic:nth-child(1) img {
-          width: 100%; }
+      padding: 4% 0 4% 4%;
+      margin: 2% 0 0 9%; }
+      .bg_forest_2 .maxContent .introduce .head {
+        padding: 8px 20px;
+        color: #fff;
+        background-image: url("../images/2board/introducehead.png"); }
+      .bg_forest_2 .maxContent .introduce .content {
+        background-color: #2e2e2e;
+        color: #fff;
+        padding: 20px; }
+        .bg_forest_2 .maxContent .introduce .content .contentimg {
+          margin: 20px -20px; }
+          .bg_forest_2 .maxContent .introduce .content .contentimg img {
+            width: 100%; }
     .bg_forest_2 .maxContent .demogroup {
       vertical-align: top;
       display: inline-block;
-      width: 33%; }
+      width: 28%; }
       .bg_forest_2 .maxContent .demogroup .demo {
-        width: 30%;
-        margin: 0 0 0 16%;
+        width: 35%;
+        margin: 0 0 0 19%;
         position: relative;
-        padding-top: 89%; }
+        padding-top: 104%; }
         .bg_forest_2 .maxContent .demogroup .demo img {
           width: 100%;
           position: absolute; }
@@ -102,47 +102,70 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
-    .bg_forest_2 .maxContent .selectboard {
-      display: inline-block;
-      width: 21%; }
-      .bg_forest_2 .maxContent .selectboard .boardgroup .board {
-        width: 15%;
-        display: inline-block; }
-        .bg_forest_2 .maxContent .selectboard .boardgroup .board img {
+    .bg_forest_2 .maxContent .selectAndNext {
+      width: 25%;
+      display: inline-block; }
+      .bg_forest_2 .maxContent .selectAndNext .selectboard {
+        background-image: url("../images/2board/borderselectfield.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 8% 8% 0 8%;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: -15% 0 0 0; }
+        .bg_forest_2 .maxContent .selectAndNext .selectboard .head {
+          background-color: rgba(255, 130, 0, 0.1);
+          padding: 20px 10px 10px 20px;
+          margin: 0 -5px 0 -5px;
+          border-radius: 16px 16px 0 0;
+          color: #fff; }
+          .bg_forest_2 .maxContent .selectAndNext .selectboard .head span {
+            font-size: 14px;
+            margin: 0 5px; }
+        .bg_forest_2 .maxContent .selectAndNext .selectboard .boardgroup {
           width: 100%; }
-      .bg_forest_2 .maxContent .selectboard .boardgroup .selected {
-        -webkit-filter: drop-shadow(1px 1px 5px rgba(240, 146, 35, 0.6));
-        filter: drop-shadow(1px 1px 5px rgba(240, 146, 35, 0.6)); }
-      .bg_forest_2 .maxContent .selectboard .boardcontent .boardname {
-        position: relative;
-        background: linear-gradient(#f09223, rgba(240, 146, 35, 0.6));
-        text-align: center;
-        padding: 6px;
-        margin: 15px 0 0 0;
-        color: #fff;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
-        .bg_forest_2 .maxContent .selectboard .boardcontent .boardname h3 {
-          font-weight: 400; }
-        .bg_forest_2 .maxContent .selectboard .boardcontent .boardname .arrow {
-          width: 0;
-          height: 0;
-          border-right: 10px solid transparent;
-          border-left: 10px solid transparent;
-          border-bottom: 10px solid #f09223;
-          position: absolute;
-          top: -26%;
-          left: 70%; }
-      .bg_forest_2 .maxContent .selectboard .boardcontent .boardintroduce {
-        background-color: rgba(255, 255, 255, 0.6);
-        padding: 20px 10px;
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1) inset;
-        color: #444; }
-        .bg_forest_2 .maxContent .selectboard .boardcontent .boardintroduce th {
-          width: 26%; }
-    .bg_forest_2 .maxContent .next {
-      padding: 5vh 0px;
-      text-align: right;
-      max-width: 1019px;
-      margin: auto; }
-      .bg_forest_2 .maxContent .next a {
-        margin: 0 1% 0 0; }
+          .bg_forest_2 .maxContent .selectAndNext .selectboard .boardgroup .board {
+            position: relative;
+            padding-top: 16%;
+            display: block;
+            margin: 20px 0;
+            box-shadow: 0px 1px 0px #000, 0px 2px 0px rgba(255, 255, 255, 0.2); }
+            .bg_forest_2 .maxContent .selectAndNext .selectboard .boardgroup .board:last-child {
+              box-shadow: none; }
+            .bg_forest_2 .maxContent .selectAndNext .selectboard .boardgroup .board img {
+              position: absolute;
+              height: 100%;
+              right: 10px;
+              bottom: 10px; }
+        .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardname {
+          position: relative;
+          background: linear-gradient(#f09223, rgba(240, 146, 35, 0.6));
+          text-align: center;
+          padding: 6px;
+          margin: 15px 0 0 0;
+          color: #fff;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
+          .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardname h3 {
+            font-weight: 400; }
+          .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardname .arrow {
+            width: 0;
+            height: 0;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-bottom: 10px solid #f09223;
+            position: absolute;
+            top: -26%;
+            left: 70%; }
+        .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardintroduce {
+          background-color: rgba(255, 255, 255, 0.6);
+          padding: 20px 10px;
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1) inset;
+          color: #444; }
+          .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardintroduce th {
+            width: 26%; }
+      .bg_forest_2 .maxContent .selectAndNext .next {
+        margin: 10% 5%;
+        width: 25%;
+        float: right; }
+        .bg_forest_2 .maxContent .selectAndNext .next a {
+          margin: 0 1% 0 0; }

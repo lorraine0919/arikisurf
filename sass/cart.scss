@@ -1,9 +1,19 @@
 .clearfix{
     clear:both;
 }
+@mixin Width-size_8cart($width,$percent,$Mup,$Mdown){
+    max-width: $width + px;
+    width: $percent ;
+    margin:$Mup $Mdown;
+}
+$main-color_29:#5A929E;
 
 @media screen and (min-width:768px){
+    .body_28{
+        background-color: #edf6fd;
+    }
     .cart-body_28{
+        // display:none;
         a{
             text-decoration: none;
             color:black;
@@ -17,7 +27,7 @@
             line-height: 35px;
             // margin: 0 auto;
             background-color: #ccc;
-            border-radius: 10%;
+            border-radius: 10px;
             text-align: center;
         }
         .big-title_28{
@@ -53,7 +63,7 @@
                     }
                     li:nth-child(odd){
                         background-color: #ccc;
-                        border-radius: 50%;
+                        border-radius: 10px;
                         width: 25px;
                         height: 25px;
                         text-align: center;
@@ -231,10 +241,534 @@
             }
         }//.change-page_28
     }//.body_28
+
+    .InputInfo-body_29{
+        display: none;
+        @include Width-size_8cart(1170,100% ,0 ,auto );
+        .flow{
+            max-width: 1170px;
+            width: 100%;
+            height: 50px;
+            margin:0 auto;
+            margin-top: 5%;
+
+            .flow-box{
+                width: 60%;
+                margin:0 20%;
+                text-align: center;
+                ul{
+                    display: inline-block;
+                    // padding-top: 15px;
+                    li{
+                        float: left;
+                        text-align: center;
+                        line-height: 13px;
+                    }
+                    li:nth-child(odd){
+                        background-color: #ccc;
+                        border-radius: 10px;
+                        width: 25px;
+                        height: 25px;
+                        text-align: center;
+                        line-height: 25px;
+                    }
+                    li:nth-child(even){
+                        padding-bottom: 30px;
+                        .line-item{
+                            height: 3px;
+                            width: 150px;
+                            background-color: #ccc;
+                            margin-top: 3px;
+                        }
+                    }
+                    li:last-child{
+                        position: relative;
+                        .flag{
+                            width: 5px;
+                            height: 30px;
+                            background-color:#ddd;
+                            position: absolute;
+                            right: 0;
+                            left:0;
+                            margin:auto;
+                            bottom:10px;
+                        }
+                        .flag:after{
+                            content: '◣';
+                            position: absolute;
+                            bottom:10px;
+                        }
+                    }
+                    li:nth-child(3),
+                    li:nth-child(4) .flowline2{
+                        background-color: #5A929E;
+                    }
+                    li:nth-child(4) span{
+                        color:#5A929E;                    
+                    }
+                }
+            }
+        }//.flow
+        .big-title{
+            border-bottom: 3px solid #5A929E;
+            margin-top: 1%;
+            padding: 0;
+            text-align: center;
+            h2{
+                width: 150px;
+                background-color: #5A929E;
+                box-sizing: border-box;
+                padding: 5px;
+            }
+        }//big-title
+        .InfoArea-Item{
+            border:5px solid $main-color_29;
+            margin:2% 0;
+            box-sizing: border-box;
+            padding:3%;
+            .InfoArea-box-Item{
+                ul{
+                    width: 100%;
+                    li{
+                        margin:1% 0;
+                        .span-item{
+                            display: inline-block;
+                            width: 10%;
+                            margin-right:2%;
+                        }
+                        .input-item{
+                            width: 40%;
+                            box-sizing: border-box;
+                            padding: 1%;
+                            margin-left:5%;
+                        }
+                        .message-item{
+                            display: inline-block;
+                            margin-left:5%;
+                            width: 20%;
+                        }
+                        .item-sync-member{
+                            margin-left:17%;
+                        }
+                    }
+                }
+
+            }
+        }//InfoArea-Item
+
+        .PvNext-page-btn{
+            width: 100%;
+            margin-bottom: 2%;
+            text-align: right;
+            .btn-item{
+                width: 18%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background-color: #ccc;
+                margin-left:20px;
+                float:left;
+            }
+            .previous-page{
+                position: relative;
+                margin-left:61%;
+            }
+            .previous-page:before{
+                content: '〈';
+                font-size: 25px;
+                position: absolute;
+                left:0;
+            }
+            .next-page{
+                background-color: #ccc;
+                position: relative;
+            }
+            .next-page:before{
+                content: '〉';
+                position:absolute;
+                right:0;
+                font-size: 25px;
+            }
+        }
+
+    }
+
+    .order-confirm_30{
+        display: none;
+        .ProCfirmInfo-phone{
+            display: none;
+        }
+        @include Width-size_8cart(1170,100% ,0 ,auto );
+        .flow{
+            max-width: 1170px;
+            width: 100%;
+            height: 50px;
+            margin:0 auto;
+            margin-top: 5%;
+
+            .flow-box{
+                width: 60%;
+                margin:0 20%;
+                text-align: center;
+                ul{
+                    display: inline-block;
+                    // padding-top: 15px;
+                    li{
+                        float: left;
+                        text-align: center;
+                        line-height: 13px;
+                    }
+                    li:nth-child(odd){
+                        background-color: #ccc;
+                        border-radius: 10px;
+                        width: 25px;
+                        height: 25px;
+                        text-align: center;
+                        line-height: 25px;
+                    }
+                    li:nth-child(even){
+                        padding-bottom: 30px;
+                        .line-item{
+                            height: 3px;
+                            width: 150px;
+                            background-color: #ccc;
+                            margin-top: 3px;
+                        }
+                    }
+                    li:last-child{
+                        position: relative;
+                        .flag{
+                            width: 5px;
+                            height: 30px;
+                            background-color:#ddd;
+                            position: absolute;
+                            right: 0;
+                            left:0;
+                            margin:auto;
+                            bottom:10px;
+                        }
+                        .flag:after{
+                            content: '◣';
+                            position: absolute;
+                            bottom:10px;
+                        }
+                    }
+                    li:nth-child(5),
+                    li:nth-child(6) .flowline3{
+                        background-color: #5A929E;
+                    }
+                    li:nth-child(6) span{
+                        color:#5A929E;                    
+                    }
+                }
+            }
+        }//.flow
+        .big-title{
+            border-bottom: 3px solid #5A929E;
+            margin-top: 1%;
+            padding: 0;
+            text-align: center;
+            h2{
+                width: 150px;
+                background-color: #5A929E;
+                box-sizing: border-box;
+                padding: 5px;
+            }
+        }//big-title
+        .OCfirmInfo{
+            .OCfirmInfo-box{
+                width: 100%;
+                border:1px solid $main-color_29;
+                margin: 1% 0;
+                box-sizing: border-box;
+                padding: 10px;
+                ul{
+                    li{
+                        margin:2%;
+                        .OC-li-item{
+                            display: inline-block;
+                            width: 30%;
+                            margin-left: 10px;
+                        }
+                        .get-li-item{
+                            display: inline-block;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }//OCfirmInfo
+        .ProCfirmInfo-pc{
+            .ProCfirmInfo-pc-box{
+                border:2px solid $main-color_29;
+                margin:1% 0;
+                .Cfirm-title{
+                    background-color: #ccc;;
+                    border-bottom:2px solid $main-color_29;
+                    text-align: center;
+                    ul{
+                        li{
+                            border-left:1px dotted $main-color_29;
+                        }
+                    }
+                }
+                .Cfirm-pro{
+                    box-sizing: border-box;
+                    padding:5px;
+                    text-align: center;
+                    ul{
+                        li:nth-child(1){
+                            text-align: left;
+                        }
+                    }
+                }
+                .Cfrim-total{
+                    p{
+                        display: block;
+                        text-align: right;
+                        box-sizing: border-box;
+                        padding:5px;
+                        margin-right: 1%;
+                        
+                        span{
+                            color:red;
+                            font-size: 20px;
+                        }
+                        .getTotalMath,
+                        .getTotalPrice{
+                            margin:0 7px;
+                        }
+                    }
+                }
+            }
+        }
+        .PvNext-page-btn2{
+                width: 100%;
+                margin-bottom: 2%;
+                text-align: right;
+                .btn-item{
+                    width: 18%;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    background-color: #ccc;
+                    margin-left:20px;
+                    float:left;
+                }
+                .previous-page2{
+                    position: relative;
+                    margin-left:61%;
+                }
+                .previous-page2:before{
+                    content: '〈';
+                    font-size: 25px;
+                    position: absolute;
+                    left:0;
+                }
+                .next-page2{
+                     background-color: orange;
+                    position: relative;
+                }
+                .next-page2:before{
+                content: '〉';
+                position:absolute;
+                right:0;
+                font-size: 25px;
+            }
+        }
+
+    }//order-confirm_30
+
+    .order-over_31{
+        display: none;
+        .Odover-phone{
+            display: none;
+        }
+        @include Width-size_8cart(1170,100% ,0 ,auto );
+        .flow{
+            max-width: 1170px;
+            width: 100%;
+            height: 50px;
+            margin:0 auto;
+            margin-top: 5%;
+
+            .flow-box{
+                width: 60%;
+                margin:0 20%;
+                text-align: center;
+                ul{
+                    display: inline-block;
+                    // padding-top: 15px;
+                    li{
+                        float: left;
+                        text-align: center;
+                        line-height: 13px;
+                    }
+                    li:nth-child(odd){
+                        background-color: #ccc;
+                        border-radius: 10px;
+                        width: 25px;
+                        height: 25px;
+                        text-align: center;
+                        line-height: 25px;
+                    }
+                    li:nth-child(even){
+                        padding-bottom: 30px;
+                        .line-item{
+                            height: 3px;
+                            width: 150px;
+                            background-color: #ccc;
+                            margin-top: 3px;
+                        }
+                    }
+                    li:last-child{
+                        position: relative;
+                        .flag{
+                            width: 5px;
+                            height: 30px;
+                            background-color:#ddd;
+                            position: absolute;
+                            right: 0;
+                            left:0;
+                            margin:auto;
+                            bottom:10px;
+                        }
+                        .flag:after{
+                            content: '◣';
+                            position: absolute;
+                            bottom:10px;
+                        }
+                    }
+                    li:nth-child(7),
+                    li:nth-child(7) .flowline3{
+                        background-color: #5A929E;
+                    }
+                    li:nth-child(7) span{
+                        color:#5A929E;                    
+                    }
+                }
+            }
+        }//.flow
+        .big-title{
+            border-bottom: 3px solid #5A929E;
+            margin-top: 1%;
+            padding: 0;
+            text-align: center;
+            h2{
+                width: 150px;
+                background-color: #5A929E;
+                box-sizing: border-box;
+                padding: 5px;
+            }
+        }//big-title
+        .give-money{
+            .giveInfo{
+                ul{
+                    box-sizing: border-box;
+                    padding: 10px;
+                    margin-top: 1%;
+                    border: 2px solid $main-color_29;
+                    li{
+                        margin:2% 0;
+                        .give-sp-item1{
+                            display: inline-block;
+                            width: 20%;
+                        }
+                        .give-sp-item2{
+                            display: inline-block;
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+        }
+        .Odover-pc{
+             .Odover-pc-box{
+                border:2px solid $main-color_29;
+                margin:1% 0;
+                .Odover-title{
+                    background-color: #ccc;;
+                    border-bottom:2px solid $main-color_29;
+                    text-align: center;
+                    ul{
+                        li{
+                            border-left:1px dotted $main-color_29;
+                        }
+                    }
+                }
+                .Odover-pro{
+                    box-sizing: border-box;
+                    padding:5px;
+                    text-align: center;
+                    ul{
+                        li:nth-child(1){
+                            text-align: left;
+                        }
+                    }
+                }
+                .Odover-total{
+                    p{
+                        display: block;
+                        text-align: right;
+                        box-sizing: border-box;
+                        padding:5px;
+                        margin-right: 1%;
+                        
+                        span{
+                            color:red;
+                            font-size: 20px;
+                        }
+                        .getOdoTotalMath,
+                        .getOdoTotalPrice{
+                            margin:0 7px;
+                        }
+                    }
+                }
+            }
+        }
+        .Odover-notice{
+            .Odo-notice{
+                margin-top:1%;
+                margin-bottom: 1%;
+                ul{
+                    box-sizing: border-box;
+                    padding: 10px;
+                    border:2px solid $main-color_29;
+                    li{
+                        list-style: circle;
+                        margin-left:3%;
+                    }
+                }
+            }
+        }
+        .Odover-PM-btn{
+            @include Width-size_8cart(1170, 100%, 0, auto);
+            .btn-box{
+                width: 100%;
+                margin-left:60%;
+                 .Odover-btn-item{
+                    float:left;
+                    width: 18%;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    background-color: #ccc;
+                    margin-left:20px;
+                    margin-bottom:1%;
+                    a{
+                        text-decoration: none;
+                        color:black;
+                    }
+                }
+            }
+           
+        }
+    }//order-over_31
 }//media screen and (mix-width:768px)
 
 @media screen and (max-width:767px){
     .cart-body_28{
+        // display: none;
         a{
             text-decoration: none;
             color:black;
@@ -356,13 +890,262 @@
             max-width: 767px;
             width: 100%;
             .btn-item{
-                width: 80%;
+                width: 90%;
+                margin:2% 5%;
                 height: 30px;
                 line-height: 30px;
-                margin:3% 10%;
-                text-align: center;
                 background-color: #ccc;
+                color:black;
+                text-align: center;
             }
         }//.change-page_28
     }//.cart-body_28
+
+    .InputInfo-body_29{
+        @include Width-size_8cart(767,100% ,0 ,auto );
+        display: none;
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        .flow{
+            display: none;
+        }
+        .big-title{
+            width: 50%;
+            margin:5% 25% 0;
+            text-align: center;
+            background-color: $main-color_29;
+        }
+        .InfoArea-Item{
+            @include Width-size_8cart(767,100% ,0 ,auto );
+            .InfoArea-box-Item{
+                width: 90%;
+                margin:0 5%;
+                text-align: center;
+                border:1px solid $main-color_29;
+                 ul{
+                    li{
+                        .span-item{
+                            display: inline-block;
+                            width: 20%;
+                        }
+                        .input-item{
+                            width: 40%;
+                            margin:2% 0;
+                        }
+                        .message-item{
+                            display: none;
+                        }
+                        .item-sync-member{
+                            margin:3% 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .PvNext-page-btn{
+            max-width: 767px;
+            width: 100%;
+            margin:1% auto;
+            text-align: center;
+            .btn-item{
+                width: 90%;
+                margin:2% 5%;
+                box-sizing: border-box;
+                padding: 7px;
+                background-color: #ccc;
+            }
+        }
+    }
+
+    .order-confirm_30{
+        display: none;
+        @include Width-size_8cart(767, 100%, 0, margin);
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        .big-title{
+            width: 50%;
+            margin:5% 25% 0;
+            text-align: center;
+            background-color: $main-color_29;
+        }
+        .flow,
+        .ProCfirmInfo-pc{
+            display: none;
+        }
+        .ProCfirmInfo-phone{
+            @include Width-size_8cart(767, 100% , 0, auto);
+            .ProCfirmInfo-phone-box{
+                box-sizing: border-box;
+                padding: 0 10px;
+                ul{
+                    border:1px solid $main-color_29;
+                    li{
+                        .li-tit-item{
+                            display: inline-block;
+                            width: 30%;
+                            margin-left:10%;
+                            margin-bottom:1%;
+                        }
+                        .li-get-item{
+                            display: inline-block;
+                        }
+                    }   
+                    
+                }
+            }
+        }
+        .OCfirmInfo{
+            @include Width-size_8cart(767, 100%, 0, auto);
+            .OCfirmInfo-box{
+                box-sizing: border-box;
+                padding: 0 10px;
+                
+                ul{
+                    border:1px solid $main-color_29;
+                    li{
+                        .OC-li-item{
+                            display: inline-block;
+                            width: 30%;
+                            margin-left:10%;
+                            margin-bottom:1%;
+                        }
+                        .get-li-item{
+                            display: inline-block;
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+        }
+        .PvNext-page-btn2{
+            max-width: 767px;
+            width: 100%;
+            margin:1% auto;
+            text-align: center;
+            .btn-item{
+                width: 90%;
+                margin:2% 5%;
+                box-sizing: border-box;
+                padding: 7px;
+                background-color: #ccc;
+            }
+        }
+
+    }//order-confirm_30
+
+    .order-over_31{
+        display: none;
+        @include Width-size_8cart(767, 100%, 0, margin);
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        .big-title{
+            width: 50%;
+            margin:5% 25% 0;
+            text-align: center;
+            background-color: $main-color_29;
+        }.flow,
+        .Odover-pc{
+            display: none;
+        }
+        .give-money{
+            @include Width-size_8cart(767, 100% , 0, auto);
+            .giveInfo{
+                box-sizing: border-box;
+                padding: 0 10px;
+                ul{
+                    border:1px solid $main-color_29;
+                    li{
+                        .give-sp-item1{
+                            display: inline-block;
+                            width: 40%;
+                            margin-left:10%;
+                            margin-bottom:2%;
+                        }
+                        .give-sp-item2{
+                            display: inline-block;
+                            // width: 50%;
+                        }
+                    }   
+                        
+                }
+            }
+        }
+        .Odover-phone{
+            @include Width-size_8cart(767, 100% , 0, auto);
+            
+            .Odover-phone-box{
+                box-sizing: border-box;
+                padding: 0 10px;
+                ul{
+                    border:1px solid $main-color_29;
+                    li{
+                        .li-tit-item{
+                            display: inline-block;
+                            width: 30%;
+                            margin-left:10%;
+                            margin-bottom:2%;
+                        }
+                        .li-get-item{
+                            display: inline-block;
+                            // width: 50%;
+                        }
+                        p{
+                            width: 90%;
+                            margin:5%;
+                            border-top: 1px solid #ccc;
+                            text-align: right;
+                           .getOdoTotalMath{
+                               display: inline-block;
+                               margin-top:1%;
+                                color:red;
+                           }
+                           .getOdoTotalPrice{
+                                color:red;
+                           }
+                        }
+                    }   
+                    
+                }
+            }
+        }
+        .Odover-notice{
+            @include Width-size_8cart(767, 100%, 0, auto);
+            .Odo-notice{
+                box-sizing: border-box;
+                padding: 0 10px;
+                ul{
+                    border:1px solid $main-color_29;
+                    box-sizing: border-box;
+                    padding:20px 20px;
+                    li{
+                        width: 80%;
+                        list-style:circle;
+                        margin:2% 10%;
+                    }
+                }
+            }
+        }
+        .Odover-PM-btn{
+            @include Width-size_8cart(767, 100% , 0, auto);
+            .btn-box{
+                width: 80%;
+                margin:3% 10%;
+                text-align: center;
+                .Odover-btn-item{
+                    box-sizing: border-box;
+                    padding:10px;
+                    margin-bottom:10px;
+                    background-color: #ccc;
+                }
+
+            }
+        }
+    }
 }//media screen and (max-width:767px)

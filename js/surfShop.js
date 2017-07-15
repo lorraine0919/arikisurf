@@ -36,6 +36,17 @@
 		$('.5555').fadeIn(500);
 	});
 
+
+    $('.pic').click(function(){
+        var prodpic = $(this).children('img').attr('src');
+        var prodpri = $(this).next().children('p').text();
+        //console.log(prodpri);
+        $(".lig-pic img").attr("src",prodpic);
+        $(".info_price").children('p').text(prodpri);
+	});
+
+
+
 	$('.pic').click(function(){
         $('#lightbox').fadeIn(500);
 	});
@@ -45,5 +56,7 @@
 	$('#closebtn').click(function(){
         $('#lightbox').fadeOut(0);
 	});
+
+	
 });
 		

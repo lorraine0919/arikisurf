@@ -16,48 +16,52 @@
 
 @media screen and (max-width:767px){
   
- .bg_14{
-    background-image:url("../images/5news/bg.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover;
-    width:100%;
-    background-color: lightblue;
-  }
 
+  
 
-
-  .banner_14{
-      background-image:url("../images/5news/surf2.png");
-      background-position: center;
-      background-size:cover;
-      background-repeat: no-repeat;
-      position: relative;
-      padding-top:70%;
-      p{
-        position: absolute;
-        top: 0;
-        right: 0; 
-        bottom: 0;
-        left: 0;
-        margin-top: 25%;
-        text-align: center;
+  .bg_14{
+ background-image: url("../images/4wavepoint/bg_f.jpg");
+ background-repeat:no-repeat;
+ background-size: contain;
+ background-color:#2A6C84; 
+ height: auto;
+ padding-top: 1rem;
+ width: 100%;  
+  .news_title_14{ 
+   box-sizing: border-box;
+      .news_title_14_txt{
+        box-sizing: border-box;
+        padding: 1rem 2rem 1rem;
+        background-image:url("../images/4wavepoint/talk.jpg");
+        background-repeat: no-repeat; 
         color:#fff;
-        font-size:16px;
+        margin-top: 5rem;
       }
-    }
-
-  .news_title_14{
-    font-size:30px;
-    position: absolute;
-    top: 0;
-    right: 0; 
-    bottom: 0;
-    left: 0;
-    margin-top: 10%;
-    text-align: center; 
-    color:#fff;
-    letter-spacing: 2px;
+      .news_txt{
+        position: relative;
+        box-sizing: border-box; 
+        padding: 2rem;
+        color:#fff;
+        background: linear-gradient(#5F7F92,#29465E);
+        &:after{
+          content:'';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          width: 99%;
+          height: 95%;
+          border:1px solid #95AFBA;
+        }
+        p{
+          margin-bottom: .4rem;
+        }
+      }
   }
+}
+
 
   .news_item{
   width: 100%;
@@ -103,60 +107,63 @@
 
 }/*RWD結束*/
 @media screen and (min-width:768px){
-  .bg_14{
-    background-image:url("../images/4wavepoint/bg_f.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover;
-    width:100%;
-    background-color: lightblue;
-  }
+
+  .cen{
+  width: 100%;
+  max-width:$navmaxwidth;
+  margin: 0 auto;
+}
+
+  
   .body_14{
     max-width: 1170px;
     margin:auto;
   }
 
- //  .banner_14{
- //      background-image:url("../images/5news/surf5.png");
- //      background-position: center;
- //      background-size:cover;
- //      background-repeat: no-repeat;
- //      position: relative;
- //      padding-top:30%;
- //      p{
- //        position: absolute;
- //        top: 0;
- //        bottom: 0;
- //        left: 20%;
- //        margin-top: 14%;
- //        color:#fff;
- //        font-size:20px;
- //        font-weight:700;
- //      }
- //    }
-  
- // .news_title_14{
- //    font-size:40px;
- //    position: absolute;
- //    top: 0;
- //    bottom: 0;
- //    left: 20%;
- //    margin-top: 10%;  
- //    color:#fff;
- //    letter-spacing: 2px;
- //  }
-
-.news_title_14{
-  img{
-    width: 100%;
-    height: auto;
-    margin-top: 350px;
-    
-  }
-  h2{
-    color:#FFF;
-
+  .bg_14{
+ background-image: url("../images/4wavepoint/bg_f.jpg");
+ background-repeat:no-repeat;
+ background-size: cover; 
+ height: auto;
+ padding-top: 4rem;  
+  .news_title_14{ 
+   @extend .cen;
+   box-sizing: border-box;
+      .news_title_14_txt{
+        // height: 10vh;
+        box-sizing: border-box;
+        padding: 1rem 2rem 1rem;
+        background-image:url("../images/4wavepoint/talk.jpg");
+        background-repeat: no-repeat; 
+        color:#fff;
+        margin-top: 15rem;
+      }
+      .news_txt{
+        position: relative;
+        box-sizing: border-box; 
+        padding: 2rem;
+        color:#fff;
+        background: linear-gradient(#5F7F92,#29465E);
+        &:after{
+          content:'';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          width: 99%;
+          height: 95%;
+          border:1px solid #95AFBA;
+        }
+        p{
+          margin-bottom: .8rem;
+        }
+      }
   }
 }
+
+
 
  .news_item{
   width: 100%;

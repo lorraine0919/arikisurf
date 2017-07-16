@@ -11,41 +11,21 @@
 
 @media screen and (max-width: 767px) {
   .bg_15 {
-    background-image: url("../images/5news/bg.jpg");
+    background-image: url("../images/4wavepoint/bg_f.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    background-color: lightblue; }
-
-  .banner_15 {
-    background-image: url("../images/5news/surf5.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    padding-top: 70%; }
-    .banner_15 p {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin-top: 30%;
-      text-align: center;
-      color: #fff;
-      font-size: 16px; }
-
-  .article_title_15 {
-    font-size: 30px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin-top: 10%;
-    text-align: center;
-    color: #fff;
-    letter-spacing: 2px; }
+    background-size: contain;
+    background-color: #2A6C84;
+    height: auto;
+    padding-top: 1rem; }
+    .bg_15 .article_title_15 {
+      box-sizing: border-box; }
+      .bg_15 .article_title_15 .article_txt_15 {
+        box-sizing: border-box;
+        padding: 1rem 2rem 1rem;
+        background-image: url("../images/4wavepoint/talk.jpg");
+        background-repeat: no-repeat;
+        color: #fff;
+        margin-top: 5rem; }
 
   .article_item {
     width: 100%;
@@ -88,44 +68,30 @@
     border: 2px solid #fff; } }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
+  .cen, .bg_15 .article_title_15 {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto; }
+
   .bg_15 {
-    background-image: url("../images/5news/bg.jpg");
+    background-image: url("../images/4wavepoint/bg_f.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    background-color: lightblue; }
+    height: auto;
+    padding-top: 4rem; }
+    .bg_15 .article_title_15 {
+      box-sizing: border-box; }
+      .bg_15 .article_title_15 .article_txt_15 {
+        box-sizing: border-box;
+        padding: 1rem 2rem 1rem;
+        background-image: url("../images/4wavepoint/talk.jpg");
+        background-repeat: no-repeat;
+        color: #fff;
+        margin-top: 15rem; }
 
   .body_15 {
     max-width: 1170px;
     margin: auto; }
-
-  .banner_15 {
-    background-image: url("../images/5news/surf5.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    padding-top: 30%; }
-    .banner_15 p {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 20%;
-      margin-top: 14%;
-      color: #fff;
-      font-size: 20px;
-      font-weight: 700; }
-
-  .article_title_15 {
-    font-size: 40px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 20%;
-    margin-top: 10%;
-    text-align: center;
-    color: #fff;
-    letter-spacing: 2px; }
 
   .article_item {
     width: 100%;

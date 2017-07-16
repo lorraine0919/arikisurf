@@ -612,6 +612,13 @@
 					width: 150%;
 				}
 				
+			}
+			.total{
+				color: #fff;
+				.number,.detail{
+					display: inline-block;
+					vertical-align: middle;
+				}
 			}			
 		}
 		.fill{

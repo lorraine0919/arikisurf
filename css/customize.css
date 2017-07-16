@@ -471,6 +471,11 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
+      .bg_forest_2 .step3_maxContent .demogroup .total {
+        color: #fff; }
+        .bg_forest_2 .step3_maxContent .demogroup .total .number, .bg_forest_2 .step3_maxContent .demogroup .total .detail {
+          display: inline-block;
+          vertical-align: middle; }
     .bg_forest_2 .step3_maxContent .fill {
       vertical-align: top;
       width: 100%;

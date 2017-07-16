@@ -32,7 +32,7 @@
 	width: 100%;
 	position: relative;
 	background-position: center;
-	padding: 0 0 16vh 0px;
+	padding: 4% 0 4% 0;
 	.pillar{
 		position: absolute;
 		bottom: 20%;
@@ -45,7 +45,6 @@
 	.step1_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
-		padding: 4vh 0 9vh 0;
 		// text-align: center;
 		.stepbar{
 			text-align: left;
@@ -124,10 +123,10 @@
 			display: inline-block;
 			width: 28%;
 			.demo{				
-			    width: 47%;
+			    width: 37%;
 			    margin: 0 0 0 28%;
 			    position: relative;
-			    padding-top: 139%;
+			    padding-top: 109%;
 				img{
 					width: 100%;
 					position: absolute;
@@ -240,7 +239,7 @@
 						display: inline-block;
 						float: right;
 						@extend %orangebtn;
-						margin: 22% 7% 0 0;
+						margin: 4% 7% 0 0;
 					}
 				}	
 			}		
@@ -250,7 +249,6 @@
 	.step2_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
-		padding: 4vh 0 9vh 0;
 		// text-align: center;
 		.stepbar{
 			text-align: left;
@@ -335,10 +333,10 @@
 			display: inline-block;
 			width: 28%;
 			.demo{				
-			    width: 47%;
+			    width: 37%;
 			    margin: 0 0 0 28%;
 			    position: relative;
-			    padding-top: 139%;
+			    padding-top: 109%;
 				img{
 					width: 100%;
 					position: absolute;
@@ -361,7 +359,9 @@
 			display: inline-block;
 			padding-top: 40%;
 			position: relative;
+			margin: -2% 0 0 0;
 			.selectAndNextfix{
+
 				position: absolute;
 				width: 100%;
 				top: 0;
@@ -420,7 +420,7 @@
 					}
 				}
 				.patterngroup{
-					margin: 20px 0;
+					margin:3% 0;
 					.patternselectgroup{
 						background-image: url('../images/2board/step2/patternselectfield.png');
 						background-size: 103% 103%;
@@ -532,7 +532,7 @@
 			.next{
 				position: absolute;
 				width: 40%;
-				bottom: -16%;
+				bottom: -9%;
 				right: 0;
 				a{
 					display: inline-block;
@@ -547,8 +547,8 @@
 	.step3_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
-		padding: 4vh 0 9vh 0;
 		// text-align: center;
+		padding: 0 0 12% 0;
 		.stepbar{
 			text-align: left;
 			background-image: url('../images/2board/strpbar.png');
@@ -594,10 +594,10 @@
 			width: 28%;
 			position: relative;
 			.demo{				
-			    width: 47%;
+			    width: 45%;
 			    margin: 0 0 0 28%;
 			    position: relative;
-			    padding-top: 139%;
+			    padding-top: 133%;
 				img{
 					width: 100%;
 					position: absolute;
@@ -717,7 +717,6 @@
 	.step4_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
-		padding: 4vh 0 9vh 0;
 		// text-align: center;
 		.stepbar{
 			text-align: left;
@@ -765,71 +764,16 @@
 			    top: 43%;
 			}
 		}
-		.demogroup{
-			vertical-align: top;
-			display: inline-block;
-			width: 28%;
-			position: relative;
-			.demo{				
-			    width: 47%;
-			    margin: 0 0 0 28%;
-			    position: relative;
-			    padding-top: 139%;
-				img{
-					width: 100%;
-					position: absolute;
-				}
-				.boarddemo{
-					top: 0;
-					left: 0;
-					z-index: 2;
-				}
-				.base{
-					bottom: -37%;
-				    left: -24%;
-					width: 150%;
-				}
-				
-			}
-			.total{
-				position: absolute;
-				color: #fff;
-			    bottom: -50%;
-			    left: 26%;
-				.number,.detail{
-					margin: 5% 0 0 0;
-					display: inline-block;
-					vertical-align: middle;
-					padding:10px 20px;
-					border: 1px solid #fff;
-					border-radius: 5px;
-				}
-				.detail{
-					transition:0.5s;
-				}
-				.detail:hover{
-					border: 1px solid #e97b23;
-					color: #e97b23;
-				}
-			}			
-		}
 		.fill{
 			vertical-align: top;
-			width: 100%;
-			display: inline-block;
-			width: 25%;
+			width: 60%;
+			margin: auto;
 			// background-image: url('../images/2board/insidebox.png');
 			background-repeat: no-repeat;
 			background-position: top;
 			background-size: cover;
-			padding: 4% 0 4% 4%;
-			margin: 10% 0 0 9%;
 			position: relative;
 			.fillfix{
-			    position: absolute;
-			    width: 190%;
-			    top: -128%;
-			    left: -28%;
 				.head{
 					padding: 8px 20px;
 					color: #fff;
@@ -838,43 +782,32 @@
 					
 				}
 				.content{
+					padding: 5% 0px;
 					background-color: rgba(0,0,0,0.2);
-					color: rgba(255,255,255,0.6);
-					padding: 20px ;
-					h3{
-						font-weight: 100;
+					color: rgba(255,255,255,0.8);
+					line-height: 30px;
+					.demogroup{						
+						.demo{				
+						    width: 50%;
+						    margin: auto;
+							img{
+								width: 100%;
+							}
+							
+						}	
 					}
-					table{
-						width: 100%;
-						th{
-							width: 36%;
-						}
-						td{
-							padding: 10px 10px 10px 0;
-							input{
-								width: 100.6%;
-								padding: 8px 5px;
-								box-sizing:border-box;
-								border-radius: 5px;
-								background-color: rgba(255,255,255,0.6);
-								border:none;
-							}
-							textarea{
-								width: 101%;
-								padding: 8px 5px;
-								box-sizing:border-box;
-								resize:none;
-								border-radius: 5px;
-								background-color: rgba(255,255,255,0.6);
-								border:none;
-							}
-						}
-
+					.title{
+						width: 50%;
+						color: #e97b23;
+						padding: 10px 0;
+						border-bottom: 2px solid rgba(255,255,255,0.6);
+					}
+					.infocontent{
+						padding: 2% 0px;
 					}
 					.next{
 						a{
 							display: inline-block;
-							float: right;
 							@extend %orangebtn;
 							margin: 20px;
 						}

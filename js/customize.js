@@ -1,0 +1,25 @@
+$(function(){
+	$('.step2_maxContent').hide();
+	$('#step1tostep2').click(function(){
+		$('.step1_maxContent').hide();
+		$('.step2_maxContent').show();
+	});
+
+	$('.patternselectgroup').hide();
+	$('.textureselect').hide();
+	$('.colorbtn').click(function(){
+		$('.colorselectgroup').slideToggle();
+		$('.patternselectgroup').slideUp();
+		$('.textureselect').slideUp();
+	});
+	$('.patternbtn').click(function(){
+		$('.patternselectgroup').slideToggle();
+		$('.colorselectgroup').slideUp();
+		$('.textureselect').slideUp();
+	});
+	$('.texturebtn').click(function(){
+		$('.patternselectgroup').slideUp();
+		$('.colorselectgroup').slideUp();
+		$('.textureselect').slideToggle();
+	});
+});

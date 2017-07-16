@@ -19,7 +19,7 @@
 
   
 
-  .bg_14{
+.bg_14{
  background-image: url("../images/4wavepoint/bg_f.jpg");
  background-repeat:no-repeat;
  background-size: contain;
@@ -130,7 +130,6 @@
    @extend .cen;
    box-sizing: border-box;
       .news_title_14_txt{
-        // height: 10vh;
         box-sizing: border-box;
         padding: 1rem 2rem 1rem;
         background-image:url("../images/4wavepoint/talk.jpg");

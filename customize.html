@@ -14,6 +14,7 @@
   
       <script src="js/jquery.js"></script>
   <link rel="stylesheet" type="text/css" href="css/customize.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
  </head>
   <!--header end-->
 <body>
@@ -62,10 +63,10 @@
 <!-- 		<div class="pillar">
 			<img src="images/2board/pillar.png">
 		</div> -->
-		<div class="maxContent">
+		<div class="step1_maxContent">
 			<div class="stepbar">
 				<div class="circle"></div>
-				<h3>選擇板型</h3>
+				<h3 class="undercircle">選擇板型</h3>
 				<div class="title">
 					<h3>選擇板型</h3>
 				</div>
@@ -103,12 +104,60 @@
 					</div>
 				</div>	
 				<div class="next">
-					<a href="">下一步</a>
+					<a id="step1tostep2">下一步</a>
+					<div class="clearfix"></div>
+				</div>			
+			</div>
+		</div>
+		<div class="step2_maxContent">	
+			<div class="stepbar">
+				<div class="circle"></div>
+				<h3 class="undercircle">選擇樣式</h3>
+				<div class="title">
+					<h3>選擇樣式</h3>
+				</div>
+			</div>
+			<div class="introduce">
+				<div class="head">
+					<h3>環氧樹脂（Epoxy）</h3>
+				</div>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eaque iste rem doloremque in fuga </p>
+					<div class="contentimg">
+						<img src="images/2board/step2/EPOXY.png">				
+					</div>
+
+				</div>
+			</div>
+			<div class="demogroup">
+				<div class="demo">
+					<img src="images/2board/longboard/longboard.png" class="boarddemo">
+					<img src="images/2board/base.png" class="base">
+				</div>				
+			</div>
+			<div class="selectAndNext">
+				<div class="selectboard">
+					<div class="head">
+						<h3>長板<span>Longboard</span></h3>
+					</div>
+					<div class="boardgroup">
+						<div class="board"><img src="images/2board/gunboard/gunboard_h.png" alt=""></div>
+						<div class="board"><img src="images/2board/longboard/longboard_h.png" alt=""></div>
+						<div class="board"><img src="images/2board/funboard/funboard_h.png" alt=""></div>
+						<div class="board"><img src="images/2board/shortboard/shortboard_h.png" alt=""></div>
+						<div class="board selected"><img src="images/2board/fishboard/fishboard_h.png" alt=""></div>
+						<div class="board"><img src="images/2board/bodyboard/bodyboard_h.png" alt=""></div>		
+					</div>
+				</div>	
+				<div class="next">
+					<a id="step1tostep2">下一步</a>
+					<div class="clearfix"></div>
 				</div>			
 			</div>
 		</div>
 	</div>
 </div>
+<script src="js/customize.js"></script>
  <footer class="footer_0">
      <div class="maxContent">
      	<div class="titlegroup">

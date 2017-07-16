@@ -1,11 +1,11 @@
-.bg_forest_2 .maxContent .stepbar .circle:after {
+.bg_forest_2 .step1_maxContent .stepbar .circle:after, .bg_forest_2 .step2_maxContent .stepbar .circle:after {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
 
-.bg_forest_2, .bg_forest_2 .maxContent .stepbar {
+.bg_forest_2, .bg_forest_2 .step1_maxContent .stepbar, .bg_forest_2 .step2_maxContent .stepbar {
   background-repeat: no-repeat;
   background-position: top; }
 
-.bg_forest_2 .maxContent .selectAndNext .next a {
+.bg_forest_2 .step1_maxContent .selectAndNext .next a, .bg_forest_2 .step2_maxContent .selectAndNext .next a {
   background-color: #e97b23;
   padding: 10px;
   border-radius: 5px;
@@ -24,11 +24,11 @@
     left: 20%; }
     .bg_forest_2 .pillar img {
       width: 100%; }
-  .bg_forest_2 .maxContent {
+  .bg_forest_2 .step1_maxContent {
     max-width: 1170px;
     margin: auto;
     padding: 9vh 0 0vh 0; }
-    .bg_forest_2 .maxContent .stepbar {
+    .bg_forest_2 .step1_maxContent .stepbar {
       text-align: left;
       background-image: url("../images/2board/strpbar.png");
       width: 20%;
@@ -36,14 +36,14 @@
       padding-top: 1.7%;
       margin: 0 auto 3vh auto;
       position: relative; }
-      .bg_forest_2 .maxContent .stepbar .circle {
+      .bg_forest_2 .step1_maxContent .stepbar .circle {
         width: 10%;
         padding-top: 10%;
         border-radius: 50%;
         background: linear-gradient(#ffcf8d, #ff7b00);
         margin-left: 13%;
         position: relative; }
-      .bg_forest_2 .maxContent .stepbar .circle:after {
+      .bg_forest_2 .step1_maxContent .stepbar .circle:after {
         content: '1';
         position: absolute;
         color: #fff;
@@ -52,15 +52,15 @@
         bottom: 0;
         left: 30%;
         margin: auto; }
-      .bg_forest_2 .maxContent .stepbar h3 {
+      .bg_forest_2 .step1_maxContent .stepbar h3.undercircle {
         color: #fff;
         margin: 10px 0; }
-      .bg_forest_2 .maxContent .stepbar .title {
+      .bg_forest_2 .step1_maxContent .stepbar .title {
         color: #fff;
         position: absolute;
         right: -147%;
         top: 43%; }
-    .bg_forest_2 .maxContent .introduce {
+    .bg_forest_2 .step1_maxContent .introduce {
       vertical-align: top;
       width: 100%;
       display: inline-block;
@@ -70,42 +70,42 @@
       background-size: cover;
       padding: 4% 0 4% 4%;
       margin: 2% 0 0 9%; }
-      .bg_forest_2 .maxContent .introduce .head {
+      .bg_forest_2 .step1_maxContent .introduce .head {
         padding: 8px 20px;
         color: #fff;
         background-image: url("../images/2board/introducehead.png"); }
-      .bg_forest_2 .maxContent .introduce .content {
+      .bg_forest_2 .step1_maxContent .introduce .content {
         background-color: #2e2e2e;
         color: #fff;
         padding: 20px; }
-        .bg_forest_2 .maxContent .introduce .content .contentimg {
+        .bg_forest_2 .step1_maxContent .introduce .content .contentimg {
           margin: 20px -20px; }
-          .bg_forest_2 .maxContent .introduce .content .contentimg img {
+          .bg_forest_2 .step1_maxContent .introduce .content .contentimg img {
             width: 100%; }
-    .bg_forest_2 .maxContent .demogroup {
+    .bg_forest_2 .step1_maxContent .demogroup {
       vertical-align: top;
       display: inline-block;
       width: 28%; }
-      .bg_forest_2 .maxContent .demogroup .demo {
+      .bg_forest_2 .step1_maxContent .demogroup .demo {
         width: 35%;
         margin: 0 0 0 28%;
         position: relative;
         padding-top: 104%; }
-        .bg_forest_2 .maxContent .demogroup .demo img {
+        .bg_forest_2 .step1_maxContent .demogroup .demo img {
           width: 100%;
           position: absolute; }
-        .bg_forest_2 .maxContent .demogroup .demo .boarddemo {
+        .bg_forest_2 .step1_maxContent .demogroup .demo .boarddemo {
           top: 0;
           left: 0;
           z-index: 2; }
-        .bg_forest_2 .maxContent .demogroup .demo .base {
+        .bg_forest_2 .step1_maxContent .demogroup .demo .base {
           bottom: -37%;
           left: -24%;
           width: 150%; }
-    .bg_forest_2 .maxContent .selectAndNext {
+    .bg_forest_2 .step1_maxContent .selectAndNext {
       width: 25%;
       display: inline-block; }
-      .bg_forest_2 .maxContent .selectAndNext .selectboard {
+      .bg_forest_2 .step1_maxContent .selectAndNext .selectboard {
         background-image: url("../images/2board/borderselectfield.png");
         background-size: cover;
         background-repeat: no-repeat;
@@ -113,31 +113,31 @@
         box-sizing: border-box;
         overflow: hidden;
         margin: -15% 0 0 0; }
-        .bg_forest_2 .maxContent .selectAndNext .selectboard .head {
+        .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .head {
           background-color: rgba(255, 130, 0, 0.1);
           padding: 20px 10px 10px 20px;
           margin: 0 -5px 0 -5px;
           border-radius: 16px 16px 0 0;
           color: #fff; }
-          .bg_forest_2 .maxContent .selectAndNext .selectboard .head span {
+          .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .head span {
             font-size: 14px;
             margin: 0 5px; }
-        .bg_forest_2 .maxContent .selectAndNext .selectboard .boardgroup {
+        .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .boardgroup {
           width: 100%; }
-          .bg_forest_2 .maxContent .selectAndNext .selectboard .boardgroup .board {
+          .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .boardgroup .board {
             position: relative;
             padding-top: 16%;
             display: block;
             margin: 20px 0;
             box-shadow: 0px 1px 0px #000, 0px 2px 0px rgba(255, 255, 255, 0.2); }
-            .bg_forest_2 .maxContent .selectAndNext .selectboard .boardgroup .board:last-child {
+            .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .boardgroup .board:last-child {
               box-shadow: none; }
-            .bg_forest_2 .maxContent .selectAndNext .selectboard .boardgroup .board img {
+            .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .boardgroup .board img {
               position: absolute;
               height: 100%;
               right: 10px;
               bottom: 10px; }
-        .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardname {
+        .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .boardcontent .boardname {
           position: relative;
           background: linear-gradient(#f09223, rgba(240, 146, 35, 0.6));
           text-align: center;
@@ -145,9 +145,9 @@
           margin: 15px 0 0 0;
           color: #fff;
           text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
-          .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardname h3 {
+          .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .boardcontent .boardname h3 {
             font-weight: 400; }
-          .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardname .arrow {
+          .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .boardcontent .boardname .arrow {
             width: 0;
             height: 0;
             border-right: 10px solid transparent;
@@ -156,14 +156,160 @@
             position: absolute;
             top: -26%;
             left: 70%; }
-        .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardintroduce {
+        .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .boardcontent .boardintroduce {
           background-color: rgba(255, 255, 255, 0.6);
           padding: 20px 10px;
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1) inset;
           color: #444; }
-          .bg_forest_2 .maxContent .selectAndNext .selectboard .boardcontent .boardintroduce th {
+          .bg_forest_2 .step1_maxContent .selectAndNext .selectboard .boardcontent .boardintroduce th {
             width: 26%; }
-      .bg_forest_2 .maxContent .selectAndNext .next a {
+      .bg_forest_2 .step1_maxContent .selectAndNext .next a {
+        display: inline-block;
+        float: right;
+        margin: 6% 7% 0 0; }
+  .bg_forest_2 .step2_maxContent {
+    max-width: 1170px;
+    margin: auto;
+    padding: 9vh 0 0vh 0; }
+    .bg_forest_2 .step2_maxContent .stepbar {
+      text-align: left;
+      background-image: url("../images/2board/strpbar.png");
+      width: 20%;
+      background-size: contain;
+      padding-top: 1.7%;
+      margin: 0 auto 3vh auto;
+      position: relative; }
+      .bg_forest_2 .step2_maxContent .stepbar .circle {
+        width: 10%;
+        padding-top: 10%;
+        border-radius: 50%;
+        background: linear-gradient(#ffcf8d, #ff7b00);
+        margin-left: 34%;
+        position: relative; }
+      .bg_forest_2 .step2_maxContent .stepbar .circle:after {
+        content: '2';
+        position: absolute;
+        color: #fff;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 30%;
+        margin: auto; }
+      .bg_forest_2 .step2_maxContent .stepbar h3.undercircle {
+        color: #fff;
+        margin: 10px 0 10px 24%; }
+      .bg_forest_2 .step2_maxContent .stepbar .title {
+        color: #fff;
+        position: absolute;
+        right: -147%;
+        top: 43%; }
+    .bg_forest_2 .step2_maxContent .introduce {
+      vertical-align: top;
+      width: 100%;
+      display: inline-block;
+      width: 28%;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      padding: 4% 0 4% 4%;
+      margin: 10% 0 0 9%;
+      position: relative; }
+      .bg_forest_2 .step2_maxContent .introduce .head {
+        padding: 8px 20px;
+        color: #fff;
+        background-image: url("../images/2board/introducehead.png"); }
+      .bg_forest_2 .step2_maxContent .introduce .content {
+        background-color: #2e2e2e;
+        color: #fff;
+        padding: 20px; }
+        .bg_forest_2 .step2_maxContent .introduce .content .contentimg {
+          position: absolute;
+          top: -3%;
+          right: -8%; }
+          .bg_forest_2 .step2_maxContent .introduce .content .contentimg img {
+            width: 100%; }
+    .bg_forest_2 .step2_maxContent .demogroup {
+      vertical-align: top;
+      display: inline-block;
+      width: 28%; }
+      .bg_forest_2 .step2_maxContent .demogroup .demo {
+        width: 35%;
+        margin: 0 0 0 28%;
+        position: relative;
+        padding-top: 104%; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo img {
+          width: 100%;
+          position: absolute; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo .boarddemo {
+          top: 0;
+          left: 0;
+          z-index: 2; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo .base {
+          bottom: -37%;
+          left: -24%;
+          width: 150%; }
+    .bg_forest_2 .step2_maxContent .selectAndNext {
+      width: 25%;
+      display: inline-block; }
+      .bg_forest_2 .step2_maxContent .selectAndNext .selectboard {
+        background-image: url("../images/2board/borderselectfield.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 8% 8% 0 8%;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: -15% 0 0 0; }
+        .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .head {
+          background-color: rgba(255, 130, 0, 0.1);
+          padding: 20px 10px 10px 20px;
+          margin: 0 -5px 0 -5px;
+          border-radius: 16px 16px 0 0;
+          color: #fff; }
+          .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .head span {
+            font-size: 14px;
+            margin: 0 5px; }
+        .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .boardgroup {
+          width: 100%; }
+          .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .boardgroup .board {
+            position: relative;
+            padding-top: 16%;
+            display: block;
+            margin: 20px 0;
+            box-shadow: 0px 1px 0px #000, 0px 2px 0px rgba(255, 255, 255, 0.2); }
+            .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .boardgroup .board:last-child {
+              box-shadow: none; }
+            .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .boardgroup .board img {
+              position: absolute;
+              height: 100%;
+              right: 10px;
+              bottom: 10px; }
+        .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .boardcontent .boardname {
+          position: relative;
+          background: linear-gradient(#f09223, rgba(240, 146, 35, 0.6));
+          text-align: center;
+          padding: 6px;
+          margin: 15px 0 0 0;
+          color: #fff;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
+          .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .boardcontent .boardname h3 {
+            font-weight: 400; }
+          .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .boardcontent .boardname .arrow {
+            width: 0;
+            height: 0;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-bottom: 10px solid #f09223;
+            position: absolute;
+            top: -26%;
+            left: 70%; }
+        .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .boardcontent .boardintroduce {
+          background-color: rgba(255, 255, 255, 0.6);
+          padding: 20px 10px;
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1) inset;
+          color: #444; }
+          .bg_forest_2 .step2_maxContent .selectAndNext .selectboard .boardcontent .boardintroduce th {
+            width: 26%; }
+      .bg_forest_2 .step2_maxContent .selectAndNext .next a {
         display: inline-block;
         float: right;
         margin: 6% 7% 0 0; }

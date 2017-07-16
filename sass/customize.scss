@@ -35,7 +35,7 @@
 			width: 100%;
 		}
 	}
-	.maxContent{
+	.step1_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
 		padding: 9vh 0 0vh 0;
@@ -68,7 +68,7 @@
 				margin: auto;
 				@extend %testsha;
 			}
-			h3{
+			h3.undercircle{
 				color: #fff;
 				margin: 10px 0;
 			}
@@ -102,6 +102,203 @@
 				padding: 20px;
 				.contentimg{
 					margin: 20px -20px;
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.demogroup{
+			vertical-align: top;
+			display: inline-block;
+			width: 28%;
+			.demo{				
+			    width: 35%;
+			    margin: 0 0 0 28%;
+			    position: relative;
+			    padding-top: 104%;
+				img{
+					width: 100%;
+					position: absolute;
+				}
+				.boarddemo{
+					top: 0;
+					left: 0;
+					z-index: 2;
+				}
+				.base{
+					bottom: -37%;
+				    left: -24%;
+					width: 150%;
+				}
+				
+			}			
+		}
+		.selectAndNext{
+			width: 25%;
+			display: inline-block;
+			.selectboard{
+				background-image: url('../images/2board/borderselectfield.png');
+				background-size: cover;
+				background-repeat: no-repeat;
+				padding: 8% 8% 0 8%;				
+				box-sizing:border-box;
+				overflow: hidden;
+				margin: -15% 0 0 0;
+				.head{
+					background-color: rgba(255,130,0,0.1);
+					padding:20px 10px 10px 20px;
+					margin: 0 -5px 0 -5px;
+					border-radius: 16px 16px 0 0;
+					color: #fff;
+					span{
+						font-size: 14px;
+						margin: 0 5px;
+					}
+				}
+				.boardgroup{
+					width: 100%;
+					.board{
+						position: relative;
+						padding-top: 16%;
+						display: block;
+						margin: 20px 0;
+						box-shadow: 0px 1px 0px #000,0px 2px 0px rgba(255,255,255,0.2);
+						&:last-child{
+							box-shadow:none;
+						}
+						img{
+							position: absolute;
+							height: 100%;
+							right: 10px;
+							bottom: 10px;
+						}				
+					}
+					.selected{
+						// -webkit-filter: drop-shadow(1px 1px 5px rgba(240,146,35,0.6));
+	  			// 		filter: drop-shadow(1px 1px 5px rgba(240,146,35,0.6));
+					}
+				}
+				.boardcontent{
+					.boardname{
+						position: relative;
+						background: linear-gradient(#f09223,rgba(240,146,35,0.6));
+						text-align: center;
+						padding: 6px;
+						margin: 15px 0 0 0;
+						color: #fff;
+						text-shadow:1px 1px 5px rgba(0,0,0,0.3);
+						h3{
+							font-weight: 400;
+						}
+						.arrow{
+							width: 0;
+							height: 0;
+							border-right: 10px solid transparent;
+							border-left: 10px solid transparent;
+							border-bottom: 10px solid #f09223;
+							position: absolute;
+						    top: -26%;
+						    left: 70%;
+						}
+					}
+					.boardintroduce{
+						background-color: rgba(255,255,255,0.6);
+						padding: 20px 10px;
+						box-shadow: 1px 1px 10px rgba(0,0,0,0.1) inset;
+						color: #444;
+						th{
+							width:26%;
+						}
+					}
+
+				}
+
+
+			}
+			.next{
+							
+				a{
+					display: inline-block;
+					float: right;
+					@extend %orangebtn;
+					margin: 6% 7% 0 0;
+				}
+			}			
+		}
+
+	}
+	.step2_maxContent{
+		max-width: $navmaxwidth;
+		margin: auto;
+		padding: 9vh 0 0vh 0;
+		// text-align: center;
+		.stepbar{
+			text-align: left;
+			background-image: url('../images/2board/strpbar.png');
+			@extend %bgrp;
+			width: 20%;
+			background-size: contain;
+			padding-top:1.7%;
+			margin: 0 auto 3vh auto;
+			position: relative;
+			.circle{
+				width: 10%;
+				padding-top: 10%;
+				border-radius: 50%;
+				background: linear-gradient(#ffcf8d,#ff7b00);
+				margin-left: 34%;
+				position: relative;
+			}
+			.circle:after{
+				content:'2';
+				position: absolute;
+				color: #fff;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 30%;
+				margin: auto;
+				@extend %testsha;
+			}
+			h3.undercircle{
+				color: #fff;
+				margin: 10px 0 10px 24%;
+			}
+			.title{
+				color: #fff;
+				position: absolute;
+			    right: -147%;
+			    top: 43%;
+			}
+		}
+		.introduce{
+			vertical-align: top;
+			width: 100%;
+			display: inline-block;
+			width: 28%;
+			// background-image: url('../images/2board/insidebox.png');
+			background-repeat: no-repeat;
+			background-position: top;
+			background-size: cover;
+			padding: 4% 0 4% 4%;
+			margin: 10% 0 0 9%;
+			position: relative;
+			.head{
+				padding: 8px 20px;
+				color: #fff;
+				background-image: url('../images/2board/introducehead.png');
+				
+			}
+			.content{
+				background-color: #2e2e2e;
+				color: #fff;
+				padding: 20px;
+				
+				.contentimg{
+					position: absolute;
+				    top: -3%;
+				    right: -8%;
 					img{
 						width: 100%;
 					}

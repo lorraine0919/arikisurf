@@ -1,11 +1,11 @@
-.bg_forest_2 .step1_maxContent .stepbar .circle:after, .bg_forest_2 .step2_maxContent .stepbar .circle:after, .bg_forest_2 .step3_maxContent .stepbar .circle:after {
+.bg_forest_2 .step1_maxContent .stepbar .circle:after, .bg_forest_2 .step2_maxContent .stepbar .circle:after, .bg_forest_2 .step3_maxContent .stepbar .circle:after, .bg_forest_2 .step4_maxContent .stepbar .circle:after {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
 
-.bg_forest_2, .bg_forest_2 .step1_maxContent .stepbar, .bg_forest_2 .step2_maxContent .stepbar, .bg_forest_2 .step3_maxContent .stepbar {
+.bg_forest_2, .bg_forest_2 .step1_maxContent .stepbar, .bg_forest_2 .step2_maxContent .stepbar, .bg_forest_2 .step3_maxContent .stepbar, .bg_forest_2 .step4_maxContent .stepbar {
   background-repeat: no-repeat;
   background-position: top; }
 
-.bg_forest_2 .step1_maxContent .selectAndNext .selectAndNextfix .next a, .bg_forest_2 .step2_maxContent .selectAndNext .next a, .bg_forest_2 .step3_maxContent .fill .fillfix .content .next a {
+.bg_forest_2 .step1_maxContent .selectAndNext .selectAndNextfix .next a, .bg_forest_2 .step2_maxContent .selectAndNext .next a, .bg_forest_2 .step3_maxContent .fill .fillfix .content .next a, .bg_forest_2 .step4_maxContent .fill .fillfix .content .next a {
   background-color: #e97b23;
   padding: 10px 30px;
   border-radius: 5px;
@@ -454,7 +454,8 @@
     .bg_forest_2 .step3_maxContent .demogroup {
       vertical-align: top;
       display: inline-block;
-      width: 28%; }
+      width: 28%;
+      position: relative; }
       .bg_forest_2 .step3_maxContent .demogroup .demo {
         width: 47%;
         margin: 0 0 0 28%;
@@ -472,10 +473,22 @@
           left: -24%;
           width: 150%; }
       .bg_forest_2 .step3_maxContent .demogroup .total {
-        color: #fff; }
+        position: absolute;
+        color: #fff;
+        bottom: -50%;
+        left: 26%; }
         .bg_forest_2 .step3_maxContent .demogroup .total .number, .bg_forest_2 .step3_maxContent .demogroup .total .detail {
+          margin: 5% 0 0 0;
           display: inline-block;
-          vertical-align: middle; }
+          vertical-align: middle;
+          padding: 10px 20px;
+          border: 1px solid #fff;
+          border-radius: 5px; }
+        .bg_forest_2 .step3_maxContent .demogroup .total .detail {
+          transition: 0.5s; }
+        .bg_forest_2 .step3_maxContent .demogroup .total .detail:hover {
+          border: 1px solid #e97b23;
+          color: #e97b23; }
     .bg_forest_2 .step3_maxContent .fill {
       vertical-align: top;
       width: 100%;
@@ -529,6 +542,137 @@
             float: right;
             margin: 20px; }
     .bg_forest_2 .step3_maxContent .selectAndNext {
+      width: 25%;
+      display: inline-block;
+      padding-top: 40%;
+      position: relative; }
+  .bg_forest_2 .step4_maxContent {
+    max-width: 1170px;
+    margin: auto;
+    padding: 4vh 0 9vh 0; }
+    .bg_forest_2 .step4_maxContent .stepbar {
+      text-align: left;
+      background-image: url("../images/2board/strpbar.png");
+      width: 20%;
+      background-size: contain;
+      padding-top: 1.7%;
+      margin: 0 auto 3vh auto;
+      position: relative; }
+      .bg_forest_2 .step4_maxContent .stepbar .circle {
+        width: 10%;
+        padding-top: 10%;
+        border-radius: 50%;
+        background: linear-gradient(#ffcf8d, #ff7b00);
+        margin-left: 56%;
+        position: relative; }
+      .bg_forest_2 .step4_maxContent .stepbar .circle:after {
+        content: '4';
+        position: absolute;
+        color: #fff;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 30%;
+        margin: auto; }
+      .bg_forest_2 .step4_maxContent .stepbar h3.undercircle {
+        color: #fff;
+        margin: 10px 0 10px 38%; }
+      .bg_forest_2 .step4_maxContent .stepbar .title {
+        color: #fff;
+        position: absolute;
+        right: -158%;
+        top: 43%; }
+    .bg_forest_2 .step4_maxContent .demogroup {
+      vertical-align: top;
+      display: inline-block;
+      width: 28%;
+      position: relative; }
+      .bg_forest_2 .step4_maxContent .demogroup .demo {
+        width: 47%;
+        margin: 0 0 0 28%;
+        position: relative;
+        padding-top: 139%; }
+        .bg_forest_2 .step4_maxContent .demogroup .demo img {
+          width: 100%;
+          position: absolute; }
+        .bg_forest_2 .step4_maxContent .demogroup .demo .boarddemo {
+          top: 0;
+          left: 0;
+          z-index: 2; }
+        .bg_forest_2 .step4_maxContent .demogroup .demo .base {
+          bottom: -37%;
+          left: -24%;
+          width: 150%; }
+      .bg_forest_2 .step4_maxContent .demogroup .total {
+        position: absolute;
+        color: #fff;
+        bottom: -50%;
+        left: 26%; }
+        .bg_forest_2 .step4_maxContent .demogroup .total .number, .bg_forest_2 .step4_maxContent .demogroup .total .detail {
+          margin: 5% 0 0 0;
+          display: inline-block;
+          vertical-align: middle;
+          padding: 10px 20px;
+          border: 1px solid #fff;
+          border-radius: 5px; }
+        .bg_forest_2 .step4_maxContent .demogroup .total .detail {
+          transition: 0.5s; }
+        .bg_forest_2 .step4_maxContent .demogroup .total .detail:hover {
+          border: 1px solid #e97b23;
+          color: #e97b23; }
+    .bg_forest_2 .step4_maxContent .fill {
+      vertical-align: top;
+      width: 100%;
+      display: inline-block;
+      width: 25%;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      padding: 4% 0 4% 4%;
+      margin: 10% 0 0 9%;
+      position: relative; }
+      .bg_forest_2 .step4_maxContent .fill .fillfix {
+        position: absolute;
+        width: 190%;
+        top: -128%;
+        left: -28%; }
+        .bg_forest_2 .step4_maxContent .fill .fillfix .head {
+          padding: 8px 20px;
+          color: #fff;
+          background-image: url("../images/2board/step3/head.png");
+          background-size: cover; }
+        .bg_forest_2 .step4_maxContent .fill .fillfix .content {
+          background-color: rgba(0, 0, 0, 0.2);
+          color: rgba(255, 255, 255, 0.6);
+          padding: 20px; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content h3 {
+            font-weight: 100; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content table {
+            width: 100%; }
+            .bg_forest_2 .step4_maxContent .fill .fillfix .content table th {
+              width: 36%; }
+            .bg_forest_2 .step4_maxContent .fill .fillfix .content table td {
+              padding: 10px 10px 10px 0; }
+              .bg_forest_2 .step4_maxContent .fill .fillfix .content table td input {
+                width: 100.6%;
+                padding: 8px 5px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.6);
+                border: none; }
+              .bg_forest_2 .step4_maxContent .fill .fillfix .content table td textarea {
+                width: 101%;
+                padding: 8px 5px;
+                box-sizing: border-box;
+                resize: none;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.6);
+                border: none; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .next a {
+            display: inline-block;
+            float: right;
+            margin: 20px; }
+    .bg_forest_2 .step4_maxContent .selectAndNext {
       width: 25%;
       display: inline-block;
       padding-top: 40%;

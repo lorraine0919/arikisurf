@@ -1,13 +1,14 @@
 
 		.container{
 			max-width: 1170px;
+
 			.row2:after{
 				content:'';
 				display: block;
 				clear: both;
 			}
 			.row2{
-				margin: 0 -20px;
+				margin: 0 -20px 15px;
 			}
 			// outline:1px solid black;
 			img{
@@ -23,7 +24,10 @@
 		.main_BG{
 			padding-top: 33px;
 			background-image: url("../images/3accessories/哈庫那馬他他.png"),
-			linear-gradient(rgba(17,49,76,1), rgba(17,49,76,1));
+			linear-gradient(180deg, rgba(25, 52, 76, 1)35%, rgba(85, 70, 76, 0.8)100%); 
+   //          background: -moz-linear-gradient(180deg, rgba(25, 52, 76, 1)35%, rgba(87, 70, 76, 0.8)100%); 
+			// background: -webkit-linear-gradient(180deg, rgba(25, 52, 76, 1)35%, rgba(87, 70, 76, 0.8)100%); 
+			// background: -o-linear-gradient(180deg, rgba(25, 52, 76, 1)35%, rgba(87, 70, 76, 0.8)100%); 
 			background-repeat: no-repeat;
 			background-position: top;
 			// background-size: cover;
@@ -47,7 +51,7 @@
             box-shadow: 1px 0px 0px #878a8d;
 			border-radius: 5px;
 			text-align: center;
-			padding: 5px 1vw;
+			padding: 5px 1vw 0px;
 			cursor:pointer;
 			display: inline-block;
 			transition: .5s;
@@ -159,7 +163,7 @@
         		background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.3));
             	border: 1px solid #ccc;
             	vertical-align: middle;
-            	margin: 10px 0px;
+            	margin: 10px 0px 20px;
         	 	box-shadow: 0px 2px 0px rgba(0,0,0,.1),
         	             	0px 5px 3px rgba(0,0,0,.1),
         	             	0px 10px 5px rgba(0,0,0,.1);
@@ -269,19 +273,38 @@
 		}
 		//----lightboxend----
 		@media screen and (max-width:767px) {
+			.container{
+			max-width: 1170px;
+
+			.row2:after{
+				content:'';
+				display: block;
+				clear: both;
+			}
+			.row2{
+				margin: 0px 0px 15px;
+			}
+			// outline:1px solid black;
+			img{
+			width: 100%;
+			vertical-align: middle;
+		   }
+		  }  
 			.main_BG{
 			padding-top:0px;
 		    }
 			.all{
 				max-height: 100px;
 			}
-			.myview {
-        	// overflow: scroll;
-        	// height: 350px;	
-          }
+			.myview .item{
+              .box{
+					padding: 10px;
+					margin:0;
+				}	
+             }
           .barbg{
 			.changebar{
-			 padding-bottom: 18px;
+			 // padding-bottom: 18px;
 		   li{
 			font-size: 15px;
 		    }
@@ -305,4 +328,5 @@
 		  	max-width: 350px;
 		  	max-height: 550px;
 		  }
+			
 	   }

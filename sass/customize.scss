@@ -733,7 +733,7 @@
 				padding-top: 10%;
 				border-radius: 50%;
 				background: linear-gradient(#ffcf8d,#ff7b00);
-				margin-left: 56%;
+				margin-left: 77%;
 				position: relative;
 			}
 			.circle:after{
@@ -749,7 +749,14 @@
 			}
 			h3.undercircle{
 				color: #fff;
-				margin: 10px 0 10px 38%;
+				margin: 10px -20% 10px 38%;
+				padding-top: 1em;
+				position: relative;
+				span{
+					top: 0;
+					left: 27%;
+					position: absolute;
+				}
 			}
 			.title{
 				color: #fff;

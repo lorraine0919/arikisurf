@@ -14,6 +14,7 @@ img {
   /*選單*/ }
   .left20 .base20 {
     color: #fff;
+    background-color: #fff;
     /*row20*/ }
     .left20 .base20 .hello20 {
       font-size: 25px; }
@@ -96,7 +97,8 @@ img {
 @media screen and (min-width: 768px) {
   /*左邊*/
   .content20 {
-    position: relative; }
+    width: 100%;
+    padding-top: 90%; }
 
   .left20 {
     width: 20%;
@@ -120,6 +122,9 @@ img {
       display: block;
       padding: 4% 0%;
       letter-spacing: 2.5px; }
+
+  .move20 {
+    position: relative; }
 
   /*右邊*/
   .right20 {
@@ -157,6 +162,7 @@ img {
       line-height: 2.5em;
       border-radius: 7px 7px 0px 0px; }
 
+  /*left20*/
   /*右邊*/
   .right20 {
     padding: 6% 0% 6% 0%; }
@@ -168,4 +174,6 @@ img {
         margin: auto;
         margin-bottom: 8%; }
       .right20 .personal20 .row20, .right20 .changepsw20 .row20 {
-        padding: 3% 14%; } }
+        padding: 3% 14%; }
+
+  /*right20*/ }

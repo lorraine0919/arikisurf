@@ -15,12 +15,10 @@
     <title>會員註冊</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
 </head>
-
   <!--header end-->
 <body>
 <header>
     <nav class="nav_0">
-        <div class="top"></div> 
         <div class="navDetail">
             <div class="navfix">
                 <div class="navimg">
@@ -33,15 +31,8 @@
                         </div>
                     </div>
                     <label class="hb" for="control">選單</label>
-                    <div class="iconGroup">
-                        <ul>
-                            <li><a href=""><img src="images/1common/member.png" alt="">會員專區</a></li>
-                            <li class="line"></li>
-                            <li><a href="cart.html"><img src="images/1common/shop.png" alt="">購物車</a></li>
-                        </ul>
-                    </div>
                     <ul class="menu">
-                        <li><a href="#">客製浪板</a></li>
+                        <li><a href="customize.html">客製浪板</a></li>
                         <li><a href="surfshop.html">衝浪配備</a></li>
                         <li><a href="map.html">衝浪地圖</a></li>
                         <li><a href="#">最新消息</a></li>
@@ -49,9 +40,16 @@
                         <li><a href="#" class="rwd">會員專區</a></li>
                         <li><a href="cart.html" class="rwd">購物車</a></li>
                     </ul>
-                    <div class="idHello">
-                        <p>ID：<span>煞氣a周子瑜 §醉ㄞ金城武</span> 您好</p>
+                    <div class="iconGroup">
+                        <ul>
+                            <li><a href=""><img src="images/1common/member.png" alt="">會員專區</a></li>
+                            <li class="line"></li>
+                            <li><a href="cart.html"><img src="images/1common/shop.png" alt="">購物車</a></li>
+                        </ul>
                     </div>
+                    <!-- <div class="idHello">
+                        <p>ID：<span>煞氣a周子瑜 §醉ㄞ金城武</span> 您好</p>
+                    </div> -->
                 </div>
             </div>
             </div>

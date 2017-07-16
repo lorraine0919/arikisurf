@@ -5,6 +5,10 @@
   <!--(bake module/head.html)-->
     <title>Ariki Surf - 會員專區</title>
     <link rel="stylesheet" type="text/css" href="css/7member.css">
+    <script type="libs/Scrollmagic/scrollmagic/minified/Scrollmagic.min.js"></script>
+    <script type="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script type="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script type="libs/jquery.stellar/src/jquery.stellar.js"></script>
 </head>
 <!--header end-->
 <body>
@@ -69,6 +73,7 @@
                 <input type="email" class="input20"></input>
             </div>
         </div><!-- personal20 -->
+        <div id="footer20">footer20</div>
         <div class="changepsw20">
             <p class="title20">變更密碼</p>
             <div class="row20">
@@ -89,6 +94,19 @@
         </div><!-- send20 -->
     </div><!-- right20 -->
 </div><!-- content20 -->
+
 <!--(bake module/footer.html)-->
+<script>
+  $(function () {
+    var controller = new ScrollMagic.Controller();
+    var move  = new Scrollmagic.Scene({
+        triggerElement:"#footer20",
+        offset:'100px'
+    })
+    .addIndicators({name:'對應點'})
+    .setClassToggle('.left20','move20')
+    .addTo(controller)
+  })
+</script>
 </body>
 </html>

@@ -141,6 +141,9 @@ var ourScene = new ScrollMagic.Scene({
      .addTo(controller);
 
 });
+
+
+
 // //錨點
 //  $('a.page-scroll').click(function () {
 //         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

@@ -1,0 +1,84 @@
+$F2:16px;
+$F3:16px;
+$F4:16px;
+
+/*=========清除浮動=========*/
+.topbar26:after,.item26:after{
+  content: '';
+  display: block;
+  clear: both; 
+}
+.register26 .topbar26{
+	line-height: 1.5em;
+	margin:auto;
+	text-align: center;
+}
+.topbar26 .step26{
+	float: left;
+	width: calc(33.333% - 4px);
+	border:2px solid rgb(4,63,76);
+	color: #fff;
+	background-color:rgb(4, 63, 76);
+}
+.register26{background-color: rgb(35, 117, 76);}
+.register26 .setdown26{
+	margin: auto;
+	background-color: rgba(255,255,255,0.9);
+}
+.setdown26 .subject26{
+	padding-bottom: 12px;
+	border-bottom:1px solid rgba(255,255,255,0.9);
+}
+.item26 .span26{
+	display: inline-block;
+	width: 15vw;
+	min-width: 100px;
+	text-align: left;
+}
+.item26 .input26{
+	width: 30vw;
+	min-width: 180px;
+}
+.item26 .notice26{
+	font-size: 15px;
+	color:rgb(18,49,76);
+}
+.item26 .read26{
+	padding-top: 12px;
+	border-top:1px solid rgba(255,255,255,0.9);
+}
+.item26 .check26{width: 8vw;}
+.item26 .submit26{
+  width: 10vw;
+  min-width: 75px;
+  float: right;
+  text-align: center;
+  border:none;
+  border-radius: 8px;
+  background-color: #8af;
+}
+@media screen and (max-width:767px){
+	.register26{
+		padding: 4% 0%;
+	}
+	.register26 .topbar26{
+		width: 85vw;
+	}
+	.register26 .setdown26{
+		padding: 5%;
+		width: calc(85vw - 10%);
+	}
+	.detail26 .item26 {padding: 2.5vw 10vw;}
+}
+
+@media screen and (min-width:768px){
+	.register26{padding: 20vh 0vh 5vh 0vh;}
+	.register26 .topbar26{
+		width: 67vw;
+	}
+	.register26 .setdown26{
+		padding: 5%;
+		width: calc(67vw - 10%);
+	}
+	.detail26 .item26 {margin: 12px 5vw;}
+}

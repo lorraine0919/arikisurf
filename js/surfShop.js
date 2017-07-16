@@ -40,8 +40,12 @@
     $('.pic').click(function(){
         var prodpic = $(this).children('img').attr('src');
         var prodpri = $(this).next().children('p').text();
-        //console.log(prodpri);
+        var prodtit = $(this).next().children('h4').text();
+        var prodtxt = $(this).next().children('div').children('p').text();
+        console.log(prodtit);
         $(".lig-pic img").attr("src",prodpic);
+        $(".info_title").children('h4').text(prodtit);
+        $(".info_txt").children('p').text(prodtxt);
         $(".info_price").children('p').text(prodpri);
 	});
 

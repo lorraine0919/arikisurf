@@ -1,6 +1,12 @@
 @charset "UTF-8";
 .container {
   max-width: 1170px; }
+  .container .row2:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .container .row2 {
+    margin: 0 -20px; }
   .container img {
     width: 100%;
     vertical-align: middle; }
@@ -16,9 +22,7 @@
   background-position: top; }
 
 .barbg .changebar {
-  max-width: 1170px;
-  padding-top: 15px;
-  padding-bottom: 10px; }
+  max-width: 1170px; }
   .barbg .changebar ul {
     display: inline-block;
     vertical-align: bottom; }
@@ -47,6 +51,9 @@
 
 .container22 {
   margin-top: 130px;
+  border-radius: 5px;
+  padding: 10px 10px 10px 20px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1), 0px 5px 3px rgba(0, 0, 0, 0.1), 0px 10px 5px rgba(0, 0, 0, 0.1);
   background-image: url("../images/4wavepoint/talk.jpg"); }
   .container22 h1, .container22 p {
     color: rgba(255, 255, 255, 0.8); }
@@ -73,7 +80,7 @@
   /*margin:0px 30px;*/ }
   .myview .item .box {
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
     border: 1px solid #ccc;
     vertical-align: middle;
@@ -83,10 +90,10 @@
     margin: auto;
     text-align: center; }
     .myview .item .btngorup .morebtn {
-      background-color: #1a191c;
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 5px;
       border-radius: 5px;
-      color: #fff;
+      color: rgba(0, 0, 0, 0.5);
       font-weight: bold;
       transition: .5s;
       display: inline-block; }
@@ -94,7 +101,8 @@
       background-color: #e97b23; }
 
 .myview .item .txt {
-  padding: 10px; }
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.7); }
 
 .myview .item .pic {
   padding: 10px; }
@@ -113,7 +121,7 @@
 #lightbox {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(200, 200, 200, 0.1);
   text-align: center;
   position: fixed;
   left: 0;

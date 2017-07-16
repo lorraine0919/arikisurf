@@ -22,7 +22,8 @@
   .bg_14{
  background-image: url("../images/4wavepoint/bg_f.jpg");
  background-repeat:no-repeat;
- background-size: cover; 
+ background-size: contain;
+ background-color:#2A6C84; 
  height: auto;
  padding-top: 1rem;
  width: 100%;  
@@ -34,7 +35,7 @@
         background-image:url("../images/4wavepoint/talk.jpg");
         background-repeat: no-repeat; 
         color:#fff;
-        margin-top: 1rem;
+        margin-top: 5rem;
       }
       .news_txt{
         position: relative;

@@ -1,5 +1,12 @@
+@charset "UTF-8";
 .container {
   max-width: 1170px; }
+  .container .row2:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .container .row2 {
+    margin: 0 -20px; }
   .container img {
     width: 100%;
     vertical-align: middle; }
@@ -9,76 +16,47 @@
   clear: both; }
 
 .main_BG {
-  background-image: url("../images/4wavepoint/bg.jpg");
+  padding-top: 33px;
+  background-image: url("../images/3accessories/哈庫那馬他他.png"), linear-gradient(#11314c, #11314c);
   background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover; }
+  background-position: top; }
 
-.barbg {
-  background-color: #11314c; }
-  .barbg .changebar {
-    max-width: 1170px;
-    padding-top: 15px;
-    padding-bottom: 10px; }
-    .barbg .changebar ul {
-      display: inline-block;
-      vertical-align: bottom; }
-    .barbg .changebar li {
-      color: #fff;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      text-align: center;
-      padding: 5px;
-      cursor: pointer;
-      display: inline-block;
-      transition: .5s; }
-    .barbg .changebar li:hover {
-      color: #e97b23;
-      border: 1px solid #e97b23; }
-  .barbg hr {
-    /*width:1150px;*/
-    margin: auto;
-    border: 0;
-    height: 3px;
-    background-color: black;
-    color: black; }
+.barbg .changebar {
+  max-width: 1170px; }
+  .barbg .changebar ul {
+    display: inline-block;
+    vertical-align: bottom; }
+  .barbg .changebar li {
+    color: #fff;
+    border-right: 1px solid #0b0b0b;
+    box-shadow: 1px 0px 0px #878a8d;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 1vw;
+    cursor: pointer;
+    display: inline-block;
+    transition: .5s; }
+  .barbg .changebar li:nth-child(4) {
+    border-right: none;
+    box-shadow: none; }
+  .barbg .changebar li:hover {
+    color: #e97b23; }
+.barbg hr {
+  /*width:1150px;*/
+  margin: auto;
+  border: 0;
+  height: 3px;
+  background-color: black;
+  color: black; }
 
 .container22 {
-  padding-top: 4.5%;
-  padding-bottom: 4.5%; }
-  .container22 h1 {
-    color: #fff;
-    text-shadow: 0px 2px 1px #555, 0px 3px 3px #888, 0px 5px 5px #aaa; }
-
-.bg_1 {
-  background-image: url("../images/3accessories/roll_head.jpg");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover; }
-
-.bg_2 {
-  background-image: url("../images/3accessories/roll_head.jpg");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover; }
-
-.bg_3 {
-  background-image: url("../images/3accessories/fin_head.jpg");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover; }
-
-.bg_4 {
-  background-image: url("../images/3accessories/wax_head.jpg");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover; }
-
-.bg_5 {
-  background-image: url("../images/3accessories/suit_head.jpg");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover; }
+  margin-top: 130px;
+  border-radius: 5px;
+  padding: 10px 10px 10px 20px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1), 0px 5px 3px rgba(0, 0, 0, 0.1), 0px 10px 5px rgba(0, 0, 0, 0.1);
+  background-image: url("../images/4wavepoint/talk.jpg"); }
+  .container22 h1, .container22 p {
+    color: rgba(255, 255, 255, 0.8); }
 
 .aa {
   max-width: 700px; }
@@ -102,8 +80,8 @@
   /*margin:0px 30px;*/ }
   .myview .item .box {
     border-radius: 5px;
-    padding: 10px;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
     border: 1px solid #ccc;
     vertical-align: middle;
     margin: 10px 0px;
@@ -112,10 +90,10 @@
     margin: auto;
     text-align: center; }
     .myview .item .btngorup .morebtn {
-      background-color: #1a191c;
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 5px;
       border-radius: 5px;
-      color: #fff;
+      color: rgba(0, 0, 0, 0.5);
       font-weight: bold;
       transition: .5s;
       display: inline-block; }
@@ -123,7 +101,8 @@
       background-color: #e97b23; }
 
 .myview .item .txt {
-  padding: 10px; }
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.7); }
 
 .myview .item .pic {
   padding: 10px; }
@@ -142,7 +121,7 @@
 #lightbox {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(200, 200, 200, 0.1);
   text-align: center;
   position: fixed;
   left: 0;
@@ -161,12 +140,14 @@
   left: 0;
   margin: auto;
   padding: 10px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border-radius: 5px; }
   #info-box img {
     width: 100%; }
   #info-box .lig-pic {
     box-sizing: border-box;
-    padding: 5px 20px; }
+    padding: 5px 20px;
+    border-bottom: 1px solid #ccc; }
   #info-box .btngorup {
     margin: auto;
     text-align: center; }
@@ -191,6 +172,9 @@
   top: 0px; }
 
 @media screen and (max-width: 767px) {
+  .main_BG {
+    padding-top: 0px; }
+
   .all {
     max-height: 100px; }
 
@@ -200,6 +184,7 @@
       font-size: 15px; }
 
   .container22 {
+    margin-top: 0px;
     padding-top: 10px;
     padding-bottom: 30px; }
     .container22 .txt {

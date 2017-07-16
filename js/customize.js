@@ -1,8 +1,13 @@
 $(function(){
 	$('.step2_maxContent').hide();
+	$('.step3_maxContent').hide();
 	$('#step1tostep2').click(function(){
 		$('.step1_maxContent').hide();
 		$('.step2_maxContent').show();
+	});
+	$('#step2tostep3').click(function(){
+		$('.step2_maxContent').hide();
+		$('.step3_maxContent').show();
 	});
 
 	$('.patternselectgroup').hide();
@@ -21,5 +26,8 @@ $(function(){
 		$('.patternselectgroup').slideUp();
 		$('.colorselectgroup').slideUp();
 		$('.textureselect').slideToggle();
+	});
+	$('.orangebtn').click(function(){
+
 	});
 });

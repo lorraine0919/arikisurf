@@ -36,7 +36,7 @@ module.exports = function (grunt) {
                     "map.html":"app/map.html",
                     "map_forum.html":"app/map_forum.html",
                     "map_forum_discussion.html":"app/map_forum_discussion.html",
-                    "7member.html":"app/7member.html",
+                    "7member_update.html":"app/7member_update.html",
                     "7member_login.html":"app/7member_login.html",
                     "7member_register.html":"app/7member_register.html",
                     "9backstage_welcome.html":"app/9backstage_welcome.html"
@@ -74,7 +74,7 @@ module.exports = function (grunt) {
           watchTask: true,
           server: {
             baseDir: './',
-            index: 'article_1.html'
+            index: '9backstage_welcome.html'
           }
         }
       }

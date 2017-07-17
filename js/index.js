@@ -1,5 +1,5 @@
 $(function(){
-	/*以下是爆炸圖動畫*/
+/*以下是爆炸圖動畫*/
 	var controller = new ScrollMagic.Controller();
 	for (var i = 1; i < 5; i++) {
 		var expolde = new ScrollMagic.Scene({
@@ -23,13 +23,13 @@ $(function(){
 		// document.getElementsByClassName("aboutContent")[index].style.opacity=0;
 		document.getElementsByClassName("path")[index].style.strokeDashoffset=1000;
 	});
-	/*以上是爆炸圖動畫*/
+/*以上是爆炸圖動畫*/
 
-	/*以下是換圖動畫*/
+/*以下是換圖動畫*/
 	$('.picture_1 .photo').mouseover(function(){
 		var index = $(this).index()+1;
 		$(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
-		$(this).toggleClass('selected');
+		$(this).addClass('selected');
 	}).mouseleave(function(){
 		var index = $(this).index()+1;
 		$(this).children('img').attr('src','images/1common/picselect'+index+'.png');
@@ -50,18 +50,19 @@ $(function(){
 		/*背後透明圖*/
 		$('.picture_1 .maxContent').css({'background-image':'url(../images/1common/picselectbg_'+index+'.png)'});
 	});
-	/*以上是換圖動畫*/
+/*以上是換圖動畫*/
 
-	/*以下是討論區動畫*/
+/*以下是討論區動畫*/
 	$('.forum_1 .postfix').mouseover(function(){
 		$('.forum_1 .selected').removeClass('selected');
 	});
-	/*以上是討論區動畫*/
-	/*以下是最新消息動畫*/
+/*以上是討論區動畫*/
+
+/*以下是最新消息動畫*/
 	$('.bulletin_1 .news').click(function(e){
 		var index = $(this).index();
 		$('.bulletin_1 .left img').attr('src',$(this).find("img").attr('src'));
 	});
-	/*以上是最新消息動畫*/
+/*以上是最新消息動畫*/
 
 });//我是結尾

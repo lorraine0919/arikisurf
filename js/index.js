@@ -58,9 +58,9 @@ $(function(){
 	});
 	/*以上是討論區動畫*/
 	/*以下是最新消息動畫*/
-	$('.bulletin_1 .news').click(function(){
+	$('.bulletin_1 .news').click(function(e){
 		var index = $(this).index();
-		$('.bulletin_1 .left img').attr('src',$(this).children('.newsimg img').attr('src'));
+		$('.bulletin_1 .left img').attr('src',$(this).find("img").attr('src'));
 	});
 	/*以上是最新消息動畫*/
 

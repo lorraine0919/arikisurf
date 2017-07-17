@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/*文字陰影*/
+@media screen and (max-width: 960px) {
+  .coating_1 .maxContent .demo {
+    display: none; }
+  .coating_1 .maxContent .about {
+    display: none; }
+  .coating_1 .maxContent .demorwd {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
+    .coating_1 .maxContent .demorwd .demoimg {
+      width: 55%;
+      margin: auto; }
+      .coating_1 .maxContent .demorwd .demoimg img {
+        width: 100%; }
+    .coating_1 .maxContent .demorwd .arrowleft {
+      width: 150px;
+      height: 210px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      position: absolute;
+      left: -83px;
+      top: 31%;
+      cursor: pointer; }
+      .coating_1 .maxContent .demorwd .arrowleft .arrowfix {
+        width: 27%;
+        position: absolute;
+        left: 88px;
+        top: 61px; }
+        .coating_1 .maxContent .demorwd .arrowleft .arrowfix img {
+          width: 100%; }
+    .coating_1 .maxContent .demorwd .arrowright {
+      content: '';
+      display: block;
+      width: 150px;
+      height: 210px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      position: absolute;
+      right: -83px;
+      top: 31%;
+      cursor: pointer; }
+      .coating_1 .maxContent .demorwd .arrowright .arrowfix {
+        width: 27%;
+        position: absolute;
+        right: 88px;
+        top: 61px; }
+        .coating_1 .maxContent .demorwd .arrowright .arrowfix img {
+          width: 100%; }
+  .coating_1 .maxContent .introduce {
+    text-align: center;
+    width: 100%; }
+
+  .picture_1 .maxContent {
+    padding: 44vh 0 20vh 0;
+    position: relative; }
+    .picture_1 .maxContent .demo {
+      display: none; }
+    .picture_1 .maxContent .demorwd {
+      display: inline-block;
+      position: relative;
+      padding-top: 40%;
+      width: 100%; }
+      .picture_1 .maxContent .demorwd .surfboard {
+        width: 100%;
+        transform: rotate(22deg);
+        position: absolute;
+        top: -256%;
+        left: -46%; }
+        .picture_1 .maxContent .demorwd .surfboard img {
+          width: 100%; }
+    .picture_1 .maxContent .introduce {
+      text-align: center; }
+      .picture_1 .maxContent .introduce .introduceMax {
+        width: 100%; }
+    .picture_1 .maxContent .photoSelect .photo {
+      display: none; }
+    .picture_1 .maxContent .photoSelect .selected {
+      position: absolute;
+      display: block;
+      bottom: 45%;
+      left: 41.5%;
+      width: 59%;
+      padding-top: 40%; }
+      .picture_1 .maxContent .photoSelect .selected img {
+        width: 60%; }
+    .picture_1 .maxContent .photoSelect .arrowrwd {
+      display: block; }
+      .picture_1 .maxContent .photoSelect .arrowrwd .fa-caret-left {
+        position: absolute;
+        right: 51%;
+        font-size: 48px;
+        bottom: 51%; }
+      .picture_1 .maxContent .photoSelect .arrowrwd .fa-caret-right {
+        position: absolute;
+        right: 3%;
+        font-size: 48px;
+        bottom: 51%; }
+    .picture_1 .maxContent .button {
+      text-align: center; }
+
+  .map_1 {
+    background-image: none;
+    background-color: #13324c;
+    padding: 11vh 0 0 0; }
+    .map_1 .contentMax .introduce .introduceWord {
+      text-align: center; }
+      .map_1 .contentMax .introduce .introduceWord p {
+        text-align: center; }
+    .map_1 .contentMax .map {
+      display: block;
+      margin: 0 0 0 0; }
+      .map_1 .contentMax .map .mapimg {
+        position: relative; }
+        .map_1 .contentMax .map .mapimg .mapimgpic {
+          width: 100%; }
+        .map_1 .contentMax .map .mapimg .pin {
+          width: 8%;
+          position: absolute;
+          top: 29%;
+          left: 37%; }
+          .map_1 .contentMax .map .mapimg .pin .pinpic {
+            width: 100%; }
+
+  .forum_1 {
+    padding: 10px 10px 0 10px; }
+    .forum_1 .contentMax .title {
+      display: none; }
+    .forum_1 .contentMax .postgroup {
+      overflow: hidden;
+      padding-top: 100%;
+      position: relative; }
+      .forum_1 .contentMax .postgroup .postfix {
+        width: 80%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .forum_1 .contentMax .postgroup .selected {
+        z-index: 3;
+        left: 0;
+        right: 0;
+        margin: auto; }
+      .forum_1 .contentMax .postgroup .postfix:nth-child(4) {
+        display: none; }
+      .forum_1 .contentMax .postgroup .postfix:nth-child(2) {
+        left: -71%; }
+      .forum_1 .contentMax .postgroup .postfix:nth-child(3) {
+        right: -160%; }
+
+  .bulletin_1 .maxContent .title {
+    text-align: center; }
+  .bulletin_1 .maxContent .infoarea {
+    background-position: top;
+    background-size: contain;
+    width: 85%;
+    margin: auto; }
+    .bulletin_1 .maxContent .infoarea .left {
+      height: auto; }
+    .bulletin_1 .maxContent .infoarea .right {
+      display: none; } }

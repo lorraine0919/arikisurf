@@ -118,7 +118,7 @@
 
   .topGround_0 {
     width: 10%;
-    height: 8vh;
+    padding-top: 6%;
     position: relative; } }
 @media screen and (min-width: 768px) {
   .rwd {
@@ -234,7 +234,7 @@
 
   .topGround_0 {
     width: 10%;
-    height: 11vh;
+    padding-top: 6%;
     position: relative; } }
 @media screen and (max-width: 910px) {
   .nav_0 .navDetail .navfix .navimg .iconGroup {

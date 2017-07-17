@@ -52,11 +52,13 @@
 .container22 {
   margin-top: 130px;
   border-radius: 5px;
-  padding: 10px 10px 10px 20px;
+  padding: 1rem 2rem 1rem;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1), 0px 5px 3px rgba(0, 0, 0, 0.1), 0px 10px 5px rgba(0, 0, 0, 0.1);
   background-image: url("../images/4wavepoint/talk.jpg"); }
   .container22 h1, .container22 p {
     color: rgba(255, 255, 255, 0.8); }
+  .container22 h1 {
+    font-size: 1.5em; }
 
 .aa {
   max-width: 700px; }
@@ -81,7 +83,7 @@
   .myview .item .box {
     border-radius: 5px;
     padding: 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(rgba(50, 50, 50, 0.4), rgba(50, 50, 50, 0.3));
     border: 1px solid #ccc;
     vertical-align: middle;
     margin: 10px 0px 20px;
@@ -121,7 +123,7 @@
 #lightbox {
   width: 100%;
   height: 100%;
-  background-color: rgba(200, 200, 200, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   position: fixed;
   left: 0;

@@ -116,7 +116,7 @@
     #control:checked ~ .menu{right: -1vh;}
     .topGround_0 {
       width: 10%;
-      height: 8vh;
+      padding-top: 6%;
       position: relative;
   }
 }
@@ -174,7 +174,7 @@
             display: inline-block;
             vertical-align: middle;
             position: relative;
-            margin: 0 0 0 6%; 
+            margin: 0 0 0 0%; 
             padding-top: 6%;
           }
             .nav_0 .navDetail .navfix .navimg .logo .logofix{
@@ -189,7 +189,7 @@
             }
           .nav_0 .navDetail .navfix .navimg .iconGroup {
             display: inline-block;
-            width: 20%;
+            width: 33%;
             text-align: right;
             vertical-align: bottom; }
             .nav_0 .navDetail .navfix .navimg .iconGroup ul li {
@@ -239,7 +239,7 @@
 
   .topGround_0 {
     width: 10%;
-    height: 11vh;
+    padding-top: 6%;
     position: relative; }
   }
 @media screen and (max-width:910px){

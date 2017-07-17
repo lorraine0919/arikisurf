@@ -18,7 +18,6 @@
 <body>
      <header>
          <nav class="nav_0">
-             <div class="top"></div> 
              <div class="navDetail">
                  <div class="navfix">
                      <div class="navimg">
@@ -31,6 +30,15 @@
                              </div>
                          </div>
                          <label class="hb" for="control">選單</label>
+                         <ul class="menu">
+                             <li><a href="customize.html">客製浪板</a></li>
+                             <li><a href="surfshop.html">衝浪配備</a></li>
+                             <li><a href="map.html">衝浪地圖</a></li>
+                             <li><a href="#">最新消息</a></li>
+                             <li><a href="about.html">關於酋長</a></li>
+                             <li><a href="#" class="rwd">會員專區</a></li>
+                             <li><a href="cart.html" class="rwd">購物車</a></li>
+                         </ul>
                          <div class="iconGroup">
                              <ul>
                                  <li><a href=""><img src="images/1common/member.png" alt="">會員專區</a></li>
@@ -38,18 +46,9 @@
                                  <li><a href="cart.html"><img src="images/1common/shop.png" alt="">購物車</a></li>
                              </ul>
                          </div>
-                         <ul class="menu">
-                             <li><a href="#">客製浪板</a></li>
-                             <li><a href="surfshop.html">衝浪配備</a></li>
-                             <li><a href="#">衝浪地圖</a></li>
-                             <li><a href="#">最新消息</a></li>
-                             <li><a href="about.html">關於酋長</a></li>
-                             <li><a href="#" class="rwd">會員專區</a></li>
-                             <li><a href="cart.html" class="rwd">購物車</a></li>
-                         </ul>
-                         <div class="idHello">
+                         <!-- <div class="idHello">
                              <p>ID：<span>煞氣a周子瑜 §醉ㄞ金城武</span> 您好</p>
-                         </div>
+                         </div> -->
                      </div>
                  </div>
                  </div>
@@ -59,9 +58,12 @@
 
      <div id="lightbox_11">
           <div class="gun">
-               檢舉原因 <input type="text">
-               <input type="submit" value="送出" id="submit">
-               <input type="button" value="取消" id="cancel">  
+               <span class="reason">檢舉原因</span> 
+               <input type="text" class="report">
+               <div class="io">
+                    <input type="submit" value="送出" id="submit">
+                    <input type="button" value="取消" id="cancel">
+               </div>
                <div id="close">X</div>
           </div>            
      </div><!-- lightbox_11 -->

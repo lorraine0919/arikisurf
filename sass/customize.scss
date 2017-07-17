@@ -32,7 +32,7 @@
 	width: 100%;
 	position: relative;
 	background-position: center;
-	padding: 0 0 16vh 0px;
+	padding: 4% 0 4% 0;
 	.pillar{
 		position: absolute;
 		bottom: 20%;
@@ -45,7 +45,6 @@
 	.step1_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
-		padding: 4vh 0 9vh 0;
 		// text-align: center;
 		.stepbar{
 			text-align: left;
@@ -124,10 +123,10 @@
 			display: inline-block;
 			width: 28%;
 			.demo{				
-			    width: 47%;
+			    width: 33%;
 			    margin: 0 0 0 28%;
 			    position: relative;
-			    padding-top: 139%;
+			    padding-top: 109%;
 				img{
 					width: 100%;
 					position: absolute;
@@ -178,19 +177,26 @@
 						width: 100%;
 						.board{
 							position: relative;
-							padding-top: 16%;
+							padding-top: 26%;
 							display: block;
-							margin: 20px 0;
 							box-shadow: 0px 1px 0px #000,0px 2px 0px rgba(255,255,255,0.2);
 							&:last-child{
 								box-shadow:none;
 							}
 							img{
 								position: absolute;
-								height: 100%;
+								height: 70%;
 								right: 10px;
 								bottom: 10px;
-							}				
+							}
+							&.click{
+								background-color: #e97b23;
+								box-shadow: 5px -5px 10px rgba(0,0,0,0.2) inset;
+								img{
+								    -webkit-filter: drop-shadow(8px 6px 6px rgba(0,0,0,0.2)); /* Safari */
+								    filter: drop-shadow(8px 6px 6px rgba(0,0,0,0.2));
+								}
+							}
 						}
 						.selected{
 							// -webkit-filter: drop-shadow(1px 1px 5px rgba(240,146,35,0.6));
@@ -240,7 +246,7 @@
 						display: inline-block;
 						float: right;
 						@extend %orangebtn;
-						margin: 22% 7% 0 0;
+						margin: 4% 7% 0 0;
 					}
 				}	
 			}		
@@ -250,7 +256,6 @@
 	.step2_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
-		padding: 4vh 0 9vh 0;
 		// text-align: center;
 		.stepbar{
 			text-align: left;
@@ -300,7 +305,7 @@
 			background-repeat: no-repeat;
 			background-position: top;
 			background-size: cover;
-			padding: 4% 0 4% 4%;
+			padding: 4% 0 26.4% 4%;
 			margin: 10% 0 0 9%;
 			position: relative;
 			.introducefix{
@@ -311,21 +316,24 @@
 					padding: 8px 20px;
 					color: #fff;
 					background-image: url('../images/2board/introducehead.png');
-					
+					position: relative;
+					.headimg{
+						.headimgfix{
+							position: absolute;
+						    top: -135%;
+						    right: -7%;
+							img{
+								width: 100%;
+							}
+						}
+						
+					}
 				}
 				.content{
 					background-color: #2e2e2e;
 					color: #fff;
 					padding: 20px;
-					
-					.contentimg{
-						position: absolute;
-					    top: -37%;
-					    right: -7%;
-						img{
-							width: 100%;
-						}
-					}
+					line-height: 23px;
 				}
 
 			}
@@ -335,10 +343,10 @@
 			display: inline-block;
 			width: 28%;
 			.demo{				
-			    width: 47%;
+			    width: 33%;
 			    margin: 0 0 0 28%;
 			    position: relative;
-			    padding-top: 139%;
+			    padding-top: 109%;
 				img{
 					width: 100%;
 					position: absolute;
@@ -361,7 +369,9 @@
 			display: inline-block;
 			padding-top: 40%;
 			position: relative;
+			margin: -2% 0 0 0;
 			.selectAndNextfix{
+
 				position: absolute;
 				width: 100%;
 				top: 0;
@@ -370,7 +380,7 @@
 					color: #fff;
 					padding: 10px 20px;
 					border: 1px solid #fff;
-					border-radius: 10px;
+					border-radius: 5px;
 					width: 30%;
 					text-align: center;
 					float: right;
@@ -380,6 +390,7 @@
 					background-color: #e97b23;
 					border: none;
 					color: #12314c;
+					font-weight: bold;
 				}
 				.colorgroup{
 					.colorselectgroup{
@@ -387,9 +398,11 @@
 						padding: 10px;
 						background-color: rgba(0,0,0,0.2);
 						border-radius: 10px;
+						width: 63%;//
+						float: right;//
 						.color{
 							display: inline-block;
-							width: 18%;
+							width:30%; //18%;
 							text-align: center;
 							color: #fff;
 							padding: 10px 1px;
@@ -410,7 +423,7 @@
 							    width: 140%;
 							    padding-top: 140%;
 							    top: -26%;
-							    left: -23.6%;							
+							    left: -22.7%;							
 							}
 							p{
 								margin: 10px 0 0 0;
@@ -420,7 +433,7 @@
 					}
 				}
 				.patterngroup{
-					margin: 20px 0;
+					margin:3% 0;
 					.patternselectgroup{
 						background-image: url('../images/2board/step2/patternselectfield.png');
 						background-size: 103% 103%;
@@ -485,6 +498,7 @@
 									display: inline-block;
 								}
 								.uploadbtn{
+									cursor: pointer;
 									display: inline-block;
 								}
 							}
@@ -520,6 +534,9 @@
 									width: 32%;
 									display: inline-block;
 									@extend %whiteblacklineright;
+									&.click{
+										outline: 2px solid #e97b23;
+									}
 									img{
 										width: 100%;
 									}
@@ -532,7 +549,7 @@
 			.next{
 				position: absolute;
 				width: 40%;
-				bottom: -16%;
+				bottom: -9%;
 				right: 0;
 				a{
 					display: inline-block;
@@ -547,8 +564,8 @@
 	.step3_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
-		padding: 4vh 0 9vh 0;
 		// text-align: center;
+		padding: 0 0 5% 0;
 		.stepbar{
 			text-align: left;
 			background-image: url('../images/2board/strpbar.png');
@@ -594,10 +611,10 @@
 			width: 28%;
 			position: relative;
 			.demo{				
-			    width: 47%;
+			    width: 43%;
 			    margin: 0 0 0 28%;
 			    position: relative;
-			    padding-top: 139%;
+			    padding-top: 142%;
 				img{
 					width: 100%;
 					position: absolute;
@@ -615,24 +632,28 @@
 				
 			}
 			.total{
-				position: absolute;
-				color: #fff;
-			    bottom: -50%;
-			    left: 26%;
-				.number,.detail{
-					margin: 5% 0 0 0;
-					display: inline-block;
-					vertical-align: middle;
-					padding:10px 20px;
-					border: 1px solid #fff;
-					border-radius: 5px;
-				}
-				.detail{
-					transition:0.5s;
-				}
-				.detail:hover{
-					border: 1px solid #e97b23;
-					color: #e97b23;
+				position: relative;
+				padding-top: 50%;
+				.totalfix{
+					position: absolute;
+					color: #fff;
+				    bottom: -50%;
+				    left: 26%;
+					.number,.detail{
+						margin: 5% 0 0 0;
+						display: inline-block;
+						vertical-align: middle;
+						padding:10px 20px;
+						border: 1px solid #fff;
+						border-radius: 5px;
+					}
+					.detail{
+						transition:0.5s;
+					}
+					.detail:hover{
+						border: 1px solid #e97b23;
+						color: #e97b23;
+					}
 				}
 			}			
 		}
@@ -717,7 +738,6 @@
 	.step4_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
-		padding: 4vh 0 9vh 0;
 		// text-align: center;
 		.stepbar{
 			text-align: left;
@@ -733,7 +753,7 @@
 				padding-top: 10%;
 				border-radius: 50%;
 				background: linear-gradient(#ffcf8d,#ff7b00);
-				margin-left: 56%;
+				margin-left: 77%;
 				position: relative;
 			}
 			.circle:after{
@@ -749,7 +769,14 @@
 			}
 			h3.undercircle{
 				color: #fff;
-				margin: 10px 0 10px 38%;
+				margin: 10px -20% 10px 38%;
+				padding-top: 1em;
+				position: relative;
+				span{
+					top: 0;
+					left: 27%;
+					position: absolute;
+				}
 			}
 			.title{
 				color: #fff;
@@ -758,71 +785,16 @@
 			    top: 43%;
 			}
 		}
-		.demogroup{
-			vertical-align: top;
-			display: inline-block;
-			width: 28%;
-			position: relative;
-			.demo{				
-			    width: 47%;
-			    margin: 0 0 0 28%;
-			    position: relative;
-			    padding-top: 139%;
-				img{
-					width: 100%;
-					position: absolute;
-				}
-				.boarddemo{
-					top: 0;
-					left: 0;
-					z-index: 2;
-				}
-				.base{
-					bottom: -37%;
-				    left: -24%;
-					width: 150%;
-				}
-				
-			}
-			.total{
-				position: absolute;
-				color: #fff;
-			    bottom: -50%;
-			    left: 26%;
-				.number,.detail{
-					margin: 5% 0 0 0;
-					display: inline-block;
-					vertical-align: middle;
-					padding:10px 20px;
-					border: 1px solid #fff;
-					border-radius: 5px;
-				}
-				.detail{
-					transition:0.5s;
-				}
-				.detail:hover{
-					border: 1px solid #e97b23;
-					color: #e97b23;
-				}
-			}			
-		}
 		.fill{
 			vertical-align: top;
-			width: 100%;
-			display: inline-block;
-			width: 25%;
+			width: 60%;
+			margin: auto;
 			// background-image: url('../images/2board/insidebox.png');
 			background-repeat: no-repeat;
 			background-position: top;
 			background-size: cover;
-			padding: 4% 0 4% 4%;
-			margin: 10% 0 0 9%;
 			position: relative;
 			.fillfix{
-			    position: absolute;
-			    width: 190%;
-			    top: -128%;
-			    left: -28%;
 				.head{
 					padding: 8px 20px;
 					color: #fff;
@@ -831,43 +803,32 @@
 					
 				}
 				.content{
+					padding: 5% 0px;
 					background-color: rgba(0,0,0,0.2);
-					color: rgba(255,255,255,0.6);
-					padding: 20px ;
-					h3{
-						font-weight: 100;
+					color: rgba(255,255,255,0.8);
+					line-height: 30px;
+					.demogroup{						
+						.demo{				
+						    width: 50%;
+						    margin: auto;
+							img{
+								width: 100%;
+							}
+							
+						}	
 					}
-					table{
-						width: 100%;
-						th{
-							width: 36%;
-						}
-						td{
-							padding: 10px 10px 10px 0;
-							input{
-								width: 100.6%;
-								padding: 8px 5px;
-								box-sizing:border-box;
-								border-radius: 5px;
-								background-color: rgba(255,255,255,0.6);
-								border:none;
-							}
-							textarea{
-								width: 101%;
-								padding: 8px 5px;
-								box-sizing:border-box;
-								resize:none;
-								border-radius: 5px;
-								background-color: rgba(255,255,255,0.6);
-								border:none;
-							}
-						}
-
+					.title{
+						width: 50%;
+						color: #e97b23;
+						padding: 10px 0;
+						border-bottom: 2px solid rgba(255,255,255,0.6);
+					}
+					.infocontent{
+						padding: 2% 0px;
 					}
 					.next{
 						a{
 							display: inline-block;
-							float: right;
 							@extend %orangebtn;
 							margin: 20px;
 						}

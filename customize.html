@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <!--header-->
   <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Document</title>
-      <link rel="stylesheet" type="text/css" href="css/index.css">
       <link rel="stylesheet" type="text/css" href="css/header.css">
       <link rel="stylesheet" type="text/css" href="css/footer.css">
       <link rel="stylesheet" type="text/css" href="css/grid.css">
@@ -77,9 +75,9 @@
 						<h3>長板（Longboard）</h3>
 					</div>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eaque iste rem doloremque in fuga </p>
+						<p>長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強</p>
 						<div class="contentimg">
-							<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">						
+							<img src="images/2board/step1/onlongboard.png">						
 						</div>
 
 					</div>					
@@ -95,11 +93,11 @@
 				<div class="selectAndNextfix">
 					<div class="selectboard">
 						<div class="head">
-							<h3>長板<span>Longboard</span></h3>
+							<h3>長板<span>LONGBOARD</span></h3>
 						</div>
 						<div class="boardgroup">
 							<div class="board"><img src="images/2board/gunboard/gunboard_h.png" alt=""></div>
-							<div class="board"><img src="images/2board/longboard/longboard_h.png" alt=""></div>
+							<div class="board click"><img src="images/2board/longboard/longboard_h.png" alt=""></div>
 							<div class="board"><img src="images/2board/funboard/funboard_h.png" alt=""></div>
 							<div class="board"><img src="images/2board/shortboard/shortboard_h.png" alt=""></div>
 							<div class="board selected"><img src="images/2board/fishboard/fishboard_h.png" alt=""></div>
@@ -126,12 +124,15 @@
 				<div class="introducefix">
 					<div class="head">
 						<h3>環氧樹脂（Epoxy）</h3>
+						<div class="headimg">
+							<div class="headimgfix">
+								<img src="images/2board/step2/EPOXY.png">
+							</div>			
+						</div>
 					</div>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eaque iste rem doloremque in fuga </p>
-						<div class="contentimg">
-							<img src="images/2board/step2/EPOXY.png">				
-						</div>
+						<p>構造由Eps(較高級的保麗龍)＋玻璃纖維布＋Epoxy樹脂所組成，重量較輕，靈敏度較佳，但是穩定度較差，少了玻纖板的紮實感！<br><br>
+						由於Epoxy樹脂的硬度較硬，所以優點是較耐撞擊，但是也因為硬而無彈性，在大浪時有可能發生直接斷裂的情形</p>
 					</div>					
 				</div>
 
@@ -150,24 +151,24 @@
 						<div class="colorselectgroup">
 							<div class="color">
 								<div class="circle"></div>
-								<p>紅色</p>
+								<p>白色</p>
 							</div>
 							<div class="color">
+								<div class="circle"></div>
+								<p>黃色</p>
+							</div>
+							<div class="color">
+								<div class="circle"></div>
+								<p>藍色</p>
+							</div>
+							<!-- <div class="color">
 								<div class="circle"></div>
 								<p>紅色</p>
 							</div>
 							<div class="color">
 								<div class="circle"></div>
 								<p>紅色</p>
-							</div>
-							<div class="color">
-								<div class="circle"></div>
-								<p>紅色</p>
-							</div>
-							<div class="color">
-								<div class="circle"></div>
-								<p>紅色</p>
-							</div>
+							</div> -->
 						</div>
 					</div>	
 					<div class="patterngroup">
@@ -192,7 +193,11 @@
 											<h4>上傳您的圖案</h4>
 											<p>請上傳500MB內PNG、JPG格式圖檔。</p>
 										</div>
-										<div class="uploadbtn"><img src="images/2board/step2/uploadbtn.png"></div>
+										<input type="file" id="uploadimg" style="display: none">
+										<label for="uploadimg">
+											<div class="uploadbtn"><img src="images/2board/step2/uploadbtn.png"></div>
+										</label>
+										
 									</div>									
 								</div>
 							</div>							
@@ -204,7 +209,7 @@
 							<div class="textureselectfix">
 								<div class="head"><h3>環氧樹脂</h3></div>
 								<div class="texturegroup">
-									<div class="texture"><img src="images/2board/step2/epoxyball.png" alt=""></div>
+									<div class="texture click"><img src="images/2board/step2/epoxyball.png" alt=""></div>
 									<div class="texture"><img src="images/2board/step2/woodball.png" alt=""></div>
 									<div class="texture"><img src="images/2board/step2/frpball.png" alt=""></div>								
 								</div>					
@@ -230,14 +235,16 @@
 					<img src="images/2board/base.png" class="base">
 				</div>
 				<div class="total">
-					<h4>總價（含運）</h4>
-					<div class="bottom">
-						<div class="number">
-							<p>94870元</p>
-						</div>
-						<div class="detail">
-							<p>明細</p>
-						</div>
+					<div class="totalfix">
+						<h4>總價（含運）</h4>
+						<div class="bottom">
+							<div class="number">
+								<p>94870元</p>
+							</div>
+							<div class="detail">
+								<p>明細</p>
+							</div>
+						</div>	
 					</div>
 				</div>				
 			</div>
@@ -287,66 +294,62 @@
 		<div class="step4_maxContent">	
 			<div class="stepbar">
 				<div class="circle"></div>
-				<h3 class="undercircle">填寫購買資料</h3>
-			</div>
-			<div class="demogroup">
-				<div class="demo">
-					<img src="images/2board/longboard/longboard.png" class="boarddemo">
-					<img src="images/2board/base.png" class="base">
-				</div>
-				<div class="total">
-					<h4>總價（含運）</h4>
-					<div class="bottom">
-						<div class="number">
-							<p>94870元</p>
-						</div>
-						<div class="detail">
-							<p>明細</p>
-						</div>
-					</div>
-				</div>				
+				<h3 class="undercircle"><span>確認購買資料</span></h3>
 			</div>
 			<div class="fill">
 				<div class="fillfix">
+					
 					<div class="head">
 						<h3>填寫購買資料</h3>
 					</div>
 					<div class="content">
-						<table>
-							<tr>
-								<th><h3>姓名</h3></th>
-								<td><input type="text" name="" id=""></td>
-							</tr>
-							<tr>
-								<th><h3>電話</h3></th>
-								<td><input type="phone" name="" id=""></td>
-							</tr>
-							<tr>
-								<th><h3>電子信箱</h3></th>
-								<td><input type="email" name="" id=""></td>
-							</tr>
-							<tr>
-								<th><h3>收件地址</h3></th>
-								<td><textarea rows="5"></textarea></td>
-							</tr>
-							<tr>
-								<th><h3>匯款帳號後五碼</h3></th>
-								<td><input type="text" name="" id=""></td>
-							</tr>
-							<tr>
-								<th><h3>其他留言</h3></th>
-								<td><textarea rows="5"></textarea></td>
-							</tr>
-						</table>
-						<div class="next">
-							<a id="step1tostep2">下一步</a>
-							<div class="clearfix"></div>
+						<div class="demogroup col-sm-4">
+							<div class="demo">
+								<img src="images/2board/longboard/longboard.png" class="boarddemo">
+							</div>			
 						</div>
+						<div class="right col-sm-8">
+							<div class="custominfo col-sm-12">
+								<div class="title"><h3>您的資料</h3></div>
+								<div class="infocontent">
+									<p>姓名：張健富<br>
+									電話：03-94879487<br>
+									信箱：mathi5566@gmail.com<br>
+									收件地址：桃園市中壢區中央路1段1號<br>
+									匯款帳號後五碼：59487<br>
+									其他留言：煩請回覆告知出貨時間<br>
+									</p>
+								</div>
+							</div>
+							<div class="boardinfo col-sm-6">
+								<div class="title"><h3>您的浪板</h3></div>
+								<div class="infocontent">
+									<P>板型：長板<br>
+									顏色：白色<br>
+									圖案：ARIKI BD101 <br>
+									材質：玻璃纖維<br>
+									</P>
+								</div>
+							</div>
+							<div class="totalinfo col-sm-6">
+								<div class="title"><h3>應付金額</h3></div>
+								<div class="infocontent">
+									<p>
+										小計：94770元<br>
+										運費：100元<br>
+										總價：94870元<br>
+									</p>
+								</div>
+								<div class="next">
+									<a id="step1tostep2">確認下單</a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
 					</div>					
 				</div>
 
-			</div>
-			<div class="selectAndNext">	
 			</div>
 		</div>
 	</div>

@@ -304,10 +304,12 @@
           margin: 10px 0;
           padding: 10px;
           background-color: rgba(0, 0, 0, 0.2);
-          border-radius: 10px; }
+          border-radius: 10px;
+          width: 63%;
+          float: right; }
           .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color {
             display: inline-block;
-            width: 18%;
+            width: 30%;
             text-align: center;
             color: #fff;
             padding: 10px 1px; }
@@ -326,7 +328,7 @@
               width: 140%;
               padding-top: 140%;
               top: -26%;
-              left: -26%; }
+              left: -22.7%; }
             .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color p {
               margin: 10px 0 0 0; }
         .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup {
@@ -386,6 +388,7 @@
                   width: 61%;
                   display: inline-block; }
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .uploadgroup .uploadbtn {
+                  cursor: pointer;
                   display: inline-block; }
         .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .texturegorup .textureselect {
           background-image: url("../images/2board/step2/texturefield.png");

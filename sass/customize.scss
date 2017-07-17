@@ -398,9 +398,11 @@
 						padding: 10px;
 						background-color: rgba(0,0,0,0.2);
 						border-radius: 10px;
+						width: 63%;//
+						float: right;//
 						.color{
 							display: inline-block;
-							width: 18%;
+							width:30%; //18%;
 							text-align: center;
 							color: #fff;
 							padding: 10px 1px;
@@ -421,7 +423,7 @@
 							    width: 140%;
 							    padding-top: 140%;
 							    top: -26%;
-							    left: -26%;							
+							    left: -22.7%;							
 							}
 							p{
 								margin: 10px 0 0 0;
@@ -496,6 +498,7 @@
 									display: inline-block;
 								}
 								.uploadbtn{
+									cursor: pointer;
 									display: inline-block;
 								}
 							}

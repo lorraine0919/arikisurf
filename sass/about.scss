@@ -17,7 +17,7 @@
 @media screen and (max-width:767px){
 
 .bg_17{
- background-image: url("../images/6ariki/aa.png");
+ background-image: url("../images/6ariki/cc.png");
  background-repeat:no-repeat;
  background-size: contain; 
  background-color:#2A6C84;
@@ -75,6 +75,10 @@
       color:#fff;
   } 
 
+  .about_img img{
+    width: 100%;
+  }
+
   .about_rightSide_17{
     p{
      margin:20px;
@@ -111,6 +115,10 @@
     background-repeat: no-repeat;
     padding-top:5%;
     padding-bottom:8%;
+  }
+
+  .business_img img{
+    width: 100%;
   }
 
   .business_rightSide_17{

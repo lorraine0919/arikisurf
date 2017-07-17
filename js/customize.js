@@ -1,5 +1,5 @@
 $(function(){
-	/*換頁相關*/
+/*↓換頁相關*/
 	$('.step2_maxContent').hide();
 	$('.step3_maxContent').hide();
 	$('.step4_maxContent').hide();
@@ -16,8 +16,9 @@ $(function(){
 		$('.step3_maxContent').hide();
 		$('.step4_maxContent').show();
 	});
+/*↑換頁相關*/
 
-	/*步驟二的手風琴*/
+/*↓步驟二的手風琴*/
 	$('.patternselectgroup').hide();
 	$('.textureselect').hide();
 	$('.colorbtn').click(function(){
@@ -38,8 +39,9 @@ $(function(){
 	$('.orangebtn').click(function(){
 
 	});
+/*↑步驟二的手風琴*/
 
-	/*步驟一換圖片和敘述和按鈕顏色*/
+/*↓步驟一換圖片和敘述和按鈕顏色*/
 	var boardnamearr = ['槍板<span>GUNBOARD</span>','長板<span>LONGBOARD</span>','娛樂板<span>FUNBOARD</span>','短板<span>SHORTBOARD</span>','魚板<span>FISHBOARD</span>','趴板<span>BODYBOARD</span>'];
 
 	var boardinfo = 
@@ -63,17 +65,23 @@ $(function(){
 		$('.step1_maxContent .content p').text(boardinfo[index]);
 		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
 	});
-	/*步驟二按按鈕換顏色*/
+/*↑步驟一換圖片和敘述和按鈕顏色*/
+
+/*↓步驟二按按鈕換顏色*/
 	$('.selectAndNext .whitebtn').click(function(){
 		$(this).addClass('orangebtn');
 		$('.selectAndNext .whitebtn').not(this).removeClass('orangebtn');
 	});
-	/*步驟二，色球顏色*/
+/*↑步驟二按按鈕換顏色*/
+
+/*↓步驟二，色球顏色*/
 	for (var i = 0; i < 3; i++) {
 		var colorarr = ['#fff','#009bd8','#ffd105'];
 		$('.step2_maxContent .colorselectgroup .color .circle').eq(i).css('background-color',colorarr[i]);
 	}
-	/*步驟二換材質說明與按鈕外框*/
+/*↑步驟二，色球顏色*/
+
+/*↓步驟二換材質說明與按鈕外框*/
 	$('.step2_maxContent .texturegorup .texture').click(function(){
 		var index=$(this).index();
 		$(this).addClass('click');
@@ -87,5 +95,6 @@ $(function(){
 		$('.step2_maxContent .introduce .content p').html(textureinfo[index]);
 		$('.step2_maxContent .introduce .head h3').text(texturename[index]);
 	});
+/*↑步驟二換材質說明與按鈕外框*/
 
 });

@@ -77,6 +77,8 @@
         width: 100%; }
     .picture_1 .maxContent .photoSelect .photo {
       display: none; }
+    .picture_1 .maxContent .photoSelect .photo:nth-child(2) {
+      display: block; }
     .picture_1 .maxContent .photoSelect .selected {
       position: absolute;
       display: block;
@@ -137,13 +139,8 @@
         position: absolute;
         top: 0;
         left: 0; }
-      .forum_1 .contentMax .postgroup .selected {
-        z-index: 3;
-        left: 0;
-        right: 0;
-        margin: auto; }
-      .forum_1 .contentMax .postgroup .postfix:nth-child(4) {
-        display: none; }
+      .forum_1 .contentMax .postgroup .postfix:nth-child(1) {
+        left: 10%; }
       .forum_1 .contentMax .postgroup .postfix:nth-child(2) {
         left: -71%; }
       .forum_1 .contentMax .postgroup .postfix:nth-child(3) {
@@ -156,7 +153,7 @@
     background-size: contain;
     width: 85%;
     margin: auto; }
-    .bulletin_1 .maxContent .infoarea .left {
-      height: auto; }
     .bulletin_1 .maxContent .infoarea .right {
+      height: auto; }
+    .bulletin_1 .maxContent .infoarea .left {
       display: none; } }

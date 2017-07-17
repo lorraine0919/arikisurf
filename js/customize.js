@@ -43,22 +43,38 @@ $(function(){
 	var boardnamearr = ['槍板（GUNBOARD）','長板（LONGBOARD）','娛樂板（FUNBOARD）','短板（SHORTBOARD）','魚板（FISHBOARD）','趴板（BODYBOARD）'];
 
 	var boardinfo = 
-	['長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強',
-	'體積小、靈活度比長板優秀，可做出垂直移動、甩大水花、空中動作等，較不適合初學者',
+	['頭尖尾尖是拿來拼大浪用的速度極快，很適合拼颱風浪',
+	'長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強',
 	'取長板與短板的優點而成的，浪小時可以提供充分浮力又可做出比長板靈活之動作。',
-	'趴板較不受浪況的限制，價格較其他板型便宜，適合女性、孩童和初學者入門學習',
+	'體積小、靈活度比長板優秀，可做出垂直移動、甩大水花、空中動作等，較不適合初學者',
 	'70年代復古板型 通常為雙舵長度比一般衝浪板短，但較厚較寬可提供較大的浮力與靈活度，適合進階衝浪者 是一張饒富趣味的版型。',
-	'頭尖尾尖是拿來拼大浪用的速度極快，很適合拼颱風浪'];
+	'趴板較不受浪況的限制，價格較其他板型便宜，適合女性、孩童和初學者入門學習'
+	];
 
-	var boardimg = ['ongunboard','onlongboard','onfunboard','onshortboard','onfisgboard','onbodyboard']
+	var boardimg = ['ongunboard','onlongboard','onfunboard','onshortboard','onfishboard','onbodyboard'];
+	var boarddemo = ['gunboard','longboard','funboard','shortboard','fishboard','bodyboard'];
 
 	$('.step1_maxContent .board').click(function(){
-		$(this).toggleClass('click');
+		$(this).addClass('click');
 		$('.step1_maxContent .board').not(this).removeClass('click');
 		var index=$(this).index();
 		$('.step1_maxContent .introduce .contentimg img').attr('src','images/2board/step1/'+boardimg[index]+'.png');
 		$('.step1_maxContent .head h3').text(boardnamearr[index]);
 		$('.step1_maxContent .content p').text(boardinfo[index]);
+		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
+	});
+
+	/*步驟二換材質說明與按鈕外框*/
+	$('.step2_maxContent .texturegorup .texture').click(function(){
+		var index=$(this).index();
+		var texturename=['環氧樹脂（Epoxy）','木質','玻璃纖維（FRP）'];
+		var textureinfo = [
+		'構造由Eps(較高級的保麗龍)＋玻璃纖維布＋Epoxy樹脂所組成，重量較輕，靈敏度較佳，但是穩定度較差，少了玻纖板的紮實感！<br><br>由於Epoxy樹脂的硬度較硬，所以優點是較耐撞擊，但是也因為硬而無彈性，在大浪時有可能發生直接斷裂的情形',
+		'',
+		'其主要構造為PU泡棉(Foam)＋玻璃纖維布＋保麗樹脂，由於材質的關係所以重量較Epoxy的浪板略重，但是穩定性較佳，尤其是在浪況較大時可以明顯的感受到！<br><br>若要挑剔其缺點的話，就是較不耐撞擊，遭受到硬物的碰撞時可能會發生浪板表面的樹脂破裂的情形，不過這些都是可以經由修補復原的。'
+		];
+		$('.step2_maxContent .introduce .content p').html(textureinfo[index]);
+		$('.step2_maxContent .introduce .head h3').text(texturename[index]);
 	});
 
 });

@@ -96,7 +96,7 @@
       display: inline-block;
       width: 28%; }
       .bg_forest_2 .step1_maxContent .demogroup .demo {
-        width: 37%;
+        width: 33%;
         margin: 0 0 0 28%;
         position: relative;
         padding-top: 109%; }
@@ -232,7 +232,7 @@
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover;
-      padding: 4% 0 4% 4%;
+      padding: 4% 0 26.4% 4%;
       margin: 10% 0 0 9%;
       position: relative; }
       .bg_forest_2 .step2_maxContent .introduce .introducefix {
@@ -246,10 +246,11 @@
         .bg_forest_2 .step2_maxContent .introduce .introducefix .content {
           background-color: #2e2e2e;
           color: #fff;
-          padding: 20px; }
+          padding: 20px;
+          line-height: 23px; }
           .bg_forest_2 .step2_maxContent .introduce .introducefix .content .contentimg {
             position: absolute;
-            top: -37%;
+            top: -20%;
             right: -7%; }
             .bg_forest_2 .step2_maxContent .introduce .introducefix .content .contentimg img {
               width: 100%; }
@@ -258,7 +259,7 @@
       display: inline-block;
       width: 28%; }
       .bg_forest_2 .step2_maxContent .demogroup .demo {
-        width: 37%;
+        width: 33%;
         margin: 0 0 0 28%;
         position: relative;
         padding-top: 109%; }
@@ -462,7 +463,7 @@
       width: 28%;
       position: relative; }
       .bg_forest_2 .step3_maxContent .demogroup .demo {
-        width: 45%;
+        width: 40%;
         margin: 0 0 0 28%;
         position: relative;
         padding-top: 133%; }

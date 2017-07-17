@@ -242,18 +242,19 @@
         .bg_forest_2 .step2_maxContent .introduce .introducefix .head {
           padding: 8px 20px;
           color: #fff;
-          background-image: url("../images/2board/introducehead.png"); }
+          background-image: url("../images/2board/introducehead.png");
+          position: relative; }
+          .bg_forest_2 .step2_maxContent .introduce .introducefix .head .headimg .headimgfix {
+            position: absolute;
+            top: -135%;
+            right: -7%; }
+            .bg_forest_2 .step2_maxContent .introduce .introducefix .head .headimg .headimgfix img {
+              width: 100%; }
         .bg_forest_2 .step2_maxContent .introduce .introducefix .content {
           background-color: #2e2e2e;
           color: #fff;
           padding: 20px;
           line-height: 23px; }
-          .bg_forest_2 .step2_maxContent .introduce .introducefix .content .contentimg {
-            position: absolute;
-            top: -20%;
-            right: -7%; }
-            .bg_forest_2 .step2_maxContent .introduce .introducefix .content .contentimg img {
-              width: 100%; }
     .bg_forest_2 .step2_maxContent .demogroup {
       vertical-align: top;
       display: inline-block;
@@ -297,7 +298,8 @@
         .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .orangebtn {
           background-color: #e97b23;
           border: none;
-          color: #12314c; }
+          color: #12314c;
+          font-weight: bold; }
         .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup {
           margin: 10px 0;
           padding: 10px;
@@ -410,6 +412,8 @@
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .texturegorup .textureselect .textureselectfix .texturegroup .texture {
                 width: 32%;
                 display: inline-block; }
+                .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .texturegorup .textureselect .textureselectfix .texturegroup .texture.click {
+                  outline: 2px solid #e97b23; }
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .texturegorup .textureselect .textureselectfix .texturegroup .texture img {
                   width: 100%; }
       .bg_forest_2 .step2_maxContent .selectAndNext .next {
@@ -463,10 +467,10 @@
       width: 28%;
       position: relative; }
       .bg_forest_2 .step3_maxContent .demogroup .demo {
-        width: 40%;
+        width: 43%;
         margin: 0 0 0 28%;
         position: relative;
-        padding-top: 133%; }
+        padding-top: 142%; }
         .bg_forest_2 .step3_maxContent .demogroup .demo img {
           width: 100%;
           position: absolute; }

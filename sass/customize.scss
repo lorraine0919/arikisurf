@@ -316,21 +316,24 @@
 					padding: 8px 20px;
 					color: #fff;
 					background-image: url('../images/2board/introducehead.png');
-					
+					position: relative;
+					.headimg{
+						.headimgfix{
+							position: absolute;
+						    top: -135%;
+						    right: -7%;
+							img{
+								width: 100%;
+							}
+						}
+						
+					}
 				}
 				.content{
 					background-color: #2e2e2e;
 					color: #fff;
 					padding: 20px;
 					line-height: 23px;
-					.contentimg{
-						position: absolute;
-					    top: -20%;
-					    right: -7%;
-						img{
-							width: 100%;
-						}
-					}
 				}
 
 			}
@@ -387,6 +390,7 @@
 					background-color: #e97b23;
 					border: none;
 					color: #12314c;
+					font-weight: bold;
 				}
 				.colorgroup{
 					.colorselectgroup{
@@ -527,6 +531,9 @@
 									width: 32%;
 									display: inline-block;
 									@extend %whiteblacklineright;
+									&.click{
+										outline: 2px solid #e97b23;
+									}
 									img{
 										width: 100%;
 									}
@@ -601,10 +608,10 @@
 			width: 28%;
 			position: relative;
 			.demo{				
-			    width: 40%;
+			    width: 43%;
 			    margin: 0 0 0 28%;
 			    position: relative;
-			    padding-top: 133%;
+			    padding-top: 142%;
 				img{
 					width: 100%;
 					position: absolute;

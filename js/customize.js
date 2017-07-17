@@ -63,14 +63,20 @@ $(function(){
 		$('.step1_maxContent .content p').text(boardinfo[index]);
 		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
 	});
-
+	/*步驟二按按鈕換顏色*/
+	$('.selectAndNext .whitebtn').click(function(){
+		$(this).addClass('orangebtn');
+		$('.selectAndNext .whitebtn').not(this).removeClass('orangebtn');
+	});
 	/*步驟二換材質說明與按鈕外框*/
 	$('.step2_maxContent .texturegorup .texture').click(function(){
 		var index=$(this).index();
-		var texturename=['環氧樹脂（Epoxy）','木質','玻璃纖維（FRP）'];
+		$(this).addClass('click');
+		$('.step2_maxContent .texturegorup .texture').not(this).removeClass('click');
+		var texturename=['環氧樹脂（Epoxy）','木質','玻璃纖維（POLY）'];
 		var textureinfo = [
 		'構造由Eps(較高級的保麗龍)＋玻璃纖維布＋Epoxy樹脂所組成，重量較輕，靈敏度較佳，但是穩定度較差，少了玻纖板的紮實感！<br><br>由於Epoxy樹脂的硬度較硬，所以優點是較耐撞擊，但是也因為硬而無彈性，在大浪時有可能發生直接斷裂的情形',
-		'',
+		'由頂尖品質的賽普里斯木製成，並由環氧樹脂所包覆，顯示出獨有的質感。最高規格的保護，非常適合收藏、裝飾。',
 		'其主要構造為PU泡棉(Foam)＋玻璃纖維布＋保麗樹脂，由於材質的關係所以重量較Epoxy的浪板略重，但是穩定性較佳，尤其是在浪況較大時可以明顯的感受到！<br><br>若要挑剔其缺點的話，就是較不耐撞擊，遭受到硬物的碰撞時可能會發生浪板表面的樹脂破裂的情形，不過這些都是可以經由修補復原的。'
 		];
 		$('.step2_maxContent .introduce .content p').html(textureinfo[index]);

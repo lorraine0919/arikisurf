@@ -40,7 +40,7 @@ $(function(){
 	});
 
 	/*步驟一換圖片和敘述和按鈕顏色*/
-	var boardnamearr = ['槍板（GUNBOARD）','長板（LONGBOARD）','娛樂板（FUNBOARD）','短板（SHORTBOARD）','魚板（FISHBOARD）','趴板（BODYBOARD）'];
+	var boardnamearr = ['槍板<span>GUNBOARD</span>','長板<span>LONGBOARD</span>','娛樂板<span>FUNBOARD</span>','短板<span>SHORTBOARD</span>','魚板<span>FISHBOARD</span>','趴板<span>BODYBOARD</span>'];
 
 	var boardinfo = 
 	['頭尖尾尖是拿來拼大浪用的速度極快，很適合拼颱風浪',
@@ -59,7 +59,7 @@ $(function(){
 		$('.step1_maxContent .board').not(this).removeClass('click');
 		var index=$(this).index();
 		$('.step1_maxContent .introduce .contentimg img').attr('src','images/2board/step1/'+boardimg[index]+'.png');
-		$('.step1_maxContent .head h3').text(boardnamearr[index]);
+		$('.step1_maxContent .head h3').html(boardnamearr[index]);
 		$('.step1_maxContent .content p').text(boardinfo[index]);
 		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
 	});

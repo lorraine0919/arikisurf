@@ -562,7 +562,7 @@
 		max-width: $navmaxwidth;
 		margin: auto;
 		// text-align: center;
-		padding: 0 0 12% 0;
+		padding: 0 0 5% 0;
 		.stepbar{
 			text-align: left;
 			background-image: url('../images/2board/strpbar.png');
@@ -629,24 +629,28 @@
 				
 			}
 			.total{
-				position: absolute;
-				color: #fff;
-			    bottom: -50%;
-			    left: 26%;
-				.number,.detail{
-					margin: 5% 0 0 0;
-					display: inline-block;
-					vertical-align: middle;
-					padding:10px 20px;
-					border: 1px solid #fff;
-					border-radius: 5px;
-				}
-				.detail{
-					transition:0.5s;
-				}
-				.detail:hover{
-					border: 1px solid #e97b23;
-					color: #e97b23;
+				position: relative;
+				padding-top: 50%;
+				.totalfix{
+					position: absolute;
+					color: #fff;
+				    bottom: -50%;
+				    left: 26%;
+					.number,.detail{
+						margin: 5% 0 0 0;
+						display: inline-block;
+						vertical-align: middle;
+						padding:10px 20px;
+						border: 1px solid #fff;
+						border-radius: 5px;
+					}
+					.detail{
+						transition:0.5s;
+					}
+					.detail:hover{
+						border: 1px solid #e97b23;
+						color: #e97b23;
+					}
 				}
 			}			
 		}

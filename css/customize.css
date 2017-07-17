@@ -428,7 +428,7 @@
   .bg_forest_2 .step3_maxContent {
     max-width: 1170px;
     margin: auto;
-    padding: 0 0 12% 0; }
+    padding: 0 0 5% 0; }
     .bg_forest_2 .step3_maxContent .stepbar {
       text-align: left;
       background-image: url("../images/2board/strpbar.png");
@@ -483,22 +483,25 @@
           left: -24%;
           width: 150%; }
       .bg_forest_2 .step3_maxContent .demogroup .total {
-        position: absolute;
-        color: #fff;
-        bottom: -50%;
-        left: 26%; }
-        .bg_forest_2 .step3_maxContent .demogroup .total .number, .bg_forest_2 .step3_maxContent .demogroup .total .detail {
-          margin: 5% 0 0 0;
-          display: inline-block;
-          vertical-align: middle;
-          padding: 10px 20px;
-          border: 1px solid #fff;
-          border-radius: 5px; }
-        .bg_forest_2 .step3_maxContent .demogroup .total .detail {
-          transition: 0.5s; }
-        .bg_forest_2 .step3_maxContent .demogroup .total .detail:hover {
-          border: 1px solid #e97b23;
-          color: #e97b23; }
+        position: relative;
+        padding-top: 50%; }
+        .bg_forest_2 .step3_maxContent .demogroup .total .totalfix {
+          position: absolute;
+          color: #fff;
+          bottom: -50%;
+          left: 26%; }
+          .bg_forest_2 .step3_maxContent .demogroup .total .totalfix .number, .bg_forest_2 .step3_maxContent .demogroup .total .totalfix .detail {
+            margin: 5% 0 0 0;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 5px; }
+          .bg_forest_2 .step3_maxContent .demogroup .total .totalfix .detail {
+            transition: 0.5s; }
+          .bg_forest_2 .step3_maxContent .demogroup .total .totalfix .detail:hover {
+            border: 1px solid #e97b23;
+            color: #e97b23; }
     .bg_forest_2 .step3_maxContent .fill {
       vertical-align: top;
       width: 100%;

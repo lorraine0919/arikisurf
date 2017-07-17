@@ -83,13 +83,18 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 console.log("times");
 
+
+
+
 // winning_1
+
+ 
 var controller = new ScrollMagic.Controller();
     var wp = new TimelineMax().staggerFromTo('.winning_item_1',0.6, {
-        x: 150,
+        y: -150, 
         opacity:0
     },{
-        x:0,
+        y:0,        
         opacity:1
     },0.1);
 console.log("time");
@@ -99,22 +104,74 @@ var scene = new ScrollMagic.Scene({
     offset:'5px',
 })
 .setTween(wp)
-// .addIndicators()
 .addTo(controller);
 console.log("times");
 
+// if (matchMedia) {
+//   var mq = window.matchMedia("(max-width: 767px)");
+//   mq.addListener(WidthChangea);
+//   WidthChangea(mq);
+// }
+
+// media query change
+// function WidthChangea(mq) {
+//   if (mq.matches) {
+//     var controller = new ScrollMagic.Controller();
+//     var wp = new TimelineMax().staggerFromTo('.winning_item_1',0.6, {
+//         y: -150, 
+//         opacity:0
+//     },{
+//         y:0,        
+//         opacity:1
+//     },0.1);
+// console.log("time");
+// var scene = new ScrollMagic.Scene({
+//     triggerElement: ".winning_record_title",
+//     reverse:true,
+//     offset:'5px',
+// })
+// .setTween(wp)
+// // .addIndicators()
+// .addTo(controller);
+// console.log("times");
+//   } 
+//   else {
+//     var controller = new ScrollMagic.Controller();
+//     var wp = new TimelineMax().staggerFromTo('.winning_item_1',0.6, {
+//         x: 150,
+//         opacity:0
+//     },{
+//         x:0,
+//         opacity:1
+//     },0.1);
+// console.log("time");
+// var scene = new ScrollMagic.Scene({
+//     triggerElement: ".winning_record_title",
+//     reverse:true,
+//     offset:'5px',
+// })
+// .setTween(wp)
+// // .addIndicators()
+// .addTo(controller);
+// console.log("times");
+//   }
+
+// }
+    
+
 // winning_2
+   
 var controller = new ScrollMagic.Controller();
     var wp = new TimelineMax().staggerFromTo('.winning_item_2',0.6, {
-        x: -150,
+        y: -150,
         opacity:0
     },{
-        x:0,
+        y:0,
         opacity:1
     },0.1);
 console.log("time");
 var scene = new ScrollMagic.Scene({
-    triggerElement: ".touch_img1",
+    triggerElement: ".touch_txt1",
     reverse:true,
     offset:'5px',
 })
@@ -122,20 +179,20 @@ var scene = new ScrollMagic.Scene({
 // .addIndicators()
 .addTo(controller);
 console.log("times");
-
+  
 
 // winning_3
 var controller = new ScrollMagic.Controller();
     var wp = new TimelineMax().staggerFromTo('.winning_item_3',0.6, {
-        x: 150,
+        y: -150,
         opacity:0
     },{
-        x:0,
+        y:0,
         opacity:1
     },0.1);
 console.log("time");
 var scene = new ScrollMagic.Scene({
-    triggerElement: ".touch_img2",
+    triggerElement: ".touch_txt2",
     reverse:true,
     offset:'5px',
 })
@@ -143,20 +200,22 @@ var scene = new ScrollMagic.Scene({
 // .addIndicators()
 .addTo(controller);
 console.log("times");
+  
 
 
 // winning_4
+
 var controller = new ScrollMagic.Controller();
     var wp = new TimelineMax().staggerFromTo('.winning_item_4',0.6, {
-        x: -150,
+        y: -150,
         opacity:0
     },{
-        x:0,
+        y:0,
         opacity:1
     },0.1);
 console.log("time");
 var scene = new ScrollMagic.Scene({
-    triggerElement: ".touch_img3",
+    triggerElement: ".touch_txt3",
     reverse:true,
     offset:'5px',
 })
@@ -164,8 +223,50 @@ var scene = new ScrollMagic.Scene({
 // .addIndicators()
 .addTo(controller);
 console.log("times");
+ 
+
+//up to down-1
+var scene_sticky = new ScrollMagic.Scene({
+    triggerElement: "#board_touch_1",
+    offset:'50',
+    duration : '425'
+})
+.setPin('#small_board_1')
+// .addIndicators()
+.addTo(controller);
 
 
+//up to down-2
+var scene_sticky = new ScrollMagic.Scene({
+    triggerElement: "#board_touch_2",
+    offset:'50',
+    duration : '405'
+})
+.setPin('#small_board_2')
+// .addIndicators()
+.addTo(controller);
+
+
+//up to down-3
+var scene_sticky = new ScrollMagic.Scene({
+    triggerElement: "#board_touch_3",
+    offset:'50',
+    duration : '390'
+})
+.setPin('#small_board_3')
+// .addIndicators()
+.addTo(controller);
+
+
+//up to down-4
+var scene_sticky = new ScrollMagic.Scene({
+    triggerElement: "#board_touch_4",
+    offset:'50',
+    duration : '400'
+})
+.setPin('#small_board_4')
+// .addIndicators()
+.addTo(controller);
 
 
 //fade in 1->about

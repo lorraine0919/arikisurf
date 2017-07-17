@@ -74,7 +74,7 @@ module.exports = function (grunt) {
           watchTask: true,
           server: {
             baseDir: './',
-            index: 'article_1.html'
+            index: '9backstage_welcome.html'
           }
         }
       }

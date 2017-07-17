@@ -177,19 +177,26 @@
 						width: 100%;
 						.board{
 							position: relative;
-							padding-top: 16%;
+							padding-top: 26%;
 							display: block;
-							margin: 20px 0;
 							box-shadow: 0px 1px 0px #000,0px 2px 0px rgba(255,255,255,0.2);
 							&:last-child{
 								box-shadow:none;
 							}
 							img{
 								position: absolute;
-								height: 100%;
+								height: 70%;
 								right: 10px;
 								bottom: 10px;
-							}				
+							}
+							&.click{
+								background-color: #e97b23;
+								box-shadow: 5px -5px 10px rgba(0,0,0,0.2) inset;
+								img{
+								    -webkit-filter: drop-shadow(8px 6px 6px rgba(0,0,0,0.2)); /* Safari */
+								    filter: drop-shadow(8px 6px 6px rgba(0,0,0,0.2));
+								}
+							}
 						}
 						.selected{
 							// -webkit-filter: drop-shadow(1px 1px 5px rgba(240,146,35,0.6));

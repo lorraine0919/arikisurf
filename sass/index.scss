@@ -375,6 +375,9 @@ $top:16vh;
 				padding: 0 0 20vh 0;
 			}
 			.postgroup{
+				a{
+					color: #fff;
+				}
 				$images:("1Pipeline","2SuperBank","3Jeffrey’s Bay","4Black Beach");	
 				@for $i from 1 through 4{
 					.postfix:nth-child(#{$i}) .post .head{
@@ -512,14 +515,30 @@ $top:16vh;
 					margin: 20px 0;
 				}
 				.infoarea{
-					padding: 20px;
+					padding: 30px;
 					background-image: url('../images/1common/bulletinbg.png');
 					@extend %bgnrpc;
 					.left{
-						height: 450px;
+						text-align: center;
+						position: relative;
+						padding-top: 30%;
+						.leftfix{
+							position: absolute;
+							top: 0;
+							left: 0;
+							height: 500px;
+							width: 100%;
+							overflow: hidden;
+							img{
+								width: 100%;
+							}							
+						}
+					}
+					.right{
 						overflow-y: scroll;
 						padding: 10px 20px;
 					.news{
+							cursor: pointer;
 							padding: 10px;
 							div{
 								display: inline-block;
@@ -537,6 +556,7 @@ $top:16vh;
 								.date{
 									display: block;
 									p{
+										margin: 6px 0;
 										span{
 											@extend %orangetitle;
 										}
@@ -565,28 +585,23 @@ $top:16vh;
 							margin:10px 0;
 						}
 					}
-					.left::-webkit-scrollbar
+					.right::-webkit-scrollbar
 					{
 					  width: 12px;  /* for vertical scrollbars */
 					  height: 12px; /* for horizontal scrollbars */
 					}
 
-					.left::-webkit-scrollbar-track
+					.right::-webkit-scrollbar-track
 					{
 					  background: rgba(0, 0, 0, 0.1);
 					}
 
-					.left::-webkit-scrollbar-thumb
+					.right::-webkit-scrollbar-thumb
 					{
 					  background: rgba(0, 0, 0, 0.5);
 					}
 						
-					.right{
-						text-align: center;
-						img{
-							width: 100%;
-						}
-					}
+					
 				}
 			}
 		}

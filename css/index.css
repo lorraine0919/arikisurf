@@ -18,10 +18,10 @@
   background-repeat: no-repeat;
   background-position: center; }
 
-.forum_1 .title, .bulletin_1 .maxContent .title, .bulletin_1 .maxContent .infoarea .left .news .newcontent .date p span {
+.forum_1 .title, .bulletin_1 .maxContent .title, .bulletin_1 .maxContent .infoarea .right .news .newcontent .date p span {
   color: #e97b23; }
 
-.bulletin_1 .maxContent .infoarea .left .news .newcontent .btn a {
+.bulletin_1 .maxContent .infoarea .right .news .newcontent .btn a {
   background-color: #1a191c;
   padding: 10px;
   border-radius: 5px;
@@ -283,6 +283,8 @@
   .forum_1 .contentMax {
     border-bottom: 1px solid #fff;
     padding: 0 0 20vh 0; }
+  .forum_1 .postgroup a {
+    color: #fff; }
   .forum_1 .postgroup .postfix:nth-child(1) .post .head {
     background-image: url("../images/1common/1Pipeline.jpg");
     background-size: cover;
@@ -390,33 +392,48 @@
   .bulletin_1 .maxContent .title {
     margin: 20px 0; }
   .bulletin_1 .maxContent .infoarea {
-    padding: 20px;
+    padding: 30px;
     background-image: url("../images/1common/bulletinbg.png"); }
     .bulletin_1 .maxContent .infoarea .left {
-      height: 450px;
+      text-align: center;
+      position: relative;
+      padding-top: 30%; }
+      .bulletin_1 .maxContent .infoarea .left .leftfix {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 500px;
+        width: 100%;
+        overflow: hidden; }
+        .bulletin_1 .maxContent .infoarea .left .leftfix img {
+          width: 100%; }
+    .bulletin_1 .maxContent .infoarea .right {
       overflow-y: scroll;
       padding: 10px 20px; }
-      .bulletin_1 .maxContent .infoarea .left .news {
+      .bulletin_1 .maxContent .infoarea .right .news {
+        cursor: pointer;
         padding: 10px; }
-        .bulletin_1 .maxContent .infoarea .left .news div {
+        .bulletin_1 .maxContent .infoarea .right .news div {
           display: inline-block;
           vertical-align: top; }
-        .bulletin_1 .maxContent .infoarea .left .news .newsimg {
+        .bulletin_1 .maxContent .infoarea .right .news .newsimg {
           width: 25%;
           margin: 0 10px; }
-          .bulletin_1 .maxContent .infoarea .left .news .newsimg img {
+          .bulletin_1 .maxContent .infoarea .right .news .newsimg img {
             width: 100%; }
-        .bulletin_1 .maxContent .infoarea .left .news .newcontent {
+        .bulletin_1 .maxContent .infoarea .right .news .newcontent {
           width: 65%; }
-          .bulletin_1 .maxContent .infoarea .left .news .newcontent .date {
+          .bulletin_1 .maxContent .infoarea .right .news .newcontent .date {
             display: block; }
-          .bulletin_1 .maxContent .infoarea .left .news .newcontent .btn {
+            .bulletin_1 .maxContent .infoarea .right .news .newcontent .date p {
+              margin: 6px 0; }
+          .bulletin_1 .maxContent .infoarea .right .news .newcontent .btn {
             text-align: right;
             padding: 20px 0;
             display: block; }
-            .bulletin_1 .maxContent .infoarea .left .news .newcontent .btn a:hover {
+            .bulletin_1 .maxContent .infoarea .right .news .newcontent .btn a:hover {
               background-color: #e97b23; }
-      .bulletin_1 .maxContent .infoarea .left .news:after {
+      .bulletin_1 .maxContent .infoarea .right .news:after {
         content: '';
         display: block;
         height: 1px;
@@ -424,16 +441,12 @@
         background-color: #4d6b85;
         box-shadow: 0px 1px 0px #0d253a;
         margin: 10px 0; }
-    .bulletin_1 .maxContent .infoarea .left::-webkit-scrollbar {
+    .bulletin_1 .maxContent .infoarea .right::-webkit-scrollbar {
       width: 12px;
       /* for vertical scrollbars */
       height: 12px;
       /* for horizontal scrollbars */ }
-    .bulletin_1 .maxContent .infoarea .left::-webkit-scrollbar-track {
+    .bulletin_1 .maxContent .infoarea .right::-webkit-scrollbar-track {
       background: rgba(0, 0, 0, 0.1); }
-    .bulletin_1 .maxContent .infoarea .left::-webkit-scrollbar-thumb {
+    .bulletin_1 .maxContent .infoarea .right::-webkit-scrollbar-thumb {
       background: rgba(0, 0, 0, 0.5); }
-    .bulletin_1 .maxContent .infoarea .right {
-      text-align: center; }
-      .bulletin_1 .maxContent .infoarea .right img {
-        width: 100%; }

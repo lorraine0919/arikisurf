@@ -24,14 +24,14 @@
 
 //scorll banner           
 $(function (){
-    TweenMax.fromTo('.main_title_17',2,
+    TweenMax.fromTo('.about_title_17',1,
     {y:-250,
     opacity:0},
     {y:0,
     opacity:1,
     ease: Power1.easeOut
     });
-    TweenMax.fromTo('.main_title_17_content',2,
+    TweenMax.fromTo('.about_txt_17',1,
     {x:-350,
     opacity:0},
     {x:0,
@@ -83,10 +83,10 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 console.log("times");
 
-// winning
+// winning_1
 var controller = new ScrollMagic.Controller();
-    var wp = new TimelineMax().staggerFromTo('.winning_img',0.6, {
-        x: 15,
+    var wp = new TimelineMax().staggerFromTo('.winning_item_1',0.6, {
+        x: 150,
         opacity:0
     },{
         x:0,
@@ -95,6 +95,68 @@ var controller = new ScrollMagic.Controller();
 console.log("time");
 var scene = new ScrollMagic.Scene({
     triggerElement: ".winning_record_title",
+    reverse:true,
+    offset:'5px',
+})
+.setTween(wp)
+// .addIndicators()
+.addTo(controller);
+console.log("times");
+
+// winning_2
+var controller = new ScrollMagic.Controller();
+    var wp = new TimelineMax().staggerFromTo('.winning_item_2',0.6, {
+        x: -150,
+        opacity:0
+    },{
+        x:0,
+        opacity:1
+    },0.1);
+console.log("time");
+var scene = new ScrollMagic.Scene({
+    triggerElement: ".touch_img1",
+    reverse:true,
+    offset:'5px',
+})
+.setTween(wp)
+// .addIndicators()
+.addTo(controller);
+console.log("times");
+
+
+// winning_3
+var controller = new ScrollMagic.Controller();
+    var wp = new TimelineMax().staggerFromTo('.winning_item_3',0.6, {
+        x: 150,
+        opacity:0
+    },{
+        x:0,
+        opacity:1
+    },0.1);
+console.log("time");
+var scene = new ScrollMagic.Scene({
+    triggerElement: ".touch_img2",
+    reverse:true,
+    offset:'5px',
+})
+.setTween(wp)
+// .addIndicators()
+.addTo(controller);
+console.log("times");
+
+
+// winning_4
+var controller = new ScrollMagic.Controller();
+    var wp = new TimelineMax().staggerFromTo('.winning_item_4',0.6, {
+        x: -150,
+        opacity:0
+    },{
+        x:0,
+        opacity:1
+    },0.1);
+console.log("time");
+var scene = new ScrollMagic.Scene({
+    triggerElement: ".touch_img3",
     reverse:true,
     offset:'5px',
 })

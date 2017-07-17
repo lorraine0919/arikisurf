@@ -36,8 +36,10 @@ module.exports = function (grunt) {
                     "map.html":"app/map.html",
                     "map_forum":"app/map_forum.html",
                     "map_forum_discussion":"app/map_forum_discussion.html",
-                    "member":"app/member.html",
-                    "register":"app/register.html"
+                    "7member.html":"app/7member.html",
+                    "7member_login.html":"app/7member_login.html",
+                    "7member_register.html":"app/7member_register.html",
+                    "9backstage_welcome.html":"app/9backstage_welcome.html"
                 }
             }
         },

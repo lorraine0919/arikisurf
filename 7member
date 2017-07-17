@@ -17,10 +17,10 @@
     <script type="text/javascript" src="libs/jquery/dist/jquery.min.js">
     </script>
     <script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
-    <script src="libs/Scrollmagic/scrollmagic/minified/Scrollmagic.min.js"></script>
-    <script src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-    <script src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-    <script src="libs/jquery.stellar/src/jquery.stellar.js"></script>
+    <script type="libs/Scrollmagic/scrollmagic/minified/Scrollmagic.min.js"></script>
+    <script type="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script type="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script type="libs/jquery.stellar/src/jquery.stellar.js"></script>
 </head>
 <!--header end-->
 <body>
@@ -123,6 +123,7 @@
                     <input type="email" class="input20"></input>
                 </div>
             </div><!-- personal20 -->
+            <div id="footer20">footer20</div>
             <div class="changepsw20">
                 <p class="title20">變更密碼</p>
                 <div class="row20">
@@ -141,20 +142,19 @@
             <div class="send20">
                 <button class="submit20">取消</button><button class="submit20">送出</button>
             </div><!-- send20 -->
-            <div id="trigger20"></div>
         </div><!-- right20 -->
     </div><!-- content20 -->
     <script type="text/javascript">
-      $(function(){
+      $(function () {
         var controller = new ScrollMagic.Controller();
-        var move  = new ScrollMagic.Scene({
-            triggerElement:"#trigger20",
-            offset:'-400px'
+        var move  = new Scrollmagic.Scene({
+            triggerElement:"#footer20",
+            offset:'100px'
         })
-        .setClassToggle('.left20','move20')
         .addIndicators({name:'對應點'})
-        .addTo(controller);
-      });
+        .setClassToggle('.left20','move20')
+        .addTo(controller)
+      })
     </script>
 <footer class="footer_0">
     <div class="maxContent">

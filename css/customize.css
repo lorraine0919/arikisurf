@@ -111,6 +111,8 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
+      .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
+        display: none; }
     .bg_forest_2 .step1_maxContent .selectAndNext {
       width: 25%;
       padding-top: 40%;

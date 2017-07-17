@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 767px) {
   .bg_17 {
-    background-image: url("../images/4wavepoint/bg_f.jpg");
+    background-image: url("../images/6ariki/cc.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-color: #2A6C84;
@@ -60,6 +60,9 @@
     margin-bottom: 1vh;
     color: #fff; }
 
+  .about_img img {
+    width: 100%; }
+
   .about_rightSide_17 p {
     margin: 20px;
     line-height: 1.8;
@@ -88,6 +91,9 @@
     background-repeat: no-repeat;
     padding-top: 5%;
     padding-bottom: 8%; }
+
+  .business_img img {
+    width: 100%; }
 
   .business_rightSide_17 p {
     margin: 20px;
@@ -303,7 +309,7 @@
     margin: 0 auto; }
 
   .bg_17 {
-    background-image: url("../images/4wavepoint/bg_f.jpg");
+    background-image: url("../images/6ariki/cc.png");
     background-repeat: no-repeat;
     background-size: contain;
     height: auto;
@@ -345,8 +351,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 5%;
-    padding-bottom: 8%;
+    padding-top: 8%;
+    padding-bottom: 14%;
     margin-top: 5%; }
 
   .about_1170 {
@@ -388,8 +394,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 5%;
-    padding-bottom: 8%; }
+    padding-top: 8%;
+    padding-bottom: 13%; }
 
   .business_1170 {
     max-width: 1170px;

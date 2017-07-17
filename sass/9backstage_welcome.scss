@@ -3,156 +3,105 @@ $F3:16px;
 $F4:16px;
 
 /*=========清除浮動=========*/
-.option20:after,.part20:after,.center20:after{
+.menu35:after{
   content: '';
   display: block;
   clear: both;
-} 
-.content20{
-  /*background-color: #0e2334;*/
-  background: linear-gradient(#ddd,#0e2334);
-}
-
-/*選單*/
-.content20 .option20{text-align: center;}
-.option20 .title20{
-  width: 100%;
-  letter-spacing: 12px;
-  font-size: $F2;
-  font-weight: bold;
-}
-.option20 li a{
-  padding: 3%;
-  font-size: 15px;
-  color: #fff;
-  border:2px solid #fff;
-  background-color: rgba(237,140,0,0.8);
-}
+}  
+.content35{background: linear-gradient(#ddd,#0e2334);}/*content35*/
+.menu35{
+  text-align: center;
+  .title35{
+    width: 100%;
+    letter-spacing: 12px;
+    font-size: $F2;
+    font-weight: bold;
+  }/*title35*/
+  .sidebar35 li a{
+    padding: 3%;
+    font-size: 15px;
+    color: #fff;
+    border:2px solid tan;
+    background-color: rgba(237,140,0,0.8);
+  }/*sidebar35*/
+}/*menu35*/
 
 /*主區塊*/
-.main20{
+.main35{
   line-height: 2.5;
   font-size: $F4;
   border-radius: 0px 0px 7px 7px;
   background: linear-gradient(#fff,#8af);
   box-shadow: 1px 1px 4px rgba(0,0,0,0.2) inset;
-}
-.main20 .part20 h3{
-  font-size: $F3;
-  text-align: center;
-  letter-spacing: 5px;
-}
-.content20 .main20 input{
-  border-radius: 8px;
-  height: 20px;
-}
-/*各部分*/
-.main20 .part20 .center20{margin: 4% auto;}
-.main20 .part20 .center20 .gender20{width: 40px;min-width: 20px;}
-
-/*送出*/
-.main20 .part20 .send20{text-align: center;}
-.main20 .part20 .submit20{
-  width: 60px;
-  line-height: 1.5;
-  margin:0% 2% 0% 2%;
-  border-radius: 7px;
-  letter-spacing: 3px;
-  color: rgba(237,140,0,1);
-  background-color: #fff;
-  outline: none;
-}
-
-/*大頭照*/
-.main20 .part20 .areaB_20 .photo20{width: 220px;}
-.main20 .part20 .areaB_20 .keyword20{
-  display: inline-block;
-  margin-right: 3%;
-  vertical-align: middle;
-}
-.main20 .part20 .areaB_20 .pic20{
-  display: inline-block;
-  height: 150px;
-  vertical-align: middle;
-  width: 7vw;
-  height: 7.83333vw;
-  min-width: 110px;
-  min-height: 123.1px;
-  background-color: #afc;
-}
-.main20 .part20 .areaB_20 .upload20{margin-top: 3%;}
-
-
-@media screen and (max-width:767px){
-
-  .content20{padding: 3%;}
-  .option20{width: 100%;}
-  .option20 li a{
-    float: left;
-    width: calc(21% - 4px);
-    border-radius: 7px 7px 0px 0px;
+  .part35{
+    h3{
+      font-size: $F3;
+      text-align: center;
+      letter-spacing: 5px;
+    }
+    .center35{margin: 4% auto;}
+    .send35{text-align: center;}
+    .submit35{
+      width: 60px;
+      line-height: 1.5;
+      margin:0% 2% 0% 2%;
+      border-radius: 7px;
+      letter-spacing: 3px;
+      color: rgba(237,140,0,1);
+      background-color: #fff;
+      outline: none;
+    }
   }
-  .main20{
+}
+@media screen and (max-width:767px){
+  .content35{padding: 3%;}
+  .menu35{
+    width: 100%;
+    .sidebar35 li a{
+        float: left;
+        width: calc(21% - 4px);
+        border-radius: 7px;
+    }
+  }/*menu35*/
+  .main35{
     padding:10%;
     width: 80%;
-  }
-  .title20{padding: 10px 0px 15px 0px;}
-  .part20 .areaA_20,.part20 .areaB_20,.part20 .areaC_20{
-    margin-bottom: 15%;
-  }
-  .main20 .part20 hr{margin-bottom: 10%;}
-  .main20 .part20 .center20{width: 300px;}
-  .main20 .part20 span{margin-right:15px;}
-  .main20 .part20 .photo20{margin: auto;}
-  .main20 .part20 .areaB_20 .upload20{text-align: center;}
-
+  }/*main35*/
 }
 
-
 @media screen and (min-width:768px){
-
-  .content20{
+  .head35{
+    width: 100%;
+    height: 100px;
+    background-color: #0e2334;
+  }
+  .content35{
     position: relative;
-    margin-top: 16vh;
     padding: 1% 13% 1% 13%;
     height: calc(84vh - 6vh - 2% - 5px);
     box-shadow: 1px 1px 5px rgba(0,0,0,0.2) inset;
   }
-  .option20{
+  .menu35{
     border-radius: 7px 7px 0px 0px;
     background-color: #fff;
+    .title35{padding: 20px 0px;}
+    .sidebar35{
+      position: absolute;
+      top: 10%;
+      left: 10vw;
+      li a{
+          display: block;
+          width: 12vw;
+          padding:2%;
+          margin-top: 2vh;
+          letter-spacing: 2px;
+          border-radius: 8px;
+        }
+    }/*sidebar35*/
   }
-  .title20{padding: 20px 0px;}
-  .sidebar20{
-    position: absolute;
-    top: 10%;
-    left: 10vw;
-  }
-  .option20 li a{
-    display: block;
-    width: 12vw;
-    padding:2%;
-    margin-top: 2vh;
-    letter-spacing: 2px;
-    border-radius: 8px;
-  }
-  .main20{
+  .main35{
     width: 80%;
     padding:4% 5% 2% 15%;
-  }
-  .part20 .areaA_20,.part20 .areaB_20,.part20 .areaC_20{margin-bottom: 5vw;}
-  .main20 .part20 h3{margin-bottom: 3%;}
-  .main20 .part20 hr{display: none;}
-  .main20 .part20 .center20{
-    width: 40vw;
-    position: relative;left: 10%;
-  }
-  .main20 .part20 span{
-    display: inline-block;
-    width: 8vw;
-    min-width: 70px;
-    margin-right:1vw;
-  }
-  .main20 .part20 .photo20,.main20 .part20 .upload20{float: left;}
+  }/*main35*/
 
 }

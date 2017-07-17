@@ -26,30 +26,33 @@ $(function(){
 /*以上是爆炸圖動畫*/
 
 /*以下是換圖動畫*/
-	$('.picture_1 .photo').mouseover(function(){
-		var index = $(this).index()+1;
-		$(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
-		$(this).addClass('selected');
-	}).mouseleave(function(){
-		var index = $(this).index()+1;
-		$(this).children('img').attr('src','images/1common/picselect'+index+'.png');
-	});
+	if($( window ).width()>960){
+		$('.picture_1 .photo').mouseover(function(){
+				var index = $(this).index()+1;
+				$(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
+				$(this).addClass('selected');
+			}).mouseleave(function(){
+				var index = $(this).index()+1;
+				$(this).children('img').attr('src','images/1common/picselect'+index+'.png');
+			});
 
-	$('.picture_1 .photo').click(function(){
-		// var condition = 1;
-		var index = $(this).index()+1;
-		/**/
-		// $(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
-		// console.log($('.picture_1 .selectpicshow').children('img'));
-		
-		/*按按鈕換浪板圖*/
-		$('.picture_1 .selectpicshow').fadeOut(0,function(){
-			$('.picture_1 .selectpicshow').children('img').attr('src','images/1common/piconboard_'+index+'.png');
-		}).fadeIn(1000);
-		// $('.picture_1 .selectpicshow').children('img').toggleClass('fadeIn');
-		/*背後透明圖*/
-		$('.picture_1 .maxContent').css({'background-image':'url(../images/1common/picselectbg_'+index+'.png)'});
-	});
+			$('.picture_1 .photo').click(function(){
+				// var condition = 1;
+				var index = $(this).index()+1;
+				/**/
+				// $(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
+				// console.log($('.picture_1 .selectpicshow').children('img'));
+				
+				/*按按鈕換浪板圖*/
+				$('.picture_1 .selectpicshow').fadeOut(0,function(){
+					$('.picture_1 .selectpicshow').children('img').attr('src','images/1common/piconboard_'+index+'.png');
+				}).fadeIn(1000);
+				// $('.picture_1 .selectpicshow').children('img').toggleClass('fadeIn');
+				/*背後透明圖*/
+				$('.picture_1 .maxContent').css({'background-image':'url(../images/1common/picselectbg_'+index+'.png)'});
+			});
+	}
+	
 /*以上是換圖動畫*/
 
 /*以下是討論區動畫*/

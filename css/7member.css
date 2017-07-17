@@ -82,6 +82,7 @@ img {
       width: 100px;
       padding: 1% 0%;
       margin: 0px 6px;
+      border: none;
       text-align: center;
       letter-spacing: 3px;
       border-radius: 7px;
@@ -97,8 +98,9 @@ img {
 @media screen and (min-width: 768px) {
   /*左邊*/
   .content20 {
+    position: relative;
     width: 100%;
-    padding-top: 90%; }
+    padding-bottom: 100%; }
 
   .left20 {
     width: 20%;
@@ -124,12 +126,13 @@ img {
       letter-spacing: 2.5px; }
 
   .move20 {
-    position: relative; }
+    position: absolute;
+    top: 0; }
 
   /*右邊*/
   .right20 {
     position: absolute;
-    top: calc(5% + 16vh);
+    top: 5%;
     left: calc(10% + 20%);
     width: 50%;
     padding: 0% 4%; }
@@ -141,7 +144,7 @@ img {
     .right20 .row20 {
       padding: 2% 14%; }
       .right20 .row20 .span20 {
-        margin-right: -2.5vw; } }
+        margin-right: -2vw; } }
 @media screen and (max-width: 767px) {
   /*左邊*/
   .left20 {

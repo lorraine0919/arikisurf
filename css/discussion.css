@@ -26,22 +26,38 @@ a {
     box-sizing: border-box;
     padding: 15px;
     width: 960px;
-    height: 150px;
+    height: 70px;
     margin: 100px auto;
-    background-color: yellow;
+    background: linear-gradient(to right, #1BBCB3, #37B9E9);
     font-size: 20px;
-    position: relative; }
+    position: relative;
+    color: #fff; }
+    #lightbox_11 .gun .reason {
+      vertical-align: bottom; }
+    #lightbox_11 .gun .report {
+      margin-left: 10px;
+      padding: 2px;
+      vertical-align: bottom; }
+    #lightbox_11 .gun .io {
+      display: inline-block; }
+      #lightbox_11 .gun .io input {
+        vertical-align: middle;
+        padding: 2px; }
   #lightbox_11 #close {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 25px;
-    height: 25px;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     border-radius: 50%;
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.6);
     color: white;
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: 1s; }
+    #lightbox_11 #close:hover {
+      color: #ED8C00; }
 
 .bg_11 {
   background-image: url("../images/4wavepoint/bg_f.jpg");
@@ -140,7 +156,11 @@ a {
           margin-bottom: .5rem; }
       .bg_11 .feedback_11 .top .quit {
         float: right;
-        margin-right: 1rem; }
+        margin-right: 1rem;
+        color: #fff;
+        cursor: pointer; }
+        .bg_11 .feedback_11 .top .quit:hover {
+          color: #ED8C00; }
     .bg_11 .feedback_11 .text {
       padding: 1rem 1.5rem;
       background-color: rgba(255, 255, 255, 0.5); }
@@ -171,17 +191,31 @@ a {
       background-color: #ADADAD; }
 
 @media screen and (max-width: 767px) {
+  #lightbox_11 .gun {
+    width: 100%;
+    height: 150px; }
+    #lightbox_11 .gun .io {
+      display: block;
+      width: 100px;
+      margin: 15px auto; }
+  #lightbox_11 #close {
+    position: absolute;
+    right: 0;
+    bottom: -85px;
+    left: 0;
+    margin: auto; }
+
   .bg_11 {
     padding-top: .4rem;
-    background-size: contain;
+    background-size: 100%;
     background-color: #29475E; }
     .bg_11 .bread_11 li {
       box-sizing: border-box;
       margin-left: .35rem;
       padding: .5rem 0rem; }
     .bg_11 .title {
-      height: 15vh;
-      margin-top: 5rem;
+      height: 12vh;
+      margin-top: 3vh;
       padding: 1.5rem 0 0; }
       .bg_11 .title h1 {
         display: block;

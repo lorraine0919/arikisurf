@@ -34,6 +34,7 @@ $(function(){
 			}).mouseleave(function(){
 				var index = $(this).index()+1;
 				$(this).children('img').attr('src','images/1common/picselect'+index+'.png');
+				$(this).removeClass('selected');
 			});
 
 			$('.picture_1 .photo').click(function(){

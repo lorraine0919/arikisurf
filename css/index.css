@@ -390,14 +390,13 @@
   .bulletin_1 .maxContent .title {
     margin: 20px 0; }
   .bulletin_1 .maxContent .infoarea {
-    padding: 20px;
+    padding: 30px;
     background-image: url("../images/1common/bulletinbg.png"); }
     .bulletin_1 .maxContent .infoarea .left {
       text-align: center; }
       .bulletin_1 .maxContent .infoarea .left img {
         width: 100%; }
     .bulletin_1 .maxContent .infoarea .right {
-      height: 450px;
       overflow-y: scroll;
       padding: 10px 20px; }
       .bulletin_1 .maxContent .infoarea .right .news {
@@ -414,6 +413,8 @@
           width: 65%; }
           .bulletin_1 .maxContent .infoarea .right .news .newcontent .date {
             display: block; }
+            .bulletin_1 .maxContent .infoarea .right .news .newcontent .date p {
+              margin: 6px 0; }
           .bulletin_1 .maxContent .infoarea .right .news .newcontent .btn {
             text-align: right;
             padding: 20px 0;

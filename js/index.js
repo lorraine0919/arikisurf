@@ -57,5 +57,11 @@ $(function(){
 		$('.forum_1 .selected').removeClass('selected');
 	});
 	/*以上是討論區動畫*/
+	/*以下是最新消息動畫*/
+	$('.bulletin_1 .news').click(function(){
+		var index = $(this).index();
+		$('.bulletin_1 .left img').attr('src',$(this).children('.newsimg img').attr('src'));
+	});
+	/*以上是最新消息動畫*/
 
 });//我是結尾

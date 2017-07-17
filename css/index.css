@@ -283,6 +283,8 @@
   .forum_1 .contentMax {
     border-bottom: 1px solid #fff;
     padding: 0 0 20vh 0; }
+  .forum_1 .postgroup a {
+    color: #fff; }
   .forum_1 .postgroup .postfix:nth-child(1) .post .head {
     background-image: url("../images/1common/1Pipeline.jpg");
     background-size: cover;
@@ -390,17 +392,26 @@
   .bulletin_1 .maxContent .title {
     margin: 20px 0; }
   .bulletin_1 .maxContent .infoarea {
-    padding: 20px;
+    padding: 30px;
     background-image: url("../images/1common/bulletinbg.png"); }
     .bulletin_1 .maxContent .infoarea .left {
-      text-align: center; }
-      .bulletin_1 .maxContent .infoarea .left img {
-        width: 100%; }
+      text-align: center;
+      position: relative;
+      padding-top: 30%; }
+      .bulletin_1 .maxContent .infoarea .left .leftfix {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 500px;
+        width: 100%;
+        overflow: hidden; }
+        .bulletin_1 .maxContent .infoarea .left .leftfix img {
+          width: 100%; }
     .bulletin_1 .maxContent .infoarea .right {
-      height: 450px;
       overflow-y: scroll;
       padding: 10px 20px; }
       .bulletin_1 .maxContent .infoarea .right .news {
+        cursor: pointer;
         padding: 10px; }
         .bulletin_1 .maxContent .infoarea .right .news div {
           display: inline-block;
@@ -414,6 +425,8 @@
           width: 65%; }
           .bulletin_1 .maxContent .infoarea .right .news .newcontent .date {
             display: block; }
+            .bulletin_1 .maxContent .infoarea .right .news .newcontent .date p {
+              margin: 6px 0; }
           .bulletin_1 .maxContent .infoarea .right .news .newcontent .btn {
             text-align: right;
             padding: 20px 0;

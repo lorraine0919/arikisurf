@@ -375,6 +375,9 @@ $top:16vh;
 				padding: 0 0 20vh 0;
 			}
 			.postgroup{
+				a{
+					color: #fff;
+				}
 				$images:("1Pipeline","2SuperBank","3Jeffrey’s Bay","4Black Beach");	
 				@for $i from 1 through 4{
 					.postfix:nth-child(#{$i}) .post .head{
@@ -512,20 +515,30 @@ $top:16vh;
 					margin: 20px 0;
 				}
 				.infoarea{
-					padding: 20px;
+					padding: 30px;
 					background-image: url('../images/1common/bulletinbg.png');
 					@extend %bgnrpc;
 					.left{
 						text-align: center;
-						img{
+						position: relative;
+						padding-top: 30%;
+						.leftfix{
+							position: absolute;
+							top: 0;
+							left: 0;
+							height: 500px;
 							width: 100%;
+							overflow: hidden;
+							img{
+								width: 100%;
+							}							
 						}
 					}
 					.right{
-						height: 450px;
 						overflow-y: scroll;
 						padding: 10px 20px;
 					.news{
+							cursor: pointer;
 							padding: 10px;
 							div{
 								display: inline-block;
@@ -543,6 +556,7 @@ $top:16vh;
 								.date{
 									display: block;
 									p{
+										margin: 6px 0;
 										span{
 											@extend %orangetitle;
 										}

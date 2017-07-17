@@ -113,6 +113,9 @@
     width: 100%;
     height: auto; }
 
+  .small_board img {
+    display: none; }
+
   section#timeline {
     width: 80%;
     margin: 20px auto;
@@ -482,6 +485,9 @@
     color: rgba(255, 255, 255, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 0 7px #25303B; }
+
+  .small_board {
+    text-align: center; }
 
   section#timeline article div.inner span.date span {
     display: block;

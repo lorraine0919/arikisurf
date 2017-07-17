@@ -308,7 +308,7 @@
     border-radius: 10px; }
     .forum_1 .postgroup .post .head {
       background: #1a191c;
-      padding: 60% 0% 0% 0%;
+      padding: 37% 0% 0% 0%;
       border-radius: 10px 10px 0 0;
       min-height: 4.5em; }
       .forum_1 .postgroup .post .head .headword {
@@ -319,7 +319,7 @@
     .forum_1 .postgroup .post .head:hover {
       background-size: 200%; }
     .forum_1 .postgroup .post .content {
-      text-align: center; }
+      text-align: left; }
       .forum_1 .postgroup .post .content .word {
         transition: 1s;
         color: #1a191c;
@@ -335,9 +335,11 @@
         display: inline-block;
         vertical-align: middle; }
       .forum_1 .postgroup .post .content .postcontentgroup {
-        padding: 20px; }
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box; }
         .forum_1 .postgroup .post .content .postcontentgroup .mempic {
-          width: 20%;
+          width: 4vw;
           box-sizing: border-box;
           display: inline-block;
           vertical-align: middle; }
@@ -345,7 +347,7 @@
             width: 100%;
             border-radius: 50%; }
         .forum_1 .postgroup .post .content .postcontentgroup .postcontent {
-          width: 70%;
+          width: 78%;
           padding: 5px;
           text-align: left;
           display: inline-block;

@@ -4,12 +4,12 @@ $F2:16px;
   content: '';
   display: block;
   clear: both;
-} 
+}
 img{width: 100%;} 
 /*左邊*/
 .left20{
     .base20{
-      color:#fff;
+      color:#888;
       background-color: #fff;
       .hello20{font-size: 25px;}
       .photo20{background-color:#57b;}
@@ -40,46 +40,29 @@ img{width: 100%;}
       }
     }
 }/*left20*/
+.sidebar20 li a:hover{
+  color: #5cf;
+  background-color: #fff;
+}
 /*右邊*/
 .right20{
   color:#666;
-  .personal20,.changepsw20{margin:auto;}
-  .title20{
-    padding: 2%;
-    border-bottom:1px solid #ccc;
-    text-align: center;
-    letter-spacing: 12px;
-    font-size: $F2;
-    font-weight: bold;
-  }
-  .row20{
-    padding: 2% 8%;
-    .span20,.input20,.account20,.select20,.gender20{
-      display: inline-block;
-      height: 2em;
-      line-height: 2em;
-    }
-    .span20{
-      width: 37%;
+  /*若有標題，可於HTML加入title20為class名稱即可採用樣式*/
+    .title20{
+      padding: 2%;
+      border-bottom:1px solid #ccc;
       text-align: center;
+      letter-spacing: 12px;
+      font-size: $F2;
+      font-weight: bold;
     }
+  /*input，可於HTML加入input20為class名稱即可採用此樣式*/
     .input20{
       width: 57%;
       border-radius: 6px;
     }
     .input20:focus{background-color:#ffa; }
-    .input20,.account20,.select20,.radio20,.gender20{
-      margin-left: 4px;
-    }
-    .account20,.select20{width: 28%;}
-    .radio20,.gender20{width: 12%;}
-  }
-  /*送出按鈕*/
-  .send20{
-    display: block;
-    width: 224px;
-    margin: 5vh auto 15vh auto;
-    text-align: center;
+   /*送出按鈕，可於HTML加入input20為class名稱即可採用此樣式*/
     .submit20{
       width: 100px;
       padding: 1% 0%;
@@ -91,11 +74,6 @@ img{width: 100%;}
       border-radius: 7px;
       background-color: orange;
     }
-  }
-}
-.sidebar20 li a:hover{
-  color: #5cf;
-  background-color: #fff;
 }
 .send20 .submit20:hover{
   box-shadow:
@@ -135,11 +113,11 @@ img{width: 100%;}
       padding:4% 0%;
       letter-spacing: 2.5px;
     }
+  }/*left20*/
+  .move20{
+    position: absolute;
+    top:0;
   }
-    .move20{
-      position: absolute;
-      top:0;
-    }
   /*右邊*/
   .right20{
     position: absolute;
@@ -147,16 +125,8 @@ img{width: 100%;}
     left: calc(10% + 20%);
     width: 50%;
     padding: 0% 4%;
-    .personal20,.changepsw20{
-      padding: 3% 0%;
-      font-size: $F2;
-    }
     .title20{margin-bottom: 5%;}
-    .row20{
-      padding: 2% 14%;
-      .span20{margin-right: -2vw;}
     }
-  }
 }
 @media screen and (max-width:767px){
   /*左邊*/
@@ -183,15 +153,10 @@ img{width: 100%;}
   /*右邊*/
   .right20{
     padding: 6% 0% 6% 0%;
-    .personal20,.changepsw20{
-      padding: 3% 0%;
-      font-size: 14px;
       .title20{
         width: 80%;
         margin: auto;
         margin-bottom: 8%;
       }
-      .row20{padding: 3% 14%;}
-    }
-  }/*right20*/
+    }/*right20*/
 }

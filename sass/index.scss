@@ -375,6 +375,9 @@ $top:16vh;
 				padding: 0 0 20vh 0;
 			}
 			.postgroup{
+				a{
+					color: #fff;
+				}
 				$images:("1Pipeline","2SuperBank","3Jeffrey’s Bay","4Black Beach");	
 				@for $i from 1 through 4{
 					.postfix:nth-child(#{$i}) .post .head{

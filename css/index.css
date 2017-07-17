@@ -283,6 +283,8 @@
   .forum_1 .contentMax {
     border-bottom: 1px solid #fff;
     padding: 0 0 20vh 0; }
+  .forum_1 .postgroup a {
+    color: #fff; }
   .forum_1 .postgroup .postfix:nth-child(1) .post .head {
     background-image: url("../images/1common/1Pipeline.jpg");
     background-size: cover;

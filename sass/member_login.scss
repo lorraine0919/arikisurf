@@ -6,7 +6,7 @@
   position: fixed;
   top: 0; 
   left: 0; 
-  background: linear-gradient(hsla(0, 0%, 86%, 0.7),hsla(206, 57%, 50%, 0.6));
+  background: linear-gradient(hsla(0, 0%, 86%, 0.3),hsla(206, 57%, 50%, 0.4));
 }
 /*主區塊*/
 .main19{
@@ -24,7 +24,6 @@
 .slogan19{
   padding-top: 1vh;
   padding-bottom:5vh;
-  font-size: 15px;
   color: #fa0;
 }
 .login19 .input19{
@@ -58,6 +57,7 @@
     width: 80%;
     padding: 5vh 0vh;
   }
+  .slogan19{font-size: 15px;}
   .login19 .input19{
     width: 60%;
     max-width: 210px;
@@ -70,6 +70,7 @@
     width: 40%;
     padding: 7vh 0vh;
   }
+  .slogan19{font-size: 18px;}
   .login19 .input19{
     width: 55%;
     max-width: 220px;

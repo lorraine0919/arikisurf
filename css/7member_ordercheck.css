@@ -1,0 +1,58 @@
+.clearfix {
+  clear: both; }
+
+@media screen and (min-width: 768px) {
+  .member_ordercheck_23 {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto; }
+    .member_ordercheck_23 a {
+      text-decoration: none;
+      color: black; }
+    .member_ordercheck_23 .ordercheck-list ul li {
+      width: 20%;
+      text-align: center;
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 10px;
+      position: relative; }
+      .member_ordercheck_23 .ordercheck-list ul li:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #eee;
+        transform: scaleY(1.3) perspective(0.5em) rotateX(5deg);
+        transform-origin: bottom; }
+    .member_ordercheck_23 .ordercheck-list ul .change-color1:after {
+      content: '';
+      background-color: #ddd; }
+    .member_ordercheck_23 .ordercheck-list ul .change-color2:after {
+      content: '';
+      background-color: #ddd; }
+    .member_ordercheck_23 .ordercheck-list ul li:nth-child(1):after {
+      background-color: #ddd; }
+    .member_ordercheck_23 .orderInfo-customize {
+      width: 100%;
+      background-color: #ddd;
+      box-sizing: border-box;
+      padding: 3%; }
+      .member_ordercheck_23 .orderInfo-customize .orderInfo-CZ-title {
+        background-color: #ccc; }
+        .member_ordercheck_23 .orderInfo-customize .orderInfo-CZ-title ul li:nth-child(5) {
+          text-align: center; }
+      .member_ordercheck_23 .orderInfo-customize .orderInfo-CZ-txt {
+        margin: 3% 0; }
+        .member_ordercheck_23 .orderInfo-customize .orderInfo-CZ-txt ul li {
+          width: 40%;
+          display: inline-block;
+          text-align: center; }
+        .member_ordercheck_23 .orderInfo-customize .orderInfo-CZ-txt ul li:first-child {
+          margin-left: 10%; }
+        .member_ordercheck_23 .orderInfo-customize .orderInfo-CZ-txt ul .btn-item {
+          background-color: #ccc;
+          box-sizing: border-box;
+          padding: 5px; } }

@@ -160,6 +160,7 @@
 						margin: 20px 0;
 					}
 					.colorgroup{
+							color: #fff;
 						.colorall{
 							margin: 10px 0;
 							width: 34%;
@@ -240,13 +241,25 @@
 					}
 					.texturegroup{
 						.texturecontent{
-							width: 34%;
+							.title{
+								color: #fff;
+								background-color: rgba(255, 130, 0, 0.1);
+								padding: 5px;
+								text-align: center;
+							}
+							margin: 10px 0;
+							width: 40%;
 							float: right;
 							background-color: rgba(0,0,0,0.2);
+							padding: 2px;
 							.alltexture{
+								text-align: center;
 								.texture{
 									display: inline-block;
 									width: 30%;
+									&.selected{
+										outline: 2px solid #e97b23;
+									}
 									img{
 										width: 100%;
 									}
@@ -255,6 +268,56 @@
 						}
 					}
 				}
+				.rwdintroduce{
+					display: block;
+					position: absolute;
+					width: 45%;
+					background-color: rgba(0,0,0,0.6);
+					color: #fff;
+					padding:23px 10px;
+					top: 37%;
+    				left: -51%;
+					z-index: 6;
+					transition:1s;
+					.rwdintroducefix{
+						position: relative;
+						.btnfield{
+							width: 5%;
+							position: absolute;
+							top: -23px;
+   							right: -59px;
+							background-color: #fff;
+							color: #555;
+							padding: 37px 20px 10px 20px;
+							text-align: right;
+							font-weight: bold;
+							box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+						}
+						i{
+							font-size: 23px;
+							position: absolute;
+							right: 11px;
+    						top: 11px;
+    						color: #999;
+   							// text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+						}
+						#rwdHideInfoBtn{
+							display: none;
+						}
+					}
+					&.show{
+						transition:1s;
+						left: 0%;
+						#rwdHideInfoBtn{
+							display: block;
+						}
+						#rwdShowInfoBtn{
+							display: none;
+						}
+					}
+					
+				}
+
 			}
 			.selectAndNextfix{
 				display: none;

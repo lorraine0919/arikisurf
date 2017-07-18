@@ -176,6 +176,12 @@
             width: 40px; }
         .cart-body_28 .cart1-pc_28 .list-group_28 .list-Pchange_28 {
           padding-top: 2%; }
+          .cart-body_28 .cart1-pc_28 .list-group_28 .list-Pchange_28 .btn-item {
+            width: 90%;
+            height: 36px;
+            line-height: 36px;
+            background-color: #ccc;
+            text-align: center; }
           .cart-body_28 .cart1-pc_28 .list-group_28 .list-Pchange_28 .Pchange-changebtn {
             margin: 0 auto;
             margin-bottom: 3%; }

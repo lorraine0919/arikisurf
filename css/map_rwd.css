@@ -1,0 +1,16 @@
+@media screen and (max-width: 767px) {
+  .map_bamboo_3 .map_bamboo_menu {
+    width: 35%; }
+    .map_bamboo_3 .map_bamboo_menu .bamboo_address {
+      display: none; }
+      .map_bamboo_3 .map_bamboo_menu .bamboo_address .pipeline {
+        display: none; }
+    .map_bamboo_3 .map_bamboo_menu ul .mobile {
+      width: 100%;
+      display: block; }
+      .map_bamboo_3 .map_bamboo_menu ul .mobile h3 {
+        font-size: 16px; }
+
+  .map_bamboo_2 .map_bamboo_1 {
+    width: 400%;
+    padding-top: 320%; } }

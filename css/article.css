@@ -51,7 +51,6 @@
   .article_item_content {
     line-height: 2;
     padding: 30px;
-    border: 1px solid #444;
     background-color: rgba(29, 77, 102, 0.9);
     color: #fff;
     font-size: 18px; }
@@ -100,9 +99,9 @@
   .article_item_title {
     font-size: 28px;
     padding: 20px;
-    background-color: #1D4D66;
+    background-color: rgba(29, 77, 102, 0.1);
     color: #fff;
-    border-bottom: 2px solid #ED8C00; }
+    border-bottom: 1px solid #ED8C00; }
     .article_item_title p {
       font-size: 16px;
       padding: 10px 0px; }
@@ -117,8 +116,7 @@
   .article_item_content {
     line-height: 2;
     padding: 30px;
-    border: 1px solid #444;
-    background-color: rgba(29, 77, 102, 0.9);
+    background-color: rgba(29, 77, 102, 0.1);
     color: #fff;
     font-size: 18px; }
 

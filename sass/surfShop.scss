@@ -32,19 +32,26 @@
 			clear: both;
 		}
 		.showProd{
-			padding: 8% 0;
+			
 			background:linear-gradient(180deg, rgba(25, 52, 76, 1)35%, rgba(85, 70, 76, 0.8)100%);
-			.showProd_bg{
-				background-image: url('../images/1common/picselectbg.png');
+			.showProd_bg_up{
+				padding: 5% 0;
+				background-image: url('../images/3accessories/picselectbg.png');
 				background-repeat: no-repeat;
-				background-position: 60% 30%;
-				.prodTitle{
-					min-height: 150px;
-                   h1,p{
-                   	color: rgba(255,255,255,.8);
-                   }
-				}
-			}
+				background-position: 45% 50%;
+				.showProd_bg{
+					.showProd_txt{
+						padding-top: 160px;
+						.prodTitle{
+					      min-height: 150px;
+                            h1,p{
+                   	         color: rgba(255,255,255,.8);
+                                }
+				              }
+					        }
+				   }
+				
+			  }
 			.photoSelect{
 					    
 					 @keyframes fadeIn{
@@ -97,7 +104,28 @@
 
 					}
 				}
+				.pic_man{
+					padding:2%;
+					animation: man 1s infinite alternate;
+					background-repeat: no-repeat;
+					img{
+						width: 100%;
+					}
+				}
+				@keyframes man{
+			     0%{background-image: url("../images/3accessories/1.png");}
+			     10%{background-image: url("../images/3accessories/2.png");}
+			     20%{background-image: url("../images/3accessories/3.png");}
+			     30%{background-image: url("../images/3accessories/4.png");}
+			     40%{background-image: url("../images/3accessories/5.png");}
+			     60%{background-image: url("../images/3accessories/6.png");}
+			     80%{background-image: url("../images/3accessories/7.png");}
+			     90%{background-image: url("../images/3accessories/8.png");}
+			     100%{background-image: url("../images/3accessories/9.png");}
+			    }
 		}
+
+		
 		.main_BG{
 			padding-top: 33px;
 			background-image: url("../images/3accessories/哈庫那馬他他.png"),
@@ -354,6 +382,17 @@
 		}
 		//----lightboxend----
 		@media screen and (max-width:767px) {
+			.showProd{
+		        .showProd_bg_up{
+		               .showProd_bg{
+							.showProd_txt{
+								padding-top: 10px;
+							  }
+						    }
+					      }
+			  }
+
+
 			.container{
 			max-width: 1170px;
 

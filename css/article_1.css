@@ -51,7 +51,6 @@
   .article_item_content {
     line-height: 2;
     padding: 30px;
-    border: 1px solid #444;
     background-color: rgba(29, 77, 102, 0.9);
     color: #fff;
     font-size: 18px; }
@@ -124,8 +123,7 @@
   .article_item_content {
     line-height: 2;
     padding: 30px;
-    border: 1px solid #444;
-    background-color: rgba(29, 77, 102, 0.9);
+    background-color: rgba(29, 77, 102, 0.1);
     color: #fff;
     font-size: 18px; }
 

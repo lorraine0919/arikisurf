@@ -22,16 +22,18 @@
   clear: both; }
 
 .showProd {
-  padding: 8% 0;
   background: linear-gradient(180deg, #19344c 35%, rgba(85, 70, 76, 0.8) 100%); }
-  .showProd .showProd_bg {
-    background-image: url("../images/1common/picselectbg.png");
+  .showProd .showProd_bg_up {
+    padding: 5% 0;
+    background-image: url("../images/3accessories/picselectbg.png");
     background-repeat: no-repeat;
-    background-position: 60% 30%; }
-    .showProd .showProd_bg .prodTitle {
-      min-height: 150px; }
-      .showProd .showProd_bg .prodTitle h1, .showProd .showProd_bg .prodTitle p {
-        color: rgba(255, 255, 255, 0.8); }
+    background-position: 45% 50%; }
+    .showProd .showProd_bg_up .showProd_bg .showProd_txt {
+      padding-top: 160px; }
+      .showProd .showProd_bg_up .showProd_bg .showProd_txt .prodTitle {
+        min-height: 150px; }
+        .showProd .showProd_bg_up .showProd_bg .showProd_txt .prodTitle h1, .showProd .showProd_bg_up .showProd_bg .showProd_txt .prodTitle p {
+          color: rgba(255, 255, 255, 0.8); }
 @keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -69,7 +71,31 @@
     margin: auto;
     background-size: contain;
     z-index: 2; }
-
+  .showProd .pic_man {
+    padding: 2%;
+    animation: man 1s infinite alternate;
+    background-repeat: no-repeat; }
+    .showProd .pic_man img {
+      width: 100%; }
+@keyframes man {
+  0% {
+    background-image: url("../images/3accessories/1.png"); }
+  10% {
+    background-image: url("../images/3accessories/2.png"); }
+  20% {
+    background-image: url("../images/3accessories/3.png"); }
+  30% {
+    background-image: url("../images/3accessories/4.png"); }
+  40% {
+    background-image: url("../images/3accessories/5.png"); }
+  60% {
+    background-image: url("../images/3accessories/6.png"); }
+  80% {
+    background-image: url("../images/3accessories/7.png"); }
+  90% {
+    background-image: url("../images/3accessories/8.png"); }
+  100% {
+    background-image: url("../images/3accessories/9.png"); } }
 .main_BG {
   padding-top: 33px;
   background-image: url("../images/3accessories/哈庫那馬他他.png"), linear-gradient(180deg, #19344c 35%, rgba(85, 70, 76, 0.8) 100%);
@@ -230,6 +256,9 @@
   top: 0px; }
 
 @media screen and (max-width: 767px) {
+  .showProd .showProd_bg_up .showProd_bg .showProd_txt {
+    padding-top: 10px; }
+
   .container {
     max-width: 1170px; }
     .container .row2:after {

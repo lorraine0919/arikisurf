@@ -66,8 +66,8 @@
 	width:250px; 
 	position:absolute;
 	z-index:2;
-	top:-1%;
-	left:110%;
+    top: 12vh;
+    left: 20%;
 	display: inline-block;
 	border-radius:10px;
 	border:5px solid rgba(255,255,255,0.3);
@@ -79,7 +79,9 @@
 	padding:10px;
 	background-image: url(../);
 	// transition:1.5s cubic-bezier(.68,.05,.22,.75); 
-		
+		.fa{
+			display: none;
+		}
 		.pipeline{
 			width: 100%;
 		}
@@ -146,7 +148,7 @@
 .po{
 	width: 50px;
 	height: 50px;
-	border: 2px solid #f00;
+	// border: 2px solid #f00; /*我是定位用der*/
 	position: absolute;
 	}
 

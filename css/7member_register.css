@@ -5,82 +5,69 @@
   display: block;
   clear: both; }
 
-.register26 .topbar26 {
-  line-height: 1.5em;
-  margin: auto;
-  text-align: center; }
-
-.topbar26 .step26 {
-  float: left;
-  width: calc(33.333% - 4px);
-  border: 2px solid #043f4c;
-  color: #fff;
-  background-color: #043f4c; }
-
 .register26 {
-  background-color: #23754c; }
+  background-color: rgba(200, 202, 250, 0.4); }
 
-.register26 .setdown26 {
-  margin: auto;
-  background-color: rgba(255, 255, 255, 0.9); }
-
-.setdown26 .subject26 {
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.9); }
-
-.item26 .span26 {
-  display: inline-block;
-  width: 15vw;
-  min-width: 100px;
-  text-align: left; }
-
-.item26 .input26 {
-  width: 30vw;
-  min-width: 180px; }
-
-.item26 .notice26 {
-  font-size: 15px;
-  color: #12314c; }
-
-.item26 .read26 {
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.9); }
-
-.item26 .check26 {
-  width: 8vw; }
-
-.item26 .submit26 {
-  width: 10vw;
-  min-width: 75px;
-  float: right;
-  text-align: center;
-  border: none;
-  border-radius: 8px;
-  background-color: #8af; }
+.setdown26 {
+  margin: auto; }
+  .setdown26 .subject26 {
+    text-align: center;
+    letter-spacing: 8px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(255, 125, 255, 0.9); }
+  .setdown26 .detail26 {
+    background-color: rgba(255, 155, 133, 0.9); }
+    .setdown26 .detail26 .item26 {
+      text-align: center;
+      background-color: #ffa; }
+      .setdown26 .detail26 .item26 .span26 {
+        display: inline-block;
+        line-height: 3em;
+        width: 15vw;
+        min-width: 100px;
+        text-align: left;
+        background-color: #9f5; }
+      .setdown26 .detail26 .item26 .input26 {
+        width: 30vw;
+        height: 3em;
+        min-width: 180px;
+        border: none; }
+      .setdown26 .detail26 .item26 .notice26 {
+        font-size: 15px;
+        color: #12314c; }
+      .setdown26 .detail26 .item26 .read26 {
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.9); }
+      .setdown26 .detail26 .item26 .check26 {
+        width: 150px; }
+      .setdown26 .detail26 .item26 .number26 {
+        width: 120px;
+        height: 40px; }
+      .setdown26 .detail26 .item26 .submit26 {
+        display: inline-block;
+        min-width: 110px;
+        margin: auto;
+        text-align: center;
+        border: none;
+        border-radius: 8px;
+        background-color: #8af; }
 
 @media screen and (max-width: 767px) {
   .register26 {
     padding: 4% 0%; }
 
-  .register26 .topbar26 {
-    width: 85vw; }
-
-  .register26 .setdown26 {
+  .setdown26 {
     padding: 5%;
     width: calc(85vw - 10%); }
-
-  .detail26 .item26 {
-    padding: 2.5vw 10vw; } }
+    .setdown26 .detail26 .item26 {
+      padding: 2.5vw 10vw; } }
 @media screen and (min-width: 768px) {
   .register26 {
-    padding: 20vh 0vh 5vh 0vh; }
+    padding-bottom: 5%; }
 
-  .register26 .topbar26 {
-    width: 67vw; }
-
-  .register26 .setdown26 {
-    padding: 5%;
-    width: calc(67vw - 10%); }
-
-  .detail26 .item26 {
-    margin: 12px 5vw; } }
+  .setdown26 {
+    padding: 8%;
+    width: calc(70vw - 10%); }
+    .setdown26 .detail26 .item26 {
+      margin: 12px 5vw; } }

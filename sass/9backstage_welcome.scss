@@ -13,9 +13,7 @@ $F4:16px;
   background-color: #0e2334;
   h2{
     line-height: 4.5;
-
     font-size: 25px;
-    letter-spacing: 30px;
     font-weight: bold;
     color: white;
   }
@@ -78,7 +76,10 @@ $F4:16px;
   header,.main35,.title35{display: none;}
   .head35{
     text-align: center;
-    h2{display: inline-block;}
+    h2{
+      display: inline-block;
+      letter-spacing: 12px;
+    }
   }
   .content35{
     padding: 7vw;
@@ -117,6 +118,7 @@ $F4:16px;
   .head35{
     h2{
       margin-left: 12%;
+      letter-spacing: 20px;
     }
   }
   .content35{

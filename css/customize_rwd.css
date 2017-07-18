@@ -122,6 +122,10 @@
           float: right;
           margin: 0 0 0 -5%;
           text-align: center; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .btn.click {
+            background-color: #e97b23;
+            color: #12314c;
+            border: none; }
         .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .selectgroup {
           margin: 20px 0; }
         .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup {
@@ -185,7 +189,7 @@
             text-align: center; }
         .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent {
           margin: 10px 0;
-          width: 40%;
+          width: 30%;
           float: right;
           background-color: rgba(0, 0, 0, 0.2);
           padding: 2px; }
@@ -195,10 +199,12 @@
             padding: 5px;
             text-align: center; }
           .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent .alltexture {
+            padding: 10px 0;
             text-align: center; }
             .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent .alltexture .texture {
-              display: inline-block;
-              width: 30%; }
+              display: block;
+              width: 60%;
+              margin: auto; }
               .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent .alltexture .texture.selected {
                 outline: 2px solid #e97b23; }
               .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent .alltexture .texture img {
@@ -210,12 +216,18 @@
         background-color: rgba(0, 0, 0, 0.6);
         color: #fff;
         padding: 23px 10px;
-        top: 37%;
+        top: 12%;
         left: -51%;
         z-index: 6;
         transition: 1s; }
         .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce .rwdintroducefix {
           position: relative; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce .rwdintroducefix .texturetitle {
+            color: #e97b23;
+            padding: 5px 0px;
+            margin: 0 0 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            letter-spacing: 1px; }
           .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce .rwdintroducefix .btnfield {
             width: 5%;
             position: absolute;

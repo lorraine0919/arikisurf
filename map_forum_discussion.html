@@ -3,16 +3,13 @@
 <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Document</title>
-      <link rel="stylesheet" type="text/css" href="css/index.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <link rel="stylesheet" type="text/css" href="css/header.css">
       <link rel="stylesheet" type="text/css" href="css/footer.css">
       <link rel="stylesheet" type="text/css" href="css/grid.css">
   
       <script src="js/jquery.js"></script>
   <link rel="stylesheet" type="text/css" href="css/discussion.css">
-  <script src="js/showMap.js"></script>
   <title>Map</title>
 </head>
 <body>
@@ -31,17 +28,18 @@
                          </div>
                          <label class="hb" for="control">選單</label>
                          <ul class="menu">
+                             <li class="rwdlogo"><a href="index.html" class="rwd"><img src="images/1common/logo.png"></a></li>
                              <li><a href="customize.html">客製浪板</a></li>
                              <li><a href="surfshop.html">衝浪配備</a></li>
                              <li><a href="map.html">衝浪地圖</a></li>
-                             <li><a href="#">最新消息</a></li>
+                             <li><a href="news.html">最新消息</a></li>
                              <li><a href="about.html">關於酋長</a></li>
-                             <li><a href="#" class="rwd">會員專區</a></li>
+                             <li><a href="7member_update.html" class="rwd">會員專區</a></li>
                              <li><a href="cart.html" class="rwd">購物車</a></li>
                          </ul>
                          <div class="iconGroup">
                              <ul>
-                                 <li><a href=""><img src="images/1common/member.png" alt="">會員專區</a></li>
+                                 <li><a href="7member.html"><img src="images/1common/member.png" alt="">會員專區</a></li>
                                  <li class="line"></li>
                                  <li><a href="cart.html"><img src="images/1common/shop.png" alt="">購物車</a></li>
                              </ul>
@@ -58,39 +56,30 @@
 
      <div id="lightbox_11">
           <div class="gun">
-               <span class="reason">檢舉原因</span> 
-               <input type="text" class="report">
-               <div class="io">
-                    <input type="submit" value="送出" id="submit">
-                    <input type="button" value="取消" id="cancel">
-               </div>
+               檢舉原因 <input type="text">
+               <input type="submit" value="送出" id="submit">
+               <input type="button" value="取消" id="cancel">  
                <div id="close">X</div>
           </div>            
      </div><!-- lightbox_11 -->
 
-     <div class="bg_11">
-      <ul class="bread_11">
-          <li><a href="index.html">首頁</a></li>
-          <li>/</li>
-          <li><a href="map.html">衝浪地圖</a></li>
-          <li>/</li>
-          <li><a href="map_forum.html">討論區</a></li>
-          <li>/</li>
-          <li>文章內容</li>
-      </ul><!-- bread_11 --> 
-
-      <div class="title">
-          <h1>我是討論區標題</h1>
-          <div class="quit">檢舉</div>
-          <div id="share" >分享</div>
-          <div id="love">收藏</div>
-          <div class="star">★★★★★</div>
-      </div><!-- title -->
+     <div class="bg_11">    
+       	<ul class="bread_11">
+       		<li><a href="map.html">衝浪地圖</a> ></li>
+       		<li><a href="map_forum.html">討論區</a> ></li>
+       		<li>文章內容</li>
+       	</ul><!-- bread_11 -->
 
      	<div class="main_11">
+        <h1>
+          我是討論區標題
+          <span id="share" >分享</span><span class="quit">檢舉</span><span id="love">收藏</span>
+          <span class="star">★★★★★</span>
+        </h1>
+
         <div class="content-l">
           <div class="icon">
-               <img src="images/4wavepoint/user/user.jpg">
+               <img src="../images/4wavepoint/user/user.jpg">
           </div>
           <div class="user">會員A</div>
           <div class="time">發表時間 2017:08/18</div>
@@ -98,35 +87,31 @@
 
         <div class="content-r">
                  <div class="pic">
-                       <img src="images/4wavepoint/fou/1.jpg">
+                       <img src="https://api.fnkr.net/testimg/550x350/00CED1/FFF/?text=img">
                  </div>
-                 <p>如有拍片和派對需求請提前告知喲｡ 如發現沒有提前告知可能會被扣除全部押金哦不能攜帶寵物､小動物入內｡</p>
-                 <p>上海的老弄堂和老洋房大多始建於上世紀三十年代,所以在居住過程中難免會碰到一些動物,概率比較小｡所以居住時一定要把食物放起來哦~~以防引來老鼠等動物｡用電時要小心哦,不要一次性使用太多電器設備,以免老房子電路過載而斷電｡如果發生此現象請立即與我們聯繫,我們會第一時間為您維修｡冬天不要同時使用暖氣和空調,只要有暖氣就可以非常溫暖咯｡</p>
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quidem, vitae? Quas odit alias modi maiores quam amet explicabo in placeat dolores ut nulla eum ab sequi, quod tempore atque eligendi quasi. Consectetur ullam, quo! Mollitia, inventore. Vel tenetur, aut deserunt nulla voluptatem vero doloremque voluptatum cum repellendus quo ad at, cumque similique! 
+                 Nisi ut odio dolores quidem, repellendus quas, laborum itaque unde libero amet atque magni repudiandae pariatur quod doloribus dignissimos necessitatibus aliquid voluptatum, exercitationem 
         </div><!-- content-r -->
+
       </div><!-- main_11 -->
       <div class="feedback_11">
            <div class="top">
                <div class="icon">
-                    <img src="images/4wavepoint/user/user.jpg">
+                    <img src="../images/4wavepoint/user/user.jpg">
                </div>
                <div class="user">
                  <p>會員B</p>
                  發表時間 <span class="time">2017:08/18</span>
                </div><!-- user --> 
-               <!-- <div class="quit">檢舉</div> -->
-               <div class="quit">
-                 <p>檢舉</p>
-               </div><!-- user --> 
+               <div class="quit">檢舉</div>
            </div><!-- top -->
            <div class="text">
              <p>感謝大大分享!</p>
            </div>
       </div><!-- feedback_11 -->
-
       <div class="back_11">
-           <textarea name="" id="textarea" cols="30" rows="10" placeholder="想說的話"></textarea>
+           <textarea name="" id="" cols="30" rows="10" placeholder="想說的話"></textarea>
       </div><!-- back_11 -->
-      
       <div class="send">
           <input type="reset" value="清除" id="rest">
           <input type="submit" value="送出" id="submit">

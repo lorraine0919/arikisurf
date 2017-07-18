@@ -8,32 +8,36 @@
 	});
 	
 	$('.222').click(function(){
-		$('.1111').fadeOut(0);
-		$('.2222').fadeIn(500);
+		$('.main_BG').fadeIn(0);
+		$('.2222').fadeIn(300);
 		$('.3333').fadeOut(0);
 		$('.4444').fadeOut(0);
 		$('.5555').fadeOut(0);
+		$('.showProd').fadeOut(0);
 	});
 	$('.333').click(function(){
-		$('.1111').fadeOut(0);
+		$('.main_BG').fadeIn(0);
 		$('.2222').fadeOut(0);
-		$('.3333').fadeIn(500);
+		$('.3333').fadeIn(300);
 		$('.4444').fadeOut(0);
 		$('.5555').fadeOut(0);
+		$('.showProd').fadeOut(0);
 	});
 	$('.444').click(function(){
-		$('.1111').fadeOut(0);
+		$('.main_BG').fadeIn(0);
 		$('.2222').fadeOut(0);
 		$('.3333').fadeOut(0);
-		$('.4444').fadeIn(500);
+		$('.4444').fadeIn(300);
 		$('.5555').fadeOut(0);
+		$('.showProd').fadeOut(0);
 	});
 	$('.555').click(function(){
-		$('.1111').fadeOut(0);
+		$('.main_BG').fadeIn(0);
 		$('.2222').fadeOut(0);
 		$('.3333').fadeOut(0);
 		$('.4444').fadeOut(0);
-		$('.5555').fadeIn(500);
+		$('.5555').fadeIn(300);
+		$('.showProd').fadeOut(0);
 	});
 
 

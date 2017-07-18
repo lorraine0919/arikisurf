@@ -17,7 +17,7 @@
 @media screen and (max-width:767px){
 
 .bg_17{
- background-image: url("../images/4wavepoint/bg_f.jpg");
+ background-image: url("../images/6ariki/cc.png");
  background-repeat:no-repeat;
  background-size: contain; 
  background-color:#2A6C84;
@@ -75,6 +75,10 @@
       color:#fff;
   } 
 
+  .about_img img{
+    width: 100%;
+  }
+
   .about_rightSide_17{
     p{
      margin:20px;
@@ -111,6 +115,10 @@
     background-repeat: no-repeat;
     padding-top:5%;
     padding-bottom:8%;
+  }
+
+  .business_img img{
+    width: 100%;
   }
 
   .business_rightSide_17{
@@ -350,7 +358,7 @@ section#timeline article:nth-child(5) div.inner h2:after {
 
   
  .bg_17{
- background-image: url("../images/4wavepoint/bg_f.jpg");
+ background-image: url("../images/6ariki/cc.png");
  background-repeat:no-repeat;
  background-size: contain; 
  height: auto;
@@ -401,8 +409,8 @@ section#timeline article:nth-child(5) div.inner h2:after {
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
-    padding-top:5%;
-    padding-bottom:8%;
+    padding-top:8%;
+    padding-bottom:14%;
     margin-top: 5%;
   }
 
@@ -457,8 +465,9 @@ section#timeline article:nth-child(5) div.inner h2:after {
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
-    padding-top:5%;
-    padding-bottom:8%;
+    padding-top:8%;
+    padding-bottom:13%;
+    
   }
 
  .business_1170{
@@ -508,8 +517,8 @@ section#timeline article:nth-child(5) div.inner h2:after {
 
   .winning_record_title{
     text-align: center;
-    margin-top: 3vh;
-    margin-bottom: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 6vh;
     color:#fff;
   }
 
@@ -655,7 +664,7 @@ section#timeline article:nth-child(5) div.inner h2:after {
 
 
   .global_bg{
-    background-image:url("../images/6ariki/global_bg.png");
+    background-image:url("../images/6ariki/global_bg2.png");
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -670,7 +679,7 @@ section#timeline article:nth-child(5) div.inner h2:after {
 
   .global_base_title{
     text-align: center;
-    margin-top: 12vh;
+    margin-top: 5vh;
     margin-bottom: 5vh;
     color:#fff;
   }
@@ -733,10 +742,6 @@ section#timeline article:nth-child(5) div.inner h2:after {
     height: 500px;
   }
   
-    
-   
-
-
 
 
 }/*桌機結束*/

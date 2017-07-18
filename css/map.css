@@ -1,107 +1,91 @@
-a {
-  text-decoration: none;
-  color: #000; }
-  a:visited {
-    color: #000; }
+.map_bamboo_3 {
+  max-width: 1170px;
+  margin: auto;
+  position: relative; }
+  .map_bamboo_3 .mobile {
+    cursor: pointer;
+    padding: 10px 0 0 0; }
+    .map_bamboo_3 .mobile.click {
+      background-color: #e97b23; }
 
-.map_9 {
+.map_bamboo_2 {
   width: 100%;
   height: 100vh;
-  background-color: #0f4267; }
-  .map_9 .center_9 {
-    width: 100%;
-    margin: 0 auto;
-    position: reletive;
+  overflow: hidden; }
+  .map_bamboo_2 .map_bamboo_1 {
+    background-image: url("../images/4wavepoint/map-1.png");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: cover; }
-    .map_9 .center_9 img {
-      width: 100%;
-      height: auto; }
-    .map_9 .center_9 .point_9 {
-      width: 20px;
-      height: 20px;
-      background-color: pink;
-      border-radius: 50%;
-      position: absolute;
-      cursor: pointer; }
-    .map_9 .center_9 .point_9:after {
-      content: '';
-      background-color: rgba(255, 0, 0, 0.5);
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: -5px;
-      margin: auto;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%; }
-@keyframes shine {
-  0%,100% {
-    background-color: rgba(255, 0, 0, 0.6); }
-  50% {
-    background-color: rgba(255, 0, 0, 0.1); } }
-    .map_9 .center_9 .point1 {
-      top: 40vh;
-      left: 60vw; }
-    .map_9 .center_9 .point2 {
-      top: 80vh;
-      left: 66vw; }
-    .map_9 .center_9 .show {
-      width: 18%;
-      height: 40vh;
-      position: absolute;
-      top: 26vh;
-      margin-left: 1vw;
-      display: none; }
-      .map_9 .center_9 .show .pic {
-        width: 100%; }
-        .map_9 .center_9 .show .pic img {
-          width: 100%;
-          vertical-align: top; }
-      .map_9 .center_9 .show .intro {
-        width: 100%;
-        height: 300px;
-        background-color: rgba(255, 255, 255, 0.5);
-        box-sizing: border-box;
-        padding: 1em;
-        position: reletive; }
-        .map_9 .center_9 .show .intro .text h1 {
-          padding: .2em 0; }
-        .map_9 .center_9 .show .intro .enter {
-          text-align: center;
-          height: 3vh;
-          margin: 50px auto 0;
-          line-height: 3vh;
-          background-color: #1B334B;
-          padding: 1em 0;
-          transition: .5s; }
-          .map_9 .center_9 .show .intro .enter:hover {
-            background-color: #ED8C00; }
-          .map_9 .center_9 .show .intro .enter a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            font-size: 25px;
-            color: #fff; }
-
-@media screen and (max-width: 767px) {
-  .map_9 {
+    transform: scale(1.5);
+    background-position: center;
     position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0 auto; }
-    .map_9 .center_9 {
-      background-image: none;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      height: 100%;
-      width: auto;
-      transform: translate(-50%, -50%); }
-      .map_9 .center_9 img {
-        width: auto;
-        height: auto; }
-      .map_9 .center_9 .show {
-        display: ''; } }
+    width: 200%;
+    padding-top: 132%;
+    transition: 1.5s cubic-bezier(0.68, 0.05, 0.22, 0.75); }
+
+.map_bamboo {
+  background-color: #11314c; }
+
+.map_bamboo_menu {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-top: 12vh;
+  margin-left: 9vh;
+  border-radius: 10px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: -3px -3px 15px rgba(157, 228, 255, 0.7), 3px 3px 15px #103046 inset;
+  text-shadow: 1px 1px 3px #103046;
+  width: 18%; }
+
+.bamboo_line {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 1px;
+  margin: 5% 5% 0 5%; }
+
+.map_bamboo_menu ul li {
+  text-align: center;
+  color: #fff; }
+
+.po {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #f00;
+  position: absolute; }
+
+.p1 {
+  top: 16%;
+  left: 38%; }
+
+.p2 {
+  top: 30%;
+  left: 25%; }
+
+.p3 {
+  top: 53%;
+  left: 11%; }
+
+.p4 {
+  top: 46%;
+  left: 47%; }
+
+.p5 {
+  top: 42%;
+  left: 65%; }
+
+.p6 {
+  top: 32%;
+  left: 87%; }
+
+.p7 {
+  top: 52%;
+  left: 92%; }
+
+.p8 {
+  top: 26%;
+  left: 54%; }
+
+.p9 {
+  top: 11%;
+  left: 69%; }

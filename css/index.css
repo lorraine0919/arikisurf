@@ -131,6 +131,8 @@
         padding: 10px 33px;
         margin: 10px 0;
         position: relative; }
+        .coating_1 .about .aboutContent .word h4 {
+          margin: 5px 0; }
         .coating_1 .about .aboutContent .word p {
           font-size: 14px; }
         .coating_1 .about .aboutContent .word svg {

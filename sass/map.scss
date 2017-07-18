@@ -1,131 +1,158 @@
 @import "base/var";
 
-a{
-	text-decoration: none;
-	color:#000;
-	&:visited{
-		color:#000;
-	}
-}
-
-.map_9{
-	background-image:url("../images/4wavepoint/bg.jpg");
-	background-repeat: no-repeat; 
-	background-size: cover;
-	width:100%;
-	height: 100vh;
-	background-color: lightblue;
-	
- 
- .center_9{
- 	width: $navmaxwidth;
- 	height: 100vh;
- 	margin: 0 auto;
- 	position:reletive;
- 	background-image:url("../images/4wavepoint/map.png");
-	background-repeat: no-repeat; 
-	background-size: cover;
-
-	.point_9{
-	width: 20px;
-	height: 20px;
-	background-color: pink;
-	border-radius:50%;
-	position: absolute;
-	cursor:pointer;
-	}
-
-	.point_9:after{
-	content: '';
-	background-color: rgba(255,0,0,0.5);
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: -5px;
+.map_bamboo_3{
+	max-width: 1170px;
 	margin: auto;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	animation:shine 1.9s infinite;
+	position: relative;
+	.mobile{
+		cursor: pointer;
+		padding: 10px 0 0 0;
+		&.click{
+			background-color: #e97b23;
+		}
 	}
+}
 
-    @keyframes shine{
-	0%,100%{
-		background-color: rgba(255,0,0,0.6);
-	       }
-	50%{
-		background-color: rgba(255,0,0,0.1);
-	   }
+.map_bamboo_2{
+	width: 100%;
+	height: 100vh;
+	overflow:hidden;
+	.map_bamboo_1{
+		background-image: url("../images/4wavepoint/map-1.png");
+		// -webkit-background-size: 200%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform:scale(1.5);
+		background-position: center;
+		position:relative;
+		width:200%;
+		padding-top:132%; 
+		transition:1.5s cubic-bezier(.68,.05,.22,.75);
+		// img{
+		// 	width: 100%;
+		// }
 	}
-
-	.point1{
-		top:40vh;
-		left:60vw;
-	}
-
-	.point2{
-		top:80vh;
-		left:66vw;
-	}
-
-	.show{
-		width: 20%;
-		height: 40vh;
-		position: absolute;
-		top: 22vh;
-        margin-left: 1vw;
-        // display: none;	
-	    .pic{
-	    width: 100%;
-	        img{
-	        	width: 100%;
-                vertical-align: top;           
-	        }
-	    }
-
-	    .intro{
-	    	width: 100%;
-	    	height: 300px;
-	    	background-color:rgba(255,255,255,.5);
-	    	box-sizing: border-box;
-	    	padding: 1em;
-	    	position: reletive;
-            
-            .text{
-              h1{
-              	padding: .2em 0;
-              }
-
-              p{
-
-              }
-
-            }
-	    	.enter{
-	        text-align: center;
-	        height: 3vh;
-	        margin: 50px auto 0;
-	        line-height: 3vh;
-	        background-color: #999; 
-	        padding: 1em 0;
-
-	           a{
-	           	display: block;
-	           	width: 100%;
-	           	height: 100%;
-	           	font-size: 25px;
-	           	&:hover{
-	           	color:lightblue;
-	           	}
-	           }
-	    	}
-	    }
-
-	 }//show
-     
-  }
 }
 
 
 
+.map_bamboo{ 
+	// overflow-y:hidden;
+	background-color: #11314c;
+}
+
+.map_bamboo_menu{
+	position:absolute;
+	z-index:2;
+	background-color:rgba(0,0,0,0.3); 
+	display: inline-block;
+	margin-top:12vh;
+	margin-left:9vh;
+	border-radius:10px;
+	border:5px solid rgba(255,255,255,0.2);
+	box-shadow:(-3px -3px 15px rgba(157,228,255,0.7)),(3px 3px 15px #103046 inset);
+	text-shadow:1px 1px 3px #103046;
+	width:18%;  
+
+}
+
+.bamboo_line{
+
+	background-color:rgba(255,255,255,0.2);
+	height:1px;
+	margin:5% 5% 0 5%;  
+}
+
+.map_bamboo_menu ul li h3{
+	// padding:7%;
+
+}
+
+.map_bamboo_menu ul li{
+	text-align: center;
+	color:#fff;
+	// padding: 7%;
+	// margin:5% 0%;  		
+
+}
+
+
+
+
+// ============秋G仔===============
+
+// @media screen and ( max-width:992px ){
+// 	.map_bamboo_2{
+// 		.map_bamboo_1{
+// 		width:300%;
+// 		}
+// 	}
+	
+
+
+// }
+
+// ==============================
+
+.po{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #f00;
+	position: absolute;
+	}
+
+.p1{
+	top: 16%;
+	left:38%;
+	}
+
+.p2{
+	top: 30%;
+	left:25%;
+	}
+
+.p3{
+	top: 53%;
+	left:11%;
+	}
+
+.p4{
+	top: 46%;
+	left:47%;
+	}
+
+.p5{
+	top: 42%;
+	left:65%;
+	}
+
+.p6{
+	top: 32%;
+	left:87%;
+	}
+
+.p7{
+	top: 52%;
+	left:92%;
+	}
+
+.p8{
+	top:26%;
+	left:54%;
+	}
+
+.p9{
+	top:11%;
+	left:69%;
+	}									
+		
+// =============還沒秋g仔.但快秋g仔=========
+
+@media screen and ( max-width:1500px ){
+	// .map_bamboo_2{
+	// 	.map_bamboo_1{
+	// 		width:250%;
+	// 		padding-top:160%; 
+	// 	}
+	// }
+}

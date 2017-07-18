@@ -38,6 +38,7 @@
             .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard .rwdSelectboardMenu li.click {
               background-color: #e97b23; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce {
+        display: block;
         position: absolute;
         width: 45%;
         background-color: rgba(0, 0, 0, 0.6);

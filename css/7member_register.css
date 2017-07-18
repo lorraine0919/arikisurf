@@ -27,7 +27,8 @@ img {
       margin-right: 1vw; }
     .setdown26 .detail26 .item26 .input26 {
       display: inline-block;
-      border: none; }
+      border: none;
+      padding-left: 10px; }
     .setdown26 .detail26 .item26 .notice26 {
       color: #64c8dc; }
     .setdown26 .detail26 .item26 .check26 {
@@ -68,7 +69,7 @@ img {
         min-width: 100px;
         line-height: 35px; }
       .setdown26 .detail26 .item26 .input26 {
-        width: 45vw;
+        width: calc(80vw - 10px - 24vw - 12%);
         height: 35px; }
       .setdown26 .detail26 .item26 .notice26 {
         display: none; }

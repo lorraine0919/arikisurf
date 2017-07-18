@@ -32,6 +32,7 @@ img{width: 100%;}
 			.input26{
 				display: inline-block;
 				border: none;
+				padding-left:10px;
 			}
 			.notice26{color:rgb(100,200,220);}
 			.check26{border: none;}
@@ -78,7 +79,7 @@ img{width: 100%;}
 				line-height: 35px;
 			}
 			.input26{
-				width: 45vw;
+				width: calc(80vw - 10px - 24vw - 12%);
 				height: 35px;
 			}
 			.notice26{display: none;}

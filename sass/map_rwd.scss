@@ -3,12 +3,27 @@
 		.map_bamboo_menu{
 			width: 35%;
 			.bamboo_address{
-				display: none;
-				.bamboo_title{
+				bottom: -93%;
+				top:auto;
+				left: 14%;
+				width: 80vw;
+				.bamboo_addressfix{
+					position: relative;
+					.fa{
+						position: absolute;
+						font-size: 30px;
+						right: 0;
+						&.fa-arrow-circle-down{
+							display: none;
+						}
+					}
+					.bamboo_title{
+						
+					}
+					.pipeline{
+						display: none;
+					}
 
-				}
-				.pipeline{
-					display: none;
 				}
 			}
 			ul{

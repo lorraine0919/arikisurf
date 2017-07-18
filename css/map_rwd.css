@@ -2,9 +2,20 @@
   .map_bamboo_3 .map_bamboo_menu {
     width: 35%; }
     .map_bamboo_3 .map_bamboo_menu .bamboo_address {
-      display: none; }
-      .map_bamboo_3 .map_bamboo_menu .bamboo_address .pipeline {
-        display: none; }
+      bottom: -93%;
+      top: auto;
+      left: 14%;
+      width: 80vw; }
+      .map_bamboo_3 .map_bamboo_menu .bamboo_address .bamboo_addressfix {
+        position: relative; }
+        .map_bamboo_3 .map_bamboo_menu .bamboo_address .bamboo_addressfix .fa {
+          position: absolute;
+          font-size: 30px;
+          right: 0; }
+          .map_bamboo_3 .map_bamboo_menu .bamboo_address .bamboo_addressfix .fa.fa-arrow-circle-down {
+            display: none; }
+        .map_bamboo_3 .map_bamboo_menu .bamboo_address .bamboo_addressfix .pipeline {
+          display: none; }
     .map_bamboo_3 .map_bamboo_menu ul .mobile {
       width: 100%;
       display: block; }

@@ -1,7 +1,6 @@
 $(function(){
 /*以下是爆炸圖動畫*/
 	var controller = new ScrollMagic.Controller();
-	for (var i = 1; i < 5; i++) {
 		var expolde = new ScrollMagic.Scene({
 			triggerElement:"#explodetrigger",
 			offset:'100px'
@@ -9,7 +8,6 @@ $(function(){
 		.setClassToggle('.coating_1 .boardlayer','explode')
 		// .addIndicators({name:'對應點'})
 		.addTo(controller)
-	};
 		/*滑鼠移到浪板上，跳出介紹訊息，然後畫svg線*/
 	$('.coating_1 .boardlayer').mouseover(function(){
 		console.log($(this).index());
@@ -63,10 +61,10 @@ $(function(){
 /*以上是討論區動畫*/
 
 /*以下是最新消息動畫*/
-	$('.bulletin_1 .news').click(function(e){
-		var index = $(this).index();
+	$('.bulletin_1 .news').click(function(){
 		$('.bulletin_1 .left img').attr('src',$(this).find("img").attr('src'));
 	});
+	var x = 1;
 /*以上是最新消息動畫*/
 
 });//我是結尾

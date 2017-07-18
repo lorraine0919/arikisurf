@@ -1,9 +1,9 @@
-.cen, .bg_11 .bread_11, .bg_11 .title, .bg_11 .main_11, .bg_11 .feedback_11, .bg_11 .back_11, .bg_11 .send {
+.cen, .bg_11 .bread_11, .bg_11 .main_11, .bg_11 .feedback_11, .bg_11 .back_11, .bg_11 .send {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto; }
 
-.bc, .bg_11 .bread_11:after, .bg_11 .main_11:after, .bg_11 .feedback_11:after, .bg_11 .send:after {
+.bc, .bg_11 .main_11:after, .bg_11 .feedback_11:after {
   content: '';
   display: block;
   clear: both; }
@@ -26,77 +26,49 @@ a {
     box-sizing: border-box;
     padding: 15px;
     width: 960px;
-    height: 70px;
+    height: 150px;
     margin: 100px auto;
-    background: linear-gradient(to right, #1BBCB3, #37B9E9);
+    border: 1px solid black;
+    background-color: yellow;
     font-size: 20px;
-    position: relative;
-    color: #fff; }
-    #lightbox_11 .gun .reason {
-      vertical-align: bottom; }
-    #lightbox_11 .gun .report {
-      margin-left: 10px;
-      padding: 2px;
-      vertical-align: bottom; }
-    #lightbox_11 .gun .io {
-      display: inline-block; }
-      #lightbox_11 .gun .io input {
-        vertical-align: middle;
-        padding: 2px; }
+    position: relative; }
   #lightbox_11 #close {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: black;
     color: white;
     text-align: center;
-    cursor: pointer;
-    transition: 1s; }
-    #lightbox_11 #close:hover {
-      color: #ED8C00; }
+    cursor: pointer; }
 
 .bg_11 {
-  background-image: url("../images/4wavepoint/bg_f.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../images/4wavepoint/bg.jpg");
   background-size: cover;
-  height: auto;
+  height: 100vh;
   padding-top: 4rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 10rem; }
   .bg_11 .bread_11 {
+    background-color: rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
-    padding: .5rem 1.5em; }
+    padding: .5em 1.5em; }
     .bg_11 .bread_11 li {
-      float: left;
-      margin-left: 1.2rem; }
-      .bg_11 .bread_11 li a {
-        display: block;
-        width: 100%;
-        height: 100%; }
-  .bg_11 .title {
-    height: 10vh;
-    box-sizing: border-box;
-    padding: 1rem 2rem 0;
-    margin-top: 10rem;
-    color: #fff;
-    background-image: url("../images/4wavepoint/talk.jpg");
-    background-repeat: no-repeat; }
-    .bg_11 .title h1 {
       display: inline-block; }
-    .bg_11 .title div {
-      float: right;
-      padding: 0 10px;
-      margin: 0 5px;
-      cursor: pointer; }
-      .bg_11 .title div:hover {
-        color: #ED8C00; }
   .bg_11 .main_11 {
     box-sizing: border-box;
-    padding: 1.5rem .5rem;
-    background-color: rgba(255, 255, 255, 0.5); }
+    padding: .5em .5em 1.5em;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 8px 5px #888888; }
+    .bg_11 .main_11 h1 {
+      padding: .5em 1em; }
+      .bg_11 .main_11 h1 span {
+        float: right;
+        margin: 0 5px;
+        padding: 0 10px;
+        background-color: yellow;
+        cursor: pointer; }
     .bg_11 .main_11 .content-l, .bg_11 .main_11 .content-r {
       float: left; }
     .bg_11 .main_11 .content-l {
@@ -106,12 +78,12 @@ a {
         width: 40%;
         height: 100%;
         margin: 0 auto;
-        margin-bottom: 1rem; }
+        margin-bottom: 1em; }
         .bg_11 .main_11 .content-l .icon img {
-          width: 50%;
+          width: 100%;
           border-radius: 50%; }
-      .bg_11 .main_11 .content-l .user, .bg_11 .main_11 .content-l .feedback_11 .top .quit, .bg_11 .feedback_11 .top .main_11 .content-l .quit {
-        margin-bottom: 1rem; }
+      .bg_11 .main_11 .content-l .user {
+        margin-bottom: 1em; }
     .bg_11 .main_11 .content-r {
       width: 65%;
       padding: 0 3em;
@@ -123,19 +95,14 @@ a {
         left: 0;
         width: 1px;
         height: 100%;
-        background-color: black;
-        box-shadow: 1px 0 1px #fff; }
+        background-color: #0b0b0b; }
       .bg_11 .main_11 .content-r .pic {
-        margin-bottom: 1rem; }
-        .bg_11 .main_11 .content-r .pic img {
-          width: 100%;
-          height: 100%;
-          vertical-align: top; }
+        margin-bottom: 1em; }
   .bg_11 .feedback_11 {
     margin-top: 1em; }
     .bg_11 .feedback_11 .top {
       height: 10vh;
-      background-color: rgba(255, 255, 255, 0.2); }
+      background-color: pink; }
       .bg_11 .feedback_11 .top div {
         float: left; }
       .bg_11 .feedback_11 .top .icon {
@@ -145,130 +112,48 @@ a {
         box-sizing: border-box;
         padding: .5rem; }
         .bg_11 .feedback_11 .top .icon img {
-          vertical-align: top;
           width: 70px;
           height: 70px;
-          border-radius: 50%; }
-      .bg_11 .feedback_11 .top .user, .bg_11 .feedback_11 .top .quit {
+          border-radius: 50%;
+          line-height: 12vh; }
+      .bg_11 .feedback_11 .top .user {
         box-sizing: border-box;
         padding: .5rem; }
-        .bg_11 .feedback_11 .top .user p, .bg_11 .feedback_11 .top .quit p {
+        .bg_11 .feedback_11 .top .user p {
           margin-bottom: .5rem; }
       .bg_11 .feedback_11 .top .quit {
+        display: block;
+        width: 8%;
+        height: 100%;
         float: right;
-        margin-right: 1rem;
-        color: #fff;
-        cursor: pointer; }
-        .bg_11 .feedback_11 .top .quit:hover {
-          color: #ED8C00; }
+        box-sizing: border-box;
+        text-align: center;
+        padding: .5rem; }
     .bg_11 .feedback_11 .text {
       padding: 1rem 1.5rem;
       background-color: rgba(255, 255, 255, 0.5); }
   .bg_11 .back_11 {
     height: 15vh;
     margin-top: 2vh;
+    margin-bottom: 2vh;
     background-color: green; }
     .bg_11 .back_11 textarea {
       width: 100%;
       height: 100%;
       resize: none;
       box-sizing: border-box;
-      padding: .5rem;
-      border: none; }
+      padding: .5rem; }
   .bg_11 .send {
     box-sizing: border-box;
-    background-color: #fff;
-    padding-bottom: 1rem; }
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center; }
     .bg_11 .send input {
-      width: 145px;
-      margin: 0 .8rem;
+      width: 30%;
+      margin: 0 auto;
       box-sizing: border-box;
       padding: .4rem;
-      cursor: pointer;
-      float: right;
-      background-color: #D6D4D4; }
+      margin: 0 .2rem;
+      cursor: pointer; }
     .bg_11 .send #submit {
-      background-color: #ADADAD; }
-
-@media screen and (max-width: 767px) {
-  #lightbox_11 .gun {
-    width: 100%;
-    height: 150px; }
-    #lightbox_11 .gun .io {
-      display: block;
-      width: 100px;
-      margin: 15px auto; }
-  #lightbox_11 #close {
-    position: absolute;
-    right: 0;
-    bottom: -85px;
-    left: 0;
-    margin: auto; }
-
-  .bg_11 {
-    padding-top: .4rem;
-    background-size: 100%;
-    background-color: #29475E; }
-    .bg_11 .bread_11 li {
-      box-sizing: border-box;
-      margin-left: .35rem;
-      padding: .5rem 0rem; }
-    .bg_11 .title {
-      height: 12vh;
-      margin-top: 3vh;
-      padding: 1.5rem 0 0; }
-      .bg_11 .title h1 {
-        display: block;
-        text-align: center; }
-      .bg_11 .title div {
-        width: 25%;
-        margin: 0;
-        padding: 0;
-        text-align: center; }
-    .bg_11 .main_11 {
-      padding: 0; }
-      .bg_11 .main_11 .content-l {
-        float: none;
-        display: block;
-        background: linear-gradient(to right, #1BBCB3, #37B9E9);
-        width: 100%;
-        padding: 1rem 0; }
-        .bg_11 .main_11 .content-l .icon {
-          margin-bottom: .2rem; }
-        .bg_11 .main_11 .content-l .user, .bg_11 .main_11 .content-l .feedback_11 .top .quit, .bg_11 .feedback_11 .top .main_11 .content-l .quit {
-          margin-bottom: 0rem; }
-      .bg_11 .main_11 .content-r {
-        position: static;
-        float: none;
-        display: block;
-        background-color: rgba(255, 255, 255, 0.5);
-        width: 100%;
-        padding: 0; }
-        .bg_11 .main_11 .content-r:after {
-          display: none; }
-        .bg_11 .main_11 .content-r .pic {
-          width: 100%; }
-        .bg_11 .main_11 .content-r p {
-          box-sizing: border-box;
-          padding: 0 .5rem 1rem; }
-    .bg_11 .feedback_11:after {
-      content: ''; }
-    .bg_11 .feedback_11 .top {
-      height: 13vh; }
-      .bg_11 .feedback_11 .top .icon {
-        width: 25%; }
-        .bg_11 .feedback_11 .top .icon img {
-          width: 55px;
-          height: 55px; }
-    .bg_11 .send {
-      text-align: center; }
-      .bg_11 .send input {
-        margin: 0 auto;
-        padding: .2rem;
-        float: none; }
-
-  #lightbox_11 .gun {
-    width: 100%; }
-  #lightbox_11 #close {
-    top: 0px;
-    right: 0px; } }
+      background-color: #ED8C00; }

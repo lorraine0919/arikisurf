@@ -1,147 +1,365 @@
 @media screen and (max-width: 767px) {
-  .bg_forest_2 {
+  .bg_forest_2 .step1_maxContent {
+    position: relative;
+    width: 100%;
     height: 100vh; }
-    .bg_forest_2 .step1_maxContent {
-      position: relative;
-      width: 100%; }
-      .bg_forest_2 .step1_maxContent .stepbar {
-        width: 60%; }
-        .bg_forest_2 .step1_maxContent .stepbar .title {
-          display: none; }
-        .bg_forest_2 .step1_maxContent .stepbar .circle {
-          margin-top: 5%; }
-      .bg_forest_2 .step1_maxContent .introduce {
+    .bg_forest_2 .step1_maxContent .stepbar {
+      width: 60%; }
+      .bg_forest_2 .step1_maxContent .stepbar .title {
         display: none; }
-      .bg_forest_2 .step1_maxContent .selectboard {
-        display: none; }
-      .bg_forest_2 .step1_maxContent .demogroup {
-        width: 100%;
+      .bg_forest_2 .step1_maxContent .stepbar .circle {
+        margin-top: 5%; }
+    .bg_forest_2 .step1_maxContent .introduce {
+      display: none; }
+    .bg_forest_2 .step1_maxContent .selectboard {
+      display: none; }
+    .bg_forest_2 .step1_maxContent .demogroup {
+      width: 100%;
+      position: relative; }
+      .bg_forest_2 .step1_maxContent .demogroup .demo {
+        width: 28%;
+        padding-top: 70vh;
+        margin: auto;
         position: relative; }
-        .bg_forest_2 .step1_maxContent .demogroup .demo {
-          width: 28%;
-          padding-top: 70vh;
-          margin: auto;
+        .bg_forest_2 .step1_maxContent .demogroup .demo .base {
+          bottom: -3%; }
+      .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 11%; }
+        .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard .rwdSelectboardMenu {
+          border: 1px solid #fff;
+          color: #fff;
+          text-align: center; }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard .rwdSelectboardMenu li {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+            .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard .rwdSelectboardMenu li.click {
+              background-color: #e97b23; }
+      .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce {
+        display: block;
+        position: absolute;
+        width: 45%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 23px 10px;
+        top: 66%;
+        left: -51%;
+        z-index: 6;
+        transition: 1s; }
+        .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce .rwdintroducefix {
           position: relative; }
-          .bg_forest_2 .step1_maxContent .demogroup .demo .base {
-            bottom: -3%; }
-        .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
-          display: block;
-          position: absolute;
-          right: 6%;
-          top: 11%; }
-          .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard select {
-            width: 100%;
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce .rwdintroducefix .btnfield {
+            width: 5%;
+            position: absolute;
+            top: -23px;
+            right: -59px;
+            background-color: #fff;
+            color: #555;
+            padding: 37px 20px 10px 20px;
+            text-align: right;
+            font-weight: bold;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce .rwdintroducefix i {
+            font-size: 23px;
+            position: absolute;
+            right: 11px;
+            top: 11px;
+            color: #999; }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce .rwdintroducefix #rwdHideInfoBtn {
+            display: none; }
+        .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce.show {
+          transition: 1s;
+          left: 0%; }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce.show #rwdHideInfoBtn {
+            display: block; }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce.show #rwdShowInfoBtn {
+            display: none; }
+    .bg_forest_2 .step1_maxContent .next {
+      position: absolute;
+      right: -283%;
+      bottom: 0; }
+      .bg_forest_2 .step1_maxContent .next #step1tostep2 {
+        margin: 0; }
+  .bg_forest_2 .step2_maxContent {
+    position: relative;
+    width: 100%;
+    height: 100vh; }
+    .bg_forest_2 .step2_maxContent .stepbar {
+      width: 60%; }
+      .bg_forest_2 .step2_maxContent .stepbar .title {
+        display: none; }
+      .bg_forest_2 .step2_maxContent .stepbar .circle {
+        margin-top: 5%; }
+    .bg_forest_2 .step2_maxContent .introduce {
+      display: none; }
+    .bg_forest_2 .step2_maxContent .selectboard {
+      display: none; }
+    .bg_forest_2 .step2_maxContent .demogroup {
+      width: 100%;
+      position: relative; }
+      .bg_forest_2 .step2_maxContent .demogroup .demo {
+        width: 28%;
+        padding-top: 70vh;
+        margin: auto;
+        position: relative; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo .base {
+          bottom: -3%; }
+      .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle {
+        width: 82%;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 10px; }
+        .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .btn {
+          width: 25%;
+          border: 1px solid #fff;
+          border-radius: 5px;
+          padding: 5px;
+          color: #fff;
+          float: right;
+          margin: 0 0 0 -5%;
+          text-align: center; }
+        .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .selectgroup {
+          margin: 20px 0; }
+        .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup {
+          color: #fff; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup .colorall {
+            margin: 10px 0;
+            width: 34%;
+            float: right;
+            background-color: rgba(0, 0, 0, 0.2);
             padding: 10px;
-            background-color: transparent;
-            color: #fff; }
-            .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard select option {
-              color: #000;
-              text-align: center; }
-              .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard select option:hover {
-                background: #000; }
-      .bg_forest_2 .step1_maxContent .next {
+            text-align: center; }
+            .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup .colorall .color {
+              margin: 0 2px;
+              width: 25%;
+              display: inline-block; }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup .colorall .color:nth-child(1) .circle {
+                background-color: #fff; }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup .colorall .color:nth-child(2) .circle {
+                background-color: #009bd8; }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup .colorall .color:nth-child(3) .circle {
+                background-color: #ffd105; }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup .colorall .color .circle {
+                width: 100%;
+                padding-top: 100%;
+                border-radius: 50%;
+                display: inline-block; }
+        .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea {
+          width: 34%;
+          margin: 10px 0;
+          background-color: rgba(0, 0, 0, 0.2);
+          color: #fff;
+          float: right; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top {
+            overflow: hidden; }
+            .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .allpattern {
+              width: 150vw;
+              transform: translateX(0vw); }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .allpattern .pattern {
+                width: 30vw;
+                display: inline-block; }
+                .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .allpattern .pattern img {
+                  width: 100%; }
+            .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow {
+              background-color: rgba(255, 255, 255, 0.8); }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow .arrowbtn {
+                text-align: center;
+                display: inline-block;
+                width: 50%;
+                color: rgba(0, 0, 0, 0.6);
+                box-sizing: border-box; }
+                .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow .arrowbtn:active {
+                  background-color: #e97b23;
+                  color: #fff; }
+                .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow .arrowbtn.pre {
+                  border-right: 1px solid rgba(0, 0, 0, 0.3);
+                  margin: 0 -2% 0 0; }
+                .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow .arrowbtn.next {
+                  margin: 0 -2% 0 -2%; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .bottom {
+            padding: 10px 0;
+            text-align: center; }
+        .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent {
+          margin: 10px 0;
+          width: 40%;
+          float: right;
+          background-color: rgba(0, 0, 0, 0.2);
+          padding: 2px; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent .title {
+            color: #fff;
+            background-color: rgba(255, 130, 0, 0.1);
+            padding: 5px;
+            text-align: center; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent .alltexture {
+            text-align: center; }
+            .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent .alltexture .texture {
+              display: inline-block;
+              width: 30%; }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent .alltexture .texture.selected {
+                outline: 2px solid #e97b23; }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent .alltexture .texture img {
+                width: 100%; }
+      .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce {
+        display: block;
+        position: absolute;
+        width: 45%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 23px 10px;
+        top: 37%;
+        left: -51%;
+        z-index: 6;
+        transition: 1s; }
+        .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce .rwdintroducefix {
+          position: relative; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce .rwdintroducefix .btnfield {
+            width: 5%;
+            position: absolute;
+            top: -23px;
+            right: -59px;
+            background-color: #fff;
+            color: #555;
+            padding: 37px 20px 10px 20px;
+            text-align: right;
+            font-weight: bold;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce .rwdintroducefix i {
+            font-size: 23px;
+            position: absolute;
+            right: 11px;
+            top: 11px;
+            color: #999; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce .rwdintroducefix #rwdHideInfoBtn {
+            display: none; }
+        .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce.show {
+          transition: 1s;
+          left: 0%; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce.show #rwdHideInfoBtn {
+            display: block; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce.show #rwdShowInfoBtn {
+            display: none; }
+    .bg_forest_2 .step2_maxContent .selectAndNextfix {
+      display: none; }
+    .bg_forest_2 .step2_maxContent .selectAndNext {
+      padding-top: 0; }
+      .bg_forest_2 .step2_maxContent .selectAndNext .next {
         position: absolute;
         right: -283%;
-        bottom: 0; }
-        .bg_forest_2 .step1_maxContent .next #step1tostep2 {
-          margin: 0; }
-    .bg_forest_2 .step2_maxContent {
+        bottom: 0;
+        width: 100%; }
+        .bg_forest_2 .step2_maxContent .selectAndNext .next #step2tostep3 {
+          margin: 0;
+          width: 58%; }
+  .bg_forest_2 .step3_maxContent {
+    display: block;
+    position: relative;
+    width: 100%; }
+    .bg_forest_2 .step3_maxContent .stepbar {
+      width: 60%; }
+      .bg_forest_2 .step3_maxContent .stepbar .title {
+        display: none; }
+      .bg_forest_2 .step3_maxContent .stepbar .circle {
+        margin-top: 5%; }
+    .bg_forest_2 .step3_maxContent .introduce {
+      display: none; }
+    .bg_forest_2 .step3_maxContent .selectboard {
+      display: none; }
+    .bg_forest_2 .step3_maxContent .demogroup {
+      width: 100%;
       position: relative;
-      width: 100%; }
-      .bg_forest_2 .step2_maxContent .stepbar {
-        width: 60%; }
-        .bg_forest_2 .step2_maxContent .stepbar .title {
-          display: none; }
-        .bg_forest_2 .step2_maxContent .stepbar .circle {
-          margin-top: 5%; }
-      .bg_forest_2 .step2_maxContent .introduce {
-        display: none; }
-      .bg_forest_2 .step2_maxContent .selectboard {
-        display: none; }
-      .bg_forest_2 .step2_maxContent .demogroup {
-        width: 100%;
+      display: none; }
+      .bg_forest_2 .step3_maxContent .demogroup .demo {
+        width: 28%;
+        padding-top: 70vh;
+        margin: auto;
         position: relative; }
-        .bg_forest_2 .step2_maxContent .demogroup .demo {
-          width: 28%;
-          padding-top: 70vh;
-          margin: auto;
-          position: relative; }
-          .bg_forest_2 .step2_maxContent .demogroup .demo .base {
-            bottom: -3%; }
-        .bg_forest_2 .step2_maxContent .demogroup .rwdselectboard {
-          display: block;
-          position: absolute;
-          right: 6%;
-          top: 11%; }
-          .bg_forest_2 .step2_maxContent .demogroup .rwdselectboard select {
-            width: 100%;
-            padding: 10px;
-            background-color: transparent;
-            color: #fff; }
-            .bg_forest_2 .step2_maxContent .demogroup .rwdselectboard select option {
-              color: #000;
-              text-align: center; }
-              .bg_forest_2 .step2_maxContent .demogroup .rwdselectboard select option:hover {
-                background: #000; }
-      .bg_forest_2 .step2_maxContent .selectAndNextfix {
-        display: none; }
-      .bg_forest_2 .step2_maxContent .selectAndNext {
-        padding-top: 0; }
-        .bg_forest_2 .step2_maxContent .selectAndNext .next {
-          position: absolute;
-          right: -283%;
-          bottom: 0;
-          width: 100%; }
-          .bg_forest_2 .step2_maxContent .selectAndNext .next #step2tostep3 {
-            margin: 0;
-            width: 58%; }
-    .bg_forest_2 .step3_maxContent {
-      position: relative;
-      width: 100%; }
-      .bg_forest_2 .step3_maxContent .stepbar {
-        width: 60%; }
-        .bg_forest_2 .step3_maxContent .stepbar .title {
-          display: none; }
-        .bg_forest_2 .step3_maxContent .stepbar .circle {
-          margin-top: 5%; }
-      .bg_forest_2 .step3_maxContent .introduce {
-        display: none; }
-      .bg_forest_2 .step3_maxContent .selectboard {
-        display: none; }
-      .bg_forest_2 .step3_maxContent .demogroup {
-        width: 100%;
-        position: relative;
-        display: none; }
-        .bg_forest_2 .step3_maxContent .demogroup .demo {
-          width: 28%;
-          padding-top: 70vh;
-          margin: auto;
-          position: relative; }
-          .bg_forest_2 .step3_maxContent .demogroup .demo .base {
-            bottom: -3%; }
-        .bg_forest_2 .step3_maxContent .demogroup .rwdselectboard {
-          display: block;
-          position: absolute;
-          right: 6%;
-          top: 11%; }
-          .bg_forest_2 .step3_maxContent .demogroup .rwdselectboard select {
-            width: 100%;
-            padding: 10px;
-            background-color: transparent;
-            color: #fff; }
-            .bg_forest_2 .step3_maxContent .demogroup .rwdselectboard select option {
-              color: #000;
-              text-align: center; }
-              .bg_forest_2 .step3_maxContent .demogroup .rwdselectboard select option:hover {
-                background: #000; }
-      .bg_forest_2 .step3_maxContent .fill {
-        all: unset;
-        width: 100%;
+        .bg_forest_2 .step3_maxContent .demogroup .demo .base {
+          bottom: -3%; }
+      .bg_forest_2 .step3_maxContent .demogroup .rwdselectboard {
         display: block;
-        position: static; }
-        .bg_forest_2 .step3_maxContent .fill .fillfix {
-          all: unset;
-          display: block;
-          padding: 0px 20px;
-          margin: 10px 0;
-          box-sizing: border-box; } }
+        position: absolute;
+        right: 6%;
+        top: 11%; }
+        .bg_forest_2 .step3_maxContent .demogroup .rwdselectboard select {
+          width: 100%;
+          padding: 10px;
+          background-color: transparent;
+          color: #fff; }
+          .bg_forest_2 .step3_maxContent .demogroup .rwdselectboard select option {
+            color: #000;
+            text-align: center; }
+            .bg_forest_2 .step3_maxContent .demogroup .rwdselectboard select option:hover {
+              background: #000; }
+    .bg_forest_2 .step3_maxContent .fill {
+      all: unset;
+      width: 100%;
+      display: block;
+      position: static; }
+      .bg_forest_2 .step3_maxContent .fill .fillfix {
+        all: unset;
+        display: block;
+        padding: 0px 20px;
+        margin: 10px 0;
+        box-sizing: border-box; }
+        .bg_forest_2 .step3_maxContent .fill .fillfix .content {
+          padding: 10px 2px 0 0; }
+          .bg_forest_2 .step3_maxContent .fill .fillfix .content h3 {
+            font-size: 15px; }
+    .bg_forest_2 .step3_maxContent .selectAndNext {
+      display: none; }
+  .bg_forest_2 .step4_maxContent {
+    position: relative;
+    width: 100%; }
+    .bg_forest_2 .step4_maxContent .stepbar {
+      width: 60%; }
+      .bg_forest_2 .step4_maxContent .stepbar .title {
+        display: none; }
+      .bg_forest_2 .step4_maxContent .stepbar .circle {
+        margin-top: 5%; }
+    .bg_forest_2 .step4_maxContent .introduce {
+      display: none; }
+    .bg_forest_2 .step4_maxContent .selectboard {
+      display: none; }
+    .bg_forest_2 .step4_maxContent .demogroup {
+      width: 100%;
+      position: relative;
+      display: none; }
+      .bg_forest_2 .step4_maxContent .demogroup .demo {
+        width: 28%;
+        padding-top: 70vh;
+        margin: auto;
+        position: relative; }
+        .bg_forest_2 .step4_maxContent .demogroup .demo .base {
+          bottom: -3%; }
+      .bg_forest_2 .step4_maxContent .demogroup .rwdselectboard {
+        display: block;
+        position: absolute;
+        right: 6%;
+        top: 11%; }
+        .bg_forest_2 .step4_maxContent .demogroup .rwdselectboard select {
+          width: 100%;
+          padding: 10px;
+          background-color: transparent;
+          color: #fff; }
+          .bg_forest_2 .step4_maxContent .demogroup .rwdselectboard select option {
+            color: #000;
+            text-align: center; }
+            .bg_forest_2 .step4_maxContent .demogroup .rwdselectboard select option:hover {
+              background: #000; }
+    .bg_forest_2 .step4_maxContent .fill {
+      all: unset;
+      width: 100%;
+      display: block;
+      position: static; }
+      .bg_forest_2 .step4_maxContent .fill .fillfix {
+        all: unset;
+        display: block;
+        padding: 0px 20px;
+        margin: 10px 0;
+        box-sizing: border-box; }
+        .bg_forest_2 .step4_maxContent .fill .fillfix .next {
+          text-align: right; } }

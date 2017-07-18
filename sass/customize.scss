@@ -145,6 +145,9 @@
 			}
 			.rwdselectboard{
 				display: none;
+			}
+			.rwdintroduce{
+				display: none;
 			}			
 		}
 		.selectAndNext{
@@ -313,8 +316,8 @@
 			position: relative;
 			.introducefix{
 				position: absolute;
-				width: 101%;
-				 left: -10%;
+				width: 125%;
+				left: -19%;
 				.head{
 					padding: 8px 20px;
 					color: #fff;
@@ -365,6 +368,9 @@
 					width: 150%;
 				}
 				
+			}
+			.rwdselectstyle{
+				display: none;
 			}			
 		}
 		.selectAndNext{
@@ -551,7 +557,7 @@
 			}
 			.next{
 				position: absolute;
-				width: 40%;
+				width: 52%;
 				bottom: -9%;
 				right: 0;
 				a{

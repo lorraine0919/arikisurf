@@ -71,7 +71,7 @@ var controller = new ScrollMagic.Controller();
     },{
         y:0,
         opacity:1
-    },0.3);
+    },0.2);
 console.log("time");
 var scene = new ScrollMagic.Scene({
     triggerElement: ".global_base_title",

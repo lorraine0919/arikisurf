@@ -8,9 +8,13 @@
 		cursor: pointer;
 		padding: 10px 0 0 0;
 		&.click{
-			background-color: #e97b23;
+			color: #ff9813;
 		}
 	}
+}
+
+.mobile{
+	transition:1.5s cubic-bezier(.68,.05,.22,.75);
 }
 
 .map_bamboo_2{
@@ -28,6 +32,8 @@
 		width:200%;
 		padding-top:132%; 
 		transition:1.5s cubic-bezier(.68,.05,.22,.75);
+		bottom:0;
+		right: 0;
 		// img{
 		// 	width: 100%;
 		// }
@@ -47,7 +53,7 @@
 	background-color:rgba(0,0,0,0.3); 
 	display: inline-block;
 	margin-top:12vh;
-	margin-left:9vh;
+	// margin-left:9vh;
 	border-radius:10px;
 	border:5px solid rgba(255,255,255,0.2);
 	box-shadow:(-3px -3px 15px rgba(157,228,255,0.7)),(3px 3px 15px #103046 inset);
@@ -55,6 +61,49 @@
 	width:18%;  
 
 }
+
+.bamboo_address{
+	width:250px; 
+	position:absolute;
+	z-index:2;
+	top:-1%;
+	left:110%;
+	display: inline-block;
+	border-radius:10px;
+	border:5px solid rgba(255,255,255,0.3);
+	box-shadow:3px 3px 15px #103046 inset;
+	background-color:rgba(0,0,0,0.5);
+	text-align: center;
+	text-shadow:none;
+	color:#fff;
+	padding:10px;
+	background-image: url(../);
+	// transition:1.5s cubic-bezier(.68,.05,.22,.75); 
+		
+		.pipeline{
+			width: 100%;
+		}
+
+		h5{
+			margin-top:5%; 
+		}
+		.bamboo_title{
+			margin:0% 0% 5%;
+
+		}
+		.address_mobile{
+			display: inline-block;
+			border:1px solid #fff;
+			// background-color:#ff9813;
+			color:#fff;
+			margin:7% 0% 5%; 
+			padding:5px 10px;
+			border-radius:4px; 
+
+			span{
+			} 
+		}
+}	
 
 .bamboo_line{
 
@@ -102,57 +151,57 @@
 	}
 
 .p1{
-	top: 16%;
-	left:38%;
+	top: 20%;
+	left:42%;
 	}
 
 .p2{
-	top: 30%;
-	left:25%;
+	top: 42%;
+	left:30%;
 	}
 
 .p3{
-	top: 53%;
-	left:11%;
+	top: 68%;
+	left:20%;
 	}
 
 .p4{
-	top: 46%;
-	left:47%;
+	top: 66%;
+	left:45%;
 	}
 
 .p5{
-	top: 42%;
-	left:65%;
+	top: 55%;
+	left:63%;
 	}
 
 .p6{
-	top: 32%;
-	left:87%;
+	top: 42%;
+	left:82%;
 	}
 
 .p7{
-	top: 52%;
-	left:92%;
+	top: 65%;
+	left:85%;
 	}
 
 .p8{
-	top:26%;
+	top:36%;
 	left:54%;
 	}
 
 .p9{
-	top:11%;
+	top:15%;
 	left:69%;
 	}									
 		
 // =============還沒秋g仔.但快秋g仔=========
 
 @media screen and ( max-width:1500px ){
-	// .map_bamboo_2{
-	// 	.map_bamboo_1{
-	// 		width:250%;
-	// 		padding-top:160%; 
-	// 	}
-	// }
+	.map_bamboo_2{
+		.map_bamboo_1{
+			width:200%;
+			padding-top:160%; 
+		}
+	}
 }

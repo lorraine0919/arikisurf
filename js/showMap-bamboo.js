@@ -12,22 +12,41 @@ $(document).ready(function(){
 			console.log($('.map_bamboo_1').width());
 			$('.map_bamboo_1').css('bottom',top);
 			$('.map_bamboo_1').css('right',left);			
-		}else if($(window).width()<1500 && $(window).width()>960){
+		}else if($(window).width()<1500 && $(window).width()>1000){
 			var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-1000;
-			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-1600;
+			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-1500;
 			console.log($('.map_bamboo_1').width());
 			$('.map_bamboo_1').css('bottom',top);
 			$('.map_bamboo_1').css('right',left);			
-		}else{
-			var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-500;
-			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-1000;
+		}else if($(window).width()<1000 && $(window).width()>767){
+			var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-700;
+			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-1500;
 			console.log($('.map_bamboo_1').width());
 			$('.map_bamboo_1').css('bottom',top);
 			$('.map_bamboo_1').css('right',left);	
+		}else{
+
 		}
+
+		var titlearr = ['Pipeline','Superbank','Jeffreys-Bay','Black-Beach','Teahupoo','La-Graviere','Uluwatu','Hakuna','Matata'];
+		var textarr = ['',]
+		var index = $(this).index();
+		$('.map_bamboo_3 .title').text(titlearr[index]);
+		$('.map_bamboo_3 .pipeline').attr('src','../images/4wavepoint/'+(titlearr[index])+'.jpg');
+
+
+
+
+
+
+
+
 
 
 	});
+
+
+
 
 
 });	

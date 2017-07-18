@@ -434,8 +434,8 @@
 
   .winning_record_title {
     text-align: center;
-    margin-top: 3vh;
-    margin-bottom: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 6vh;
     color: #fff; }
 
   .winning_img {
@@ -572,7 +572,7 @@
     background: #9b59b6; }
 
   .global_bg {
-    background-image: url("../images/6ariki/global_bg.png");
+    background-image: url("../images/6ariki/global_bg2.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -585,7 +585,7 @@
 
   .global_base_title {
     text-align: center;
-    margin-top: 12vh;
+    margin-top: 5vh;
     margin-bottom: 5vh;
     color: #fff; }
 

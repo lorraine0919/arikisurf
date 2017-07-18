@@ -3,7 +3,7 @@
   max-width: 1170px;
   margin: 0 auto; }
 
-.bc, #content_10 #form .sub:after, .bg_10 .bread_10:after, .bg_10 .info_10:after, .bg_10 .info_10 .ic:after, .bg_10 .info_10 .wave img:after, .bg_10 .fourm ul:after, .bg_10 .fourm .talk:after, .bg_10 .fourm .talk .item .item_border:after {
+.bc, #content_10 #po .i3:after, #content_10 #po .i4 .bt:after, .bg_10 .bread_10:after, .bg_10 .info_10:after, .bg_10 .info_10 .ic:after, .bg_10 .info_10 .wave img:after, .bg_10 .fourm ul:after, .bg_10 .fourm .talk:after, .bg_10 .fourm .talk .item .item_border:after {
   content: '';
   display: block;
   clear: both; }
@@ -17,59 +17,75 @@ a {
 #content_10 {
   width: 100%;
   height: 100%;
-  background-image: url("../images/4wavepoint/form.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   position: fixed;
   top: 0;
   z-index: 80;
-  display: none; }
-  #content_10:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.5);
-    z-index: 70; }
-  #content_10 #form {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6); }
+  #content_10 #po {
     position: relative;
     box-sizing: border-box;
-    padding: 1.5rem;
-    width: 720px;
-    margin: 100px auto;
-    border-radius: 20px;
-    background: -webkit-linear-gradient(99deg, #22c9d4 52.34%, #3e85f0 94.18%);
-    box-shadow: 0 5px 5pc #ccc;
-    font-size: 20px;
+    padding: .5rem 1rem 2.5rem;
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    margin: 50px auto;
+    border-radius: 15px;
+    background-color: #03a9f5;
+    font-size: 18px;
     color: #fff;
     z-index: 100; }
-    #content_10 #form .fit {
+    #content_10 #po #title {
+      padding: 2px; }
+    #content_10 #po #select {
+      padding: 3px; }
+    #content_10 #po #file {
+      display: none; }
+    #content_10 #po #upload {
+      display: block;
+      width: 71px; }
+      #content_10 #po #upload img {
+        width: 100%;
+        vertical-align: top; }
+    #content_10 #po #textarea {
       width: 100%;
-      border-bottom: 1px solid #ED8C00;
-      box-sizing: border-box;
-      padding-top: 10px;
-      padding-bottom: 20px; }
-    #content_10 #form .f3 .preview {
-      width: 150px;
-      height: 150px;
-      background-color: #fff; }
-    #content_10 #form textarea {
-      border: none;
+      height: 100%;
       resize: none;
-      width: 100%; }
-    #content_10 #form .sub {
-      margin-top: -5px;
-      background-color: #fff;
-      width: 100%; }
-      #content_10 #form .sub input {
-        float: right;
+      border: none; }
+    #content_10 #po .poItem {
+      width: 100%;
+      border-bottom: 1px solid #fff;
+      box-sizing: border-box;
+      padding-bottom: 2%; }
+      #content_10 #po .poItem .pot {
         box-sizing: border-box;
-        padding: .2rem 1rem;
-        background-color: #fff;
-        margin-left: .2rem; }
+        padding: 1% 0; }
+      #content_10 #po .poItem .preview {
+        width: 150px;
+        height: 150px;
+        background-color: #fff; }
+    #content_10 #po .i3 .dr, #content_10 #po .i3 .dl {
+      float: left;
+      width: 50%;
+      margin: 0 auto; }
+    #content_10 #po .i4 {
+      border-bottom: none; }
+    #content_10 #po .i4 .last {
+      width: 100%;
+      height: 18vh;
+      background-color: red; }
+    #content_10 #po .i4 .bt {
+      width: 100%;
+      background-color: #fff;
+      margin-top: -5px; }
+      #content_10 #po .i4 .bt input {
+        text-decoration: none;
+        border: none;
+        padding: 10px;
+        float: right;
+        color: #fff;
+        background-color: #03a9f5;
+        cursor: pointer; }
   #content_10 #close {
     width: 30px;
     height: 30px;
@@ -79,8 +95,8 @@ a {
     color: white;
     text-align: center;
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: -10px;
+    right: -10px;
     cursor: pointer;
     transition: 1s; }
     #content_10 #close:hover {
@@ -98,6 +114,8 @@ a {
     .bg_10 .bread_10 li {
       float: left;
       margin-left: 1.2rem; }
+      .bg_10 .bread_10 li:last-child {
+        color: #eee; }
     .bg_10 .bread_10 a {
       display: block;
       width: 100%;
@@ -179,10 +197,10 @@ a {
       padding: 1.5em; }
       .bg_10 .fourm .talk .item {
         box-sizing: border-box;
-        padding: .9em;
+        padding: .7em;
         background-color: #3A3A3A;
         width: 30%;
-        height: 420px;
+        height: 410px;
         float: left;
         position: relative;
         margin-bottom: 2%; }
@@ -193,7 +211,7 @@ a {
           vertical-align: top; }
         .bg_10 .fourm .talk .item .text {
           box-sizing: border-box;
-          padding: 2rem .1rem;
+          padding: 1rem .1rem .5rem;
           color: #fff; }
           .bg_10 .fourm .talk .item .text .day {
             color: #999; }
@@ -241,20 +259,18 @@ a {
               font-size: 22px; }
 
 @media screen and (max-width: 767px) {
-  #content_10 {
-    background-image: url("../images/4wavepoint/form-m.png"); }
-    #content_10 #form {
-      width: 100vw; }
-      #content_10 #form textarea {
-        width: 100%; }
-      #content_10 #form .sub {
-        width: 100%; }
-    #content_10 #close {
-      top: 98%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0 auto; }
+  #content_10 #po {
+    margin: 10px auto;
+    padding: .5rem 1rem 5rem; }
+    #content_10 #po .poItem .preview {
+      width: 100px;
+      height: 100px; }
+  #content_10 #close {
+    top: 94%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto; }
 
   .bg_10 {
     background-image: url("../images/4wavepoint/bg_m.png");

@@ -281,6 +281,8 @@
           width: 150%; }
       .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle {
         display: none; }
+      .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce {
+        display: none; }
     .bg_forest_2 .step2_maxContent .selectAndNext {
       width: 25%;
       display: inline-block;

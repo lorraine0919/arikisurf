@@ -4,13 +4,15 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <title>Document</title>
       <link rel="stylesheet" type="text/css" href="css/header.css">
       <link rel="stylesheet" type="text/css" href="css/footer.css">
       <link rel="stylesheet" type="text/css" href="css/grid.css">
   
       <script src="js/jquery.js"></script>
   <link rel="stylesheet" type="text/css" href="css/forum.css">
-  <title>Map</title>
+  <script src="js/showMap.js"></script>
+  <title>酋長衝浪Ariki Surf-討論區</title>
 </head>
 <body>
       <header>
@@ -54,31 +56,79 @@
           <div class="topGround_0"></div>
       </header>
       <div id="content_10">
-        <form id="form" action="#">
-               文章標題 <input type="text" id="title" placeholder="最多8個字" ><br>
-               文章分類 <select id="select">
-                                 <option>圖片</option>
-                                 <option>影片</option>                                    
-                        </select><br>
-               上傳檔案 <input type="file"> 
-               預覽 <span class="preview"></span><br>
-               文章內容 <br>
-               <textarea id="textarea" cols="30" rows="10"></textarea><br>
-               <input type="submit" id="submit" value="確認">
-               <input type="reset" id="reset" value="取消">
-               <div id="close">X</div>                       
-        </form>
-        
+        <form id="po" action="#">              
+               <div class="poItem i1">
+                    <div class="pot">文章標題</div> 
+                    <div class="pob">
+                          <input type="text" id="title" placeholder="最多10個字" maxlength="10">
+                    </div>
+               </div>
+               <div class="poItem i2">
+                     <div class="pot">文章分類</div>
+                     <div class="pob">
+                           <select name="select" id="select">
+                                    <option value="0">圖片</option>
+                                    <option value="1">影片</option>
+                           </select>
+                     </div>
+               </div>
+               <div class="poItem i3">
+                     <div class="dl">
+                          <div class="pot">上傳檔案</div>
+                          <label for="file" id="upload">
+                                 <img src="images/4wavepoint/uploadbtn.jpg">
+                          </label>
+                          <input type="file" id="file">
+                     </div>
+                     <div class="dr">
+                          <div class="pot">預覽</div>
+                          <div class="preview"></div>
+                     </div>
+               </div>
+               <div class="poItem i4">
+                     <div class="pot">文章內容</div>                   
+                     <div class="last">
+                           <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                           <div class="bt">
+                                 <input type="submit" value="送出">
+                                 <input type="reset" value="清除">
+                           </div>
+                     </div>
+               </div>
+               <div id="close">X</div>                     
+        </form>      
       </div><!-- content_10 -->
 
-       <div class="wave_10">
+       <div class="bg_10">
+         <ul class="bread_10">
+           <li><a href="index.html">首頁</a></li>
+           <li>/</li>
+           <li><a href="map.html">衝浪地圖</a></li>
+           <li>/</li>
+           <li>討論區</li>
+         </ul><!-- bread_10 -->
+         <div class="info_10">
+           <div class="ic wave">
+             <img src="images/4wavepoint/w1.png">
+             <span>滿潮</span><br>
+             <span>浪況 : <span class="good">優良</span></span> 
+           </div>
+           <div class="ic weather">32°C</div>    
+         </div> <!-- info_10 div1-->     
          <div class="beach_10">
-           <h1>Pipeline</h1>
-           <img src="../images/4wavepoint/pipeline-beach.jpg">  
-         </div>      
-         <div class="info">
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum temporibus aliquam eveniet sed facere sint consequatur aliquid impedit, architecto quaerat in quos perferendis saepe eos et odio provident, dignissimos esse, molestiae, maiores minus. Temporibus ut quia eveniet. Dicta, praesentium, voluptatum laudantium pariatur enim itaque nulla quos facilis distinctio iusto deserunt!</p>
-         </div> 
+           <div class="beach_h">
+                <h1>PIPELINE</h1>
+                <p>一片深綠色的海邊叢林,一彎淺淺的棕櫚沙灘。</p>
+           </div>
+           <div class="beach_txt">
+                <p>頭頂著一輪俏皮的彎月,靜靜地享受和愛的人在一起的寧靜時光。來吧,嘉善路邊的月砂森林,這裡有你遺落的安然。</p>
+                <p>小屋是來自米蘭國際設計週的設計師@企鵝沈虹設計的,位於嘉善路和永康路的三岔口永盛里內,四通八達的小巷把老上海的風味都嵌在了裡面,別晃
+                眼~這裡真的有沙灘哦!出門50米,有老人坐在門口聽著滬劇小調聊著天,再往外走就是不得不來上一杯的永康路,露天酒吧、法式麵包店、質感家具店
+                和街道旁隨處停著的哈雷機車......一切都在嘗試拖住你的步伐,讓你慢下來享受這個瞬間。</p>
+                <p>穿過熱鬧非凡的街道,回到月砂森林,關上白色的小門。迎接你的是紮染的質感布條,木質、竹編的椅子,還有帶著年輪的樹樁,直接把你捲入了清香瀰漫
+                的靜謐海畔叢林。</p>
+           </div><!-- beach_txt -->          
+         </div><!-- beach_10 --> 
          <div class="fourm">
             <ul>
              <li>全部文章</li>
@@ -91,161 +141,209 @@
            <section class="talk">
               <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
-                           <img src="https://api.fnkr.net/testimg/290x200/66ccbb/FFF/?text=img">
+                     <div class="pic_i">
+                           <img src="images/4wavepoint/fou/1.jpg">
                      </div>
                      <div class="text">
-                         <h1>我是標題</h1>
+                         <h1>衝浪第一次接觸</h1>
                          <div class="day">2017/07/07</div>
-                         <p>我是內文</p>                            
+                         <div class="tt">
+                         Mathi是北部人,第一次衝浪的地方是在金山中角灣.  還記得那天剛好是颱風過境後的第一天.穿了件短褲,  交了800元後教練先在沙灘上胡亂解說一遍,就把我推下水了.老實說,  他說的天花亂墬,  我卻是有聽沒有懂.總覺得聽起來很容易,但實地下水後,  整個感覺就不一樣了.
+                         那時候我還不會看浪,  也不記得浪有幾人高.  總覺得浪一排一排的蓋過來,  看到腿都軟了.腦袋裡一片空白,  只聽到耳邊震耳欲聾的海浪聲,以及教練聲嘶力竭的叫我拚命劃.哇咧!!!我心裡只想著逃命,這不是在玩命嘛?眼前都是整排蓋下來的浪和飛濺起的白花,而且白花中似乎夾雜的血淋淋的斷肢殘臂(有沒有那ㄇ誇張阿?!)掙紮了五分鐘後,  教練宣佈放棄,  他告訴我今天颱風浪不適合初學者下水,  我就被招呼上岸了.  老實說,  雖然覺得交了800元居然只有下水五分鐘,  但是上岸的那一霎那真的有死裡逃生的感覺.
+                         上岸之後我的朋友告訴我,  今天的浪是他最近以來碰過最大的浪了.這才稍稍安慰了我挫敗的心.
+                         </div>                
                      </div>
                  </a>
-                     <div class="watch">
-                         <span id="count">點閱數</span> : <span>10</span>
-                         <span class="star">★★★★★</span>
-                     </div>
+                     <div class="item_border">
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
+                     </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
-                           <img src="https://api.fnkr.net/testimg/290x200/66ccbb/FFF/?text=img">
+                     <div class="pic_i">
+                           <img src="images/4wavepoint/fou/2.jpg">
                      </div>
                      <div class="text">
                          <h1>我是標題</h1>
                          <div class="day">2017/07/07</div>
-                         <p>我是內文</p>                            
+                         <div class="tt">我是內文</div>                
                      </div>
                  </a>
-                     <div class="watch">
-                         <span id="count">點閱數</span> : <span>10</span>
-                         <span class="star">★★★★★</span>
-                     </div>
+                     <div class="item_border">
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
+                     </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
-                           <img src="https://api.fnkr.net/testimg/290x200/66ccbb/FFF/?text=img">
+                     <div class="pic_i">
+                           <img src="images/4wavepoint/fou/3.jpg">
                      </div>
                      <div class="text">
                          <h1>我是標題</h1>
                          <div class="day">2017/07/07</div>
-                         <p>我是內文</p>                            
+                         <div class="tt">我是內文</div>                
                      </div>
                  </a>
-                     <div class="watch">
-                         <span id="count">點閱數</span> : <span>10</span>
-                         <span class="star">★★★★★</span>
-                     </div>
+                     <div class="item_border">
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
+                     </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
-                           <img src="https://api.fnkr.net/testimg/290x200/66ccbb/FFF/?text=img">
+                     <div class="pic_i">
+                           <img src="images/4wavepoint/fou/4.jpg">
                      </div>
                      <div class="text">
                          <h1>我是標題</h1>
                          <div class="day">2017/07/07</div>
-                         <p>我是內文</p>                            
+                         <div class="tt">我是內文</div>                
                      </div>
                  </a>
-                     <div class="watch">
-                         <span id="count">點閱數</span> : <span>10</span>
-                         <span class="star">★★★★★</span>
-                     </div>
+                     <div class="item_border">
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
+                     </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
-                           <img src="https://api.fnkr.net/testimg/290x200/66ccbb/FFF/?text=img">
+                     <div class="pic_i">
+                           <img src="images/4wavepoint/fou/5.jpg">
                      </div>
                      <div class="text">
                          <h1>我是標題</h1>
                          <div class="day">2017/07/07</div>
-                         <p>我是內文</p>                            
+                         <div class="tt">我是內文</div>                
                      </div>
                  </a>
-                     <div class="watch">
-                         <span id="count">點閱數</span> : <span>10</span>
-                         <span class="star">★★★★★</span>
-                     </div>
+                     <div class="item_border">
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
+                     </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
-                           <img src="https://api.fnkr.net/testimg/290x200/66ccbb/FFF/?text=img">
+                     <div class="pic_i">
+                           <img src="images/4wavepoint/fou/6.jpg">
                      </div>
                      <div class="text">
                          <h1>我是標題</h1>
                          <div class="day">2017/07/07</div>
-                         <p>我是內文</p>                            
+                         <div class="tt">我是內文</div>                
                      </div>
                  </a>
-                     <div class="watch">
-                         <span id="count">點閱數</span> : <span>10</span>
-                         <span class="star">★★★★★</span>
-                     </div>
+                     <div class="item_border">
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
+                     </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
-                           <img src="https://api.fnkr.net/testimg/290x200/66ccbb/FFF/?text=img">
+                     <div class="pic_i">
+                           <img src="images/4wavepoint/fou/7.jpg">
                      </div>
                      <div class="text">
                          <h1>我是標題</h1>
                          <div class="day">2017/07/07</div>
-                         <p>我是內文</p>                            
+                         <div class="tt">我是內文</div>                
                      </div>
                  </a>
-                     <div class="watch">
-                         <span id="count">點閱數</span> : <span>10</span>
-                         <span class="star">★★★★★</span>
-                     </div>
+                     <div class="item_border">
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
+                     </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
-                           <img src="https://api.fnkr.net/testimg/290x200/66ccbb/FFF/?text=img">
+                     <div class="pic_i">
+                           <img src="images/4wavepoint/fou/8.jpg">
                      </div>
                      <div class="text">
                          <h1>我是標題</h1>
                          <div class="day">2017/07/07</div>
-                         <p>我是內文</p>                            
+                         <div class="tt">我是內文</div>                
                      </div>
                  </a>
-                     <div class="watch">
-                         <span id="count">點閱數</span> : <span>10</span>
-                         <span class="star">★★★★★</span>
-                     </div>
+                     <div class="item_border">
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
+                     </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
-                           <img src="https://api.fnkr.net/testimg/290x200/66ccbb/FFF/?text=img">
+                     <div class="pic_i">
+                           <img src="images/4wavepoint/fou/9.jpg">
                      </div>
                      <div class="text">
                          <h1>我是標題</h1>
                          <div class="day">2017/07/07</div>
-                         <p>我是內文</p>                            
+                         <div class="tt">我是內文</div>                
                      </div>
                  </a>
-                     <div class="watch">
-                         <span id="count">點閱數</span> : <span>10</span>
-                         <span class="star">★★★★★</span>
-                     </div>
+                     <div class="item_border">
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
+                     </div>                    
                </div><!-- item -->
-
 
            </section>
          </div><!-- fourm --> 
-       </div><!-- wave_10 -->
+       </div><!-- bg_10 -->
       <footer class="footer_0">
           <div class="maxContent">
           	<div class="titlegroup">

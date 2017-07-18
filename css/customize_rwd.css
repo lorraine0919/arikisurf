@@ -152,6 +152,35 @@
           background-color: rgba(0, 0, 0, 0.2);
           color: #fff;
           float: right; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top {
+            overflow: hidden; }
+            .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .allpattern {
+              width: 150vw;
+              transform: translateX(0vw); }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .allpattern .pattern {
+                width: 30vw;
+                display: inline-block; }
+                .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .allpattern .pattern img {
+                  width: 100%; }
+            .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow {
+              background-color: rgba(255, 255, 255, 0.8); }
+              .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow .arrowbtn {
+                text-align: center;
+                display: inline-block;
+                width: 50%;
+                color: rgba(0, 0, 0, 0.6);
+                box-sizing: border-box; }
+                .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow .arrowbtn:active {
+                  background-color: #e97b23;
+                  color: #fff; }
+                .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow .arrowbtn.pre {
+                  border-right: 1px solid rgba(0, 0, 0, 0.3);
+                  margin: 0 -2% 0 0; }
+                .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .top .arrow .arrowbtn.next {
+                  margin: 0 -2% 0 -2%; }
+          .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .patterngroup .patternarea .bottom {
+            padding: 10px 0;
+            text-align: center; }
         .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .texturegroup .texturecontent {
           width: 34%;
           float: right;

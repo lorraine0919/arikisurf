@@ -446,39 +446,7 @@
 			.selectboard{
 				display: none;
 			}
-			.demogroup{
-				width: 100%;
-				position: relative;
-				display: none;
-				.demo{
-					width: 28%;
-					padding-top: 70vh;
-					margin: auto;
-					position: relative;
-					.base{
-						bottom: -3%;
-					}
-				}
-				.rwdselectboard{
-					display: block;
-					position: absolute;
-					right: 6%;
-    				top: 11%;
-    				select {
-    					width: 100%;
-    					padding: 10px;
-    					background-color: transparent;
-    					color: #fff;
-    					option{
-    						color: #000;
-    						text-align: center;
-    						&:hover{
-    							background: #000;
-    						}
-    					}
-    				}
-				}
-			}
+			
 			.fill{
 				all: unset;
 				width: 100%;
@@ -490,8 +458,41 @@
 					padding:0px 20px;
 					margin: 10px 0;
 					box-sizing:border-box;
-					.next{
-						text-align: right;
+					.content{
+						.demogroup{
+							width: 100%;
+							position: absolute;
+							right: -25%;
+    						bottom: 14%;
+							.demo{
+								width: 24%;
+								margin: auto;
+								position: relative;
+							}
+							.rwdselectboard{
+								display: block;
+								position: absolute;
+								right: 6%;
+			    				top: 11%;
+			    				select {
+			    					width: 100%;
+			    					padding: 10px;
+			    					background-color: transparent;
+			    					color: #fff;
+			    					option{
+			    						color: #000;
+			    						text-align: center;
+			    						&:hover{
+			    							background: #000;
+			    						}
+			    					}
+			    				}
+							}
+						}
+						.next{
+							text-align: right;
+						}
+
 					}
 				}
 			}

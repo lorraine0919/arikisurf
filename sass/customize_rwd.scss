@@ -155,6 +155,11 @@
 						float: right;
 						margin: 0 0 0 -5%;
 						text-align: center;
+						&.click{
+							background-color: #e97b23;
+							color: #12314c;
+							border: none;
+						}
 					}
 					.selectgroup{
 						margin: 20px 0;
@@ -248,15 +253,17 @@
 								text-align: center;
 							}
 							margin: 10px 0;
-							width: 40%;
+							width: 30%;
 							float: right;
 							background-color: rgba(0,0,0,0.2);
 							padding: 2px;
 							.alltexture{
+								padding: 10px 0;
 								text-align: center;
 								.texture{
-									display: inline-block;
-									width: 30%;
+									display:block;
+									width: 60%;
+									margin: auto;
 									&.selected{
 										outline: 2px solid #e97b23;
 									}
@@ -275,12 +282,19 @@
 					background-color: rgba(0,0,0,0.6);
 					color: #fff;
 					padding:23px 10px;
-					top: 37%;
+					top: 12%;
     				left: -51%;
 					z-index: 6;
 					transition:1s;
 					.rwdintroducefix{
 						position: relative;
+						.texturetitle{
+							color: #e97b23;
+							padding: 5px 0px;
+							margin:0 0 5px 0;
+							border-bottom:1px solid rgba(255,255,255,0.3);
+							letter-spacing: 1px;
+						}
 						.btnfield{
 							width: 5%;
 							position: absolute;
@@ -388,6 +402,7 @@
     					}
     				}
 				}
+
 			}
 			.fill{
 				all: unset;
@@ -431,39 +446,7 @@
 			.selectboard{
 				display: none;
 			}
-			.demogroup{
-				width: 100%;
-				position: relative;
-				display: none;
-				.demo{
-					width: 28%;
-					padding-top: 70vh;
-					margin: auto;
-					position: relative;
-					.base{
-						bottom: -3%;
-					}
-				}
-				.rwdselectboard{
-					display: block;
-					position: absolute;
-					right: 6%;
-    				top: 11%;
-    				select {
-    					width: 100%;
-    					padding: 10px;
-    					background-color: transparent;
-    					color: #fff;
-    					option{
-    						color: #000;
-    						text-align: center;
-    						&:hover{
-    							background: #000;
-    						}
-    					}
-    				}
-				}
-			}
+			
 			.fill{
 				all: unset;
 				width: 100%;
@@ -475,8 +458,41 @@
 					padding:0px 20px;
 					margin: 10px 0;
 					box-sizing:border-box;
-					.next{
-						text-align: right;
+					.content{
+						.demogroup{
+							width: 100%;
+							position: absolute;
+							right: -25%;
+    						bottom: 14%;
+							.demo{
+								width: 24%;
+								margin: auto;
+								position: relative;
+							}
+							.rwdselectboard{
+								display: block;
+								position: absolute;
+								right: 6%;
+			    				top: 11%;
+			    				select {
+			    					width: 100%;
+			    					padding: 10px;
+			    					background-color: transparent;
+			    					color: #fff;
+			    					option{
+			    						color: #000;
+			    						text-align: center;
+			    						&:hover{
+			    							background: #000;
+			    						}
+			    					}
+			    				}
+							}
+						}
+						.next{
+							text-align: right;
+						}
+
 					}
 				}
 			}

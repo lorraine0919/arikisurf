@@ -2,6 +2,11 @@
   max-width: 1170px;
   margin: auto;
   position: relative; }
+  .map_bamboo_3 .mobile {
+    cursor: pointer;
+    padding: 10px 0 0 0; }
+    .map_bamboo_3 .mobile.click {
+      background-color: #e97b23; }
 
 .map_bamboo_2 {
   width: 100%;
@@ -9,13 +14,13 @@
   overflow: hidden; }
   .map_bamboo_2 .map_bamboo_1 {
     background-image: url("../images/4wavepoint/map-1.png");
-    -webkit-background-size: 200%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     transform: scale(1.5);
+    background-position: center;
     position: relative;
-    width: 100%;
-    padding-top: 100%;
+    width: 200%;
+    padding-top: 132%;
     transition: 1.5s cubic-bezier(0.68, 0.05, 0.22, 0.75); }
 
 .map_bamboo {
@@ -37,12 +42,11 @@
 .bamboo_line {
   background-color: rgba(255, 255, 255, 0.2);
   height: 1px;
-  margin: 5% 5%; }
+  margin: 5% 5% 0 5%; }
 
 .map_bamboo_menu ul li {
   text-align: center;
-  color: #fff;
-  margin: 5% 0%; }
+  color: #fff; }
 
 .po {
   width: 50px;
@@ -85,9 +89,3 @@
 .p9 {
   top: 11%;
   left: 69%; }
-
-@media screen and (max-width: 1500px) {
-  .map_bamboo_2 .map_bamboo_1 {
-    padding-top: 150%;
-    background-position: 25% 25%;
-    transform: scale(1.7); } }

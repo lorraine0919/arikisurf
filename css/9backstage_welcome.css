@@ -12,7 +12,6 @@
   .head35 h2 {
     line-height: 4.5;
     font-size: 25px;
-    letter-spacing: 30px;
     font-weight: bold;
     color: white; }
 
@@ -79,7 +78,8 @@
   .head35 {
     text-align: center; }
     .head35 h2 {
-      display: inline-block; }
+      display: inline-block;
+      letter-spacing: 12px; }
 
   .content35 {
     padding: 7vw;
@@ -119,7 +119,8 @@
     display: none; }
 
   .head35 h2 {
-    margin-left: 12%; }
+    margin-left: 12%;
+    letter-spacing: 20px; }
 
   .content35 {
     padding: 2% 8% 5% 18%;

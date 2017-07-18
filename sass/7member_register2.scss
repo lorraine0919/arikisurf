@@ -29,8 +29,10 @@ img{width: 100%;}
 				text-align: left;
 				margin-right:1vw;
 			}
-			.input26{
+			.gender26,.radio26{margin-left: 2vw;}
+			.input26,.addr26{
 				display: inline-block;
+				height: 35px;
 				border: none;
 			}
 			.notice26{color:rgb(100,200,220);}
@@ -70,16 +72,17 @@ img{width: 100%;}
 			letter-spacing: 6px;
 		}
 		.detail26 .item26{
-			width: 80vw;
+			width: 75vw;
 			margin-bottom:25px;
 			.span26{
-				width: 30%;
-				min-width: 100px;
+				width: 85px;
 				line-height: 35px;
 			}
-			.input26{
-				width: 45vw;
-				height: 35px;
+			.input26{width: calc(75vw - 100px);}
+			.addr26{
+				width: calc(37.5vw - 52px);
+				min-width: 69px;
+				margin-bottom: 1vw;
 			}
 			.notice26{display: none;}
 			.check26,.number26{
@@ -107,17 +110,23 @@ img{width: 100%;}
 		}
 		.detail26{
 			.item26{
-				width: 90%;
+				width: 80%;
 				margin-bottom: 30px;
 				.span26{
-					width: 110px;
+					width: 90px;
 					line-height: 40px;
-					margin-left:2vw; 
 				}
 				.input26{
-					width: 30vw;
+					width: calc(100% - 94px - 1vw);
 					height: 40px;
 					min-width: 180px;
+				}
+				.addr26{
+					width: calc(50% - 47px - 3vw);
+					// width: 7vw;
+					height: 35px;
+					margin-right:1vw;
+					margin-bottom: 1vw;
 				}
 				.notice26{
 					margin-left:calc(120px + 2vw + 1vw); 
@@ -137,7 +146,7 @@ img{width: 100%;}
 			}
 			.read26{
 				margin: 50px 0px;
-				padding-top:40px;
+				padding-top:30px;
 			}
 		}
 	}

@@ -1,84 +1,45 @@
 @charset "UTF-8";
 /*=========清除浮動=========*/
-.menu35:after {
+.box35:after {
   content: '';
   display: block;
   clear: both; }
 
-.content35 {
-  background: linear-gradient(#ddd, #7EC7C8); }
+.head35 {
+  display: block;
+  width: 100%;
+  background-color: #0e2334; }
+  .head35 h2 {
+    line-height: 4.5;
+    font-size: 25px;
+    letter-spacing: 30px;
+    font-weight: bold;
+    color: white; }
 
-.menu35 {
-  background-color: pink;
+.content35 {
+  background: linear-gradient(#dde, #7EC7C8); }
+
+.box35 {
   text-align: center;
   /*title35*/
   /*sidebar35*/ }
-  .menu35 .title35 {
-    width: 100%;
-    letter-spacing: 12px;
+  .box35 .title35 {
+    width: 105.3%;
     line-height: 2.5;
     font-size: 16px;
     font-weight: bold;
-    color: #55b0c5; }
-  .menu35 .sidebar35 li a {
-    font-size: 15px;
-    color: #fff;
-    background-color: #7CB8C4; }
+    color: #777; }
+  .box35 .sidebar35 li a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #7CB8C4;
+    background-color: #fff; }
 
 /*menu35*/
-/*主區塊*/
-.main35 {
-  background-color: #000;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); }
-  .main35 .part35 {
-    background-color: #ffa; }
+.box35 .sidebar35 li a:hover {
+  background-color: #ffa; }
 
-@media screen and (min-width: 768px) {
-  header, .clearfix {
-    display: none; }
-
-  .head35 {
-    width: 100%;
-    height: 100px;
-    background-color: #0e2334; }
-
-  .content35 {
-    padding: 1% 13% 1% 13%;
-    height: calc(84vh - 6vh - 2% - 5px);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    position: relative; }
-
-  .menu35 {
-    border-radius: 10px 10px 0px 0px;
-    /*sidebar35*/ }
-    .menu35 .title35 {
-      padding: 30px 0px;
-      border-radius: 0px 0px 10px 10px; }
-    .menu35 .sidebar35 {
-      float: left;
-      width: 18%;
-      position: relative;
-      top: 40%;
-      left: -8vw;
-      padding: 4%;
-      background-color: #eee;
-      border-radius: 20px; }
-      .menu35 .sidebar35 li a {
-        display: block;
-        padding: 15px 20px;
-        margin-top: 2vh;
-        letter-spacing: 2px;
-        border-radius: 8px; }
-      .menu35 .sidebar35 li:first-child a {
-        margin-top: 0px; }
-
-  .main35 {
-    float: left;
-    width: calc(100% - 5% -15%);
-    padding: 4% 5% 2% 15%; }
-
-  /*main35*/ }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
   .head35, .main35 {
     display: none; }
 
@@ -87,25 +48,125 @@
     height: 100vh;
     box-sizing: border-box; }
 
-  .menu35 {
+  .box35 {
     width: 100%;
     /*sidebar35*/ }
-    .menu35 .title35 {
-      padding-top: 10vh;
+    .box35 .title35 {
       height: 5em;
-      line-height: 5em; }
-    .menu35 .sidebar35 {
+      line-height: 5em;
+      padding-top: 10vh;
+      letter-spacing: 14px; }
+    .box35 .sidebar35 {
       width: 100%;
       padding-top: 20px; }
-      .menu35 .sidebar35 li a {
+      .box35 .sidebar35 li a {
         float: left;
-        margin: 7px;
+        margin: 9px;
         padding: 8% 3%;
-        width: calc(50% - 6% - 14px); }
+        width: calc(50% - 6% - 18px);
+        border-radius: 7px; }
 
   /*menu35*/
   .main35 {
     padding: 10%;
     width: 80%; }
+
+  /*main35*/ }
+@media screen and (min-width: 601px) {
+  header, .main35, .title35 {
+    display: none; }
+
+  .head35 {
+    text-align: center; }
+    .head35 h2 {
+      display: inline-block; }
+
+  .content35 {
+    padding: 7vw;
+    height: 100vh;
+    box-sizing: border-box; }
+
+  .box35 {
+    width: 100%;
+    /*sidebar35*/ }
+    .box35 .title35 {
+      height: 7em;
+      line-height: 7em;
+      padding-top: 7vh;
+      letter-spacing: 12px;
+      font-size: 25px;
+      /*title字*/ }
+    .box35 .sidebar35 {
+      width: 100%; }
+      .box35 .sidebar35 li a {
+        float: left;
+        margin: 30px;
+        padding: 7% 2%;
+        width: calc(50% - 4% - 60px);
+        letter-spacing: 7px;
+        font-size: 22px;
+        /*li字*/
+        border-radius: 9px; }
+
+  /*menu35*/
+  .main35 {
+    padding: 10%;
+    width: 80%; }
+
+  /*main35*/ }
+@media screen and (min-width: 1190px) {
+  header, .clearfix, .title35 {
+    display: none; }
+
+  .head35 h2 {
+    margin-left: 12%; }
+
+  .content35 {
+    padding: 2% 8% 5% 18%;
+    position: relative;
+    height: auto; }
+
+  .box35 {
+    padding: 5%;
+    width: auto;
+    border-radius: 10px;
+    background-color: #eef;
+    box-shadow: 1px 1px 5px rgba(0, 0, 50, 0.4);
+    /*sidebar35*/ }
+    .box35 .title35 {
+      height: 3em;
+      line-height: 3em;
+      padding: 30px 0px;
+      letter-spacing: 15px; }
+    .box35 .sidebar35 {
+      float: left;
+      width: 14vw;
+      padding: 2.5%;
+      position: absolute;
+      top: 160px;
+      left: 6vw;
+      border-radius: 20px;
+      background-color: rgba(124, 184, 196, 0.4); }
+      .box35 .sidebar35 li a {
+        display: block;
+        float: none;
+        width: auto;
+        padding: 15px 20px;
+        margin: 0px;
+        margin-top: 2vh;
+        letter-spacing: 2px;
+        font-size: 16px;
+        /*li字*/
+        font-weight: bold;
+        border-radius: 8px; }
+      .box35 .sidebar35 li:first-child a {
+        margin-top: 0px; }
+
+  .main35 {
+    display: block;
+    width: 88%;
+    padding: 0px;
+    margin-left: 10%;
+    text-align: left; }
 
   /*main35*/ }

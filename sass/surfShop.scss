@@ -1,3 +1,9 @@
+%bgnrpc{
+	background-repeat: no-repeat;
+	background-position: center;
+}
+		
+
 
 		.container{
 			max-width: 1170px;
@@ -12,6 +18,7 @@
 			}
 			// outline:1px solid black;
 			.item{
+				cursor: pointer;
 				img{
 				width: 100%;
 				vertical-align: middle;
@@ -25,7 +32,71 @@
 			clear: both;
 		}
 		.showProd{
+			padding: 8% 0;
 			background:linear-gradient(180deg, rgba(25, 52, 76, 1)35%, rgba(85, 70, 76, 0.8)100%);
+			.showProd_bg{
+				background-image: url('../images/1common/picselectbg.png');
+				background-repeat: no-repeat;
+				background-position: 60% 30%;
+				.prodTitle{
+					min-height: 150px;
+                   h1,p{
+                   	color: rgba(255,255,255,.8);
+                   }
+				}
+			}
+			.photoSelect{
+					    
+					 @keyframes fadeIn{
+					 	0%{
+							opacity: 0;
+					 	}
+					 	100%{
+							opacity: 1;
+					 	}
+					 }
+					.photo{
+						width: 23%;
+						padding-top: 20%;
+						display: inline-block;
+						background-image: url('../images/1common/insidecircle.png');
+						background-size: contain;
+
+						@extend %bgnrpc;
+						text-align: center;
+						position: relative;
+						img{
+							
+							width: 80%;
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							margin: auto;
+							z-index: 3;
+						}
+						img:hover{
+							animation: fadeIn 0.5s;
+							cursor: pointer;
+						}
+					}
+					.selected:after{
+						animation: fadeIn 0.5s;
+						content:'';
+						position: absolute;
+						background-image: url('../images/1common/picselected.png');
+						top: 0;
+						left: 0;
+						bottom: 0;
+						right: 0;
+						margin: auto;
+						@extend %bgnrpc;
+						background-size: contain;
+						z-index: 2;
+
+					}
+				}
 		}
 		.main_BG{
 			padding-top: 33px;

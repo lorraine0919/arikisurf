@@ -34,21 +34,68 @@
 				.rwdselectboard{
 					display: block;
 					position: absolute;
-					right: 6%;
+					right: 5%;
     				top: 11%;
-    				select {
-    					width: 100%;
-    					padding: 10px;
-    					background-color: transparent;
+    				.rwdSelectboardMenu{
+    					border: 1px solid #fff;
     					color: #fff;
-    					option{
-    						color: #000;
-    						text-align: center;
-    						&:hover{
-    							background: #000;
+    					text-align: center;
+    					li{
+    						padding: 15px 20px;
+    						border-bottom: 1px solid rgba(255,255,255,0.4);
+    						&.click{
+    							background-color: #e97b23;
     						}
     					}
     				}
+				}
+				.rwdintroduce{
+					position: absolute;
+					width: 45%;
+					background-color: rgba(0,0,0,0.6);
+					color: #fff;
+					padding:23px 10px;
+					top: 66%;
+    				left: -51%;
+					z-index: 6;
+					transition:1s;
+					.rwdintroducefix{
+						position: relative;
+						.btnfield{
+							width: 5%;
+							position: absolute;
+							top: -23px;
+   							right: -59px;
+							background-color: #fff;
+							color: #555;
+							padding: 37px 20px 10px 20px;
+							text-align: right;
+							font-weight: bold;
+							box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+						}
+						i{
+							font-size: 23px;
+							position: absolute;
+							right: 11px;
+    						top: 11px;
+    						color: #999;
+   							// text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+						}
+						#rwdHideInfoBtn{
+							display: none;
+						}
+					}
+					&.show{
+						transition:1s;
+						left: 0%;
+						#rwdHideInfoBtn{
+							display: block;
+						}
+						#rwdShowInfoBtn{
+							display: none;
+						}
+					}
+					
 				}
 			}
 			.next{

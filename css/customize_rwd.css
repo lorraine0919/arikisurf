@@ -26,18 +26,55 @@
       .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
         display: block;
         position: absolute;
-        right: 6%;
+        right: 5%;
         top: 11%; }
-        .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard select {
-          width: 100%;
-          padding: 10px;
-          background-color: transparent;
-          color: #fff; }
-          .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard select option {
-            color: #000;
-            text-align: center; }
-            .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard select option:hover {
-              background: #000; }
+        .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard .rwdSelectboardMenu {
+          border: 1px solid #fff;
+          color: #fff;
+          text-align: center; }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard .rwdSelectboardMenu li {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+            .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard .rwdSelectboardMenu li.click {
+              background-color: #e97b23; }
+      .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce {
+        position: absolute;
+        width: 45%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 23px 10px;
+        top: 66%;
+        left: -51%;
+        z-index: 6;
+        transition: 1s; }
+        .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce .rwdintroducefix {
+          position: relative; }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce .rwdintroducefix .btnfield {
+            width: 5%;
+            position: absolute;
+            top: -23px;
+            right: -59px;
+            background-color: #fff;
+            color: #555;
+            padding: 37px 20px 10px 20px;
+            text-align: right;
+            font-weight: bold;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce .rwdintroducefix i {
+            font-size: 23px;
+            position: absolute;
+            right: 11px;
+            top: 11px;
+            color: #999; }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce .rwdintroducefix #rwdHideInfoBtn {
+            display: none; }
+        .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce.show {
+          transition: 1s;
+          left: 0%; }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce.show #rwdHideInfoBtn {
+            display: block; }
+          .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce.show #rwdShowInfoBtn {
+            display: none; }
     .bg_forest_2 .step1_maxContent .next {
       position: absolute;
       right: -283%;

@@ -65,7 +65,24 @@ $(function(){
 		$('.step1_maxContent .content p').text(boardinfo[index]);
 		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
 	});
+
+	/*我是rwd換圖片和敘述和按鈕顏色*/
+
 /*↑步驟一換圖片和敘述和按鈕顏色*/
+	$('.rwdSelectboardMenu li').click(function(){
+		$(this).addClass('click');
+		$('.rwdSelectboardMenu li').not(this).removeClass('click');
+		var index=$(this).index();
+		$('.step1_maxContent .introduce .contentimg img').attr('src','images/2board/step1/'+boardimg[index]+'.png');
+		$('.step1_maxContent .rwdintroduce .rwdboardinfo').text(boardinfo[index]);
+		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
+	});
+/*↓步驟一rwd的拉出介紹*/
+	$('.btnfield').click(function(){
+		$('.rwdintroduce').toggleClass('show');
+
+	});
+/*↑步驟一rwd的拉出介紹*/
 
 /*↓步驟二按按鈕換顏色*/
 	$('.selectAndNext .whitebtn').click(function(){

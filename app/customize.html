@@ -3,8 +3,10 @@
   <!--header-->
   <head>
   <!--(bake module/head.html)-->
+  <title>客製浪板</title>
   <link rel="stylesheet" type="text/css" href="css/customize.css">
   <link rel="stylesheet" type="text/css" href="css/customize_rwd.css">
+  <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
   <script type="text/javascript" src="js/jquery.js"></script>
  </head>
   <!--header end-->
@@ -44,15 +46,26 @@
 					<img src="images/2board/base.png" class="base">
 				</div>
 				<div class="rwdselectboard" >
-					<select name="" id="">
-						<option value="">槍板</option>
-						<option value="">長板</option>
-						<option value="">娛樂版</option>
-						<option value="">短板</option>
-						<option value="">魚板</option>
-						<option value="">趴板</option>
-					</select>
-				</div>				
+					<ul class="rwdSelectboardMenu">
+						<li>槍板</li>
+						<li>長板</li>
+						<li>娛樂板</li>
+						<li>短板</li>
+						<li>魚板</li>
+						<li>趴板</li>
+					</ul>
+				</div>		
+				<div class="rwdintroduce">
+					<div class="rwdintroducefix">
+						<div class="btnfield">
+							<i class="fa fa-arrow-circle-right" aria-hidden="true" id="rwdShowInfoBtn"></i>
+							<i class="fa fa-arrow-circle-left" aria-hidden="true" id="rwdHideInfoBtn"></i>	
+							<p>板型介紹</p>
+						</div>
+						
+						<p class="rwdboardinfo">長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強</p>	
+					</div>
+				</div>		
 			</div>
 			<div class="selectAndNext">
 				<div class="selectAndNextfix">

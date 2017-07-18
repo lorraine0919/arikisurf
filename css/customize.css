@@ -241,8 +241,8 @@
       position: relative; }
       .bg_forest_2 .step2_maxContent .introduce .introducefix {
         position: absolute;
-        width: 101%;
-        left: -10%; }
+        width: 125%;
+        left: -19%; }
         .bg_forest_2 .step2_maxContent .introduce .introducefix .head {
           padding: 8px 20px;
           color: #fff;
@@ -279,6 +279,8 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
+      .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle {
+        display: none; }
     .bg_forest_2 .step2_maxContent .selectAndNext {
       width: 25%;
       display: inline-block;
@@ -425,7 +427,7 @@
                   width: 100%; }
       .bg_forest_2 .step2_maxContent .selectAndNext .next {
         position: absolute;
-        width: 40%;
+        width: 52%;
         bottom: -9%;
         right: 0; }
         .bg_forest_2 .step2_maxContent .selectAndNext .next a {

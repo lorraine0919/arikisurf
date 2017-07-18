@@ -139,24 +139,53 @@
 						bottom: -3%;
 					}
 				}
-				.rwdselectboard{
+				.rwdselectstyle{
 					display: block;
 					position: absolute;
-					right: 6%;
-    				top: 11%;
-    				select {
-    					width: 100%;
-    					padding: 10px;
-    					background-color: transparent;
-    					color: #fff;
-    					option{
-    						color: #000;
-    						text-align: center;
-    						&:hover{
-    							background: #000;
-    						}
-    					}
-    				}
+					right: 0;
+					top: 0;
+					padding: 0 10px;
+					.btn{
+						width: 25%;
+						border: 1px solid #fff;
+						border-radius: 5px;
+						padding: 5px;
+						color: #fff;
+						float: right;
+						margin: 0 0 0 -5%;
+					}
+					.colorgroup{
+						.colorall{
+							margin: 10px 0;
+							width: 38%;
+							float: right;
+							background-color: rgba(0,0,0,0.2);
+							padding:10px;
+							text-align: center;
+							.color{
+								margin:0 2px;
+								width: 25%;
+								display: inline-block;
+								&:nth-child(1) .circle{
+									background-color: #fff;
+								}
+								&:nth-child(2) .circle{
+									background-color:rgb(0, 155, 216);
+								}
+								&:nth-child(3) .circle{
+									background-color: rgb(255, 209, 5);
+								}
+								.circle{
+									width: 100%;
+									padding-top: 100%;
+									border-radius: 50%;
+									display: inline-block;
+								}
+							}
+
+						}
+					}
+
 				}
 			}
 			.selectAndNextfix{

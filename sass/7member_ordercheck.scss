@@ -1,0 +1,94 @@
+.clearfix{
+  clear:both;
+}
+@mixin Width-size_8cart($width,$percent,$Mup,$Mdown){
+    max-width: $width + px;
+    width: $percent ;
+    margin:$Mup $Mdown;
+}
+@media screen and (min-width:768px){
+  .member_ordercheck_23{
+    @include Width-size_8cart(1170, 100%, 0, auto);
+    a{
+      text-decoration: none;
+      color:black;
+    }
+    .ordercheck-list{
+      ul{
+        li{
+          width: 20%;
+          text-align: center;
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 10px;
+          position: relative;
+          &:after{
+            content: '';
+            position: absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            z-index: -1;
+            background-color: #eee;
+            transform:scaleY(1.3) perspective(0.5em) rotateX(5deg);
+            transform-origin: bottom;
+          }
+        }
+        .change-color1{
+          &:after{
+            content: '';
+            background-color: #ddd;
+          }
+        }
+        .change-color2{
+          &:after{
+            content: '';
+            background-color: #ddd;
+          }
+        }
+        li:nth-child(1):after{
+          background-color: #ddd;
+        }
+        li:nth-child(2){
+          
+        }
+        li:nth-child(3){
+          
+        }
+      }
+    }//ordercheck-list
+    .orderInfo-customize{
+      width: 100%;
+      background-color: #ddd;
+      box-sizing: border-box;
+      padding: 3%;
+      .orderInfo-CZ-title{
+        background-color: #ccc;
+        ul{
+          li:nth-child(5){
+            text-align: center;
+          }
+        }
+      }
+      .orderInfo-CZ-txt{
+        margin:3% 0;
+        ul{
+          li{
+            width: 40%;
+            display: inline-block;
+            text-align: center;
+          }
+          li:first-child{
+            margin-left:10%;
+          }
+          .btn-item{
+            background-color: #ccc;
+            box-sizing: border-box;
+            padding:5px;
+          }
+        }
+      }
+    }//orderInfo-customize
+  }//member_ordercheck_23
+}

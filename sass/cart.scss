@@ -233,7 +233,14 @@ $main-color_29:#5A929E;
                 .list-Pchange_28{
                     // margin-top: 20px;
                     padding-top: 2%;
-                    
+                    .btn-item{
+                        width: 90%;
+                        height: 36px;
+                        line-height: 36px;
+                        // margin-left:20px;
+                        background-color: #ccc;
+                        text-align: center;
+                    }
                     .Pchange-changebtn{
                         margin:0 auto;
                         margin-bottom: 3%;                    

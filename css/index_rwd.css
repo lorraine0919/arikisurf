@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /*文字陰影*/
 @media screen and (max-width: 960px) {
+  .banner_1 {
+    background-image: url("../surfopening.gif"); }
+
   .coating_1 .maxContent .demo {
     display: none; }
   .coating_1 .maxContent .about {
@@ -139,6 +142,8 @@
         position: absolute;
         top: 0;
         left: 0; }
+        .forum_1 .contentMax .postgroup .postfix .post .content .postcontentgroup .mempic {
+          width: 12vw; }
       .forum_1 .contentMax .postgroup .postfix:nth-child(1) {
         left: 10%; }
       .forum_1 .contentMax .postgroup .postfix:nth-child(2) {

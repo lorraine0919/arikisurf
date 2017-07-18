@@ -1,0 +1,80 @@
+*{text-decoration: none;}
+.content19{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  background: linear-gradient(hsla(0, 0%, 86%, 0.3),hsla(206, 57%, 50%, 0.4));
+}
+/*主區塊*/
+.main19{
+  position: relative;
+  margin: 20vh auto;
+  border-radius: 10px;
+  color: #777;
+  background:hsla(0, 0%, 100%, 0.85);
+}
+.head19:first-child{font-size: 25px;}
+.head19,.login19{
+  margin: auto;
+  text-align: center;
+}
+.slogan19{
+  padding-top: 1vh;
+  padding-bottom:5vh;
+  color: #fa0;
+}
+.login19 .input19{
+    display: block;
+    border-radius: 8px;
+  }
+.submit19{
+  width: 60px;
+  margin-top: 2vw;
+  padding: 2px;
+  color: #fff;
+  background-color: #fa0;
+  border-radius: 8px;
+}
+.close19{
+  display: block;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.submit19:hover{
+  box-shadow:
+  0 1px 3px 0 rgba(0,0,0,0.12),
+  0 1px 2px 0 rgba(0,0,0,0.24);
+}
+@media screen and (max-width:600px){
+  .main19{
+    width: 80%;
+    padding: 5vh 0vh;
+  }
+  .slogan19{font-size: 15px;}
+  .login19 .input19{
+    width: 60%;
+    max-width: 210px;
+    padding: 4px;
+    margin: 10px auto;
+  }
+}
+@media screen and (min-width:601px){
+  .main19{
+    width: 40%;
+    padding: 7vh 0vh;
+  }
+  .slogan19{font-size: 18px;}
+  .login19 .input19{
+    width: 55%;
+    max-width: 220px;
+    padding: 5px;
+    margin: 20px auto;
+  }
+}

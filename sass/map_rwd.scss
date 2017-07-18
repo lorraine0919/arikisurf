@@ -1,0 +1,49 @@
+@media screen and (max-width:767px){
+	.map_bamboo_3{
+		.map_bamboo_menu{
+			width: 35%;
+			.bamboo_address{
+				bottom: -93%;
+				top:auto;
+				left: 14%;
+				width: 80vw;
+				.bamboo_addressfix{
+					position: relative;
+					.fa{
+						position: absolute;
+						font-size: 30px;
+						right: 0;
+						&.fa-arrow-circle-down{
+							display: none;
+						}
+					}
+					.bamboo_title{
+						
+					}
+					.pipeline{
+						display: none;
+					}
+
+				}
+			}
+			ul{
+				.mobile{
+					width: 100%;
+					display: block;
+					h3{
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	.map_bamboo_2{
+		.map_bamboo_1{
+			 width: 400%;
+   			 padding-top: 320%;
+			.po{
+
+			}
+		}
+	}
+}

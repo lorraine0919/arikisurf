@@ -59,6 +59,8 @@
   color: #fff;
   padding: 10px;
   background-image: url(../); }
+  .bamboo_address .fa {
+    display: none; }
   .bamboo_address .pipeline {
     width: 100%; }
   .bamboo_address h5 {

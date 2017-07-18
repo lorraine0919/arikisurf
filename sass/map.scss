@@ -79,7 +79,9 @@
 	padding:10px;
 	background-image: url(../);
 	// transition:1.5s cubic-bezier(.68,.05,.22,.75); 
-		
+		.fa{
+			display: none;
+		}
 		.pipeline{
 			width: 100%;
 		}

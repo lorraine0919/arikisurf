@@ -36,23 +36,21 @@ $(document).ready(function(){
 		}
 
 		var titlearr = ['Pipeline','Superbank','Jeffreys-Bay','Black-Beach','Teahupoo','La-Graviere','Uluwatu','Hakuna','Matata'];
-		var textarr = ['',]
 		var index = $(this).index();
 		$('.map_bamboo_3 .title').text(titlearr[index]);
 		$('.map_bamboo_3 .pipeline').attr('src','../images/4wavepoint/'+(titlearr[index])+'.jpg');
-
-
-
-
-
-
-
-
-
-
 	});
 
-
+	$('#showInfo').click(function(){
+		$('.bamboo_addressfix').animate({height:'30vh'});
+		$('#showInfo').hide();
+		$('#hideInfo').show();
+	})
+	$('#hideInfo').click(function(){
+		$('.bamboo_addressfix').animate({height:'10vh'});
+		$('#showInfo').show();
+		$('#hideInfo').hide();
+	});
 
 
 

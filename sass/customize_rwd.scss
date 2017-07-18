@@ -140,6 +140,7 @@
 					}
 				}
 				.rwdselectstyle{
+					width: 82%;
 					display: block;
 					position: absolute;
 					right: 0;
@@ -153,11 +154,15 @@
 						color: #fff;
 						float: right;
 						margin: 0 0 0 -5%;
+						text-align: center;
+					}
+					.selectgroup{
+						margin: 20px 0;
 					}
 					.colorgroup{
 						.colorall{
 							margin: 10px 0;
-							width: 38%;
+							width: 34%;
 							float: right;
 							background-color: rgba(0,0,0,0.2);
 							padding:10px;
@@ -185,7 +190,31 @@
 
 						}
 					}
-
+					.patterngroup{
+						.patternarea{
+							width: 34%;
+							margin: 10px 0;
+							background-color: rgba(0,0,0,0.2);
+							color: #fff;
+							float: right;
+						}
+					}
+					.texturegroup{
+						.texturecontent{
+							width: 34%;
+							float: right;
+							background-color: rgba(0,0,0,0.2);
+							.alltexture{
+								.texture{
+									display: inline-block;
+									width: 30%;
+									img{
+										width: 100%;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 			.selectAndNextfix{

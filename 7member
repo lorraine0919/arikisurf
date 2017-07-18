@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--header-->
+<head> 
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Document</title>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+      <link rel="stylesheet" type="text/css" href="css/header.css">
+      <link rel="stylesheet" type="text/css" href="css/footer.css">
+      <link rel="stylesheet" type="text/css" href="css/grid.css">
+  
+      <script src="js/jquery.js"></script>
+    <title>Ariki Surf - 會員專區</title>
+    <link rel="stylesheet" type="text/css" href="css/7member.css">
+    <script type="text/javascript" src="libs/jquery/dist/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <script type="libs/Scrollmagic/scrollmagic/minified/Scrollmagic.min.js"></script>
+    <script type="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script type="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script type="libs/jquery.stellar/src/jquery.stellar.js"></script>
+</head>
+<!--header end-->
+<body>
+<header>
+    <nav class="nav_0">
+        <div class="navDetail">
+            <div class="navfix">
+                <div class="navimg">
+                    <input type="checkbox" id="control">
+                    <div class="logo">
+                        <div class="logofix">
+                            <a href="index.html">
+                               <img src="images/1common/logo.png">
+                            </a>                            
+                        </div>
+                    </div>
+                    <label class="hb" for="control">選單</label>
+                    <ul class="menu">
+                        <li><a href="customize.html">客製浪板</a></li>
+                        <li><a href="surfshop.html">衝浪配備</a></li>
+                        <li><a href="map.html">衝浪地圖</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="about.html">關於酋長</a></li>
+                        <li><a href="7member.html" class="rwd">會員專區</a></li>
+                        <li><a href="cart.html" class="rwd">購物車</a></li>
+                    </ul>
+                    <div class="iconGroup">
+                        <ul>
+                            <li><a href="7member.html"><img src="images/1common/member.png" alt="">會員專區</a></li>
+                            <li class="line"></li>
+                            <li><a href="cart.html"><img src="images/1common/shop.png" alt="">購物車</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="idHello">
+                        <p>ID：<span>煞氣a周子瑜 §醉ㄞ金城武</span> 您好</p>
+                    </div> -->
+                </div>
+            </div>
+            </div>
+    </nav>
+    <div class="topGround_0"></div>
+</header>
+<!-- =================會員專區================== -->
+    <div class="content20">
+        <div class="left20">
+            <div class="base20">
+                <p class="hello20">
+                    fran1984，午安! 
+                </p>
+                <div class="photo20">
+                    <img src="">照片
+                </div>
+                <div class="row20">
+                    <span class="span20">更新大頭照：</span>
+                    <input type="file" name="" class="input20">
+                    <input type="submit" name="" value="上傳" class="upload20">
+                </div>
+            </div><!-- base20 -->
+            <ul class="sidebar20">
+                <li><a href="#">個人資料</a></li>
+                <li><a href="#">訂單查詢</a></li>
+                <li><a href="#">我的最愛</a></li>
+                <li><a href="#">我的留言</a></li>
+            </ul>
+        </div><!-- left20 -->
+        <form class="right20">
+            <div class="personal20">
+                <p class="title20">個人資料</p>
+                <div class="row20">
+                    <span class="span20">帳號：</span>
+                    <span class="account20">fran1984</span>
+                </div>
+                <div class="row20">
+                    <span class="span20">姓名：</span>
+                    <input type="text" class="input20"></input>
+                </div>
+                <div class="row20">
+                    <span class="span20">性別：</span>
+                    <input type="radio" class="radio20">
+                        <span class="gender20">男</span>
+                    </input>
+                    <input type="radio" class="radio20">
+                     <span class="gender20">女</span>
+                    </input>
+                </div>
+                <div class="row20">
+                    <span class="span20">地址：</span>
+                    <select class="select20"></select>
+                    <select class="select20"></select>
+                    <br>
+                    <span class="span20"></span>
+                    <input type="text" name="" class="input20 addr20">
+                </div>
+                <div class="row20">
+                    <span class="span20">電話：</span>
+                    <input type="text" class="input20"></input>
+                </div>
+                <div class="row20">
+                    <span class="span20">電子郵件：</span>
+                    <input type="email" class="input20"></input>
+                </div>
+            </div><!-- personal20 -->
+            <div id="footer20">footer20</div>
+            <div class="changepsw20">
+                <p class="title20">變更密碼</p>
+                <div class="row20">
+                    <span class="span20">輸入舊密碼：</span>
+                    <input type="psw" maxlength="10" size="12" value="" class="input20">
+                </div>
+                <div class="row20">
+                    <span class="span20">輸入新密碼：</span>
+                    <input type="psw" maxlength="10" size="12" value="" class="input20">
+                </div>
+                <div class="row20">
+                    <span class="span20">確認新密碼：</span>
+                    <input type="psw" maxlength="10" size="12" value="" class="input20">
+                </div>
+            </div><!-- changepsw20 -->
+            <div class="send20">
+                <button class="submit20">取消</button><button class="submit20">送出</button>
+            </div><!-- send20 -->
+        </div><!-- right20 -->
+    </div><!-- content20 -->
+    <script type="text/javascript">
+      $(function () {
+        var controller = new ScrollMagic.Controller();
+        var move  = new Scrollmagic.Scene({
+            triggerElement:"#footer20",
+            offset:'100px'
+        })
+        .addIndicators({name:'對應點'})
+        .setClassToggle('.left20','move20')
+        .addTo(controller)
+      })
+    </script>
+<footer class="footer_0">
+    <div class="maxContent">
+    	<div class="titlegroup">
+	     	<ul class="itemtitle">
+	    		<li>酋長商城</li>
+	    		<li><a href="">衝浪地圖</a></li>
+	    		<li><a href="">關於酋長</a></li>
+	    		<li><a href="">會員中心</a></li>
+	    	</ul>   		
+    	</div>
+    	<div class="left col-xs-12 col-sm-6">
+	    	<ul class="store">
+	    		<li><a href="">客製浪板</a></li>
+	    		<li><a href="">衝浪配備</a></li>
+	    		<li><a href="">購物車</a></li>
+	    	</ul>
+	    	<ul class="map">
+	    		<li><a href="">Pipeline</a></li>
+	    		<li><a href="">Superbank</a></li>
+	    		<li><a href="">Jeffrey's Bay</a></li>
+	    		<li><a href="">Black Beach</a></li>
+	    		<li><a href="">Teahupo'o</a></li>
+	    		<li><a href="">La Graviere</a></li>
+	    		<li><a href="">Uluwatu</a></li>
+	    	</ul>
+	    	<ul class="about">
+	    		<li><a href="">最新消息</a></li>
+	    		<li><a href="">經營理念</a></li>
+	    		<li><a href="">品牌沿革</a></li>
+	    		<li><a href="">得獎紀錄</a></li>
+	    		<li><a href="">全球據點</a></li>
+	    	</ul>
+	    	<ul class="member">
+	    		<li><a href="">基本資料</a></li>
+	    		<li><a href="">我的收藏</a></li>
+	    		<li><a href="">訂單查詢</a></li>
+	    	</ul> 		
+    	</div>
+		<div class="right col-xs-12 col-sm-6">
+			<h3>留言給我們</h3>
+			<p>arikisurf@arikisurf.com</p>
+			<a href="">留言</a>
+		</div>
+		<div class="clearfix"></div>
+    </div>
+</footer>
+</body>
+</html>

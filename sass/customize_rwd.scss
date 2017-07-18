@@ -1,0 +1,486 @@
+@media screen and (max-width:767px){
+	.bg_forest_2{
+		.step1_maxContent{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			.stepbar{
+				width: 60%;
+				.title{
+					display: none;
+				}
+				.circle{
+					margin-top: 5%;
+				}
+			}
+			.introduce{
+				display: none;
+			}
+			.selectboard{
+				display: none;
+			}
+			.demogroup{
+				width: 100%;
+				position: relative;
+				.demo{
+					width: 28%;
+					padding-top: 70vh;
+					margin: auto;
+					position: relative;
+					.base{
+						bottom: -3%;
+					}
+				}
+				.rwdselectboard{
+					display: block;
+					position: absolute;
+					right: 5%;
+    				top: 11%;
+    				.rwdSelectboardMenu{
+    					border: 1px solid #fff;
+    					color: #fff;
+    					text-align: center;
+    					li{
+    						padding: 15px 20px;
+    						border-bottom: 1px solid rgba(255,255,255,0.4);
+    						&.click{
+    							background-color: #e97b23;
+    						}
+    					}
+    				}
+				}
+				.rwdintroduce{
+					display: block;
+					position: absolute;
+					width: 45%;
+					background-color: rgba(0,0,0,0.6);
+					color: #fff;
+					padding:23px 10px;
+					top: 66%;
+    				left: -51%;
+					z-index: 6;
+					transition:1s;
+					.rwdintroducefix{
+						position: relative;
+						.btnfield{
+							width: 5%;
+							position: absolute;
+							top: -23px;
+   							right: -59px;
+							background-color: #fff;
+							color: #555;
+							padding: 37px 20px 10px 20px;
+							text-align: right;
+							font-weight: bold;
+							box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+						}
+						i{
+							font-size: 23px;
+							position: absolute;
+							right: 11px;
+    						top: 11px;
+    						color: #999;
+   							// text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+						}
+						#rwdHideInfoBtn{
+							display: none;
+						}
+					}
+					&.show{
+						transition:1s;
+						left: 0%;
+						#rwdHideInfoBtn{
+							display: block;
+						}
+						#rwdShowInfoBtn{
+							display: none;
+						}
+					}
+					
+				}
+			}
+			.next{
+				position: absolute;
+				right: -283%;
+				bottom: 0;
+				#step1tostep2{
+					margin: 0;
+				}
+			}
+		}
+		.step2_maxContent{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			.stepbar{
+				width: 60%;
+				.title{
+					display: none;
+				}
+				.circle{
+					margin-top: 5%;
+				}
+			}
+			.introduce{
+				display: none;
+			}
+			.selectboard{
+				display: none;
+			}
+			.demogroup{
+				width: 100%;
+				position: relative;
+				.demo{
+					width: 28%;
+					padding-top: 70vh;
+					margin: auto;
+					position: relative;
+					.base{
+						bottom: -3%;
+					}
+				}
+				.rwdselectstyle{
+					width: 82%;
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 0;
+					padding: 0 10px;
+					.btn{
+						width: 25%;
+						border: 1px solid #fff;
+						border-radius: 5px;
+						padding: 5px;
+						color: #fff;
+						float: right;
+						margin: 0 0 0 -5%;
+						text-align: center;
+					}
+					.selectgroup{
+						margin: 20px 0;
+					}
+					.colorgroup{
+							color: #fff;
+						.colorall{
+							margin: 10px 0;
+							width: 34%;
+							float: right;
+							background-color: rgba(0,0,0,0.2);
+							padding:10px;
+							text-align: center;
+							.color{
+								margin:0 2px;
+								width: 25%;
+								display: inline-block;
+								&:nth-child(1) .circle{
+									background-color: #fff;
+								}
+								&:nth-child(2) .circle{
+									background-color:rgb(0, 155, 216);
+								}
+								&:nth-child(3) .circle{
+									background-color: rgb(255, 209, 5);
+								}
+								.circle{
+									width: 100%;
+									padding-top: 100%;
+									border-radius: 50%;
+									display: inline-block;
+								}
+							}
+
+						}
+					}
+					.patterngroup{
+						.patternarea{
+							width: 34%;
+							margin: 10px 0;
+							background-color: rgba(0,0,0,0.2);
+							color: #fff;
+							float: right;
+							.top{
+								overflow: hidden;
+								.allpattern{
+									width: 150vw;
+									transform:translateX(0vw);
+									.pattern{
+										width: 30vw;
+										display: inline-block;
+										img{
+											width: 100%;
+										}
+									}
+								}
+								.arrow{
+									background-color:rgba(255,255,255,0.8);
+									.arrowbtn{
+										text-align: center;
+										display: inline-block;
+										width: 50%;
+										color: rgba(0,0,0,0.6);
+										box-sizing:border-box;
+										&:active{
+											background-color: #e97b23;
+											color: #fff;
+										}
+										&.pre{
+											border-right: 1px solid rgba(0,0,0,0.3);
+											margin: 0 -2% 0 0;
+										}
+										&.next{
+											margin: 0 -2% 0 -2%;
+										}
+									}
+								}
+							}
+							.bottom{
+								padding: 10px 0;
+								text-align: center;
+							}
+						}
+					}
+					.texturegroup{
+						.texturecontent{
+							.title{
+								color: #fff;
+								background-color: rgba(255, 130, 0, 0.1);
+								padding: 5px;
+								text-align: center;
+							}
+							margin: 10px 0;
+							width: 40%;
+							float: right;
+							background-color: rgba(0,0,0,0.2);
+							padding: 2px;
+							.alltexture{
+								text-align: center;
+								.texture{
+									display: inline-block;
+									width: 30%;
+									&.selected{
+										outline: 2px solid #e97b23;
+									}
+									img{
+										width: 100%;
+									}
+								}
+							}
+						}
+					}
+				}
+				.rwdintroduce{
+					display: block;
+					position: absolute;
+					width: 45%;
+					background-color: rgba(0,0,0,0.6);
+					color: #fff;
+					padding:23px 10px;
+					top: 37%;
+    				left: -51%;
+					z-index: 6;
+					transition:1s;
+					.rwdintroducefix{
+						position: relative;
+						.btnfield{
+							width: 5%;
+							position: absolute;
+							top: -23px;
+   							right: -59px;
+							background-color: #fff;
+							color: #555;
+							padding: 37px 20px 10px 20px;
+							text-align: right;
+							font-weight: bold;
+							box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+						}
+						i{
+							font-size: 23px;
+							position: absolute;
+							right: 11px;
+    						top: 11px;
+    						color: #999;
+   							// text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+						}
+						#rwdHideInfoBtn{
+							display: none;
+						}
+					}
+					&.show{
+						transition:1s;
+						left: 0%;
+						#rwdHideInfoBtn{
+							display: block;
+						}
+						#rwdShowInfoBtn{
+							display: none;
+						}
+					}
+					
+				}
+
+			}
+			.selectAndNextfix{
+				display: none;
+			}
+			.selectAndNext{
+				padding-top: 0;
+				.next{
+					position: absolute;
+					right: -283%;
+					bottom: 0;
+					width: 100%;
+					#step2tostep3{
+						margin: 0;
+						width: 58%;
+					}
+				}	
+			}
+			
+		}
+		.step3_maxContent{
+			display: block;
+			position: relative;
+			width: 100%;
+			.stepbar{
+				width: 60%;
+				.title{
+					display: none;
+				}
+				.circle{
+					margin-top: 5%;
+				}
+			}
+			.introduce{
+				display: none;
+			}
+			.selectboard{
+				display: none;
+			}
+			.demogroup{
+				width: 100%;
+				position: relative;
+				display: none;
+				.demo{
+					width: 28%;
+					padding-top: 70vh;
+					margin: auto;
+					position: relative;
+					.base{
+						bottom: -3%;
+					}
+				}
+				.rwdselectboard{
+					display: block;
+					position: absolute;
+					right: 6%;
+    				top: 11%;
+    				select {
+    					width: 100%;
+    					padding: 10px;
+    					background-color: transparent;
+    					color: #fff;
+    					option{
+    						color: #000;
+    						text-align: center;
+    						&:hover{
+    							background: #000;
+    						}
+    					}
+    				}
+				}
+			}
+			.fill{
+				all: unset;
+				width: 100%;
+				display: block;
+				position: static;
+				.fillfix{
+					all: unset;
+					display: block;
+					padding:0px 20px;
+					margin: 10px 0;
+					box-sizing:border-box;
+					.content{
+						padding: 10px 2px 0 0;
+						h3{
+							font-size: 15px;
+						}
+					}
+				}
+			}
+			.selectAndNext{
+				display: none;
+			}
+			
+		}
+		.step4_maxContent{
+			position: relative;
+			width: 100%;
+			.stepbar{
+				width: 60%;
+				.title{
+					display: none;
+				}
+				.circle{
+					margin-top: 5%;
+				}
+			}
+			.introduce{
+				display: none;
+			}
+			.selectboard{
+				display: none;
+			}
+			.demogroup{
+				width: 100%;
+				position: relative;
+				display: none;
+				.demo{
+					width: 28%;
+					padding-top: 70vh;
+					margin: auto;
+					position: relative;
+					.base{
+						bottom: -3%;
+					}
+				}
+				.rwdselectboard{
+					display: block;
+					position: absolute;
+					right: 6%;
+    				top: 11%;
+    				select {
+    					width: 100%;
+    					padding: 10px;
+    					background-color: transparent;
+    					color: #fff;
+    					option{
+    						color: #000;
+    						text-align: center;
+    						&:hover{
+    							background: #000;
+    						}
+    					}
+    				}
+				}
+			}
+			.fill{
+				all: unset;
+				width: 100%;
+				display: block;
+				position: static;
+				.fillfix{
+					all: unset;
+					display: block;
+					padding:0px 20px;
+					margin: 10px 0;
+					box-sizing:border-box;
+					.next{
+						text-align: right;
+					}
+				}
+			}
+			
+		}
+	}
+}

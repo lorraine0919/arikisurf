@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
   <!--header-->
   <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Document</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <link rel="stylesheet" type="text/css" href="css/header.css">
       <link rel="stylesheet" type="text/css" href="css/footer.css">
       <link rel="stylesheet" type="text/css" href="css/grid.css">
   
       <script src="js/jquery.js"></script>
+  <title>客製浪板</title>
   <link rel="stylesheet" type="text/css" href="css/customize.css">
+  <link rel="stylesheet" type="text/css" href="css/customize_rwd.css">
+  <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
   <script type="text/javascript" src="js/jquery.js"></script>
  </head>
   <!--header end-->
@@ -31,12 +33,13 @@
                     </div>
                     <label class="hb" for="control">選單</label>
                     <ul class="menu">
+                        <li class="rwdlogo"><a href="index.html" class="rwd"><img src="images/1common/logo.png"></a></li>
                         <li><a href="customize.html">客製浪板</a></li>
                         <li><a href="surfshop.html">衝浪配備</a></li>
                         <li><a href="map.html">衝浪地圖</a></li>
                         <li><a href="news.html">最新消息</a></li>
                         <li><a href="about.html">關於酋長</a></li>
-                        <li><a href="7member.html" class="rwd">會員專區</a></li>
+                        <li><a href="7member_update.html" class="rwd">會員專區</a></li>
                         <li><a href="cart.html" class="rwd">購物車</a></li>
                     </ul>
                     <div class="iconGroup">
@@ -58,7 +61,7 @@
 <div class="wrapper">
 	
 	<div class="bg_forest_2">
-<!-- 		<div class="pillar">
+		<!-- 		<div class="pillar">
 			<img src="images/2board/pillar.png">
 		</div> -->
 		<div class="step1_maxContent">
@@ -87,7 +90,28 @@
 				<div class="demo">
 					<img src="images/2board/longboard/longboard.png" class="boarddemo">
 					<img src="images/2board/base.png" class="base">
-				</div>				
+				</div>
+				<div class="rwdselectboard" >
+					<ul class="rwdSelectboardMenu">
+						<li>槍板</li>
+						<li class="click">長板</li>
+						<li>娛樂板</li>
+						<li>短板</li>
+						<li>魚板</li>
+						<li>趴板</li>
+					</ul>
+				</div>		
+				<div class="rwdintroduce">
+					<div class="rwdintroducefix">
+						<div class="btnfield">
+							<i class="fa fa-arrow-circle-right" aria-hidden="true" id="rwdShowInfoBtn"></i>
+							<i class="fa fa-arrow-circle-left" aria-hidden="true" id="rwdHideInfoBtn"></i>	
+							<p>板型介紹</p>
+						</div>
+						
+						<p class="rwdboardinfo">長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強</p>	
+					</div>
+				</div>		
 			</div>
 			<div class="selectAndNext">
 				<div class="selectAndNextfix">
@@ -141,7 +165,89 @@
 				<div class="demo">
 					<img src="images/2board/longboard/longboard.png" class="boarddemo">
 					<img src="images/2board/base.png" class="base">
-				</div>				
+				</div>	
+				<div class="rwdselectstyle">
+					<div class="colorgroup selectgroup">
+						<div class="btn">選擇顏色</div>
+						<div class="clearfix"></div>
+						<div class="colorall">
+							<div class="color">
+								<div class="circle"></div>
+								<p>白</p>
+							</div>
+							<div class="color">
+								<div class="circle"></div>
+								<p>藍</p>
+							</div>
+							<div class="color">
+								<div class="circle"></div>
+								<p>黃</p>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="patterngroup selectgroup">
+						<div class="btn">選擇圖樣</div>
+						<div class="clearfix"></div>
+							<div class="patternarea">
+								<div class="top">
+									<div class="allpattern">
+										<div class="pattern">
+											<img src="images/2board/step2/logo1.png">
+										</div>
+										<div class="pattern">
+											<img src="images/2board/step2/logo2.png">
+										</div>
+										<div class="pattern">
+											<img src="images/2board/step2/logo3.png">
+										</div>
+										<div class="pattern">
+											<img src="images/2board/step2/logo4.png">
+										</div>
+									</div>
+									<div class="arrow">
+										<div class="pre arrowbtn"><i class="fa fa-caret-left" aria-hidden="true"></i></div>
+										<div class="next arrowbtn"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+									</div>
+								</div>
+								<div class="bottom">
+									<div class="left">
+										<p>上傳您的圖案</p>
+									</div>
+									<div class="right">
+										<label for="rwduploadbtn"><div class="uploadbtn"><img src="images/2board/step2/uploadbtn.png"></div></label>
+										<input type="file" name="" id="rwduploadbtn" style="display: none">
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+					</div>
+					<div class="texturegroup selectgroup">
+						<div class="btn">選擇材質</div>
+						<div class="clearfix"></div>
+						<div class="texturecontent">
+							<div class="title">環氧樹脂</div>
+							<div class="alltexture">
+								<div class="texture selected"><img src="images/2board/step2/epoxyball.png"></div>
+								<div class="texture"><img src="images/2board/step2/woodball.png"></div>
+								<div class="texture"><img src="images/2board/step2/frpball.png"></div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			<div class="rwdintroduce">
+					<div class="rwdintroducefix">
+						<div class="btnfield">
+							<i class="fa fa-arrow-circle-right" aria-hidden="true" id="rwdShowInfoBtn"></i>
+							<i class="fa fa-arrow-circle-left" aria-hidden="true" id="rwdHideInfoBtn"></i>	
+							<p>材質介紹</p>
+						</div>
+						
+						<p class="rwdboardinfo">構造由Eps(較高級的保麗龍)＋玻璃纖維布＋Epoxy樹脂所組成，重量較輕，靈敏度較佳，但是穩定度較差，少了玻纖板的紮實感！<br><br>
+						由於Epoxy樹脂的硬度較硬，所以優點是較耐撞擊，但是也因為硬而無彈性，在大浪時有可能發生直接斷裂的情形</p>	
+					</div>
+				</div>
 			</div>
 			<div class="selectAndNext">
 				<div class="selectAndNextfix">
@@ -321,7 +427,7 @@
 									</p>
 								</div>
 							</div>
-							<div class="boardinfo col-sm-6">
+							<div class="boardinfo col-sm-6 col-xs-12">
 								<div class="title"><h3>您的浪板</h3></div>
 								<div class="infocontent">
 									<P>板型：長板<br>
@@ -331,7 +437,7 @@
 									</P>
 								</div>
 							</div>
-							<div class="totalinfo col-sm-6">
+							<div class="totalinfo col-sm-6 col-xs-12">
 								<div class="title"><h3>應付金額</h3></div>
 								<div class="infocontent">
 									<p>

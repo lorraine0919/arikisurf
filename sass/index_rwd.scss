@@ -142,6 +142,9 @@ $top:16vh;
 				.photo{
 					display: none;
 				}
+				.photo:nth-child(2){
+					display: block;
+				}
 				.selected{
 					position: absolute;
 				    display: block;
@@ -224,14 +227,8 @@ $top:16vh;
 					top: 0;
 					left: 0;
 				}
-				.selected{
-					z-index: 3;
-					left: 0;
-					right: 0;
-					margin: auto;
-				}
-				.postfix:nth-child(4){
-					display: none;
+				.postfix:nth-child(1){
+					left: 10%;
 				}
 				.postfix:nth-child(2){
 					left: -71%;
@@ -252,10 +249,10 @@ $top:16vh;
 				background-size: contain;
 				width: 85%;
 				margin: auto;
-				.left {
+				.right {
 					height: auto;
 				}
-				.right {
+				.left {
 					display: none;
 				}
 			}

@@ -4,7 +4,7 @@ $F2:16px;
   content: '';
   display: block;
   clear: both;
-}
+} 
 img{width: 100%;} 
 /*左邊*/
 .left20{
@@ -84,6 +84,7 @@ img{width: 100%;}
       width: 100px;
       padding: 1% 0%;
       margin:0px 6px;
+      border: none;
       
       text-align: center;
       letter-spacing: 3px;
@@ -104,9 +105,9 @@ img{width: 100%;}
 @media screen and (min-width:768px){
   /*左邊*/
   .content20{
-    // position: relative;
+    position: relative;
     width: 100%;
-    padding-top: 90%;
+    padding-bottom: 100%;
   }
   .left20{
     width: 20%;
@@ -135,11 +136,14 @@ img{width: 100%;}
       letter-spacing: 2.5px;
     }
   }
-    .move20{position: relative;}
+    .move20{
+      position: absolute;
+      top:0;
+    }
   /*右邊*/
   .right20{
     position: absolute;
-    top: calc(5% + 16vh);
+    top:5%;
     left: calc(10% + 20%);
     width: 50%;
     padding: 0% 4%;
@@ -150,7 +154,7 @@ img{width: 100%;}
     .title20{margin-bottom: 5%;}
     .row20{
       padding: 2% 14%;
-      .span20{margin-right: -2.5vw;}
+      .span20{margin-right: -2vw;}
     }
   }
 }

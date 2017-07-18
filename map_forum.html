@@ -12,12 +12,12 @@
   
       <script src="js/jquery.js"></script>
   <link rel="stylesheet" type="text/css" href="css/forum.css">
+  <script src="js/showMap.js"></script>
   <title>Map</title>
 </head>
 <body>
       <header>
           <nav class="nav_0">
-              <div class="top"></div> 
               <div class="navDetail">
                   <div class="navfix">
                       <div class="navimg">
@@ -30,6 +30,15 @@
                               </div>
                           </div>
                           <label class="hb" for="control">選單</label>
+                          <ul class="menu">
+                              <li><a href="customize.html">客製浪板</a></li>
+                              <li><a href="surfshop.html">衝浪配備</a></li>
+                              <li><a href="map.html">衝浪地圖</a></li>
+                              <li><a href="#">最新消息</a></li>
+                              <li><a href="about.html">關於酋長</a></li>
+                              <li><a href="#" class="rwd">會員專區</a></li>
+                              <li><a href="cart.html" class="rwd">購物車</a></li>
+                          </ul>
                           <div class="iconGroup">
                               <ul>
                                   <li><a href=""><img src="images/1common/member.png" alt="">會員專區</a></li>
@@ -37,18 +46,9 @@
                                   <li><a href="cart.html"><img src="images/1common/shop.png" alt="">購物車</a></li>
                               </ul>
                           </div>
-                          <ul class="menu">
-                              <li><a href="#">客製浪板</a></li>
-                              <li><a href="surfshop.html">衝浪配備</a></li>
-                              <li><a href="#">衝浪地圖</a></li>
-                              <li><a href="#">最新消息</a></li>
-                              <li><a href="about.html">關於酋長</a></li>
-                              <li><a href="#" class="rwd">會員專區</a></li>
-                              <li><a href="cart.html" class="rwd">購物車</a></li>
-                          </ul>
-                          <div class="idHello">
+                          <!-- <div class="idHello">
                               <p>ID：<span>煞氣a周子瑜 §醉ㄞ金城武</span> 您好</p>
-                          </div>
+                          </div> -->
                       </div>
                   </div>
                   </div>
@@ -57,17 +57,28 @@
       </header>
       <div id="content_10">
         <form id="form" action="#">
-               文章標題 <input type="text" id="title" placeholder="最多8個字" ><br>
-               文章分類 <select id="select">
-                                 <option>圖片</option>
-                                 <option>影片</option>                                    
-                        </select><br>
-               上傳檔案 <input type="file"> 
-               預覽 <span class="preview"></span><br>
-               文章內容 <br>
-               <textarea id="textarea" cols="30" rows="10"></textarea><br>
-               <input type="submit" id="submit" value="確認">
-               <input type="reset" id="reset" value="取消">
+               <div class="fit f1">
+                 <div class="tl l1">文章標題</div>
+                 <input type="text" id="title" placeholder="最多8個字" >
+               </div>
+               <div class="fit f2">
+                 <div class="tl l2">文章分類</div> 
+                 <select id="select">
+                                   <option>圖片</option>
+                                   <option>影片</option>               
+                          </select>
+               </div>
+               <div class="fit f3">
+                 <div class="tl l3">上傳檔案</div>
+                  <input type="file"> 
+                 <div class="tl l4">預覽</div><div class="preview"></div>
+               </div>
+               <div class="tl l5">文章內容</div> 
+               <textarea id="textarea" cols="30" rows="10"></textarea>
+               <div class="sub">
+                    <input type="submit" id="submit" value="確認">
+                    <input type="reset" id="reset" value="取消">
+               </div>
                <div id="close">X</div>                       
         </form>      
       </div><!-- content_10 -->
@@ -114,25 +125,29 @@
            <section class="talk">
               <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
+                     <div class="pic_i">
                            <img src="images/4wavepoint/fou/1.jpg">
                      </div>
                      <div class="text">
                          <h1>我是標題</h1>
                          <div class="day">2017/07/07</div>
-                         <div class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ab praesentium quis reiciendis ratione vero veritatis a mollitia iste, neque inventore, animi harum enim consequuntur deserunt repudiandae quod qui eaque amet laboriosam, dolores tempore cupiditate. Aspernatur nam commodi ipsa deleniti neque reiciendis soluta laboriosam debitis quia, dolores asperiores facilis, tempora eveniet nesciunt, cupiditate saepe, beatae impedit blanditiis eos cum qui officiis. Magnam perspiciatis consequatur aut fugit illum! Consectetur voluptatum ullam minima delectus doloribus, repellat eum debitis, aliquam nihil iste natus qui expedita voluptate veritatis optio et pariatur nesciunt labore reprehenderit totam! Dolore quae dignissimos recusandae ipsum amet, optio eveniet. Rerum.</div>                
+                         <div class="tt">我是內文</div>                
                      </div>
                  </a>
                      <div class="item_border">
-                         <span class="star">★ ★ ★ ★ ★</span>
-                         <span id="view"><img src="images/4wavepoint/view.png" alt="view"></span>
-                         <span class="watch">10</span>
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
                      </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
+                     <div class="pic_i">
                            <img src="images/4wavepoint/fou/2.jpg">
                      </div>
                      <div class="text">
@@ -142,15 +157,19 @@
                      </div>
                  </a>
                      <div class="item_border">
-                         <span class="star">★ ★ ★ ★ ★</span>
-                         <span id="view"><img src="images/4wavepoint/view.png" alt="view"></span>
-                         <span class="watch">10</span>
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
                      </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
+                     <div class="pic_i">
                            <img src="images/4wavepoint/fou/3.jpg">
                      </div>
                      <div class="text">
@@ -160,15 +179,19 @@
                      </div>
                  </a>
                      <div class="item_border">
-                         <span class="star">★ ★ ★ ★ ★</span>
-                         <span id="view"><img src="images/4wavepoint/view.png" alt="view"></span>
-                         <span class="watch">10</span>
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
                      </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
+                     <div class="pic_i">
                            <img src="images/4wavepoint/fou/4.jpg">
                      </div>
                      <div class="text">
@@ -178,15 +201,19 @@
                      </div>
                  </a>
                      <div class="item_border">
-                         <span class="star">★ ★ ★ ★ ★</span>
-                         <span id="view"><img src="images/4wavepoint/view.png" alt="view"></span>
-                         <span class="watch">10</span>
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
                      </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
+                     <div class="pic_i">
                            <img src="images/4wavepoint/fou/5.jpg">
                      </div>
                      <div class="text">
@@ -196,15 +223,19 @@
                      </div>
                  </a>
                      <div class="item_border">
-                         <span class="star">★ ★ ★ ★ ★</span>
-                         <span id="view"><img src="images/4wavepoint/view.png" alt="view"></span>
-                         <span class="watch">10</span>
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
                      </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
+                     <div class="pic_i">
                            <img src="images/4wavepoint/fou/6.jpg">
                      </div>
                      <div class="text">
@@ -214,15 +245,19 @@
                      </div>
                  </a>
                      <div class="item_border">
-                         <span class="star">★ ★ ★ ★ ★</span>
-                         <span id="view"><img src="images/4wavepoint/view.png" alt="view"></span>
-                         <span class="watch">10</span>
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
                      </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
+                     <div class="pic_i">
                            <img src="images/4wavepoint/fou/7.jpg">
                      </div>
                      <div class="text">
@@ -232,15 +267,19 @@
                      </div>
                  </a>
                      <div class="item_border">
-                         <span class="star">★ ★ ★ ★ ★</span>
-                         <span id="view"><img src="images/4wavepoint/view.png" alt="view"></span>
-                         <span class="watch">10</span>
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
                      </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
+                     <div class="pic_i">
                            <img src="images/4wavepoint/fou/8.jpg">
                      </div>
                      <div class="text">
@@ -250,15 +289,19 @@
                      </div>
                  </a>
                      <div class="item_border">
-                         <span class="star">★ ★ ★ ★ ★</span>
-                         <span id="view"><img src="images/4wavepoint/view.png" alt="view"></span>
-                         <span class="watch">10</span>
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
                      </div>                    
                </div><!-- item -->
 
                <div class="item">
                  <a href="map_forum_discussion.html">                    
-                     <div class="pic">
+                     <div class="pic_i">
                            <img src="images/4wavepoint/fou/9.jpg">
                      </div>
                      <div class="text">
@@ -268,9 +311,13 @@
                      </div>
                  </a>
                      <div class="item_border">
-                         <span class="star">★ ★ ★ ★ ★</span>
-                         <span id="view"><img src="images/4wavepoint/view.png" alt="view"></span>
-                         <span class="watch">10</span>
+                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <span class="watch">120</span>      
+                         </div>
                      </div>                    
                </div><!-- item -->
 

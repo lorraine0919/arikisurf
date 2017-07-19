@@ -42,6 +42,9 @@ $top:16vh;
 @media screen and (max-width:960px){
 	.banner_1{
 		background-image: url('../surfopening.gif');
+		video{
+			display: none;
+		}
 	}
 	.coating_1{
 		.maxContent{

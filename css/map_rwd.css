@@ -25,6 +25,8 @@
         position: relative;
         overflow: hidden;
         height: 10vh; }
+        .map_bamboo_3 .bamboo_address .bamboo_addressfix .address_mobile {
+          margin: 4% 0% 5%; }
         .map_bamboo_3 .bamboo_address .bamboo_addressfix .fa {
           position: absolute;
           font-size: 30px;

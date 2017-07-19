@@ -23,6 +23,36 @@ $(function(){
 	});
 /*以上是爆炸圖動畫*/
 
+/*以下是爆炸圖rwd動畫*/
+
+	// var hundred = $('.demoimg').width();
+	// var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
+	var count = 0;
+	// console.log(ulmarginleft/hundred);
+		$('#rwdcoatingleft').click(function(){
+			if(count<4){
+				count++;
+				$('.coating_1 .demoimg ul').animate({'margin-left':'-=80%'});
+				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
+				// console.log(ulmarginleft/hundred);
+				// console.log(count);				
+			}
+			console.log(count);
+		});
+		$('#rwdcoatingright').click(function(){
+			if(count>0){
+				count--;
+				$('.coating_1 .demoimg ul').animate({'margin-left':'+=80%'});
+				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
+				// console.log(ulmarginleft/hundred);
+				// console.log(count);		
+			}
+
+		});
+
+
+/*以上是爆炸圖rwd動畫*/
+
 /*以下是換圖動畫*/
 	if($( window ).width()>960){
 		$('.picture_1 .photo').mouseover(function(){
@@ -48,7 +78,7 @@ $(function(){
 				}).fadeIn(1000);
 				// $('.picture_1 .selectpicshow').children('img').toggleClass('fadeIn');
 				/*背後透明圖*/
-				$('.picture_1 .maxContent').css({'background-image':'url(../images/1common/picselectbg_'+index+'.png)'});
+				$('.picture_1 .maxContent').css({'background-image':'url("images/1common/picselectbg_'+index+'.png")'});
 			});
 	}
 	

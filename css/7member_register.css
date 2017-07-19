@@ -1,4 +1,7 @@
 @charset "UTF-8";
+img {
+  width: 100%; }
+
 /*=========清除浮動=========*/
 .topbar26:after, .item26:after {
   content: '';
@@ -6,68 +9,113 @@
   clear: both; }
 
 .register26 {
+  color: #68a;
   background-color: rgba(200, 202, 250, 0.4); }
 
 .setdown26 {
-  margin: auto; }
+  margin: auto;
+  background-color: #ddd; }
   .setdown26 .subject26 {
     text-align: center;
-    letter-spacing: 8px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    background-color: rgba(255, 125, 255, 0.9); }
-  .setdown26 .detail26 {
-    background-color: rgba(255, 155, 133, 0.9); }
-    .setdown26 .detail26 .item26 {
+    border-bottom: 1px solid #ddd; }
+  .setdown26 .detail26 .item26 {
+    display: block;
+    margin: auto; }
+    .setdown26 .detail26 .item26 .span26 {
+      display: inline-block;
+      text-align: left;
+      margin-right: 1vw; }
+    .setdown26 .detail26 .item26 .input26 {
+      display: inline-block;
+      border: none;
+      padding-left: 10px; }
+    .setdown26 .detail26 .item26 .notice26 {
+      color: #64c8dc; }
+    .setdown26 .detail26 .item26 .check26 {
+      border: none; }
+    .setdown26 .detail26 .item26 .number26 {
+      display: inline-block; }
+    .setdown26 .detail26 .item26 .submit26 {
+      display: block;
+      width: 95px;
+      line-height: 2.5em;
+      margin: auto;
       text-align: center;
-      background-color: #ffa; }
+      letter-spacing: 3px;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      background-color: #8af; }
+  .setdown26 .detail26 .read26 {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.9); }
+
+.submit26:hover {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); }
+
+@media screen and (max-width: 999px) {
+  .setdown26 {
+    padding: 20% 2%;
+    width: 90vw;
+    height: calc(100vh - 14% - 150px - 100px - 40px); }
+    .setdown26 .subject26 {
+      margin-bottom: 40px;
+      letter-spacing: 6px; }
+    .setdown26 .detail26 .item26 {
+      width: 80vw;
+      margin-bottom: 25px; }
       .setdown26 .detail26 .item26 .span26 {
-        display: inline-block;
-        line-height: 3em;
-        width: 15vw;
+        width: 30%;
         min-width: 100px;
-        text-align: left;
-        background-color: #9f5; }
+        line-height: 35px; }
+      .setdown26 .detail26 .item26 .input26 {
+        width: calc(80vw - 10px - 24vw - 12%);
+        height: 35px; }
+      .setdown26 .detail26 .item26 .notice26 {
+        display: none; }
+      .setdown26 .detail26 .item26 .check26, .setdown26 .detail26 .item26 .number26 {
+        margin-right: 2em;
+        width: 105px;
+        height: 35px; }
+      .setdown26 .detail26 .item26 .number26 {
+        margin-top: 18px; }
+    .setdown26 .read26 {
+      margin: 40px 0px;
+      padding-top: 20px; } }
+@media screen and (min-width: 1000px) {
+  .setdown26 {
+    padding: 7%;
+    width: 55vw;
+    height: calc(100vh - 14% -100px -40px); }
+    .setdown26 .subject26 {
+      margin-bottom: 50px;
+      letter-spacing: 7px; }
+    .setdown26 .detail26 .item26 {
+      width: 90%;
+      margin-bottom: 30px; }
+      .setdown26 .detail26 .item26 .span26 {
+        width: 110px;
+        line-height: 40px;
+        margin-left: 2vw; }
       .setdown26 .detail26 .item26 .input26 {
         width: 30vw;
-        height: 3em;
-        min-width: 180px;
-        border: none; }
+        height: 40px;
+        min-width: 180px; }
       .setdown26 .detail26 .item26 .notice26 {
-        font-size: 15px;
-        color: #12314c; }
-      .setdown26 .detail26 .item26 .read26 {
-        padding-top: 12px;
-        border-top: 1px solid rgba(255, 255, 255, 0.9); }
+        margin-left: calc(120px + 2vw + 1vw);
+        font-size: 14px; }
       .setdown26 .detail26 .item26 .check26 {
-        width: 150px; }
+        width: 120px;
+        height: 40px;
+        margin-right: 3em; }
+      .setdown26 .detail26 .item26 .br26 {
+        display: none; }
       .setdown26 .detail26 .item26 .number26 {
         width: 120px;
         height: 40px; }
       .setdown26 .detail26 .item26 .submit26 {
-        display: inline-block;
-        min-width: 110px;
-        margin: auto;
-        text-align: center;
-        border: none;
-        border-radius: 8px;
-        background-color: #8af; }
-
-@media screen and (max-width: 767px) {
-  .register26 {
-    padding: 4% 0%; }
-
-  .setdown26 {
-    padding: 5%;
-    width: calc(85vw - 10%); }
-    .setdown26 .detail26 .item26 {
-      padding: 2.5vw 10vw; } }
-@media screen and (min-width: 768px) {
-  .register26 {
-    padding-bottom: 5%; }
-
-  .setdown26 {
-    padding: 8%;
-    width: calc(70vw - 10%); }
-    .setdown26 .detail26 .item26 {
-      margin: 12px 5vw; } }
+        width: 7vw;
+        min-width: 110px; }
+    .setdown26 .detail26 .read26 {
+      margin: 50px 0px;
+      padding-top: 40px; } }

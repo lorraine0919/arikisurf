@@ -1,0 +1,49 @@
+@charset "UTF-8";
+img {
+  width: 100%; }
+
+/*=========清除浮動=========*/
+.topbar26:after, .item26:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.register26 {
+  width: 100%;
+  text-align: center;
+  color: #68a; }
+
+.setdown26 {
+  width: 55vw;
+  padding: 12% 7%;
+  margin: auto;
+  background-color: #ddd;
+  background-image: url(images/7member/surfingmember.jpg); }
+  .setdown26 .submit26 {
+    display: inline-block;
+    padding: 0% 3%;
+    line-height: 2.5em;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #8af; }
+
+.submit26:hover {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); }
+
+@media screen and (max-width: 999px) {
+  .setdown26 {
+    width: 90%;
+    padding: 20vh 2%; }
+    .setdown26 .subject26 {
+      margin-bottom: 50px;
+      letter-spacing: 6px; } }
+@media screen and (min-width: 1000px) {
+  .setdown26 .subject26 {
+    margin-bottom: 10vh;
+    letter-spacing: 7px; } }

@@ -47,7 +47,7 @@
                     </ul>
                     <div class="iconGroup">
                         <ul>
-                            <li><a href="7member.html"><img src="images/1common/member.png" alt="">會員專區</a></li>
+                            <li><a href="7member_update.html"><img src="images/1common/member.png" alt="">會員專區</a></li>
                             <li class="line"></li>
                             <li><a href="cart.html"><img src="images/1common/shop.png" alt="">購物車</a></li>
                         </ul>
@@ -83,7 +83,7 @@
                 <li><a href="#">我的留言</a></li>
             </ul>
         </div><!-- left20 -->
-        <form class="right20"> 
+        <form class="right20">   
 <!-- =================會員專區================== -->
             <div class="personal20">
                 <p class="title20">基本資料</p>
@@ -106,8 +106,12 @@
                 </div>
                 <div class="row20">
                     <span class="span20">地址：</span>
-                    <select class="select20"></select>
-                    <select class="select20"></select>
+                    <select class="">
+                        <option value="請選擇縣市">請選擇縣市</option>
+                    </select>
+                    <select class="">
+                        <option value="請選擇鄉鎮">請選擇鄉鎮</option>
+                    </select>
                     <br>
                     <span class="span20"></span>
                     <input type="text" name="" class="input20 addr20">
@@ -150,7 +154,7 @@
             offset:'-400px'
         })
         .setClassToggle('.left20','move20')
-        .addIndicators({name:'對應點'})
+        // .addIndicators({name:'對應點'})
         .addTo(controller);
       });
     </script>

@@ -38,6 +38,8 @@ module.exports = function (grunt) {
                     "map_forum_discussion.html":"app/map_forum_discussion.html",
                     "7member_update.html":"app/7member_update.html",
                     "7member_register.html":"app/7member_register.html",
+                    "7member_register2.html":"app/7member_register2.html",
+                    "7member_register3.html":"app/7member_register3.html",
                     "9backstage_welcome.html":"app/9backstage_welcome.html"
                 }
             }
@@ -73,7 +75,7 @@ module.exports = function (grunt) {
           watchTask: true,
           server: {
             baseDir: './',
-            index: '9backstage_welcome.html'
+            index: '7member_register3.html'
           }
         }
       }

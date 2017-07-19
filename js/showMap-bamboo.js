@@ -63,7 +63,7 @@ $(document).ready(function(){
 	});
 
 	$('#showInfo').click(function(){
-		$('.bamboo_addressfix').animate({height:'30vh'});
+		$('.bamboo_addressfix').animate({height:'31vh'});
 		$('#showInfo').hide();
 		$('#hideInfo').show();
 	})

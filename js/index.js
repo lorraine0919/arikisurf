@@ -78,7 +78,7 @@ $(function(){
 				}).fadeIn(1000);
 				// $('.picture_1 .selectpicshow').children('img').toggleClass('fadeIn');
 				/*背後透明圖*/
-				$('.picture_1 .maxContent').css({'background-image':'url(../images/1common/picselectbg_'+index+'.png)'});
+				$('.picture_1 .maxContent').css({'background-image':'url("images/1common/picselectbg_'+index+'.png")'});
 			});
 	}
 	

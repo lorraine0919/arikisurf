@@ -295,7 +295,7 @@
     margin: 0; }
 
   .barbg .changebar li {
-    font-size: 15px; }
+    font-size: 13px; }
 
   .container22 {
     margin-top: 0px;
@@ -309,8 +309,8 @@
       font-size: 15px; }
 
   #info-box {
-    max-width: 350px;
-    max-height: 550px; }
+    max-width: 300px;
+    max-height: 500px; }
 
   .main_BG {
     background-position: left top; } }

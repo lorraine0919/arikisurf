@@ -58,7 +58,7 @@ $(document).ready(function(){
 		var index = $(this).index();
 
 		$('.map_bamboo_3 .title').text(titlearr[index]);
-		$('.map_bamboo_3 .pipeline').attr('src','../images/4wavepoint/'+(titlearr[index])+'.jpg');
+		$('.map_bamboo_3 .pipeline').attr('src','images/4wavepoint/'+(titlearr[index])+'.jpg');
 		$('.map_bamboo_3 .info').text(infoarr[index]);
 	});
 

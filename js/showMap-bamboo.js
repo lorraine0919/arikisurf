@@ -29,7 +29,7 @@ $(document).ready(function(){
 			$('.map_bamboo_1').css('right',left);	
 		}else{
 			var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-500;
-			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-600;
+			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-550;
 			console.log($('.map_bamboo_1').width());
 			$('.map_bamboo_1').css('bottom',top);
 			$('.map_bamboo_1').css('right',left);	

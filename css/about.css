@@ -10,41 +10,42 @@
   clear: both; }
 
 @media screen and (max-width: 767px) {
-  .bg_17 {
+  .banner_bg_17 {
     background-image: url("../images/6ariki/cc.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-color: #2A6C84;
-    height: auto;
-    padding-top: 1rem; }
-    .bg_17 .about_title_17 {
-      box-sizing: border-box; }
-      .bg_17 .about_title_17 .about_title_17_txt {
-        box-sizing: border-box;
-        padding: 1rem 2rem 1rem;
-        background-image: url("../images/4wavepoint/talk.jpg");
-        background-repeat: no-repeat;
-        color: #fff;
-        margin-top: 5rem; }
-      .bg_17 .about_title_17 .about_txt_17 {
-        position: relative;
-        box-sizing: border-box;
-        padding: 2rem;
-        color: #fff;
-        background: linear-gradient(#5F7F92, #29465E); }
-        .bg_17 .about_title_17 .about_txt_17:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          margin: auto;
-          width: 99%;
-          height: 95%;
-          border: 1px solid #95AFBA; }
-        .bg_17 .about_title_17 .about_txt_17 p {
-          margin-bottom: .4rem; }
+    padding-top: 2rem;
+    width: 100%; }
+
+  .about_title_17 {
+    box-sizing: border-box; }
+    .about_title_17 .about_title_17_txt {
+      box-sizing: border-box;
+      padding: 1rem 2rem 1rem;
+      background-image: url("../images/4wavepoint/talk.jpg");
+      background-repeat: no-repeat;
+      color: #fff;
+      margin-top: 5rem; }
+    .about_title_17 .about_txt_17 {
+      position: relative;
+      box-sizing: border-box;
+      padding: 2rem;
+      color: #fff;
+      background: linear-gradient(#5F7F92, #29465E); }
+      .about_title_17 .about_txt_17:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 99%;
+        height: 95%;
+        border: 1px solid #95AFBA; }
+      .about_title_17 .about_txt_17 p {
+        margin-bottom: .4rem; }
 
   .about_bg {
     background-color: #11314C;
@@ -85,7 +86,7 @@
     color: #fff; }
 
   .business_bg {
-    background-color: #1D4D66;
+    background-color: #38475B;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -303,33 +304,34 @@
       text-align: center; } }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
-  .cen, .bg_17 .about_title_17 {
+  .cen, .banner_bg_17 .about_title_17 {
     width: 100%;
     max-width: 1170px;
     margin: 0 auto; }
 
-  .bg_17 {
+  .banner_bg_17 {
     background-image: url("../images/6ariki/cc.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    height: auto;
-    padding-top: 4rem; }
-    .bg_17 .about_title_17 {
+    background-size: cover;
+    height: 50vh;
+    padding-top: 4rem;
+    width: 100%; }
+    .banner_bg_17 .about_title_17 {
       box-sizing: border-box; }
-      .bg_17 .about_title_17 .about_title_17_txt {
+      .banner_bg_17 .about_title_17 .about_title_17_txt {
         box-sizing: border-box;
         padding: 1rem 2rem 1rem;
         background-image: url("../images/4wavepoint/talk.jpg");
         background-repeat: no-repeat;
         color: #fff;
         margin-top: 10rem; }
-      .bg_17 .about_title_17 .about_txt_17 {
+      .banner_bg_17 .about_title_17 .about_txt_17 {
         position: relative;
         box-sizing: border-box;
         padding: 2rem;
         color: #fff;
         background: linear-gradient(#5F7F92, #29465E); }
-        .bg_17 .about_title_17 .about_txt_17:after {
+        .banner_bg_17 .about_title_17 .about_txt_17:after {
           content: '';
           position: absolute;
           top: 0;
@@ -340,7 +342,7 @@
           width: 99%;
           height: 95%;
           border: 1px solid #95AFBA; }
-        .bg_17 .about_title_17 .about_txt_17 p {
+        .banner_bg_17 .about_title_17 .about_txt_17 p {
           margin-bottom: .8rem; }
 
   .body_17 {
@@ -352,8 +354,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 8%;
-    padding-bottom: 14%;
-    margin-top: 5%; }
+    padding-bottom: 14%; }
 
   .about_1170 {
     max-width: 1170px;

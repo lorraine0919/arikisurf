@@ -16,13 +16,15 @@
 
 @media screen and (max-width:767px){
 
-.bg_17{
+.banner_bg_17{
  background-image: url("../images/6ariki/cc.png");
  background-repeat:no-repeat;
- background-size: contain; 
+ background-size: cover; 
  background-color:#2A6C84;
- height: auto;
- padding-top: 1rem;  
+ padding-top: 2rem;
+ width: 100%;
+ 
+}  
   .about_title_17{ 
    box-sizing: border-box;
       .about_title_17_txt{
@@ -56,7 +58,7 @@
         }
       }
   }
-}
+
 
 
   .about_bg{
@@ -109,7 +111,7 @@
   
 
   .business_bg{
-    background-color:#1D4D66;
+    background-color:#38475B;
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -357,12 +359,13 @@ section#timeline article:nth-child(5) div.inner h2:after {
 }
 
   
- .bg_17{
+ .banner_bg_17{
  background-image: url("../images/6ariki/cc.png");
  background-repeat:no-repeat;
- background-size: contain; 
- height: auto;
- padding-top: 4rem;  
+ background-size: cover; 
+ height: 50vh;
+ padding-top: 4rem; 
+ width: 100%;
   .about_title_17{ 
    @extend .cen;
    box-sizing: border-box;
@@ -373,6 +376,7 @@ section#timeline article:nth-child(5) div.inner h2:after {
         background-repeat: no-repeat; 
         color:#fff;
         margin-top: 10rem;
+
       }
       .about_txt_17{
         position: relative;
@@ -380,6 +384,7 @@ section#timeline article:nth-child(5) div.inner h2:after {
         padding: 2rem;
         color:#fff;
         background: linear-gradient(#5F7F92,#29465E);
+
         &:after{
           content:'';
           position: absolute;
@@ -411,7 +416,6 @@ section#timeline article:nth-child(5) div.inner h2:after {
     background-repeat: no-repeat;
     padding-top:8%;
     padding-bottom:14%;
-    margin-top: 5%;
   }
 
   .about_1170{

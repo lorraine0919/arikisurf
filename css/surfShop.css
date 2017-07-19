@@ -74,7 +74,9 @@
   .showProd .pic_man {
     padding: 2%;
     animation: man .3s infinite alternate;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
     .showProd .pic_man img {
       width: 100%; }
 @keyframes man {
@@ -295,7 +297,7 @@
     margin: 0; }
 
   .barbg .changebar li {
-    font-size: 13px; }
+    font-size: 15px; }
 
   .container22 {
     margin-top: 0px;
@@ -309,8 +311,15 @@
       font-size: 15px; }
 
   #info-box {
-    max-width: 300px;
-    max-height: 500px; }
+    max-width: 350px;
+    max-height: 550px; }
 
   .main_BG {
     background-position: left top; } }
+@media screen and (max-width: 321px) {
+  .barbg .changebar li {
+    font-size: 13px; }
+
+  #info-box {
+    max-width: 300px;
+    max-height: 500px; } }

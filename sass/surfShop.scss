@@ -108,6 +108,8 @@
 					padding:2%;
 					animation: man .3s infinite alternate;
 					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
 					img{
 						width: 100%;
 					}
@@ -443,7 +445,7 @@
 			.changebar{
 			 // padding-bottom: 18px;
 		   li{
-			font-size: 13px;
+			font-size: 15px;
 		    }
 		   }
 		  }
@@ -462,8 +464,8 @@
 	  	    }
 		  }
 		  #info-box{
-		  	max-width: 300px;
-		  	max-height: 500px;
+		  	max-width: 350px;
+		  	max-height: 550px;
 		  }
 		  
 
@@ -473,3 +475,17 @@
       
 			
 	   }
+	   @media screen and (max-width:321px){
+	   	.barbg{
+			.changebar{
+			 // padding-bottom: 18px;
+		   li{
+			font-size: 13px;
+		    }
+		   }
+		  }
+		   #info-box{
+		  	max-width: 300px;
+		  	max-height: 500px;
+		  }
+	   } 

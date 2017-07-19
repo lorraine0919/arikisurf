@@ -314,7 +314,7 @@
         
         .myview .item .txt p{
             padding-left: 5px;
-            text-indent: 30px;
+            text-align: center;
         }
 		.clearfix{
 			clear: both;
@@ -381,11 +381,26 @@
 			top:0px;
 		}
 		//----lightboxend----
+		@media screen and (min-width:768px){
+			#prodTitleM{
+				display: none;
+			}
+
+		}
 		@media screen and (max-width:767px) {
 			.showProd{
 		        .showProd_bg_up{
 		               .showProd_bg{
 							.showProd_txt{
+								.prodTitle{
+					              min-height: 100px;
+					            }
+								#prodTitleM{
+									display: block;
+								}
+								.prodTitle1{
+									display: none;
+								}
 								padding-top: 10px;
 							  }
 						    }

@@ -60,11 +60,27 @@ $top:16vh;
 				width: 100%;
 				overflow: hidden;
 				.demoimg{
-					width: 55%;
+					width: 100%;
 					margin: auto;
-					img{
-						width: 100%;
-					}				
+					overflow: hidden;
+					ul{
+						width: 600%;
+						margin-left: 12%;
+						&:after{
+							content:'';
+							clear: both;
+						}
+						li{
+							padding: 10px 25px;
+							display: block;
+							float: left;
+							width: 11%;
+							text-align: center;
+							img{
+								width: 100%;
+							}	
+						}
+					}			
 				}
 				.arrowleft{
 					width: 150px;

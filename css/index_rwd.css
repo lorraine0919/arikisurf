@@ -16,10 +16,23 @@
     width: 100%;
     overflow: hidden; }
     .coating_1 .maxContent .demorwd .demoimg {
-      width: 55%;
-      margin: auto; }
-      .coating_1 .maxContent .demorwd .demoimg img {
-        width: 100%; }
+      width: 100%;
+      margin: auto;
+      overflow: hidden; }
+      .coating_1 .maxContent .demorwd .demoimg ul {
+        width: 600%;
+        margin-left: 12%; }
+        .coating_1 .maxContent .demorwd .demoimg ul:after {
+          content: '';
+          clear: both; }
+        .coating_1 .maxContent .demorwd .demoimg ul li {
+          padding: 10px 25px;
+          display: block;
+          float: left;
+          width: 11%;
+          text-align: center; }
+          .coating_1 .maxContent .demorwd .demoimg ul li img {
+            width: 100%; }
     .coating_1 .maxContent .demorwd .arrowleft {
       width: 150px;
       height: 210px;

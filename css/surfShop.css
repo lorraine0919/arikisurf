@@ -197,7 +197,7 @@
 
 .myview .item .txt p {
   padding-left: 5px;
-  text-indent: 30px; }
+  text-align: center; }
 
 .clearfix {
   clear: both; }
@@ -255,9 +255,18 @@
   right: 0px;
   top: 0px; }
 
+@media screen and (min-width: 768px) {
+  #prodTitleM {
+    display: none; } }
 @media screen and (max-width: 767px) {
   .showProd .showProd_bg_up .showProd_bg .showProd_txt {
     padding-top: 10px; }
+    .showProd .showProd_bg_up .showProd_bg .showProd_txt .prodTitle {
+      min-height: 100px; }
+    .showProd .showProd_bg_up .showProd_bg .showProd_txt #prodTitleM {
+      display: block; }
+    .showProd .showProd_bg_up .showProd_bg .showProd_txt .prodTitle1 {
+      display: none; }
 
   .container {
     max-width: 1170px; }

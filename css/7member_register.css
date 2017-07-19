@@ -118,4 +118,6 @@ img {
         min-width: 110px; }
     .setdown26 .detail26 .read26 {
       margin: 50px 0px;
-      padding-top: 40px; } }
+      padding-top: 40px; }
+    .setdown26 .detail26 .verticle26 .span26, .setdown26 .detail26 .verticle26 .check26, .setdown26 .detail26 .verticle26 .number26 img {
+      vertical-align: middle; } }

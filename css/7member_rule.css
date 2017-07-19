@@ -1,0 +1,48 @@
+.rule22 {
+  width: 100%;
+  text-align: center; }
+  .rule22 .subject22 {
+    margin: 5% 0% 2% 0%;
+    letter-spacing: 6px;
+    color: #68a; }
+  .rule22 .article22 {
+    text-align: left;
+    padding: 2vw; }
+  .rule22 .title22 {
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #68a; }
+  .rule22 .section22 {
+    color: #777; }
+
+.submit22 {
+  display: inline-block;
+  padding: 0% 3%;
+  line-height: 2.5em;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #8af; }
+
+.submit22:hover {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); }
+
+@media screen and (min-width: 1000px) {
+  .rule22 {
+    margin-top: 9vh; }
+    .rule22 .article22 {
+      width: 70%;
+      height: 50vh;
+      margin: auto;
+      overflow: auto;
+      background-color: #eef; }
+      .rule22 .article22 .title22 {
+        margin-top: 3%;
+        margin-bottom: 1%; } }

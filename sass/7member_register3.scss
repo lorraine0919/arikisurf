@@ -12,14 +12,17 @@ img{width: 100%;}
 .register26{
 	width: 100%;
 	text-align: center;
-	color:#68a;	
+	color:#fff;	
+	box-shadow:0 1px 3px 0 rgba(0,0,0,0.12);
+	background-image:url("../images/7member/surfingmember.jpg");
+	background-size: cover;
 }
 .setdown26{
 	width: 55vw;
 	padding: 12% 7%;
 	margin: auto;
-	background-color:#ddd; 
-	background-image:url(images/7member/surfingmember.jpg);
+	background-color:rgba(0,0,0,0.1); 
+	
 	.submit26{
 		display: inline-block;
 		padding:0% 3%;

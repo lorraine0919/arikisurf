@@ -40,7 +40,7 @@
 		$('.showProd').fadeOut(0);
 	});
 
-
+   if ($(window).width()>768) {
 	$('.222').mouseover(function(){
 		$('.prodTitle1').fadeIn(0);
 		$('.prodTitle2').fadeOut(0);
@@ -65,6 +65,7 @@
 		$('.prodTitle3').fadeOut(0);
 		$('.prodTitle4').fadeIn(0);
 	});
+    }
 
 
     $('.pic').click(function(){

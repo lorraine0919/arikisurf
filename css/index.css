@@ -265,12 +265,13 @@
       display: inline-block;
       text-align: left; }
   .map_1 .contentMax .map {
-    margin: 0 0 -20vh 0; }
+    margin: 0 0 0vh 0; }
     .map_1 .contentMax .map .mapimg {
       position: relative; }
       .map_1 .contentMax .map .mapimg .mapimgpic {
         width: 100%; }
       .map_1 .contentMax .map .mapimg .pin {
+        display: none;
         width: 8%;
         position: absolute;
         top: 29%;

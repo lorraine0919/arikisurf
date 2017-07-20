@@ -187,3 +187,14 @@
 	  color: rgba(255,255,255,0.6);
 	}
 }
+.arikicommon_select{
+	border:1px solid rgba(255,255,255,0.6);
+	background-color: transparent;
+	padding: 10px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.4) inset;
+	color: #fff;
+	font-size: 16px;
+	option{
+		color: #18334c;
+	}
+}

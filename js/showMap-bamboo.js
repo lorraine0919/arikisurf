@@ -1,4 +1,12 @@
 $(document).ready(function(){
+	var cssleft =$('.map_bamboo_1 .po').eq(0).position().left;
+	var wholewidth=$('.map_bamboo_1').width();
+	cssleft = cssleft- wholewidth*1/6;
+	$('.map_bamboo_1').css('right',cssleft);
+
+	var csstop =$('.map_bamboo_1 .po').eq(0).position().top;
+	csstop = csstop- wholewidth*1/11;
+	$('.map_bamboo_1').css('bottom',csstop);
 
 	$('.map_bamboo_3 .mobile').click(function(){
 		$(this).addClass('click');
@@ -6,34 +14,51 @@ $(document).ready(function(){
 		var index = $(this).index();
 
 		/*以下是編輯時好知道定位點在哪*/
-		// $('.map_bamboo_1 .po').css('border','2px solid #f00'); 
-		// $('.map_bamboo_1 .po').eq(index).css('border','2px solid #00f');
+		$('.map_bamboo_1 .po').css('border','2px solid #f00'); 
+		$('.map_bamboo_1 .po').eq(index).css('border','2px solid #00f');
 
-		if($(window).width()>1500){
-			var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-1000;
-			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-2000;
-			console.log($('.map_bamboo_1').width());
-			$('.map_bamboo_1').css('bottom',top);
-			$('.map_bamboo_1').css('right',left);			
-		}else if($(window).width()<1500 && $(window).width()>1000){
-			var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-1000;
-			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-1500;
-			console.log($('.map_bamboo_1').width());
-			$('.map_bamboo_1').css('bottom',top);
-			$('.map_bamboo_1').css('right',left);			
-		}else if($(window).width()<1000 && $(window).width()>767){
-			var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-700;
-			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-1500;
-			console.log($('.map_bamboo_1').width());
-			$('.map_bamboo_1').css('bottom',top);
-			$('.map_bamboo_1').css('right',left);	
-		}else{
-			var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-500;
-			var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-550;
-			console.log($('.map_bamboo_1').width());
-			$('.map_bamboo_1').css('bottom',top);
-			$('.map_bamboo_1').css('right',left);	
-		}
+		var cssleft =$('.map_bamboo_1 .po').eq(index).position().left;
+		var wholewidth=$('.map_bamboo_1').width();
+		cssleft = cssleft- wholewidth*1/6;
+		// $('.map_bamboo_1').css('right',percentleft+10+'%');
+		$('.map_bamboo_1').css('right',cssleft);
+
+		var csstop =$('.map_bamboo_1 .po').eq(index).position().top;
+		// $('.map_bamboo_1').css('bottom',percenttop+10+'%');
+		// csstop = csstop- wholewidth*1/5;
+		csstop = csstop- wholewidth*1/11;
+		$('.map_bamboo_1').css('bottom',csstop);
+
+		// $('.map_bamboo_1').css('top',csstop);
+
+		// var csstop = $('.map_bamboo_1 .po').eq(index).position().top - $(window).height()* 1/3;
+		// $('.map_bamboo_1').css('top',csstop);		
+		// if($(window).width()>1500){
+
+		// 	var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-1000;
+		// 	var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-2000;
+		// 	console.log($('.map_bamboo_1').width());
+		// 	$('.map_bamboo_1').css('bottom',top);
+		// 	$('.map_bamboo_1').css('left',left);			
+		// }else if($(window).width()<1500 && $(window).width()>1000){
+		// 	var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-1000;
+		// 	var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-1500;
+		// 	console.log($('.map_bamboo_1').width());
+		// 	$('.map_bamboo_1').css('bottom',top);
+		// 	$('.map_bamboo_1').css('right',left);			
+		// }else if($(window).width()<1000 && $(window).width()>767){
+		// 	var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-700;
+		// 	var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-1500;
+		// 	console.log($('.map_bamboo_1').width());
+		// 	$('.map_bamboo_1').css('bottom',top);
+		// 	$('.map_bamboo_1').css('right',left);	
+		// }else{
+		// 	var top = parseInt($('.map_bamboo_1 .po').eq(index).position().top)-500;
+		// 	var left = parseInt($('.map_bamboo_1 .po').eq(index).position().left)-550;
+		// 	console.log($('.map_bamboo_1').width());
+		// 	$('.map_bamboo_1').css('bottom',top);
+		// 	$('.map_bamboo_1').css('right',left);	
+		// }
 
 		var titlearr = ['Pipeline','Superbank','Jeffreys-Bay','Black-Beach','Teahupoo','La-Graviere','Uluwatu','Cloudbreak',"Maverick's"];
 		var infoarr = 

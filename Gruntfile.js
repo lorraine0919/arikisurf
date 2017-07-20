@@ -40,7 +40,8 @@ module.exports = function (grunt) {
                     "7member_register.html":"app/7member_register.html",
                     "7member_register2.html":"app/7member_register2.html",
                     "7member_register3.html":"app/7member_register3.html",
-                    "9backstage_welcome.html":"app/9backstage_welcome.html"
+                    "9backstage_welcome.html":"app/9backstage_welcome.html",
+                    "commonexample.html":"app/commonexample.html"
                 }
             }
         },

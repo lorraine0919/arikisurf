@@ -617,75 +617,21 @@
 			    top: 43%;
 			}
 		}
-		.demogroup{
-			vertical-align: top;
-			display: inline-block;
-			width: 28%;
-			position: relative;
-			.demo{				
-			    width: 43%;
-			    margin: 0 0 0 28%;
-			    position: relative;
-			    padding-top: 142%;
-				img{
-					width: 100%;
-					position: absolute;
-				}
-				.boarddemo{
-					top: 0;
-					left: 0;
-					z-index: 2;
-				}
-				.base{
-					bottom: -37%;
-				    left: -24%;
-					width: 150%;
-				}
-				
-			}
-			.total{
-				position: relative;
-				padding-top: 50%;
-				.totalfix{
-					position: absolute;
-					color: #fff;
-				    bottom: -50%;
-				    left: 26%;
-					.number,.detail{
-						margin: 5% 0 0 0;
-						display: inline-block;
-						vertical-align: middle;
-						padding:10px 20px;
-						border: 1px solid #fff;
-						border-radius: 5px;
-					}
-					.detail{
-						transition:0.5s;
-					}
-					.detail:hover{
-						border: 1px solid #e97b23;
-						color: #e97b23;
-					}
-				}
-			}			
-		}
 		.fill{
 			vertical-align: top;
-			width: 100%;
 			display: inline-block;
-			width: 25%;
+			width: 46%;
 			// background-image: url('../images/2board/insidebox.png');
 			background-repeat: no-repeat;
 			background-position: top;
 			background-size: cover;
-			padding: 4% 0 4% 4%;
-			margin: 10% 0 0 9%;
+			padding: 26%;
 			position: relative;
 			.fillfix{
 			    position: absolute;
-			    width: 190%;
-			    top: -128%;
-			    left: -28%;
+			    width: 61%;
+			    top: 0;
+			    left: 27%;
 				.head{
 					padding: 8px 20px;
 					color: #fff;
@@ -693,57 +639,112 @@
 					background-size: cover;
 					
 				}
-				.content{
+				.contentgroup{
 					background-color: rgba(0,0,0,0.2);
-					color: rgba(255,255,255,0.6);
-					padding: 20px ;
-					h3{
-						font-weight: 100;
-					}
-					table{
-						width: 100%;
-						th{
-							width: 36%;
+					text-align: center;
+					position: relative;
+					.content{
+						width: 67%;
+						color: rgba(255,255,255,0.6);
+						padding: 30px 10px 10px 10px;
+						display: inline-block;
+						h3{
+							font-weight: 100;
 						}
-						td{
-							padding: 10px 10px 10px 0;
-							input{
-								width: 100.6%;
-								padding: 8px 5px;
-								box-sizing:border-box;
-								border-radius: 5px;
-								background-color: rgba(255,255,255,0.6);
-								border:none;
+						table{
+							width: 100%;
+							th{
+								width: 36%;
 							}
-							textarea{
-								width: 101%;
-								padding: 8px 5px;
-								box-sizing:border-box;
-								resize:none;
-								border-radius: 5px;
-								background-color: rgba(255,255,255,0.6);
-								border:none;
+							td{
+								padding: 10px 10px 10px 0;
+								input{
+									width: 100.6%;
+									padding: 8px 5px;
+									box-sizing:border-box;
+									border-radius: 5px;
+									background-color: rgba(255,255,255,0.6);
+									border:none;
+								}
+								textarea{
+									width: 101%;
+									padding: 8px 5px;
+									box-sizing:border-box;
+									resize:none;
+									border-radius: 5px;
+									background-color: rgba(255,255,255,0.6);
+									border:none;
+								}
 							}
-						}
 
-					}
-					.next{
-						a{
-							display: inline-block;
-							float: right;
-							@extend %orangebtn;
-							margin: 20px;
+						}
+						.next{
+							a{
+								display: inline-block;
+								float: right;
+								@extend %orangebtn;
+								margin: 20px;
+							}
 						}
 					}
+					.demogroup{
+						vertical-align: top;
+						display: inline-block;
+						width: 20%;
+						position: relative;
+						.demo{
+							margin: auto;				
+						    width: 80%;
+						    position: relative;
+						    padding-top: 142%;
+							img{
+								width: 100%;
+								position: absolute;
+							}
+							.boarddemo{
+								top: 0;
+								left: 0;
+								z-index: 2;
+							}
+							.base{
+								bottom: -37%;
+							    left: -24%;
+								width: 150%;
+							}
+							
+						}		
+					}
+					.total{
+						position: absolute;
+						width: 37%;
+					    top: 16%;
+					    left: -39%;
+						.totalfix{
+							position: absolute;
+							color: #fff;
+						    bottom: -50%;
+						    left: 29%;
+							.number,.detail{
+								margin: 5% 0 0 0;
+								display: inline-block;
+								vertical-align: middle;
+								padding:10px 20px;
+								border: 1px solid #fff;
+								border-radius: 5px;
+							}
+							.detail{
+								transition:0.5s;
+							}
+							.detail:hover{
+								border: 1px solid #e97b23;
+								color: #e97b23;
+							}
+						}
+					}	
+
 				}
 
 			}
-		}
-		.selectAndNext{
-			width: 25%;
-			display: inline-block;
-			padding-top: 40%;
-			position: relative;			
 		}
 
 	}

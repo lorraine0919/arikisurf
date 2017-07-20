@@ -9,12 +9,8 @@
     border: 2px solid transparent;
     color: #18334c; }
 
-.ariki_bgwhite {
+.arikicommon_bgwhite {
   background-color: #dddddd;
-  padding: 10px; }
-
-.block {
-  height: 10px;
   padding: 10px; }
 
 .arikicommon_bgwhite_btn {
@@ -60,9 +56,6 @@
       color: #fff; }
       .arikicommon_menu li a:hover {
         color: #ff9630; }
-
-.contain {
-  width: 10%; }
 
 .arikicommon_vertical_menu {
   border-radius: 10px;

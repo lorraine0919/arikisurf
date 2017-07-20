@@ -48,7 +48,7 @@
       }
       .hb{
           display: block;
-          width: 10%;
+          width: 50px;
           height: 0px;
           padding-bottom: calc(10% - 5px);
           float: right;
@@ -68,20 +68,21 @@
             margin: auto;
             z-index: 20;
             background-color:#fff;
-            box-shadow: 0vh -2vh 0vh #fff,
-                        0vh 2vh 0vh #fff; 
+            box-shadow: 0vh -15px 0vh #fff,
+                        0vh 15px 0vh #fff; 
           }
       }
       .menu{
         width: 40vh;
         height: 0px;
         padding-bottom: calc(100vh - 16%);
-        background-color: hsla(180, 85%, 40%, 0.7);
+        background-color: #49545d;
         position: fixed;
         right: -40vh;
         bottom: 1%;
         transition: .5s;
         z-index: 20;
+        box-shadow: 5px 5px 20px rgba(0,0,0,0.2) inset;
         li{
           &:hover{
             color: yellow;

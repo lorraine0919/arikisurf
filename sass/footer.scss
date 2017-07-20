@@ -119,6 +119,7 @@
 	.footer_0{
 		.maxContent{
 			.titlegroup{
+				display: none;
 				.itemtitle{
 					padding: 0;
 					width: 100%;
@@ -128,6 +129,7 @@
 				}
 			}
 			.left {
+				display: none;
 				width: 100%;
 				ul{
 					margin: 0 4px;

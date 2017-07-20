@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-position: top; }
 
-.bg_forest_2 .step1_maxContent .selectAndNext .selectAndNextfix .next a, .bg_forest_2 .step2_maxContent .selectAndNext .next a, .bg_forest_2 .step3_maxContent .fill .fillfix .content .next a, .bg_forest_2 .step4_maxContent .fill .fillfix .content .next a {
+.bg_forest_2 .step1_maxContent .selectAndNext .selectAndNextfix .next a, .bg_forest_2 .step2_maxContent .selectAndNext .next a, .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content .next a, .bg_forest_2 .step4_maxContent .fill .fillfix .content .next a {
   background-color: #e97b23;
   padding: 10px 30px;
   border-radius: 5px;
@@ -472,104 +472,112 @@
         position: absolute;
         right: -158%;
         top: 43%; }
-    .bg_forest_2 .step3_maxContent .demogroup {
-      vertical-align: top;
-      display: inline-block;
-      width: 28%;
-      position: relative; }
-      .bg_forest_2 .step3_maxContent .demogroup .demo {
-        width: 43%;
-        margin: 0 0 0 28%;
-        position: relative;
-        padding-top: 142%; }
-        .bg_forest_2 .step3_maxContent .demogroup .demo img {
-          width: 100%;
-          position: absolute; }
-        .bg_forest_2 .step3_maxContent .demogroup .demo .boarddemo {
-          top: 0;
-          left: 0;
-          z-index: 2; }
-        .bg_forest_2 .step3_maxContent .demogroup .demo .base {
-          bottom: -37%;
-          left: -24%;
-          width: 150%; }
-      .bg_forest_2 .step3_maxContent .demogroup .total {
-        position: relative;
-        padding-top: 50%; }
-        .bg_forest_2 .step3_maxContent .demogroup .total .totalfix {
-          position: absolute;
-          color: #fff;
-          bottom: -50%;
-          left: 26%; }
-          .bg_forest_2 .step3_maxContent .demogroup .total .totalfix .number, .bg_forest_2 .step3_maxContent .demogroup .total .totalfix .detail {
-            margin: 5% 0 0 0;
-            display: inline-block;
-            vertical-align: middle;
-            padding: 10px 20px;
-            border: 1px solid #fff;
-            border-radius: 5px; }
-          .bg_forest_2 .step3_maxContent .demogroup .total .totalfix .detail {
-            transition: 0.5s; }
-          .bg_forest_2 .step3_maxContent .demogroup .total .totalfix .detail:hover {
-            border: 1px solid #e97b23;
-            color: #e97b23; }
     .bg_forest_2 .step3_maxContent .fill {
       vertical-align: top;
-      width: 100%;
       display: inline-block;
-      width: 25%;
+      width: 46%;
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover;
-      padding: 4% 0 4% 4%;
-      margin: 10% 0 0 9%;
+      padding: 26%;
       position: relative; }
       .bg_forest_2 .step3_maxContent .fill .fillfix {
         position: absolute;
-        width: 190%;
-        top: -128%;
-        left: -28%; }
+        width: 61%;
+        top: 0;
+        left: 27%; }
         .bg_forest_2 .step3_maxContent .fill .fillfix .head {
           padding: 8px 20px;
           color: #fff;
           background-image: url("../images/2board/step3/head.png");
           background-size: cover; }
-        .bg_forest_2 .step3_maxContent .fill .fillfix .content {
+        .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup {
           background-color: rgba(0, 0, 0, 0.2);
-          color: rgba(255, 255, 255, 0.6);
-          padding: 20px; }
-          .bg_forest_2 .step3_maxContent .fill .fillfix .content h3 {
-            font-weight: 100; }
-          .bg_forest_2 .step3_maxContent .fill .fillfix .content table {
-            width: 100%; }
-            .bg_forest_2 .step3_maxContent .fill .fillfix .content table th {
-              width: 36%; }
-            .bg_forest_2 .step3_maxContent .fill .fillfix .content table td {
-              padding: 10px 10px 10px 0; }
-              .bg_forest_2 .step3_maxContent .fill .fillfix .content table td input {
-                width: 100.6%;
-                padding: 8px 5px;
-                box-sizing: border-box;
-                border-radius: 5px;
-                background-color: rgba(255, 255, 255, 0.6);
-                border: none; }
-              .bg_forest_2 .step3_maxContent .fill .fillfix .content table td textarea {
-                width: 101%;
-                padding: 8px 5px;
-                box-sizing: border-box;
-                resize: none;
-                border-radius: 5px;
-                background-color: rgba(255, 255, 255, 0.6);
-                border: none; }
-          .bg_forest_2 .step3_maxContent .fill .fillfix .content .next a {
+          text-align: center;
+          position: relative; }
+          .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content {
+            width: 67%;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 30px 10px 10px 10px;
+            display: inline-block; }
+            .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content h3 {
+              font-weight: 100; }
+            .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content table {
+              width: 100%; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content table th {
+                width: 36%; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content table td {
+                padding: 10px 10px 10px 0; }
+                .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content table td input {
+                  width: 100.6%;
+                  padding: 8px 5px;
+                  box-sizing: border-box;
+                  border-radius: 5px;
+                  background-color: rgba(255, 255, 255, 0.6);
+                  border: none; }
+                .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content table td textarea {
+                  width: 101%;
+                  padding: 8px 5px;
+                  box-sizing: border-box;
+                  resize: none;
+                  border-radius: 5px;
+                  background-color: rgba(255, 255, 255, 0.6);
+                  border: none; }
+            .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content .next a {
+              display: inline-block;
+              float: right;
+              margin: 20px; }
+          .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .demogroup {
+            vertical-align: top;
             display: inline-block;
-            float: right;
-            margin: 20px; }
-    .bg_forest_2 .step3_maxContent .selectAndNext {
-      width: 25%;
-      display: inline-block;
-      padding-top: 40%;
-      position: relative; }
+            width: 20%;
+            position: relative; }
+            .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .demogroup .demo {
+              margin: auto;
+              width: 80%;
+              position: relative;
+              padding-top: 142%; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .demogroup .demo img {
+                width: 100%;
+                position: absolute; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .demogroup .demo .boarddemo {
+                top: 0;
+                left: 0;
+                z-index: 2; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .demogroup .demo .base {
+                bottom: -37%;
+                left: -24%;
+                width: 150%; }
+          .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .total {
+            position: absolute;
+            width: 37%;
+            top: 16%;
+            left: -39%; }
+            .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .total .totalfix {
+              position: absolute;
+              color: #fff;
+              bottom: -50%;
+              left: 18%;
+              width: 100%;
+              text-align-last: left; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .total .totalfix .number {
+                font-size: 30px;
+                display: inline-block;
+                vertical-align: bottom;
+                width: 57%; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .total .totalfix .detail {
+                vertical-align: bottom;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 5px 10px;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                cursor: pointer; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .total .totalfix .detail {
+                transition: 0.5s; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .total .totalfix .detail:hover {
+                border: 1px solid #e97b23;
+                color: #e97b23; }
   .bg_forest_2 .step4_maxContent {
     max-width: 1170px;
     margin: auto; }

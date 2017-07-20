@@ -85,12 +85,15 @@
     background-size: contain; }
 
 @media screen and (max-width: 960px) {
-  .footer_0 .maxContent .titlegroup .itemtitle {
-    padding: 0;
-    width: 100%; }
-    .footer_0 .maxContent .titlegroup .itemtitle li {
-      margin: 0 8px; }
+  .footer_0 .maxContent .titlegroup {
+    display: none; }
+    .footer_0 .maxContent .titlegroup .itemtitle {
+      padding: 0;
+      width: 100%; }
+      .footer_0 .maxContent .titlegroup .itemtitle li {
+        margin: 0 8px; }
   .footer_0 .maxContent .left {
+    display: none;
     width: 100%; }
     .footer_0 .maxContent .left ul {
       margin: 0 4px; }

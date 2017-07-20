@@ -1,4 +1,12 @@
 $(document).ready(function(){
+	var cssleft =$('.map_bamboo_1 .po').eq(0).position().left;
+	var wholewidth=$('.map_bamboo_1').width();
+	cssleft = cssleft- wholewidth*1/6;
+	$('.map_bamboo_1').css('right',cssleft);
+
+	var csstop =$('.map_bamboo_1 .po').eq(0).position().top;
+	csstop = csstop- wholewidth*1/11;
+	$('.map_bamboo_1').css('bottom',csstop);
 
 	$('.map_bamboo_3 .mobile').click(function(){
 		$(this).addClass('click');

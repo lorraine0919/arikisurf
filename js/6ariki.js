@@ -281,7 +281,7 @@ var ourScene = new ScrollMagic.Scene({
         offset:'80px'
     })
      .setClassToggle('.about_txt','fade-in')
-     .addIndicators({name :''})
+     // .addIndicators({name :''})
      .addTo(controller);
 
 //fade-in 2->business
@@ -290,7 +290,7 @@ var ourScene = new ScrollMagic.Scene({
         offset:'100px'
     })
      .setClassToggle('.business_img','fade-in')
-     .addIndicators({name :''})
+     // .addIndicators({name :''})
      .addTo(controller);
 
 var ourScene = new ScrollMagic.Scene({
@@ -298,7 +298,7 @@ var ourScene = new ScrollMagic.Scene({
         offset:'80px'
     })
      .setClassToggle('.business_txt','fade-in')
-     .addIndicators({name :''})
+     // .addIndicators({name :''})
      .addTo(controller);
 
 });

@@ -59,14 +59,7 @@
     display: inline-block;
     text-align: center;
     width: 100%;
-    margin-top: 30px; }
-
-  .btn_15_a {
-    color: #14324C;
-    padding: 12px;
-    background-color: #FF9630;
-    border-radius: 5%;
-    font-weight: 700; } }
+    margin-top: 30px; } }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
   .cen, .bg_15 .article_title_15 {
@@ -129,17 +122,5 @@
     display: inline-block;
     text-align: center;
     width: 100%;
-    margin-top: 30px; }
-
-  .btn_15_a {
-    color: #fff;
-    padding: 12px;
-    border: 1px solid #fff;
-    border-radius: 5%;
-    transition: all 0.4s cubic-bezier(0, 0.74, 0.69, 0.83); }
-
-  .btn_15_a:hover {
-    border: 1px solid #FF9630;
-    color: #14324C;
-    background-color: #FF9630; } }
+    margin-top: 30px; } }
 /*桌機結束*/

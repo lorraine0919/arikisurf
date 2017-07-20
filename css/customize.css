@@ -33,7 +33,8 @@
       width: 100%; }
   .bg_forest_2 .step1_maxContent {
     max-width: 1170px;
-    margin: auto; }
+    margin: auto;
+    position: relative; }
     .bg_forest_2 .step1_maxContent .stepbar {
       text-align: left;
       background-image: url("../images/2board/strpbar.png");

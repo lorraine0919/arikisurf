@@ -249,6 +249,23 @@
     width: 10%;
     padding-top: 6%;
     position: relative; }
+
+
+.arikicommon_breadcrumb{
+  position: absolute;
+  top: 13%;
+  left: 20%;
+  background-color: rgba(13,38,58,0.2);
+  color: #fff;
+  margin: 30px 10px;
+  padding: 10px;
+  width: 10%;
+  z-index: 20;
+  .fa{
+    margin: 0 10px;
+  }
+
+}
   }
 @media screen and (max-width:910px){
   .nav_0{

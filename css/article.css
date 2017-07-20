@@ -62,9 +62,11 @@
     margin-top: 30px; }
 
   .btn_15_a {
-    color: #fff;
-    padding: 10px;
-    border: 2px solid #fff; } }
+    color: #14324C;
+    padding: 12px;
+    background-color: #FF9630;
+    border-radius: 5%;
+    font-weight: 700; } }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
   .cen, .bg_15 .article_title_15 {
@@ -96,10 +98,13 @@
     width: 100%;
     padding: 7vh 0; }
 
+  .article_big_title {
+    color: #fff; }
+
   .article_item_title {
     font-size: 28px;
     padding: 20px;
-    background-color: rgba(29, 77, 102, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
     border-bottom: 1px solid #ED8C00; }
     .article_item_title p {
@@ -116,7 +121,7 @@
   .article_item_content {
     line-height: 2;
     padding: 30px;
-    background-color: rgba(29, 77, 102, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
     font-size: 18px; }
 
@@ -128,10 +133,13 @@
 
   .btn_15_a {
     color: #fff;
-    padding: 10px;
-    border: 2px solid #fff; }
+    padding: 12px;
+    border: 1px solid #fff;
+    border-radius: 5%;
+    transition: all 0.4s cubic-bezier(0, 0.74, 0.69, 0.83); }
 
   .btn_15_a:hover {
-    border: 2px solid #ED8C00;
-    color: #ED8C00; } }
+    border: 1px solid #FF9630;
+    color: #14324C;
+    background-color: #FF9630; } }
 /*桌機結束*/

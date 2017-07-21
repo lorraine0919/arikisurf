@@ -1,0 +1,106 @@
+@charset "UTF-8";
+* {
+  text-decoration: none; }
+
+img {
+  width: 100%; }
+
+/*字體大小*/
+.content20:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.content20 {
+  background-image: url(../images/7member/member_bg.png);
+  background-size: cover; }
+  .content20 .main20 {
+    margin: auto;
+    color: #fff; }
+
+/*大框中框*/
+.left20 {
+  position: relative;
+  background-color: rgba(3, 31, 54, 0.5);
+  /*sidebar20*/ }
+  .left20 .sidebar20 {
+    /*base20*/
+    /*menu20*/ }
+    .left20 .sidebar20 .base20 .photo20 {
+      box-shadow: -4px 2px 0px #ed9046; }
+    .left20 .sidebar20 .base20 .block20 .account20 {
+      padding: 14px 0px;
+      box-shadow: 0px 3px 0px rgba(73, 100, 122, 0.5); }
+      .left20 .sidebar20 .base20 .block20 .account20 span {
+        margin-left: 3px; }
+    .left20 .sidebar20 .menu20 a {
+      display: block;
+      color: #fff;
+      padding: 0px 10px;
+      box-shadow: -5px 0px 0px rgba(73, 100, 122, 0.5); }
+    .left20 .sidebar20 .menu20 a:hover {
+      color: #ed9046;
+      box-shadow: -5px 0px 0px #ed9046; }
+
+/*left20*/
+.right20 {
+  box-sizing: border-box;
+  background-image: url(../images/7member/member_pic.png);
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: rgba(73, 100, 122, 0.5); }
+  .right20 .title20 {
+    padding: 0.7em 1.25em;
+    background-color: rgba(217, 217, 217, 0.2); }
+
+@media screen and (min-width: 900px) {
+  .main20 {
+    width: 58.333%;
+    max-width: 1170px;
+    padding-top: 90px; }
+
+  /*main20*/
+  .left20 {
+    float: left;
+    /*base20*/
+    /*sidebar20*/ }
+    .left20 .sidebar20 {
+      padding: 60px 40px; }
+      .left20 .sidebar20 .base20 {
+        font-size: 10px; }
+        .left20 .sidebar20 .base20 .photo20, .left20 .sidebar20 .base20 .block20 {
+          width: 100%; }
+        .left20 .sidebar20 .base20 .photo20 {
+          width: 130px;
+          margin-right: 35px; }
+        .left20 .sidebar20 .base20 .block20 .account20 {
+          width: 100%;
+          font-size: 22px; }
+        .left20 .sidebar20 .base20 .block20 .row20 {
+          margin-top: 6px; }
+          .left20 .sidebar20 .base20 .block20 .row20 .icon20 {
+            display: inline-block;
+            width: 20px;
+            vertical-align: middle; }
+          .left20 .sidebar20 .base20 .block20 .row20 .hello20 {
+            line-height: 20px; }
+    .left20 .menu20 {
+      padding: 30px; }
+      .left20 .menu20 a {
+        margin: 40px 0px;
+        font-size: 20px; }
+
+  /*left20*/
+  .right20 {
+    float: right;
+    width: 66%;
+    padding-right: 40px;
+    padding-bottom: 60px; }
+    .right20 .title20 {
+      display: inline-block;
+      width: 235px;
+      margin: 60px 0px;
+      text-align: right; }
+
+  /*right20*/ }

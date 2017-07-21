@@ -1,200 +1,23 @@
 @charset "UTF-8";
 /*=========清除浮動=========*/
-.content20:after, .row20:after, .sidebar20:after {
+.personal21:after, .changepsw21:after, .row21:after {
   content: '';
   display: block;
   clear: both; }
 
-img {
-  width: 100%; }
+.row21 .span21 {
+  display: inline-block;
+  text-align: right; }
 
-.content20 {
-  background-color: #000;
-  background: linear-gradient(rgba(219, 219, 219, 0.4), rgba(55, 137, 200, 0.6)); }
-
-/*左邊*/
-.left20 {
-  /*base20*/
-  /*選單*/ }
-  .left20 .base20 {
-    color: #888;
-    background-color: #fff;
-    /*row20*/ }
-    .left20 .base20 .hello20 {
-      font-size: 25px; }
-    .left20 .base20 .photo20 {
-      background-color: #57b; }
-    .left20 .base20 .row20 .span20, .left20 .base20 .row20 .input20 {
-      height: 2em;
-      line-height: 2em;
-      vertical-align: middle; }
-    .left20 .base20 .row20 .upload20 {
-      height: 2em;
-      line-height: 2em;
-      width: 40px;
-      display: block;
-      float: right;
-      border-radius: 8px;
-      border: none;
-      color: white;
-      background-color: #8af; }
-  .left20 .sidebar20 {
-    text-align: center; }
-    .left20 .sidebar20 li a {
-      font-size: 15px;
-      border-bottom: 1px solid #0a6464;
-      color: #fff;
-      background-color: #11314c; }
-
-/*left20*/
-/*右邊*/
-.right20 {
-  color: #666;
-  /*送出按鈕*/ }
-  .right20 .personal20, .right20 .changepsw20 {
-    margin: auto; }
-  .right20 .title20 {
-    padding: 2%;
-    border-bottom: 1px dotted #11314c;
-    text-align: center;
-    letter-spacing: 12px;
-    font-size: 16px;
-    font-weight: bold; }
-  .right20 .row20 {
-    padding: 2% 8%; }
-    .right20 .row20 .span20, .right20 .row20 .input20, .right20 .row20 .account20, .right20 .row20 .select20, .right20 .row20 .gender20 {
-      display: inline-block;
-      height: 2em;
-      line-height: 2em; }
-    .right20 .row20 .span20 {
-      text-align: center; }
-    .right20 .row20 .input20 {
-      padding-left: 10px;
-      border-radius: 6px; }
-    .right20 .row20 .input20:focus {
-      background-color: #ffa; }
-    .right20 .row20 .input20, .right20 .row20 .account20, .right20 .row20 .select20, .right20 .row20 .radio20, .right20 .row20 .gender20 {
-      margin-left: 4px; }
-    .right20 .row20 .account20, .right20 .row20 .select20 {
-      width: 28%; }
-    .right20 .row20 .radio20, .right20 .row20 .gender20 {
-      width: 12%; }
-  .right20 .send20 {
-    display: block;
-    width: 224px;
-    margin: 5vh auto 15vh auto;
-    text-align: center; }
-    .right20 .send20 .submit20 {
-      width: 100px;
-      line-height: 2.5em;
-      margin: 0px 6px;
-      text-align: center;
-      letter-spacing: 3px;
-      border-radius: 8px;
-      border: none;
-      color: #fff;
-      background-color: #8af; }
-
-.sidebar20 li a:hover {
-  color: #11314c;
-  background-color: #ccc; }
-
-.send20 .submit20, .upload20:hover {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); }
-
-@media screen and (max-width: 767px) {
-  /*左邊*/
-  .left20 {
-    /*選單*/ }
-    .left20 .base20 {
-      padding: 10%; }
-      .left20 .base20 .hello20 {
-        text-align: center; }
-      .left20 .base20 .photo20 {
-        margin: 8% auto;
-        width: 7vw;
-        height: 7.83333vw;
-        min-width: 140px;
-        min-height: 156.666666px; }
-    .left20 .sidebar20 li a {
-      float: left;
-      width: 25%;
-      line-height: 2.5em;
-      border-radius: 7px 7px 0px 0px; }
-
-  /*left20*/
-  /*右邊*/
-  .right20 {
-    padding: 6% 0% 6% 0%; }
-    .right20 .personal20, .right20 .changepsw20 {
-      padding: 3% 0%;
-      font-size: 14px; }
-      .right20 .personal20 .title20, .right20 .changepsw20 .title20 {
-        width: 80%;
-        margin: auto;
-        margin-bottom: 8%; }
-      .right20 .personal20 .row20 .span20, .right20 .changepsw20 .row20 .span20 {
-        width: 100px;
-        text-align: center; }
-      .right20 .personal20 .row20 .input20, .right20 .changepsw20 .row20 .input20 {
-        width: calc(100% - 28% - 100px);
-        padding-left: 10px;
-        border-radius: 6px; }
-
-  /*right20*/ }
 @media screen and (min-width: 768px) {
-  /*左邊*/
-  .content20 {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%; }
+  .row21 {
+    margin-top: 20px; }
+    .row21:first-child {
+      margin-top: 0px; }
+    .row21 .span21 {
+      width: 200px; }
 
-  .left20 {
-    width: 240px;
-    position: fixed;
-    top: calc(10% + 16vh);
-    left: 16vw;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px #0a6464;
-    /*選單*/ }
-    .left20 .base20 {
-      padding: 15px; }
-      .left20 .base20 .hello20 {
-        margin-bottom: 17%;
-        font-size: 20px; }
-      .left20 .base20 .photo20 {
-        width: 70%;
-        height: 0px;
-        padding-bottom: 78.3333%;
-        margin: 6% auto; }
-    .left20 .sidebar20 li a {
-      display: block;
-      padding: 4% 0%;
-      letter-spacing: 2.5px; }
-
-  .move20 {
-    position: absolute;
-    top: 30%; }
-
-  /*右邊*/
-  .right20 {
-    width: 45%;
-    padding: 0px 40px;
-    position: absolute;
-    top: 5%;
-    left: calc(240px + 18%); }
-    .right20 .personal20, .right20 .changepsw20 {
-      padding: 3% 0%;
-      font-size: 16px; }
-    .right20 .title20 {
-      margin-bottom: 5%; }
-    .right20 .row20 {
-      padding: 2% 14%; }
-      .right20 .row20 .span20 {
-        width: 37%;
-        margin-right: -2vw;
-        text-align: center; }
-      .right20 .row20 .input20 {
-        width: 57%;
-        padding-left: 10px;
-        border-radius: 6px; } }
+  .submit21 {
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px; } }

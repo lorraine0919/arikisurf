@@ -75,10 +75,6 @@
     transform: translateY(50px);
     transition: all 1s ease-out; }
 
-  .fade-in {
-    opacity: 1;
-    transform: translateY(0); }
-
   .business_philosophy_title {
     text-align: center;
     margin-top: 4vh;
@@ -93,8 +89,16 @@
     padding-top: 5%;
     padding-bottom: 8%; }
 
-  .business_img img {
-    width: 100%; }
+  .business_img {
+    opacity: 0;
+    transform: translateY(50);
+    transition: all 1s ease-out; }
+    .business_img img {
+      width: 100%; }
+
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0); }
 
   .business_rightSide_17 p {
     margin: 20px;
@@ -284,7 +288,10 @@
 
   .text_description_1, .text_description_2, .text_description_3, .text_description_4 {
     padding: 10px;
-    color: #fff; }
+    color: #fff;
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 2vh; }
 
   .clock, .phone, .location {
     width: 100%;
@@ -614,7 +621,9 @@
 
   .text_description_1, .text_description_2, .text_description_3, .text_description_4 {
     padding: 10px;
-    color: #fff; }
+    color: #fff;
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.3); }
 
   .clock, .phone, .location {
     width: 240px;

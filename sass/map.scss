@@ -26,11 +26,11 @@
 		// -webkit-background-size: 200%;
 		background-size: cover;
 		background-repeat: no-repeat;
-		transform:scale(1.5);
+		// transform:scale(1.5);
 		background-position: center;
 		position:relative;
-		width:200%;
-		padding-top:132%; 
+		width:300%;
+		padding-top:198%;
 		transition:1.5s cubic-bezier(.68,.05,.22,.75);
 		bottom:0;
 		right: 0;
@@ -199,11 +199,11 @@
 		
 // =============還沒秋g仔.但快秋g仔=========
 
-@media screen and ( max-width:1500px ){
-	.map_bamboo_2{
-		.map_bamboo_1{
-			width:200%;
-			padding-top:160%; 
-		}
-	}
-}
+// @media screen and ( max-width:1500px ){
+// 	.map_bamboo_2{
+// 		.map_bamboo_1{
+// 			width:200%;
+// 			padding-top:160%; 
+// 		}
+// 	}
+// }

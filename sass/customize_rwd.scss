@@ -405,20 +405,28 @@
 
 			}
 			.fill{
-				all: unset;
 				width: 100%;
 				display: block;
 				position: static;
+				padding: 0 20px;
+				box-sizing:border-box;
 				.fillfix{
-					all: unset;
+					position: static;
 					display: block;
 					padding:0px 20px;
 					margin: 10px 0;
 					box-sizing:border-box;
-					.content{
-						padding: 10px 2px 0 0;
-						h3{
-							font-size: 15px;
+					.head{
+						width: 43%;
+						margin:20px 0 0 -20px;
+					}
+					.contentgroup{
+						.content{
+							padding: 20px 2px 0 0;
+							width: 100%;
+							h3{
+								font-size: 15px;
+							}
 						}
 					}
 				}

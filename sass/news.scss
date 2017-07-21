@@ -13,6 +13,13 @@
 }
 .clearfix {
   clear: both; }
+body{
+   background-image: url("../images/5news/bg_red.jpg");
+ background-repeat:no-repeat;
+ background-size: cover;
+ width: 100%; 
+ height: auto;
+}
 
 @media screen and (max-width:767px){
   
@@ -20,13 +27,14 @@
   
 
 .bg_14{
- background-image: url("../images/4wavepoint/bg_f.jpg");
+ background-image: url("../images/5news/bg_f_red.jpg");
  background-repeat:no-repeat;
  background-size: contain;
- background-color:#2A6C84; 
+ // background-color:#11314C;
+ width: 100%; 
  height: auto;
  padding-top: 1rem;
- width: 100%;  
+
   .news_title_14{ 
    box-sizing: border-box;
       .news_title_14_txt{
@@ -64,13 +72,14 @@
 
 
   .news_item{
-  width: 100%;
-  height: auto;  
+  width: 80%;
+  height: auto; 
+  margin: auto; 
   box-sizing:border-box;
   background-color:#11314C;
-  box-shadow:1px 1px 2px rgba(0,0,0,.5),
-            0px 6px 0px #ED8C00;
+  box-shadow:0px 1px 0px #ED8C00;          
   margin-bottom: 18px;
+  margin-top:3vh;
   }
   .news_item_txt{
     display:inline-block;
@@ -166,17 +175,18 @@
 
  .news_item{
   width: 100%;
-  height: auto;  
+  height: 18vh;  
   box-sizing:border-box;
-  background-color:rgba(17,49,76,.7);
-  box-shadow:0px 1px 0px #ED8C00;           
+  border:1px solid #fff;
+  display:inline-block;
+  vertical-align: middle;           
   margin-bottom: 18px;
   transition: all 0.6s cubic-bezier(0,.74,.69,.83);
   }
 
-.news_item:hover{
-  box-shadow:0px 0px 0px #ED8C00;          
-   background-color:rgba(237,140,0,.9);
+.news_item:hover{      
+  background-color:rgba(255,255,255,.1);
+  border:0px;
 }
 
   .news_item_txt{
@@ -185,22 +195,30 @@
     text-decoration: none;
     color:#fff;
     margin:0px 10px;
-
+    p{
+      margin-top: 8px;
+    }
+    h3{
+      color:#ED8C00;
+    }
   }
+
  .news_item_border{
   padding-top:5vh;
   padding-bottom:10vh;
  }
 
  .date_14{
-  font-size:16px;
+  font-size:14px;
  }
   
  .news_item_img{
-  width: 10%;
+  width: 120px;
+  height: 120px;
   display:inline-block;
   vertical-align: middle;
-  padding:10px;
+  padding:25px 15px;
+
  }   
  
 

@@ -307,19 +307,24 @@
             .bg_forest_2 .step3_maxContent .demogroup .rwdselectboard select option:hover {
               background: #000; }
     .bg_forest_2 .step3_maxContent .fill {
-      all: unset;
       width: 100%;
       display: block;
-      position: static; }
+      position: static;
+      padding: 0 20px;
+      box-sizing: border-box; }
       .bg_forest_2 .step3_maxContent .fill .fillfix {
-        all: unset;
+        position: static;
         display: block;
         padding: 0px 20px;
         margin: 10px 0;
         box-sizing: border-box; }
-        .bg_forest_2 .step3_maxContent .fill .fillfix .content {
-          padding: 10px 2px 0 0; }
-          .bg_forest_2 .step3_maxContent .fill .fillfix .content h3 {
+        .bg_forest_2 .step3_maxContent .fill .fillfix .head {
+          width: 43%;
+          margin: 20px 0 0 -20px; }
+        .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content {
+          padding: 20px 2px 0 0;
+          width: 100%; }
+          .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content h3 {
             font-size: 15px; }
     .bg_forest_2 .step3_maxContent .selectAndNext {
       display: none; }

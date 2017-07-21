@@ -19,11 +19,10 @@
     background-image: url("../images/4wavepoint/map-1.png");
     background-size: cover;
     background-repeat: no-repeat;
-    transform: scale(1.5);
     background-position: center;
     position: relative;
-    width: 200%;
-    padding-top: 132%;
+    width: 300%;
+    padding-top: 198%;
     transition: 1.5s cubic-bezier(0.68, 0.05, 0.22, 0.75);
     bottom: 0;
     right: 0; }
@@ -124,8 +123,3 @@
 .p9 {
   top: 15%;
   left: 69%; }
-
-@media screen and (max-width: 1500px) {
-  .map_bamboo_2 .map_bamboo_1 {
-    width: 200%;
-    padding-top: 160%; } }

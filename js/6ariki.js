@@ -24,23 +24,27 @@
 
 //scorll banner           
 $(function (){
-    TweenMax.fromTo('.about_title_17',0.7,
-    {y:-250,
+    TweenMax.fromTo('.about_title_17',1,
+    {y:250,
     opacity:0},
     {y:0,
     opacity:1,
-    ease: Power1.easeOut
+    ease: Back.easeOut
     });
-    TweenMax.fromTo('.about_txt_17',0.7,
-    {x:-350,
-    opacity:0},
-    {x:0,
-    opacity:1,
-    delay:0.5,
-    ease: Power1.easeOut
+    TweenMax.fromTo('.about_txt_17',1,
+    {opacity:0},
+    {opacity:1,
+    delay:1,
+    ease: Back.easeOut
 
 });
+TweenMax.fromTo('.about_leftSide_17',1,
+    {opacity:0},
+    {opacity:1,
+    delay:1.5,
+    
 
+});
 
 
 //global
@@ -270,17 +274,11 @@ var scene_sticky = new ScrollMagic.Scene({
 
 
 //fade in 1->about
-var ourScene = new ScrollMagic.Scene({
-        triggerElement: ".about_title",
-        offset:'10px'
-    })
-     .setClassToggle('.about_img','fade-in')
-     // .addIndicators({name :''})
-     .addTo(controller);
+
 
 var ourScene = new ScrollMagic.Scene({
-        triggerElement: ".about_title",
-        offset:'10px'
+        triggerElement: ".about_img",
+        offset:'80px'
     })
      .setClassToggle('.about_txt','fade-in')
      // .addIndicators({name :''})
@@ -288,16 +286,16 @@ var ourScene = new ScrollMagic.Scene({
 
 //fade-in 2->business
 var ourScene = new ScrollMagic.Scene({
-        triggerElement: ".business_philosophy_title",
-        offset:'10px'
+        triggerElement: ".about_txt",
+        offset:'100px'
     })
      .setClassToggle('.business_img','fade-in')
      // .addIndicators({name :''})
      .addTo(controller);
 
 var ourScene = new ScrollMagic.Scene({
-        triggerElement: ".business_philosophy_title",
-        offset:'10px'
+        triggerElement: ".business_img",
+        offset:'80px'
     })
      .setClassToggle('.business_txt','fade-in')
      // .addIndicators({name :''})

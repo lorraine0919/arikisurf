@@ -1,11 +1,11 @@
 //scorll banner           
 $(function (){
-    TweenMax.fromTo('.news_title_14',1,
-    {y:-250,
+    TweenMax.fromTo('.article_txt_15',1,
+    {y:50,
     opacity:0},
     {y:0,
     opacity:1,
-    ease: Power1.easeOut
+    ease: Back.easeOut
     });
     
 });

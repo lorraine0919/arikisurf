@@ -6,9 +6,21 @@
   clear: both;
 }
 
-.row21 .span21{
-  display: inline-block;
-  text-align: right;
+.row21{
+  .span21{
+    display: inline-block;
+    text-align: right;
+  }
+  .addr21{
+    margin-top: 10px;
+    width: 100%;
+    width: calc(100% - 204px - 22.222px);
+  }
+  .upload21{background-color: transparent;}
+  .upload21:hover{
+    color:rgba(237,144,70,1);
+    border:2px solid rgba(237,144,70,1);
+  }
 }
 
 @media screen and (max-width:767px){
@@ -17,15 +29,12 @@
 }
 @media screen and (min-width:768px){
   
-  .personal21,.changepsw21{
-    
-  }
-  
-  .row21{
-    &:first-child{margin-top:0px;}
-    margin-top: 20px;
-    .span21{width: 200px;}
-    .upload21{color: rgba(3,31,54,1);}
+  .right20{
+    .row21{
+      margin-top: 25px;
+      &:first-child{margin-top:0px;}
+      .span21{width: 200px;}
+    }
   }
   .submit21{
     float: right;

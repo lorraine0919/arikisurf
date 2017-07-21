@@ -29,6 +29,7 @@ img {
     .left20 .sidebar20 .base20 .photo20 {
       box-shadow: -4px 2px 0px #ed9046; }
     .left20 .sidebar20 .base20 .block20 .account20 {
+      margin: 30px 0px;
       padding: 14px 0px;
       box-shadow: 0px 3px 0px rgba(73, 100, 122, 0.5); }
       .left20 .sidebar20 .base20 .block20 .account20 span {
@@ -72,8 +73,7 @@ img {
         .left20 .sidebar20 .base20 .photo20, .left20 .sidebar20 .base20 .block20 {
           width: 100%; }
         .left20 .sidebar20 .base20 .photo20 {
-          width: 130px;
-          margin-right: 35px; }
+          width: 130px; }
         .left20 .sidebar20 .base20 .block20 .account20 {
           width: 100%;
           font-size: 22px; }
@@ -95,7 +95,7 @@ img {
   .right20 {
     float: right;
     width: 66%;
-    padding-right: 40px;
+    padding-right: 80px;
     padding-bottom: 60px; }
     .right20 .title20 {
       display: inline-block;

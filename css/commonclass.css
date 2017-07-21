@@ -4,7 +4,8 @@
   border-radius: 5px;
   padding: 5px 10px;
   transition: 0.2s;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
   .arikicommon_btn:hover {
     background-color: #ff9630;
     border: 2px solid transparent;
@@ -20,7 +21,8 @@
   border-radius: 5px;
   padding: 5px 10px;
   display: inline-block;
-  transition: 0.2s; }
+  transition: 0.2s;
+  cursor: pointer; }
   .arikicommon_bgwhite_btn:hover {
     background-color: #ff9630;
     border: 2px solid transparent;
@@ -34,7 +36,8 @@
   display: inline-block;
   transition: 0.2s;
   background-color: #ff9630;
-  font-weight: bold; }
+  font-weight: bold;
+  cursor: pointer; }
   .arikicommon_important_btn:hover {
     background-color: #EA7100;
     color: #18334c; }

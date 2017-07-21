@@ -120,7 +120,6 @@
       color: #fff;
       border-right: 1px solid #0b0b0b;
       box-shadow: 1px 0px 0px #878a8d;
-      border-radius: 5px;
       text-align: center;
       padding: 5px 1vw 0px;
       cursor: pointer;
@@ -243,15 +242,16 @@
     margin: auto;
     text-align: center; }
     #info-box .btngorup .morebtn {
-      background-color: #1a191c;
-      padding: 5px;
+      border: 2px solid #19344c;
+      padding: 5px 10px;
       border-radius: 5px;
-      color: #fff;
+      color: #19344c;
       font-weight: bold;
       transition: .5s;
       display: inline-block; }
     #info-box .btngorup .morebtn:hover {
-      background-color: #e97b23; }
+      background-color: #e97b23;
+      border: 2px solid #e97b23; }
   #info-box .info {
     padding: 5px 10px; }
 

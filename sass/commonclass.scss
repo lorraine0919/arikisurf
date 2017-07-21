@@ -2,8 +2,9 @@
 	color: #fff;
 	border:2px solid #fff;
 	border-radius: 5px;
-	padding: 10px 20px;
+	padding: 5px 10px;
 	transition:0.2s;
+	display: inline-block;
 	&:hover{
 		background-color: #ff9630;
 		border:2px solid transparent;
@@ -19,7 +20,8 @@
 	color: #18334c;
 	border:2px solid #18334c;
 	border-radius: 5px;
-	padding: 10px 20px;
+	padding: 5px 10px;
+	display: inline-block;
 	transition:0.2s;
 	&:hover{
 		background-color: #ff9630;

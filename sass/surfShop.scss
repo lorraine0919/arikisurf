@@ -159,7 +159,7 @@
 			// border: 1px solid #fff;
 			border-right: 1px solid #0b0b0b;
             box-shadow: 1px 0px 0px #878a8d;
-			border-radius: 5px;
+			// border-radius: 5px;
 			text-align: center;
 			padding: 5px 1vw 0px;
 			cursor:pointer;
@@ -361,17 +361,21 @@
              margin: auto;
              text-align: center;
              .morebtn {
-	          background-color: #1a191c;
-	          padding: 5px;
+	          // background-color: #1a191c;
+	          border: 2px solid rgba(25, 52, 76, 1);
+	          padding: 5px 10px;
 	          border-radius: 5px;
-	          color: #fff;
+	          color: rgba(25, 52, 76, 1);
 	          font-weight: bold; 
 	          transition: .5s;
 	          display: inline-block;
              }
             .morebtn:hover{
               background-color: #e97b23;
+              border: 2px solid #e97b23;
+              // color: rgba(255, 255,255, 1);
             }
+
           }
           .info{
           	padding: 5px 10px;

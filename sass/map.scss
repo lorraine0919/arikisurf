@@ -130,18 +130,7 @@
 
 
 
-// ============秋G仔===============
 
-// @media screen and ( max-width:992px ){
-// 	.map_bamboo_2{
-// 		.map_bamboo_1{
-// 		width:300%;
-// 		}
-// 	}
-	
-
-
-// }
 
 // ==============================
 
@@ -195,7 +184,102 @@
 .p9{
 	top:15%;
 	left:69%;
-	}									
+	}	
+
+.bamboo_menu_phone{
+	display: none;
+}
+
+// ============秋G仔===============
+
+@media screen and ( max-width:767px ){
+	.map_bamboo_menu{
+		display: none;
+	}
+	
+	.bamboo_address{
+		display: none;
+	}
+
+
+	.bamboo_menu_phone{
+		color: #fff;
+		position:absolute;
+		z-index:2;
+		background-color:rgba(0,0,0,0.3); 
+		display: inline-block;
+		text-align: center;
+		
+      	right:0;
+      	bottom:5vh;
+      	left:0;
+      	margin:auto;
+		// margin-left:9vh;
+		border-radius:10px;
+		border:5px solid rgba(255,255,255,0.2);
+		box-shadow:(-3px -3px 15px rgba(157,228,255,0.7)),(3px 3px 15px #103046 inset);
+		text-shadow:1px 1px 3px #103046;
+		width:80%; 
+			.bamboo_menu_phone_text{
+				padding:0% 15%;
+				text-align:left;
+			}
+
+			.title{
+				margin:7% 0% 4%; 
+			}
+
+			a{
+				text-shadow:none;
+				display: inline-block;
+				padding:2% 5%;
+				color:#14324c;
+				background-color:#ff9630;
+				border-radius:4px;
+				margin:7% 0% 7%; 
+
+			} 
+	}
+
+		.bamboo_Direction_right{
+
+			color:#ff9630;
+			// margin: 50px; 
+			font-size: 40px;
+			content: '4';
+			position:absolute;
+			z-index:3; 
+			top:0%;
+      		right:4%; 
+      		text-shadow:1px 1px 3px #103046;
+      		text-align: center;
+      			.fa{
+					padding: 80px 5px 80px 30px;
+      			}
+
+      		
+			
+		
+		}
+
+		.bamboo_Direction_left{
+			color:#ff9630;
+			font-size: 40px;
+			content: '4';
+			position:absolute;
+			z-index:3; 
+			top:0%;
+      		left:4%; 
+      		text-shadow:1px 1px 3px #103046;
+      			.fa{
+					padding: 80px 30px 80px 5px;
+      			}
+      		
+		}
+
+	
+
+}									
 		
 // =============還沒秋g仔.但快秋g仔=========
 

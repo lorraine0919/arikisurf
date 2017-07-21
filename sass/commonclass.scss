@@ -29,6 +29,20 @@
 		color: #18334c;
 	}	
 }
+.arikicommon_important_btn{
+	color: #18334c;
+	border:2px solid #18334c;
+	border-radius: 5px;
+	padding: 5px 10px;
+	display: inline-block;
+	transition:0.2s;
+	background-color: #ff9630;
+	&:hover{
+		background-color: #EA7100;
+		color: #18334c;
+	}	
+
+}
 .arikicommon_bgwhite_menu{
 	padding: 10px;
 	background-color: rgba(0,0,0,0.5);

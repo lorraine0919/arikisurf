@@ -213,12 +213,12 @@
   .arikicommon_breadcrumb {
     position: absolute;
     top: 15%;
-    left: 13%;
+    left: 19%;
     background-color: rgba(13, 38, 58, 0.2);
     color: #fff;
     margin: 30px 10px;
     padding: 10px;
-    width: 12%;
+    display: inline-block;
     z-index: 22; }
     .arikicommon_breadcrumb a {
       color: #fff; }

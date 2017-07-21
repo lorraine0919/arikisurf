@@ -27,9 +27,9 @@ img {
     /*base20*/
     /*menu20*/ }
     .left20 .sidebar20 .base20 .photo20 {
-      background-color: #ffa; }
+      box-shadow: -4px 2px 0px #ed9046; }
     .left20 .sidebar20 .base20 .block20 .account20 {
-      padding-bottom: 14px;
+      padding: 14px 0px;
       box-shadow: 0px 3px 0px rgba(73, 100, 122, 0.5); }
       .left20 .sidebar20 .base20 .block20 .account20 span {
         margin-left: 3px; }
@@ -95,7 +95,8 @@ img {
   .right20 {
     float: right;
     width: 66%;
-    padding-right: 40px; }
+    padding-right: 40px;
+    padding-bottom: 60px; }
     .right20 .title20 {
       display: inline-block;
       width: 235px;

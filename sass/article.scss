@@ -20,7 +20,7 @@
  background-image: url("../images/4wavepoint/bg_f.jpg");
  background-repeat:no-repeat;
  background-size: contain; 
- background-color:#2A6C84;
+ // background-color:#2A6C84;
  height: auto;
  padding-top: 1rem;  
   .article_title_15{ 
@@ -40,6 +40,7 @@
 .article_item{
   width: 100%;
   padding-bottom:5vh;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
 .article_item_title{
@@ -66,7 +67,7 @@
 .article_item_content{
   line-height: 2;
   padding:30px;
-  background-color: rgba(29,77,102,.9);
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   color:#fff;
   font-size: 18px;
 

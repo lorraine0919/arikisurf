@@ -233,6 +233,7 @@ ul.top-menu > li > .logout {
     height: 100%;
     position: fixed;
     background: #424a5d;
+    transition: 1s;
 }
 
 #sidebar h5 {
@@ -398,6 +399,7 @@ ul.sidebar-menu li a.active i {
 /* MAIN CONTENT CONFIGURATION */
 #main-content {
     margin-left: 210px;
+    transition: 1s;
 }
 
 .header, .footer {

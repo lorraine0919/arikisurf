@@ -4,7 +4,9 @@
   border-radius: 5px;
   padding: 5px 10px;
   transition: 0.2s;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent; }
   .arikicommon_btn:hover {
     background-color: #ff9630;
     border: 2px solid transparent;
@@ -20,7 +22,8 @@
   border-radius: 5px;
   padding: 5px 10px;
   display: inline-block;
-  transition: 0.2s; }
+  transition: 0.2s;
+  cursor: pointer; }
   .arikicommon_bgwhite_btn:hover {
     background-color: #ff9630;
     border: 2px solid transparent;
@@ -34,7 +37,8 @@
   display: inline-block;
   transition: 0.2s;
   background-color: #ff9630;
-  font-weight: bold; }
+  font-weight: bold;
+  cursor: pointer; }
   .arikicommon_important_btn:hover {
     background-color: #EA7100;
     color: #18334c; }
@@ -113,6 +117,39 @@
       display: inline-block;
       vertical-align: middle; }
       .arikicommon_radio label .circle:after {
+        position: absolute;
+        left: -6px;
+        top: -6px;
+        content: '';
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3px solid rgba(255, 255, 255, 0.3); }
+
+.arikicommon_checkbox {
+  display: inline-block;
+  margin: 0 20px; }
+  .arikicommon_checkbox label {
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle; }
+    .arikicommon_checkbox label span {
+      margin: 0 20px; }
+    .arikicommon_checkbox label input[type="checkbox"] {
+      display: none; }
+      .arikicommon_checkbox label input[type="checkbox"]:checked ~ .circle {
+        background-color: #ff9630; }
+    .arikicommon_checkbox label .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle; }
+      .arikicommon_checkbox label .circle:after {
         position: absolute;
         left: -6px;
         top: -6px;

@@ -33,7 +33,8 @@
   padding: 5px 10px;
   display: inline-block;
   transition: 0.2s;
-  background-color: #ff9630; }
+  background-color: #ff9630;
+  font-weight: bold; }
   .arikicommon_important_btn:hover {
     background-color: #EA7100;
     color: #18334c; }

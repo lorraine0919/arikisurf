@@ -289,18 +289,18 @@
           .btngorup{
              margin: auto;
              text-align: center;
-             .morebtn {
-	          background-color: rgba(255,255,255,.7);
-	          padding: 5px;
-	          border-radius: 5px;
-	          color: rgba(0,0,0,.5);
-	          font-weight: bold; 
-	          transition: .5s;
-	          display: inline-block;
-             }
-            .morebtn:hover{
-              background-color: #e97b23;
-            }
+           //   .morebtn {
+	          // background-color: rgba(255,255,255,.7);
+	          // padding: 5px;
+	          // border-radius: 5px;
+	          // color: rgba(0,0,0,.5);
+	          // font-weight: bold; 
+	          // transition: .5s;
+	          // display: inline-block;
+           //   }
+           //  .morebtn:hover{
+           //    background-color: #e97b23;
+           //  }
           }
         }   
         .myview .item .txt{
@@ -360,21 +360,24 @@
 			.btngorup{
              margin: auto;
              text-align: center;
-             .morebtn {
-	          // background-color: #1a191c;
-	          border: 2px solid rgba(25, 52, 76, 1);
-	          padding: 5px 10px;
-	          border-radius: 5px;
-	          color: rgba(25, 52, 76, 1);
-	          font-weight: bold; 
-	          transition: .5s;
-	          display: inline-block;
+             .arikicommon_bgwhite_btn{
+             	display: inline-block;
              }
-            .morebtn:hover{
-              background-color: #e97b23;
-              border: 2px solid #e97b23;
-              // color: rgba(255, 255,255, 1);
-            }
+           //   .morebtn {
+	          // background-color: #1a191c;
+	          // border: 2px solid rgba(25, 52, 76, 1);
+	          // padding: 5px 10px;
+	          // border-radius: 5px;
+	          // color: rgba(25, 52, 76, 1);
+	          // font-weight: bold; 
+	          // transition: .5s;
+	          // display: inline-block;
+           //   }
+           //  .morebtn:hover{
+           //    background-color: #e97b23;
+           //    border: 2px solid #e97b23;
+           //    color: rgba(255, 255,255, 1);
+           //  }
 
           }
           .info{
@@ -491,6 +494,6 @@
 		  }
 		   #info-box{
 		  	max-width: 300px;
-		  	max-height: 500px;
+		  	max-height: 510px;
 		  }
 	   } 

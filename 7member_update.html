@@ -7,8 +7,11 @@
         <link rel="stylesheet" type="text/css" href="css/header.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
-    
-        <script src="js/jquery.js"></script>
+    	<link rel="stylesheet" type="text/css" href="css/commonclass.css">
+    	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+    	 <script src="js/jquery.js"></script>
+    	<script src="js/breadcrumb.js"></script>
+       
         <title>Ariki Surf - 會員專區</title>
         <link rel="stylesheet" type="text/css" href="css/member.css">
         <script type="text/javascript" src="libs/jquery/dist/jquery.min.js">
@@ -31,8 +34,16 @@
                         <div class="logofix">
                             <a href="index.html">
                                <img src="images/1common/logo.png">
-                            </a>                            
-                        </div>
+                            </a>
+                            <div class="arikicommon_breadcrumb">                            
+                        
+    
+
+<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<span>會員專區</span>
+
+    </div>
+</div>
                     </div>
                     <label class="hb" for="control">選單</label>
                     <ul class="menu">
@@ -61,103 +72,124 @@
     </nav>
     <div class="topGround_0"></div>
 </header>
-    <div class="content20">
+<div class="content20">
+    <div class="main20">
+
         <div class="left20">
-            <div class="base20">
-                <p class="hello20">
-                    Ariki，早安! 
-                </p>
-                <div class="photo20">
-                    <img src="">照片
-                </div>
-                <div class="row20">
-                    <span class="span20">更新大頭照：</span>
-                    <input type="file" name="" class="input20">
-                    <input type="submit" name="" value="上傳" class="upload20">
-                </div>
-            </div><!-- base20 -->
-            <ul class="sidebar20">
-                <li><a href="#">個人資料</a></li>
-                <li><a href="#">訂單查詢</a></li>
-                <li><a href="#">我的最愛</a></li>
-                <li><a href="#">我的留言</a></li>
-            </ul>
+            <div class="sidebar20">
+                <div class="base20">
+
+                    <div class="photo20">
+                        <img src="">
+                    </div>
+
+                    <div class="block20">
+                        <div class="account20"><span>Mathi</span></div>
+                        <div class="row20">
+                            <div class="icon20"><img src="images/7member/m_icon01.png"></div>
+                            <span class="hello20">Mathi5566</span>
+                        </div>
+
+                        <div class="row20">
+                            <div class="icon20"><img src="images/7member/m_icon02.png"></div>
+                            <span class="hello20">0933850473</span>
+                        </div>
+
+                        <div class="row20">
+                            <div class="icon20"><img src="images/7member/m_icon03.png"></div>
+                            <span class="hello20">fran0115@yahoo.com.tw</span>
+                        </div>
+                    </div><!-- block20 -->
+
+                </div><!-- base20 -->
+                <ul class="menu20">
+                    <li><a href="">修改個人資料</a></li>
+                    <li><a href="#">訂單查詢</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">我的發表</a></li>
+                </ul><!-- menu20 -->
+            </div><!-- sidebar20 -->
         </div><!-- left20 -->
-        <form class="right20">   
+
+        <form class="right20">
+ 
+
 <!-- =================會員專區================== -->
-            <div class="personal20">
-                <p class="title20">基本資料</p>
-                <div class="row20">
-                    <span class="span20">帳號：</span>
-                    <span class="account20">fran1984</span>
+            <p class="title20">基本資料</p>
+            <div class="personal21">
+                <div class="row21">
+                    <span class="span21">姓名：</span>
+                    <input type="text" class="input21 arikicommon_inputtext"></input>
                 </div>
-                <div class="row20">
-                    <span class="span20">姓名:</span>
-                    <input type="text" class="input20"></input>
-                </div>
-                <div class="row20">
-                    <span class="span20">性別：</span>
-                    <input type="radio" class="radio20">
-                        <span class="gender20">男</span>
+                <div class="row21">
+                    <span class="span21">性別：</span>
+                    <input type="radio" class="gender21 arikicommon_radio" name="gender21">
+                        <span>男</span>
                     </input>
-                    <input type="radio" class="radio20">
-                     <span class="gender20">女</span>
+                    <input type="radio" class="gender21 arikicommon_radio" name="gender21">
+                        <span>女</span>
                     </input>
                 </div>
-                <div class="row20">
-                    <span class="span20">地址：</span>
-                    <select class="">
+                <div class="row21">
+                    <span class="span21">地址：</span>
+                    <select class="arikicommon_select">
                         <option value="請選擇縣市">請選擇縣市</option>
                     </select>
-                    <select class="">
+                    <select class="arikicommon_select">
                         <option value="請選擇鄉鎮">請選擇鄉鎮</option>
                     </select>
                     <br>
-                    <span class="span20"></span>
-                    <input type="text" name="" class="input20 addr20">
+                    <span class="span21"></span>
+                    <input type="text" name="" class="input21 addr21 arikicommon_inputtext">
                 </div>
-                <div class="row20">
-                    <span class="span20">電話：</span>
-                    <input type="text" class="input20"></input>
+                <div class="row21">
+                    <span class="span21">電話：</span>
+                    <input type="text" class="input20 arikicommon_inputtext"></input>
                 </div>
-                <div class="row20">
-                    <span class="span20">電子郵件：</span>
-                    <input type="email" class="input20"></input>
+                <div class="row21">
+                    <span class="span21">電子郵件：</span>
+                    <input type="email" class="input20 arikicommon_inputtext"></input>
                 </div>
+                <div class="row21">
+                    <span class="span21">修改大頭照：</span>
+                    <button class="upload21">上傳大頭照</button>
+                </div>
+                <button class="submit21 arikicommon_btn">確認修改基本資料</button>
             </div><!-- personal20 -->
-            <div class="changepsw20">
-                <p class="title20">變更密碼</p>
-                <div class="row20">
-                    <span class="span20">輸入舊密碼：</span>
-                    <input type="psw" maxlength="10" size="12" value="" class="input20">
+            
+            <p class="title20">變更密碼</p>
+            <div class="changepsw21">
+                <div class="row21">
+                    <span class="span21">輸入舊密碼：</span>
+                    <input type="psw" maxlength="10" size="12" value="" class="input21 arikicommon_inputtext">
                 </div>
-                <div class="row20">
-                    <span class="span20">輸入新密碼：</span>
-                    <input type="psw" maxlength="10" size="12" value="" class="input20">
+                <div class="row21">
+                    <span class="span21">輸入新密碼：</span>
+                    <input type="psw" maxlength="10" size="12" value="" class="input21 arikicommon_inputtext">
                 </div>
-                <div class="row20">
-                    <span class="span20">確認新密碼：</span>
-                    <input type="psw" maxlength="10" size="12" value="" class="input20">
+                <div class="row21">
+                    <span class="span21">確認新密碼：</span>
+                    <input type="psw" maxlength="10" size="12" value="" class="input21 arikicommon_inputtext">
                 </div>
+                <button class="submit21 arikicommon_btn">確認修改密碼</button>
             </div><!-- changepsw20 -->
-            <div class="send20">
-                <button class="submit20">取消</button><button class="submit20">送出</button>
-            </div><!-- send20 -->
             <div id="trigger20"></div>
-        </div><!-- right20 -->
-    </div><!-- content20 -->
-    <script type="text/javascript">
-      $(function(){
-        var controller = new ScrollMagic.Controller();
-        var move  = new ScrollMagic.Scene({
-            triggerElement:"#trigger20",
-            offset:'-400px'
-        })
-        .setClassToggle('.left20','move20')
-        // .addIndicators({name:'對應點'})
-        .addTo(controller);
-      });
-    </script>
+        </form><!-- right20 -->
+    </div><!-- main20 -->
+</div><!-- content20 -->
+
+<script type="text/javascript">
+  $(function(){
+    var controller = new ScrollMagic.Controller();
+    var move  = new ScrollMagic.Scene({
+        triggerElement:"#trigger20",
+        offset:'-400px'
+    })
+    .setClassToggle('.left20','move20')
+    // .addIndicators({name:'對應點'})
+    .addTo(controller);
+  });
+</script>
 <footer class="footer_0">
     <div class="maxContent">
     	<div class="titlegroup">
@@ -202,6 +234,10 @@
 			<a href="">留言</a>
 		</div>
 		<div class="clearfix"></div>
+		<div class="copyright">
+			<p>©2017 Ariki Surf All Rights Reserved. 
+			</p>
+		</div>
     </div>
 </footer>
 </body>

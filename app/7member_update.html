@@ -7,66 +7,70 @@
 </head>
 <body>
 <!--(bake module/header.html)-->
+<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<span>會員專區</span>
+<!--(bake module/headerend.html)-->
 <!--(bake module/member_top.html)--> 
+
 <!-- =================會員專區================== -->
-            <div class="personal20">
-                <p class="title20">基本資料</p>
-                <div class="row20">
-                    <span class="span20">帳號：</span>
-                    <span class="account20">fran1984</span>
+            <p class="title20">基本資料</p>
+            <div class="personal21">
+                <div class="row21">
+                    <span class="span21">姓名：</span>
+                    <input type="text" class="input21 arikicommon_inputtext"></input>
                 </div>
-                <div class="row20">
-                    <span class="span20">姓名:</span>
-                    <input type="text" class="input20"></input>
-                </div>
-                <div class="row20">
-                    <span class="span20">性別：</span>
-                    <input type="radio" class="radio20">
-                        <span class="gender20">男</span>
+                <div class="row21">
+                    <span class="span21">性別：</span>
+                    <input type="radio" class="gender21 arikicommon_radio" name="gender21">
+                        <span>男</span>
                     </input>
-                    <input type="radio" class="radio20">
-                     <span class="gender20">女</span>
+                    <input type="radio" class="gender21 arikicommon_radio" name="gender21">
+                        <span>女</span>
                     </input>
                 </div>
-                <div class="row20">
-                    <span class="span20">地址：</span>
-                    <select class="">
+                <div class="row21">
+                    <span class="span21">地址：</span>
+                    <select class="arikicommon_select">
                         <option value="請選擇縣市">請選擇縣市</option>
                     </select>
-                    <select class="">
+                    <select class="arikicommon_select">
                         <option value="請選擇鄉鎮">請選擇鄉鎮</option>
                     </select>
                     <br>
-                    <span class="span20"></span>
-                    <input type="text" name="" class="input20 addr20">
+                    <span class="span21"></span>
+                    <input type="text" name="" class="input21 addr21 arikicommon_inputtext">
                 </div>
-                <div class="row20">
-                    <span class="span20">電話：</span>
-                    <input type="text" class="input20"></input>
+                <div class="row21">
+                    <span class="span21">電話：</span>
+                    <input type="text" class="input20 arikicommon_inputtext"></input>
                 </div>
-                <div class="row20">
-                    <span class="span20">電子郵件：</span>
-                    <input type="email" class="input20"></input>
+                <div class="row21">
+                    <span class="span21">電子郵件：</span>
+                    <input type="email" class="input20 arikicommon_inputtext"></input>
                 </div>
+                <div class="row21">
+                    <span class="span21">修改大頭照：</span>
+                    <button class="upload21">上傳大頭照</button>
+                </div>
+                <button class="submit21 arikicommon_btn">確認修改基本資料</button>
             </div><!-- personal20 -->
-            <div class="changepsw20">
-                <p class="title20">變更密碼</p>
-                <div class="row20">
-                    <span class="span20">輸入舊密碼：</span>
-                    <input type="psw" maxlength="10" size="12" value="" class="input20">
+            
+            <p class="title20">變更密碼</p>
+            <div class="changepsw21">
+                <div class="row21">
+                    <span class="span21">輸入舊密碼：</span>
+                    <input type="psw" maxlength="10" size="12" value="" class="input21 arikicommon_inputtext">
                 </div>
-                <div class="row20">
-                    <span class="span20">輸入新密碼：</span>
-                    <input type="psw" maxlength="10" size="12" value="" class="input20">
+                <div class="row21">
+                    <span class="span21">輸入新密碼：</span>
+                    <input type="psw" maxlength="10" size="12" value="" class="input21 arikicommon_inputtext">
                 </div>
-                <div class="row20">
-                    <span class="span20">確認新密碼：</span>
-                    <input type="psw" maxlength="10" size="12" value="" class="input20">
+                <div class="row21">
+                    <span class="span21">確認新密碼：</span>
+                    <input type="psw" maxlength="10" size="12" value="" class="input21 arikicommon_inputtext">
                 </div>
+                <button class="submit21 arikicommon_btn">確認修改密碼</button>
             </div><!-- changepsw20 -->
-            <div class="send20">
-                <button class="submit20">取消</button><button class="submit20">送出</button>
-            </div><!-- send20 -->
 <!--(bake module/member_bottom.html)-->
 <!--(bake module/footer.html)-->
 </body>

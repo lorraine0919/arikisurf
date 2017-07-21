@@ -1,5 +1,6 @@
 $(function(){
 /*以下是爆炸圖動畫*/
+	$('.arikicommon_breadcrumb').remove();
 	var controller = new ScrollMagic.Controller();
 		var expolde = new ScrollMagic.Scene({
 			triggerElement:"#explodetrigger",

@@ -189,9 +189,27 @@
                   width: 100%;
                   top:  -63%;
                   left: 0%;
-                    img {
-                  width:100%;
-                }
+                  img {
+                      width:100%;
+                  }
+                  .arikicommon_breadcrumb{
+                    min-width: 16em;
+                    position: absolute;
+                    top: 90%;
+                    left: 5%;
+                    background-color: rgba(13,38,58,0.2);
+                    color: #fff;
+                    padding: 10px;
+                    display: inline-block;
+                    z-index: 20;
+                    a{
+                      color: #fff;
+                    }
+                    .fa{
+                      margin: 0 10px;
+                    }
+
+                  }
 
               }
             }
@@ -269,24 +287,6 @@
   }
 
 
-  .arikicommon_breadcrumb{
-    position: absolute;
-    top: 15%;
-    left: 19%;
-    background-color: rgba(13,38,58,0.2);
-    color: #fff;
-    margin: 30px 10px;
-    padding: 10px;
-    display: inline-block;
-    z-index: 20;
-    a{
-      color: #fff;
-    }
-    .fa{
-      margin: 0 10px;
-    }
-
-  }
 }
 @media screen and (max-width:910px){
   .nav_0{
@@ -310,5 +310,8 @@
         }
       }
     }
+  }
+  .arikicommon_breadcrumb{
+    display: none;
   }
 }

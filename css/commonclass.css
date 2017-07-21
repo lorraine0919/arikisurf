@@ -127,6 +127,39 @@
         background-color: transparent;
         border: 3px solid rgba(255, 255, 255, 0.3); }
 
+.arikicommon_checkbox {
+  display: inline-block;
+  margin: 0 20px; }
+  .arikicommon_checkbox label {
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle; }
+    .arikicommon_checkbox label span {
+      margin: 0 20px; }
+    .arikicommon_checkbox label input[type="checkbox"] {
+      display: none; }
+      .arikicommon_checkbox label input[type="checkbox"]:checked ~ .circle {
+        background-color: #ff9630; }
+    .arikicommon_checkbox label .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle; }
+      .arikicommon_checkbox label .circle:after {
+        position: absolute;
+        left: -6px;
+        top: -6px;
+        content: '';
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3px solid rgba(255, 255, 255, 0.3); }
+
 .arikicommon_circle {
   width: 50px;
   height: 50px;

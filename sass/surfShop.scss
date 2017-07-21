@@ -142,6 +142,7 @@
 			background-size: content;
 		}
 		.barbg{
+			margin-top: 130px;
 			// background-color: #11314c;
 			.changebar{
 			// background-color: #11314c;
@@ -158,7 +159,7 @@
 			// border: 1px solid #fff;
 			border-right: 1px solid #0b0b0b;
             box-shadow: 1px 0px 0px #878a8d;
-			border-radius: 5px;
+			// border-radius: 5px;
 			text-align: center;
 			padding: 5px 1vw 0px;
 			cursor:pointer;
@@ -186,7 +187,6 @@
 		
 	  }
 	  .container22{
-	  	margin-top: 130px;
 	  	border-radius: 5px;
 	  	padding: 1rem 2rem 1rem;
 	  	box-shadow: 0px 2px 0px rgba(0,0,0,.1),
@@ -289,18 +289,18 @@
           .btngorup{
              margin: auto;
              text-align: center;
-             .morebtn {
-	          background-color: rgba(255,255,255,.7);
-	          padding: 5px;
-	          border-radius: 5px;
-	          color: rgba(0,0,0,.5);
-	          font-weight: bold; 
-	          transition: .5s;
-	          display: inline-block;
-             }
-            .morebtn:hover{
-              background-color: #e97b23;
-            }
+           //   .morebtn {
+	          // background-color: rgba(255,255,255,.7);
+	          // padding: 5px;
+	          // border-radius: 5px;
+	          // color: rgba(0,0,0,.5);
+	          // font-weight: bold; 
+	          // transition: .5s;
+	          // display: inline-block;
+           //   }
+           //  .morebtn:hover{
+           //    background-color: #e97b23;
+           //  }
           }
         }   
         .myview .item .txt{
@@ -360,18 +360,25 @@
 			.btngorup{
              margin: auto;
              text-align: center;
-             .morebtn {
-	          background-color: #1a191c;
-	          padding: 5px;
-	          border-radius: 5px;
-	          color: #fff;
-	          font-weight: bold; 
-	          transition: .5s;
-	          display: inline-block;
+             .arikicommon_bgwhite_btn{
+             	display: inline-block;
              }
-            .morebtn:hover{
-              background-color: #e97b23;
-            }
+           //   .morebtn {
+	          // background-color: #1a191c;
+	          // border: 2px solid rgba(25, 52, 76, 1);
+	          // padding: 5px 10px;
+	          // border-radius: 5px;
+	          // color: rgba(25, 52, 76, 1);
+	          // font-weight: bold; 
+	          // transition: .5s;
+	          // display: inline-block;
+           //   }
+           //  .morebtn:hover{
+           //    background-color: #e97b23;
+           //    border: 2px solid #e97b23;
+           //    color: rgba(255, 255,255, 1);
+           //  }
+
           }
           .info{
           	padding: 5px 10px;
@@ -442,6 +449,7 @@
 				}	
              }
           .barbg{
+          	margin-top:0px;
 			.changebar{
 			 // padding-bottom: 18px;
 		   li{
@@ -486,6 +494,6 @@
 		  }
 		   #info-box{
 		  	max-width: 300px;
-		  	max-height: 500px;
+		  	max-height: 510px;
 		  }
 	   } 

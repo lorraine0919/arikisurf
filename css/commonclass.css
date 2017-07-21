@@ -1,0 +1,211 @@
+.arikicommon_btn {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 0.2s;
+  display: inline-block;
+  cursor: pointer; }
+  .arikicommon_btn:hover {
+    background-color: #ff9630;
+    border: 2px solid transparent;
+    color: #18334c; }
+
+.arikicommon_bgwhite {
+  background-color: #dddddd;
+  padding: 10px; }
+
+.arikicommon_bgwhite_btn {
+  color: #18334c;
+  border: 2px solid #18334c;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: 0.2s;
+  cursor: pointer; }
+  .arikicommon_bgwhite_btn:hover {
+    background-color: #ff9630;
+    border: 2px solid transparent;
+    color: #18334c; }
+
+.arikicommon_important_btn {
+  color: #18334c;
+  border: 2px solid #18334c;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: 0.2s;
+  background-color: #ff9630;
+  font-weight: bold;
+  cursor: pointer; }
+  .arikicommon_important_btn:hover {
+    background-color: #EA7100;
+    color: #18334c; }
+
+.arikicommon_bgwhite_menu {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 30px; }
+  .arikicommon_bgwhite_menu li {
+    padding: 0 10px 0 10px;
+    display: inline-block;
+    box-shadow: 1px 0px 0px #0e2437,2px 0px 0px #a5a5a5; }
+    .arikicommon_bgwhite_menu li:last-child {
+      box-shadow: none; }
+    .arikicommon_bgwhite_menu li a {
+      transition: 0.2s;
+      color: #fff; }
+      .arikicommon_bgwhite_menu li a:hover {
+        color: #ff9630; }
+
+.arikicommon_menu {
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px; }
+  .arikicommon_menu li {
+    padding: 0 10px 0 10px;
+    display: inline-block;
+    box-shadow: 1px 0px 0px #0e2437,2px 0px 0px #a5a5a5; }
+    .arikicommon_menu li:last-child {
+      box-shadow: none; }
+    .arikicommon_menu li a {
+      transition: 0.2s;
+      color: #fff; }
+      .arikicommon_menu li a:hover {
+        color: #ff9630; }
+
+.arikicommon_vertical_menu {
+  border-radius: 10px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: -3px -3px 15px rgba(157, 228, 255, 0.7), 3px 3px 15px #103046 inset;
+  text-shadow: 1px 1px 3px #103046;
+  padding: 10px;
+  text-align: center; }
+  .arikicommon_vertical_menu li {
+    padding: 20px 10px;
+    box-shadow: 0px 1px 0px #0e2437,0px 2px 0px #a5a5a5; }
+    .arikicommon_vertical_menu li:last-child {
+      box-shadow: none; }
+    .arikicommon_vertical_menu li a {
+      transition: 0.2s;
+      color: #fff; }
+      .arikicommon_vertical_menu li a:hover {
+        color: #ff9630; }
+
+.arikicommon_radio {
+  display: inline-block;
+  margin: 0 20px; }
+  .arikicommon_radio label {
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle; }
+    .arikicommon_radio label span {
+      margin: 0 20px; }
+    .arikicommon_radio label input[type="radio"] {
+      display: none; }
+      .arikicommon_radio label input[type="radio"]:checked ~ .circle {
+        background-color: #ff9630; }
+    .arikicommon_radio label .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle; }
+      .arikicommon_radio label .circle:after {
+        position: absolute;
+        left: -6px;
+        top: -6px;
+        content: '';
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3px solid rgba(255, 255, 255, 0.3); }
+
+.arikicommon_circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  transition: 0.2s; }
+  .arikicommon_circle:after {
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    content: '';
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4) inset; }
+  .arikicommon_circle:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
+    .arikicommon_circle:hover:after {
+      box-shadow: none;
+      border: 3px solid #ff9630; }
+
+.arikicommon_inputtext {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset;
+  color: #fff;
+  font-size: 16px; }
+  .arikicommon_inputtext::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.6); }
+  .arikicommon_inputtext::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.6); }
+  .arikicommon_inputtext:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(255, 255, 255, 0.6); }
+  .arikicommon_inputtext:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.6); }
+
+.arikicommon_select {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset;
+  color: #fff;
+  font-size: 16px; }
+  .arikicommon_select option {
+    color: #18334c; }
+
+.arikicommon_textarea {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset;
+  color: #fff;
+  font-size: 16px;
+  resize: none; }
+  .arikicommon_textarea::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.6); }
+  .arikicommon_textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.6); }
+  .arikicommon_textarea:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(255, 255, 255, 0.6); }
+  .arikicommon_textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.6); }
+
+@media screen and (max-width: 767px) {
+  .arikicommon_btn {
+    background-color: #ff9630;
+    border: 2px solid transparent;
+    color: #18334c;
+    font-weight: bold; } }

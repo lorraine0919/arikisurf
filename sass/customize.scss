@@ -45,6 +45,7 @@
 	.step1_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
+		position: relative;
 		// text-align: center;
 		.stepbar{
 			text-align: left;
@@ -576,7 +577,7 @@
 	.step3_maxContent{
 		max-width: $navmaxwidth;
 		margin: auto;
-		// text-align: center;
+		text-align: center;
 		padding: 0 0 5% 0;
 		.stepbar{
 			text-align: left;
@@ -617,10 +618,36 @@
 			    top: 43%;
 			}
 		}
+		.demogroup{
+			vertical-align: top;
+			display: inline-block;
+			width: 16%;
+			position: relative;
+			.demo{
+				margin: auto;				
+			    width: 80%;
+			    position: relative;
+			    padding-top: 142%;
+				img{
+					width: 100%;
+					position: absolute;
+				}
+				.boarddemo{
+					top: 0;
+					left: 0;
+					z-index: 2;
+				}
+				.base{
+					bottom: -37%;
+				    left: -24%;
+					width: 150%;
+				}
+				
+			}		
+		}
 		.fill{
 			vertical-align: top;
 			display: inline-block;
-			width: 46%;
 			// background-image: url('../images/2board/insidebox.png');
 			background-repeat: no-repeat;
 			background-position: top;
@@ -629,22 +656,64 @@
 			position: relative;
 			.fillfix{
 			    position: absolute;
-			    width: 61%;
+			    width: 100%;
 			    top: 0;
-			    left: 27%;
+			    left:0;
+			    background-color: rgba(0,0,0,0.2);
 				.head{
+					display: inline-block;
 					padding: 8px 20px;
 					color: #fff;
-					background-image: url('../images/2board/step3/head.png');
-					background-size: cover;
-					
+					// background-image: url('../images/2board/step3/head.png');
+					// background-size: cover;
+					background-color: #e97b23;
+					padding: 10px;
+					width: 30%;
+					text-align: right;
+					margin: 15px 0;
+					float: left;
+					h3{
+						
+						
+					}
 				}
+				.total{
+					display: inline-block;
+					float: right;
+					margin: 5px 5px 0 0;
+					.totalfix{
+						color: rgba(255,255,255,0.5);		
+						h4{
+							margin: 5px 0;	
+						}		
+					    .number{
+					    	vertical-align: middle;
+					    	display: inline-block;
+					    }
+						.detail{
+
+							margin: 0 10px;
+							vertical-align: middle;
+							display: inline-block;
+							display: none;
+							vertical-align: middle;
+							padding:5px 5px;
+							border: 1px solid rgba(255,255,255,0.5);
+							border-radius: 5px;
+							cursor: pointer;
+							transition:0.5s;
+							&:hover{
+								border: 1px solid #e97b23;
+								color: #e97b23;
+							}
+						}
+					}
+				}	
 				.contentgroup{
-					background-color: rgba(0,0,0,0.2);
 					text-align: center;
 					position: relative;
 					.content{
-						width: 67%;
+						width: 80%;
 						color: rgba(255,255,255,0.6);
 						padding: 30px 10px 10px 10px;
 						display: inline-block;
@@ -683,73 +752,10 @@
 								display: inline-block;
 								float: right;
 								@extend %orangebtn;
-								margin: 20px;
+								margin: 20px 10px;
 							}
 						}
 					}
-					.demogroup{
-						vertical-align: top;
-						display: inline-block;
-						width: 20%;
-						position: relative;
-						.demo{
-							margin: auto;				
-						    width: 80%;
-						    position: relative;
-						    padding-top: 142%;
-							img{
-								width: 100%;
-								position: absolute;
-							}
-							.boarddemo{
-								top: 0;
-								left: 0;
-								z-index: 2;
-							}
-							.base{
-								bottom: -37%;
-							    left: -24%;
-								width: 150%;
-							}
-							
-						}		
-					}
-					.total{
-						position: absolute;
-						width: 37%;
-					    top: 16%;
-					    left: -39%;
-						.totalfix{
-							position: absolute;
-							color: #fff;
-						    bottom: -50%;
-						    left: 18%;
-						   	width: 100%;
-						    text-align-last: left;
-						    .number{
-						    	font-size: 30px;
-						    	display: inline-block;
-						    	vertical-align: bottom;
-						    	width: 57%;
-						    }
-							.detail{
-								vertical-align: bottom;
-								display: inline-block;
-								vertical-align: middle;
-								padding:5px 10px;
-								border: 1px solid #fff;
-								border-radius: 5px;
-								cursor: pointer;
-							}
-							.detail{
-								transition:0.5s;
-							}
-							.detail:hover{
-								border: 1px solid #e97b23;
-								color: #e97b23;
-							}
-						}
-					}	
 
 				}
 

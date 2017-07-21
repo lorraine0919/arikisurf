@@ -40,19 +40,19 @@
         position: relative; }
         .cart-body_28 .flow .flow-box .flow-item {
           display: inline-block;
-          width: 8%;
+          width: 7%;
           border-radius: 50%;
           text-align: center;
           background: linear-gradient(#ffcf8d, #ff7b00);
-          padding-top: 8%;
+          padding-top: 7%;
           margin-top: 3.5%; }
         .cart-body_28 .flow .flow-box .flow-item:nth-child(1):after {
           content: '1';
           display: block;
           position: absolute;
-          top: 10%;
+          top: -5%;
           left: 0;
-          right: 0;
+          right: 7%;
           bottom: 0;
           margin: auto;
           color: white; }
@@ -88,8 +88,8 @@
           color: white; }
         .cart-body_28 .flow .flow-box .flow-item:nth-child(1) {
           position: absolute;
-          bottom: 0%;
-          left: 8%; }
+          bottom: 24%;
+          left: 9.1%; }
         .cart-body_28 .flow .flow-box .flow-item:nth-child(2) {
           visibility: hidden;
           position: absolute;
@@ -176,12 +176,6 @@
             width: 40px; }
         .cart-body_28 .cart1-pc_28 .list-group_28 .list-Pchange_28 {
           padding-top: 2%; }
-          .cart-body_28 .cart1-pc_28 .list-group_28 .list-Pchange_28 .btn-item {
-            width: 90%;
-            height: 36px;
-            line-height: 36px;
-            background-color: #ccc;
-            text-align: center; }
           .cart-body_28 .cart1-pc_28 .list-group_28 .list-Pchange_28 .Pchange-changebtn {
             margin: 0 auto;
             margin-bottom: 3%; }
@@ -217,20 +211,14 @@
           margin-left: 3%; }
     .cart-body_28 .change-page_28 {
       max-width: 1170px;
-      width: 100%;
-      margin: 0 auto;
+      width: 17%;
+      margin-left: 84%;
       margin-top: 1%;
       margin-bottom: 3%; }
-      .cart-body_28 .change-page_28 .btn-item {
-        width: 18%;
-        height: 50px;
-        line-height: 50px;
-        float: left;
-        margin-left: 20px;
-        background-color: #ccc;
-        text-align: center; }
-      .cart-body_28 .change-page_28 .btn-goshop {
-        margin-left: 62%; }
+      .cart-body_28 .change-page_28 .btn-goshop a {
+        color: white; }
+      .cart-body_28 .change-page_28 .btn-checkout {
+        margin-left: 10px; }
 
   .InputInfo-body_29 {
     display: none;
@@ -253,11 +241,11 @@
         position: relative; }
         .InputInfo-body_29 .flow .flow-box .flow-item {
           display: inline-block;
-          width: 8%;
+          width: 7%;
           border-radius: 50%;
           text-align: center;
           background: linear-gradient(#ffcf8d, #ff7b00);
-          padding-top: 8%;
+          padding-top: 7%;
           margin-top: 3.5%; }
         .InputInfo-body_29 .flow .flow-box .flow-item:nth-child(1):after {
           content: '1';
@@ -273,9 +261,9 @@
           content: '2';
           display: block;
           position: absolute;
-          top: 10%;
+          top: -5%;
           left: 0;
-          right: 0;
+          right: 7%;
           bottom: 0;
           margin: auto;
           color: white; }
@@ -306,8 +294,8 @@
           left: 8%; }
         .InputInfo-body_29 .flow .flow-box .flow-item:nth-child(2) {
           position: absolute;
-          bottom: 0%;
-          left: 23%; }
+          bottom: 24%;
+          left: 24%; }
         .InputInfo-body_29 .flow .flow-box .flow-item:nth-child(3) {
           visibility: hidden;
           position: absolute;
@@ -384,22 +372,12 @@
               margin-left: 17%; }
     .InputInfo-body_29 .PvNext-page-btn {
       max-width: 1170px;
-      width: 100%;
-      margin: 0 auto;
+      width: 14%;
+      margin-left: 86.5%;
       margin-top: 1%;
       margin-bottom: 3%; }
-      .InputInfo-body_29 .PvNext-page-btn .btn-item {
-        width: 18%;
-        height: 50px;
-        line-height: 50px;
-        float: left;
-        margin-left: 20px;
-        background-color: #ccc;
-        text-align: center; }
-      .InputInfo-body_29 .PvNext-page-btn .previous-page {
-        margin-left: 62%; }
       .InputInfo-body_29 .PvNext-page-btn .next-page {
-        background-color: #ccc; }
+        margin-left: 10px; }
 
   .order-confirm_30 {
     display: none;
@@ -424,11 +402,11 @@
         position: relative; }
         .order-confirm_30 .flow .flow-box .flow-item {
           display: inline-block;
-          width: 8%;
+          width: 7%;
           border-radius: 50%;
           text-align: center;
           background: linear-gradient(#ffcf8d, #ff7b00);
-          padding-top: 8%;
+          padding-top: 7%;
           margin-top: 3.5%; }
         .order-confirm_30 .flow .flow-box .flow-item:nth-child(1):after {
           content: '1';
@@ -454,9 +432,9 @@
           content: '3';
           display: block;
           position: absolute;
-          top: 10%;
+          top: -5%;
           left: 0;
-          right: 0;
+          right: 7%;
           bottom: 0;
           margin: auto;
           color: white; }
@@ -482,8 +460,8 @@
           left: 23%; }
         .order-confirm_30 .flow .flow-box .flow-item:nth-child(3) {
           position: absolute;
-          bottom: 0%;
-          left: 38%; }
+          bottom: 24%;
+          left: 38.5%; }
         .order-confirm_30 .flow .flow-box .flow-item:nth-child(4) {
           visibility: hidden;
           position: absolute;
@@ -566,24 +544,13 @@
       .order-confirm_30 .ProCfirmInfo-pc .ProCfirmInfo-pc-box .Cfrim-total p .getTotalPrice {
         margin: 0 7px; }
     .order-confirm_30 .PvNext-page-btn2 {
-      width: 100%;
+      width: 18%;
+      margin-left: 82.5%;
       margin-top: 1%;
       margin-bottom: 3%;
       box-sizing: border-box; }
-      .order-confirm_30 .PvNext-page-btn2 .btn-item {
-        width: 18%;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        background-color: #ccc;
-        margin-left: 20px;
-        float: left; }
-      .order-confirm_30 .PvNext-page-btn2 .previous-page2 {
-        position: relative;
-        margin-left: 62%; }
       .order-confirm_30 .PvNext-page-btn2 .next-page2 {
-        background-color: orange;
-        position: relative; }
+        margin-left: 10px; }
 
   .order-over_31 {
     display: none;
@@ -608,11 +575,11 @@
         position: relative; }
         .order-over_31 .flow .flow-box .flow-item {
           display: inline-block;
-          width: 8%;
+          width: 7%;
           border-radius: 50%;
           text-align: center;
           background: linear-gradient(#ffcf8d, #ff7b00);
-          padding-top: 8%;
+          padding-top: 7%;
           margin-top: 3.5%; }
         .order-over_31 .flow .flow-box .flow-item:nth-child(1):after {
           content: '1';
@@ -648,9 +615,9 @@
           content: '4';
           display: block;
           position: absolute;
-          top: 10%;
+          top: -5%;
           left: 0;
-          right: 0;
+          right: 7%;
           bottom: 0;
           margin: auto;
           color: white; }
@@ -671,8 +638,8 @@
           left: 38%; }
         .order-over_31 .flow .flow-box .flow-item:nth-child(4) {
           position: absolute;
-          bottom: 0%;
-          left: 52.5%; }
+          bottom: 24%;
+          left: 53.4%; }
       .order-over_31 .flow .flow-h3 {
         position: relative;
         padding-top: 6%; }
@@ -778,17 +745,6 @@
         .order-over_31 .Order-box .Odover-PM-btn .btn-box {
           width: 100%;
           text-align: right; }
-          .order-over_31 .Order-box .Odover-PM-btn .btn-box .Odover-btn-item {
-            float: left;
-            width: 18%;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #ccc;
-            margin-bottom: 3%; }
-            .order-over_31 .Order-box .Odover-PM-btn .btn-box .Odover-btn-item a {
-              text-decoration: none;
-              color: black; }
           .order-over_31 .Order-box .Odover-PM-btn .btn-box .Odover-btn-item:nth-child(1) {
             margin-left: 61%; }
           .order-over_31 .Order-box .Odover-PM-btn .btn-box .Odover-btn-item:nth-child(2) {

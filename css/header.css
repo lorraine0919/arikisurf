@@ -158,6 +158,20 @@
             left: 0%; }
             .navDetail .navfix .navimg .logo .logofix img {
               width: 100%; }
+            .navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb {
+              min-width: 16em;
+              position: absolute;
+              top: 90%;
+              left: 5%;
+              background-color: rgba(13, 38, 58, 0.2);
+              color: #fff;
+              padding: 10px;
+              display: inline-block;
+              z-index: 20; }
+              .navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb a {
+                color: #fff; }
+              .navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb .fa {
+                margin: 0 10px; }
         .navDetail .navfix .navimg .iconGroup {
           display: inline-block;
           width: 33%;
@@ -208,22 +222,7 @@
   .topGround_0 {
     width: 10%;
     padding-top: 6%;
-    position: relative; }
-
-  .arikicommon_breadcrumb {
-    position: absolute;
-    top: 15%;
-    left: 19%;
-    background-color: rgba(13, 38, 58, 0.2);
-    color: #fff;
-    margin: 30px 10px;
-    padding: 10px;
-    display: inline-block;
-    z-index: 20; }
-    .arikicommon_breadcrumb a {
-      color: #fff; }
-    .arikicommon_breadcrumb .fa {
-      margin: 0 10px; } }
+    position: relative; } }
 @media screen and (max-width: 910px) {
   .nav_0 .navDetail .navfix .navimg .iconGroup {
     width: 78%; }
@@ -232,4 +231,7 @@
     .nav_0 .navDetail .navfix .navimg ul.menu li a {
       padding: 1.2vw 0.6vw; }
   .nav_0 .navDetail .navfix .navimg .idHello {
-    width: 40%; } }
+    width: 40%; }
+
+  .arikicommon_breadcrumb {
+    display: none; } }

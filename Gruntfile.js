@@ -76,7 +76,7 @@ module.exports = function (grunt) {
           watchTask: true,
           server: {
             baseDir: './',
-            index: '7member_register3.html'
+            index: '7member_update.html'
           }
         }
       }

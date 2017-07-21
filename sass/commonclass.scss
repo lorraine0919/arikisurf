@@ -5,6 +5,8 @@
 	padding: 5px 10px;
 	transition:0.2s;
 	display: inline-block;
+	cursor: pointer;
+	background-color:transparent;
 	&:hover{
 		background-color: #ff9630;
 		border:2px solid transparent;
@@ -23,6 +25,7 @@
 	padding: 5px 10px;
 	display: inline-block;
 	transition:0.2s;
+	cursor: pointer;
 	&:hover{
 		background-color: #ff9630;
 		border:2px solid transparent;
@@ -38,6 +41,7 @@
 	transition:0.2s;
 	background-color: #ff9630;
 	font-weight: bold;
+	cursor: pointer;
 	&:hover{
 		background-color: #EA7100;
 		color: #18334c;

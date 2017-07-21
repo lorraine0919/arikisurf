@@ -761,6 +761,29 @@ section#timeline article:nth-child(5) div.inner h2:after {
     height: 500px;
   }
   
+#goTop {   
+    a{
+    display: block; 
+    z-index: 11;
+    border: none;    
+    
+    text-decoration: none;
+    
+    img{
+      width: 6%;
+      height: auto;
+      position: fixed;
+      bottom: 30px;
+      right: 10px;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+}
+}
+
+#goTop img:hover {
+    transform: translate(0px, -20px);
+}
 
 
 }/*桌機結束*/

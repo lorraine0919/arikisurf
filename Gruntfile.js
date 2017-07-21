@@ -42,7 +42,8 @@ module.exports = function (grunt) {
                     "7member_register3.html":"app/7member_register3.html",
                     "9backstage_welcome.html":"app/9backstage_welcome.html",
                     "commonexample.html":"app/commonexample.html",
-                    "9backstage_forum.html":"app/9backstage_forum.html"
+                    "9backstage_forum.html":"app/9backstage_forum.html",
+                    "9backstage_login.html":"app/9backstage_login.html"
                 }
             }
         },

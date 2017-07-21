@@ -75,7 +75,7 @@ a, a:hover, a:focus {
 /*Theme Backgrounds*/
 
 .bg-theme {
-	background-color: #68dff0;
+	background-color: #11314c;
 }
 
 .bg-theme02 {
@@ -93,8 +93,9 @@ a, a:hover, a:focus {
 
 .btn-theme {
   color: #fff;
-  background-color: #68dff0;
-  border-color: #48bcb4;
+  background-color:#ed8c00;
+  border-color: #ed8c00;
+  margin: 20px 0;
 }
 .btn-theme:hover,
 .btn-theme:focus,
@@ -102,8 +103,8 @@ a, a:hover, a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #48bcb4;
-  border-color: #48bcb4;
+  background-color: rgb(221, 130, 0);
+  border-color: rgb(221, 130, 0);
 }
 
 .btn-theme02 {
@@ -286,6 +287,7 @@ ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 
 ul.sidebar-menu {
     margin-top: 75px;
+    transition: 1s;
 }
 
 #sidebar > ul > li > ul.sub {
@@ -1928,18 +1930,19 @@ label {
 
 /*LOGIN CONFIGURATION PAGE*/
 .form-login {
-	max-width: 330px;
+	max-width: 400px;
 	margin: 100px auto 0;
 	background: #fff;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
+    box-shadow: 2px 2px 13px rgba(0,0,0,0.2);
 }
 
 .form-login h2.form-login-heading {
 	margin: 0;
 	padding: 25px 20px;
 	text-align: center;
-	background: #68dff0;
+	background: rgba(17, 49, 76, 0.64);
 	border-radius: 5px 5px 0 0;
 	-webkit-border-radius: 5px 5px 0 0;
 	color: #fff;
@@ -1948,7 +1951,8 @@ label {
 	font-weight: 300;
 }
 .login-wrap {
-	padding: 20px;
+	padding:50px 20px;
+    background-color: #eee;
 }
 .login-wrap .registration {
 	text-align: center;

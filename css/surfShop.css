@@ -179,16 +179,6 @@
   .myview .item .btngorup {
     margin: auto;
     text-align: center; }
-    .myview .item .btngorup .morebtn {
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 5px;
-      border-radius: 5px;
-      color: rgba(0, 0, 0, 0.5);
-      font-weight: bold;
-      transition: .5s;
-      display: inline-block; }
-    .myview .item .btngorup .morebtn:hover {
-      background-color: #e97b23; }
 
 .myview .item .txt {
   padding: 10px;
@@ -241,17 +231,8 @@
   #info-box .btngorup {
     margin: auto;
     text-align: center; }
-    #info-box .btngorup .morebtn {
-      border: 2px solid #19344c;
-      padding: 5px 10px;
-      border-radius: 5px;
-      color: #19344c;
-      font-weight: bold;
-      transition: .5s;
+    #info-box .btngorup .arikicommon_bgwhite_btn {
       display: inline-block; }
-    #info-box .btngorup .morebtn:hover {
-      background-color: #e97b23;
-      border: 2px solid #e97b23; }
   #info-box .info {
     padding: 5px 10px; }
 
@@ -325,4 +306,4 @@
 
   #info-box {
     max-width: 300px;
-    max-height: 500px; } }
+    max-height: 510px; } }

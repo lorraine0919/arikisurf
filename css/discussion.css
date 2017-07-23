@@ -1,9 +1,12 @@
-.cen, .bg_11 .title, .bg_11 .main_11, .bg_11 .feedback_11, .bg_11 .back_11, .bg_11 .send {
+.navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb {
+  min-width: 20em; }
+
+.cen, .bg_11 .title, .bg_11 .main_11 {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto; }
 
-.bc, .bg_11 .main_11:after, .bg_11 .feedback_11:after, .bg_11 .send:after {
+.bc, .bg_11 .main_11:after, .bg_11 .main_11 .box_t:after, .bg_11 .main_11 .back .feed:after, .bg_11 .main_11 .back .feed_t:after, .bg_11 .main_11 .back .feed_t .last .less:after {
   content: '';
   display: block;
   clear: both; }
@@ -128,105 +131,142 @@ a {
         color: #ED8C00; }
   .bg_11 .main_11 {
     box-sizing: border-box;
-    padding: 1.5rem .5rem;
     background-color: rgba(255, 255, 255, 0.5); }
-    .bg_11 .main_11 .content-l, .bg_11 .main_11 .content-r {
-      float: left; }
-    .bg_11 .main_11 .content-l {
-      width: 25%;
-      text-align: center; }
-      .bg_11 .main_11 .content-l .icon {
-        width: 55%;
-        height: 100%;
-        margin: 0 auto;
-        margin-bottom: 1rem; }
-        .bg_11 .main_11 .content-l .icon img {
-          width: 50%;
-          border-radius: 50%; }
-      .bg_11 .main_11 .content-l .user, .bg_11 .main_11 .content-l .feedback_11 .top .quit, .bg_11 .feedback_11 .top .main_11 .content-l .quit {
-        margin-bottom: 1rem; }
-    .bg_11 .main_11 .content-r {
-      width: 65%;
-      padding: 0 3em;
-      position: relative; }
-      .bg_11 .main_11 .content-r:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 1px;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.3); }
-      .bg_11 .main_11 .content-r p {
-        margin: 1vh 0; }
-      .bg_11 .main_11 .content-r .pic {
-        margin-bottom: 1rem; }
-        .bg_11 .main_11 .content-r .pic img {
-          width: 100%;
-          height: 100%;
-          vertical-align: top; }
-  .bg_11 .feedback_11 {
-    margin-top: 1em; }
-    .bg_11 .feedback_11 .top {
-      height: 10vh;
-      background-color: rgba(255, 255, 255, 0.2); }
-      .bg_11 .feedback_11 .top div {
-        float: left; }
-      .bg_11 .feedback_11 .top .icon {
-        width: 10%;
-        height: 100%;
-        text-align: center;
-        box-sizing: border-box;
-        padding: .5rem; }
-        .bg_11 .feedback_11 .top .icon img {
-          vertical-align: top;
-          width: 70px;
-          height: 70px;
-          border-radius: 50%; }
-      .bg_11 .feedback_11 .top .user, .bg_11 .feedback_11 .top .quit {
-        box-sizing: border-box;
-        padding: .5rem; }
-        .bg_11 .feedback_11 .top .user p, .bg_11 .feedback_11 .top .quit p {
-          margin-bottom: .5rem; }
-      .bg_11 .feedback_11 .top .quit {
-        float: right;
-        margin-right: 1rem;
+    .bg_11 .main_11 .box_t {
+      box-sizing: border-box;
+      padding: 1.9vw 6.5vw;
+      background-color: rgba(93, 107, 119, 0.6);
+      box-shadow: 0px 0px 66px 2px #6a8399 inset; }
+      .bg_11 .main_11 .box_t .user {
+        float: left;
+        padding-right: 1vw; }
+        .bg_11 .main_11 .box_t .user img {
+          border-radius: 7px; }
+      .bg_11 .main_11 .box_t .pos {
+        float: left;
+        color: #fff; }
+        .bg_11 .main_11 .box_t .pos .name {
+          font-size: 25px; }
+    .bg_11 .main_11 .box_b {
+      box-sizing: border-box;
+      padding: 1.9vw 6.5vw;
+      box-shadow: 0px 0px 66px 2px #6a8399 inset; }
+      .bg_11 .main_11 .box_b .pic {
+        width: 60%;
+        height: auto; }
+        .bg_11 .main_11 .box_b .pic img {
+          width: 100%; }
+      .bg_11 .main_11 .box_b .txt {
         color: #fff;
-        cursor: pointer; }
-        .bg_11 .feedback_11 .top .quit:hover {
-          color: #ED8C00; }
-    .bg_11 .feedback_11 .text {
-      padding: 1rem 1.5rem;
-      background-color: rgba(255, 255, 255, 0.5); }
-  .bg_11 .back_11 {
-    height: 15vh;
-    margin-top: 2vh;
-    background-color: green; }
-    .bg_11 .back_11 textarea {
+        margin-top: 1.9vh; }
+    .bg_11 .main_11 .back {
+      box-sizing: border-box;
+      padding: 1rem;
       width: 100%;
-      height: 100%;
-      resize: none;
-      box-sizing: border-box;
-      padding: .5rem;
-      border: none; }
-      .bg_11 .back_11 textarea:focus {
-        outline: none; }
-  .bg_11 .send {
-    box-sizing: border-box;
-    background-color: #fff;
-    padding-bottom: 1rem; }
-    .bg_11 .send input {
-      width: 145px;
-      margin-right: 1vw;
-      box-sizing: border-box;
-      padding: .4rem;
-      cursor: pointer;
-      float: right;
-      background-color: #D6D4D4;
-      text-decoration: none;
-      border: none; }
-    .bg_11 .send #submit {
-      background-color: #ADADAD; }
+      height: auto;
+      background-image: url(../images/4wavepoint/bgg.jpg); }
+      .bg_11 .main_11 .back .feed {
+        position: relative;
+        width: 60%;
+        height: auto;
+        margin-left: 5.1vw;
+        margin-bottom: 2vh;
+        box-sizing: border-box;
+        padding: 1vw;
+        background-color: #14344e; }
+        .bg_11 .main_11 .back .feed .icon {
+          width: 60px;
+          height: 60px;
+          float: left;
+          margin-right: 2.2vw; }
+          .bg_11 .main_11 .back .feed .icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 7px;
+            vertical-align: middle; }
+        .bg_11 .main_11 .back .feed .feed_c {
+          width: 25vw;
+          float: left;
+          box-sizing: border-box;
+          padding: 1%; }
+          .bg_11 .main_11 .back .feed .feed_c .feed_info {
+            color: #9aa2aa; }
+            .bg_11 .main_11 .back .feed .feed_c .feed_info .name {
+              display: inline-block;
+              font-size: 22px; }
+        .bg_11 .main_11 .back .feed .txt {
+          color: #fff; }
+        .bg_11 .main_11 .back .feed .quit {
+          position: absolute;
+          top: 2vh;
+          right: 2vw;
+          color: #9aa2aa;
+          cursor: pointer; }
+          .bg_11 .main_11 .back .feed .quit:hover {
+            color: #ED8C00; }
+      .bg_11 .main_11 .back .feed_t {
+        position: relative;
+        width: 60%;
+        height: auto;
+        margin-left: 5.1vw;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        box-sizing: border-box;
+        padding: 1vw;
+        background-color: #14344e; }
+        .bg_11 .main_11 .back .feed_t .icon {
+          width: 60px;
+          height: 60px;
+          float: left;
+          margin-right: 2.3vw; }
+          .bg_11 .main_11 .back .feed_t .icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 7px;
+            vertical-align: middle; }
+        .bg_11 .main_11 .back .feed_t .last {
+          float: left;
+          width: 80.2%;
+          height: auto;
+          background-color: #29465e; }
+          .bg_11 .main_11 .back .feed_t .last:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border: 13px solid red;
+            border-color: transparent #29465e transparent transparent;
+            position: absolute;
+            left: 5.1vw;
+            top: 4vh; }
+          .bg_11 .main_11 .back .feed_t .last #feed_txt {
+            width: 100%;
+            height: 10;
+            text-decoration: none;
+            border: none;
+            resize: none;
+            width: 27vw;
+            height: 25vh;
+            box-sizing: border-box;
+            padding: 2%;
+            background-color: #29465e; }
+            .bg_11 .main_11 .back .feed_t .last #feed_txt:focus {
+              outline: none; }
+          .bg_11 .main_11 .back .feed_t .last .less {
+            width: 100%; }
+          .bg_11 .main_11 .back .feed_t .last #feedpo {
+            text-align: center;
+            width: 60px;
+            float: right;
+            border: none;
+            padding: 15px 40px 15px 20px;
+            margin-right: 1vw;
+            margin-bottom: 1vh;
+            color: #fff;
+            background-color: #14344e;
+            cursor: pointer; }
+            .bg_11 .main_11 .back .feed_t .last #feedpo:focus {
+              font-family: Microsoft JhengHei;
+              outline: none; }
 
 @media screen and (max-width: 767px) {
   img {
@@ -261,10 +301,6 @@ a {
     padding-top: .4rem;
     background-size: 100%;
     background-color: #29475E; }
-    .bg_11 .bread_11 li {
-      box-sizing: border-box;
-      margin-left: .35rem;
-      padding: .5rem 0rem; }
     .bg_11 .title {
       height: auto;
       margin-top: 3vh;
@@ -277,52 +313,30 @@ a {
         display: block;
         text-align: center; }
       .bg_11 .title div {
-        width: 22%;
+        width: 30%;
         margin: 0 auto;
         padding: 0;
         text-align: center; }
     .bg_11 .main_11 {
       padding: 0; }
-      .bg_11 .main_11 .content-l {
-        float: none;
-        display: block;
-        background: linear-gradient(to right, #1BBCB3, #37B9E9);
-        width: 100%;
+      .bg_11 .main_11 .back {
         padding: 1rem 0; }
-        .bg_11 .main_11 .content-l .icon {
-          width: 30%;
-          margin-bottom: .2rem; }
-        .bg_11 .main_11 .content-l .user, .bg_11 .main_11 .content-l .feedback_11 .top .quit, .bg_11 .feedback_11 .top .main_11 .content-l .quit {
-          margin-bottom: 0rem; }
-      .bg_11 .main_11 .content-r {
-        position: static;
-        float: none;
-        display: block;
-        background-color: rgba(255, 255, 255, 0.5);
-        width: 100%;
-        padding: 0; }
-        .bg_11 .main_11 .content-r:after {
-          display: none; }
-        .bg_11 .main_11 .content-r .pic {
-          width: 100%; }
-        .bg_11 .main_11 .content-r p {
-          box-sizing: border-box;
-          padding: 0 .5rem 1rem; }
-    .bg_11 .feedback_11:after {
-      content: ''; }
-    .bg_11 .feedback_11 .top {
-      height: 13vh; }
-      .bg_11 .feedback_11 .top .icon {
-        width: 25%; }
-        .bg_11 .feedback_11 .top .icon img {
-          width: 55px;
-          height: 55px; }
-    .bg_11 .send {
-      text-align: center; }
-      .bg_11 .send input {
-        margin: 0 auto;
-        padding: .2rem;
-        float: none; }
+        .bg_11 .main_11 .back .feed {
+          width: 100%;
+          margin-left: 0; }
+          .bg_11 .main_11 .back .feed .icon {
+            margin-left: 5vw; }
+        .bg_11 .main_11 .back .feed_t {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 1vh;
+          padding-left: 5vw; }
+          .bg_11 .main_11 .back .feed_t .icon {
+            margin-bottom: 2vh; }
+          .bg_11 .main_11 .back .feed_t .last {
+            width: 94.5%; }
+          .bg_11 .main_11 .back .feed_t .last:after {
+            display: none; }
 
   #lightbox_11 .gun {
     width: 100%; }

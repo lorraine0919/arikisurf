@@ -4,18 +4,33 @@ $(function(){
 	$('.step3_maxContent').hide();
 	$('.step4_maxContent').hide();
 
-	$('#step1tostep2').click(function(){
-		$('.step1_maxContent').hide();
-		$('.step2_maxContent').show();
-	});
-	$('#step2tostep3').click(function(){
+	function tostep1(){
 		$('.step2_maxContent').hide();
-		$('.step3_maxContent').show();
-	});
-	$('#step3tostep4').click(function(){
+		$('.step1_maxContent').show();		
+	}
+	function tostep2(){
+		$('.step1_maxContent').hide();
 		$('.step3_maxContent').hide();
-		$('.step4_maxContent').show();
-	});
+		$('.step2_maxContent').show();		
+	}
+	function tostep3(){
+		$('.step2_maxContent').hide();
+		$('.step4_maxContent').hide();
+		$('.step3_maxContent').show();		
+	}
+	function tostep4(){
+		$('.step3_maxContent').hide();
+		$('.step4_maxContent').show();		
+	}
+
+	$('#step2tostep1').click(tostep1);
+	$('#step1tostep2').click(tostep2);
+	$('#step3tostep2').click(tostep2);
+	$('#step2tostep3').click(tostep3);
+	$('#step4tostep3').click(tostep3);
+	$('#step3tostep4').click(tostep4);
+
+
 /*↑換頁相關*/
 
 /*↓步驟一換圖片和敘述和按鈕顏色*/

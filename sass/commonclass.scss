@@ -48,6 +48,19 @@
 	}	
 
 }
+
+.arikicommon_next_btn{
+	background-color: #e97b23;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition:0.5s;
+    &:hover{
+    	background-color: #EA7100;
+    }
+}
 .arikicommon_bgwhite_menu{
 	padding: 10px;
 	background-color: rgba(0,0,0,0.5);

@@ -467,20 +467,30 @@
 							    border-radius: 16px 16px 0 0;
 							}
 							.patternframe{
-								// outline: 1px solid #f00;
-							    padding-top: 26%;
-							    position: relative;
-							    width: 84%;
-							    overflow: hidden;
-							    margin: 0px 0 0 5%;
+									width: 17vw;
+									overflow-x:scroll; 
+									margin: auto;
+									transform:translateX(-0.5vw);
+									&::-webkit-scrollbar
+									{
+									  width: 12px;  /* for vertical scrollbars */
+									  height: 12px; /* for horizontal scrollbars */
+									}
+
+									&::-webkit-scrollbar-track
+									{
+									  background: rgba(255, 255, 255, 0.1);
+									}
+
+									&::-webkit-scrollbar-thumb
+									{
+									  background: rgba(0, 0, 0, 0.1);
+									}
 								.patterns{
-									position: absolute;
-									top: 0;
-									left: -18%;
-									width: 200%;
+									width: 25vw;
 									.pattern{
+										width: 5vw;
 										display: inline-block;
-										width:16%;
 										img{
 											width: 100%;
 										}
@@ -488,6 +498,7 @@
 								}							
 							}
 							.scroll{
+								display: none;
 								width: 81%;
 							    height: 6px;
 							    background-color: rgba(255, 255, 255, 0.3);
@@ -504,7 +515,7 @@
 							}
 							.uploadgroup{
 								color: #fff;
-								margin: 5% 9%;
+								margin: 2% 9%;
 								.introduceUpload{
 									width: 61%;
 									display: inline-block;

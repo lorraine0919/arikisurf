@@ -252,7 +252,6 @@
 					a{
 						display: inline-block;
 						float: right;
-						@extend %orangebtn;
 						margin: 4% 7% 0 0;
 					}
 				}	
@@ -561,14 +560,15 @@
 			}
 			.next{
 				position: absolute;
-				width: 52%;
+				width: 94%;
 				bottom: -9%;
 				right: 0;
+				float: right;
+				text-align: right;
 				a{
 					display: inline-block;
-					float: right;
-					@extend %orangebtn;
-					margin: 6% 7% 0 0;
+					
+					margin: 6% 0 0 7%;
 				}
 			}			
 		}
@@ -680,7 +680,8 @@
 				.total{
 					display: inline-block;
 					float: right;
-					margin: 5px 5px 0 0;
+					margin: 17px 61px 0 0;
+    				text-align: right;
 					.totalfix{
 						color: rgba(255,255,255,0.5);		
 						h4{
@@ -689,6 +690,10 @@
 					    .number{
 					    	vertical-align: middle;
 					    	display: inline-block;
+					    	h3{
+					    		font-size: 30px;
+					    		color: #fff;
+					    	}
 					    }
 						.detail{
 
@@ -715,7 +720,7 @@
 					.content{
 						width: 80%;
 						color: rgba(255,255,255,0.6);
-						padding: 30px 10px 10px 10px;
+						padding: 7px 10px 10px 10px;
 						display: inline-block;
 						h3{
 							font-weight: 100;
@@ -748,10 +753,9 @@
 
 						}
 						.next{
+							text-align: right;
 							a{
 								display: inline-block;
-								float: right;
-								@extend %orangebtn;
 								margin: 20px 10px;
 							}
 						}
@@ -845,20 +849,23 @@
 							
 						}	
 					}
-					.title{
-						width: 50%;
-						color: #e97b23;
-						padding: 10px 0;
-						border-bottom: 2px solid rgba(255,255,255,0.6);
-					}
-					.infocontent{
-						padding: 2% 0px;
-					}
-					.next{
-						a{
-							display: inline-block;
-							@extend %orangebtn;
-							margin: 20px;
+					.right{
+						.title{
+							width: 50%;
+							color: #e97b23;
+							padding: 10px 0;
+							border-bottom: 2px solid rgba(255,255,255,0.6);
+						}
+						.infocontent{
+							padding: 2% 0px;
+						}
+						.next{
+							text-align: right;
+							margin: 0 34px 0 0;
+							a{
+								display: inline-block;
+								margin: 20px;
+							}
 						}
 					}
 				}

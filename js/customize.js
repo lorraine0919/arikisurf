@@ -136,12 +136,38 @@ $(function(){
 	});
 /*↑步驟二rwd按按鈕換顏色*/
 
+/*↓步驟二選到步驟一選的浪板*/
+	$('#step1tostep2').click(function(){
+		$('.step2_maxContent .boarddemo').attr('src',$('.step1_maxContent .boarddemo').attr('src'));
+	});
+
+/*↑步驟二選到步驟一選的浪板*/
+
 /*↓步驟二，色球顏色*/
 	for (var i = 0; i < 3; i++) {
 		var colorarr = ['#fff','#009bd8','#ffd105'];
 		$('.step2_maxContent .colorselectgroup .color .circle').eq(i).css('background-color',colorarr[i]);
 	}
 /*↑步驟二，色球顏色*/
+$('.step2_maxContent .colorselectgroup .color').click(function(){
+	var index=$(this).index();
+	console.log(index);
+	if(index==0){
+		var newsrc=$('.step1_maxContent .boarddemo').attr('src');
+		$('.step2_maxContent .boarddemo').attr('src',newsrc);
+	}else if(index==1){
+		var oldsrc=$('.step1_maxContent .boarddemo').attr('src');
+		var newsrc=oldsrc.substr(0,oldsrc.lastIndexOf('.'))+'_blue.png';
+		$('.step2_maxContent .boarddemo').attr('src',newsrc);
+	}else{
+		var oldsrc=$('.step1_maxContent .boarddemo').attr('src');
+		var newsrc=oldsrc.substr(0,oldsrc.lastIndexOf('.'))+'_yellow.png';
+		$('.step2_maxContent .boarddemo').attr('src',newsrc);
+	}
+});
+/*↑步驟二，改變浪板顏色*/
+
+/*↓步驟二，改變浪板顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
 	$('.step2_maxContent .texturegorup .texture').click(function(){

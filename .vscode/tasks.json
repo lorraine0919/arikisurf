@@ -1,0 +1,9 @@
+{
+    "version": "0.1.0",
+    "windows": {
+        "command": "explorer.exe"
+    },
+    "args": [
+        "http://localhost/Project/arikisurf/${relativeFile}"
+    ]
+}

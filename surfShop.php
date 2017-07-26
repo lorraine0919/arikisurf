@@ -150,7 +150,7 @@
 				
 <?php 
 try{
-    require_once("connect/afu_connect.php");
+    require_once("connectBooks.php");
 	$sql="select * from surfequipped where prod_obj='Leash'";
 	$products = $pdo->query( $sql );
 
@@ -201,7 +201,7 @@ try{
 			<div class="everyone 3333" style="display:none;">
 				<?php 
 			try{
-			    require_once("connect/afu_connect.php");
+			    require_once("connectBooks.php");
 				$sql="select * from surfequipped where prod_obj='Fin'";
 				$products = $pdo->query( $sql );
 
@@ -251,7 +251,7 @@ try{
 		<div class="everyone 4444" style="display:none">
 			<?php 
 			try{
-			    require_once("connect/afu_connect.php");
+			    require_once("connectBooks.php");
 				$sql="select * from surfequipped where prod_obj='Wax'";
 				$products = $pdo->query( $sql );
 
@@ -301,7 +301,7 @@ try{
 		<div class="everyone 5555" style="display:none">
 				<?php 
 			try{
-			    require_once("connect/afu_connect.php");
+			    require_once("connectBooks.php");
 				$sql="select * from surfequipped where prod_obj='Suit'";
 				$products = $pdo->query( $sql );
 

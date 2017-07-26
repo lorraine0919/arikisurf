@@ -1,0 +1,23 @@
+@charset "UTF-8";
+	.back_newsno{
+		width: 10%;
+	}
+  	.back_newsdate{
+  		width: 20%;
+  	}
+	
+	.back_newsmodify{
+		width: 10%;
+	}
+	.content-panel{
+		background-color: #ED8C00;
+		padding-top: 0px;
+    	padding-bottom: 0px;
+	}
+	th{
+		color:#fff;
+		font-size: 16px;
+	}
+	td{
+		font-size: 16px;
+	}

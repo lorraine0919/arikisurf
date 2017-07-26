@@ -3,13 +3,15 @@
 <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Document</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <link rel="stylesheet" type="text/css" href="css/header.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
-    
-        <script src="js/jquery.js"></script>
+    	<link rel="stylesheet" type="text/css" href="css/commonclass.css">
+    	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+    	 <script src="js/jquery.js"></script>
+    	<script src="js/breadcrumb.js"></script>
+       
         <title>Ariki Surf - 會員專區</title>
         <link rel="stylesheet" type="text/css" href="css/member.css">
         <script type="text/javascript" src="libs/jquery/dist/jquery.min.js">
@@ -19,12 +21,12 @@
         <script src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
         <script src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
         <script src="libs/jquery.stellar/src/jquery.stellar.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="css/7member_update.css">  -->
-     <link rel="stylesheet" type="text/css" href="css/7member_ordercheck.css"> 
-     <link rel="stylesheet" type="text/css" href="css/gird.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/7member_ordercheck.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/7member_ordercheck.js"></script>
+    
 </head>
-<body>
+<body> 
 <header>
     <nav class="nav_0">
         <div class="navDetail">
@@ -35,8 +37,16 @@
                         <div class="logofix">
                             <a href="index.html">
                                <img src="images/1common/logo.png">
-                            </a>                            
-                        </div>
+                            </a>
+                            <div class="arikicommon_breadcrumb">                            
+                        
+    
+
+<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<span>會員專區</span>
+
+    </div>
+</div>
                     </div>
                     <label class="hb" for="control">選單</label>
                     <ul class="menu">
@@ -46,12 +56,12 @@
                         <li><a href="map.html">衝浪地圖</a></li>
                         <li><a href="news.html">最新消息</a></li>
                         <li><a href="about.html">關於酋長</a></li>
-                        <li><a href="7member.html" class="rwd">會員專區</a></li>
+                        <li><a href="7member_update.html" class="rwd">會員專區</a></li>
                         <li><a href="cart.html" class="rwd">購物車</a></li>
                     </ul>
                     <div class="iconGroup">
                         <ul>
-                            <li><a href="7member.html"><img src="images/1common/member.png" alt="">會員專區</a></li>
+                            <li><a href="7member_update.html"><img src="images/1common/member.png" alt="">會員專區</a></li>
                             <li class="line"></li>
                             <li><a href="cart.html"><img src="images/1common/shop.png" alt="">購物車</a></li>
                         </ul>
@@ -65,96 +75,152 @@
     </nav>
     <div class="topGround_0"></div>
 </header>
-    <div class="content20">
+<div class="content20">
+    <div class="main20">
+
         <div class="left20">
-            <div class="base20">
-                <p class="hello20">
-                    Ariki，早安! 
-                </p>
-                <div class="photo20">
-                    <img src="">照片
-                </div>
-                <div class="row20">
-                    <span class="span20">更新大頭照：</span>
-                    <input type="file" name="" class="input20">
-                    <input type="submit" name="" value="上傳" class="upload20">
-                </div>
-            </div><!-- base20 -->
-            <ul class="sidebar20">
-                <li><a href="#">個人資料</a></li>
-                <li><a href="#">訂單查詢</a></li>
-                <li><a href="#">我的最愛</a></li>
-                <li><a href="#">我的留言</a></li>
-            </ul>
+            <div class="sidebar20">
+                <div class="base20">
+
+                    <div class="photo20">
+                        <img src="">
+                    </div>
+
+                    <div class="block20">
+                        <div class="account20"><span>Mathi</span></div>
+                        <div class="row20">
+                            <div class="icon20"><img src="images/7member/m_icon01.png"></div>
+                            <span class="hello20">Mathi5566</span>
+                        </div>
+
+                        <div class="row20">
+                            <div class="icon20"><img src="images/7member/m_icon02.png"></div>
+                            <span class="hello20">0933850473</span>
+                        </div>
+
+                        <div class="row20">
+                            <div class="icon20"><img src="images/7member/m_icon03.png"></div>
+                            <span class="hello20">fran0115@yahoo.com.tw</span>
+                        </div>
+                    </div><!-- block20 -->
+
+                </div><!-- base20 -->
+                <ul class="menu20">
+                    <li><a href="">修改個人資料</a></li>
+                    <li><a href="#">訂單查詢</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">我的發表</a></li>
+                </ul><!-- menu20 -->
+            </div><!-- sidebar20 -->
         </div><!-- left20 -->
+
         <form class="right20">
-
-    <div class="member_ordercheck_23">
-        <div class="ordercheck-list">
-            <ul>
-                <li class="list-item" id="CZ-list"><span>客製化浪板</span></li>
-                <li class="list-item" id="GDs-list"><span>周邊商品</span></li>
-                <li class="list-item" id="HT-list"><span>歷史訂單</span></li>
-            </ul>
-        </div>
-        <div class="orderInfo-customize">
-            <div class="orderInfo-CZ-title">
-                <ul>
-                    <li class="col-sm-2"><h3>訂單編號</h3></li>
-                    <li class="col-sm-2"><h3>訂購時間</h3></li>
-                    <li class="col-sm-2"><h3>訂單金額</h3></li>
-                    <li class="col-sm-2"><h3>訂單狀態</h3></li>
-                    <li class="col-sm-4"><h3>訂單變更</h3></li>
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-            <div class="orderInfo-CZ-txt">
-                <div class="col-sm-2"><span>A1000000</span></div>
-                <div class="col-sm-2"><span>2017/04/01</span></div>
-                <div class="col-sm-2"><span>200</span></div>
-                <div class="col-sm-2"><span>出貨中</span></div>
-                <div class="col-sm-4">
-                    <ul>
-                        <li><a href="">查看詳細</a></li>
-                        <li class="btn-item">取消交易</li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="orderInfo-CZ-txt">
-                <div class="col-sm-2"><span>A1000000</span></div>
-                <div class="col-sm-2"><span>2017/04/01</span></div>
-                <div class="col-sm-2"><span>200</span></div>
-                <div class="col-sm-2"><span>出貨中</span></div>
-                <div class="col-sm-4">
-                    <ul>
-                        <li><a href="">查看詳細</a></li>
-                        <li class="btn-item">取消交易</li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-        
+ 
+<!-- =================會員專區================== -->
+<div class="member_ordercheck_23">
+    <div class="ordercheck-title">
+        <ul>
+            <li id="customize_ODC" class="li-click"><p>客製浪板</p></li>
+            <li id="fitting_ODC"><p>衝浪配備</p></li>
+            <li id="history_ODC"><p>歷史訂單</p></li>
+        </ul>
+        <div class="clearfix"></div>
     </div>
-
+    <div class="customize-txt">
+        <div class="txt-title">
+            <ul>
+                <li class="col-sm-2">訂單編號</li>
+                <li class="col-sm-2">訂購時間</li>
+                <li class="col-sm-2">訂單金額</li>
+                <li class="col-sm-2">訂單狀態</li>
+                <li class="col-sm-4">訂單明細</li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="txt-val">
+            <ul>
+                <li class="col-sm-2"><span>A101000</span></li>
+                <li class="col-sm-2"><span>2014/04/01</span></li>
+                <li class="col-sm-2"><span>200</span></li>
+                <li class="col-sm-2"><span>出貨中</span></li>
+                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn"></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="fitting-txt">
+        <div class="txt-title">
+            <ul>
+                <li class="col-sm-2">訂單編號</li>
+                <li class="col-sm-2">訂購時間</li>
+                <li class="col-sm-2">訂單金額</li>
+                <li class="col-sm-2">訂單狀態</li>
+                <li class="col-sm-4">訂單明細</li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="txt-val">
+            <ul>
+                <li class="col-sm-2"><span>A101000</span></li>
+                <li class="col-sm-2"><span>2014/04/01</span></li>
+                <li class="col-sm-2"><span>200</span></li>
+                <li class="col-sm-2"><span>出貨中</span></li>
+                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn"></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="history-txt">
+        <div class="txt-title">
+            <ul>
+                <li class="col-sm-2">訂單編號</li>
+                <li class="col-sm-2">訂購時間</li>
+                <li class="col-sm-2">訂單金額</li>
+                <li class="col-sm-2">訂單狀態</li>
+                <li class="col-sm-4">訂單明細</li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="txt-val">
+            <ul>
+                <li class="col-sm-2"><span>A101000</span></li>
+                <li class="col-sm-2"><span>2014/04/01</span></li>
+                <li class="col-sm-2"><span>200</span></li>
+                <li class="col-sm-2"><span>出貨中</span></li>
+                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn"></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="decoration"></div>
+    <!-- <div class="lightbox">
+        <div class="customize-LB LB-item">
             
+        </div>
+        <div class="fitting-LB LB-item"></div>
+        <div class="history-LB LB-item"></div>
+    </div> -->
+</div>
             <div id="trigger20"></div>
-        </div><!-- right20 -->
+        </form><!-- right20 -->
+    </div><!-- main20 -->
+
+
+<script type="text/javascript">
+  $(function(){
+    var controller = new ScrollMagic.Controller();
+    var move  = new ScrollMagic.Scene({
+        triggerElement:"#trigger20",
+        offset:'-400px'
+    })
+    .setClassToggle('.left20','move20')
+    // .addIndicators({name:'對應點'})
+    .addTo(controller);
+  });
+</script>
+
     </div><!-- content20 -->
-    <script type="text/javascript">
-      $(function(){
-        var controller = new ScrollMagic.Controller();
-        var move  = new ScrollMagic.Scene({
-            triggerElement:"#trigger20",
-            offset:'-400px'
-        })
-        .setClassToggle('.left20','move20')
-        .addIndicators({name:'對應點'})
-        .addTo(controller);
-      });
-    </script>
+</div>
 <footer class="footer_0">
     <div class="maxContent">
     	<div class="titlegroup">
@@ -199,16 +265,11 @@
 			<a href="">留言</a>
 		</div>
 		<div class="clearfix"></div>
+		<div class="copyright">
+			<p>©2017 Ariki Surf All Rights Reserved. 
+			</p>
+		</div>
     </div>
 </footer>
 </body>
-<script>
-    function First(){
-        $('#GDs-list').click(function(){
-            console.log(1);
-            $('#GDs-list').addClass("change-color1");
-        });
-    }
-    window.addEventListener('load',First,false);
-</script>
 </html>

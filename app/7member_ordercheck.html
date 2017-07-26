@@ -3,76 +3,103 @@
 <head>
     <!--(bake module/head.html)-->
     <!--(bake module/member_head.html)-->
-    <!-- <link rel="stylesheet" type="text/css" href="css/7member_update.css">  -->
-     <link rel="stylesheet" type="text/css" href="css/7member_ordercheck.css"> 
-     <link rel="stylesheet" type="text/css" href="css/gird.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/7member_ordercheck.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/7member_ordercheck.js"></script>
+    
 </head>
-<body>
+<body> 
 <!--(bake module/header.html)-->
-<!--(bake module/member_top.html)-->
-
-    <div class="member_ordercheck_23">
-        <div class="ordercheck-list">
-            <ul>
-                <li class="list-item" id="CZ-list"><span>客製化浪板</span></li>
-                <li class="list-item" id="GDs-list"><span>周邊商品</span></li>
-                <li class="list-item" id="HT-list"><span>歷史訂單</span></li>
-            </ul>
-        </div>
-        <div class="orderInfo-customize">
-            <div class="orderInfo-CZ-title">
-                <ul>
-                    <li class="col-sm-2"><h3>訂單編號</h3></li>
-                    <li class="col-sm-2"><h3>訂購時間</h3></li>
-                    <li class="col-sm-2"><h3>訂單金額</h3></li>
-                    <li class="col-sm-2"><h3>訂單狀態</h3></li>
-                    <li class="col-sm-4"><h3>訂單變更</h3></li>
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-            <div class="orderInfo-CZ-txt">
-                <div class="col-sm-2"><span>A1000000</span></div>
-                <div class="col-sm-2"><span>2017/04/01</span></div>
-                <div class="col-sm-2"><span>200</span></div>
-                <div class="col-sm-2"><span>出貨中</span></div>
-                <div class="col-sm-4">
-                    <ul>
-                        <li><a href="">查看詳細</a></li>
-                        <li class="btn-item">取消交易</li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="orderInfo-CZ-txt">
-                <div class="col-sm-2"><span>A1000000</span></div>
-                <div class="col-sm-2"><span>2017/04/01</span></div>
-                <div class="col-sm-2"><span>200</span></div>
-                <div class="col-sm-2"><span>出貨中</span></div>
-                <div class="col-sm-4">
-                    <ul>
-                        <li><a href="">查看詳細</a></li>
-                        <li class="btn-item">取消交易</li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-        
+<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<span>會員專區</span>
+<!--(bake module/headerend.html)-->
+<!--(bake module/member_top.html)--> 
+<!-- =================會員專區================== -->
+<div class="member_ordercheck_23">
+    <div class="ordercheck-title">
+        <ul>
+            <li id="customize_ODC" class="li-click"><p>客製浪板</p></li>
+            <li id="fitting_ODC"><p>衝浪配備</p></li>
+            <li id="history_ODC"><p>歷史訂單</p></li>
+        </ul>
+        <div class="clearfix"></div>
     </div>
-
+    <div class="customize-txt">
+        <div class="txt-title">
+            <ul>
+                <li class="col-sm-2">訂單編號</li>
+                <li class="col-sm-2">訂購時間</li>
+                <li class="col-sm-2">訂單金額</li>
+                <li class="col-sm-2">訂單狀態</li>
+                <li class="col-sm-4">訂單明細</li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="txt-val">
+            <ul>
+                <li class="col-sm-2"><span>A101000</span></li>
+                <li class="col-sm-2"><span>2014/04/01</span></li>
+                <li class="col-sm-2"><span>200</span></li>
+                <li class="col-sm-2"><span>出貨中</span></li>
+                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn"></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="fitting-txt">
+        <div class="txt-title">
+            <ul>
+                <li class="col-sm-2">訂單編號</li>
+                <li class="col-sm-2">訂購時間</li>
+                <li class="col-sm-2">訂單金額</li>
+                <li class="col-sm-2">訂單狀態</li>
+                <li class="col-sm-4">訂單明細</li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="txt-val">
+            <ul>
+                <li class="col-sm-2"><span>A101000</span></li>
+                <li class="col-sm-2"><span>2014/04/01</span></li>
+                <li class="col-sm-2"><span>200</span></li>
+                <li class="col-sm-2"><span>出貨中</span></li>
+                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn"></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="history-txt">
+        <div class="txt-title">
+            <ul>
+                <li class="col-sm-2">訂單編號</li>
+                <li class="col-sm-2">訂購時間</li>
+                <li class="col-sm-2">訂單金額</li>
+                <li class="col-sm-2">訂單狀態</li>
+                <li class="col-sm-4">訂單明細</li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="txt-val">
+            <ul>
+                <li class="col-sm-2"><span>A101000</span></li>
+                <li class="col-sm-2"><span>2014/04/01</span></li>
+                <li class="col-sm-2"><span>200</span></li>
+                <li class="col-sm-2"><span>出貨中</span></li>
+                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn"></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="decoration"></div>
+    <!-- <div class="lightbox">
+        <div class="customize-LB LB-item">
             
+        </div>
+        <div class="fitting-LB LB-item"></div>
+        <div class="history-LB LB-item"></div>
+    </div> -->
+</div>
 <!--(bake module/member_bottom.html)-->
 <!--(bake module/footer.html)-->
 </body>
-<script>
-    function First(){
-        $('#GDs-list').click(function(){
-            console.log(1);
-            $('#GDs-list').addClass("change-color1");
-        });
-    }
-    window.addEventListener('load',First,false);
-</script>
 </html>

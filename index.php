@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--header-->
+  <head>
+  <!--(bake module/head.html)--> <?php require_once('publicpage/head.php'); ?>
+    <title>酋長衝浪Ariki Surf-專業客製化衝浪板</title>
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index_rwd.css">
+    <script type="text/javascript" src="libs/jquery/dist/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.stellar/src/jquery.stellar.js"></script>
+
+ </head>
+  <!--header end-->
+<body>
+<!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
+<!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
+    <div class="banner_1">
+        <video src="0713.mp4" autoplay muted></video>   
+    </div>
+    <div class="slogan_1">
+        <div class="gradient">
+            <h1>ARIKI SURF</h1> 
+            <h3>在古玻里尼西亞文化中，酋長這個身分，<br>
+            不只代表了一個人在部落的領導地位，<br>
+            更代表了他在衝浪技巧上，無可取代的存在。</h3> 
+        </div>
+    </div>
+    <div id="explodetrigger"></div>
+    <div class="coating_1">
+
+        <div class="maxContent">
+            <div class="empty col-xs-12 col-sm-6"></div>
+            <div class="demorwd">
+                <div class="demoimg">
+                    <ul>
+                        <li><img src="images/1common/surfboard.png"></li>
+                        <li><img src="images/1common/surfboardrwd-1.png"></li>
+                        <li><img src="images/1common/surfboardrwd-2.png"></li>
+                        <li><img src="images/1common/surfboardrwd-3.png"></li>
+                        <li><img src="images/1common/surfboardrwd-4.png"></li>
+                    </ul> 
+                </div>
+                <div class="arrowleft rwdcoatingarrow" id="rwdcoatingleft">
+                    <div class="arrowfix">
+                        <img src="images/1common/arrowleft.png">
+                    </div>
+                </div>
+                <div class="arrowright rwdcoatingarrow" id="rwdcoatingright">
+                    <div class="arrowfix"> 
+                        <img src="images/1common/arrowright.png">
+                    </div>
+                </div>
+            </div>
+            <div class="introduce col-xs-12 col-sm-6 ">
+                <h2>領先全球的烤漆與塗料技術</h2>
+                <p>酋長衝浪領先全球的烤漆與塗料技術，創造出猶如稀世珍寶的特殊質感，高雅而不失威風，讓你成為每一個浪點中，居高臨下的征服者。</p>
+            </div>
+            <div class="demo col-xs-12 col-sm-8">
+                <img src="images/1common/board1.png" class="boardlayer">
+                <img src="images/1common/board2.png" class="boardlayer">
+                <img src="images/1common/board3.png" class="boardlayer">
+                <img src="images/1common/board4.png" class="boardlayer">
+            </div>
+            <div class="about col-xs-12 col-sm-4">
+                <div class="aboutContent">
+                    <div class="word w1">
+                        <h4>顧慮全方位的慢磨弧線</h4>
+                        <p>耐鹽水、耐UV、耐大浪的塗料，與注重流線的烤漆技術，穩重而堅固、不易斷版，讓酋長浪板陪你冒險一輩子</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <line x1="200" y1="10" x2="110" y2="40" class="path" />
+                        </svg>
+                    </div>
+                    <div class="photo">
+                        <img src="images/1common/1surface.jpg">
+                    </div>                  
+                </div>
+                <div class="aboutContent">
+                    <div class="word w2">
+                        <h4>完美呈現你的創作</h4>
+                        <p>個性化的圖案，在輕薄表層的材質後，仍然顯色出眾而不失質感 </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <line class="path"  x1="200" y1="20" x2="80" y2="120"/>
+                        </svg>
+                    </div>
+                    <div class="photo">
+                        <img src="images/1common/2pattern.jpg">
+                    </div>                  
+                </div>
+                <div class="aboutContent">
+                    <div class="word w3">
+                        <h4>扎實的填充材質</h4>
+                        <p>縝密的填充材質，使浪板有著彈性佳、耐曬、浮力好、質輕、耐撞、不易進水等重要特性</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="500">
+                            <line class="path" x1="200" y1="20" x2="100" y2="200" />
+                        </svg>
+                    </div>
+                    <div class="photo">
+                        <img src="images/1common/3fill.jpg">
+                    </div>                  
+                </div>
+                <div class="aboutContent">
+                    <div class="word w4">
+                        <h4>巴爾沙木手工拼接</h4>
+                        <p>木紋花色，沒有一塊板子會重覆，木製手工藝使每塊板子都像一件藝術品，非常值得收藏保存。</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  width="500" height="500">
+                            <line class="path"  x1="200" y1="20" x2="100" y2="300" />
+                        </svg>
+                    </div>
+                    <div class="photo">
+                        <img src="images/1common/4wood.jpg">
+                    </div>                  
+                </div>
+
+            </div>      
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="picture_1">
+        <div class="maxContent">
+            <div class="demorwd">
+                <div class="surfboard">
+                    <img src="images/1common/surfboardwithlogo.png">
+                </div>
+                
+            </div>
+            <div class="introduce col-sm-12 col-xs-12">
+                <div class="introduceMax">
+                    <h2>每一張衝浪板的專屬DNA</h2>
+                    <p>每一張浪板都有它的個性、它的情緒，因此，對於如同伯樂的衝浪手，量身打造一張專屬於他的衝浪板，是在征服每一個浪點前，最首要的任務。</p>
+                </div>
+            </div>
+            <div class="photoSelect col-sm-12 col-xs-12">
+                <div class="photo"><img src="images/1common/picselect1.png" alt=""></div>
+                <div class="photo selected"><img src="images/1common/picselect2_s.png" alt=""></div>
+                <div class="photo"><img src="images/1common/picselect3.png" alt=""></div>
+                <div class="arrowrwd">
+                    <i class="fa fa-caret-left" aria-hidden="true"></i>
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="button col-sm-12 col-xs-12">
+                <a href="customize.html">MORE INFO</a>
+            </div>
+            <div class="demo col-sm-12 col-xs-12">
+                <div class="surfboard">
+                    <img src="images/1common/picturedemoboard.png">
+                    <div class="selectpicshow">
+                        <img src="images/1common/piconboard.png">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="map_1">
+        <div class="contentMax">
+            <div class="introduce col-xs-12 col-sm-12">
+                <div class="introduceWord">
+                    <h2>走向高手雲集浪點 衝破完美弧線</h2>
+                    <p>你體內征服者的細胞正在蠢蠢欲動嗎？<br>
+                        對於平淡無奇的波幅已經感到厭倦了嗎？<br>
+                        酋長衝浪將給你全新的浪點、全新的視野。</p>
+                </div>
+            </div>
+            <div class="map col-sm-12">
+                <div class="mapimg">
+                    <a href="map.html"><img src="images/1common/map.png" class="mapimgpic"></a>
+                    <div class="pin">
+                        <img src="images/1common/pin.png" class="pinpic">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="forum_1">
+        <div class="contentMax">
+            <div class="title">
+                <h2>浪點討論</h2>
+            </div>
+            <div class="postgroup">
+                    <div class="postfix col-sm-4 selected">    
+                        <div class="post selected">
+                            <a href="map_forum_discussion.html">
+                            <div class="head">
+                                <!-- <div class="headword">
+                                    <h3>現代衝浪的發源地</h3>
+                                    <h4>Pipeline</h4>
+                                </div> -->
+                            </div>
+                            </a>
+                            <div class="content selected">
+                                <div class="word">
+                                    <h3>現代衝浪的發源地</h3>
+                                    <h4>Pipeline</h4>                                
+                                </div>
+                                
+                                <div class="postcontentgroup">
+                                    <div class="mempic"><img src="images/1common/posthebe.png" alt=""></a></div>
+                                    <div class="postcontent">
+                                        <h5>馥甄</h5>
+                                        <p>「高手雲集的精彩海岸！」</p>
+                                    </div>                             
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                <div class="postfix col-sm-4">
+                    <div class="post">
+                        <a href="map_forum_discussion.html">
+                        <div class="head">
+                            <!--                             <div class="headword">
+                                <h3>Quicksilver職業比賽地</h3>
+                                <h4>SuperBank</h4>
+                            </div> -->
+                            </div>
+                            </a>
+                        <div class="content">
+                            <div class="word">
+                                <h3>Quicksilver職業比賽地</h3>
+                                <h4>SuperBank</h4>                                
+                            </div>
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postmathi.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>Mathi</h5>
+                                    <p>「令人目不轉睛的頂尖對決！」</p>
+                                </div>                    
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="postfix col-sm-4">
+                    <div class="post">
+                        <a href="map_forum_discussion.html"><div class="head">
+                            <!--                             <div class="headword">
+                                <h3>浪人心中的最佳浪點</h3>
+                                <h4>Jeffrey’s Bay</h4>
+                            </div> -->
+                        </div></a>
+                        <div class="content">
+                            <div class="word">
+                                <h3>浪人心中的最佳浪點</h3>
+                                <h4>Jeffrey’s Bay</h4>                                
+                            </div>
+                            
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postsmallfive.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>小五郎</h5>
+                                    <p>「超級管浪灣！」</p>
+                                </div>                     
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bulletin_1">
+        <div class="maxContent">
+            <div class="title">
+                <h2>最新消息</h2>
+            </div>
+            <div class="infoarea">
+                <div class="left col-xs-12 col-sm-6">
+                    <div class="leftfix">
+                         <img src="images/5news/news_item_img_8.jpg">
+                    </div>     
+                </div>
+                <div class="right col-xs-12 col-sm-6">
+                    <div class="news">
+                        <div class="newsimg"><img src="images/5news/news_item_img_8.jpg"></div>
+                        <div class="newcontent">
+                            <div class="date">
+                                <p><span>NEW</span>2017-07-12 22:28</p>
+                            </div>
+                            <div class="newsptitle">
+                                <h3>2017 台東金樽衝浪公開錦標賽來囉!</h3>
+                            </div>
+                            <div class="btn">
+                                <a href="article.html">more info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <div class="newsimg"><img src="images/5news/news_item_img_2.jpg"></div>
+                        <div class="newcontent">
+                            <div class="date">
+                                <p><span>NEW</span>2017-07-08 14:28</p>
+                            </div>
+                            <div class="newsptitle">
+                                <h3>2017 東浪盃世界衝浪錦標賽!</h3>
+                            </div>
+                            <div class="btn">
+                                <a href="article_1.html">more info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <div class="newsimg"><img src="images/1common/newrushguard.png"></div>
+                        <div class="newcontent">
+                            <div class="date">
+                                <p><span>NEW</span>2017.08.20</p>
+                            </div>
+                            <div class="newsptitle">
+                                <h3>BILLABONG 2MM 防寒衣新款上市</h3>
+                            </div>
+                            <div class="btn">
+                                <a href="article_1.html">more info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+     <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+</body>
+</html>

@@ -3,7 +3,7 @@ img {
   width: 100%; }
 
 /*=========清除浮動=========*/
-.topbar26:after, .item26:after {
+.setdown26:after {
   content: '';
   display: block;
   clear: both; }
@@ -11,7 +11,6 @@ img {
 .register26 {
   color: #fff;
   background-color: #374d60;
-  background-image: url(../images/7member/register_bg.png);
   background-size: cover;
   background-size: 70%;
   background-position: bottom;
@@ -19,64 +18,112 @@ img {
 
 .setdown26 {
   margin: auto;
-  /*detail26*/ }
-  .setdown26 .prompt26 {
-    font-size: 22px;
-    line-height: 1.5em;
-    text-align: left; }
-  .setdown26 .detail26 {
-    padding-right: 80px;
+  /*form26*/ }
+  .setdown26 .form26 {
+    margin: auto;
     background-color: rgba(73, 100, 122, 0.5);
     /*item26*/ }
-    .setdown26 .detail26 .title26 {
-      padding: 0.7em 1.25em;
+    .setdown26 .form26 .title26 {
       background-color: rgba(217, 217, 217, 0.2); }
-    .setdown26 .detail26 .item26 .span26 {
+    .setdown26 .form26 .item26 .label26 {
       display: inline-block;
       text-align: right;
       margin-right: 1vw; }
-    .setdown26 .detail26 .item26 .number26 {
-      display: inline-block; }
-    .setdown26 .detail26 .read26 {
+    .setdown26 .form26 .item26 .number26 {
+      display: inline-block;
+      width: 120px; }
+    .setdown26 .form26 .span26, .setdown26 .form26 .check26, .setdown26 .form26 .number26 img {
+      vertical-align: middle; }
+    .setdown26 .form26 .read26 {
       text-align: center; }
-      .setdown26 .detail26 .read26 a {
+      .setdown26 .form26 .read26 a {
         color: #fff;
         text-decoration: underline; }
-    .setdown26 .detail26 .submit26 {
+    .setdown26 .form26 .submit26 {
       display: block;
       color: #000;
       margin: auto;
       width: 150px; }
 
 /*setdown26*/
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 999px) {
   .setdown26 {
-    width: 60%;
-    min-width: 1170px;
-    padding: 100px;
-    border: 1px solid #fa0; }
-    .setdown26 .prompt26, .setdown26 .detail26 {
-      display: inline-block;
-      vertical-align: middle; }
+    width: 100%; }
     .setdown26 .prompt26 {
-      width: calc(100% - 200px - 540px - 10%); }
-    .setdown26 .detail26 {
-      padding: 30px 0px;
-      margin-left: 10%;
-      width: 540px; }
-      .setdown26 .detail26 .title26 {
+      width: 80%;
+      margin: auto;
+      padding: 100px 0px;
+      font-size: 18px;
+      line-height: 1.5em; }
+      .setdown26 .prompt26 p {
+        padding-top: 10px; }
+      .setdown26 .prompt26 p:first-child {
+        font-size: 30px;
+        line-height: 2.5em; }
+    .setdown26 .form26 {
+      width: 90%;
+      padding-bottom: 90px; }
+      .setdown26 .form26 .title26 {
+        width: 100%;
+        padding: 0.7em 0em;
+        text-align: center;
+        letter-spacing: 10px; }
+      .setdown26 .form26 .detail26 {
+        width: 90%;
+        margin: auto; }
+        .setdown26 .form26 .detail26 .item26 {
+          padding-top: 8vw; }
+          .setdown26 .form26 .detail26 .item26:first-child {
+            padding-top: 50px; }
+          .setdown26 .form26 .detail26 .item26 .label26 {
+            width: 7em; }
+          .setdown26 .form26 .detail26 .item26 .input26 {
+            width: calc(100%  - 22.5px - 7em - 1vw - 4px); }
+        .setdown26 .form26 .detail26 .verticle26 .check26 {
+          width: 98px;
+          margin-bottom: 4vw; }
+        .setdown26 .form26 .detail26 .read26 {
+          margin-top: 50px; } }
+@media screen and (min-width: 1000px) {
+  .register26 {
+    background-image: url(../images/7member/register_bg.png); }
+
+  .setdown26 {
+    width: 90%;
+    max-width: 1170px;
+    padding: 150px 0px; }
+    .setdown26 .prompt26 {
+      width: calc(100% - 500px - 65px - 4%);
+      margin: 10% 4% 0% 0%;
+      float: left;
+      font-size: 22px;
+      line-height: 2em; }
+      .setdown26 .prompt26 p:first-child {
+        font-size: 50px;
+        line-height: 1.5em; }
+    .setdown26 .form26 {
+      width: 500px;
+      padding: 45px 0px;
+      padding-right: 65px;
+      float: right; }
+      .setdown26 .form26 .title26 {
         width: 12em;
+        padding: 0.7em 1.25em;
+        margin-bottom: 15px;
         text-align: right; }
-    .setdown26 .item26 {
-      margin-top: 25px; }
-      .setdown26 .item26:first-child {
-        margin-top: 0px; }
-      .setdown26 .item26 .span26 {
-        width: 10em;
-        display: inline-block; }
-    .setdown26 .verticle26 .br26 {
-      display: none; }
-    .setdown26 .verticle26 .number26 {
-      width: 120px; }
-    .setdown26 .verticle26 .span26, .setdown26 .verticle26 .check26, .setdown26 .verticle26 .number26 img {
-      vertical-align: middle; } }
+      .setdown26 .form26 .item26 {
+        padding-top: 25px; }
+        .setdown26 .form26 .item26 .label26 {
+          width: 9em; }
+        .setdown26 .form26 .item26 .input26 {
+          width: calc(100%  - 22.5px - 9em - 1vw - 4px); }
+      .setdown26 .form26 .verticle26 .check26 {
+        width: calc(100%  - 22.5px - 9em - 1vw - 120px - 8px); }
+      .setdown26 .form26 .verticle26 .br26 {
+        display: none; }
+      .setdown26 .form26 .read26 {
+        margin-top: 40px;
+        width: calc(100% + 65px); }
+      .setdown26 .form26 .submit26 {
+        position: relative;
+        left: calc(65px/2); } }

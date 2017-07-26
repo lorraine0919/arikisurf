@@ -1,6 +1,6 @@
 img{width: 100%;}
 /*=========清除浮動=========*/
-.topbar26:after,.item26:after{
+.setdown26:after{
   content: '';
   display: block; 
   clear: both; 
@@ -8,7 +8,6 @@ img{width: 100%;}
 .register26{
 	color:#fff;
 	background-color: #374d60;
-	background-image: url(../images/7member/register_bg.png);
 	background-size: cover;
     background-size: 70%;
     background-position: bottom;
@@ -16,26 +15,22 @@ img{width: 100%;}
 }
 .setdown26{
 	margin: auto;
-	.prompt26{
-		font-size: 22px;
-		line-height: 1.5em;
-		text-align: left;
-	}
-	.detail26{
-		padding-right: 80px;
+	.form26{
+		margin: auto;
 		background-color: rgba(73,100,122,0.5);
-		.title26{
-	 	   padding: 0.7em 1.25em;
-	 	   background-color: rgba(217,217,217,0.2);
-	  	}
+		.title26{background-color: rgba(217,217,217,0.2);}
 		.item26{
-			.span26{
+			.label26{
 				display: inline-block;
 				text-align: right;
 				margin-right:1vw;
 			}
-			.number26{display: inline-block;}
+			.number26{
+				display: inline-block;
+				width: 120px;
+			}
 		}/*item26*/
+		.span26, .check26, .number26 img{vertical-align: middle;}
 		.read26{
 			text-align: center;
 			a{
@@ -49,49 +44,108 @@ img{width: 100%;}
 			margin: auto;
 			width: 150px;
 		}
-	}/*detail26*/
+	}/*form26*/
 }/*setdown26*/
 
 
 @media screen and (max-width:999px){
 	
+.setdown26{
+	width: 100%;
+	.prompt26{
+		width: 80%;
+		margin: auto;
+		padding: 100px 0px;
+		font-size: 18px;
+		line-height: 1.5em;
+		p{padding-top: 10px;}
+		p:first-child{
+			font-size: 30px;
+			line-height: 2.5em;
+		}
+	}//.prompt26
+	.form26{
+		width: 90%;
+		padding-bottom:90px;
+		.title26{
+			width: 100%;
+			padding: 0.7em 0em;
+			text-align: center;
+			letter-spacing: 10px;
+		}
+		.detail26{
+			width: 90%;
+			margin: auto;
+			.item26{
+				padding-top: 8vw;
+				&:first-child{
+					padding-top: 50px;
+				}
+				.label26{width: 7em;}
+				.input26{width: calc(100%  - 22.5px - 7em - 1vw - 4px);}			
+			}
+			.verticle26{
+				.check26{
+					width: 98px;
+					margin-bottom: 4vw;
+				}
+			}
+			.read26{margin-top: 50px;}
+
+		}
+	}//.form26
+}//.setdown26
+
 }
 
 @media screen and (min-width:1000px){
-	
+.register26{background-image: url(../images/7member/register_bg.png);}
 .setdown26{
-	width: 60%;
-	min-width: 1170px;
-	padding: 100px;
-	border: 1px solid #fa0;
-	.prompt26,.detail26{
-		display: inline-block;
-		vertical-align: middle;
-	}
-	.prompt26{width: calc(100% - 200px - 540px - 10%);}
-	.detail26{
-		padding: 30px 0px;
-		margin-left: 10%;
-		width: 540px;
+	width: 90%;	//此行是為了平板加的
+	max-width: 1170px;
+	padding: 150px 0px;
+	.prompt26{
+		width: calc(100% - 500px - 65px - 4%);
+		margin: 10% 4% 0% 0%;
+		float: left;
+		font-size: 22px;
+		line-height: 2em;
+		p:first-child{
+			font-size: 50px;
+			line-height: 1.5em;
+		}
+	}//.prompt26
+	.form26{
+		width: 500px;
+		padding: 45px 0px;
+		padding-right:65px;
+		float: right;
 		.title26{
 			width: 12em;
+			padding: 0.7em 1.25em;
+			margin-bottom: 15px;
 			text-align: right;
 		}
-	}
-	.item26{
-		margin-top: 25px;
-		&:first-child{margin-top:0px;}
-		.span26{
-			width: 10em;
-			display: inline-block;
+		.item26{
+			padding-top: 25px;
+			.label26{width: 9em;}
+			.input26{width: calc(100%  - 22.5px - 9em - 1vw - 4px);}
+			//中間有空白字元需減去
 		}
-	}
-	.verticle26{
-		.br26{display: none;}
-		.number26{width: 120px;}
-		.span26, .check26, .number26 img{vertical-align: middle;}
-	} 
-}
+		.verticle26{
+			.check26{width: calc(100%  - 22.5px - 9em - 1vw - 120px - 8px);}
+			.br26{display: none;}
+		}
+		.read26{
+			margin-top: 40px;
+			width: calc(100% + 65px);
+		}
+		.submit26{
+			position: relative;
+			left: calc(65px/2);
+		}
+	}//.form26
+}//.setdown26
 
 			
 		

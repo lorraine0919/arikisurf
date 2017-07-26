@@ -22,44 +22,48 @@
             <p>立即加入會員，享有客製化浪板、搶購限量配備等服務</p>
         </div><!-- prompt26 -->
 
-        <form class="detail26" action="">
+        <form class="form26" action="">
             <div class="title26">
                 <h2>帳號密碼設定</h2>
             </div>
-            <div class="item26">
-                <span class="span26">設定帳號</span>
-                <input type="text" minlength="4" maxlength="10" placeholder="請輸入4-10碼英數字組合" class="input26 arikicommon_inputtext">
-            </div>
-            <div class="item26">
-                <span class="span26">設定密碼</span>
-                <input type="password" minlength="6" maxlength="12" placeholder="請輸入6-12碼英數字組合" class="input26 arikicommon_inputtext">
-            </div>
-            <div class="item26">
-                <span class="span26">確認密碼</span>
-                <input type="password" minlength="6" maxlength="12" placeholder="" class="input26 arikicommon_inputtext">
-            </div>
-            <div class="item26 verticle26">
-                <span maxlength="4" class="span26">請輸入驗證碼</span>
-                <input type="text" class="check26 arikicommon_inputtext">
-                <br class="br26">
-                <span class="span26 br26"></span>
-                <div class="number26"><img src="images/7member/verification.jpg" alt="驗證碼"></div>
-            </div>
-            <div class="read26">
-                <div class="arikicommon_checkbox">
-                    <label>
-                        <input type="checkbox" name="sex" style="display: none">
-                        <div class="circle"></div>
-                        <span>本人已閱讀並同意
-                            <a href="7member_rule.html">會員條款</a>
-                        </span>
-                    </label>        
-                 </div>
-            </div>
-            <div class="item26">
-                <button href="7member_register2.html" class="submit26 arikicommon_btn">下一步</button>
-            </div>
-        </form><!-- detail26 -->
+
+            <div class="detail26">
+                <div class="item26">
+                    <label class="label26">設定帳號</label>
+                    <input type="text" minlength="4" maxlength="10" placeholder="請輸入4-10碼英數字組合" class="input26 arikicommon_inputtext" required>
+                </div>
+                <div class="item26">
+                    <label class="label26">設定密碼</label>
+                    <input type="password" minlength="6" maxlength="12" placeholder="請輸入6-12碼英數字組合" class="input26 arikicommon_inputtext" required>
+                </div>
+                <div class="item26">
+                    <label class="label26">確認密碼</label>
+                    <input type="password" minlength="6" maxlength="12" placeholder="" class="input26 arikicommon_inputtext" required>
+                </div>
+                <div class="item26 verticle26">
+                    <label maxlength="4" class="label26">請輸入驗證碼</label>
+                    <input type="text" class="check26 arikicommon_inputtext">
+                    <br class="br26" required>
+                    <label class="label26 br26"></label>
+                    <div class="number26"><img src="images/7member/verification.jpg" alt="驗證碼"></div>
+                </div>
+                <div class="read26">
+                    <div class="arikicommon_checkbox">
+                        <label>
+                            <input type="checkbox" name="sex" style="display: none" required>
+                            <div class="circle"></div>
+                            <span>本人已閱讀並同意
+                                <a href="7member_rule.html">會員條款</a>
+                            </span>
+                        </label>        
+                     </div>
+                </div>
+                <div class="item26">
+                    <button href="7member_register2.html" class="submit26 arikicommon_btn">下一步</button>
+                </div>
+            </div><!-- detail26 -->
+
+        </form><!-- form26 -->
 
     </div><!-- setdown26 -->
 </div><!-- register26 -->

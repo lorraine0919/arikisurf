@@ -5,7 +5,7 @@
   display: block;
   clear: both; }
 
-.row21 .span21 {
+.row21 .label21 {
   display: inline-block;
   text-align: right; }
 .row21 .addr21 {
@@ -23,7 +23,7 @@
     margin-top: 25px; }
     .right20 .row21:first-child {
       margin-top: 0px; }
-    .right20 .row21 .span21 {
+    .right20 .row21 .label21 {
       width: 200px; }
 
   .submit21 {

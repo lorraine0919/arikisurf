@@ -60,6 +60,7 @@
                 <li><a href="#">管理者帳號管理</a></li>
             </ul><!-- sidebar35 -->      
         </div>
+<!-- 最新消息管理面版 -->
         <div class="main35" id="main-content">
             <div class="wrapper">
                 <div class="row mt">
@@ -67,39 +68,49 @@
                         <div class="showback">
                             <h4><i class="fa fa-angle-right"></i>最新消息管理</h4>
                         </div>
-                        <form>
-                         <div class="content-panel">
-                         <form>
-                           <table class="table table-striped table-advance table-hover">
-                              <thead>
-                              <tr>
-                                  <th><i class="fa"></i>編號</th>
-                                  <th class="hidden-phone"><i class="fa"></i>標題</th>
-                                  <th><i class="fa"></i>日期</th>                     
-                                  <th>編輯</th>
-                              </tr>
-                              </thead>
-                              <tbody>
-                              <tr>
-                                  <td class="back_newsno">Company Ltd</td>
-                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
-                                  <td class="back_newsdate">12000.00$ </td>
-                                  <td class="back_newsmodify">
-                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                  </td>
-                              </tr>
-
-                          </form>
-                         </div><!-- content-panel -->
-                        </form>
+                    <?php 
+                      require_once("connectBD101g2.php");
+                      $sql = "select * from news order by newsno desc";
+                      $news = $pdo->prepare( $sql );
+                      $news->execute();
+                      while( $newsRow = $news->fetch(PDO::FETCH_ASSOC)){
+                    ?>
+              <div class="content-panel">
+              <form>
+                <table class="table table-striped table-advance table-hover">
+                    <thead>
+                    <tr>
+                        <th><i class="fa"></i>文章編號</th>
+                        <th class="hidden-phone"><i class="fa"></i>文章標題</th>
+                        <th><i class="fa"></i>文章日期</th>                     
+                        <th>編輯文章</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="back_newsno"><?php echo $newsRow["newsno"]; ?></td>
+                        <td class="hidden-phone"><?php echo $newsRow["newstitle"]; ?></td>
+                        <td class="back_newsdate"><?php echo $newsRow["newsdate"]; ?></td>
+                        <td class="back_newsmodify">
+                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                             <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                        </td>
+                    </tr>
+                  </tbody>
+                  </table>
+                </form>
+                </div><!-- content-panel -->
+                    <?php
+                      }
+                    ?>
                     </div><!-- col-sm-12 -->
                 </div> <!-- row mt -->  
             </div><!--  wrapper -->
         </div><!-- main35 -->
-    </div><!-- menu35 -->
-</div>
+    </div><!-- box35 -->
+</div> <!-- content35 -->
+
 <script src="js/backstage/jquery.js"></script>
 <script src="js/backstage/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="js/backstage/jquery.dcjqaccordion.2.7.js"></script>

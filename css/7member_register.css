@@ -3,121 +3,127 @@ img {
   width: 100%; }
 
 /*=========清除浮動=========*/
-.topbar26:after, .item26:after {
+.setdown26:after {
   content: '';
   display: block;
   clear: both; }
 
 .register26 {
-  color: #68a;
-  background-color: rgba(200, 202, 250, 0.4); }
+  color: #fff;
+  background-color: #374d60;
+  background-size: cover;
+  background-size: 70%;
+  background-position: bottom;
+  background-repeat: no-repeat; }
 
 .setdown26 {
   margin: auto;
-  background-color: #ddd; }
-  .setdown26 .subject26 {
-    text-align: center;
-    border-bottom: 1px solid #ddd; }
-  .setdown26 .detail26 .item26 {
-    display: block;
-    margin: auto; }
-    .setdown26 .detail26 .item26 .span26 {
+  /*form26*/ }
+  .setdown26 .form26 {
+    margin: auto;
+    background-color: rgba(73, 100, 122, 0.5);
+    /*item26*/ }
+    .setdown26 .form26 .title26 {
+      background-color: rgba(217, 217, 217, 0.2); }
+    .setdown26 .form26 .item26 .label26 {
       display: inline-block;
-      text-align: left;
+      text-align: right;
       margin-right: 1vw; }
-    .setdown26 .detail26 .item26 .input26 {
+    .setdown26 .form26 .item26 .number26 {
       display: inline-block;
-      border: none;
-      padding-left: 10px; }
-    .setdown26 .detail26 .item26 .notice26 {
-      color: #64c8dc; }
-    .setdown26 .detail26 .item26 .check26 {
-      border: none; }
-    .setdown26 .detail26 .item26 .number26 {
-      display: inline-block; }
-    .setdown26 .detail26 .item26 .submit26 {
+      width: 120px; }
+    .setdown26 .form26 .span26, .setdown26 .form26 .check26, .setdown26 .form26 .number26 img {
+      vertical-align: middle; }
+    .setdown26 .form26 .read26 {
+      text-align: center; }
+      .setdown26 .form26 .read26 a {
+        color: #fff;
+        text-decoration: underline; }
+    .setdown26 .form26 .submit26 {
       display: block;
-      width: 95px;
-      line-height: 2.5em;
+      color: #000;
       margin: auto;
-      text-align: center;
-      letter-spacing: 3px;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
-      background-color: #8af; }
-  .setdown26 .detail26 .read26 {
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.9); }
+      width: 150px; }
 
-.submit26:hover {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); }
-
+/*setdown26*/
 @media screen and (max-width: 999px) {
   .setdown26 {
-    padding: 20% 2%;
-    width: 90vw;
-    height: calc(100vh - 14% - 150px - 100px - 40px); }
-    .setdown26 .subject26 {
-      margin-bottom: 40px;
-      letter-spacing: 6px; }
-    .setdown26 .detail26 .item26 {
-      width: 80vw;
-      margin-bottom: 25px; }
-      .setdown26 .detail26 .item26 .span26 {
-        width: 30%;
-        min-width: 100px;
-        line-height: 35px; }
-      .setdown26 .detail26 .item26 .input26 {
-        width: calc(80vw - 10px - 24vw - 12%);
-        height: 35px; }
-      .setdown26 .detail26 .item26 .notice26 {
-        display: none; }
-      .setdown26 .detail26 .item26 .check26, .setdown26 .detail26 .item26 .number26 {
-        margin-right: 2em;
-        width: 105px;
-        height: 35px; }
-      .setdown26 .detail26 .item26 .number26 {
-        margin-top: 18px; }
-    .setdown26 .read26 {
-      margin: 40px 0px;
-      padding-top: 20px; } }
-@media screen and (min-width: 1000px) {
-  .setdown26 {
-    padding: 7%;
-    width: 55vw;
-    height: calc(100vh - 14% -100px -40px); }
-    .setdown26 .subject26 {
-      margin-bottom: 50px;
-      letter-spacing: 7px; }
-    .setdown26 .detail26 .item26 {
+    width: 100%; }
+    .setdown26 .prompt26 {
+      width: 80%;
+      margin: auto;
+      padding: 100px 0px;
+      font-size: 18px;
+      line-height: 1.5em; }
+      .setdown26 .prompt26 p {
+        padding-top: 10px; }
+      .setdown26 .prompt26 p:first-child {
+        font-size: 30px;
+        line-height: 2.5em; }
+    .setdown26 .form26 {
       width: 90%;
-      margin-bottom: 30px; }
-      .setdown26 .detail26 .item26 .span26 {
-        width: 110px;
-        line-height: 40px;
-        margin-left: 2vw; }
-      .setdown26 .detail26 .item26 .input26 {
-        width: 30vw;
-        height: 40px;
-        min-width: 180px; }
-      .setdown26 .detail26 .item26 .notice26 {
-        margin-left: calc(120px + 2vw + 1vw);
-        font-size: 14px; }
-      .setdown26 .detail26 .item26 .check26 {
-        width: 120px;
-        height: 40px;
-        margin-right: 3em; }
-      .setdown26 .detail26 .item26 .br26 {
+      padding-bottom: 90px; }
+      .setdown26 .form26 .title26 {
+        width: 100%;
+        padding: 0.7em 0em;
+        text-align: center;
+        letter-spacing: 10px; }
+      .setdown26 .form26 .detail26 {
+        width: 90%;
+        margin: auto; }
+        .setdown26 .form26 .detail26 .item26 {
+          padding-top: 8vw; }
+          .setdown26 .form26 .detail26 .item26:first-child {
+            padding-top: 50px; }
+          .setdown26 .form26 .detail26 .item26 .label26 {
+            width: 7em; }
+          .setdown26 .form26 .detail26 .item26 .input26 {
+            width: calc(100%  - 22.5px - 7em - 1vw - 4px); }
+        .setdown26 .form26 .detail26 .verticle26 .check26 {
+          width: 98px;
+          margin-bottom: 4vw; }
+        .setdown26 .form26 .detail26 .read26 {
+          margin-top: 50px; } }
+@media screen and (min-width: 1000px) {
+  .register26 {
+    background-image: url(../images/7member/register_bg.png); }
+
+  .setdown26 {
+    width: 90%;
+    max-width: 1170px;
+    padding: 150px 0px; }
+    .setdown26 .prompt26 {
+      width: calc(100% - 500px - 65px - 4%);
+      margin: 10% 4% 0% 0%;
+      float: left;
+      font-size: 22px;
+      line-height: 2em; }
+      .setdown26 .prompt26 p:first-child {
+        font-size: 50px;
+        line-height: 1.5em; }
+    .setdown26 .form26 {
+      width: 500px;
+      padding: 45px 0px;
+      padding-right: 65px;
+      float: right; }
+      .setdown26 .form26 .title26 {
+        width: 12em;
+        padding: 0.7em 1.25em;
+        margin-bottom: 15px;
+        text-align: right; }
+      .setdown26 .form26 .item26 {
+        padding-top: 25px; }
+        .setdown26 .form26 .item26 .label26 {
+          width: 9em; }
+        .setdown26 .form26 .item26 .input26 {
+          width: calc(100%  - 22.5px - 9em - 1vw - 4px); }
+      .setdown26 .form26 .verticle26 .check26 {
+        width: calc(100%  - 22.5px - 9em - 1vw - 120px - 8px); }
+      .setdown26 .form26 .verticle26 .br26 {
         display: none; }
-      .setdown26 .detail26 .item26 .number26 {
-        width: 120px;
-        height: 40px; }
-      .setdown26 .detail26 .item26 .submit26 {
-        width: 7vw;
-        min-width: 110px; }
-    .setdown26 .detail26 .read26 {
-      margin: 50px 0px;
-      padding-top: 40px; }
-    .setdown26 .detail26 .verticle26 .span26, .setdown26 .detail26 .verticle26 .check26, .setdown26 .detail26 .verticle26 .number26 img {
-      vertical-align: middle; } }
+      .setdown26 .form26 .read26 {
+        margin-top: 40px;
+        width: calc(100% + 65px); }
+      .setdown26 .form26 .submit26 {
+        position: relative;
+        left: calc(65px/2); } }

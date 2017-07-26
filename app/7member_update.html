@@ -16,20 +16,29 @@
             <p class="title20">基本資料</p>
             <div class="personal21">
                 <div class="row21">
-                    <span class="span21">姓名：</span>
+                    <label class="label21">姓名：</label>
                     <input type="text" class="input21 arikicommon_inputtext"></input>
                 </div>
                 <div class="row21">
-                    <span class="span21">性別：</span>
-                    <input type="radio" class="gender21 arikicommon_radio" name="gender21">
-                        <span>男</span>
-                    </input>
-                    <input type="radio" class="gender21 arikicommon_radio" name="gender21">
-                        <span>女</span>
-                    </input>
+                    <label class="label21">性別：</label>
+                    <div class="arikicommon_radio">
+                        <label>
+                            <input type="radio" id="younameitfemale" name="sex" class="gender21">
+                            <div class="circle"></div>
+                            <span>男</span>
+                        </label>
+                    </div>
+
+                    <div class="arikicommon_radio">
+                        <label>
+                            <input type="radio" id="younameitfemale" name="sex" class="gender21">
+                            <div class="circle"></div>
+                            <span>女</span>
+                        </label>
+                    </div>
                 </div>
                 <div class="row21">
-                    <span class="span21">地址：</span>
+                    <label class="label21">地址：</label>
                     <select class="arikicommon_select">
                         <option value="請選擇縣市">請選擇縣市</option>
                     </select>
@@ -37,20 +46,20 @@
                         <option value="請選擇鄉鎮">請選擇鄉鎮</option>
                     </select>
                     <br>
-                    <span class="span21"></span>
-                    <input type="text" name="" class="input21 addr21 arikicommon_inputtext">
+                    <label class="label21"></label>
+                    <input type="text" name="" class="input20 addr21 arikicommon_inputtext"></input>
                 </div>
                 <div class="row21">
-                    <span class="span21">電話：</span>
+                    <label class="label21">電話：</label>
                     <input type="text" class="input20 arikicommon_inputtext"></input>
                 </div>
                 <div class="row21">
-                    <span class="span21">電子郵件：</span>
+                    <label class="label21">電子郵件：</label>
                     <input type="email" class="input20 arikicommon_inputtext"></input>
                 </div>
                 <div class="row21">
-                    <span class="span21">修改大頭照：</span>
-                    <button class="upload21">上傳大頭照</button>
+                    <label class="label21">修改大頭照：</label>
+                    <button class="upload21 arikicommon_btn">上傳大頭照</button>
                 </div>
                 <button class="submit21 arikicommon_btn">確認修改基本資料</button>
             </div><!-- personal20 -->
@@ -58,15 +67,15 @@
             <p class="title20">變更密碼</p>
             <div class="changepsw21">
                 <div class="row21">
-                    <span class="span21">輸入舊密碼：</span>
+                    <label class="label21">輸入舊密碼：</label>
                     <input type="psw" maxlength="10" size="12" value="" class="input21 arikicommon_inputtext">
                 </div>
                 <div class="row21">
-                    <span class="span21">輸入新密碼：</span>
+                    <label class="label21">輸入新密碼：</label>
                     <input type="psw" maxlength="10" size="12" value="" class="input21 arikicommon_inputtext">
                 </div>
                 <div class="row21">
-                    <span class="span21">確認新密碼：</span>
+                    <label class="label21">確認新密碼：</label>
                     <input type="psw" maxlength="10" size="12" value="" class="input21 arikicommon_inputtext">
                 </div>
                 <button class="submit21 arikicommon_btn">確認修改密碼</button>

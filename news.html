@@ -88,78 +88,10 @@
            </div>        
          </div>
   <div class="news_item_border">
-    <div class="news_item news_item_1" onclick="newDocNEWS()">
-       <a href="article.html">
-          <img src="images/5news/news_item_img_1.png" class="news_item_img">
-          <div class="news_item_txt">
-          <h3>2017 台東金樽衝浪公開錦標賽來囉!</h3>
-          <span class="date_14">2017-07-12 22:28</span><br>
-          <p>臺東擁有絕佳的發展水域活動條件，繼2011首度舉辦國際衝浪活動初試啼聲後...more</p> 
-          </div>
-       </a> 
-    </div> 
-     <div class="news_item news_item_2" onclick="newDocNEWS()">
-       <a href="article.html">
-          <img src="images/5news/news_item_img_2.jpg" class="news_item_img">
-          <div class="news_item_txt">
-          <h3>2017 東浪盃世界衝浪錦標賽</h3>
-          <span class="date_14">2017-07-08 21:28</span><br>
-          <p>秋冬之際吹起東北季風助長浪勢，更是衝浪的好時節，每到連續假日或冬天，全台衝浪愛好者齊聚東海岸...more</p> 
-          </div> 
-       </a> 
-    </div>
-    <div class="news_item news_item_3" onclick="newDocNEWS()">
-       <a href="article.html">
-          <img src="images/5news/news_item_img_3.jpeg" class="news_item_img">
-          <div class="news_item_txt">
-          <h3>2017 ISA 世界衝浪大賽</h3>
-          <span class="date_14">2017-04-11 09:22</span><br>
-          <p>由衝浪運動協會首度遴選的中華台北衝浪代表隊，出發前往法國參加世界衝浪大賽(2017 ISA World Surfing Games)...more</p> 
-          </div>
-       </a> 
-    </div> 
-    <div class="news_item news_item_4" onclick="newDocNEWS()">
-       <a href="article.html">
-          <img src="images/5news/news_item_img_5.jpg" class="news_item_img">
-          <div class="news_item_txt">
-          <h3>2016 臺灣國際衝浪公開賽暨東浪嘉年華</h3>
-          <span class="date_14">2016-07-09 16:32</span><br>
-          <p>臺東在「浪」的條件上，無論大小或形狀，均可說是得天獨厚，加上秋冬之際吹東北季風...more</p> 
-          </div> 
-       </a> 
-    </div>
-    <div class="news_item news_item_5" onclick="newDocNEWS()">
-       <a href="article.html">
-          <img src="images/5news/Trophy_1.jpg" class="news_item_img">
-          <div class="news_item_txt">
-          <h3>Ariki Surf滷蛋加辣教練，參加2016 WSL台灣國際衝浪公開賽榮獲金牌</h3>
-          <span class="date_14">2016-03-30 10:31</span><br>
-          <p>Ariki Surf滷蛋加辣教練參加臺灣最高等級的衝浪賽事-2016 WSL台灣國際衝浪公開賽，再創佳績...more</p> 
-          </div>
-       </a> 
-    </div>
-    <div class="news_item news_item_6" onclick="newDocNEWS()">
-       <a href="article.html">
-          <img src="images/5news/news_item_img_7.jpg" class="news_item_img">
-          <div class="news_item_txt">
-          <h3>藝人姚元浩公開推薦Ariki Surf</h3>
-          <span class="date_14">2016-02-14 14:01</span><br>
-          <p>近年來，國內為衝浪運動著迷的人口越來越多，演藝圈裡愛衝浪成痴的男藝人比比皆是...more</p> 
-          </div> 
-       </a> 
-    </div>
-    <div class="news_item news_item_7" onclick="newDocNEWS()">
-       <a href="article.html">
-          <img src="images/5news/Trophy_4.jpg" class="news_item_img">
-          <div class="news_item_txt">
-          <h3>Ariki Surf創始人牟那滷豆先生參加ISA世界衝浪大賽榮獲冠軍</h3>
-          <span class="date_14">2015-11-09 15:12</span><br>
-          <p>Ariki Surf創始人牟那滷豆先生，參加2015 ISA World Surfing Games世界衝浪大賽，榮獲男子組長板冠軍...more</p> 
-          </div> 
-       </a> 
-    </div>                 
-<div class="clearfix"></div>
+
+    
 </div>
+<div class="clearfix"></div>
 </div>
 </div>
    <footer class="footer_0">
@@ -214,15 +146,102 @@
    </footer>
 
 <script type="text/javascript">
-    function newDocNEWS() {
-        window.location.assign("article.html");
+function newDocNEWS(){
+   $(this).submit();   
+}
+
+
+function writehtml(tmpobject){
+ 
+  var newsform = document.createElement("form");
+  newsform.action = "article.php";
+  newsform.className = "newsform";
+  newsform.onclick = newDocNEWS;
+  
+
+  var newsitem = document.createElement("div");
+  newsitem.className = "news_item";
+ 
+  var newsinput = document.createElement("input");
+  newsinput.type = "hidden";
+  newsinput.name = "articleno";
+  newsinput.value = tmpobject.newsno;
+
+  
+  
+
+
+  var newsimg = document.createElement("img");
+  newsimg.className = "news_item_img";
+  newsimg.src = tmpobject.newsimg;
+
+  var newsitemtxt = document.createElement("div");
+  newsitemtxt.className = "news_item_txt";
+
+  var newsh3 = document.createElement("h3");
+  newsh3.innerHTML = tmpobject.newstitle;
+
+  var date14 = document.createElement("span");
+  date14.className = "date_14";
+  date14.innerHTML = tmpobject.newsdate;
+
+  var newsp = document.createElement("p");
+  newsp.innerHTML = textlength(tmpobject.newstxt,50);
+
+  document.getElementsByClassName("news_item_border")[0].appendChild(newsform);
+  newsform.appendChild(newsitem);
+  newsitem.appendChild(newsinput);
+  newsitem.appendChild(newsimg);
+  newsitem.appendChild(newsitemtxt);
+  newsitemtxt.appendChild(newsh3);
+  newsitemtxt.appendChild(date14);
+  newsitemtxt.appendChild(newsp);
+  
+}
+
+function textlength(truncated, maxLength){
+    var result = truncated;
+    if (result.length > maxLength) {
+        result = result.substr(0,maxLength) + '...more';
     }
-    $('.news_item').click(function(){
-      var index = $(this).index();
-      var storage = sessionStorage;
-      storage['index']=index;
-    });
-  </script>
+    return result;
+}
+
+
+ 
+
+
+ function news(){
+  
+  var xhr = new XMLHttpRequest();
+ 
+  xhr.onreadystatechange = function(){
+    if( xhr.readyState == 4){
+      if( xhr.status == 200){
+        
+        var allnews = JSON.parse(xhr.responseText);
+        for(var x in allnews)
+        {
+          writehtml(allnews[x]);
+          // var title = allnews[x].newstitle;
+          // alert(title);
+        }
+      }else{
+        alert(xhr.status);
+      }
+    }
+  }
+
+  var url = "news.php";
+  xhr.open("Post", url, true);
+ 
+  xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  xhr.send();
+
+
+}
+window.onload= news();
+</script>
 </body>
 
 

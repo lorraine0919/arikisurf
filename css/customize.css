@@ -354,22 +354,28 @@
                 margin: 5% 7% 5% 1%;
                 border-radius: 16px 16px 0 0; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe {
-                padding-top: 26%;
-                position: relative;
-                width: 84%;
-                overflow: hidden;
-                margin: 0px 0 0 5%; }
+                width: 17vw;
+                overflow-x: scroll;
+                margin: auto;
+                transform: translateX(-0.5vw); }
+                .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe::-webkit-scrollbar {
+                  width: 12px;
+                  /* for vertical scrollbars */
+                  height: 12px;
+                  /* for horizontal scrollbars */ }
+                .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe::-webkit-scrollbar-track {
+                  background: rgba(255, 255, 255, 0.1); }
+                .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe::-webkit-scrollbar-thumb {
+                  background: rgba(255, 130, 0, 0.1); }
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns {
-                  position: absolute;
-                  top: 0;
-                  left: -18%;
-                  width: 200%; }
+                  width: 25vw; }
                   .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns .pattern {
-                    display: inline-block;
-                    width: 16%; }
+                    width: 5vw;
+                    display: inline-block; }
                     .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns .pattern img {
                       width: 100%; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .scroll {
+                display: none;
                 width: 81%;
                 height: 6px;
                 background-color: rgba(255, 255, 255, 0.3);
@@ -384,7 +390,7 @@
                   margin: -5% 0 0 0; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .uploadgroup {
                 color: #fff;
-                margin: 5% 9%; }
+                margin: 2% 9%; }
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .uploadgroup .introduceUpload {
                   width: 61%;
                   display: inline-block; }

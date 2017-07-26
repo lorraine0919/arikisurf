@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--header-->
+<head> 
+  <!--(bake module/backstage_head.html)--><?php require_once('publicpage/backstage_head.php'); ?>
+    <title>Ariki Surf - 後臺管理</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/9backstage_welcome.css">  -->
+</head>
+<!--header end-->
+<body>
+<!-- =================後臺管理================== -->
+<!--(bake module/backstage_header.html)--><?php require_once('publicpage/backstage_header.php'); ?>
+        <div class="main35" id="main-content">
+            <div class="wrapper">
+                <div class="row mt">
+                    <div class="col-sm-12">
+                        <div class="showback">
+                            <h4><i class="fa fa-angle-right"></i>我是項目標題</h4>
+                        </div>
+                    </div>
+                </div>   
+            </div> 
+        </div><!-- main35 -->
+<!--(bake module/backstage_footer.html)--><?php require_once('publicpage/backstage_footer.php'); ?>
+</body>
+
+</html>

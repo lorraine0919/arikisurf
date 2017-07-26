@@ -8,8 +8,8 @@
 </head>
 <body>
       <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-      <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
-      <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.php">討論區</a>
+      <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+      <a href="map.html">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.html">討論區</a>
       <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
       <div id="content_10">
         <form id="po" action="#">              
@@ -89,7 +89,7 @@
            </ul>  
            <section class="talk">
               <div class="item">
-                 <a href="map_forum_discussion.html">                    
+                 <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/1.jpg">
                      </div>
@@ -115,7 +115,7 @@
                </div><!-- item -->
 
                <div class="item">
-                 <a href="map_forum_discussion.html">                    
+                 <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <div class="v_p">
                                 <div class="v2">
@@ -146,7 +146,7 @@
                </div><!-- item -->
 
                <div class="item">
-                 <a href="map_forum_discussion.html">                    
+                 <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/3.jpg">
                      </div>
@@ -170,7 +170,7 @@
                </div><!-- item -->
 
                <div class="item">
-                 <a href="map_forum_discussion.html">                    
+                 <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/4.jpg">
                      </div>
@@ -193,7 +193,7 @@
                </div><!-- item -->
 
                <div class="item">
-                 <a href="map_forum_discussion.html">                    
+                 <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/5.jpg">
                      </div>
@@ -215,7 +215,7 @@
                </div><!-- item -->
 
                <div class="item">
-                 <a href="map_forum_discussion.html">                    
+                 <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/6.jpg">
                      </div>
@@ -237,7 +237,7 @@
                </div><!-- item -->
 
                <div class="item">
-                 <a href="map_forum_discussion.html">                    
+                 <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/7.jpg">
                      </div>
@@ -259,7 +259,7 @@
                </div><!-- item -->
 
                <div class="item">
-                 <a href="map_forum_discussion.html">                    
+                 <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/8.jpg">
                      </div>

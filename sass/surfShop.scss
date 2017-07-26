@@ -63,7 +63,7 @@
 					 	}
 					 }
 					.photo{
-						width: 23%;
+						width: 24%;
 						padding-top: 20%;
 						display: inline-block;
 						background-image: url('../images/1common/insidecircle.png');
@@ -256,7 +256,7 @@
         	// overflow: scroll;
         	// height: 550px;	
         }
-        .myview .item:nth-child(3n+1){
+        .myview .item:nth-child(3n+1) .myview .item{
         	clear: left;
         }
         .myview::-webkit-scrollbar{
@@ -320,6 +320,9 @@
             padding-left: 5px;
             text-align: center;
         }
+        .myview .item .btngorup input{
+		    font-size: 16px;
+		  }
 		.clearfix{
 			clear: both;
 		}
@@ -396,9 +399,17 @@
 			#prodTitleM{
 				display: none;
 			}
+			.forRwd{
+			     display: none; 
+			     }
 
 		}
 		@media screen and (max-width:767px) {
+			.forRwd{
+			     color: rgba(255,255,255,.8);
+			     font-size: 14px;
+			     transform: translateY(14px); 
+				} 
 			.showProd{
 		        .showProd_bg_up{
 		               .showProd_bg{

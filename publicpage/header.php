@@ -6,7 +6,7 @@
                     <input type="checkbox" id="control">
                     <div class="logo">
                         <div class="logofix">
-                            <a href="index.html">
+                            <a href="index.php">
                                <img src="images/1common/logo.png">
                             </a>
                             <div class="arikicommon_breadcrumb">                            

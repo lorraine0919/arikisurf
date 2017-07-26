@@ -5,14 +5,6 @@
   background-repeat: no-repeat;
   background-position: top; }
 
-.bg_forest_2 .step1_maxContent .selectAndNext .selectAndNextfix .next a, .bg_forest_2 .step2_maxContent .selectAndNext .next a, .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content .next a, .bg_forest_2 .step4_maxContent .fill .fillfix .content .next a {
-  background-color: #e97b23;
-  padding: 10px 30px;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer; }
-
 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color, .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .texturegorup .textureselect .textureselectfix .texturegroup .texture {
   box-shadow: 1px 0px 0px #000, 2px 0px 0px rgba(255, 255, 255, 0.6); }
   .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color:last-child, .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .texturegorup .textureselect .textureselectfix .texturegroup .texture:last-child {
@@ -362,22 +354,28 @@
                 margin: 5% 7% 5% 1%;
                 border-radius: 16px 16px 0 0; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe {
-                padding-top: 26%;
-                position: relative;
-                width: 84%;
-                overflow: hidden;
-                margin: 0px 0 0 5%; }
+                width: 17vw;
+                overflow-x: scroll;
+                margin: auto;
+                transform: translateX(-0.5vw); }
+                .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe::-webkit-scrollbar {
+                  width: 12px;
+                  /* for vertical scrollbars */
+                  height: 12px;
+                  /* for horizontal scrollbars */ }
+                .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe::-webkit-scrollbar-track {
+                  background: rgba(255, 255, 255, 0.1); }
+                .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe::-webkit-scrollbar-thumb {
+                  background: rgba(255, 130, 0, 0.1); }
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns {
-                  position: absolute;
-                  top: 0;
-                  left: -18%;
-                  width: 200%; }
+                  width: 25vw; }
                   .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns .pattern {
-                    display: inline-block;
-                    width: 16%; }
+                    width: 5vw;
+                    display: inline-block; }
                     .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns .pattern img {
                       width: 100%; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .scroll {
+                display: none;
                 width: 81%;
                 height: 6px;
                 background-color: rgba(255, 255, 255, 0.3);
@@ -392,7 +390,7 @@
                   margin: -5% 0 0 0; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .uploadgroup {
                 color: #fff;
-                margin: 5% 9%; }
+                margin: 2% 9%; }
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .uploadgroup .introduceUpload {
                   width: 61%;
                   display: inline-block; }
@@ -430,13 +428,14 @@
                   width: 100%; }
       .bg_forest_2 .step2_maxContent .selectAndNext .next {
         position: absolute;
-        width: 52%;
+        width: 94%;
         bottom: -9%;
-        right: 0; }
+        right: 0;
+        float: right;
+        text-align: right; }
         .bg_forest_2 .step2_maxContent .selectAndNext .next a {
           display: inline-block;
-          float: right;
-          margin: 6% 7% 0 0; }
+          margin: 6% 0 0 7%; }
   .bg_forest_2 .step3_maxContent {
     max-width: 1170px;
     margin: auto;
@@ -522,7 +521,8 @@
         .bg_forest_2 .step3_maxContent .fill .fillfix .total {
           display: inline-block;
           float: right;
-          margin: 5px 5px 0 0; }
+          margin: 17px 61px 0 0;
+          text-align: right; }
           .bg_forest_2 .step3_maxContent .fill .fillfix .total .totalfix {
             color: rgba(255, 255, 255, 0.5); }
             .bg_forest_2 .step3_maxContent .fill .fillfix .total .totalfix h4 {
@@ -530,6 +530,9 @@
             .bg_forest_2 .step3_maxContent .fill .fillfix .total .totalfix .number {
               vertical-align: middle;
               display: inline-block; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .total .totalfix .number h3 {
+                font-size: 30px;
+                color: #fff; }
             .bg_forest_2 .step3_maxContent .fill .fillfix .total .totalfix .detail {
               margin: 0 10px;
               vertical-align: middle;
@@ -550,7 +553,7 @@
           .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content {
             width: 80%;
             color: rgba(255, 255, 255, 0.6);
-            padding: 30px 10px 10px 10px;
+            padding: 7px 10px 10px 10px;
             display: inline-block; }
             .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content h3 {
               font-weight: 100; }
@@ -575,10 +578,11 @@
                   border-radius: 5px;
                   background-color: rgba(255, 255, 255, 0.6);
                   border: none; }
-            .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content .next a {
-              display: inline-block;
-              float: right;
-              margin: 20px 10px; }
+            .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content .next {
+              text-align: right; }
+              .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content .next a {
+                display: inline-block;
+                margin: 20px 10px; }
   .bg_forest_2 .step4_maxContent {
     max-width: 1170px;
     margin: auto; }
@@ -643,16 +647,19 @@
           margin: auto; }
           .bg_forest_2 .step4_maxContent .fill .fillfix .content .demogroup .demo img {
             width: 100%; }
-        .bg_forest_2 .step4_maxContent .fill .fillfix .content .title {
+        .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .title {
           width: 50%;
           color: #e97b23;
           padding: 10px 0;
           border-bottom: 2px solid rgba(255, 255, 255, 0.6); }
-        .bg_forest_2 .step4_maxContent .fill .fillfix .content .infocontent {
+        .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .infocontent {
           padding: 2% 0px; }
-        .bg_forest_2 .step4_maxContent .fill .fillfix .content .next a {
-          display: inline-block;
-          margin: 20px; }
+        .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next {
+          text-align: right;
+          margin: 0 34px 0 0; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next a {
+            display: inline-block;
+            margin: 20px; }
     .bg_forest_2 .step4_maxContent .selectAndNext {
       width: 25%;
       display: inline-block;

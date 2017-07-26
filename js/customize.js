@@ -4,18 +4,33 @@ $(function(){
 	$('.step3_maxContent').hide();
 	$('.step4_maxContent').hide();
 
-	$('#step1tostep2').click(function(){
-		$('.step1_maxContent').hide();
-		$('.step2_maxContent').show();
-	});
-	$('#step2tostep3').click(function(){
+	function tostep1(){
 		$('.step2_maxContent').hide();
-		$('.step3_maxContent').show();
-	});
-	$('#step3tostep4').click(function(){
+		$('.step1_maxContent').show();		
+	}
+	function tostep2(){
+		$('.step1_maxContent').hide();
 		$('.step3_maxContent').hide();
-		$('.step4_maxContent').show();
-	});
+		$('.step2_maxContent').show();		
+	}
+	function tostep3(){
+		$('.step2_maxContent').hide();
+		$('.step4_maxContent').hide();
+		$('.step3_maxContent').show();		
+	}
+	function tostep4(){
+		$('.step3_maxContent').hide();
+		$('.step4_maxContent').show();		
+	}
+
+	$('#step2tostep1').click(tostep1);
+	$('#step1tostep2').click(tostep2);
+	$('#step3tostep2').click(tostep2);
+	$('#step2tostep3').click(tostep3);
+	$('#step4tostep3').click(tostep3);
+	$('#step3tostep4').click(tostep4);
+
+
 /*↑換頁相關*/
 
 /*↓步驟一換圖片和敘述和按鈕顏色*/
@@ -121,12 +136,38 @@ $(function(){
 	});
 /*↑步驟二rwd按按鈕換顏色*/
 
+/*↓步驟二選到步驟一選的浪板*/
+	$('#step1tostep2').click(function(){
+		$('.step2_maxContent .boarddemo').attr('src',$('.step1_maxContent .boarddemo').attr('src'));
+	});
+
+/*↑步驟二選到步驟一選的浪板*/
+
 /*↓步驟二，色球顏色*/
 	for (var i = 0; i < 3; i++) {
 		var colorarr = ['#fff','#009bd8','#ffd105'];
 		$('.step2_maxContent .colorselectgroup .color .circle').eq(i).css('background-color',colorarr[i]);
 	}
 /*↑步驟二，色球顏色*/
+$('.step2_maxContent .colorselectgroup .color').click(function(){
+	var index=$(this).index();
+	console.log(index);
+	if(index==0){
+		var newsrc=$('.step1_maxContent .boarddemo').attr('src');
+		$('.step2_maxContent .boarddemo').attr('src',newsrc);
+	}else if(index==1){
+		var oldsrc=$('.step1_maxContent .boarddemo').attr('src');
+		var newsrc=oldsrc.substr(0,oldsrc.lastIndexOf('.'))+'_blue.png';
+		$('.step2_maxContent .boarddemo').attr('src',newsrc);
+	}else{
+		var oldsrc=$('.step1_maxContent .boarddemo').attr('src');
+		var newsrc=oldsrc.substr(0,oldsrc.lastIndexOf('.'))+'_yellow.png';
+		$('.step2_maxContent .boarddemo').attr('src',newsrc);
+	}
+});
+/*↑步驟二，改變浪板顏色*/
+
+/*↓步驟二，改變浪板顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
 	$('.step2_maxContent .texturegorup .texture').click(function(){

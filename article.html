@@ -156,7 +156,7 @@
        </div>
    </footer>
 </body>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var title= ['<h3>2017 台東金樽衝浪公開錦標賽來囉!</h3>','2017 東浪盃世界衝浪錦標賽','2017 ISA 世界衝浪大賽','2016 臺灣國際衝浪公開賽暨東浪嘉年華','Ariki Surf滷蛋加辣教練，參加2016 WSL台灣國際衝浪公開賽榮獲金牌','藝人姚元浩公開推薦Ariki Surf','Ariki Surf創始人牟那滷豆先生參加ISA世界衝浪大賽榮獲冠軍']
     var date =['2017-07-12 22:28','2017-07-08 21:28','2017-04-11 09:22','2016-07-09 16:32','2016-03-30 10:31','2016-02-14 14:01','2015-11-09 15:12']
 
@@ -170,6 +170,33 @@
     $('.release_date').html(date[nowindex]);
     $('.article_item_content_img img').attr('src',pic[nowindex]);
     $('.article_item_content_txt').html(txt[nowindex]);
-  </script>
+  </script> -->
+<script type="text/javascript">
+ function news(){  
+  //產生XMLHttpRequest物件
+  var xhr = new XMLHttpRequest();
+  //註冊callback function 
+  xhr.onreadystatechange = function(){
+    if( xhr.readyState == 4){
+      if( xhr.status == 200){
+        alert(xhr.responseText); 
+      }else{
+        // alert(xhr.status);
+        alert("waynetste");
+      }
+    }
+  }
 
+  //設定好所要連結的程式
+  // var data_info = "memId=" + document.getElementById("memId").value;
+  var url = "C:/inetpub/wwwroot/phpLab/ariki/news.php"
+  xhr.open("Post", url, true);
+  //送出資料
+  xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  xhr.send();
+
+
+}//function_checkId 
+window.onload= news();
+</script>
 </html>

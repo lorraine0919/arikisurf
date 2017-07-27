@@ -11,17 +11,21 @@ try{
 			$pdostatement->execute();
 			header('Location:9backstage_customize.php');			
 		}
-		if($_REQUEST['customize_model_sellornot']){
+		if($_REQUEST['style']=='model'){
 
-			intodb('customize_model','customize_model_sellornot',$_REQUEST['modelNo'],$_REQUEST['customize_model_sellornot'],'modelNo');
+			intodb('customize_model','customize_model_sellornot',$_REQUEST['no'],$_REQUEST['sellornot'],'modelNo');
 
-		}else if($_REQUEST['customize_color_sellornot']){
+		}else if($_REQUEST['style']=='color'){
 
-			intodb('customize_color','customize_color_sellornot',$_REQUEST['colorNo'],$_REQUEST['customize_color_sellornot'],'colorNo');
+			intodb('customize_color','customize_color_sellornot',$_REQUEST['no'],$_REQUEST['sellornot'],'colorNo');
 
-		}else if($_REQUEST['officialimg_sellornot']){
+		}else if($_REQUEST['style']=='officialimg'){
 
-			intodb('customize_officialimg','officialimg_sellornot',$_REQUEST['officialimgNo'],$_REQUEST['officialimg_sellornot'],'officialimgNo');
+			intodb('customize_officialimg','officialimg_sellornot',$_REQUEST['no'],$_REQUEST['sellornot'],'officialimgNo');
+
+		}else if($_REQUEST['style']=='material'){
+
+			intodb('customize_material','customize_material_sellornot',$_REQUEST['no'],$_REQUEST['sellornot'],'materialNo');
 
 		}
 }catch(PDOException $e){

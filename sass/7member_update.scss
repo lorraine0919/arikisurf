@@ -1,4 +1,3 @@
-
 /*=========清除浮動=========*/
 .personal21:after,.changepsw21:after,.row21:after{
   content: '';
@@ -13,14 +12,9 @@
   }
   .addr21{
     margin-top: 10px;
-    width: 100%;
     width: calc(100% - 204px - 22.222px);
   }
   .upload21{background-color: transparent;}
-  .upload21:hover{
-    color:rgba(237,144,70,1);
-    border:2px solid rgba(237,144,70,1);
-  }
 }
 
 @media screen and (max-width:767px){

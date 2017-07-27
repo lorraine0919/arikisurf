@@ -10,13 +10,9 @@
   text-align: right; }
 .row21 .addr21 {
   margin-top: 10px;
-  width: 100%;
   width: calc(100% - 204px - 22.222px); }
 .row21 .upload21 {
   background-color: transparent; }
-.row21 .upload21:hover {
-  color: #ed9046;
-  border: 2px solid #ed9046; }
 
 @media screen and (min-width: 768px) {
   .right20 .row21 {

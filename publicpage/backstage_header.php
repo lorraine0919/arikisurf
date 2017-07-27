@@ -16,11 +16,11 @@
                           <span>Dashboard</span>
                       </a>
                 </li>
-                <li><a href="#">客製浪板管理</a></li>
-                <li><a href="#">衝浪配備管理</a></li>
-                <li><a href="#">浪點資訊管理</a></li>
-                <li><a href="#">討論區管理</a></li>
-                <li><a href="#">最新消息管理</a></li>
+                <li><a href="9backstage_customize.php">客製浪板頁面管理</a></li>
+                <li><a href="#">衝浪配備頁面管理</a></li>
+                <li><a href="#">浪點資訊頁面管理</a></li>
+                <li><a href="#">討論區頁面管理</a></li>
+                <li><a href="9backstage_news.php">最新消息頁面管理</a></li>
                 <li><a href="#">客製浪板訂單管理</a></li>
                 <li><a href="#">衝浪配備訂單管理</a></li>
                 <li><a href="#">會員帳號管理</a></li>

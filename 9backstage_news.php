@@ -45,12 +45,12 @@
                     <tr>
 
                       <td class="back_newsno"><?php echo $newsRow["newsno"]; ?>
-                      <input type="hidden" name="newsno" value="<?php echo $newsRow['newsno']; ?>"></td>
+                     </td>
                       <td class="hidden-phone"><?php echo $newsRow["newstitle"]; ?></td>
                       <td class="back_newsdate"><?php echo $newsRow["newsdate"]; ?></td>
                       <td class="back_newsmodify">
                         <div class="lightbox-btn-edit">
-                        <img src="images/9backstage/content.png" class="news_edit_btn" width="32" height="32">
+                        <img src="images/9backstage/content.png" class="news_edit_btn" width="32" height="32"><input class="newsno" type="hidden" name="newsno" value="<?php echo $newsRow['newsno']; ?>">
                       </div>
                       <div class="remove-btn">
                         <img src="images/9backstage/cancel.png" class="news_remove_btn" width="32" height="32">
@@ -115,31 +115,23 @@
     <div class="edit-btn-close">
       <a href="9backstage_news.php"><img src="images/9backstage/cancel.png" width="32" height="32"></a>
     </div>
+      <form>  
 
-<?php 
-  require_once("connectBD101g2.php");
-  $sql = "select * from news where newsno=:newsno";
-  $news = $pdo->prepare( $sql );
-  $news->bindValue(":newsno",$aa);
-  $news->execute();
-  $newsRow = $news->fetch(PDO::FETCH_ASSOC);
-?>
-      <form>     
         <p class="newstitle">
-          <input name="newstitle" type="text" class="news-input" value="<?php echo $newsRow['newstitle']; ?>">
+          <input name="newstitle" type="text" class="news-input" value="<?php echo $newsRow2['newstitle']; ?>">
         </p>
         
         <p class="newsdate">
-          <input name="newsdate" type="date" class="news-input" value="<?php echo $newsRow['newsdate']; ?>">
+          <input name="newsdate" type="date" class="news-input" value="<?php echo $newsRow2['newsdate']; ?>">
         </p>
 
         <p class="newsimg">
-          <input name="newsimg" type="file" class="news-input" value="<?php echo $newsRow['newsimg']; ?>">
+          <input name="newsimg" type="file" class="news-input" value="<?php echo $newsRow2['newsimg']; ?>">
           <img src="<?php echo $newsRow['newsimg']; ?>"">
         </p>
         
         <p class="newstxt">
-          <textarea name="newstxt" class="news-input" value="<?php echo $newsRow['newstxt']; ?>"></textarea>
+          <textarea name="newstxt" class="news-input" value="<?php echo $newsRow2['newstxt']; ?>"></textarea>
         </p>
       
       

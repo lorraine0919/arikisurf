@@ -12,6 +12,10 @@ $(document).ready(function(){
 
 	$('.lightbox-btn-edit').click(function(){
         $('.edit-form').fadeIn(500);
+        console.log($(this).children('.newsno').val());
+        $.post('9backstage_news_edit.php',{ 
+		 		'newsno' : $(this).children('.newsno').val() },function(rs){
+		  });
 	});
 	$('.edit-btn-close').click(function(){
         $('.edit-form').fadeOut(0);
@@ -19,5 +23,8 @@ $(document).ready(function(){
 	$('.edit-submit').click(function(){
         $('.edit-form').fadeOut(0);
 	});
+
+
 });
+
 

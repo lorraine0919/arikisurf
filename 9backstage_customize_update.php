@@ -2,7 +2,7 @@
 try{
 	
 		function intodb($changetable,$changecolumn,$changeno,$changevalue,$changenoname){
-			require_once('connect_jerry.php');
+			require_once('connectBooks.php');
 			$sql = "update `$changetable` set `$changecolumn`=:changevalue
 			      where `$changenoname`=:changeno";
 			$pdostatement = $pdo->prepare( $sql );

@@ -157,9 +157,9 @@ try{
     while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 ?>    	
         <form action="cart_add.php" class="leashform">
-        <input type="hidden" name="prod_no" class="productno" value="<?php echo $prodRow["prod_no"]; ?>">
-        <input type="hidden" name="prod_name" value="<?php echo $prodRow["prod_name"]; ?>">
-        <input type="hidden" name="prod_price" value="<?php echo $prodRow["prod_price"]; ?>">
+        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
+        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
+        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
  	
 				<div class="myview">
 					<div class="item col-xs-12 col-sm-4">
@@ -207,10 +207,10 @@ try{
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 			?>    	
-			        <form action="cart_add.php" class="finform" >
-			        <input type="hidden" name="prod_no" class="productno" value="<?php echo $prodRow["prod_no"]; ?>">
-			        <input type="hidden" name="prod_name" value="<?php echo $prodRow["prod_name"]; ?>">
-			        <input type="hidden" name="prod_price" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <form action="cart_add.php" class="finform">
+			        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
+			        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
  
 				<div class="myview">
 					<div class="item col-xs-12 col-sm-4">
@@ -229,7 +229,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="submit" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -258,9 +258,9 @@ try{
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 			?>    	
 			        <form action="cart_add.php" class="waxform">
-			        <input type="hidden" name="prod_no" class="productno" value="<?php echo $prodRow["prod_no"]; ?>">
-			        <input type="hidden" name="prod_name" value="<?php echo $prodRow["prod_name"]; ?>">
-			        <input type="hidden" name="prod_price" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
+			        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
  
 				<div class="myview">
 					<div class="item col-xs-12 col-sm-4">
@@ -279,7 +279,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="submit" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -308,9 +308,9 @@ try{
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 			?>    	
 			        <form action="cart_add.php" class="suitform">
-			        <input type="hidden" name="prod_no" class="productno" value="<?php echo $prodRow["prod_no"]; ?>">
-			        <input type="hidden" name="prod_name" value="<?php echo $prodRow["prod_name"]; ?>">
-			        <input type="hidden" name="prod_price" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
+			        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
  
 				<div class="myview">
 					<div class="item col-xs-12 col-sm-4">
@@ -329,7 +329,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="submit" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                                 <!-- <a href="#" class="arikicommon_btn">加入購物車</a> -->
                                 <!-- <a href="#" class="arikicommon_btn">直接購買</a> -->

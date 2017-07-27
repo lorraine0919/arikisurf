@@ -1,11 +1,14 @@
 .table{
 	.content-panel{
 		padding: 20px;
-		font-size: 16px;
+		font-size: 18px; 
+		td{
+			color: #11314c;
+		}
 		h4{
 			color: #e97b23;
 		}
-		section{
+		table{
 			max-width: 800px;
 		}
 	}

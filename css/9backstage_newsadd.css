@@ -1,68 +1,33 @@
-@charset "UTF-8";
-	.back_newsno{
-		width: 10%;
-	}
-  	.back_newsdate{
-  		width: 20%;
-  	}
-	
-	.back_newsmodify{
-		width: 10%;
-	}
-	.content-panel{
-		background-color: #ED8C00;
-		padding-top: 0px;
-    	padding-bottom: 0px;
-	}
-	th{
-		color:#fff;
-		font-size: 16px;
-	}
-	td{
-		font-size: 16px;
-	}
-
-.lightbox-btn-add {
-  margin: 20px 0px;
-  cursor:pointer ;
+*{
+	margin: 0;
+	padding: 0;
+	list-style:none;
 }
 
-.lightbox-btn-edit{
-display: inline-block;
-cursor:pointer ;
-margin-right: 10px;
-}
-
-.remove-btn{
-display: inline-block;
-cursor:pointer ;
+html{ background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+  background-size: cover;
+  height:100%;
 }
 
 h2{
 	text-align: center;
 	font-family: '微軟正黑體';
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 100px;
 	color:#fff;
 }
 
+#feedback-page{
+	text-align:center;
+}
 
-.add-form{
+#form-main{
 	width:100%;
 	float:left;
 	padding-top:0px;
-	display: none;
 }
 
-.edit-form{
-	width:100%;
-	float:left;
-	padding-top:0px;
-	display: none;
-}
-
-.form-div {
-	background-color:rgb(17,49,76);
+#form-div {
+	background-color:rgba(72,72,72,0.4);
 	padding-left:35px;
 	padding-right:35px;
 	padding-top:35px;
@@ -102,6 +67,15 @@ h2{
 }
 
 
+
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+
+
 textarea {
     width: 100%;
     height: 150px;
@@ -114,7 +88,7 @@ input:focus, textarea:focus {
 	background-color:white;
 }
 
-.button-blue{
+#button-blue{
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	float:left;
 	width: 100%;
@@ -125,12 +99,14 @@ input:focus, textarea:focus {
 	font-size:24px;
 	padding-top:22px;
 	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
 	transition: all 0.3s;
-    margin-top:-4px;
-    font-weight:700;
+  margin-top:-4px;
+  font-weight:700;
 }
 
-.button-blue:hover{
+#button-blue:hover{
 	background-color: rgba(0,0,0,0);
 	color: #0493bd;
 }
@@ -143,6 +119,10 @@ input:focus, textarea:focus {
 	width: 0px;
 	height: 74px;
 	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
 	transition: .3s ease;
 }
 
@@ -151,7 +131,7 @@ input:focus, textarea:focus {
   background-color:white;
 }
 
-.add-btn-close{
+.btn-close{
 	display: block;
 	position: absolute;
 	top: -15px;
@@ -159,13 +139,15 @@ input:focus, textarea:focus {
 	line-height: 30px;
 	text-decoration: none;
 	text-align: center;
-}
-.edit-btn-close{
-	display: block;
-	position: absolute;
-	top: -15px;
-	right: -10px;
-	line-height: 30px;
-	text-decoration: none;
-	text-align: center;
+		}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
 }

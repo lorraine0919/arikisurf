@@ -49,9 +49,11 @@ require_once('connectBooks.php');
                                           <td>
                                             <div class="input-group">
                                                     <div class="btn-group">
-                                                        <input type="hidden" name="customize_model_sellornot" value="<?php echo $pdoRow['customize_model_sellornot'] ?>" class="sellornot">
+                                                        <input type="hidden" value="<?php echo $pdoRow['customize_model_sellornot'] ?>" class="sellornot">
                                                         
-                                                        <input type="hidden" name="modelNo" value="<?php echo $pdoRow['modelNo'] ?>" class="modelNo">
+                                                        <input type="hidden" value="<?php echo $pdoRow['modelNo'] ?>" class="no">
+                                                        <input type="hidden" value="model" class="style">
+
                                                         <a class="yesbtn btn btn-primary btn-sm">上架</a>
                                                         <a class="nobtn btn btn-primary btn-sm">下架</a>
                                                     </div>
@@ -96,8 +98,9 @@ require_once('connectBooks.php');
                                           <td>
                                             <div class="input-group">
                                                     <div class="btn-group">
-                                                        <input type="hidden" name="customize_color_sellornot" value="<?php echo $pdoRow['customize_color_sellornot'] ?>" class="sellornot">
-                                                        <input type="hidden" name="colorNo" value="<?php echo $pdoRow['colorNo'] ?>">
+                                                        <input type="hidden" value="<?php echo $pdoRow['customize_color_sellornot'] ?>" class="sellornot">
+                                                        <input type="hidden" value="<?php echo $pdoRow['colorNo'] ?>" class="no">
+                                                        <input type="hidden" value="color" class="style">
                                                         <a class="yesbtn btn btn-primary btn-sm">上架</a>
                                                         <a class="nobtn btn btn-primary btn-sm">下架</a>
                                                     </div>
@@ -144,8 +147,9 @@ require_once('connectBooks.php');
                                             <div class="input-group">
                                                 <form action="9backstage_customize_update.php">
                                                     <div class="btn-group">
-                                                        <input type="hidden" name="officialimg_sellornot" value="<?php echo $pdoRow['officialimg_sellornot'] ?>" class="sellornot">
-                                                        <input type="hidden" name="officialimgNo" value="<?php echo $pdoRow['officialimgNo'] ?>">
+                                                        <input type="hidden" value="<?php echo $pdoRow['officialimg_sellornot'] ?>" class="sellornot">
+                                                        <input type="hidden" value="<?php echo $pdoRow['officialimgNo'] ?>" class="no">
+                                                        <input type="hidden" value="officialimg" class="style">
                                                         <a class="yesbtn btn btn-primary btn-sm">上架</a>
                                                         <a class="nobtn btn btn-primary btn-sm">下架</a>
                                                     </div>

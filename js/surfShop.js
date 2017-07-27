@@ -76,8 +76,8 @@ $(document).ready(function(){
         var prodpri = $(this).next().children('p').text();
         var prodtit = $(this).next().children('h4').text();
         var prodtxt = $(this).next().children('div').children('p').text();
-        var productno = $(this).parent().parent().parent().parent().siblings('.productno').val();
-       	$('.lightboxproductno').eq(0).text(productno);
+        var prodname = $(this).parent().parent().parent().parent().siblings('.prodname').val();
+       	$('.lightboxproductno').eq(0).text(prodname);
         // console.log(prodtit);
         $(".lig-pic img").attr("src",prodpic);
         $(".info_title").children('h4').text(prodtit);
@@ -99,12 +99,12 @@ $(document).ready(function(){
 
 	});
     var storage = sessionStorage;
-    storage['gotochart']='';
+    storage['gotocart']='';
 	$('#addtocart').click(function(){
 		var lightboxproductno = $('.lightboxproductno').eq(0).text();
 		console.log(lightboxproductno);
 			storage[lightboxproductno]=true;		
-			storage['gotochart'] += lightboxproductno + ',';
+			storage['gotocart'] += lightboxproductno + ',';
 	});
 
 

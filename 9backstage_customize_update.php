@@ -23,6 +23,10 @@ try{
 
 			intodb('customize_officialimg','officialimg_sellornot',$_REQUEST['no'],$_REQUEST['sellornot'],'officialimgNo');
 
+		}else if($_REQUEST['style']=='material'){
+
+			intodb('customize_material','customize_material_sellornot',$_REQUEST['no'],$_REQUEST['sellornot'],'materialNo');
+
 		}
 }catch(PDOException $e){
   echo $e->getLine();

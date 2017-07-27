@@ -7,10 +7,10 @@ $Desk:16px;
 $DeskDetail:10px;
 $RwdName:25px;
 $RwdTitle:23px;
-$Rwd:19px;
+$Rwd:18px;
 $RwdDetail:10px;
 
-.content20:after{
+.content20:after,.base20:after{
   content: '';
   display: block;
   clear: both;
@@ -26,38 +26,36 @@ $RwdDetail:10px;
 }/*大框中框*/
 .left20{
   position: relative;
-  background-color: rgba(3,31,54,0.5);
   .sidebar20{
     .base20{
-      .photo20{
-        box-shadow: -4px 2px 0px rgba(237,144,70,1);
-      };
-      .block20{
-        .account20{
-          margin: 30px 0px;
-          padding: 14px 0px;
-          box-shadow: 0px 3px 0px rgba(73,100,122,0.5);
-          span{margin-left: 3px;}
+      font-size: $RwdDetail;
+        .photo20{
+          width: 130px;
+          box-shadow: -4px 2px 0px rgba(237,144,70,1);
         }
-      };
-    }/*base20*/
+        .block20{
+          .account20{font-size: $RwdName;}
+          .row20{
+              margin-top: 6px;
+            .icon20{
+              display: inline-block;
+              width: 20px;
+              vertical-align: middle;
+            }
+            .hello20{line-height: 20px;}
+          }/*row20*/
+        }/*block20*/
+      }/*base20*/
     .menu20{
       a{
-        display: block;
         color: #fff;
         padding: 0px 10px;
-        box-shadow: -5px 0px 0px rgba(73,100,122,0.5);
-      }
-      a:hover{
-        color:rgba(237,144,70,1);
-        box-shadow: -5px 0px 0px rgba(237,144,70,1);
       }
     }/*menu20*/
   }/*sidebar20*/
 }/*left20*/
 .right20{
   box-sizing:border-box;
-  background-image: url(../images/7member/member_pic.png);
   background-size:100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -67,13 +65,75 @@ $RwdDetail:10px;
     background-color: rgba(217,217,217,0.2);
   }
 }
-@media screen and (max-width:766px){
 
+@media screen and (max-width:999px){
+  .left20{
+    .sidebar20{
+      padding-top: 10vh;
+      .base20{
+        position: relative;
+        .photo20{
+          width: 35%;
+          margin: 30px 0px;
+          position: relative;
+          left: 45%;
+          display: inline-block;
+        };
+        .block20{
+          width: 10em;
+          margin-left: 10vw;
+          text-align: center;
+          position: relative;
+          right: 30vw;
+          bottom: 2vh;
+          display: inline-block;
+          .row20{display: none;}
+        };
+      }/*base20*/
+      .menu20{
+        position: fixed;
+        bottom: 0px;
+        z-index: 2;
+        width: 100%;
+        font-size: 0px;
+        li{
+          width: 100%;
+          vertical-align: middle;
+          a{
+            float: left;
+            vertical-align: middle;
+            width: calc(25% - 4px);
+            height: 2.5em;
+            line-height: 2.5em;
+            padding: 5px 0px;
+            border:2px solid #40666a;
+            border-radius: 7px 7px 0px 0px;
+            font-size: $Rwd;
+            text-align: center;
+            background-color:#51677a;
+          }
+          a:hover{background-color:rgba(237,144,70,1);}
+        }
+      }/*menu20*/
+    }/*sidebar20*/
+  }/*left20*/
+  .right20{
+    .title20{
+      margin-top: 30px;
+      text-align: center;
+      font-size: $RwdTitle;
+      font-weight: bold;
+      letter-spacing: 6px;
+    }
+  } 
 }
-@media screen and (max-width:767px){
-
-}
-@media screen and (min-width:900px){
+@media screen and (max-width:1122px){
+  .personal21,.changepsw21{width: 100%;}
+  .right20{
+    padding-right:10%;
+  }
+}/*平板*/
+@media screen and (min-width:1123px){
   .main20{
     width: 58.333%;
     max-width: 1170px;
@@ -81,16 +141,19 @@ $RwdDetail:10px;
   }/*main20*/
   .left20{
     float: left;
+    background-color: rgba(3,31,54,0.5);
     .sidebar20{
-      padding: 60px 40px;
+      padding: 3vw 2vw;
       .base20{
         font-size: $DeskDetail;
-          .photo20,.block20{width: 100%;}
-          .photo20{width: 130px;}
           .block20{
             .account20{
               width: 100%;
+              margin: 30px 0px;
+              padding: 14px 0px;
               font-size: $DeskName;
+              box-shadow: 0px 3px 0px rgba(73,100,122,0.5);
+              span{margin-left: 3px;}
             }
             .row20{
                 margin-top: 6px;
@@ -100,28 +163,36 @@ $RwdDetail:10px;
                 vertical-align: middle;
               }
               .hello20{line-height: 20px;}
-            }
-          }
-        }
-      }/*base20*/
+            }/*row20*/
+          }/*block20*/
+        }/*base20*/
+      }/*sidebar20*/
       .menu20{
         padding: 30px;
           a{
+            display: block;
             margin: 40px 0px;
-            font-size: $DeskTitle;
+            font-size: $Desk;
+            box-shadow: -5px 0px 0px rgba(73,100,122,0.5);
+          }
+          a:hover{
+            color:rgba(237,144,70,1);
+            box-shadow: -5px 0px 0px rgba(237,144,70,1);
           }
     }/*sidebar20*/
   }/*left20*/
   .right20{
     float: right;
-    width: 66%;
-    padding-right:80px;
+    width: calc(100% - 245px - 3vw);
+    padding-right:16%;
     padding-bottom: 60px;
+    background-image: url(../images/7member/member_pic.png);
     .title20{
       display: inline-block;
       width: 235px;
       margin: 60px 0px;
       text-align: right;
+      font-size: $DeskTitle;
     }
   }/*right20*/
 }

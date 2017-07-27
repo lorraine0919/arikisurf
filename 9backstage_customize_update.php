@@ -5,15 +5,18 @@ try{
 			require_once('connectBooks.php');
 			$sql = "update `$changetable` set `$changecolumn`=:changevalue
 			      where `$changenoname`=:changeno";
+			echo $sql;
 			$pdostatement = $pdo->prepare( $sql );
 			$pdostatement->bindValue(":changevalue" , $changevalue);
 			$pdostatement->bindValue(":changeno" , (int)$changeno);
 			$pdostatement->execute();
-			header('Location:9backstage_customize.php');			
+			// header('Location:9backstage_customize.php');			
 		}
 		if($_REQUEST['style']=='model'){
-
-			intodb('customize_model','customize_model_sellornot',$_REQUEST['no'],$_REQUEST['sellornot'],'modelNo');
+				intodb('customize_model','customize_model_sellornot',$_REQUEST['no'],$_REQUEST['sellornot'],'modelNo');
+				echo '222';
+				intodb('customize_model','customize_model_price',$_REQUEST['no'],$_REQUEST['price'],'modelNo');
+			echo '123';
 
 		}else if($_REQUEST['style']=='color'){
 
@@ -26,6 +29,8 @@ try{
 		}else if($_REQUEST['style']=='material'){
 
 			intodb('customize_material','customize_material_sellornot',$_REQUEST['no'],$_REQUEST['sellornot'],'materialNo');
+			intodb('customize_material','customize_material_price',$_REQUEST['no'],$_REQUEST['price'],'materialNo');
+
 
 		}
 }catch(PDOException $e){

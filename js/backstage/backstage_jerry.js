@@ -10,10 +10,10 @@ $(function(){
 	/*↑畫面一進來就撈資料庫資料決定現在是否停賣*/
 
 	/*↓按按鈕後改顏色*/
-	$('.btn-primary').click(function(){
-		$(this).addClass('active').siblings('input');
-		$(this).siblings('.btn-primary').removeClass('active');
-	});
+		$('.btn-primary').click(function(){
+			$(this).addClass('active').siblings('input');
+			$(this).siblings('.btn-primary').removeClass('active');
+		});
 	/*↑按按鈕後改顏色*/
 
 	/*↓按按鈕後改input的值*/
@@ -36,6 +36,21 @@ $(function(){
 		  });
 	});
 	/*↑按按鈕後改input的值*/
+
+	/*↓*/
+	$('.pricechangebtn').click(function(){
+		console.log($(this).siblings('.pricechange').val());
+		$.post('9backstage_customize_update.php',{
+		 		'no' : $(this).parent().siblings('.sellornotgroup').children().children().children('.no').val() ,
+		 		'sellornot' :  $(this).parent().siblings('.sellornotgroup').children().children().children('.sellornot').val(),
+		 		'price' :  $(this).siblings('.pricechange').val(),
+		 		'style' :  $(this).parent().siblings('.sellornotgroup').children().children().children('.style').val()			
+			},function(rs){
+				alert(rs);
+		});
+	});
+	/*↑*/
 })
+
 
 

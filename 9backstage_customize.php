@@ -30,6 +30,7 @@ require_once('connectBooks.php');
                                 <tr>
                                     <th>板型編號</th>
                                     <th>板型名稱</th>
+                                    <th>板型價格</th>
                                     <th class="numeric">上下架</th>
                                 </tr>
                               </thead>
@@ -46,14 +47,15 @@ require_once('connectBooks.php');
                                       <tr class="modeltr t<?php echo $i?>">
                                           <td><?php echo  $pdoRow['modelNo'] ?></td>
                                           <td><?php echo  $pdoRow['customize_model_name'] ?></td>
-                                          <td>
+                                          <td><input type="number" value="<?php echo  $pdoRow['customize_model_price'] ?>" min="0" class="pricechange"><a class="pricechangebtn">修改</a></td>
+                                          <td class="sellornotgroup">
                                             <div class="input-group">
                                                     <div class="btn-group">
                                                         <input type="hidden" value="<?php echo $pdoRow['customize_model_sellornot'] ?>" class="sellornot">
                                                         
                                                         <input type="hidden" value="<?php echo $pdoRow['modelNo'] ?>" class="no">
                                                         <input type="hidden" value="model" class="style">
-
+  
                                                         <a class="yesbtn btn btn-primary btn-sm">上架</a>
                                                         <a class="nobtn btn btn-primary btn-sm">下架</a>
                                                     </div>
@@ -95,7 +97,7 @@ require_once('connectBooks.php');
                                       <tr class="colortr t<?php echo $i?>">
                                           <td><?php echo  $pdoRow['colorNo'] ?></td>
                                           <td><?php echo  $pdoRow['customize_color_name'] ?></td>
-                                          <td>
+                                          <td  class="sellornotgroup">
                                             <div class="input-group">
                                                     <div class="btn-group">
                                                         <input type="hidden" value="<?php echo $pdoRow['customize_color_sellornot'] ?>" class="sellornot">
@@ -143,7 +145,7 @@ require_once('connectBooks.php');
                                       <tr class="officialimgtr t<?php echo $i?>">
                                           <td><?php echo  $pdoRow['officialimgNo'] ?></td>
                                           <td><?php echo  $pdoRow['officialimg_name'] ?></td>
-                                          <td>
+                                          <td  class="sellornotgroup">
                                             <div class="input-group">
                                                 <form action="9backstage_customize_update.php">
                                                     <div class="btn-group">
@@ -177,6 +179,7 @@ require_once('connectBooks.php');
                                 <tr>
                                     <th>材質編號</th>
                                     <th>材質名稱</th>
+                                    <th>材質價格</th>
                                     <th class="numeric">上下架</th>
                                 </tr>
                               </thead>
@@ -193,7 +196,8 @@ require_once('connectBooks.php');
                                       <tr class="materialtr t<?php echo $i?>">
                                           <td><?php echo  $pdoRow['materialNo'] ?></td>
                                           <td><?php echo  $pdoRow['customize_material_name'] ?></td>
-                                          <td>
+                                          <td><input type="number" value="<?php echo  $pdoRow['customize_material_price'] ?>" min="0" class="pricechange"><a class="pricechangebtn">修改</a></td>
+                                          <td  class="sellornotgroup">
                                             <div class="input-group">
                                                 <form action="9backstage_customize_update.php">
                                                     <div class="btn-group">

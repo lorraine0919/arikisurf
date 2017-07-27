@@ -19,11 +19,15 @@ $(function(){
 	/*↓按按鈕後改input的值*/
 	$('.yesbtn').click(function(){
 		$(this).siblings('.sellornot').attr('value','1');
-		$(this).parent().parent().submit();
+		 $.post('9backstage_customize_update.php',{ 
+		 		'modelNo' : $(this).siblings('.modelNo').val() , 'customize_model_sellornot' :  $(this).siblings('.sellornot').val()  },function(rs){
+		  });
 	});
 	$('.nobtn').click(function(){
 		$(this).siblings('.sellornot').attr('value','2');
-		$(this).parent().parent().submit();
+		 $.post('9backstage_customize_update.php',{ 
+		 		'modelNo' : $(this).siblings('.modelNo').val() , 'customize_model_sellornot' :  $(this).siblings('.sellornot').val()  },function(rs){
+		  });
 	});
 	/*↑按按鈕後改input的值*/
 })

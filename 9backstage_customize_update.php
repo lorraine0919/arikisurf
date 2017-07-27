@@ -1,15 +1,29 @@
 <?php 
 try{
-	require_once('connect_jerry.php');
 	
-	$sql = "update `customize_model` set `customize_model_sellornot`=:modelsellornot
-	      where `customize_model`.modelNo=:modelNo";
-	$pdostatement = $pdo->prepare( $sql );
-	$pdostatement->bindValue(":modelsellornot" , $_REQUEST['modelsellornot']);
-	$pdostatement->bindValue(":modelNo" , (int)$_REQUEST['modelNo']);
-	$pdostatement->execute();
-	header('9backstage_customize.php');
-	
+		function intodb($changetable,$changecolumn,$changeno,$changevalue,$changenoname){
+			require_once('connect_jerry.php');
+			$sql = "update `$changetable` set `$changecolumn`=:changevalue
+			      where `$changenoname`=:changeno";
+			$pdostatement = $pdo->prepare( $sql );
+			$pdostatement->bindValue(":changevalue" , $changevalue);
+			$pdostatement->bindValue(":changeno" , (int)$changeno);
+			$pdostatement->execute();
+			header('Location:9backstage_customize.php');			
+		}
+		if($_REQUEST['customize_model_sellornot']){
+
+			intodb('customize_model','customize_model_sellornot',$_REQUEST['modelNo'],$_REQUEST['customize_model_sellornot'],'modelNo');
+
+		}else if($_REQUEST['customize_color_sellornot']){
+
+			intodb('customize_color','customize_color_sellornot',$_REQUEST['colorNo'],$_REQUEST['customize_color_sellornot'],'colorNo');
+
+		}else if($_REQUEST['officialimg_sellornot']){
+
+			intodb('customize_officialimg','officialimg_sellornot',$_REQUEST['officialimgNo'],$_REQUEST['officialimg_sellornot'],'officialimgNo');
+
+		}
 }catch(PDOException $e){
   echo $e->getLine();
   echo $e->getMessage();

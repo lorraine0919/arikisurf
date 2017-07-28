@@ -91,12 +91,30 @@
          <div class="fourm">
             <ul>
              <li>全部文章</li>
-             <li>發表日期</li>
+             <li id="postDate">發表日期</li>
              <li>瀏覽次數</li>
              <li>留言次數</li>
              <li>評價</li>
              <li id="post">發表文章</li>
            </ul>  
+           <script>
+              $('#postDate').click(function(){
+                  var xhr = new XMLHttpRequest();
+                  url = "order.php";
+                  xhr.open("get", url , true);
+                  xhr.send(null);
+
+                  xhr.onreadystatechange = function(){
+                    if( xhr.readyState == 4){
+                      if( xhr.status == 200){
+                               
+                      }else{
+                        window.alert("錯誤".xhr.status);
+                      }
+                    }
+                  }
+              });
+           </script>
            <section class="talk">
 <?php 
        $sql="select * from map_post";

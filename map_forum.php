@@ -8,9 +8,14 @@
 </head>
 <body>
       <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-      <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
-      <a href="map.html">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.html">討論區</a>
+      <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+      <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.php">討論區</a>
       <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
+      <?php 
+           require_once("connectBooks.php");
+           $sql="select * from map_post";
+           $data = $pdo->query($sql);
+       ?>
       <div id="content_10">
         <form id="po" action="#">              
                <div class="poItem i1">
@@ -88,19 +93,29 @@
              <li id="post">發表文章</li>
            </ul>  
            <section class="talk">
+<?php 
+       while($dataItem = $data->fetch(PDO::FETCH_ASSOC)) {
+
+?>
               <div class="item">
-                 <a href="map_forum_discussion.php">                    
+                 <a href="map_forum_discussion.php">                  
                      <div class="pic_i">
-                           <img src="images/4wavepoint/fou/1.jpg">
+                           <!-- <img src="images/4wavepoint/fou/1.jpg"> -->                          
+                            <img src='images/4wavepoint/fou/<?php echo $dataItem["post_img"]  ?>'>
                      </div>
                      <div class="text">
-                         <h3>衝浪第一次接觸</h3>
-                         <div class="day">2017/07/07</div>
-                         <div class="tt">
+                         <!-- <h3>衝浪第一次接觸</h3> -->
+                         <h3><?php echo $dataItem["post_title"]  ?></h3>
+                         <!-- <div class="day">2017/07/07</div> -->
+                         <div class="day"><?php echo $dataItem["post_date"]  ?></div>
+                       <!--   <div class="tt">
                          Mathi是北部人,第一次衝浪的地方是在金山中角灣.  還記得那天剛好是颱風過境後的第一天.穿了件短褲,  交了800元後教練先在沙灘上胡亂解說一遍,就把我推下水了.老實說,  他說的天花亂墬,  我卻是有聽沒有懂.總覺得聽起來很容易,但實地下水後,  整個感覺就不一樣了.
                          那時候我還不會看浪,  也不記得浪有幾人高.  總覺得浪一排一排的蓋過來,  看到腿都軟了.腦袋裡一片空白,  只聽到耳邊震耳欲聾的海浪聲,以及教練聲嘶力竭的叫我拚命劃.哇咧!!!我心裡只想著逃命,這不是在玩命嘛?眼前都是整排蓋下來的浪和飛濺起的白花,而且白花中似乎夾雜的血淋淋的斷肢殘臂(有沒有那ㄇ誇張阿?!)掙紮了五分鐘後,  教練宣佈放棄,  他告訴我今天颱風浪不適合初學者下水,  我就被招呼上岸了.  老實說,  雖然覺得交了800元居然只有下水五分鐘,  但是上岸的那一霎那真的有死裡逃生的感覺.
                          上岸之後我的朋友告訴我,  今天的浪是他最近以來碰過最大的浪了.這才稍稍安慰了我挫敗的心.
-                         </div>                
+                         </div>  -->  
+                         <div class="tt">
+                               <?php echo $dataItem["post_text"]  ?>
+                         </div>             
                      </div>
                  </a>
                      <div class="item_border">
@@ -109,12 +124,15 @@
                              <div class="see">
                               <img src="images/4wavepoint/view.png" alt="view">
                               </div>                             
-                              <div class="watch">120</div>      
+                              <!-- <div class="watch">120</div>       -->
+                              <div class="watch"><?php echo $dataItem["post_view"]  ?></div>      
                          </div>
                      </div>                    
                </div><!-- item -->
-
-               <div class="item">
+<?php 
+     }//while
+ ?>
+              <!--  <div class="item">
                  <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <div class="v_p">
@@ -143,9 +161,9 @@
                               <div class="watch">120</div>      
                          </div>
                      </div>                    
-               </div><!-- item -->
+               </div> --><!-- item -->
 
-               <div class="item">
+               <!-- <div class="item">
                  <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/3.jpg">
@@ -167,9 +185,9 @@
                               <div class="watch">120</div>      
                          </div>
                      </div>                    
-               </div><!-- item -->
+               </div> --><!-- item -->
 
-               <div class="item">
+              <!--  <div class="item">
                  <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/4.jpg">
@@ -190,9 +208,9 @@
                               <div class="watch">120</div>      
                          </div>
                      </div>                    
-               </div><!-- item -->
+               </div> --><!-- item -->
 
-               <div class="item">
+              <!--  <div class="item">
                  <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/5.jpg">
@@ -212,9 +230,9 @@
                               <div class="watch">120</div>      
                          </div>
                      </div>                    
-               </div><!-- item -->
+               </div> --><!-- item -->
 
-               <div class="item">
+              <!--  <div class="item">
                  <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/6.jpg">
@@ -234,9 +252,9 @@
                               <div class="watch">120</div>      
                          </div>
                      </div>                    
-               </div><!-- item -->
+               </div> --><!-- item -->
 
-               <div class="item">
+              <!--  <div class="item">
                  <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/7.jpg">
@@ -256,9 +274,9 @@
                               <div class="watch">120</div>      
                          </div>
                      </div>                    
-               </div><!-- item -->
+               </div> --><!-- item -->
 
-               <div class="item">
+              <!--  <div class="item">
                  <a href="map_forum_discussion.php">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/8.jpg">
@@ -278,9 +296,9 @@
                               <div class="watch">120</div>      
                          </div>
                      </div>                    
-               </div><!-- item -->
+               </div> --><!-- item -->
 
-               <div class="item">
+               <!-- <div class="item">
                  <a href="map_forum_discussion.html">                    
                      <div class="pic_i">
                            <img src="images/4wavepoint/fou/9.jpg">
@@ -300,7 +318,7 @@
                               <div class="watch">120</div>      
                          </div>
                      </div>                    
-               </div><!-- item -->
+               </div> --><!-- item -->
 
            </section>
          </div><!-- fourm --> 

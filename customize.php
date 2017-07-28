@@ -1,3 +1,8 @@
+<?php 
+try{
+require_once('connectBooks.php');
+ ?>
+
 <!DOCTYPE html>
 <html lang="en"> 
   <!--header-->
@@ -149,18 +154,19 @@
 							<div class="patternarea">
 								<div class="top">
 									<div class="allpattern">
+										<?php 
+	                                        $sql = 'select * from customize_officialimg';
+	                                        $pdostatement=$pdo->prepare($sql);
+	                                        $pdostatement->execute();
+	                                        while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
+										 ?>
 										<div class="pattern">
-											<img src="images/2board/step2/logo1.png">
+											<img src="images/2board/officalimg/<?php echo $pdoRow['officialimg_file_name']?>">
 										</div>
-										<div class="pattern">
-											<img src="images/2board/step2/logo2.png">
-										</div>
-										<div class="pattern">
-											<img src="images/2board/step2/logo3.png">
-										</div>
-										<div class="pattern">
-											<img src="images/2board/step2/logo4.png">
-										</div>
+										<?php 
+
+											}
+										 ?>
 									</div>
 									<div class="arrow">
 										<div class="pre arrowbtn"><i class="fa fa-caret-left" aria-hidden="true"></i></div>
@@ -243,10 +249,19 @@
 									<div class="head"><p>Ariki c2.0</p></div>
 									<div class="patternframe">
 										<div class="patterns">
-											<div class="pattern"><img src="images/2board/step2/logo1.png"></div>
-											<div class="pattern"><img src="images/2board/step2/logo2.png"></div>
-											<div class="pattern"><img src="images/2board/step2/logo3.png"></div>
-											<div class="pattern"><img src="images/2board/step2/logo4.png"></div>
+											<?php 
+		                                        $sql = 'select * from customize_officialimg';
+		                                        $pdostatement=$pdo->prepare($sql);
+		                                        $pdostatement->execute();
+		                                        while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
+											 ?>
+											<div class="pattern">
+												<img src="images/2board/officalimg/<?php echo $pdoRow['officialimg_file_name']?>">
+											</div>
+											<?php 
+
+												}
+											 ?>
 										</div>								
 									</div>
 									<div class="scroll">
@@ -424,5 +439,15 @@
 </div>
 <script src="js/customize.js"></script>
  <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+<?php 
+
+
+}catch(PDOException $e){
+  echo $e->getLine();
+  echo $e->getMessage();
+}
+
+ ?>
+
 </body>
 </html>

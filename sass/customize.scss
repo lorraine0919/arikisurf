@@ -467,7 +467,7 @@
 							    border-radius: 16px 16px 0 0;
 							}
 							.patternframe{
-									width: 17vw;
+									width: 13vw;
 									overflow-x:scroll; 
 									margin: auto;
 									transform:translateX(-0.5vw);
@@ -487,12 +487,16 @@
 									  background: rgba(255, 130, 0, 0.1);
 									}
 								.patterns{
-									width: 25vw;
+									height: 10vh;
+									overflow-y:hidden; 
 									.pattern{
 										width: 5vw;
 										display: inline-block;
+										margin: 0 -5px 0 -5px ;
+										cursor: pointer;
 										img{
 											width: 100%;
+											opacity: 0.2;
 										}
 									}
 								}							

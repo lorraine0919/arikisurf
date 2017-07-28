@@ -52,21 +52,33 @@ $(function(){
 
 	/*↓上傳圖片*/
 		$('#uploadofficalimg').change(function(){
-			var formData = new FormData();
-			formData.append('uploadofficalimg', $('#uploadofficalimg')[0].files[0]);
-			$.ajax({
-			    url: '9backstage_customize_update.php',
-			    type: 'POST',
-			    cache: false,
-			    contentType: false,
-			    data: formData,
-			    processData: false,
-			    contentType: false
-			}).done(function(res) {
-				alert(res);
-			}).fail(function(res) {
-				alert(res);
-			});
+			/*↓傳送到php處理*/
+				/*傳送目前檔案數量*/
+				$.post('9backstage_customize_update.php',{
+						'officialimgcount':$('.officialimgcount').val()
+					},function(rs){
+
+				});
+
+				/*傳送檔案*/
+				var formData = new FormData();
+				formData.append('uploadofficalimg', $('#uploadofficalimg')[0].files[0]);
+				$.ajax({
+				    url: '9backstage_customize_update.php',
+				    type: 'POST',
+				    cache: false,
+				    contentType: false,
+				    data: formData,
+				    processData: false,
+				    contentType: false
+				}).done(function(res) {
+					// alert(res);
+				}).fail(function(res) {
+					// alert(res);
+				});
+			/*↑傳送到php處理*/
+
+
 
 		});
 	/*↑上傳圖片*/

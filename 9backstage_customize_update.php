@@ -46,11 +46,26 @@ try{
 		// ↓上傳官方圖片
 			switch($_FILES["uploadofficalimg"]["error"]){
 				case UPLOAD_ERR_OK :
+					/*準備圖片檔名(把附檔名拿掉)*/
+					$strlength=strlen($_FILES["uploadofficalimg"]["name"])-4;
+					$officialimg_name=substr($_FILES["uploadofficalimg"]["name"],0,$strlength);
+
+
+					/*把圖片放到圖片資料夾*/
 					echo $_FILES["uploadofficalimg"]["tmp_name"];
 					$from=$_FILES["uploadofficalimg"]["tmp_name"];
 					$to="images/2board/officalimg//". mb_convert_encoding($_FILES["uploadofficalimg"]["name"],"big5","utf-8");
 					copy($from,$to);
 
+					/*↓把檔名存至資料庫*/
+						require_once('connectBooks.php');
+						$sql = 'insert into `customize_officialimg` (`officialimgNo` , `officialimg_name` , `officialimg_sellornot` , `officialimg_file_name` ) values (null,  :officialimg_name,  "1",  :officialimg_file_name)';
+						echo $sql;
+						$pdostatement = $pdo->prepare( $sql );
+						$pdostatement->bindValue(":officialimg_name" , $officialimg_name);
+						$pdostatement->bindValue(":officialimg_file_name" ,$_FILES["uploadofficalimg"]["name"]);
+						$pdostatement->execute();
+					/*↑把檔名存至資料庫*/
 					break;
 				case UPLOAD_ERR_INI_SIZE :
 					echo "上傳檔案太大";

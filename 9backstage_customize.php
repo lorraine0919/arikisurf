@@ -129,6 +129,7 @@ require_once('connectBooks.php');
                                 <tr>
                                     <th>官方圖樣編號</th>
                                     <th>官方圖樣名稱</th>
+                                    <th>官方圖樣檢視</th>
                                     <th class="numeric">上下架</th>
                                 </tr>
                               </thead>
@@ -137,7 +138,7 @@ require_once('connectBooks.php');
                                         $sql = 'select * from customize_officialimg';
                                         $pdostatement=$pdo->prepare($sql);
                                         $pdostatement->execute();
-                                        $i=0;
+                                        $officialimgcount=0;
                                           while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){/*↓如果抓的到官方圖樣資料*/ 
 
                                    ?>
@@ -145,6 +146,9 @@ require_once('connectBooks.php');
                                       <tr class="officialimgtr t<?php echo $i?>">
                                           <td><?php echo  $pdoRow['officialimgNo'] ?></td>
                                           <td><?php echo  $pdoRow['officialimg_name'] ?></td>
+                                          <td class="officialimgshow">
+                                            <img src="images/2board/officalimg/<?php echo  $pdoRow['officialimg_file_name'] ?>">
+                                          </td>
                                           <td  class="sellornotgroup">
                                             <div class="input-group">
                                                 <form action="9backstage_customize_update.php">
@@ -161,9 +165,9 @@ require_once('connectBooks.php');
                                       </tr>
                                   </form>
                                        <?php   
-                                          $i++;
+                                          $officialimgcount++;
                                           }/*↑如果抓的到官方圖樣資料*/
-
+                                          echo "<input type='hidden' class='officialimgcount' value='$officialimgcount'>"
                                        ?>
                                   
                                 </tbody>

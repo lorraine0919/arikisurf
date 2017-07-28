@@ -57,7 +57,7 @@ $(function(){
 				$.post('9backstage_customize_update.php',{
 						'officialimgcount':$('.officialimgcount').val()
 					},function(rs){
-
+						location.reload();
 				});
 
 				/*傳送檔案*/
@@ -72,7 +72,7 @@ $(function(){
 				    processData: false,
 				    contentType: false
 				}).done(function(res) {
-					// alert(res);
+					location.reload();
 				}).fail(function(res) {
 					// alert(res);
 				});

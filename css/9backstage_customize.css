@@ -12,3 +12,5 @@ ul.sidebar-menu li a[href="9backstage_customize.php"] {
     color: #e97b23; }
   .table .content-panel table {
     max-width: 800px; }
+  .table .content-panel a {
+    cursor: pointer; }

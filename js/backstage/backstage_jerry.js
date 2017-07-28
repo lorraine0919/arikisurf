@@ -37,19 +37,18 @@ $(function(){
 	});
 	/*↑按按鈕後改input的值*/
 
-	/*↓*/
+	/*↓價格修改*/
 	$('.pricechangebtn').click(function(){
 		console.log($(this).siblings('.pricechange').val());
 		$.post('9backstage_customize_update.php',{
 		 		'no' : $(this).parent().siblings('.sellornotgroup').children().children().children('.no').val() ,
-		 		'sellornot' :  $(this).parent().siblings('.sellornotgroup').children().children().children('.sellornot').val(),
 		 		'price' :  $(this).siblings('.pricechange').val(),
 		 		'style' :  $(this).parent().siblings('.sellornotgroup').children().children().children('.style').val()			
 			},function(rs){
-				alert(rs);
+				// alert(rs);
 		});
 	});
-	/*↑*/
+	/*↑價格修改*/
 })
 
 

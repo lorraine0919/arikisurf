@@ -208,4 +208,31 @@ var patterns=$('.selectAndNext .pattern').length;
 var newwidth = $('.selectAndNext .pattern').width()*patterns;
 $('.selectAndNext .patterns').width(newwidth);
 /*↑步驟二動態產生圖案group長度*/
+
+/*↓步驟二按圖放到浪板上*/
+$('.selectAndNext .pattern').click(function(){
+	var selectpic=$(this).children('img').attr('src');
+	console.log(selectpic);
+	$('.demogroup .patternshow img').attr('src',selectpic);
+	var boardurl= [
+		'images/2board/gunboard/gunboard.png',
+		'images/2board/longboard/longboard.png',
+		'images/2board/funboard/funboard.png',
+		'images/2board/shortboard/shortboard.png',
+		'images/2board/fishboard/fishboard.png',
+		'images/2board/bodyboard/bodyboard.png'
+	];
+	console.log($('.step2_maxContent .boarddemo').attr('src'));
+	if($('.step2_maxContent .boarddemo').attr('src')==boardurl[0]){
+		$('.demogroup .patternshow').css({
+			bottom:'60%',
+			left: '8%'
+		});
+	}
+});
+
+/*↑步驟二按圖放到浪板上*/
+
+
+
 });

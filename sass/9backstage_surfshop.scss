@@ -1,7 +1,10 @@
 .table{
+	textarea{
+		resize: none;
+	}
 	.content-panel{
 		padding: 20px;
-		font-size: 18px; 
+		font-size: 17px; 
 		td{
 			color: #11314c;
 		}
@@ -9,11 +12,43 @@
 			color: #e97b23;
 		}
 		table{
-			max-width: 800px; 
+			// max-width: 800px; 
 			tr img{
 				max-width: 100px;
 			}
 		}
 	}
+	.namechange{
+		width: 350px;
+		
+	}
+	.deschange{
+		width: 400px;
+		height: 150px;
+	}
 
+}
+@media screen and (max-width: 767px) {
+
+	.table{
+	.content-panel{
+		padding: 6px;
+		font-size: 12px; 
+	  }
+	.pricechange{
+		width: 45px;
+	}
+	.quachange{
+		width: 20px;
+	}
+	.namechange{
+		width: 70px;
+		height: 70px;
+	}
+	.deschange{
+		width: 90px;
+		height: 90px;
+	}
+
+   }
 }

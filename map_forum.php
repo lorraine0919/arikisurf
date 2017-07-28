@@ -9,12 +9,15 @@
 <body>
       <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
       <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
-      <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.php">討論區</a>
+      <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i>討論區
       <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
       <?php 
+           $wave_number = $_REQUEST["wave_number"];
+
            require_once("connectBooks.php");
-           $sql="select * from map_post";
-           $data = $pdo->query($sql);
+           $sql2="select * from map_wave where wave_number=$wave_number";
+           $wave = $pdo->query($sql2);
+           $waveRow = $wave->fetch(PDO::FETCH_ASSOC);         
        ?>
       <div id="content_10">
         <form id="po" action="#">              
@@ -71,16 +74,18 @@
          </div> <!-- info_10 div1-->     
          <div class="beach_10">
            <div class="beach_h">
-                <h2>PIPELIN</h2>
+                <!-- <h2>PIPELIN</h2> -->
+                <h2><?php echo $waveRow["wave_title"] ?></h2>
                 <p>一片深綠色的海邊叢林,一彎淺淺的棕櫚沙灘。</p>
            </div>
            <div class="beach_txt">
-                <p>頭頂著一輪俏皮的彎月,靜靜地享受和愛的人在一起的寧靜時光。來吧,嘉善路邊的月砂森林,這裡有你遺落的安然。</p>
+               <!--  <p>頭頂著一輪俏皮的彎月,靜靜地享受和愛的人在一起的寧靜時光。來吧,嘉善路邊的月砂森林,這裡有你遺落的安然。</p>
                 <p>小屋是來自米蘭國際設計週的設計師@企鵝沈虹設計的,位於嘉善路和永康路的三岔口永盛里內,四通八達的小巷把老上海的風味都嵌在了裡面,別晃
                 眼~這裡真的有沙灘哦!出門50米,有老人坐在門口聽著滬劇小調聊著天,再往外走就是不得不來上一杯的永康路,露天酒吧、法式麵包店、質感家具店
                 和街道旁隨處停著的哈雷機車......一切都在嘗試拖住你的步伐,讓你慢下來享受這個瞬間。</p>
                 <p>穿過熱鬧非凡的街道,回到月砂森林,關上白色的小門。迎接你的是紮染的質感布條,木質、竹編的椅子,還有帶著年輪的樹樁,直接把你捲入了清香瀰漫
-                的靜謐海畔叢林。</p>
+                的靜謐海畔叢林。</p> -->
+                <?php  echo $waveRow["wave_info"]?>
            </div><!-- beach_txt -->          
          </div><!-- beach_10 --> 
          <div class="fourm">
@@ -94,6 +99,8 @@
            </ul>  
            <section class="talk">
 <?php 
+       $sql="select * from map_post";
+       $data = $pdo->query($sql);
        while($dataItem = $data->fetch(PDO::FETCH_ASSOC)) {
 
 ?>

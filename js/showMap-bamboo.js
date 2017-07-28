@@ -36,11 +36,16 @@ $(document).ready(function(){
 	'浪最高可達25米，最勇敢的浪人挑戰的地方，滑水無法進入浪區，須乘坐摩托艇'
 	];
 
-
+	var wave_number = ['101','102','103','104','105','106','107','108','109'];
+    $('.address_mobile').attr('href','map_forum.php?wave_number=101');
 	$('.map_bamboo_3 .mobile').click(function(){
 		$(this).addClass('click');
 		$('.map_bamboo_3 .mobile').not(this).removeClass('click');
 		var index = $(this).index();
+
+		var newhref='map_forum.php?wave_number='+wave_number[index];
+		$('.address_mobile').attr('href',newhref);
+		console.log(newhref);
 
 		/*以下是編輯時好知道定位點在哪*/
 		$('.map_bamboo_1 .po').css('border','2px solid #f00'); 
@@ -90,18 +95,11 @@ $(document).ready(function(){
 		// }
 
 
-		var index = $(this).index();
-
 		$('.map_bamboo_3 .title').text(titlearr[index]);
 		$('.map_bamboo_3 .pipeline').attr('src','images/4wavepoint/'+(titlearr[index])+'.jpg');
 		$('.map_bamboo_3 .info').text(infoarr[index]);
 
-		
-
-
-
-
-	});
+	});//$('.map_bamboo_3 .mobile').click
 	var rwdarrowcount=0;
 	function controlpoint (rwdarrowcount){
 		var cssleft =$('.map_bamboo_1 .po').eq(rwdarrowcount).position().left;

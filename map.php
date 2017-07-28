@@ -77,6 +77,7 @@
             <h5 class="info">
               作為著名的衝浪勝地，Pipeline吸引著全世界最優秀的衝浪者前來大展身手，各種全球最知名的衝浪比賽也會在這裡舉行。
             </h5>
+            <!-- <a href="map_forum.php?wave_number=$wave_number" class="address_mobile"> -->
             <a href="map_forum.php" class="address_mobile">
               <span>進入討論區</span>
             </a>            

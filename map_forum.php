@@ -90,31 +90,12 @@
          </div><!-- beach_10 --> 
          <div class="fourm">
             <ul>
-             <li>全部文章</li>
+             <li id="allPost">全部文章</li>
              <li id="postDate">發表日期</li>
-             <li>瀏覽次數</li>
-             <li>留言次數</li>
-             <li>評價</li>
+             <li id="viewPost">瀏覽次數</li>
+             <li id="starPost">評價</li>
              <li id="post">發表文章</li>
            </ul>  
-           <script>
-              $('#postDate').click(function(){
-                  var xhr = new XMLHttpRequest();
-                  url = "order.php";
-                  xhr.open("get", url , true);
-                  xhr.send(null);
-
-                  xhr.onreadystatechange = function(){
-                    if( xhr.readyState == 4){
-                      if( xhr.status == 200){
-                               
-                      }else{
-                        window.alert("錯誤".xhr.status);
-                      }
-                    }
-                  }
-              });
-           </script>
            <section class="talk">
 <?php 
        $sql="select * from map_post";
@@ -157,6 +138,116 @@
 <?php 
      }//while end
  ?>
+
+       <script>
+              function orderByDate(jsonStr){
+                 var o_date = JSON.parse( jsonStr );
+                 for(var x in o_date){
+                 console.log(o_date[x]);
+                    var newimg = document.createElement("img"); 
+                    newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;   
+                    $('.item .pic_i').eq(x).append(newimg);
+                    $('.day').eq(x).text(o_date[x].post_date);
+                    $('.text h3').eq(x).text(o_date[x].post_title);
+                    $('.tt').eq(x).text(o_date[x].post_text);
+                    $('.watch').eq(x).text(o_date[x].post_view);
+                 }                
+              }//orderByDate function
+
+              $('#postDate').click(function(){
+                  var xhr = new XMLHttpRequest();
+                  url = "order.php";
+                  xhr.open("get", url , true);
+                  xhr.send(null);
+
+                  xhr.onreadystatechange = function(){
+                    if( xhr.readyState == 4){
+                      if( xhr.status == 200){
+                        $('.talk .pic_i').empty();
+                        $('.day').text('');
+                        $('.text h3').text('');
+                        $('.tt').text('');
+                        $('.watch').text('');
+                        orderByDate(xhr.responseText); 
+                      }else{
+                        window.alert("錯誤".xhr.status);
+                      }
+                    }
+                  }
+              });//click
+
+               function orderByView(jsonStr){
+                 var o_date = JSON.parse( jsonStr );
+                 for(var x in o_date){
+                 console.log(o_date[x]);
+                    var newimg = document.createElement("img"); 
+                    newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;   
+                    $('.item .pic_i').eq(x).append(newimg);
+                    $('.day').eq(x).text(o_date[x].post_date);
+                    $('.text h3').eq(x).text(o_date[x].post_title);
+                    $('.tt').eq(x).text(o_date[x].post_text);
+                    $('.watch').eq(x).text(o_date[x].post_view);
+                 }                
+              }//orderByView function
+
+              $('#viewPost').click(function(){
+                  var xhr = new XMLHttpRequest();
+                  url = "orderByView.php";
+                  xhr.open("get", url , true);
+                  xhr.send(null);
+
+                  xhr.onreadystatechange = function(){
+                    if( xhr.readyState == 4){
+                      if( xhr.status == 200){
+                        $('.talk .pic_i').empty();
+                        $('.day').text('');
+                        $('.text h3').text('');
+                        $('.tt').text('');
+                        $('.watch').text('');
+                        orderByDate(xhr.responseText); 
+                      }else{
+                        window.alert("錯誤".xhr.status);
+                      }
+                    }
+                  }
+              });//click
+
+              function orderByStar(jsonStr){
+                 var o_date = JSON.parse( jsonStr );
+                 for(var x in o_date){
+                 console.log(o_date[x]);
+                    var newimg = document.createElement("img"); 
+                    newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;   
+                    $('.item .pic_i').eq(x).append(newimg);
+                    $('.day').eq(x).text(o_date[x].post_date);
+                    $('.text h3').eq(x).text(o_date[x].post_title);
+                    $('.tt').eq(x).text(o_date[x].post_text);
+                    $('.watch').eq(x).text(o_date[x].post_view);
+                 }                
+              }//orderByView function
+
+              $('#starPost').click(function(){
+                  var xhr = new XMLHttpRequest();
+                  url = "orderByStar.php";
+                  xhr.open("get", url , true);
+                  xhr.send(null);
+
+                  xhr.onreadystatechange = function(){
+                    if( xhr.readyState == 4){
+                      if( xhr.status == 200){
+                        $('.talk .pic_i').empty();
+                        $('.day').text('');
+                        $('.text h3').text('');
+                        $('.tt').text('');
+                        $('.watch').text('');
+                        orderByStar(xhr.responseText); 
+                      }else{
+                        window.alert("錯誤".xhr.status);
+                      }
+                    }
+                  }
+              });//click
+        </script>
               <!--  <div class="item">
                  <a href="map_forum_discussion.php">                    
                      <div class="pic_i">

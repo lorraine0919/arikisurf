@@ -125,6 +125,9 @@ require_once('connectBooks.php');
 			</div>
 			<div class="demogroup">
 				<div class="demo">
+					<div class="patternshow">
+						<img>
+					</div>
 					<img src="images/2board/longboard/longboard.png" class="boarddemo">
 					<img src="images/2board/base.png" class="base">
 				</div>	

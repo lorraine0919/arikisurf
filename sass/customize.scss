@@ -367,7 +367,14 @@
 				    left: -24%;
 					width: 150%;
 				}
-				
+				.patternshow{
+					position: absolute;
+					width:80%;
+					z-index: 3;
+					img{
+						width: 100%;	
+					}
+				}
 			}
 			.rwdselectstyle{
 				display: none;
@@ -496,7 +503,7 @@
 										cursor: pointer;
 										img{
 											width: 100%;
-											opacity: 0.2;
+											// opacity: 0.2;
 										}
 									}
 								}							

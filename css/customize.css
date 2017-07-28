@@ -272,6 +272,12 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo .patternshow {
+          position: absolute;
+          width: 80%;
+          z-index: 3; }
+          .bg_forest_2 .step2_maxContent .demogroup .demo .patternshow img {
+            width: 100%; }
       .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle {
         display: none; }
       .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce {
@@ -376,8 +382,7 @@
                     margin: 0 -5px 0 -5px;
                     cursor: pointer; }
                     .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns .pattern img {
-                      width: 100%;
-                      opacity: 0.2; }
+                      width: 100%; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .scroll {
                 display: none;
                 width: 81%;

@@ -76,7 +76,7 @@
            <div class="beach_h">
                 <!-- <h2>PIPELIN</h2> -->
                 <h2><?php echo $waveRow["wave_title"] ?></h2>
-                <p>一片深綠色的海邊叢林,一彎淺淺的棕櫚沙灘。</p>
+                <p><?php  echo $waveRow["wave_p"]?></p>
            </div>
            <div class="beach_txt">
                <!--  <p>頭頂著一輪俏皮的彎月,靜靜地享受和愛的人在一起的寧靜時光。來吧,嘉善路邊的月砂森林,這裡有你遺落的安然。</p>
@@ -108,7 +108,7 @@
                  <a href="map_forum_discussion.php">                  
                      <div class="pic_i">
                            <!-- <img src="images/4wavepoint/fou/1.jpg"> -->                          
-                            <img src='images/4wavepoint/fou/<?php echo $dataItem["post_img"]  ?>'>
+                            <img src='images/4wavepoint/<?php echo $wave_number ?>/fou/<?php echo $dataItem["post_img"]  ?>'>
                      </div>
                      <div class="text">
                          <!-- <h3>衝浪第一次接觸</h3> -->
@@ -137,7 +137,7 @@
                      </div>                    
                </div><!-- item -->
 <?php 
-     }//while
+     }//while end
  ?>
               <!--  <div class="item">
                  <a href="map_forum_discussion.php">                    

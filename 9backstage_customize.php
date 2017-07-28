@@ -165,9 +165,14 @@ require_once('connectBooks.php');
                                           }/*↑如果抓的到官方圖樣資料*/
 
                                        ?>
-
+                                  
                                 </tbody>
                           </table>
+                          
+                          <label >
+                            <div class="btn btn-default">新增圖片</div>
+                            <input type="file" style="display: none" id="uploadofficalimg">
+                          </label>
                         </div>
                       <!-- 官方圖樣控制結束 -->
 

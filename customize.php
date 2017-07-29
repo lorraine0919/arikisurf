@@ -77,6 +77,7 @@ require_once('connectBooks.php');
 								</clipPath>
 								<g transform="matrix(1 0 0 1 0 0)" style="clip-path:url(#maskofimg);">
 								</g>
+								<g id="svgothers"></g>
 							</g>
 						</g>
 						<g id="shadow">
@@ -94,15 +95,6 @@ require_once('connectBooks.php');
 
 							</linearGradient>
 							<g class="bordshape"></g>
-						</g>
-						<g id="thestring">
-							<defs>
-								<g class="bordshape"></g>
-							</defs>
-							<clipPath id="mask">
-								<use xlink:href="#lightmaskid"  style="overflow:visible;"/>
-							</clipPath>
-							<line id="XMLID_13_" class="theline" x1="70.3" y1="21.5" x2="76.4" y2="492" style="display: none"/>
 						</g>
 					</svg>
 					<img src="images/2board/base.png" class="base">

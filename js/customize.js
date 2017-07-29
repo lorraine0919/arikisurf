@@ -99,18 +99,25 @@ $(function(){
 
 	$('.step1_maxContent .board').click(function(){
 		if($('.step1_maxContent .board').eq(0).hasClass('click')){
+			// gunboard
 			boardshape='<path  d="M74.7,491.5c-56-44.5-55.9-263.2-37.6-380.1C46.7,51,70.3,21.5,70.3,21.5l0,0.1 c0.8,1,24.4,30.1,34.8,89.3c20.6,116.5,28,334.9-27.1,380.5c0,0-0.5,0.6-1.6,0.6C75.2,492,74.7,491.5,74.7,491.5z"/>';
 			setsvgboard(boardshape);
+			$('#svgothers').html('<line x1="70.3" y1="21.5" x2="76.4" y2="492" style="opacity:0.2; clip-path:url(#mask); fill:none; stroke:#040000; stroke-miterlimit:10;clip-path:url(#maskofimg);"/>');
+
 		}else if($('.step1_maxContent .board').eq(1).hasClass('click')){
+			// longboard
 			boardshape='<path  d="M119,168.6C111.5,54.3,73.8,58.4,73.8,58.4v0c0,0-37.7-4-45.2,110.2 C20.9,286.2,33,451.9,63.2,485.3c3.5,3.8,6.7,2.9,10.6,2.9v0c3.9,0,7.1,0.9,10.6-2.9C114.6,451.9,126.7,286.2,119,168.6z"/>';
+
 			setsvgboard(boardshape);
+			$('#svgothers').html('');
 		}else if($('.step1_maxContent .board').eq(2).hasClass('click')){
+			// funboard
 			boardshape='<path d="M72.8,96c0,0-51.9,9-49.9,187s37.8,206.3,49.9,206.3c12.1,0,47.9-28.3,49.9-206.3 S72.8,96,72.8,96z"/>';
 			setsvgboard(boardshape);
+			$('#svgothers').html('<path d="M72.8,103.8c0,0-45.2,8.6-43.5,179.6s32.9,198.1,43.5,198.1c10.6,0,41.7-27.2,43.5-198.1 C118,112.5,72.8,103.8,72.8,103.8z" style="opacity:0.38;fill:none;stroke:#000000;stroke-miterlimit:10;"/><line x1="72.8" y1="103.8" x2="72.8" y2="481.5" style="opacity:0.38;fill:none;stroke:#000000;stroke-miterlimit:10;"/>');
 		}		
 	});
 	
-
 
  
 

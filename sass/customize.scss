@@ -124,7 +124,7 @@
 			display: inline-block;
 			width: 28%;
 			.demo{				
-			    width: 33%;
+			    width: 43%;
 			    margin: 0 0 0 28%;
 			    position: relative;
 			    padding-top: 109%;
@@ -142,6 +142,28 @@
 				    left: -24%;
 					width: 150%;
 				}
+				.svgstep1{
+					position: absolute;
+					top: 0;
+					z-index: 2;
+					.maincolor{
+						fill:url(#maincolor);
+					}
+					.shadowcolor{
+						fill:url(#shadowcolor);
+					}
+					.lightcolor{
+						fill:url(#lightcolor);
+					}
+					.theline{
+						opacity:0.2;
+						clip-path:url(#mask);
+						fill:none;
+						stroke:#040000;
+						stroke-miterlimit:10;
+					}
+				}
+				
 				
 			}
 			.rwdselectboard{

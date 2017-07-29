@@ -50,7 +50,61 @@ require_once('connectBooks.php');
 			</div>
 			<div class="demogroup">
 				<div class="demo">
-					<img src="images/2board/longboard/longboard.png" class="boarddemo">
+					<svg  x="0px" y="0px" viewBox="0 0 150 500" class="svgstep1">
+						<g id="shapeandimg">
+							<linearGradient id="maincolor" gradientUnits="userSpaceOnUse" x1="78.4619" y1="529.6423" x2="71.7801" y2="167.529">
+									<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/>
+									<stop  offset="1" style="stop-color:#FFFFFF"/>				
+							</linearGradient>
+							<defs>
+								<g class="bordshape"></g>
+								<filter id="dropshadow">
+								  <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
+								  <feOffset dx="2" dy="2"/>
+								  <feComponentTransfer>
+								    <feFuncA type="linear" slope="0.05"/>
+								  </feComponentTransfer>
+								  <feMerge> 
+								    <feMergeNode/>
+								    <feMergeNode in="SourceGraphic"/> 
+								  </feMerge>
+								</filter>
+							</defs>
+							<g class="bordshape"></g>
+							<g>
+								<clipPath id="maskofimg">
+									<use xlink:href="#mainshapemask"  style="overflow:visible;"/>
+								</clipPath>
+								<g transform="matrix(1 0 0 1 0 0)" style="clip-path:url(#maskofimg);">
+								</g>
+							</g>
+						</g>
+						<g id="shadow">
+							<linearGradient id="shadowcolor" gradientUnits="userSpaceOnUse" x1="11.2131" y1="260.0541" x2="92.9405" y2="252.5548">
+								<stop  offset="1.021794e-007" style="stop-color:#595757;stop-opacity:0.2"/>
+								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+							</linearGradient>
+							<g class="bordshape"></g>
+						</g>
+						<g id="light">
+							<linearGradient id="lightcolor" gradientUnits="userSpaceOnUse" x1="168.2328" y1="243.213" x2="87.8788" y2="252.6649">
+								<stop  offset="0" style="stop-color:#FFFFFF"/>
+								<stop  offset="0.401" style="stop-color:#FFFFFF;stop-opacity:0.599"/>
+								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+
+							</linearGradient>
+							<g class="bordshape"></g>
+						</g>
+						<g id="thestring">
+							<defs>
+								<g class="bordshape"></g>
+							</defs>
+							<clipPath id="mask">
+								<use xlink:href="#lightmaskid"  style="overflow:visible;"/>
+							</clipPath>
+							<line id="XMLID_13_" class="theline" x1="70.3" y1="21.5" x2="76.4" y2="492" style="display: none"/>
+						</g>
+					</svg>
 					<img src="images/2board/base.png" class="base">
 				</div>
 				<div class="rwdselectboard" >

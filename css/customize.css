@@ -89,7 +89,7 @@
       display: inline-block;
       width: 28%; }
       .bg_forest_2 .step1_maxContent .demogroup .demo {
-        width: 33%;
+        width: 43%;
         margin: 0 0 0 28%;
         position: relative;
         padding-top: 109%; }
@@ -104,6 +104,22 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
+        .bg_forest_2 .step1_maxContent .demogroup .demo .svgstep1 {
+          position: absolute;
+          top: 0;
+          z-index: 2; }
+          .bg_forest_2 .step1_maxContent .demogroup .demo .svgstep1 .maincolor {
+            fill: url(#maincolor); }
+          .bg_forest_2 .step1_maxContent .demogroup .demo .svgstep1 .shadowcolor {
+            fill: url(#shadowcolor); }
+          .bg_forest_2 .step1_maxContent .demogroup .demo .svgstep1 .lightcolor {
+            fill: url(#lightcolor); }
+          .bg_forest_2 .step1_maxContent .demogroup .demo .svgstep1 .theline {
+            opacity: 0.2;
+            clip-path: url(#mask);
+            fill: none;
+            stroke: #040000;
+            stroke-miterlimit: 10; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
         display: none; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce {

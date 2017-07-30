@@ -264,7 +264,7 @@ $('.selectAndNext .pattern').click(function(){
 	}
 /*↑步驟二上傳圖片至demo區*/
 
-/*↓拖曳圖片*/
+/*↓步驟二拖曳圖片*/
 	var drag = d3.behavior.drag()  
             .on('dragstart', function() { 
               //拖拉開始時，要做什麼事 
@@ -282,8 +282,35 @@ $('.selectAndNext .pattern').click(function(){
             });
     var patternshow = d3.select('#patternshow')
             .call(drag);
-/*↑拖曳圖片*/
+/*↑步驟二拖曳圖片*/
 
+
+/*↓步驟二儲存圖片到下一步驟*/
+	document.getElementById('step2tostep3').onclick=function(){
+		console.log('a');
+		// document.getElementById('svgstep2').width=1000;
+		// document.getElementById('svgstep2').setAttribute("viewbox","0 0 100 10");
+		document.getElementById("step3result").height=1500;
+		var svgData = new XMLSerializer().serializeToString( document.getElementById('svgstep2') );
+		// document.getElementById("step3result").width=500;
+		var ctx = document.getElementById("step3result").getContext("2d");
+		var DOMURL = self.URL || self.webkitURL || self;
+		var img = new Image();
+		var svg = new Blob([svgData], {type: "image/svg+xml;charset=utf-8"});
+		var url = DOMURL.createObjectURL(svg);
+		img.onload = function() {
+		    ctx.drawImage(img, 10, 10,217,1073);
+		    var png = document.getElementById('step3result').toDataURL("image/png");
+		    document.querySelector('#png-container').innerHTML = '<img src="'+png+'"/>';
+		    DOMURL.revokeObjectURL(png);
+		};
+   		 img.src = url;
+		// document.getElementById('step3result').setAttribute( "src", "data:image/svg+xml;base64," + btoa( unescape(encodeURIComponent(svgData))));
+
+		// ctx.drawImage( resultimg, 0, 0 );
+		// console.log( document.getElementById('step3result').toDataURL( "image/png" ) );
+	}
+/*↑步驟二儲存圖片到下一步驟*/
 
 };
 

@@ -169,7 +169,7 @@ require_once('connectBooks.php');
 			</div>
 			<div class="demogroup">
 				<div class="demo">
-					<svg  x="0px" y="0px" viewBox="0 0 150 500" class="svgboard" id="svgstep2">
+					<svg  x="0px" y="0px" viewBox="10 0 115 500" class="svgboard" id="svgstep2">
 						<g>
 							<!-- 遮色片形狀 -->
 							<defs>
@@ -398,7 +398,10 @@ require_once('connectBooks.php');
 			</div>
 			<div class="demogroup">
 				<div class="demo">
-					<img src="images/2board/longboard/longboard.png" class="boarddemo">
+					<!-- <img src="images/2board/longboard/longboard.png" class="boarddemo"> -->
+					<!-- <img id="step3result" /> -->
+					<canvas id="step3result" style="display: none"></canvas>
+					<div id="png-container"></div>
 				</div>			
 			</div>
 			<div class="fill">

@@ -275,6 +275,27 @@ $('.selectAndNext .pattern').click(function(){
 	}
 /*↑步驟二上傳圖片至demo區*/
 
+/*↓拖曳圖片*/
+	var drag = d3.behavior.drag()  
+            .on('dragstart', function() { 
+              //拖拉開始時，要做什麼事 
+              console.log('1');
+            })
+            .on('drag', function() { 
+              patternshow.attr({
+                'transform':'translate('+(d3.event.x-90)+','+(d3.event.y-90)+')'
+                // 'background':'green'
+              }); 
+            })
+            .on('dragend', function() { 
+              //拖拉結束時，要做什麼事 
+              console.log('2');
+            });
+    var patternshow = d3.select('#patternshow')
+            .call(drag);
+/*↑拖曳圖片*/
+
+
 };
 
 

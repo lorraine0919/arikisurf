@@ -281,6 +281,8 @@
           bottom: -37%;
           left: -31%;
           width: 196%; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo #draggroup {
+          position: absolute; }
         .bg_forest_2 .step2_maxContent .demogroup .demo .patternshow {
           position: absolute;
           width: 125%;

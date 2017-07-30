@@ -12,6 +12,8 @@ require_once('connectBooks.php');
   <link rel="stylesheet" type="text/css" href="css/customize.css">
   <link rel="stylesheet" type="text/css" href="css/customize_rwd.css">
   <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C9807DD6-5F50-5349-A2DB-9C72E9BB087E/main.js" charset="UTF-8"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
  </head>
   <!--header end-->
@@ -167,7 +169,7 @@ require_once('connectBooks.php');
 			</div>
 			<div class="demogroup">
 				<div class="demo">
-					<svg  x="0px" y="0px" viewBox="0 0 150 500" class="svgboard">
+					<svg  x="0px" y="0px" viewBox="0 0 150 500" class="svgboard" id="svgstep2">
 						<g>
 							<!-- 遮色片形狀 -->
 							<defs>
@@ -185,11 +187,7 @@ require_once('connectBooks.php');
 							<!-- 主體形狀 -->
 							<path class="bordshape mainshapepath" style="clip-path:url(#clip2); fill:url(#maincolor2);"/>
 
-							<!-- 放圖片						 -->
-							<g transform="matrix(1 0 0 1 -1.525879e-005 0)" style="clip-path:url(#clip2);enable-background:new    ;">
-									<image style="overflow:visible;"  xlink:href="" class="patternshow" id="patternshow">
-									</image>
-							</g>
+
 
 							<!-- 陰影顏色 -->
 							<linearGradient id="shadow2" gradientUnits="userSpaceOnUse" x1="11.2131" y1="260.0541" x2="92.9405" y2="252.5548" gradientTransform="matrix(1 0 0 -1 0 841.67)">
@@ -208,6 +206,11 @@ require_once('connectBooks.php');
 							<!-- 光形狀 -->
 							<path class="bordshape lightpath" style="clip-path:url(#clip2); fill:url(#light2);"/>
 							<g class="svgothers" style="clip-path:url(#clip2);"></g>
+							<!-- 放圖片						 -->
+							<g style="clip-path:url(#clip2);enable-background:new;" id="draggroup" >
+									<image style="overflow:visible;"  xlink:href="" class="patternshow" id="patternshow" >
+									</image>
+							</g>
 						</g>
 					</svg>
 					<img src="images/2board/base.png" class="base">

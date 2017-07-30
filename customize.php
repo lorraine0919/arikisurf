@@ -178,7 +178,7 @@ require_once('connectBooks.php');
 								<use xlink:href="#mask2"  style="overflow:visible;"/>
 							</clipPath>
 							<!-- 主體顏色 -->
-							<linearGradient id="maincolor2" gradientUnits="userSpaceOnUse" x1="-143.5315" y1="300.1379" x2="-150.2133" y2="503.2512" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+							<linearGradient id="maincolor2" gradientUnits="userSpaceOnUse" x1="-142.5315" y1="143.2499" x2="-149.2133" y2="505.3632" gradientTransform="matrix(1 0 0 -1 0 841.67)">
 								<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/>
 								<stop  offset="1" style="stop-color:#FFFFFF"/>
 							</linearGradient>

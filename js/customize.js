@@ -171,8 +171,8 @@ $(function(){
 
 /*↓步驟二按按鈕換顏色*/
 	var boardcolorarr = [
-		'<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/> <stop  offset="1" style="stop-color:#FFFFFF"/>',
-		' <stop  offset="1.021794e-007" style="stop-color:#110C67"/> <stop  offset="1" style="stop-color:#00A0E9"/>',
+		'<stop  offset="1.111794e-007" style="stop-color:#C9CACA"/> <stop  offset="1" style="stop-color:#FFFFFF"/>',
+		' <stop  offset="1.111794e-007" style="stop-color:#110C67"/> <stop  offset="1" style="stop-color:#00A0E9"/>',
 		'<stop  offset="0" style="stop-color:#B64621"/> <stop  offset="1" style="stop-color:#FFF100"/>'
 		];
 	$('.color').click(function(){

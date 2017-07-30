@@ -75,7 +75,7 @@ require_once('connectBooks.php');
 							</g>
 
 							<!-- 陰影顏色 -->
-							<linearGradient id="shadow" gradientUnits="userSpaceOnUse" x1="-199.9081" y1="424.7699" x2="-109.731" y2="410.5027" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+							<linearGradient id="shadow" gradientUnits="userSpaceOnUse" x1="11.2131" y1="260.0541" x2="92.9405" y2="252.5548" gradientTransform="matrix(1 0 0 -1 0 841.67)">
 								<stop  offset="1.021794e-007" style="stop-color:#595757;stop-opacity:0.2"/>
 								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
 							</linearGradient>
@@ -83,7 +83,7 @@ require_once('connectBooks.php');
 							<path class="bordshape" style="clip-path:url(#clip); fill:url(#shadow);"/>
 							
 							<!-- 光顏色 -->
-							<linearGradient id="light" gradientUnits="userSpaceOnUse" x1="-53.7668" y1="427.5639" x2="-134.1208" y2="418.112" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+							<linearGradient id="light" gradientUnits="userSpaceOnUse" x1="168.2328" y1="243.213" x2="87.8788" y2="252.6649" gradientTransform="matrix(1 0 0 -1 0 841.67)">
 								<stop  offset="0" style="stop-color:#FFFFFF"/>
 								<stop  offset="0.401" style="stop-color:#FFFFFF;stop-opacity:0.599"/>
 								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
@@ -178,7 +178,7 @@ require_once('connectBooks.php');
 								<use xlink:href="#mask2"  style="overflow:visible;"/>
 							</clipPath>
 							<!-- 主體顏色 -->
-							<linearGradient id="maincolor2" gradientUnits="userSpaceOnUse" x1="-143.5315" y1="141.1379" x2="-150.2133" y2="503.2512" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+							<linearGradient id="maincolor2" gradientUnits="userSpaceOnUse" x1="-143.5315" y1="300.1379" x2="-150.2133" y2="503.2512" gradientTransform="matrix(1 0 0 -1 0 841.67)">
 								<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/>
 								<stop  offset="1" style="stop-color:#FFFFFF"/>
 							</linearGradient>
@@ -192,18 +192,18 @@ require_once('connectBooks.php');
 							</g>
 
 							<!-- 陰影顏色 -->
-							<linearGradient id="shadow2" gradientUnits="userSpaceOnUse" x1="-199.9081" y1="424.7699" x2="-109.731" y2="410.5027" gradientTransform="matrix(1 0 0 -1 0 841.67)">
-								<stop  offset="1.021794e-007" style="stop-color:rgba(0,0,0,0.2);"/>
+							<linearGradient id="shadow2" gradientUnits="userSpaceOnUse" x1="11.2131" y1="260.0541" x2="92.9405" y2="252.5548" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="1.021794e-007" style="stop-color:#595757;stop-opacity:0.2"/>
 								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
 							</linearGradient>
 							<!-- 陰影形狀 -->
 							<path class="bordshape shadowpath" style="clip-path:url(#clip2); fill:url(#shadow2);"/>
 							
 							<!-- 光顏色 -->
-							<linearGradient id="light2" gradientUnits="userSpaceOnUse" x1="-53.7668" y1="427.5639" x2="-134.1208" y2="418.112" gradientTransform="matrix(1 0 0 -1 0 841.67)">
-								<stop  offset="0" style="stop-color:rgba(255,255,255,0.2)"/>
-								<stop  offset="0.401" style="stop-color:#FFFFFF;"/>
-								<stop  offset="1" style="stop-color:#FFFFFF; stop-opacity:0"/>
+							<linearGradient id="light2" gradientUnits="userSpaceOnUse"  x1="168.2328" y1="243.213" x2="87.8788" y2="252.6649" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="0" style="stop-color:#FFFFFF"/>
+								<stop  offset="0.401" style="stop-color:#FFFFFF;stop-opacity:0.599"/>
+								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
 							</linearGradient>
 							<!-- 光形狀 -->
 							<path class="bordshape lightpath" style="clip-path:url(#clip2); fill:url(#light2);"/>

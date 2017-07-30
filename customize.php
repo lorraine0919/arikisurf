@@ -170,6 +170,49 @@ require_once('connectBooks.php');
 					<div class="patternshow">
 						<img>
 					</div>
+					<svg  x="0px" y="0px" viewBox="0 0 150 500" class="svgboard">
+						<g>
+							<!-- 遮色片形狀 -->
+							<defs>
+								<path class="bordshape" id="mask2"/>
+							</defs>
+							<!-- 板型遮色片 -->
+							<clipPath id="clip2">
+								<use xlink:href="#mask2"  style="overflow:visible;"/>
+							</clipPath>
+							<!-- 主體顏色 -->
+							<linearGradient id="maincolor2" gradientUnits="userSpaceOnUse" x1="-143.5315" y1="141.1379" x2="-150.2133" y2="503.2512" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/>
+								<stop  offset="1" style="stop-color:#FFFFFF"/>
+							</linearGradient>
+							<!-- 主體形狀 -->
+							<path class="bordshape" style="clip-path:url(#clip2); fill:url(#maincolor2);"/>
+
+							<!-- 放圖片						 -->
+							<g transform="matrix(1 0 0 1 -1.525879e-005 0)" style="clip-path:url(#clip2);enable-background:new    ;">
+									<image style="overflow:visible;" width="500" height="500" id="XMLID_1_" xlink:href=""  transform="matrix(0.364 0 0 0.364 -244.6667 307.2233)">
+									</image>
+							</g>
+
+							<!-- 陰影顏色 -->
+							<linearGradient id="shadow2" gradientUnits="userSpaceOnUse" x1="-199.9081" y1="424.7699" x2="-109.731" y2="410.5027" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="1.021794e-007" style="stop-color:#595757;stop-opacity:0.2"/>
+								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+							</linearGradient>
+							<!-- 陰影形狀 -->
+							<path class="bordshape" style="clip-path:url(#clip2); fill:url(#shadow2);"/>
+							
+							<!-- 光顏色 -->
+							<linearGradient id="light2" gradientUnits="userSpaceOnUse" x1="-53.7668" y1="427.5639" x2="-134.1208" y2="418.112" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="0" style="stop-color:#FFFFFF"/>
+								<stop  offset="0.401" style="stop-color:#FFFFFF;stop-opacity:0.599"/>
+								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+							</linearGradient>
+							<!-- 光形狀 -->
+							<path class="bordshape" style="clip-path:url(#clip2); fill:url(#light2);"/>
+							<g class="svgothers" style="clip-path:url(#clip2);"></g>
+						</g>
+					</svg>
 					<img src="images/2board/base.png" class="base">
 				</div>	
 				<div class="rwdselectstyle">

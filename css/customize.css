@@ -268,7 +268,8 @@
         .bg_forest_2 .step2_maxContent .demogroup .demo .svgboard {
           position: absolute;
           top: 0;
-          z-index: 2; }
+          z-index: 2;
+          width: 130%; }
         .bg_forest_2 .step2_maxContent .demogroup .demo img {
           width: 100%;
           position: absolute; }
@@ -278,8 +279,8 @@
           z-index: 2; }
         .bg_forest_2 .step2_maxContent .demogroup .demo .base {
           bottom: -37%;
-          left: -24%;
-          width: 150%; }
+          left: -31%;
+          width: 196%; }
         .bg_forest_2 .step2_maxContent .demogroup .demo .patternshow {
           position: absolute;
           width: 80%;

@@ -87,6 +87,7 @@ window.onload=function(){
 	setsvgboard(boardshape);
 
 	$('.step1_maxContent .board').click(function(){
+		$('.patternshow').attr('transform','translate(-20,100)');
 		if($('.step1_maxContent .board').eq(0).hasClass('click')){
 			// gunboard
 			boardshape='M74.7,491.5c-56-44.5-55.9-263.2-37.6-380.1C46.7,51,70.3,21.5,70.3,21.5l0,0.1 c0.8,1,24.4,30.1,34.8,89.3c20.6,116.5,28,334.9-27.1,380.5c0,0-0.5,0.6-1.6,0.6C75.2,492,74.7,491.5,74.7,491.5z';
@@ -119,6 +120,7 @@ window.onload=function(){
 			boardshape='M101,320c-1.6-1.6-47.9-3.4-51.7,0s-36.7,28.7-11.3,170.3c0,0,2.3,3.7,16,0c12.7-3.4,20.2-4.2,21.2-4.3 c1,0.1,8.5,0.9,21.2,4.3c13.7,3.7,16,0,16,0C137.7,348.7,102.6,321.6,101,320z';
  			setsvgboard(boardshape);
  			$('.svgothers').html(''); 
+ 			$('.patternshow').attr('transform','translate(-20,300)');
 		}		
 	});
 /*↑步驟一顯示svg板型*/
@@ -238,33 +240,20 @@ $('.selectAndNext .patterns').width(newwidth);
 /*↑步驟二動態產生圖案group長度*/
 
 /*↓步驟二按圖放到浪板上*/
+
+
 $('.selectAndNext .pattern').click(function(){
 	var selectpic=$(this).children('img').attr('src');
 	console.log(selectpic);
 	$('.demogroup .patternshow').attr('xlink:href',selectpic);
-	$('.patternshow').attr('transform','translate(-20,100)');
-	var boardurl= [
-		'images/2board/gunboard/gunboard.png',
-		'images/2board/longboard/longboard.png',
-		'images/2board/funboard/funboard.png',
-		'images/2board/shortboard/shortboard.png',
-		'images/2board/fishboard/fishboard.png',
-		'images/2board/bodyboard/bodyboard.png'
-	];
-	console.log($('.step2_maxContent .boarddemo').attr('src'));
-	if($('.step2_maxContent .boarddemo').attr('src')==boardurl[0]){
-		$('.demogroup .patternshow').css({
-			bottom:'60%',
-			left: '8%'
-		});
-	}
+	
 });
 
 /*↑步驟二按圖放到浪板上*/
 // console.log('1');
 /*↓步驟二上傳圖片至demo區*/
 	document.getElementById('uploadimg').onchange=function(){
-		console.log('1');
+		// console.log('1');
 		var file = document.getElementById('uploadimg').files[0];
 		// alert(file.name);
 		var readFile = new FileReader();
@@ -279,7 +268,7 @@ $('.selectAndNext .pattern').click(function(){
 	var drag = d3.behavior.drag()  
             .on('dragstart', function() { 
               //拖拉開始時，要做什麼事 
-              console.log('1');
+              // console.log('1');
             })
             .on('drag', function() { 
               patternshow.attr({
@@ -289,7 +278,7 @@ $('.selectAndNext .pattern').click(function(){
             })
             .on('dragend', function() { 
               //拖拉結束時，要做什麼事 
-              console.log('2');
+              // console.log('2');
             });
     var patternshow = d3.select('#patternshow')
             .call(drag);

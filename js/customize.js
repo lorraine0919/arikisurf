@@ -242,6 +242,7 @@ $('.selectAndNext .pattern').click(function(){
 	var selectpic=$(this).children('img').attr('src');
 	console.log(selectpic);
 	$('.demogroup .patternshow').attr('xlink:href',selectpic);
+	$('.patternshow').attr('transform','translate(-20,100)');
 	var boardurl= [
 		'images/2board/gunboard/gunboard.png',
 		'images/2board/longboard/longboard.png',

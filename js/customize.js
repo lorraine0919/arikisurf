@@ -65,9 +65,7 @@ $(function(){
 		$(this).addClass('click');
 		$('.rwdSelectboardMenu li').not(this).removeClass('click');
 		var index=$(this).index();
-		$('.step1_maxContent .introduce .contentimg img').attr('src','images/2board/step1/'+boardimg[index]+'.png');
 		$('.step1_maxContent .rwdintroduce .rwdboardinfo').text(boardinfo[index]);
-		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
 	});
 /*↓步驟一rwd的拉出介紹*/
 	$('.btnfield').click(function(){
@@ -76,10 +74,7 @@ $(function(){
 	});
 /*↑步驟一rwd的拉出介紹*/
 
-/*↓步驟一顯示svg板型*/
-
-/*↑步驟一顯示svg板型*/
-
+/*↓步驟一顯示svg板型，按按鈕換板型*/
 	function setsvgboard(boardshape){
 		$('.bordshape').attr('d',boardshape);
 
@@ -126,6 +121,7 @@ $(function(){
  			$('.svgothers').html(''); 
 		}		
 	});
+/*↑步驟一顯示svg板型*/
 
  /*↓步驟二的手風琴*/
 	$('.patternselectgroup').hide();
@@ -174,9 +170,16 @@ $(function(){
 /*↑步驟二rwd的手風琴*/
 
 /*↓步驟二按按鈕換顏色*/
-	$('.selectgroup .btn').click(function(){
-		$(this).addClass('click');
-		$('.selectgroup .btn').not(this).removeClass('click');
+	var boardcolorarr = [
+		'<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/> <stop  offset="1" style="stop-color:#FFFFFF"/>',
+		' <stop  offset="1.021794e-007" style="stop-color:#110C67"/> <stop  offset="1" style="stop-color:#00A0E9"/>',
+		'<stop  offset="0" style="stop-color:#B64621"/> <stop  offset="1" style="stop-color:#FFF100"/>'
+		];
+	$('.color').click(function(){
+		// console.log('1');
+		var index = $(this).index();
+		$('#maincolor2').html(boardcolorarr[index]);
+		// $('.mainshapepath').css('fill','url(#maincolor2)');
 	});
 /*↑步驟二按按鈕換顏色*/
 
@@ -187,38 +190,12 @@ $(function(){
 	});
 /*↑步驟二rwd按按鈕換顏色*/
 
-/*↓步驟二選到步驟一選的浪板*/
-	$('#step1tostep2').click(function(){
-		$('.step2_maxContent .boarddemo').attr('src',$('.step1_maxContent .boarddemo').attr('src'));
-	});
-
-/*↑步驟二選到步驟一選的浪板*/
-
 /*↓步驟二，色球顏色*/
 	for (var i = 0; i < 3; i++) {
 		var colorarr = ['#fff','#009bd8','#ffd105'];
 		$('.step2_maxContent .colorselectgroup .color .circle').eq(i).css('background-color',colorarr[i]);
 	}
 /*↑步驟二，色球顏色*/
-$('.step2_maxContent .colorselectgroup .color').click(function(){
-	var index=$(this).index();
-	console.log(index);
-	if(index==0){
-		var newsrc=$('.step1_maxContent .boarddemo').attr('src');
-		$('.step2_maxContent .boarddemo').attr('src',newsrc);
-	}else if(index==1){
-		var oldsrc=$('.step1_maxContent .boarddemo').attr('src');
-		var newsrc=oldsrc.substr(0,oldsrc.lastIndexOf('.'))+'_blue.png';
-		$('.step2_maxContent .boarddemo').attr('src',newsrc);
-	}else{
-		var oldsrc=$('.step1_maxContent .boarddemo').attr('src');
-		var newsrc=oldsrc.substr(0,oldsrc.lastIndexOf('.'))+'_yellow.png';
-		$('.step2_maxContent .boarddemo').attr('src',newsrc);
-	}
-});
-/*↑步驟二，改變浪板顏色*/
-
-/*↓步驟二，改變浪板顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
 	$('.step2_maxContent .texturegorup .texture').click(function(){
@@ -264,7 +241,7 @@ $('.selectAndNext .patterns').width(newwidth);
 $('.selectAndNext .pattern').click(function(){
 	var selectpic=$(this).children('img').attr('src');
 	console.log(selectpic);
-	$('.demogroup .patternshow img').attr('src',selectpic);
+	$('.demogroup .patternshow').attr('xlink:href',selectpic);
 	var boardurl= [
 		'images/2board/gunboard/gunboard.png',
 		'images/2board/longboard/longboard.png',

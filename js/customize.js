@@ -1,4 +1,4 @@
-$(function(){
+window.onload=function(){
 /*↓換頁相關*/
 	$('.step2_maxContent').hide();
 	$('.step3_maxContent').hide();
@@ -261,7 +261,20 @@ $('.selectAndNext .pattern').click(function(){
 });
 
 /*↑步驟二按圖放到浪板上*/
+// console.log('1');
+/*↓步驟二上傳圖片至demo區*/
+	document.getElementById('uploadimg').onchange=function(){
+		console.log('1');
+		var file = document.getElementById('uploadimg').files[0];
+		// alert(file.name);
+		var readFile = new FileReader();
+		readFile.readAsDataURL(file);
+		readFile.addEventListener('load',function(){
+			document.getElementById('patternshow').setAttribute("xlink:href", readFile.result);
+		},false);
+	}
+/*↑步驟二上傳圖片至demo區*/
+
+};
 
 
-
-});

@@ -187,7 +187,7 @@ require_once('connectBooks.php');
 
 							<!-- 放圖片						 -->
 							<g transform="matrix(1 0 0 1 -1.525879e-005 0)" style="clip-path:url(#clip2);enable-background:new    ;">
-									<image style="overflow:visible;"  xlink:href="" class="patternshow">
+									<image style="overflow:visible;"  xlink:href="" class="patternshow" id="patternshow">
 									</image>
 							</g>
 

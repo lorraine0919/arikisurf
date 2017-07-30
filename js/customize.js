@@ -125,13 +125,15 @@ $(function(){
 			boardshape='<path d="M115.8,326.8C114.6,173.4,76.3,157,76.3,157l-0.3,0.1c-3.3,1.1-38.5,15.8-42,169.1c0,0-5.8,97.6,26,163.6 c0,0,6.9,2.6,13.7-5.4c6.7,8.1,13.7,5.7,13.7,5.7C120.2,424.5,115.8,326.8,115.8,326.8z"/>';
  			setsvgboard(boardshape);
  			$('#svgothers').html(''); 
+		}else if($('.step1_maxContent .board').eq(5).hasClass('click')){
+			// funboard
+			boardshape='<path d=" M101,320c-1.6-1.6-47.9-3.4-51.7,0s-36.7,28.7-11.3,170.3c0,0,2.3,3.7,16,0c12.7-3.4,20.2-4.2,21.2-4.3 c1,0.1,8.5,0.9,21.2,4.3c13.7,3.7,16,0,16,0C137.7,348.7,102.6,321.6,101,320z"/>';
+ 			setsvgboard(boardshape);
+ 			$('#svgothers').html(''); 
 		}		
 	});
 
- 
-
-
-/*↓步驟二的手風琴*/
+ /*↓步驟二的手風琴*/
 	$('.patternselectgroup').hide();
 	$('.textureselect').hide();
 	$('.colorbtn').click(function(){

@@ -50,51 +50,47 @@ require_once('connectBooks.php');
 			</div>
 			<div class="demogroup">
 				<div class="demo">
-					<svg  x="0px" y="0px" viewBox="0 0 150 500" class="svgstep1">
-						<g id="shapeandimg">
-							<linearGradient id="maincolor" gradientUnits="userSpaceOnUse" x1="78.4619" y1="529.6423" x2="71.7801" y2="167.529">
-									<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/>
-									<stop  offset="1" style="stop-color:#FFFFFF"/>				
-							</linearGradient>
+					<svg  x="0px" y="0px" viewBox="0 0 150 500" class="svgboard">
+						<g>
+							<!-- 遮色片形狀 -->
 							<defs>
-								<g class="bordshape"></g>
-								<filter id="dropshadow">
-								  <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
-								  <feOffset dx="2" dy="2"/>
-								  <feComponentTransfer>
-								    <feFuncA type="linear" slope="0.05"/>
-								  </feComponentTransfer>
-								  <feMerge> 
-								    <feMergeNode/>
-								    <feMergeNode in="SourceGraphic"/> 
-								  </feMerge>
-								</filter>
+								<path class="bordshape" id="mask"/>
 							</defs>
-							<g class="bordshape"></g>
-							<g>
-								<clipPath id="maskofimg">
-									<use xlink:href="#mainshapemask"  style="overflow:visible;"/>
-								</clipPath>
-								<g transform="matrix(1 0 0 1 0 0)" style="clip-path:url(#maskofimg);">
-								</g>
-								<g id="svgothers"></g>
+							<!-- 板型遮色片 -->
+							<clipPath id="clip">
+								<use xlink:href="#mask"  style="overflow:visible;"/>
+							</clipPath>
+							<!-- 主體顏色 -->
+							<linearGradient id="maincolor" gradientUnits="userSpaceOnUse" x1="-143.5315" y1="141.1379" x2="-150.2133" y2="503.2512" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/>
+								<stop  offset="1" style="stop-color:#FFFFFF"/>
+							</linearGradient>
+							<!-- 主體形狀 -->
+							<path class="bordshape" style="clip-path:url(#clip); fill:url(#maincolor);"/>
+
+							<!-- 放圖片						 -->
+							<g transform="matrix(1 0 0 1 -1.525879e-005 0)" style="clip-path:url(#clip);enable-background:new    ;">
+									<!-- <image style="overflow:visible;" width="500" height="500" id="XMLID_1_" xlink:href="0729logo.png"  transform="matrix(0.364 0 0 0.364 -244.6667 307.2233)">
+									</image> -->
 							</g>
-						</g>
-						<g id="shadow">
-							<linearGradient id="shadowcolor" gradientUnits="userSpaceOnUse" x1="11.2131" y1="260.0541" x2="92.9405" y2="252.5548">
+
+							<!-- 陰影顏色 -->
+							<linearGradient id="shadow" gradientUnits="userSpaceOnUse" x1="-199.9081" y1="424.7699" x2="-109.731" y2="410.5027" gradientTransform="matrix(1 0 0 -1 0 841.67)">
 								<stop  offset="1.021794e-007" style="stop-color:#595757;stop-opacity:0.2"/>
 								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
 							</linearGradient>
-							<g class="bordshape"></g>
-						</g>
-						<g id="light">
-							<linearGradient id="lightcolor" gradientUnits="userSpaceOnUse" x1="168.2328" y1="243.213" x2="87.8788" y2="252.6649">
+							<!-- 陰影形狀 -->
+							<path class="bordshape" style="clip-path:url(#clip); fill:url(#shadow);"/>
+							
+							<!-- 光顏色 -->
+							<linearGradient id="light" gradientUnits="userSpaceOnUse" x1="-53.7668" y1="427.5639" x2="-134.1208" y2="418.112" gradientTransform="matrix(1 0 0 -1 0 841.67)">
 								<stop  offset="0" style="stop-color:#FFFFFF"/>
 								<stop  offset="0.401" style="stop-color:#FFFFFF;stop-opacity:0.599"/>
 								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
-
 							</linearGradient>
-							<g class="bordshape"></g>
+							<!-- 光形狀 -->
+							<path class="bordshape" style="clip-path:url(#clip); fill:url(#light);"/>
+							<g class="svgothers" style="clip-path:url(#clip);"></g>
 						</g>
 					</svg>
 					<img src="images/2board/base.png" class="base">
@@ -174,7 +170,6 @@ require_once('connectBooks.php');
 					<div class="patternshow">
 						<img>
 					</div>
-					<img src="images/2board/longboard/longboard.png" class="boarddemo">
 					<img src="images/2board/base.png" class="base">
 				</div>	
 				<div class="rwdselectstyle">

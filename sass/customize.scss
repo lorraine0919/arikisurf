@@ -142,26 +142,10 @@
 				    left: -24%;
 					width: 150%;
 				}
-				.svgstep1{
+				.svgboard{
 					position: absolute;
 					top: 0;
 					z-index: 2;
-					.maincolor{
-						fill:url(#maincolor);
-					}
-					.shadowcolor{
-						fill:url(#shadowcolor);
-					}
-					.lightcolor{
-						fill:url(#lightcolor);
-					}
-					.theline{
-						opacity:0.2;
-						clip-path:url(#mask);
-						fill:none;
-						stroke:#040000;
-						stroke-miterlimit:10;
-					}
 				}
 				
 				
@@ -375,6 +359,12 @@
 			    margin: 0 0 0 28%;
 			    position: relative;
 			    padding-top: 109%;
+
+				.svgboard{
+					position: absolute;
+					top: 0;
+					z-index: 2;
+				}
 				img{
 					width: 100%;
 					position: absolute;

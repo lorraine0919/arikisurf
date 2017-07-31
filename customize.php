@@ -179,6 +179,13 @@ require_once('connectBooks.php');
 				</div>
 			</div>
 			<div class="introduce">
+				<div class="pricegroup">
+					<span>總價</span>
+					<span class="priceshowgroup">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+						<span class="priceshow"></span>	
+					</span>
+				</div>
 				<div class="introducefix">
 					<div class="head">
 						<h3>環氧樹脂（Epoxy）</h3>

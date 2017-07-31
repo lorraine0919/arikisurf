@@ -135,6 +135,13 @@ window.onload=function(){
 	});
 /*↑步驟一顯示svg板型*/
 
+/*↓步驟二把步驟一的價錢帶過去*/
+	$('#step1tostep2').click(function(){
+		$('.step2_maxContent .priceshow').text($('.step1_maxContent .priceshow').text());
+	});
+	
+/*↑步驟二把步驟一的價錢帶過去*/
+
  /*↓步驟二的手風琴*/
 	$('.patternselectgroup').hide();
 	$('.textureselect').hide();

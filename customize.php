@@ -427,27 +427,27 @@ require_once('connectBooks.php');
 							<table>
 								<tr>
 									<th><h3>姓名</h3></th>
-									<td><input type="text" name="" id=""></td>
+									<td><input type="text" name="" id="customername"></td>
 								</tr>
 								<tr>
 									<th><h3>電話</h3></th>
-									<td><input type="phone" name="" id=""></td>
+									<td><input type="phone" name="" id="customerphone"></td>
 								</tr>
 								<tr>
 									<th><h3>電子信箱</h3></th>
-									<td><input type="email" name="" id=""></td>
+									<td><input type="email" name="" id="customeremail"></td>
 								</tr>
 								<tr>
 									<th><h3>收件地址</h3></th>
-									<td><textarea rows="5"></textarea></td>
+									<td><textarea rows="5" id="customeraddress"></textarea></td>
 								</tr>
 								<tr>
 									<th><h3>匯款帳號後五碼</h3></th>
-									<td><input type="text" name="" id=""></td>
+									<td><input type="text" name="" id="customeraccount"></td>
 								</tr>
 								<tr>
 									<th><h3>其他留言</h3></th>
-									<td><textarea rows="5"></textarea></td>
+									<td><textarea rows="5" id="customermessage"></textarea></td>
 								</tr>
 							</table>
 							<div class="next">
@@ -483,12 +483,12 @@ require_once('connectBooks.php');
 							<div class="custominfo col-sm-12">
 								<div class="title"><h3>您的資料</h3></div>
 								<div class="infocontent">
-									<p>姓名：鄧浮雲<br>
-									電話：03-94879487<br>
-									信箱：mathi5566@gmail.com<br>
-									收件地址：桃園市中壢區中央路1段1號<br>
-									匯款帳號後五碼：59487<br>
-									其他留言：煩請回覆告知出貨時間<br>
+									<p>姓名：<sapn id="ordername">鄧浮雲</sapn><br>
+									電話：<sapn id="orderphone">03-94879487</sapn><br>
+									信箱：<sapn id="orderemail">mathi5566@gmail.com</sapn><br>
+									收件地址：<sapn id="orderaddress">桃園市中壢區中央路1段1號</sapn><br>
+									匯款帳號後五碼：<sapn id="orderaccount">59487</sapn><br>
+									其他留言：<sapn id="ordermessage">煩請回覆告知出貨時間</sapn><br>
 									</p>
 								</div>
 							</div>

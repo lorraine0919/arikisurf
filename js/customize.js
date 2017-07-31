@@ -241,13 +241,38 @@ $('.selectAndNext .patterns').width(newwidth);
 
 /*↓步驟二按圖放到浪板上*/
 
-
-$('.selectAndNext .pattern').click(function(){
-	var selectpic=$(this).children('img').attr('src');
-	console.log(selectpic);
-	$('.demogroup .patternshow').attr('xlink:href',selectpic);
+// $('.selectAndNext .pattern').click(function(){
+// 	var selectpic=$(this).children('img').attr('src');
+// 	console.log(selectpic);
+// 	$('.demogroup .patternshow').attr('xlink:href',selectpic);
 	
-});
+// });
+for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
+	document.getElementsByClassName('pattern')[i].onclick=function(e){
+		function convertImgToDataURLviaCanvas(url, callback, outputFormat) {
+		  var img = new Image();
+		  img.crossOrigin = 'Anonymous';
+		  img.onload = function() {
+		    var canvas = document.createElement('CANVAS');
+		    var ctx = canvas.getContext('2d');
+		    var dataURL;
+		    canvas.height = this.height;
+		    canvas.width = this.width;
+		    ctx.drawImage(this, 0, 0);
+		    dataURL = canvas.toDataURL(outputFormat);
+		    callback(dataURL);
+		    canvas = null;
+		  };
+		  img.src = url;
+		}
+
+		  convertImgToDataURLviaCanvas(e.target.src, function(base64Img) {
+		  	document.getElementById('patternshow').setAttribute("xlink:href", base64Img);
+		  });
+
+		  event.preventDefault();
+	}
+}
 
 /*↑步驟二按圖放到浪板上*/
 // console.log('1');
@@ -255,9 +280,10 @@ $('.selectAndNext .pattern').click(function(){
 	document.getElementById('uploadimg').onchange=function(){
 		// console.log('1');
 		var file = document.getElementById('uploadimg').files[0];
-		// alert(file.name);
+		// alert(file);
 		var readFile = new FileReader();
 		readFile.readAsDataURL(file);
+		// console.log(readFile.result);
 		readFile.addEventListener('load',function(){
 			document.getElementById('patternshow').setAttribute("xlink:href", readFile.result);
 		},false);

@@ -125,6 +125,7 @@ require_once('connectBooks.php');
 						<div class="head">
 							<h3>長板<span>LONGBOARD</span></h3>
 						</div>
+						<input type="hidden" id="customerboard" value="長板<span>LONGBOARD</span>">
 						<div class="boardgroup">
 							<div class="board"><img src="images/2board/gunboard/gunboard_h.png" alt=""></div>
 							<div class="board click"><img src="images/2board/longboard/longboard_h.png" alt=""></div>
@@ -217,6 +218,7 @@ require_once('connectBooks.php');
 				</div>	
 				<div class="rwdselectstyle">
 					<div class="colorgroup selectgroup">
+						<input type="hidden" id="customercolor" value="白">
 						<div class="btn click">選擇顏色</div>
 						<div class="clearfix"></div>
 						<div class="colorall">
@@ -236,6 +238,7 @@ require_once('connectBooks.php');
 						<div class="clearfix"></div>
 					</div>
 					<div class="patterngroup selectgroup">
+						<input type="hidden" id="customerpattern" value="未選擇圖片">
 						<div class="btn">選擇圖樣</div>
 						<div class="clearfix"></div>
 							<div class="patternarea">
@@ -273,6 +276,7 @@ require_once('connectBooks.php');
 							<div class="clearfix"></div>
 					</div>
 					<div class="texturegroup selectgroup">
+						<input type="hidden" id="customermaterial" value="環氧樹脂">
 						<div class="btn">選擇材質</div>
 						<div class="clearfix"></div>
 						<div class="texturecontent">
@@ -333,7 +337,25 @@ require_once('connectBooks.php');
 							<div class="clearfix"></div>
 							<div class="patternselectgroup">
 								<div class="patternselectgroupfix">
-									<div class="head"><p>Ariki c2.0</p></div>
+									<div class="head">
+											<p class="patterntitle">尚未選擇圖樣</p>
+											<script>
+											var patterntitlearr=[];
+											<?php 
+		                                        $sql = 'select * from customize_officialimg';
+		                                        $pdostatement=$pdo->prepare($sql);
+		                                        $pdostatement->execute();
+		                                        while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
+											 ?>
+												patterntitlearr.push('<?php echo $pdoRow['officialimg_name']?>');
+											<?php 
+
+												}
+											 ?>
+											 // console.log(patterntitlearr);
+											 </script>		
+											 <p class="patterntitle"></p>									
+									</div>
 									<div class="patternframe">
 										<div class="patterns">
 											<?php 
@@ -495,10 +517,10 @@ require_once('connectBooks.php');
 							<div class="boardinfo col-sm-6 col-xs-12">
 								<div class="title"><h3>您的浪板</h3></div>
 								<div class="infocontent">
-									<P>板型：長板<br>
-									顏色：白色<br>
-									圖案：ARIKI BD101 <br>
-									材質：玻璃纖維<br>
+									<P>板型：<span id="orderboard">長板</span><br>
+									顏色：<span id="ordercolor">白色</span><br>
+									圖案：<span id="orderpattern">ARIKI BD101</span> <br>
+									材質：<span id="ordermaterial">玻璃纖維</span><br>
 									</P>
 								</div>
 							</div>

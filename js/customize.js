@@ -56,6 +56,7 @@ window.onload=function(){
 		$('.step1_maxContent .head h3').html(boardnamearr[index]);
 		$('.step1_maxContent .content p').text(boardinfo[index]);
 		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
+		$('#customerboard').val(boardnamearr[index]);
 	});
 
 	/*我是rwd換圖片和敘述和按鈕顏色*/
@@ -77,11 +78,6 @@ window.onload=function(){
 /*↓步驟一顯示svg板型，按按鈕換板型*/
 	function setsvgboard(boardshape){
 		$('.bordshape').attr('d',boardshape);
-
-		// for (var i = 0; i < $('.bordshape').length; i++) {
-
-		// }
-
 	}
 	var boardshape='M119,168.6C111.5,54.3,73.8,58.4,73.8,58.4v0c0,0-37.7-4-45.2,110.2 C20.9,286.2,33,451.9,63.2,485.3c3.5,3.8,6.7,2.9,10.6,2.9v0c3.9,0,7.1,0.9,10.6-2.9C114.6,451.9,126.7,286.2,119,168.6z';
 	setsvgboard(boardshape);
@@ -181,6 +177,8 @@ window.onload=function(){
 		// console.log('1');
 		var index = $(this).index();
 		$('#maincolor2').html(boardcolorarr[index]);
+		var arr = ['白','藍','黃'];
+		$('#customercolor').val(arr[index]);
 		// $('.mainshapepath').css('fill','url(#maincolor2)');
 	});
 /*↑步驟二按按鈕換顏色*/
@@ -210,6 +208,7 @@ window.onload=function(){
 		'由頂尖品質的賽普里斯木製成，並由環氧樹脂所包覆，顯示出獨有的質感。最高規格的保護，非常適合收藏、裝飾。',
 		'其主要構造為PU泡棉(Foam)＋玻璃纖維布＋保麗樹脂，由於材質的關係所以重量較Epoxy的浪板略重，但是穩定性較佳，尤其是在浪況較大時可以明顯的感受到！<br><br>若要挑剔其缺點的話，就是較不耐撞擊，遭受到硬物的碰撞時可能會發生浪板表面的樹脂破裂的情形，不過這些都是可以經由修補復原的。'
 		];
+		$('#customermaterial').val(texturename[index]);
 		$('.step2_maxContent .introduce .content p').html(textureinfo[index]);
 		$('.step2_maxContent .introduce .head h3').text(texturename[index]);
 	});
@@ -229,6 +228,7 @@ window.onload=function(){
 		$('.rwdintroduce .texturetitle').text(texturename[index]);
 		$('.rwdintroduce .rwdtextureinfo').html(textureinfo[index]);
 		$('.rwdselectstyle .texturegroup .title').text(texturename[index]);
+		$('#customermaterial').val(texturename[index]);
 	});
 /*↑步驟二rwd換材質說明與按鈕外框*/
 
@@ -238,6 +238,13 @@ var patterns=$('.selectAndNext .pattern').length;
 var newwidth = $('.selectAndNext .pattern').width()*patterns;
 $('.selectAndNext .patterns').width(newwidth);
 /*↑步驟二動態產生圖案group長度*/
+
+/*↓步驟二按圖換標題*/
+$('.pattern').click(function(){
+	var index= $(this).index();
+	$('.patterntitle').text(patterntitlearr[index]);
+});
+/*↑步驟二按圖換標題*/
 
 /*↓步驟二按圖放到浪板上*/
 
@@ -350,6 +357,10 @@ $('#step3tostep4').click(function(){
 	$('#orderaccount').text($('#customeraccount').val());
 	$('#ordermessage').text($('#customermessage').val());
 	$('#orderpic').attr('src',$('#png-container img').attr('src'));
+	$('#orderboard').html($('#customerboard').val());
+	$('#ordercolor').text($('#customercolor').val());
+	$('#orderpattern').text($('.patterntitle').eq(0).text());
+	$('#ordermaterial').text($('#customermaterial').val());
 });
 
 /*↑步驟三填寫資料送到步驟四*/

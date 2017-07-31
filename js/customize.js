@@ -352,10 +352,16 @@ function warningifnotfill(){
 }
 	
 	$('#step3tostep4').click(function(){
+		var count = 0;
+		var input=new Array();
 		for (var i = 0; i < $('.orederinput').length; i++) {
-			if($('.orederinput').eq(i).val()==''){
-				$('.lightboxgroup').fadeIn(20);
-			}
+			input.push( $('.orederinput').eq(i).val());
+		}
+		console.log(input);
+		if(input.includes('')==false){
+			tostep4();
+		}else{
+			$('.lightboxgroup').fadeIn(100);
 		}
 	});
 	$('#closebtn').click(function(){

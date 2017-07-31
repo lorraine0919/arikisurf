@@ -202,7 +202,6 @@ $('.step2_maxContent .colorselectgroup .color').click(function(){
 	});
 /*↑步驟二rwd換材質說明與按鈕外框*/
 
-<<<<<<< HEAD
 
 /*↓步驟二動態產生圖案group長度*/
 var patterns=$('.selectAndNext .pattern').length;
@@ -323,7 +322,6 @@ $('#step3tostep4').click(function(){
 });
 
 /*↑步驟三填寫資料送到步驟四*/
-};
 
 
 });

@@ -138,8 +138,50 @@
       left: 0;
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 100; }
+      .member_ordercheck_23 .lightbox .LB-item {
+        padding: 0;
+        width: 60%;
+        height: 60%;
+        background-color: #ddd;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: rgba(0, 0, 0, 0.8); }
+        .member_ordercheck_23 .lightbox .LB-item .LB-item-h3 {
+          width: 90%;
+          margin: 2% auto; }
       .member_ordercheck_23 .lightbox .fitting-LB, .member_ordercheck_23 .lightbox .history-LB {
         display: none; }
-      .member_ordercheck_23 .lightbox .LB-item {
-        width: 60%;
-        background-color: #ddd; } }
+      .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info {
+        padding: 0;
+        text-align: center;
+        line-height: 30px; }
+        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info .white {
+          background-color: #fff; }
+        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info .cust-OD-txt {
+          background-color: #fff;
+          border-left: 10px solid #ddd;
+          box-sizing: border-box; }
+        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info h4 {
+          color: #11314c; }
+      .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput {
+        box-sizing: border-box;
+        padding: 10px 27px;
+        background-color: #fff;
+        border-top: 10px solid #ddd;
+        box-sizing: border-box; }
+        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput ul li h4 {
+          display: inline-block;
+          width: 20%;
+          margin: 1.5% 0; }
+        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput ul li span {
+          display: inline-block;
+          margin-left: 1%; }
+      .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img img {
+        height: 430px; }
+      .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-btn {
+        text-align: center;
+        margin-top: 5%; } }

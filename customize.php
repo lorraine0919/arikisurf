@@ -476,7 +476,7 @@ require_once('connectBooks.php');
 					<div class="content">
 						<div class="demogroup col-sm-4">
 							<div class="demo">
-								<img src="images/2board/longboard/longboard.png" class="boarddemo">
+								<img src="images/2board/longboard/longboard.png" class="boarddemo" id="orderpic">
 							</div>			
 						</div>
 						<div class="right col-sm-8">

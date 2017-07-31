@@ -349,6 +349,7 @@ $('#step3tostep4').click(function(){
 	$('#orderaddress').text($('#customeraddress').val());
 	$('#orderaccount').text($('#customeraccount').val());
 	$('#ordermessage').text($('#customermessage').val());
+	$('#orderpic').attr('src',$('#png-container img').attr('src'));
 });
 
 /*↑步驟三填寫資料送到步驟四*/

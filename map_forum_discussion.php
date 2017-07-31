@@ -123,7 +123,10 @@ $post_number = $_REQUEST["post_number"];
                   </form>
 <script>
         $('#feedpo').click(function(){
-
+             var xhr = new XMLHttpRequest();
+                  url = "map_replyintoDB.php";
+                  xhr.open("get", url , true);
+                  xhr.send(null);
         });
 </script>                  
             </div>

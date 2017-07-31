@@ -1,9 +1,14 @@
+<?php 
+ob_start();
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
   <link rel="stylesheet" type="text/css" href="css/forum.css">
   <script src="js/showMap.js"></script>
+  <script src="js/map_up.js"></script>
   <title>酋長衝浪Ariki Surf-討論區</title>
 </head>
 <body>
@@ -11,20 +16,12 @@
       <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
       <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i>討論區
       <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
-      <?php 
-           $wave_number = $_REQUEST["wave_number"];
-
-           require_once("connectBooks.php");
-           $sql2="select * from map_wave where wave_number=$wave_number";
-           $wave = $pdo->query($sql2);
-           $waveRow = $wave->fetch(PDO::FETCH_ASSOC);         
-       ?>
       <div id="content_10">
-        <form id="po" action="#">              
+        <form id="po" method="get" action="map_intoDB.php">              
                <div class="poItem i1">
                     <div class="pot">文章標題</div> 
                     <div class="pob">
-                          <input type="text" id="title" placeholder="最多10個字" maxlength="10">
+                          <input type="text" id="title" name="title" placeholder="最多10個字" maxlength="10">
                     </div>
                </div>
                <div class="poItem i2">
@@ -46,7 +43,7 @@
                      </div>
                      <div class="dr">
                           <div class="pot">預覽</div>
-                          <div class="preview"></div>
+                          <div class="preview"><img id="image"></div>
                      </div>
                </div>
                <div class="poItem i4">
@@ -62,7 +59,13 @@
                <div id="close">X</div>                     
         </form>      
       </div><!-- content_10 -->
-
+<?php 
+           $wave_number = $_SESSION["map_wave"]["wave_number"];
+           require_once("connectBooks.php");
+           $sql2="select * from map_wave where wave_number=$wave_number";
+           $wave = $pdo->query($sql2);
+           $waveRow = $wave->fetch(PDO::FETCH_ASSOC);         
+?>
        <div class="bg_10">
          <div class="info_10">
            <div class="ic wave">
@@ -70,7 +73,8 @@
              <span>滿潮</span><br>
              <span>浪況 : <span class="good">優良</span></span> 
            </div>
-           <div class="ic weather">32°C</div>    
+           <!-- <div class="ic weather">32°C</div>  -->
+           <div class="ic weather"><?php echo $waveRow["wave_weather"] ?></div>    
          </div> <!-- info_10 div1-->     
          <div class="beach_10">
            <div class="beach_h">
@@ -98,7 +102,7 @@
            </ul>  
            <section class="talk">
 <?php 
-       $sql="select * from map_post";
+       $sql="select * from map_post where wave_number=$wave_number";
        $data = $pdo->query($sql);
        while($dataItem = $data->fetch(PDO::FETCH_ASSOC)) {
 

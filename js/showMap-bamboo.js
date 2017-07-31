@@ -37,13 +37,13 @@ $(document).ready(function(){
 	];
 
 	var wave_number = ['101','102','103','104','105','106','107','108','109'];
-    $('.address_mobile').attr('href','map_forum.php?wave_number=101');
+    $('.address_mobile').attr('href','map_session.php?wave_number=101');
 	$('.map_bamboo_3 .mobile').click(function(){
 		$(this).addClass('click');
 		$('.map_bamboo_3 .mobile').not(this).removeClass('click');
 		var index = $(this).index();
 
-		var newhref='map_forum.php?wave_number='+wave_number[index];
+		var newhref='map_session.php?wave_number='+wave_number[index];
 		$('.address_mobile').attr('href',newhref);
 		console.log(newhref);
 

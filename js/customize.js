@@ -343,12 +343,12 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 
 /*↓步驟三填寫資料送到步驟四*/
 $('#step3tostep4').click(function(){
-	$('#ordername').text()=$('#customername').val();
-	$('#orderphone').text()=$('#customerphone').val();
-	$('#orderemail').text()=$('#customeremail').val();
-	$('#orderaddress').text()=$('#customeraddress').val();
-	$('#orderaccount').text()=$('#customeraccount').val();
-	$('#ordermessage').text()=$('#customermessage').val();
+	$('#ordername').text($('#customername').val());
+	$('#orderphone').text($('#customerphone').val());
+	$('#orderemail').text($('#customeremail').val());
+	$('#orderaddress').text($('#customeraddress').val());
+	$('#orderaccount').text($('#customeraccount').val());
+	$('#ordermessage').text($('#customermessage').val());
 });
 
 /*↑步驟三填寫資料送到步驟四*/

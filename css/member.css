@@ -6,7 +6,7 @@ img {
   width: 100%; }
 
 /*字體大小*/
-.content20:after {
+.content20:after, .base20:after {
   content: '';
   display: block;
   clear: both; }
@@ -21,62 +21,20 @@ img {
 /*大框中框*/
 .left20 {
   position: relative;
-  background-color: rgba(3, 31, 54, 0.5);
   /*sidebar20*/ }
   .left20 .sidebar20 {
     /*base20*/
     /*menu20*/ }
-    .left20 .sidebar20 .base20 .photo20 {
-      box-shadow: -4px 2px 0px #ed9046; }
-    .left20 .sidebar20 .base20 .block20 .account20 {
-      margin: 30px 0px;
-      padding: 14px 0px;
-      box-shadow: 0px 3px 0px rgba(73, 100, 122, 0.5); }
-      .left20 .sidebar20 .base20 .block20 .account20 span {
-        margin-left: 3px; }
-    .left20 .sidebar20 .menu20 a {
-      display: block;
-      color: #fff;
-      padding: 0px 10px;
-      box-shadow: -5px 0px 0px rgba(73, 100, 122, 0.5); }
-    .left20 .sidebar20 .menu20 a:hover {
-      color: #ed9046;
-      box-shadow: -5px 0px 0px #ed9046; }
-
-/*left20*/
-.right20 {
-  box-sizing: border-box;
-  background-image: url(../images/7member/member_pic.png);
-  background-size: 100%;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-color: rgba(73, 100, 122, 0.5); }
-  .right20 .title20 {
-    padding: 0.7em 1.25em;
-    background-color: rgba(217, 217, 217, 0.2); }
-
-@media screen and (min-width: 900px) {
-  .main20 {
-    width: 58.333%;
-    max-width: 1170px;
-    padding-top: 90px; }
-
-  /*main20*/
-  .left20 {
-    float: left;
-    /*base20*/
-    /*sidebar20*/ }
-    .left20 .sidebar20 {
-      padding: 60px 40px; }
-      .left20 .sidebar20 .base20 {
-        font-size: 10px; }
-        .left20 .sidebar20 .base20 .photo20, .left20 .sidebar20 .base20 .block20 {
-          width: 100%; }
-        .left20 .sidebar20 .base20 .photo20 {
-          width: 130px; }
+    .left20 .sidebar20 .base20 {
+      font-size: 10px;
+      /*block20*/ }
+      .left20 .sidebar20 .base20 .photo20 {
+        width: 130px;
+        box-shadow: -4px 2px 0px #ed9046; }
+      .left20 .sidebar20 .base20 .block20 {
+        /*row20*/ }
         .left20 .sidebar20 .base20 .block20 .account20 {
-          width: 100%;
-          font-size: 22px; }
+          font-size: 25px; }
         .left20 .sidebar20 .base20 .block20 .row20 {
           margin-top: 6px; }
           .left20 .sidebar20 .base20 .block20 .row20 .icon20 {
@@ -85,22 +43,143 @@ img {
             vertical-align: middle; }
           .left20 .sidebar20 .base20 .block20 .row20 .hello20 {
             line-height: 20px; }
+    .left20 .sidebar20 .menu20 a {
+      color: #fff;
+      padding: 0px 10px; }
+
+/*left20*/
+.right20 {
+  box-sizing: border-box;
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: rgba(73, 100, 122, 0.5); }
+  .right20 .title20 {
+    padding: 0.7em 1.25em;
+    background-color: rgba(217, 217, 217, 0.2); }
+
+@media screen and (max-width: 999px) {
+  .left20 {
+    /*sidebar20*/ }
+    .left20 .sidebar20 {
+      padding-top: 10vh;
+      /*base20*/
+      /*menu20*/ }
+      .left20 .sidebar20 .base20 {
+        position: relative; }
+        .left20 .sidebar20 .base20 .photo20 {
+          width: 35%;
+          margin: 30px 0px;
+          position: relative;
+          left: 45%;
+          display: inline-block; }
+        .left20 .sidebar20 .base20 .block20 {
+          width: 10em;
+          margin-left: 10vw;
+          text-align: center;
+          position: relative;
+          right: 30vw;
+          bottom: 2vh;
+          display: inline-block; }
+          .left20 .sidebar20 .base20 .block20 .row20 {
+            display: none; }
+      .left20 .sidebar20 .menu20 {
+        position: fixed;
+        bottom: 0px;
+        z-index: 2;
+        width: 100%;
+        font-size: 0px; }
+        .left20 .sidebar20 .menu20 li {
+          width: 100%;
+          vertical-align: middle; }
+          .left20 .sidebar20 .menu20 li a {
+            float: left;
+            vertical-align: middle;
+            width: calc(25% - 4px);
+            height: 2.5em;
+            line-height: 2.5em;
+            padding: 5px 0px;
+            border: 2px solid #40666a;
+            border-radius: 7px 7px 0px 0px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #51677a; }
+          .left20 .sidebar20 .menu20 li a:hover {
+            background-color: #ed9046; }
+
+  /*left20*/
+  .right20 .title20 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 6px; } }
+@media screen and (max-width: 1122px) {
+  .personal21, .changepsw21 {
+    width: 100%; }
+
+  .right20 {
+    padding-right: 10%; } }
+/*平板*/
+@media screen and (min-width: 1123px) {
+  .main20 {
+    width: 58.333%;
+    max-width: 1170px;
+    padding-top: 90px; }
+
+  /*main20*/
+  .left20 {
+    float: left;
+    background-color: rgba(3, 31, 54, 0.5);
+    /*sidebar20*/
+    /*sidebar20*/ }
+    .left20 .sidebar20 {
+      padding: 3vw 2vw;
+      /*base20*/ }
+      .left20 .sidebar20 .base20 {
+        font-size: 10px;
+        /*block20*/ }
+        .left20 .sidebar20 .base20 .block20 {
+          /*row20*/ }
+          .left20 .sidebar20 .base20 .block20 .account20 {
+            width: 100%;
+            margin: 30px 0px;
+            padding: 14px 0px;
+            font-size: 22px;
+            box-shadow: 0px 3px 0px rgba(73, 100, 122, 0.5); }
+            .left20 .sidebar20 .base20 .block20 .account20 span {
+              margin-left: 3px; }
+          .left20 .sidebar20 .base20 .block20 .row20 {
+            margin-top: 6px; }
+            .left20 .sidebar20 .base20 .block20 .row20 .icon20 {
+              display: inline-block;
+              width: 20px;
+              vertical-align: middle; }
+            .left20 .sidebar20 .base20 .block20 .row20 .hello20 {
+              line-height: 20px; }
     .left20 .menu20 {
       padding: 30px; }
       .left20 .menu20 a {
+        display: block;
         margin: 40px 0px;
-        font-size: 20px; }
+        font-size: 16px;
+        box-shadow: -5px 0px 0px rgba(73, 100, 122, 0.5); }
+      .left20 .menu20 a:hover {
+        color: #ed9046;
+        box-shadow: -5px 0px 0px #ed9046; }
 
   /*left20*/
   .right20 {
     float: right;
-    width: 66%;
-    padding-right: 80px;
-    padding-bottom: 60px; }
+    width: calc(100% - 245px - 3vw);
+    padding-right: 16%;
+    padding-bottom: 60px;
+    background-image: url(../images/7member/member_pic.png); }
     .right20 .title20 {
       display: inline-block;
       width: 235px;
       margin: 60px 0px;
-      text-align: right; }
+      text-align: right;
+      font-size: 20px; }
 
   /*right20*/ }

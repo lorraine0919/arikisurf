@@ -3,7 +3,7 @@
 <!--header-->
 <head> 
       <!--(bake module/backstage_head.html)--><?php require_once('publicpage/backstage_head.php'); ?>
-    <title>Ariki Surf - 後臺管理</title> 
+    <title>Ariki Surf - 後臺管理</title>   
     <link rel="stylesheet" type="text/css" href="css/9backstage_news.css">
     <script src="js/jquery.js"></script>
     <script src="js/9backstage_news.js"></script>
@@ -35,26 +35,25 @@
               <table class="table table-striped table-advance table-hover">
                 <thead>
                   <tr>
-                    
-                    <th><i class="fa"></i>文章標題</th>
-                    <th class="hidden-phone"><i class="fa"></i>文章日期</th>
-                    <th class="back_newsmodify">編輯文章</th>
+                    <th><i class="fa"></i>文章編號</th>
+                    <th class="hidden-phone"><i class="fa"></i>文章標題</th>
+                    <th><i class="fa"></i>文章日期</th>
+                    <th>編輯文章</th>
                   </tr>
                   </thead>
                   <tbody>
                     <tr>
 
-                      
-                      <td><?php echo $newsRow["newstitle"]; ?></td>
-                      <td class="back_newsdate hidden-phone"><?php echo $newsRow["newsdate"]; ?></td>
-                      <input type="hidden" name="newsimg" value="<?php echo $newsRow['newsimg']; ?>">
-                      <input type="hidden" name="newstxt" value="<?php echo $newsRow['newstxt']; ?>">
+                      <td class="back_newsno"><?php echo $newsRow["newsno"]; ?>
+                     </td>
+                      <td class="hidden-phone"><?php echo $newsRow["newstitle"]; ?></td>
+                      <td class="back_newsdate"><?php echo $newsRow["newsdate"]; ?></td>
                       <td class="back_newsmodify">
                         <div class="lightbox-btn-edit">
                         <img src="images/9backstage/content.png" class="news_edit_btn" width="32" height="32"><input class="newsno" type="hidden" name="newsno" value="<?php echo $newsRow['newsno']; ?>">
                       </div>
                       <div class="remove-btn">
-                        <img src="images/9backstage/cancel.png" class="news_remove_btn" width="32" height="32"><input class="newsno" type="hidden" name="newsno" value="<?php echo $newsRow['newsno']; ?>">
+                        <img src="images/9backstage/cancel.png" class="news_remove_btn" width="32" height="32">
                       </div>
                       </td>
                     </tr>
@@ -80,7 +79,7 @@
       <div class="add-btn-close">
         <a href="9backstage_news.php"><img src="images/9backstage/cancel.png" width="32" height="32"></a>
       </div>
-        <form method="post" action="9backstage_addnews.php" enctype="multipart/form-data">
+        <form>
         
         <p class="newstitle">
           <input name="newstitle" type="text" class="news-input" maxlength="25" placeholder="文章標題">
@@ -109,31 +108,30 @@
 
 <!-- 燈箱 修改消息 +++++++++++++++++++++++++++-->
 
+
 <div class="edit-form">
   <div class="form-div">
     <h2>修改最新消息</h2>
     <div class="edit-btn-close">
       <a href="9backstage_news.php"><img src="images/9backstage/cancel.png" width="32" height="32"></a>
     </div>
-      <form method="post" action="9backstage_editnews.php" enctype="multipart/form-data">
-       <input type="hidden" name="newsno" id="newsnoid" value="">
+      <form>  
+
         <p class="newstitle">
-          <input name="newstitle" type="text" class="edit_news_title news-input" value="">
+          <input name="newstitle" type="text" class="news-input" value="<?php echo $newsRow2['newstitle']; ?>">
         </p>
         
         <p class="newsdate">
-          <input name="newsdate" type="date" class="edit_news_date news-input" value="">
+          <input name="newsdate" type="date" class="news-input" value="<?php echo $newsRow2['newsdate']; ?>">
         </p>
 
         <p class="newsimg">
-          <span class="place_img">
-            <img src="" id="place_img">
-          </span>
-          <input name="newsimg" type="file" class="edit_news_img news-input">
+          <input name="newsimg" type="file" class="news-input" value="<?php echo $newsRow2['newsimg']; ?>">
+          <img src="<?php echo $newsRow['newsimg']; ?>"">
         </p>
         
         <p class="newstxt">
-          <textarea name="newstxt" class="edit_news_txt news-input" value=""></textarea>
+          <textarea name="newstxt" class="news-input" value="<?php echo $newsRow2['newstxt']; ?>"></textarea>
         </p>
       
       

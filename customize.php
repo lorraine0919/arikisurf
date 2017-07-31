@@ -16,11 +16,20 @@
 <span>客製化衝浪版</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 <div class="wrapper">
-	
+
 	<div class="bg_forest_2">
 		<!-- 		<div class="pillar">
 			<img src="images/2board/pillar.png">
 		</div> -->
+		<div class="lightboxgroup">
+			<div class="lightboxarea">
+				<h2></h2>
+				<p></p>
+				<div id="closebtn">
+					<img src="images/3accessories/Close.png" alt="">
+				</div>
+			</div>
+		</div>
 		<div class="step1_maxContent">
 			<div class="stepbar">
 				<div class="circle"></div>
@@ -255,7 +264,7 @@
 									<div class="uploadgroup">
 										<div class="introduceUpload">
 											<h4>上傳您的圖案</h4>
-											<p>請上傳500MB內PNG、JPG格式圖檔。</p>
+											<p>格式限制：1MB內、長寬均為200px之PNG格式圖檔。</p>
 										</div>
 										<input type="file" id="uploadimg" style="display: none">
 										<label for="uploadimg">

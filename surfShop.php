@@ -151,7 +151,7 @@
 <?php 
 try{
     require_once("connectBooks.php");
-	$sql="select * from surfequipped where prod_obj='Leash'";
+	$sql="select * from surfequipped where prod_obj='Leash' and prod_sold='1'";
 	$products = $pdo->query( $sql );
 
     while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -166,7 +166,7 @@ try{
 					<div class="box">
 					 <div class="row">
 	                   <div class="pic col-xs-12 col-sm-12">
-	                       <img src="images/3accessories/腳繩/<?php echo $prodRow['prod_img']; ?>">
+	                       <img src="images/3accessories/<?php echo $prodRow['prod_img']; ?>">
 	                   </div>
 	                   <div class="txt col-xs-12 col-sm-12">
 	                       <h4><?php echo $prodRow["prod_name"]; ?></h4>
@@ -202,7 +202,7 @@ try{
 				<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Fin'";
+				$sql="select * from surfequipped where prod_obj='Fin' and prod_sold='1'";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -217,7 +217,7 @@ try{
 					<div class="box">
 					 <div class="row">
 	                   <div class="pic col-xs-12 col-sm-12">
-	                       <img src="images/3accessories/鯊魚鰭/<?php echo $prodRow['prod_img']; ?>">
+	                       <img src="images/3accessories/<?php echo $prodRow['prod_img']; ?>">
 	                   </div>
 	                   <div class="txt col-xs-12 col-sm-12">
 	                       <h4><?php echo $prodRow["prod_name"]; ?></h4>
@@ -252,7 +252,7 @@ try{
 			<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Wax'";
+				$sql="select * from surfequipped where prod_obj='Wax' and prod_sold='1'";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -267,7 +267,7 @@ try{
 					<div class="box">
 					 <div class="row">
 	                   <div class="pic col-xs-12 col-sm-12">
-	                       <img src="images/3accessories/衝浪板蠟/<?php echo $prodRow['prod_img']; ?>">
+	                       <img src="images/3accessories/<?php echo $prodRow['prod_img']; ?>">
 	                   </div>
 	                   <div class="txt col-xs-12 col-sm-12">
 	                       <h4><?php echo $prodRow["prod_name"]; ?></h4>
@@ -302,7 +302,7 @@ try{
 				<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Suit'";
+				$sql="select * from surfequipped where prod_obj='Suit' and prod_sold='1'";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -317,7 +317,7 @@ try{
 					<div class="box">
 					 <div class="row">
 	                   <div class="pic col-xs-12 col-sm-12">
-	                       <img src="images/3accessories/衝浪褲&防寒衣/<?php echo $prodRow['prod_img']; ?>">
+	                       <img src="images/3accessories/<?php echo $prodRow['prod_img']; ?>">
 	                   </div>
 	                   <div class="txt col-xs-12 col-sm-12">
 	                       <h4><?php echo $prodRow["prod_name"]; ?></h4>

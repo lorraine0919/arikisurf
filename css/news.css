@@ -83,8 +83,8 @@ body {
     padding: 10px; }
 
   .news_item_border {
-    padding-top: 20px;
-    padding-bottom: 20px; } }
+    padding-top: 5vh;
+    padding-bottom: 10vh; } }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
   .cen, .bg_14 .news_title_14 {
@@ -133,7 +133,7 @@ body {
 
   .news_item {
     width: 100%;
-    height: auto;
+    height: 18vh;
     box-sizing: border-box;
     border: 1px solid #fff;
     display: inline-block;
@@ -160,14 +160,15 @@ body {
       color: #ED8C00; }
 
   .news_item_border {
-    padding-top: 20px;
-    padding-bottom: 20px; }
+    padding-top: 5vh;
+    padding-bottom: 10vh; }
 
   .date_14 {
     font-size: 14px; }
 
   .news_item_img {
-    width: 10%;
+    width: 7vw;
+    height: 13vh;
     display: inline-block;
     vertical-align: middle;
     padding: 25px 15px; } 

@@ -1,6 +1,6 @@
 <?php
 try{
-  require_once("connectBD101g2.php");
+  require_once("connectBooks.php");
   $sql = "select * from news order by newsno desc";
   $pdo = new PDO( $dsn, $user, $password, $options); 
   $news = $pdo->prepare( $sql );

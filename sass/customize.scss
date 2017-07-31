@@ -45,18 +45,28 @@
 	    z-index: 100;
 	    display: none;
 	    .lightboxarea{
-	    	max-width: 500px;
-		    max-height: 650px;
+	    	max-width: 200px;
+		    max-height: 150px;
 		    background-color: white;
-		    position: absolute;
-		    top: 0;
+		    position: relative;
+		    top: 50%;
 		    right: 0;
 		    bottom: 0;
 		    left: 0;
-		    margin: auto;
 		    padding: 10px;
+		    transform:translateY(-50%);
+		    margin: 0 auto;
 		    box-sizing: border-box;
 		    border-radius: 5px;
+		    p{
+		    	height: 20vh;
+		    	line-height: 20vh;
+		    }
+		    #closebtn{
+		    	position: absolute;
+		    	right: 0;
+		    	top: 0;
+		    }
 	    }
 	}
 	.step1_maxContent{

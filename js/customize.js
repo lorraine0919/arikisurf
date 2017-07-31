@@ -317,6 +317,7 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		// document.getElementById('svgstep2').width=1000;
 		// document.getElementById('svgstep2').setAttribute("viewbox","0 0 100 10");
 		document.getElementById("step3result").height=1500;
+		
 		var svgData = new XMLSerializer().serializeToString( document.getElementById('svgstep2') );
 		// document.getElementById("step3result").width=500;
 		var ctx = document.getElementById("step3result").getContext("2d");
@@ -325,7 +326,8 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		var svg = new Blob([svgData], {type: "image/svg+xml;charset=utf-8"});
 		var url = DOMURL.createObjectURL(svg);
 		img.onload = function() {
-		    ctx.drawImage(img, 10, 10,217,1073);
+
+		    ctx.drawImage(img, 10, 10,238,1180);
 		    var png = document.getElementById('step3result').toDataURL("image/png");
 		    document.querySelector('#png-container').innerHTML = '<img src="'+png+'"/>';
 		    DOMURL.revokeObjectURL(png);

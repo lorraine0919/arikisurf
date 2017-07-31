@@ -1,4 +1,163 @@
 @charset "UTF-8";
+@media screen and (max-width: 767px) {
+.back_newsmodify{
+		width: 26%;
+	}
+	.content-panel{
+		background-color: #ED8C00;
+		padding-top: 0px;
+    	padding-bottom: 0px;
+	}
+	th{
+		color:#fff;
+		font-size: 16px;
+	}
+	td{
+		font-size: 16px;
+	}
+
+.lightbox-btn-add {
+  margin: 20px 0px;
+}
+
+.lightbox-btn-edit{
+display: inline-block;
+margin-right: 5px;
+}
+
+.remove-btn{
+display: inline-block;
+}
+
+h2{
+	text-align: center;
+	font-family: '微軟正黑體';
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color:#fff;
+}
+
+
+.add-form{
+	float:left;
+	padding-top:0px;
+	display: none;
+}
+
+.edit-form{	
+	float:left;
+	padding-top:0px;	
+	display: none;
+	
+}
+
+.form-div{
+	background-color:#4682B4;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	padding-bottom:30px;
+	width: 90%;
+	float: left;
+	position: absolute;
+	top: 100px;
+	right: 0;
+	left: 0;
+	margin: auto;	
+    border-radius: 7px;
+	}
+
+.news-input{
+	color:#3c3c3c;
+    font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 20px;
+	background-color: #fbfbfb;
+	padding: 5px 5px 5px 10px;
+	margin-bottom: 10px;
+	width:100%;
+	box-sizing: border-box;
+    border: 3px solid rgba(0,0,0,0);
+	}
+
+.news-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+    padding: 13px 13px 13px 13px;
+}
+
+
+textarea {
+    width: 100%;
+    height: 300px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+.button-blue{
+	font-family: 'Montserrat', Arial;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:18px;
+	padding-top:10px;
+	padding-bottom:10px;
+	transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+
+		
+.ease {
+	width: 0px;
+	height: 50px;
+	background-color: #fbfbfb;
+	transition: .3s ease;
+}
+
+
+
+.add-btn-close{
+	display: block;
+	position: absolute;
+	top: -15px;
+	right: -10px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+}
+.edit-btn-close{
+	display: block;
+	position: absolute;
+	top: -15px;
+	right: -10px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+}
+#place_img{
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  margin-left: 35%;
+}
+
+}
+/*RWD結束*/
+@media screen and (min-width: 768px) {
 
 	.back_newsno{
 		width: 10%;
@@ -8,7 +167,7 @@
   	}
 	
 	.back_newsmodify{
-		width: 10%;
+		width: 15%;
 	}
 	.content-panel{
 		background-color: #ED8C00;
@@ -49,26 +208,25 @@ h2{
 
 
 .add-form{
-	width:100%;
 	float:left;
 	padding-top:0px;
 	display: none;
 }
 
-.edit-form{
-	width:100%;
+.edit-form{	
 	float:left;
-	padding-top:0px;
+	padding-top:0px;	
 	display: none;
+	
 }
 
 .form-div {
-	background-color:rgb(17,49,76);
+	background-color:#4682B4;
 	padding-left:35px;
 	padding-right:35px;
 	padding-top:35px;
 	padding-bottom:50px;
-	width: 1170px;
+	width: 60%;
 	float: left;
 	position: absolute;
 	top: 200px;
@@ -76,7 +234,7 @@ h2{
 	left: 0;
 	margin: auto;	
     border-radius: 7px;
-    border-radius: 7px;
+   
 }
 
 .news-input {
@@ -84,7 +242,7 @@ h2{
     font-weight:500;
 	font-size: 18px;
 	border-radius: 0;
-	line-height: 22px;
+	line-height: 32px;
 	background-color: #fbfbfb;
 	padding: 13px 13px 13px 54px;
 	margin-bottom: 10px;
@@ -105,7 +263,7 @@ h2{
 
 textarea {
     width: 100%;
-    height: 150px;
+    height: 300px;
     line-height: 150%;
     resize:vertical;
 }
@@ -116,16 +274,16 @@ input:focus, textarea:focus {
 }
 
 .button-blue{
-	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-family: 'Montserrat', Arial;
 	float:left;
 	width: 100%;
 	border: #fbfbfb solid 4px;
 	cursor:pointer;
 	background-color: #3498db;
 	color:white;
-	font-size:24px;
-	padding-top:22px;
-	padding-bottom:22px;
+	font-size:18px;
+	padding-top:10px;
+	padding-bottom:10px;
 	transition: all 0.3s;
     margin-top:-4px;
     font-weight:700;
@@ -142,7 +300,7 @@ input:focus, textarea:focus {
 	
 .ease {
 	width: 0px;
-	height: 74px;
+	height: 50px;
 	background-color: #fbfbfb;
 	transition: .3s ease;
 }
@@ -169,4 +327,10 @@ input:focus, textarea:focus {
 	line-height: 30px;
 	text-decoration: none;
 	text-align: center;
+}
+#place_img{
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
 }

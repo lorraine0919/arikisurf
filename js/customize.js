@@ -28,8 +28,7 @@ window.onload=function(){
 	$('#step3tostep2').click(tostep2);
 	$('#step2tostep3').click(tostep3);
 	$('#step4tostep3').click(tostep3);
-	$('#step3tostep4').click(tostep4);
-
+	//三到四要驗證資料
 
 /*↑換頁相關*/
 
@@ -347,6 +346,11 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 	}
 /*↑步驟二儲存圖片到下一步驟*/
 
+/*↓步驟三驗證是否填妥*/
+function warningifnotfill(){
+
+}
+/*↑步驟三驗證是否填妥*/
 
 /*↓步驟三填寫資料送到步驟四*/
 $('#step3tostep4').click(function(){
@@ -362,7 +366,6 @@ $('#step3tostep4').click(function(){
 	$('#orderpattern').text($('.patterntitle').eq(0).text());
 	$('#ordermaterial').text($('#customermaterial').val());
 });
-
 /*↑步驟三填寫資料送到步驟四*/
 };
 

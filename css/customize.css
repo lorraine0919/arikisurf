@@ -17,12 +17,29 @@
   position: relative;
   background-position: center;
   padding: 4% 0 4% 0; }
-  .bg_forest_2 .pillar {
-    position: absolute;
-    bottom: 20%;
-    left: 20%; }
-    .bg_forest_2 .pillar img {
-      width: 100%; }
+  .bg_forest_2 .lightboxgroup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none; }
+    .bg_forest_2 .lightboxgroup .lightboxarea {
+      max-width: 500px;
+      max-height: 650px;
+      background-color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 5px; }
   .bg_forest_2 .step1_maxContent {
     max-width: 1170px;
     margin: auto;
@@ -685,6 +702,8 @@
           border-bottom: 2px solid rgba(255, 255, 255, 0.6); }
         .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .infocontent {
           padding: 2% 0px; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .infocontent #orderpattern {
+            text-transform: capitalize; }
         .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next {
           text-align: right;
           margin: 0 34px 0 0; }

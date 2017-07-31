@@ -326,6 +326,4 @@ $('#step3tostep4').click(function(){
 };
 
 
-=======
 });
->>>>>>> 57500ca874116d5e0db5402d7ca19981b21adbb2

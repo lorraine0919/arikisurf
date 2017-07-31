@@ -121,6 +121,7 @@ a {
     .bg_11 .title #result {
       display: none; }
     .bg_11 .title h1 {
+      margin-left: 4.5vw;
       display: inline-block; }
     .bg_11 .title div {
       float: right;
@@ -195,6 +196,7 @@ a {
               display: inline-block;
               font-size: 22px; }
         .bg_11 .main_11 .back .feed .txt {
+          width: 50vw;
           color: #fff; }
         .bg_11 .main_11 .back .feed .quit {
           position: absolute;

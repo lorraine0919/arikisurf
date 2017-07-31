@@ -86,19 +86,29 @@ $post_number = $_REQUEST["post_number"];
     }//while end
 ?>             
             <div class="back">
+<?php 
+       $sqlreply="select * from map_reply where post_number=$post_number order by post_number ";
+       $re = $pdo->query($sqlreply);
+       while($reRow = $re->fetch(PDO::FETCH_ASSOC)) {
+?>                   
                   <div class="feed">
-                        <div class="icon">
+                    <div class="icon">
                               <img src="images/4wavepoint/user/user3.png">
-                        </div>
-                        <div class="feed_c">
+                        </div>                        
+                        <div class="feed_c">                        
                              <div class="feed_info">
-                                  <div class="name">覆針</div>
-                                  <span class="date">2017/07/17</span>
+                                  <div class="name"><?php echo $reRow["name"] ?></div>
+                                  <span class="date"><?php echo substr($reRow["reply_time"],0,10) ?></span>
                              </div>
-                             <div class="txt">感謝大大分享</div>
-                        </div>
+                             <div class="txt">
+                                  <?php echo $reRow["reply_content"] ?>                              
+                             </div>
+                        </div><!-- feed_c -->                                           
                         <div class="quit">檢舉</div>
                   </div><!-- feed -->
+<?php 
+       }//while end
+?>                       
                   <form class="feed_t">
                         <div class="icon">
                               <img src="images/4wavepoint/user/user.jpg">
@@ -110,6 +120,11 @@ $post_number = $_REQUEST["post_number"];
                              </div>
                         </div>
                   </form>
+<script>
+        $('#feedpo').click(function(){
+
+        });
+</script>                  
             </div>
       </div><!-- main_11 -->    
      </div><!-- bg_11 --> 

@@ -3,9 +3,6 @@ ob_start();
 session_start();
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 require_once("connectBooks.php");
-// $sqlstar = "select star_score from map_post where wave_number=$wave_number order by post_date DESC ";
-// $str = $pdo->query($sqlstar);
-// $strRow = $str->fetch(PDO::FETCH_ASSOC);
  ?>
 <!DOCTYPE html>
 <html lang="en">

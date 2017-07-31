@@ -1,6 +1,7 @@
 <?php 
 ob_start();
 session_start();
+$wave_number = $_SESSION["map_wave"]["wave_number"];
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,14 +60,13 @@ session_start();
                <div id="close">X</div>                     
         </form>      
       </div><!-- content_10 -->
-<?php 
-           $wave_number = $_SESSION["map_wave"]["wave_number"];
+<?php           
            require_once("connectBooks.php");
            $sql2="select * from map_wave where wave_number=$wave_number";
            $wave = $pdo->query($sql2);
            $waveRow = $wave->fetch(PDO::FETCH_ASSOC);         
 ?>
-       <div class="bg_10">
+       <div class="bg_10" id="bg_10">
          <div class="info_10">
            <div class="ic wave">
              <img src="images/4wavepoint/w1.png">
@@ -444,5 +444,11 @@ session_start();
          </div><!-- fourm --> 
        </div><!-- bg_10 -->
       <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+
+  <script>
+    var bgsrc = 'images/4wavepoint/<?php echo $wave_number ?>/bg_f.jpg';
+    console.log(bgsrc);
+    $('.bg_10').css('background-image','url(\"images/4wavepoint/<?php echo $wave_number ?>/bg_f.jpg\")');  
+  </script>
 </body>
 </html>

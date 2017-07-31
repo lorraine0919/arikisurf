@@ -125,7 +125,7 @@ require_once('connectBooks.php');
 						<div class="head">
 							<h3>長板<span>LONGBOARD</span></h3>
 						</div>
-						<input type="hidden" id="customerboard">
+						<input type="hidden" id="customerboard" value="長板<span>LONGBOARD</span>">
 						<div class="boardgroup">
 							<div class="board"><img src="images/2board/gunboard/gunboard_h.png" alt=""></div>
 							<div class="board click"><img src="images/2board/longboard/longboard_h.png" alt=""></div>
@@ -218,7 +218,7 @@ require_once('connectBooks.php');
 				</div>	
 				<div class="rwdselectstyle">
 					<div class="colorgroup selectgroup">
-						<input type="hidden" id="customercolor">
+						<input type="hidden" id="customercolor" value="白">
 						<div class="btn click">選擇顏色</div>
 						<div class="clearfix"></div>
 						<div class="colorall">
@@ -238,7 +238,7 @@ require_once('connectBooks.php');
 						<div class="clearfix"></div>
 					</div>
 					<div class="patterngroup selectgroup">
-						<input type="hidden" id="customerpattern">
+						<input type="hidden" id="customerpattern" value="未選擇圖片">
 						<div class="btn">選擇圖樣</div>
 						<div class="clearfix"></div>
 							<div class="patternarea">
@@ -276,7 +276,7 @@ require_once('connectBooks.php');
 							<div class="clearfix"></div>
 					</div>
 					<div class="texturegroup selectgroup">
-						<input type="hidden" id="customermaterial">
+						<input type="hidden" id="customermaterial" value="環氧樹脂">
 						<div class="btn">選擇材質</div>
 						<div class="clearfix"></div>
 						<div class="texturecontent">

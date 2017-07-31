@@ -31,7 +31,7 @@ require_once('connectBooks.php');
 		<div class="lightboxgroup">
 			<div class="lightboxarea">
 				<h2></h2>
-				<p></p>
+				<p>請填寫完整資料</p>
 				<div id="closebtn">
 					<img src="images/3accessories/Close.png" alt="">
 				</div>
@@ -457,27 +457,27 @@ require_once('connectBooks.php');
 							<table>
 								<tr>
 									<th><h3>姓名</h3></th>
-									<td><input type="text" name="" id="customername"></td>
+									<td><input type="text" name="" id="customername" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>電話</h3></th>
-									<td><input type="phone" name="" id="customerphone"></td>
+									<td><input type="phone" name="" id="customerphone" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>電子信箱</h3></th>
-									<td><input type="email" name="" id="customeremail"></td>
+									<td><input type="email" name="" id="customeremail" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>收件地址</h3></th>
-									<td><textarea rows="5" id="customeraddress"></textarea></td>
+									<td><textarea rows="5" id="customeraddress" class="orederinput"></textarea></td>
 								</tr>
 								<tr>
 									<th><h3>匯款帳號後五碼</h3></th>
-									<td><input type="text" name="" id="customeraccount"></td>
+									<td><input type="text" name="" id="customeraccount" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>其他留言</h3></th>
-									<td><textarea rows="5" id="customermessage"></textarea></td>
+									<td><textarea rows="5" id="customermessage" class="orederinput"></textarea></td>
 								</tr>
 							</table>
 							<div class="next">

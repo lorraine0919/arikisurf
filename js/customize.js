@@ -352,7 +352,11 @@ function warningifnotfill(){
 }
 	
 	$('#step3tostep4').click(function(){
-        $('.lightboxgroup').fadeIn(20);
+		for (var i = 0; i < $('.orederinput').length; i++) {
+			if($('.orederinput').eq(i).val()==''){
+				$('.lightboxgroup').fadeIn(20);
+			}
+		}
 	});
 	$('#closebtn').click(function(){
         $('.lightboxgroup').fadeOut(0);

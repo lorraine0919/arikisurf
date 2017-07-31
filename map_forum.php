@@ -2,6 +2,10 @@
 ob_start();
 session_start();
 $wave_number = $_SESSION["map_wave"]["wave_number"];
+require_once("connectBooks.php");
+// $sqlstar = "select star_score from map_post where wave_number=$wave_number order by post_date DESC ";
+// $str = $pdo->query($sqlstar);
+// $strRow = $str->fetch(PDO::FETCH_ASSOC);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +14,24 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
   <link rel="stylesheet" type="text/css" href="css/forum.css">
   <script src="js/showMap.js"></script>
   <script src="js/map_up.js"></script>
+  <script src="js/jquery.raty.js" type="text/javascript"></script>
+  <script>
+        $(document).ready(function(){
+        $('#result').hide();   //隱藏結果箱子
+        $('#star').raty({     
+            hints:[1,2,3,4,5], 
+            path : 'images/4wavepoint/img',
+            target:'#result',
+            targetKeep:true,
+            targetType:'score',
+            click:function(score,evt){
+                 $("#lightbox2_11").show();
+                 $("#lightbox2_11 .ustar span").html(score);
+                 $(this).find('img').unbind();
+              }
+         });
+       });//ready
+  </script>
   <title>酋長衝浪Ariki Surf-討論區</title>
 </head>
 <body>
@@ -61,12 +83,12 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
         </form>      
       </div><!-- content_10 -->
 <?php           
-           require_once("connectBooks.php");
+           
            $sql2="select * from map_wave where wave_number=$wave_number";
            $wave = $pdo->query($sql2);
            $waveRow = $wave->fetch(PDO::FETCH_ASSOC);         
 ?>
-       <div class="bg_10" id="bg_10">
+       <div class="bg_10">
          <div class="info_10">
            <div class="ic wave">
              <img src="images/4wavepoint/w1.png">
@@ -105,10 +127,9 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
        $sql="select * from map_post where wave_number=$wave_number order by post_date DESC";
        $data = $pdo->query($sql);
        while($dataItem = $data->fetch(PDO::FETCH_ASSOC)) {
-
 ?>
               <div class="item">
-                 <a href="map_forum_discussion.php" id="map_a">                  
+                 <a href="map_forum_discussion.php?post_number=<?php echo $dataItem["post_number"] ?>" id="map_a">                  
                      <div class="pic_i">
                            <!-- <img src="images/4wavepoint/fou/1.jpg"> -->                          
                             <img src='images/4wavepoint/<?php echo $wave_number ?>/fou/<?php echo $dataItem["post_img"]  ?>'>
@@ -129,7 +150,16 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
                      </div>
                  </a>
                      <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
+                         <!-- <div id="star"></div> -->
+                         <div id="star">
+                              <script>
+                                var score = <?php echo $dataItem["star_score"] ?>;
+                                console.log(score);
+                                $('#star').raty('score');
+                              </script>
+                                                         
+                         </div>
+                         <div id="result"></div>
                          <div class="view">
                              <div class="see">
                               <img src="images/4wavepoint/view.png" alt="view">
@@ -444,7 +474,6 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
          </div><!-- fourm --> 
        </div><!-- bg_10 -->
       <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
-
   <script>
     var bgsrc = 'images/4wavepoint/<?php echo $wave_number ?>/bg_f.jpg';
     console.log(bgsrc);

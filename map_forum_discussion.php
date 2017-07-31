@@ -1,6 +1,8 @@
 <?php 
 ob_start();
 session_start();
+$wave_number = $_SESSION["map_wave"]["wave_number"];
+$post_number = $_REQUEST["post_number"];
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,14 +40,14 @@ session_start();
 <?php 
      $wave_number = $_SESSION["map_wave"]["wave_number"];
      require_once("connectBooks.php");
-     $sql2="select * from map_post where wave_number=$wave_number";
-     $wave = $pdo->query($sql2);
-     $waveRow = $wave->fetch(PDO::FETCH_ASSOC);
- ?>     
+     $sql2="select * from map_post where wave_number=$wave_number and post_number=$post_number";
+     $post = $pdo->query($sql2);
+     while ($postRow = $post->fetch(PDO::FETCH_ASSOC)) {    
+ ?>    
      <div class="bg_11">
       <div class="title">
           <!-- <h1>衝浪第一次接觸</h1> -->
-          <h1><?php echo $waveRow["post_title"]; ?></h1>
+          <h1><?php echo $postRow["post_title"]; ?></h1>
           <div class="quit">檢舉</div>
           <div id="love">收藏</div>
           <div id="star"></div>
@@ -59,19 +61,31 @@ session_start();
                   </div>
                   <div class="pos">
                         <div class="name">Mathi</div>
-                        <div class="time">發表時間 <span class="date">2017/07/17</span></div>
+                        <!-- <div class="time">發表時間 <span class="date">2017/07/17</span></div> -->
+                        <div class="time">發表時間 <span class="date"><?php echo substr($postRow["post_date"],0,10)?></span></div>
                   </div>
             </div>
             <div class="box_b">
                   <div class="pic">
-                        <img src="images/4wavepoint/fou/1.jpg">
+                        <!-- <img src="images/4wavepoint/fou/1.jpg"> -->
+                         <?php 
+                         $src = "images/4wavepoint/".$wave_number."/fou/".$postRow["post_img"]; 
+                         ?>
+                         <img src="<?php echo $src ?>">
+                         
                   </div>
-                  <div class="txt">
+<!--              <div class="txt">
                         Mathi是北部人,第一次衝浪的地方是在金山中角灣.  還記得那天剛好是颱風過境後的第一天.穿了件短褲,  交了800元後教練先在沙灘上胡亂解說一遍,就把我推下水了.老實說,  他說的天花亂墬,  我卻是有聽沒有懂.總覺得聽起來很容易,但實地下水後,  整個感覺就不一樣了.
                          那時候我還不會看浪,  也不記得浪有幾人高.  總覺得浪一排一排的蓋過來,  看到腿都軟了.腦袋裡一片空白,  只聽到耳邊震耳欲聾的海浪聲,以及教練聲嘶力竭的叫我拚命劃.哇咧!!!我心裡只想著逃命,這不是在玩命嘛?眼前都是整排蓋下來的浪和飛濺起的白花,而且白花中似乎夾雜的血淋淋的斷肢殘臂(有沒有那ㄇ誇張阿?!)掙紮了五分鐘後,  教練宣佈放棄,  他告訴我今天颱風浪不適合初學者下水,  我就被招呼上岸了.  老實說,  雖然覺得交了800元居然只有下水五分鐘, 但是上岸的那一霎那真的有死裡逃生的感覺.
                         上岸之後我的朋友告訴我,  今天的浪是他最近以來碰過最大的浪了.這才稍稍安慰了我挫敗的心.
+                  </div> -->
+                  <div class="txt">
+                        <?php echo $postRow["post_text"] ?>
                   </div>
             </div>
+<?php 
+    }//while end
+?>             
             <div class="back">
                   <div class="feed">
                         <div class="icon">
@@ -99,9 +113,12 @@ session_start();
                   </div>
             </div>
       </div><!-- main_11 -->    
-     </div><!-- bg_11 -->
-     
+     </div><!-- bg_11 --> 
      <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
-
+  <script>
+    var bgsrc = 'images/4wavepoint/<?php echo $wave_number ?>/bg_f.jpg';
+    console.log(bgsrc);
+    $('.bg_11').css('background-image','url(\"images/4wavepoint/<?php echo $wave_number ?>/bg_f.jpg\")');  
+  </script>
 </body>
 </html>

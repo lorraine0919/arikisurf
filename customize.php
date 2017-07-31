@@ -16,7 +16,7 @@
 <span>客製化衝浪版</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 <div class="wrapper">
-
+ 
 	<div class="bg_forest_2">
 		<!-- 		<div class="pillar">
 			<img src="images/2board/pillar.png">

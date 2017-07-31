@@ -1,0 +1,18 @@
+ul.sidebar-menu li a[href="9backstage_customize.php"] {
+  background-color: #e97b23; }
+
+.table .content-panel {
+  padding: 20px;
+  font-size: 18px; }
+  .table .content-panel .officialimgshow {
+    text-align: center; }
+  .table .content-panel th {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .table .content-panel td {
+    color: #11314c; }
+  .table .content-panel h4 {
+    color: #e97b23; }
+  .table .content-panel table {
+    max-width: 800px; }
+  .table .content-panel a {
+    cursor: pointer; }

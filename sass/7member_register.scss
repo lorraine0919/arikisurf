@@ -78,9 +78,7 @@ img{width: 100%;}
 			margin: auto;
 			.item26{
 				padding-top: 8vw;
-				&:first-child{
-					padding-top: 50px;
-				}
+				&:first-child{padding-top: 50px;}
 				.label26{width: 7em;}
 				.input26{width: calc(100%  - 22.5px - 7em - 1vw - 4px);}			
 			}

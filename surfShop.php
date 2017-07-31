@@ -151,22 +151,22 @@
 <?php 
 try{
     require_once("connectBooks.php");
-	$sql="select * from surfequipped where prod_obj='Leash'";
+	$sql="select * from surfequipped where prod_obj='Leash' and prod_sold='1'";
 	$products = $pdo->query( $sql );
 
     while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 ?>    	
         <form action="cart_add.php" class="leashform">
-        <input type="hidden" name="prod_no" class="productno" value="<?php echo $prodRow["prod_no"]; ?>">
-        <input type="hidden" name="prod_name" value="<?php echo $prodRow["prod_name"]; ?>">
-        <input type="hidden" name="prod_price" value="<?php echo $prodRow["prod_price"]; ?>">
+        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
+        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
+        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
  	
 				<div class="myview">
 					<div class="item col-xs-12 col-sm-4">
 					<div class="box">
 					 <div class="row">
 	                   <div class="pic col-xs-12 col-sm-12">
-	                       <img src="images/3accessories/腳繩/<?php echo $prodRow['prod_img']; ?>">
+	                       <img src="images/3accessories/<?php echo $prodRow['prod_img']; ?>">
 	                   </div>
 	                   <div class="txt col-xs-12 col-sm-12">
 	                       <h4><?php echo $prodRow["prod_name"]; ?></h4>
@@ -202,22 +202,22 @@ try{
 				<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Fin'";
+				$sql="select * from surfequipped where prod_obj='Fin' and prod_sold='1'";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 			?>    	
-			        <form action="cart_add.php" class="finform" >
-			        <input type="hidden" name="prod_no" class="productno" value="<?php echo $prodRow["prod_no"]; ?>">
-			        <input type="hidden" name="prod_name" value="<?php echo $prodRow["prod_name"]; ?>">
-			        <input type="hidden" name="prod_price" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <form action="cart_add.php" class="finform">
+			        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
+			        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
  
 				<div class="myview">
 					<div class="item col-xs-12 col-sm-4">
 					<div class="box">
 					 <div class="row">
 	                   <div class="pic col-xs-12 col-sm-12">
-	                       <img src="images/3accessories/鯊魚鰭/<?php echo $prodRow['prod_img']; ?>">
+	                       <img src="images/3accessories/<?php echo $prodRow['prod_img']; ?>">
 	                   </div>
 	                   <div class="txt col-xs-12 col-sm-12">
 	                       <h4><?php echo $prodRow["prod_name"]; ?></h4>
@@ -229,7 +229,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="submit" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -252,22 +252,22 @@ try{
 			<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Wax'";
+				$sql="select * from surfequipped where prod_obj='Wax' and prod_sold='1'";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 			?>    	
 			        <form action="cart_add.php" class="waxform">
-			        <input type="hidden" name="prod_no" class="productno" value="<?php echo $prodRow["prod_no"]; ?>">
-			        <input type="hidden" name="prod_name" value="<?php echo $prodRow["prod_name"]; ?>">
-			        <input type="hidden" name="prod_price" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
+			        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
  
 				<div class="myview">
 					<div class="item col-xs-12 col-sm-4">
 					<div class="box">
 					 <div class="row">
 	                   <div class="pic col-xs-12 col-sm-12">
-	                       <img src="images/3accessories/衝浪板蠟/<?php echo $prodRow['prod_img']; ?>">
+	                       <img src="images/3accessories/<?php echo $prodRow['prod_img']; ?>">
 	                   </div>
 	                   <div class="txt col-xs-12 col-sm-12">
 	                       <h4><?php echo $prodRow["prod_name"]; ?></h4>
@@ -279,7 +279,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="submit" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -302,22 +302,22 @@ try{
 				<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Suit'";
+				$sql="select * from surfequipped where prod_obj='Suit' and prod_sold='1'";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 			?>    	
 			        <form action="cart_add.php" class="suitform">
-			        <input type="hidden" name="prod_no" class="productno" value="<?php echo $prodRow["prod_no"]; ?>">
-			        <input type="hidden" name="prod_name" value="<?php echo $prodRow["prod_name"]; ?>">
-			        <input type="hidden" name="prod_price" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
+			        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
+			        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
  
 				<div class="myview">
 					<div class="item col-xs-12 col-sm-4">
 					<div class="box">
 					 <div class="row">
 	                   <div class="pic col-xs-12 col-sm-12">
-	                       <img src="images/3accessories/衝浪褲&防寒衣/<?php echo $prodRow['prod_img']; ?>">
+	                       <img src="images/3accessories/<?php echo $prodRow['prod_img']; ?>">
 	                   </div>
 	                   <div class="txt col-xs-12 col-sm-12">
 	                       <h4><?php echo $prodRow["prod_name"]; ?></h4>
@@ -329,7 +329,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="submit" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                                 <!-- <a href="#" class="arikicommon_btn">加入購物車</a> -->
                                 <!-- <a href="#" class="arikicommon_btn">直接購買</a> -->

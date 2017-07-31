@@ -1,9 +1,13 @@
+<?php 
+ob_start();
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
   <link rel="stylesheet" type="text/css" href="css/star.css">
-  <link rel="stylesheet" type="text/css" href="css/discussion.css">
+   <link rel="stylesheet" type="text/css" href="css/discussion.css">
   <script src="js/jquery.raty.js" type="text/javascript"></script>
   <script src="js/showMap.js"></script>
   <script src="js/getStar.js"></script>
@@ -12,7 +16,7 @@
 <body>
      <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
      <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
-      <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.php">討論區</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum_discussion.php">討論區內文</a>
+      <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.php">討論區</a><i class="fa fa-caret-right" aria-hidden="true"></i>討論區內文
       <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
      <div id="lightbox_11">
           <form class="gun">
@@ -31,9 +35,17 @@
                  <div id="cl">X</div>
            </div>
      </div><!-- lightbox2_11 -->
+<?php 
+     $wave_number = $_SESSION["map_wave"]["wave_number"];
+     require_once("connectBooks.php");
+     $sql2="select * from map_post where wave_number=$wave_number";
+     $wave = $pdo->query($sql2);
+     $waveRow = $wave->fetch(PDO::FETCH_ASSOC);
+ ?>     
      <div class="bg_11">
       <div class="title">
-          <h1>衝浪第一次接觸</h1>
+          <!-- <h1>衝浪第一次接觸</h1> -->
+          <h1><?php echo $waveRow["post_title"]; ?></h1>
           <div class="quit">檢舉</div>
           <div id="love">收藏</div>
           <div id="star"></div>
@@ -47,7 +59,7 @@
                   </div>
                   <div class="pos">
                         <div class="name">Mathi</div>
-                        <div class="time">發表時間<span class="date">2017/07/17</span></div>
+                        <div class="time">發表時間 <span class="date">2017/07/17</span></div>
                   </div>
             </div>
             <div class="box_b">
@@ -90,5 +102,6 @@
      </div><!-- bg_11 -->
      
      <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+
 </body>
 </html>

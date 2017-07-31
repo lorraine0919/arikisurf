@@ -1,3 +1,8 @@
+<?php 
+try{
+require_once('connectBooks.php');
+ ?>
+
 <!DOCTYPE html>
 <html lang="en"> 
   <!--header-->
@@ -7,6 +12,8 @@
   <link rel="stylesheet" type="text/css" href="css/customize.css">
   <link rel="stylesheet" type="text/css" href="css/customize_rwd.css">
   <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+<!--   <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C9807DD6-5F50-5349-A2DB-9C72E9BB087E/main.js" charset="UTF-8"></script> -->
+  <script src="http://d3js.org/d3.v3.min.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
  </head>
   <!--header end-->
@@ -45,7 +52,49 @@
 			</div>
 			<div class="demogroup">
 				<div class="demo">
-					<img src="images/2board/longboard/longboard.png" class="boarddemo">
+					<svg  x="0px" y="0px" viewBox="0 0 150 500" class="svgboard">
+						<g>
+							<!-- 遮色片形狀 -->
+							<defs>
+								<path class="bordshape" id="mask"/>
+							</defs>
+							<!-- 板型遮色片 -->
+							<clipPath id="clip">
+								<use xlink:href="#mask"  style="overflow:visible;"/>
+							</clipPath>
+							<!-- 主體顏色 -->
+							<linearGradient id="maincolor" gradientUnits="userSpaceOnUse" x1="-143.5315" y1="141.1379" x2="-150.2133" y2="503.2512" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/>
+								<stop  offset="1" style="stop-color:#FFFFFF"/>
+							</linearGradient>
+							<!-- 主體形狀 -->
+							<path class="bordshape" style="clip-path:url(#clip); fill:url(#maincolor);"/>
+
+							<!-- 放圖片						 -->
+							<g transform="matrix(1 0 0 1 -1.525879e-005 0)" style="clip-path:url(#clip);enable-background:new    ;">
+									<!-- <image style="overflow:visible;" width="500" height="500" id="XMLID_1_" xlink:href="0729logo.png"  transform="matrix(0.364 0 0 0.364 -244.6667 307.2233)">
+									</image> -->
+							</g>
+
+							<!-- 陰影顏色 -->
+							<linearGradient id="shadow" gradientUnits="userSpaceOnUse" x1="11.2131" y1="260.0541" x2="92.9405" y2="252.5548" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="1.021794e-007" style="stop-color:#595757;stop-opacity:0.2"/>
+								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+							</linearGradient>
+							<!-- 陰影形狀 -->
+							<path class="bordshape" style="clip-path:url(#clip); fill:url(#shadow);"/>
+							
+							<!-- 光顏色 -->
+							<linearGradient id="light" gradientUnits="userSpaceOnUse" x1="168.2328" y1="243.213" x2="87.8788" y2="252.6649" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="0" style="stop-color:#FFFFFF"/>
+								<stop  offset="0.401" style="stop-color:#FFFFFF;stop-opacity:0.599"/>
+								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+							</linearGradient>
+							<!-- 光形狀 -->
+							<path class="bordshape" style="clip-path:url(#clip); fill:url(#light);"/>
+							<g class="svgothers" style="clip-path:url(#clip);"></g>
+						</g>
+					</svg>
 					<img src="images/2board/base.png" class="base">
 				</div>
 				<div class="rwdselectboard" >
@@ -76,6 +125,7 @@
 						<div class="head">
 							<h3>長板<span>LONGBOARD</span></h3>
 						</div>
+						<input type="hidden" id="customerboard" value="長板<span>LONGBOARD</span>">
 						<div class="boardgroup">
 							<div class="board"><img src="images/2board/gunboard/gunboard_h.png" alt=""></div>
 							<div class="board click"><img src="images/2board/longboard/longboard_h.png" alt=""></div>
@@ -120,11 +170,55 @@
 			</div>
 			<div class="demogroup">
 				<div class="demo">
-					<img src="images/2board/longboard/longboard.png" class="boarddemo">
+					<svg  x="0px" y="0px" viewBox="10 0 115 500" class="svgboard" id="svgstep2">
+						<g>
+							<!-- 遮色片形狀 -->
+							<defs>
+								<path class="bordshape" id="mask2"/>
+							</defs>
+							<!-- 板型遮色片 -->
+							<clipPath id="clip2">
+								<use xlink:href="#mask2"  style="overflow:visible;"/>
+							</clipPath>
+							<!-- 主體顏色 -->
+							<linearGradient id="maincolor2" gradientUnits="userSpaceOnUse" x1="-142.5315" y1="143.2499" x2="-149.2133" y2="505.3632" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="1.021794e-007" style="stop-color:#C9CACA"/>
+								<stop  offset="1" style="stop-color:#FFFFFF"/>
+							</linearGradient>
+							<!-- 主體形狀 -->
+							<path class="bordshape mainshapepath" style="clip-path:url(#clip2); fill:url(#maincolor2);"/>
+
+
+
+							<!-- 陰影顏色 -->
+							<linearGradient id="shadow2" gradientUnits="userSpaceOnUse" x1="11.2131" y1="260.0541" x2="92.9405" y2="252.5548" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="1.021794e-007" style="stop-color:#595757;stop-opacity:0.2"/>
+								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+							</linearGradient>
+							<!-- 陰影形狀 -->
+							<path class="bordshape shadowpath" style="clip-path:url(#clip2); fill:url(#shadow2);"/>
+							
+							<!-- 光顏色 -->
+							<linearGradient id="light2" gradientUnits="userSpaceOnUse"  x1="168.2328" y1="243.213" x2="87.8788" y2="252.6649" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+								<stop  offset="0" style="stop-color:#FFFFFF"/>
+								<stop  offset="0.401" style="stop-color:#FFFFFF;stop-opacity:0.599"/>
+								<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+							</linearGradient>
+							<!-- 光形狀 -->
+							<path class="bordshape lightpath" style="clip-path:url(#clip2); fill:url(#light2);"/>
+							<g class="svgothers" style="clip-path:url(#clip2);"></g>
+							<!-- 放圖片						 -->
+							<g style="clip-path:url(#clip2);enable-background:new;" id="draggroup" >
+									<image style="overflow:visible;"  xlink:href="" class="patternshow" id="patternshow" >
+									</image>
+							</g>
+						</g>
+					</svg>
 					<img src="images/2board/base.png" class="base">
 				</div>	
 				<div class="rwdselectstyle">
 					<div class="colorgroup selectgroup">
+						<input type="hidden" id="customercolor" value="白">
 						<div class="btn click">選擇顏色</div>
 						<div class="clearfix"></div>
 						<div class="colorall">
@@ -144,23 +238,25 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="patterngroup selectgroup">
+						<input type="hidden" id="customerpattern" value="未選擇圖片">
 						<div class="btn">選擇圖樣</div>
 						<div class="clearfix"></div>
 							<div class="patternarea">
 								<div class="top">
 									<div class="allpattern">
+										<?php 
+	                                        $sql = 'select * from customize_officialimg';
+	                                        $pdostatement=$pdo->prepare($sql);
+	                                        $pdostatement->execute();
+	                                        while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
+										 ?>
 										<div class="pattern">
-											<img src="images/2board/step2/logo1.png">
+											<img src="images/2board/officalimg/<?php echo $pdoRow['officialimg_file_name']?>">
 										</div>
-										<div class="pattern">
-											<img src="images/2board/step2/logo2.png">
-										</div>
-										<div class="pattern">
-											<img src="images/2board/step2/logo3.png">
-										</div>
-										<div class="pattern">
-											<img src="images/2board/step2/logo4.png">
-										</div>
+										<?php 
+
+											}
+										 ?>
 									</div>
 									<div class="arrow">
 										<div class="pre arrowbtn"><i class="fa fa-caret-left" aria-hidden="true"></i></div>
@@ -180,6 +276,7 @@
 							<div class="clearfix"></div>
 					</div>
 					<div class="texturegroup selectgroup">
+						<input type="hidden" id="customermaterial" value="環氧樹脂">
 						<div class="btn">選擇材質</div>
 						<div class="clearfix"></div>
 						<div class="texturecontent">
@@ -240,13 +337,40 @@
 							<div class="clearfix"></div>
 							<div class="patternselectgroup">
 								<div class="patternselectgroupfix">
-									<div class="head"><p>Ariki c2.0</p></div>
+									<div class="head">
+											<p class="patterntitle">尚未選擇圖樣</p>
+											<script>
+											var patterntitlearr=[];
+											<?php 
+		                                        $sql = 'select * from customize_officialimg';
+		                                        $pdostatement=$pdo->prepare($sql);
+		                                        $pdostatement->execute();
+		                                        while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
+											 ?>
+												patterntitlearr.push('<?php echo $pdoRow['officialimg_name']?>');
+											<?php 
+
+												}
+											 ?>
+											 // console.log(patterntitlearr);
+											 </script>		
+											 <p class="patterntitle"></p>									
+									</div>
 									<div class="patternframe">
 										<div class="patterns">
-											<div class="pattern"><img src="images/2board/step2/logo1.png"></div>
-											<div class="pattern"><img src="images/2board/step2/logo2.png"></div>
-											<div class="pattern"><img src="images/2board/step2/logo3.png"></div>
-											<div class="pattern"><img src="images/2board/step2/logo4.png"></div>
+											<?php 
+		                                        $sql = 'select * from customize_officialimg';
+		                                        $pdostatement=$pdo->prepare($sql);
+		                                        $pdostatement->execute();
+		                                        while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
+											 ?>
+											<div class="pattern">
+												<img src="images/2board/officalimg/<?php echo $pdoRow['officialimg_file_name']?>">
+											</div>
+											<?php 
+
+												}
+											 ?>
 										</div>								
 									</div>
 									<div class="scroll">
@@ -296,7 +420,10 @@
 			</div>
 			<div class="demogroup">
 				<div class="demo">
-					<img src="images/2board/longboard/longboard.png" class="boarddemo">
+					<!-- <img src="images/2board/longboard/longboard.png" class="boarddemo"> -->
+					<!-- <img id="step3result" /> -->
+					<canvas id="step3result" style="display: none"></canvas>
+					<div id="png-container"></div>
 				</div>			
 			</div>
 			<div class="fill">
@@ -322,27 +449,27 @@
 							<table>
 								<tr>
 									<th><h3>姓名</h3></th>
-									<td><input type="text" name="" id=""></td>
+									<td><input type="text" name="" id="customername"></td>
 								</tr>
 								<tr>
 									<th><h3>電話</h3></th>
-									<td><input type="phone" name="" id=""></td>
+									<td><input type="phone" name="" id="customerphone"></td>
 								</tr>
 								<tr>
 									<th><h3>電子信箱</h3></th>
-									<td><input type="email" name="" id=""></td>
+									<td><input type="email" name="" id="customeremail"></td>
 								</tr>
 								<tr>
 									<th><h3>收件地址</h3></th>
-									<td><textarea rows="5"></textarea></td>
+									<td><textarea rows="5" id="customeraddress"></textarea></td>
 								</tr>
 								<tr>
 									<th><h3>匯款帳號後五碼</h3></th>
-									<td><input type="text" name="" id=""></td>
+									<td><input type="text" name="" id="customeraccount"></td>
 								</tr>
 								<tr>
 									<th><h3>其他留言</h3></th>
-									<td><textarea rows="5"></textarea></td>
+									<td><textarea rows="5" id="customermessage"></textarea></td>
 								</tr>
 							</table>
 							<div class="next">
@@ -371,29 +498,29 @@
 					<div class="content">
 						<div class="demogroup col-sm-4">
 							<div class="demo">
-								<img src="images/2board/longboard/longboard.png" class="boarddemo">
+								<img src="images/2board/longboard/longboard.png" class="boarddemo" id="orderpic">
 							</div>			
 						</div>
 						<div class="right col-sm-8">
 							<div class="custominfo col-sm-12">
 								<div class="title"><h3>您的資料</h3></div>
 								<div class="infocontent">
-									<p>姓名：鄧浮雲<br>
-									電話：03-94879487<br>
-									信箱：mathi5566@gmail.com<br>
-									收件地址：桃園市中壢區中央路1段1號<br>
-									匯款帳號後五碼：59487<br>
-									其他留言：煩請回覆告知出貨時間<br>
+									<p>姓名：<sapn id="ordername">鄧浮雲</sapn><br>
+									電話：<sapn id="orderphone">03-94879487</sapn><br>
+									信箱：<sapn id="orderemail">mathi5566@gmail.com</sapn><br>
+									收件地址：<sapn id="orderaddress">桃園市中壢區中央路1段1號</sapn><br>
+									匯款帳號後五碼：<sapn id="orderaccount">59487</sapn><br>
+									其他留言：<sapn id="ordermessage">煩請回覆告知出貨時間</sapn><br>
 									</p>
 								</div>
 							</div>
 							<div class="boardinfo col-sm-6 col-xs-12">
 								<div class="title"><h3>您的浪板</h3></div>
 								<div class="infocontent">
-									<P>板型：長板<br>
-									顏色：白色<br>
-									圖案：ARIKI BD101 <br>
-									材質：玻璃纖維<br>
+									<P>板型：<span id="orderboard">長板</span><br>
+									顏色：<span id="ordercolor">白色</span><br>
+									圖案：<span id="orderpattern">ARIKI BD101</span> <br>
+									材質：<span id="ordermaterial">玻璃纖維</span><br>
 									</P>
 								</div>
 							</div>
@@ -424,5 +551,15 @@
 </div>
 <script src="js/customize.js"></script>
  <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+<?php 
+
+
+}catch(PDOException $e){
+  echo $e->getLine();
+  echo $e->getMessage();
+}
+
+ ?>
+
 </body>
 </html>

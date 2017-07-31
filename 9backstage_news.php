@@ -36,17 +36,17 @@
                 <thead>
                   <tr>
                     
-                    <th class="hidden-phone"><i class="fa"></i>文章標題</th>
-                    <th><i class="fa"></i>文章日期</th>
-                    <th>編輯文章</th>
+                    <th><i class="fa"></i>文章標題</th>
+                    <th class="hidden-phone"><i class="fa"></i>文章日期</th>
+                    <th class="back_newsmodify">編輯文章</th>
                   </tr>
                   </thead>
                   <tbody>
                     <tr>
 
                       
-                      <td class="hidden-phone"><?php echo $newsRow["newstitle"]; ?></td>
-                      <td class="back_newsdate"><?php echo $newsRow["newsdate"]; ?></td>
+                      <td><?php echo $newsRow["newstitle"]; ?></td>
+                      <td class="back_newsdate hidden-phone"><?php echo $newsRow["newsdate"]; ?></td>
                       <input type="hidden" name="newsimg" value="<?php echo $newsRow['newsimg']; ?>">
                       <input type="hidden" name="newstxt" value="<?php echo $newsRow['newstxt']; ?>">
                       <td class="back_newsmodify">

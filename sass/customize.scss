@@ -125,6 +125,18 @@
 			padding: 4% 0 4% 4%;
 			margin: 2% 0 0 9%;
 			position: relative;
+			.pricegroup{
+				width: 31%;
+				position: absolute;
+				color: #fff;
+				top: -14%;
+    			left: 61%;
+				background-color: rgba(0,0,0,0.2);
+				padding: 10px 10px 10px 20px;
+				.priceshowgroup{
+					margin: 0 0 0 10px;
+				}
+			}
 			.introducefix{
 				position: absolute;
 				.head{

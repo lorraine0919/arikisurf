@@ -46,6 +46,24 @@ require_once('connectBooks.php');
 				</div>
 			</div>
 			<div class="introduce">
+				<div class="pricegroup">
+					<span>總價</span>
+					<span class="priceshowgroup">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+						<span class="priceshow">
+						
+						<?php 
+							$sql = 'select * from customize_model';
+							$pdostatement = $pdo->query($sql); 
+							$pdostatement->fetch(PDO::FETCH_ASSOC);
+							$pdorow = $pdostatement->fetch(PDO::FETCH_ASSOC);
+							echo $pdorow['customize_model_price'];
+						?>
+							
+						</span>	
+					</span>
+					
+				</div>
 				<div class="introducefix">
 					<div class="head">
 						<h3>長板（Longboard）</h3>

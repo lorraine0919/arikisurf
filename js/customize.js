@@ -67,6 +67,21 @@ window.onload=function(){
 		var index=$(this).index();
 		$('.step1_maxContent .rwdintroduce .rwdboardinfo').text(boardinfo[index]);
 	});
+
+/*↓步驟一按浪板換價錢*/
+	$('.step1_maxContent .board').click(function(){
+		var index = $(this).index()+1;
+		$.post('customize_update.php',{
+			'boardindex':index
+		},function(rs){
+			$('.step1_maxContent .priceshow').text(rs);
+		});
+	});
+
+/*↑步驟一按浪板換價錢*/
+
+
+
 /*↓步驟一rwd的拉出介紹*/
 	$('.btnfield').click(function(){
 		$('.rwdintroduce').toggleClass('show');

@@ -139,14 +139,11 @@ body {
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 18px;
-    transition: all 0.6s cubic-bezier(0, 0.74, 0.69, 0.83);
-    cursor: pointer;
-     }
+    transition: all 0.6s cubic-bezier(0, 0.74, 0.69, 0.83); }
 
   .news_item:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border: 0px; }
-   
 
   .news_item_txt {
     display: inline-block;
@@ -171,12 +168,5 @@ body {
     height: 13vh;
     display: inline-block;
     vertical-align: middle;
-    padding: 25px 15px; } 
-
-
-
-
-  }
-
-
+    padding: 25px 15px; } }
 /*桌機結束*/

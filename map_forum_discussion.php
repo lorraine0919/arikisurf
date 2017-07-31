@@ -1,3 +1,7 @@
+<?php 
+ob_start();
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,9 +35,17 @@
                  <div id="cl">X</div>
            </div>
      </div><!-- lightbox2_11 -->
+<?php 
+     $wave_number = $_SESSION["map_wave"]["wave_number"];
+     require_once("connectBooks.php");
+     $sql2="select * from map_post where wave_number=$wave_number";
+     $wave = $pdo->query($sql2);
+     $waveRow = $wave->fetch(PDO::FETCH_ASSOC);
+ ?>     
      <div class="bg_11">
       <div class="title">
-          <h1>衝浪第一次接觸</h1>
+          <!-- <h1>衝浪第一次接觸</h1> -->
+          <h1><?php echo $waveRow["post_title"]; ?></h1>
           <div class="quit">檢舉</div>
           <div id="love">收藏</div>
           <div id="star"></div>
@@ -47,7 +59,7 @@
                   </div>
                   <div class="pos">
                         <div class="name">Mathi</div>
-                        <div class="time">發表時間<span class="date">2017/07/17</span></div>
+                        <div class="time">發表時間 <span class="date">2017/07/17</span></div>
                   </div>
             </div>
             <div class="box_b">

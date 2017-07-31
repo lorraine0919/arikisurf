@@ -1,4 +1,4 @@
-window.onload=function(){
+$(function(){
 /*↓換頁相關*/
 	$('.step2_maxContent').hide();
 	$('.step3_maxContent').hide();
@@ -65,7 +65,9 @@ window.onload=function(){
 		$(this).addClass('click');
 		$('.rwdSelectboardMenu li').not(this).removeClass('click');
 		var index=$(this).index();
+		$('.step1_maxContent .introduce .contentimg img').attr('src','images/2board/step1/'+boardimg[index]+'.png');
 		$('.step1_maxContent .rwdintroduce .rwdboardinfo').text(boardinfo[index]);
+		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
 	});
 /*↓步驟一rwd的拉出介紹*/
 	$('.btnfield').click(function(){
@@ -74,58 +76,7 @@ window.onload=function(){
 	});
 /*↑步驟一rwd的拉出介紹*/
 
-/*↓步驟一顯示svg板型，按按鈕換板型*/
-	function setsvgboard(boardshape){
-		$('.bordshape').attr('d',boardshape);
-
-		// for (var i = 0; i < $('.bordshape').length; i++) {
-
-		// }
-
-	}
-	var boardshape='M119,168.6C111.5,54.3,73.8,58.4,73.8,58.4v0c0,0-37.7-4-45.2,110.2 C20.9,286.2,33,451.9,63.2,485.3c3.5,3.8,6.7,2.9,10.6,2.9v0c3.9,0,7.1,0.9,10.6-2.9C114.6,451.9,126.7,286.2,119,168.6z';
-	setsvgboard(boardshape);
-
-	$('.step1_maxContent .board').click(function(){
-		$('.patternshow').attr('transform','translate(-20,100)');
-		if($('.step1_maxContent .board').eq(0).hasClass('click')){
-			// gunboard
-			boardshape='M74.7,491.5c-56-44.5-55.9-263.2-37.6-380.1C46.7,51,70.3,21.5,70.3,21.5l0,0.1 c0.8,1,24.4,30.1,34.8,89.3c20.6,116.5,28,334.9-27.1,380.5c0,0-0.5,0.6-1.6,0.6C75.2,492,74.7,491.5,74.7,491.5z';
-			setsvgboard(boardshape);
-			$('.svgothers').html('<line x1="70.3" y1="21.5" x2="76.4" y2="492" style="opacity:0.2; fill:none; stroke:#040000; stroke-miterlimit:10;"/>');
-
-		}else if($('.step1_maxContent .board').eq(1).hasClass('click')){
-			// longboard
-			boardshape='M119,168.6C111.5,54.3,73.8,58.4,73.8,58.4v0c0,0-37.7-4-45.2,110.2 C20.9,286.2,33,451.9,63.2,485.3c3.5,3.8,6.7,2.9,10.6,2.9v0c3.9,0,7.1,0.9,10.6-2.9C114.6,451.9,126.7,286.2,119,168.6z';
-
-			setsvgboard(boardshape);
-			$('.svgothers').html('');
-		}else if($('.step1_maxContent .board').eq(2).hasClass('click')){
-			// funboard
-			boardshape='M72.8,96c0,0-51.9,9-49.9,187s37.8,206.3,49.9,206.3c12.1,0,47.9-28.3,49.9-206.3 S72.8,96,72.8,96z';
-			setsvgboard(boardshape);
-			$('.svgothers').html('<path d="M72.8,103.8c0,0-45.2,8.6-43.5,179.6s32.9,198.1,43.5,198.1c10.6,0,41.7-27.2,43.5-198.1 C118,112.5,72.8,103.8,72.8,103.8z" style="opacity:0.38;fill:none;stroke:#000000;stroke-miterlimit:10;"/><line x1="72.8" y1="103.8" x2="72.8" y2="481.5" style="opacity:0.38;fill:none;stroke:#000000;stroke-miterlimit:10;"/>');
-		}else if($('.step1_maxContent .board').eq(3).hasClass('click')){
-			// funboard
-			boardshape='M121.6,302.9c-0.5-113.2-46.5-167.9-46.5-167.9s-45.9,54.8-46.4,167.9S48,462.2,58.1,484c0,0,6.7,4.5,17,4.5 s16.7-3.9,17-4.5C92.5,483.4,122.1,416,121.6,302.9z';
- 			setsvgboard(boardshape);
-			$('.svgothers').html('<line   x1="75.2" y1="136" x2="75.2" y2="488" style="opacity:0.31;fill:none;stroke:#727272;stroke-miterlimit:10;"/> <path d="M42.8,399.5c0,0,10.3,57.8,19.4,70.3l-9,3c0,0-2.5-6-5.2-13.7c-2.6-7.5-5.3-16.6-6.3-21.3 c-0.4-2.1-2.8-11.9-4.9-23.1c-0.8-4.4-1.4-9-2.2-13.4L42.8,399.5z" style="opacity:0.31;fill:#727272;"/> <path d="M105.8,399.3c0,0-10.8,58-18.3,71l8.9,2.6c0,0,1.3-3.8,3.1-9.3c1.4-4.5,3.1-10.1,4.6-15.8 c0.8-3.1,2-7.6,2.6-10.3c1.1-4.9,5.1-21,7.4-36.6L105.8,399.3z" style="opacity:0.31;fill:#727272;"/>');
-		}else if($('.step1_maxContent .board').eq(4).hasClass('click')){
-			// funboard
-			boardshape='M115.8,326.8C114.6,173.4,76.3,157,76.3,157l-0.3,0.1c-3.3,1.1-38.5,15.8-42,169.1c0,0-5.8,97.6,26,163.6 c0,0,6.9,2.6,13.7-5.4c6.7,8.1,13.7,5.7,13.7,5.7C120.2,424.5,115.8,326.8,115.8,326.8z';
- 			setsvgboard(boardshape);
- 			$('.svgothers').html(''); 
-		}else if($('.step1_maxContent .board').eq(5).hasClass('click')){
-			// funboard
-			boardshape='M101,320c-1.6-1.6-47.9-3.4-51.7,0s-36.7,28.7-11.3,170.3c0,0,2.3,3.7,16,0c12.7-3.4,20.2-4.2,21.2-4.3 c1,0.1,8.5,0.9,21.2,4.3c13.7,3.7,16,0,16,0C137.7,348.7,102.6,321.6,101,320z';
- 			setsvgboard(boardshape);
- 			$('.svgothers').html(''); 
- 			$('.patternshow').attr('transform','translate(-20,300)');
-		}		
-	});
-/*↑步驟一顯示svg板型*/
-
- /*↓步驟二的手風琴*/
+/*↓步驟二的手風琴*/
 	$('.patternselectgroup').hide();
 	$('.textureselect').hide();
 	$('.colorbtn').click(function(){
@@ -172,16 +123,9 @@ window.onload=function(){
 /*↑步驟二rwd的手風琴*/
 
 /*↓步驟二按按鈕換顏色*/
-	var boardcolorarr = [
-		'<stop  offset="1.111794e-007" style="stop-color:#C9CACA"/> <stop  offset="1" style="stop-color:#FFFFFF"/>',
-		' <stop  offset="1.111794e-007" style="stop-color:#110C67"/> <stop  offset="1" style="stop-color:#00A0E9"/>',
-		'<stop  offset="0" style="stop-color:#B64621"/> <stop  offset="1" style="stop-color:#FFF100"/>'
-		];
-	$('.color').click(function(){
-		// console.log('1');
-		var index = $(this).index();
-		$('#maincolor2').html(boardcolorarr[index]);
-		// $('.mainshapepath').css('fill','url(#maincolor2)');
+	$('.selectgroup .btn').click(function(){
+		$(this).addClass('click');
+		$('.selectgroup .btn').not(this).removeClass('click');
 	});
 /*↑步驟二按按鈕換顏色*/
 
@@ -192,12 +136,38 @@ window.onload=function(){
 	});
 /*↑步驟二rwd按按鈕換顏色*/
 
+/*↓步驟二選到步驟一選的浪板*/
+	$('#step1tostep2').click(function(){
+		$('.step2_maxContent .boarddemo').attr('src',$('.step1_maxContent .boarddemo').attr('src'));
+	});
+
+/*↑步驟二選到步驟一選的浪板*/
+
 /*↓步驟二，色球顏色*/
 	for (var i = 0; i < 3; i++) {
 		var colorarr = ['#fff','#009bd8','#ffd105'];
 		$('.step2_maxContent .colorselectgroup .color .circle').eq(i).css('background-color',colorarr[i]);
 	}
 /*↑步驟二，色球顏色*/
+$('.step2_maxContent .colorselectgroup .color').click(function(){
+	var index=$(this).index();
+	console.log(index);
+	if(index==0){
+		var newsrc=$('.step1_maxContent .boarddemo').attr('src');
+		$('.step2_maxContent .boarddemo').attr('src',newsrc);
+	}else if(index==1){
+		var oldsrc=$('.step1_maxContent .boarddemo').attr('src');
+		var newsrc=oldsrc.substr(0,oldsrc.lastIndexOf('.'))+'_blue.png';
+		$('.step2_maxContent .boarddemo').attr('src',newsrc);
+	}else{
+		var oldsrc=$('.step1_maxContent .boarddemo').attr('src');
+		var newsrc=oldsrc.substr(0,oldsrc.lastIndexOf('.'))+'_yellow.png';
+		$('.step2_maxContent .boarddemo').attr('src',newsrc);
+	}
+});
+/*↑步驟二，改變浪板顏色*/
+
+/*↓步驟二，改變浪板顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
 	$('.step2_maxContent .texturegorup .texture').click(function(){
@@ -232,6 +202,7 @@ window.onload=function(){
 	});
 /*↑步驟二rwd換材質說明與按鈕外框*/
 
+<<<<<<< HEAD
 
 /*↓步驟二動態產生圖案group長度*/
 var patterns=$('.selectAndNext .pattern').length;
@@ -355,3 +326,6 @@ $('#step3tostep4').click(function(){
 };
 
 
+=======
+});
+>>>>>>> 57500ca874116d5e0db5402d7ca19981b21adbb2

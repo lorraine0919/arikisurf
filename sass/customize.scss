@@ -490,9 +490,17 @@
 							    padding: 5% 5% 5% 5%;
 							    margin:  5% 7% 5% 1%;
 							    border-radius: 16px 16px 0 0;
+							    p{
+							    	text-transform:capitalize;
+							    	display: none;
+							    	&:nth-child(1){
+							    		display:block;
+							    	}
+							    }
+
 							}
 							.patternframe{
-									width: 13vw;
+									width: calc(100% - 44px);
 									overflow-x:scroll; 
 									margin: auto;
 									transform:translateX(-0.5vw);

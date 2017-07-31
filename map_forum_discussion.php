@@ -38,7 +38,6 @@ $post_number = $_REQUEST["post_number"];
            </div>
      </div><!-- lightbox2_11 -->
 <?php 
-     $wave_number = $_SESSION["map_wave"]["wave_number"];
      require_once("connectBooks.php");
      $sql2="select * from map_post where wave_number=$wave_number and post_number=$post_number";
      $post = $pdo->query($sql2);

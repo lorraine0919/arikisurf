@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--header-->
-<head> 
+<head>
+     
       <!--(bake module/backstage_head.html)--><?php require_once('publicpage/backstage_head.php'); ?>
     <title>Ariki Surf - 後臺管理</title> 
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="css/9backstage_news.css">
+=======
+     <link rel="stylesheet" type="text/css" href="css/9backstage_news.css"> 
+>>>>>>> 00703118fdeffe15674dff85a60b6d5393b9c91e
     <script src="js/jquery.js"></script>
     <script src="js/9backstage_news.js"></script>
 </head>
@@ -35,18 +40,29 @@
               <table class="table table-striped table-advance table-hover">
                 <thead>
                   <tr>
+<<<<<<< HEAD
                     
                     <th class="hidden-phone"><i class="fa"></i>文章標題</th>
                     <th><i class="fa"></i>文章日期</th>
                     <th>編輯文章</th>
+=======
+                    <th class="rwd_width"><i class="fa"></i>文章標題</th>
+                    <th class="hidden-phone"><i class="fa"></i>文章日期</th>
+                    <th class="rwd_width_modify">編輯文章</th>
+>>>>>>> 00703118fdeffe15674dff85a60b6d5393b9c91e
                   </tr>
                   </thead>
                   <tbody>
                     <tr>
 
                       
+<<<<<<< HEAD
                       <td class="hidden-phone"><?php echo $newsRow["newstitle"]; ?></td>
                       <td class="back_newsdate"><?php echo $newsRow["newsdate"]; ?></td>
+=======
+                      <td class="back_newstitle"><?php echo $newsRow["newstitle"]; ?></td>
+                      <td class="back_newsdate hidden-phone"><?php echo $newsRow["newsdate"]; ?></td>
+>>>>>>> 00703118fdeffe15674dff85a60b6d5393b9c91e
                       <input type="hidden" name="newsimg" value="<?php echo $newsRow['newsimg']; ?>">
                       <input type="hidden" name="newstxt" value="<?php echo $newsRow['newstxt']; ?>">
                       <td class="back_newsmodify">
@@ -78,7 +94,7 @@
   <div class="form-div">
     <h2>新增最新消息</h2>
       <div class="add-btn-close">
-        <a href="9backstage_news.php"><img src="images/9backstage/cancel.png" width="32" height="32"></a>
+        <a href="9backstage_news.php"><img src="images/9backstage/cross.png" width="32" height="32"></a>
       </div>
         <form method="post" action="9backstage_addnews.php" enctype="multipart/form-data">
         
@@ -113,7 +129,7 @@
   <div class="form-div">
     <h2>修改最新消息</h2>
     <div class="edit-btn-close">
-      <a href="9backstage_news.php"><img src="images/9backstage/cancel.png" width="32" height="32"></a>
+      <a href="9backstage_news.php"><img src="images/9backstage/cross.png" width="32" height="32"></a>
     </div>
       <form method="post" action="9backstage_editnews.php" enctype="multipart/form-data">
        <input type="hidden" name="newsno" id="newsnoid" value="">

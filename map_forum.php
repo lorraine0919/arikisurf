@@ -66,7 +66,7 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
            $wave = $pdo->query($sql2);
            $waveRow = $wave->fetch(PDO::FETCH_ASSOC);         
 ?>
-       <div class="bg_10" id="bg_10">
+       <div class="bg_10">
          <div class="info_10">
            <div class="ic wave">
              <img src="images/4wavepoint/w1.png">
@@ -105,10 +105,9 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
        $sql="select * from map_post where wave_number=$wave_number order by post_date DESC";
        $data = $pdo->query($sql);
        while($dataItem = $data->fetch(PDO::FETCH_ASSOC)) {
-
 ?>
               <div class="item">
-                 <a href="map_forum_discussion.php" id="map_a">                  
+                 <a href="map_forum_discussion.php?post_number=<?php echo $dataItem["post_number"] ?>" id="map_a">                  
                      <div class="pic_i">
                            <!-- <img src="images/4wavepoint/fou/1.jpg"> -->                          
                             <img src='images/4wavepoint/<?php echo $wave_number ?>/fou/<?php echo $dataItem["post_img"]  ?>'>
@@ -129,7 +128,7 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
                      </div>
                  </a>
                      <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
+                         <div id="star"></div>
                          <div class="view">
                              <div class="see">
                               <img src="images/4wavepoint/view.png" alt="view">
@@ -444,7 +443,6 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
          </div><!-- fourm --> 
        </div><!-- bg_10 -->
       <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
-
   <script>
     var bgsrc = 'images/4wavepoint/<?php echo $wave_number ?>/bg_f.jpg';
     console.log(bgsrc);

@@ -350,6 +350,13 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 function warningifnotfill(){
 
 }
+	
+	$('#step3tostep4').click(function(){
+        $('.lightboxgroup').fadeIn(20);
+	});
+	$('#closebtn').click(function(){
+        $('.lightboxgroup').fadeOut(0);
+	});
 /*↑步驟三驗證是否填妥*/
 
 /*↓步驟三填寫資料送到步驟四*/

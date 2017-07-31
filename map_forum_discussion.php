@@ -3,7 +3,7 @@
 <head>
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
   <link rel="stylesheet" type="text/css" href="css/star.css">
-  <link rel="stylesheet" type="text/css" href="css/discussion.css">
+   <link rel="stylesheet" type="text/css" href="css/discussion.css">
   <script src="js/jquery.raty.js" type="text/javascript"></script>
   <script src="js/showMap.js"></script>
   <script src="js/getStar.js"></script>
@@ -12,7 +12,7 @@
 <body>
      <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
      <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
-      <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.php">討論區</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum_discussion.php">討論區內文</a>
+      <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.php">討論區</a><i class="fa fa-caret-right" aria-hidden="true"></i>討論區內文
       <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
      <div id="lightbox_11">
           <form class="gun">
@@ -90,5 +90,6 @@
      </div><!-- bg_11 -->
      
      <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+
 </body>
 </html>

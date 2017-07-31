@@ -93,7 +93,8 @@ $post_number = $_REQUEST["post_number"];
 ?>                   
                   <div class="feed">
                     <div class="icon">
-                              <img src="images/4wavepoint/user/user3.png">
+                              <!-- <img src="images/4wavepoint/user/user3.png"> -->
+                              <img src="<?php echo $reRow["mugshot"] ?>">
                         </div>                        
                         <div class="feed_c">                        
                              <div class="feed_info">

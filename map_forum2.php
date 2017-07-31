@@ -16,17 +16,21 @@ require_once("connectBooks.php");
   <script src="js/map_up.js"></script>
   <script src="js/jquery.raty.js" type="text/javascript"></script>
   <script>
-    $(document).ready(function(){
-          $('#result').hide();   //隱藏結果箱子
-          $('#star').raty({      
-              hints:[1,2,3,4,5], 
-              path : 'images/4wavepoint/img',
-              target:'#result',
-              targetKeep:true,
-              targetType:'number',
-              readOnly: true,
-          });
-    });//ready
+        $(document).ready(function(){
+        $('#result').hide();   //隱藏結果箱子
+        $('#star').raty({     
+            hints:[1,2,3,4,5], 
+            path : 'images/4wavepoint/img',
+            target:'#result',
+            targetKeep:true,
+            targetType:'score',
+            click:function(score,evt){
+                 $("#lightbox2_11").show();
+                 $("#lightbox2_11 .ustar span").html(score);
+                 $(this).find('img').unbind();
+              }
+         });
+       });//ready
   </script>
   <title>酋長衝浪Ariki Surf-討論區</title>
 </head>
@@ -102,7 +106,7 @@ require_once("connectBooks.php");
            </div>
            <div class="beach_txt">
                <!--  <p>頭頂著一輪俏皮的彎月,靜靜地享受和愛的人在一起的寧靜時光。來吧,嘉善路邊的月砂森林,這裡有你遺落的安然。</p>
-                <p>小屋是來自米蘭國際設計週的設計師@企鵝沈虹設計的,位於嘉善路和永康路的三岔口永盛里內,四通八達的小巷把老上海的風味都嵌在了裡面,別晃
+                <p>小屋是來自米蘭國際設計週的設計師@企鵝沈虹設計的,位於嘉善路和永康路的三岔口永盛裡內,四通八達的小巷把老上海的風味都嵌在了裡面,別晃
                 眼~這裡真的有沙灘哦!出門50米,有老人坐在門口聽著滬劇小調聊著天,再往外走就是不得不來上一杯的永康路,露天酒吧、法式麵包店、質感家具店
                 和街道旁隨處停著的哈雷機車......一切都在嘗試拖住你的步伐,讓你慢下來享受這個瞬間。</p>
                 <p>穿過熱鬧非凡的街道,回到月砂森林,關上白色的小門。迎接你的是紮染的質感布條,木質、竹編的椅子,還有帶著年輪的樹樁,直接把你捲入了清香瀰漫
@@ -147,12 +151,14 @@ require_once("connectBooks.php");
                  </a>
                      <div class="item_border">
                          <!-- <div id="star"></div> -->
-                         <div id="star"></div>
+                         <div id="star">
                               <script>
-                                var math = <?php echo $dataItem["star_score"] ?>;
-                                console.log(math);
-                                $('#star').raty({ score: 3 });
-                              </script>                                                                                
+                                var score = <?php echo $dataItem["star_score"] ?>;
+                                console.log(score);
+                                $('#star').raty('score');
+                              </script>
+                                                         
+                         </div>
                          <div id="result"></div>
                          <div class="view">
                              <div class="see">

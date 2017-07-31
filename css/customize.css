@@ -106,7 +106,7 @@
       display: inline-block;
       width: 28%; }
       .bg_forest_2 .step1_maxContent .demogroup .demo {
-        width: 43%;
+        width: 33%;
         margin: 0 0 0 28%;
         position: relative;
         padding-top: 109%; }
@@ -121,11 +121,6 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
-        .bg_forest_2 .step1_maxContent .demogroup .demo .svgboard {
-          position: absolute;
-          top: 0;
-          z-index: 2;
-          width: 100%; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
         display: none; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce {
@@ -283,12 +278,6 @@
         margin: 0 0 0 28%;
         position: relative;
         padding-top: 109%; }
-        .bg_forest_2 .step2_maxContent .demogroup .demo .svgboard {
-          position: absolute;
-          top: 0;
-          left: 9%;
-          z-index: 2;
-          width: 100%; }
         .bg_forest_2 .step2_maxContent .demogroup .demo img {
           width: 100%;
           position: absolute; }
@@ -298,16 +287,8 @@
           z-index: 2; }
         .bg_forest_2 .step2_maxContent .demogroup .demo .base {
           bottom: -37%;
-          left: -31%;
-          width: 196%; }
-        .bg_forest_2 .step2_maxContent .demogroup .demo #draggroup {
-          position: absolute; }
-        .bg_forest_2 .step2_maxContent .demogroup .demo .patternshow {
-          position: absolute;
-          width: 160%;
-          z-index: 3; }
-          .bg_forest_2 .step2_maxContent .demogroup .demo .patternshow img {
-            width: 100%; }
+          left: -24%;
+          width: 150%; }
       .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle {
         display: none; }
       .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce {
@@ -389,13 +370,8 @@
                 padding: 5% 5% 5% 5%;
                 margin: 5% 7% 5% 1%;
                 border-radius: 16px 16px 0 0; }
-                .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .head p {
-                  text-transform: capitalize;
-                  display: none; }
-                  .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .head p:nth-child(1) {
-                    display: block; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe {
-                width: calc(100% - 44px);
+                width: 17vw;
                 overflow-x: scroll;
                 margin: auto;
                 transform: translateX(-0.5vw); }
@@ -409,13 +385,10 @@
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe::-webkit-scrollbar-thumb {
                   background: rgba(255, 130, 0, 0.1); }
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns {
-                  height: 10vh;
-                  overflow-y: hidden; }
+                  width: 25vw; }
                   .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns .pattern {
                     width: 5vw;
-                    display: inline-block;
-                    margin: 0 -5px 0 -5px;
-                    cursor: pointer; }
+                    display: inline-block; }
                     .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns .pattern img {
                       width: 100%; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .scroll {
@@ -528,7 +501,8 @@
         position: relative;
         padding-top: 142%; }
         .bg_forest_2 .step3_maxContent .demogroup .demo img {
-          width: 100%; }
+          width: 100%;
+          position: absolute; }
         .bg_forest_2 .step3_maxContent .demogroup .demo .boarddemo {
           top: 0;
           left: 0;
@@ -537,11 +511,6 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
-        .bg_forest_2 .step3_maxContent .demogroup .demo #png-container {
-          width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0; }
     .bg_forest_2 .step3_maxContent .fill {
       vertical-align: top;
       display: inline-block;

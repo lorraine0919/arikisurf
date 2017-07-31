@@ -136,12 +136,12 @@
 				}
 			}
 		}
-		.demogroup{ //我是步驟一
+		.demogroup{
 			vertical-align: top;
 			display: inline-block;
 			width: 28%;
 			.demo{				
-			    width: 43%;
+			    width: 33%;
 			    margin: 0 0 0 28%;
 			    position: relative;
 			    padding-top: 109%;
@@ -159,13 +159,6 @@
 				    left: -24%;
 					width: 150%;
 				}
-				.svgboard{
-					position: absolute;
-					top: 0;
-					z-index: 2;
-					width: 100%;
-				}
-				
 				
 			}
 			.rwdselectboard{
@@ -368,7 +361,7 @@
 
 			}
 		}
-		.demogroup{ //我是步驟二
+		.demogroup{
 			vertical-align: top;
 			display: inline-block;
 			width: 28%;
@@ -377,14 +370,6 @@
 			    margin: 0 0 0 28%;
 			    position: relative;
 			    padding-top: 109%;
-
-				.svgboard{
-					position: absolute;
-					top: 0;
-					left: 9%;
-					z-index: 2;
-					width: 100%;
-				}
 				img{
 					width: 100%;
 					position: absolute;
@@ -395,21 +380,11 @@
 					z-index: 2;
 				}
 				.base{
-				    bottom: -37%;
-				    left: -31%;
-				    width: 196%;
+					bottom: -37%;
+				    left: -24%;
+					width: 150%;
 				}
-				#draggroup{
-					position: absolute;
-				}
-				.patternshow{
-					position: absolute;
-					width:160%;
-					z-index: 3;
-					img{
-						width: 100%;	
-					}
-				}
+				
 			}
 			.rwdselectstyle{
 				display: none;
@@ -507,17 +482,9 @@
 							    padding: 5% 5% 5% 5%;
 							    margin:  5% 7% 5% 1%;
 							    border-radius: 16px 16px 0 0;
-							    p{
-							    	text-transform:capitalize;
-							    	display: none;
-							    	&:nth-child(1){
-							    		display:block;
-							    	}
-							    }
-
 							}
 							.patternframe{
-									width: calc(100% - 44px);
+									width: 17vw;
 									overflow-x:scroll; 
 									margin: auto;
 									transform:translateX(-0.5vw);
@@ -537,16 +504,12 @@
 									  background: rgba(255, 130, 0, 0.1);
 									}
 								.patterns{
-									height: 10vh;
-									overflow-y:hidden; 
+									width: 25vw;
 									.pattern{
 										width: 5vw;
 										display: inline-block;
-										margin: 0 -5px 0 -5px ;
-										cursor: pointer;
 										img{
 											width: 100%;
-											// opacity: 0.2;
 										}
 									}
 								}							
@@ -683,7 +646,7 @@
 			    top: 43%;
 			}
 		}
-		.demogroup{ //我是步驟三
+		.demogroup{
 			vertical-align: top;
 			display: inline-block;
 			width: 16%;
@@ -693,15 +656,9 @@
 			    width: 80%;
 			    position: relative;
 			    padding-top: 142%;
-			    // #step3result{
-			    // 	position: absolute;
-			    // 	top: 0;
-			    // 	left: 0;
-			    // 	width: 100%;
-			    // 	height: 100%;
-			    // }
 				img{
 					width: 100%;
+					position: absolute;
 				}
 				.boarddemo{
 					top: 0;
@@ -713,12 +670,7 @@
 				    left: -24%;
 					width: 150%;
 				}
-				#png-container{
-					width: 100%;
-					position: absolute;
-					top: 0;
-					left: 0;
-				}
+				
 			}		
 		}
 		.fill{

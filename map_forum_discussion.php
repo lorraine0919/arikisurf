@@ -99,7 +99,7 @@ $post_number = $_REQUEST["post_number"];
                         </div>
                         <div class="quit">檢舉</div>
                   </div><!-- feed -->
-                  <div class="feed_t">
+                  <form class="feed_t">
                         <div class="icon">
                               <img src="images/4wavepoint/user/user.jpg">
                         </div>
@@ -109,7 +109,7 @@ $post_number = $_REQUEST["post_number"];
                                    <input type="submit" value="送出" id="feedpo">
                              </div>
                         </div>
-                  </div>
+                  </form>
             </div>
       </div><!-- main_11 -->    
      </div><!-- bg_11 --> 

@@ -17,12 +17,29 @@
   position: relative;
   background-position: center;
   padding: 4% 0 4% 0; }
-  .bg_forest_2 .pillar {
-    position: absolute;
-    bottom: 20%;
-    left: 20%; }
-    .bg_forest_2 .pillar img {
-      width: 100%; }
+  .bg_forest_2 .lightboxgroup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none; }
+    .bg_forest_2 .lightboxgroup .lightboxarea {
+      max-width: 500px;
+      max-height: 650px;
+      background-color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 5px; }
   .bg_forest_2 .step1_maxContent {
     max-width: 1170px;
     margin: auto;
@@ -89,7 +106,7 @@
       display: inline-block;
       width: 28%; }
       .bg_forest_2 .step1_maxContent .demogroup .demo {
-        width: 33%;
+        width: 43%;
         margin: 0 0 0 28%;
         position: relative;
         padding-top: 109%; }
@@ -104,6 +121,11 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
+        .bg_forest_2 .step1_maxContent .demogroup .demo .svgboard {
+          position: absolute;
+          top: 0;
+          z-index: 2;
+          width: 100%; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
         display: none; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce {
@@ -261,6 +283,12 @@
         margin: 0 0 0 28%;
         position: relative;
         padding-top: 109%; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo .svgboard {
+          position: absolute;
+          top: 0;
+          left: 9%;
+          z-index: 2;
+          width: 100%; }
         .bg_forest_2 .step2_maxContent .demogroup .demo img {
           width: 100%;
           position: absolute; }
@@ -270,8 +298,16 @@
           z-index: 2; }
         .bg_forest_2 .step2_maxContent .demogroup .demo .base {
           bottom: -37%;
-          left: -24%;
-          width: 150%; }
+          left: -31%;
+          width: 196%; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo #draggroup {
+          position: absolute; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo .patternshow {
+          position: absolute;
+          width: 160%;
+          z-index: 3; }
+          .bg_forest_2 .step2_maxContent .demogroup .demo .patternshow img {
+            width: 100%; }
       .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle {
         display: none; }
       .bg_forest_2 .step2_maxContent .demogroup .rwdintroduce {
@@ -353,8 +389,13 @@
                 padding: 5% 5% 5% 5%;
                 margin: 5% 7% 5% 1%;
                 border-radius: 16px 16px 0 0; }
+                .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .head p {
+                  text-transform: capitalize;
+                  display: none; }
+                  .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .head p:nth-child(1) {
+                    display: block; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe {
-                width: 17vw;
+                width: calc(100% - 44px);
                 overflow-x: scroll;
                 margin: auto;
                 transform: translateX(-0.5vw); }
@@ -368,10 +409,13 @@
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe::-webkit-scrollbar-thumb {
                   background: rgba(255, 130, 0, 0.1); }
                 .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns {
-                  width: 25vw; }
+                  height: 10vh;
+                  overflow-y: hidden; }
                   .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns .pattern {
                     width: 5vw;
-                    display: inline-block; }
+                    display: inline-block;
+                    margin: 0 -5px 0 -5px;
+                    cursor: pointer; }
                     .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .patternframe .patterns .pattern img {
                       width: 100%; }
               .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup .patternselectgroupfix .scroll {
@@ -484,8 +528,7 @@
         position: relative;
         padding-top: 142%; }
         .bg_forest_2 .step3_maxContent .demogroup .demo img {
-          width: 100%;
-          position: absolute; }
+          width: 100%; }
         .bg_forest_2 .step3_maxContent .demogroup .demo .boarddemo {
           top: 0;
           left: 0;
@@ -494,6 +537,11 @@
           bottom: -37%;
           left: -24%;
           width: 150%; }
+        .bg_forest_2 .step3_maxContent .demogroup .demo #png-container {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0; }
     .bg_forest_2 .step3_maxContent .fill {
       vertical-align: top;
       display: inline-block;
@@ -654,6 +702,8 @@
           border-bottom: 2px solid rgba(255, 255, 255, 0.6); }
         .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .infocontent {
           padding: 2% 0px; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .infocontent #orderpattern {
+            text-transform: capitalize; }
         .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next {
           text-align: right;
           margin: 0 34px 0 0; }

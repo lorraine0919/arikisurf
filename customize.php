@@ -362,8 +362,7 @@ require_once('connectBooks.php');
 												}
 											 ?>
 											 // console.log(patterntitlearr);
-											 </script>		
-											 <p class="patterntitle"></p>									
+											 </script>										
 									</div>
 									<div class="patternframe">
 										<div class="patterns">

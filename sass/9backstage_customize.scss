@@ -1,7 +1,21 @@
+ul.sidebar-menu{
+	li{
+		a[href="9backstage_customize.php"]{
+			background-color:#e97b23; 
+		}
+	}
+}
+
 .table{
 	.content-panel{
 		padding: 20px;
 		font-size: 18px; 
+		.officialimgshow{
+			text-align: center;
+		}
+		th{
+			background-color: rgba(0,0,0,0.1);
+		}
 		td{
 			color: #11314c;
 		}
@@ -10,6 +24,9 @@
 		}
 		table{
 			max-width: 800px;
+		}
+		a{
+			cursor: pointer; 
 		}
 	}
 

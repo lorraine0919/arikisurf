@@ -40,7 +40,7 @@
 <?php
 
 try{
-  require_once("connectBooks.php");
+  require_once("connectBD101g2.php");
   $sql = "select * from news where newsno=".$_REQUEST['articleno'];
   $pdo = new PDO( $dsn, $user, $password, $options); 
   $news = $pdo->prepare( $sql );
@@ -55,7 +55,7 @@ try{
    </div>
   <div class="article_item_content">
     <div class="article_item_content_img"><img src="<?php echo $hebe["newsimg"]; ?>"></div>
-      <p class="article_item_content_txt"><pre><?php echo $hebe["newstxt"]; ?></pre></p>
+      <p class="article_item_content_txt"><?php echo $hebe["newstxt"]; ?></p>
   </div>
     <div class="btn_15">
         <a href="news.php" class="arikicommon_btn">返回最新消息</a> 

@@ -69,7 +69,7 @@ window.onload=function(){
 	});
 
 /*↓步驟一按浪板換價錢*/
-
+	$('.boardprice').val($('.step1_maxContent .priceshow').text());
 	$('.step1_maxContent .board').click(function(){
 		var index = $(this).index()+1;
 		$.post('customize_update.php',{
@@ -140,32 +140,37 @@ window.onload=function(){
 	});
 /*↑步驟一顯示svg板型*/
 
-/*↓步驟二把步驟一的價錢帶過去*/
-	// $('#step1tostep2').click(function(){
-	// 	$('.step2_maxContent .priceshow').text($('.step1_maxContent .priceshow').text());
-	// });
-	
-/*↑步驟二把步驟一的價錢帶過去*/
 
 /*↓步驟二加總價格*/
 	var total = $('.step1_maxContent .priceshow').text();
 	$('.step2_maxContent .priceshow').text(total);
 	function calculateprice(){
-		if($('.officalpatternprice').val()!=''){
+		if($('.userpatternprice').val()==''){
 			console.log('沒有使用者上傳');
 			total = $('.boardprice').val()+$('.materialprice').val()+$('.officalpatternprice').val();
 			// console.log(total);
 			$('.step2_maxContent .priceshow').text(total);
-		}else if($('.userpatternprice').val()!=''){
+		}else if($('.officalpatternprice').val()==''){
+			console.log('沒有官方');
 			total = $('.boardprice').val()+$('.materialprice').val()+$('.userpatternprice').val();
 			$('.step2_maxContent .priceshow').text(total);
 		}else{
+			console.log('沒有圖樣');
+			total = $('.boardprice').val()+$('.materialprice').val();
 			$('.step2_maxContent .priceshow').text(total);
 		}	
 		
 	}
 
 /*↑步驟二加總價格*/
+
+
+/*↓步驟二，一到步驟二馬上加上材質價格*/
+	$('#step1tostep2').click(function(){
+		calculateprice();
+	});
+	
+/*↑步驟二，一到步驟二馬上加上材質價格*/
 
 
 
@@ -310,6 +315,7 @@ $('.pattern').click(function(){
 	},function(rs){
 		$('.officalpatternprice').val(rs);
 		console.log('官方圖片'+$('.officalpatternprice').val());
+		$('.userpatternprice').removeAttr('value');
 	});
 	calculateprice();
 });
@@ -369,6 +375,7 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		},function(rs){
 			$('.userpatternprice').val(rs);
 			console.log('使用者圖片'+$('.userpatternprice').val());
+			$('.officalpatternprice').removeAttr('value');
 		});
 		calculateprice();
 	}

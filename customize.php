@@ -197,7 +197,7 @@ require_once('connectBooks.php');
 						</div>
 					</div>
 					<div class="content">
-						<input type="hidden" class="materialprice">
+						<input type="hidden" class="materialprice" value="">
 						<p>構造由Eps(較高級的保麗龍)＋玻璃纖維布＋Epoxy樹脂所組成，重量較輕，靈敏度較佳，但是穩定度較差，少了玻纖板的紮實感！<br><br>
 						由於Epoxy樹脂的硬度較硬，所以優點是較耐撞擊，但是也因為硬而無彈性，在大浪時有可能發生直接斷裂的情形</p>
 					</div>					
@@ -280,7 +280,7 @@ require_once('connectBooks.php');
 							<div class="patternarea">
 								<div class="top">
 									<div class="allpattern">
-										<input type="hidden" class="officalpatternprice">
+										<input type="hidden" class="officalpatternprice" value="">
 										<?php 
 	                                        $sql = 'select * from customize_officialimg';
 	                                        $pdostatement=$pdo->prepare($sql);
@@ -302,7 +302,7 @@ require_once('connectBooks.php');
 								</div>
 								<div class="bottom">
 									<div class="left">
-										<input type="hidden" class="userpatternprice">
+										<input type="hidden" class="userpatternprice" value="">
 										<p>上傳您的圖案</p>
 									</div>
 									<div class="right">

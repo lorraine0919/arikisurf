@@ -69,13 +69,18 @@ window.onload=function(){
 	});
 
 /*↓步驟一按浪板換價錢*/
+
 	$('.step1_maxContent .board').click(function(){
 		var index = $(this).index()+1;
 		$.post('customize_update.php',{
 			'boardindex':index
 		},function(rs){
 			$('.step1_maxContent .priceshow').text(rs);
+			$('.step2_maxContent .priceshow').text(rs);
+			$('.boardprice').val(rs);
+			console.log('浪板'+$('.boardprice').val());
 		});
+
 	});
 
 /*↑步驟一按浪板換價錢*/
@@ -136,11 +141,33 @@ window.onload=function(){
 /*↑步驟一顯示svg板型*/
 
 /*↓步驟二把步驟一的價錢帶過去*/
-	$('#step1tostep2').click(function(){
-		$('.step2_maxContent .priceshow').text($('.step1_maxContent .priceshow').text());
-	});
+	// $('#step1tostep2').click(function(){
+	// 	$('.step2_maxContent .priceshow').text($('.step1_maxContent .priceshow').text());
+	// });
 	
 /*↑步驟二把步驟一的價錢帶過去*/
+
+/*↓步驟二加總價格*/
+	var total = $('.step1_maxContent .priceshow').text();
+	$('.step2_maxContent .priceshow').text(total);
+	function calculateprice(){
+		if($('.officalpatternprice').val()!=''){
+			console.log('沒有使用者上傳');
+			total = $('.boardprice').val()+$('.materialprice').val()+$('.officalpatternprice').val();
+			// console.log(total);
+			$('.step2_maxContent .priceshow').text(total);
+		}else if($('.userpatternprice').val()!=''){
+			total = $('.boardprice').val()+$('.materialprice').val()+$('.userpatternprice').val();
+			$('.step2_maxContent .priceshow').text(total);
+		}else{
+			$('.step2_maxContent .priceshow').text(total);
+		}	
+		
+	}
+
+/*↑步驟二加總價格*/
+
+
 
  /*↓步驟二的手風琴*/
 	$('.patternselectgroup').hide();
@@ -160,9 +187,9 @@ window.onload=function(){
 		$('.colorselectgroup').slideUp();
 		$('.textureselect').slideToggle();
 	});
-	$('.orangebtn').click(function(){
+	// $('.orangebtn').click(function(){
 
-	});
+	// });
 /*↑步驟二的手風琴*/
 
 /*↓步驟二rwd的手風琴*/
@@ -184,7 +211,7 @@ window.onload=function(){
 		$('.rwdselectstyle .patternarea').slideUp();
 	});
 	$('.orangebtn').click(function(){
-
+		// $('.step2_maxContent .priceshow').text();
 	});
 /*↑步驟二rwd的手風琴*/
 
@@ -219,6 +246,12 @@ window.onload=function(){
 /*↑步驟二，色球顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
+	$.post('customize_update.php',{
+		'Epoxyprice':'yes'
+	},function(rs){
+		$('.materialprice').val(rs);
+		console.log('預設材質'+$('.materialprice').val());
+	});
 	$('.step2_maxContent .texturegorup .texture').click(function(){
 		var index=$(this).index();
 		$(this).addClass('click');
@@ -232,6 +265,14 @@ window.onload=function(){
 		$('#customermaterial').val(texturename[index]);
 		$('.step2_maxContent .introduce .content p').html(textureinfo[index]);
 		$('.step2_maxContent .introduce .head h3').text(texturename[index]);
+		index++;
+		$.post('customize_update.php',{
+			'customermaterial':index
+		},function(rs){
+			$('.materialprice').val(rs);
+			console.log('材質'+$('.materialprice').val());
+		});
+		calculateprice();
 	});
 /*↑步驟二換材質說明與按鈕外框*/
 
@@ -262,8 +303,15 @@ $('.selectAndNext .patterns').width(newwidth);
 
 /*↓步驟二按圖換標題*/
 $('.pattern').click(function(){
-	var index= $(this).index();
+	var index = $(this).index();
 	$('.patterntitle').text(patterntitlearr[index]);
+	$.post('customize_update.php',{
+		'clickpattern':'yes'
+	},function(rs){
+		$('.officalpatternprice').val(rs);
+		console.log('官方圖片'+$('.officalpatternprice').val());
+	});
+	calculateprice();
 });
 /*↑步驟二按圖換標題*/
 
@@ -315,6 +363,14 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		readFile.addEventListener('load',function(){
 			document.getElementById('patternshow').setAttribute("xlink:href", readFile.result);
 		},false);
+
+		$.post('customize_update.php',{
+			'clickupload':'yes'
+		},function(rs){
+			$('.userpatternprice').val(rs);
+			console.log('使用者圖片'+$('.userpatternprice').val());
+		});
+		calculateprice();
 	}
 /*↑步驟二上傳圖片至demo區*/
 
@@ -337,6 +393,7 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
     var patternshow = d3.select('#patternshow')
             .call(drag);
 /*↑步驟二拖曳圖片*/
+
 
 
 /*↓步驟二儲存圖片到下一步驟*/

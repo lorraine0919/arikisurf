@@ -143,13 +143,18 @@ window.onload=function(){
 /*↓步驟二秀出價格*/
 	function showprice(){
 			if(isNaN(parseInt($('#materialprice').text()))){
-				$('#materialprice').text('0');
+				$.post('customize_update.php',{
+					'Epoxyprice':'yes'
+				},function(rs){
+					$('#materialprice').text(rs);
+					// console.log('預設材質'+$('#materialprice').val());
+				});
 			}
 			if(isNaN(parseInt($('#patternprice').text()))){
 				$('#patternprice').text('0');
 			}
 	}
-	
+	showprice();
 /*↑步驟二秀出價格*/
 
 /*↓步驟二加總價格*/
@@ -252,12 +257,7 @@ window.onload=function(){
 /*↑步驟二，色球顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
-	$.post('customize_update.php',{
-		'Epoxyprice':'yes'
-	},function(rs){
-		$('#materialprice').val(rs);
-		console.log('預設材質'+$('#materialprice').val());
-	});
+
 	$('.step2_maxContent .texturegorup .texture').click(function(){
 		var index=$(this).index();
 		$(this).addClass('click');

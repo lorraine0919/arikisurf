@@ -183,22 +183,27 @@ require_once('connectBooks.php');
 					<table>
 						<tr>
 							<td>板型價格</td>
-							<td><span id="boardprice"></span></td>
+							<td><span id="boardprice" class="shownowprice"></span></td>
 						</tr>
 						<tr>
 							<td>圖樣價格</td>
 							<td>
-								<span id="patternprice"></span>
+								<span id="patternprice" class="shownowprice"></span>
 							</td>
 						</tr>
 						<tr>
 							<td>材質價格</td>
-							<td><span id="materialprice"></span></td>
+							<td><span id="materialprice" class="shownowprice"></span></td>
 						</tr>
-						<tr border="1">
+						<tr>
+							<td colspan="2" class="dividelinearea">
+								<div class="divideline"></div>
+							</td>
+						</tr>
+						<tr >
 							<td><span>總價</span></td>
 							<td>
-								<span class="priceshowgroup">
+								<span class="priceshowgroup" class="shownowprice">
 									<i class="fa fa-usd" aria-hidden="true"></i>
 									<span class="priceshow">
 									

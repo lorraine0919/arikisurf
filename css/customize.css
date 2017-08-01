@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .bg_forest_2 .step1_maxContent .stepbar .circle:after, .bg_forest_2 .step2_maxContent .stepbar .circle:after, .bg_forest_2 .step3_maxContent .stepbar .circle:after, .bg_forest_2 .step4_maxContent .stepbar .circle:after {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
 
@@ -29,7 +30,7 @@
     display: none; }
     .bg_forest_2 .lightboxgroup .lightboxarea {
       max-width: 200px;
-      max-height: 150px;
+      max-height: 20vh;
       background-color: white;
       position: relative;
       top: 50%;
@@ -40,14 +41,25 @@
       transform: translateY(-50%);
       margin: 0 auto;
       box-sizing: border-box;
-      border-radius: 5px; }
+      border-radius: 5px;
+      background-image: url("../images/7member/7member_ordercheck/decoration.png");
+      background-repeat: no-repeat;
+      background-position: 0% 113%; }
       .bg_forest_2 .lightboxgroup .lightboxarea p {
         height: 20vh;
-        line-height: 20vh; }
+        line-height: 20vh;
+        color: #4d6273;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 18px; }
       .bg_forest_2 .lightboxgroup .lightboxarea #closebtn {
         position: absolute;
         right: 0;
         top: 0; }
+        .bg_forest_2 .lightboxgroup .lightboxarea #closebtn .fa {
+          font-size: 30px;
+          margin: 0 5px 0 0;
+          color: #0e2334; }
   .bg_forest_2 .step1_maxContent {
     max-width: 1170px;
     margin: auto;
@@ -85,6 +97,7 @@
         right: -147%;
         top: 43%; }
     .bg_forest_2 .step1_maxContent .introduce {
+      /*我是步驟一*/
       vertical-align: top;
       width: 100%;
       display: inline-block;
@@ -96,11 +109,11 @@
       margin: 2% 0 0 9%;
       position: relative; }
       .bg_forest_2 .step1_maxContent .introduce .pricegroup {
-        width: 31%;
+        width: 44%;
         position: absolute;
         color: #fff;
         top: -14%;
-        left: 61%;
+        left: 47%;
         background: rgba(0, 0, 0, 0.1);
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;
         border-radius: 10px;
@@ -264,6 +277,7 @@
         right: -147%;
         top: 43%; }
     .bg_forest_2 .step2_maxContent .introduce {
+      /*我是步驟二*/
       vertical-align: top;
       width: 100%;
       display: inline-block;
@@ -275,17 +289,28 @@
       margin: 10% 0 0 9%;
       position: relative; }
       .bg_forest_2 .step2_maxContent .introduce .pricegroup {
-        width: 31%;
+        width: 61%;
         position: absolute;
         color: #fff;
-        top: -30%;
-        left: 61%;
+        top: -38%;
+        left: -20%;
         background: rgba(0, 0, 0, 0.1);
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;
         border-radius: 10px;
         padding: 10px 10px 10px 20px; }
+        .bg_forest_2 .step2_maxContent .introduce .pricegroup table {
+          width: 100%; }
+          .bg_forest_2 .step2_maxContent .introduce .pricegroup table tr td:nth-child(2) {
+            text-align: right; }
         .bg_forest_2 .step2_maxContent .introduce .pricegroup .priceshowgroup {
-          margin: 0 0 0 10px; }
+          color: #e97b23; }
+        .bg_forest_2 .step2_maxContent .introduce .pricegroup .dividelinearea {
+          height: 20px; }
+          .bg_forest_2 .step2_maxContent .introduce .pricegroup .dividelinearea .divideline {
+            background-color: #fff;
+            height: 1px;
+            margin: 10px 0;
+            opacity: 0.2; }
       .bg_forest_2 .step2_maxContent .introduce .introducefix {
         position: absolute;
         width: 125%;
@@ -612,7 +637,9 @@
               display: inline-block; }
               .bg_forest_2 .step3_maxContent .fill .fillfix .total .totalfix .number h3 {
                 font-size: 30px;
-                color: #fff; }
+                color: #fff;
+                display: inline-block;
+                margin: 0 10px; }
             .bg_forest_2 .step3_maxContent .fill .fillfix .total .totalfix .detail {
               margin: 0 10px;
               vertical-align: middle;

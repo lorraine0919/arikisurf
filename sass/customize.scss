@@ -46,7 +46,7 @@
 	    display: none;
 	    .lightboxarea{
 	    	max-width: 200px;
-		    max-height: 150px;
+		    max-height: 20vh;
 		    background-color: white;
 		    position: relative;
 		    top: 50%;
@@ -58,14 +58,28 @@
 		    margin: 0 auto;
 		    box-sizing: border-box;
 		    border-radius: 5px;
+			background-image: url("../images/7member/7member_ordercheck/decoration.png");
+			background-repeat: no-repeat;
+			background-position: 0% 113%;
 		    p{
 		    	height: 20vh;
 		    	line-height: 20vh;
+			    color: #4d6273;
+			    font-weight: bold;
+			    letter-spacing: 2px;
+			    font-size: 18px;
 		    }
 		    #closebtn{
 		    	position: absolute;
 		    	right: 0;
 		    	top: 0;
+		    	
+
+		    	.fa{
+		    		font-size: 30px;
+		    		margin: 0 5px 0 0;
+		    		color:#0e2334;
+		    	}
 		    }
 	    }
 	}
@@ -113,7 +127,7 @@
 			    top: 43%;
 			}
 		}
-		.introduce{
+		.introduce{/*我是步驟一*/
 			vertical-align: top;
 			width: 100%;
 			display: inline-block;
@@ -126,11 +140,11 @@
 			margin: 2% 0 0 9%;
 			position: relative;
 			.pricegroup{
-				width: 31%;
+				width: 44%;
 				position: absolute;
 				color: #fff;
 				top: -14%;
-    			left: 61%;
+    			left: 47%;
 				background: rgba(0,0,0,0.1);
 				box-shadow: 0px 0px 5px rgba(0,0,0,0.2) inset;
 				border-radius: 10px;
@@ -350,7 +364,7 @@
 			    top: 43%;
 			}
 		}
-		.introduce{
+		.introduce{/*我是步驟二*/
 			vertical-align: top;
 			width: 100%;
 			display: inline-block;
@@ -363,18 +377,36 @@
 			margin: 10% 0 0 9%;
 			position: relative;
 			.pricegroup{
-				width: 31%;
+				width: 61%;
 				position: absolute;
 				color: #fff;
-			    top: -30%;
-			    left: 61%;
+				top: -38%;
+			    left: -20%;
 				background: rgba(0,0,0,0.1);
 				box-shadow: 0px 0px 5px rgba(0,0,0,0.2) inset;
 				border-radius: 10px;
 				padding: 10px 10px 10px 20px;
-				.priceshowgroup{
-					margin: 0 0 0 10px;
+				table{
+					width: 100%;
+					tr{
+						td:nth-child(2){
+							text-align: right;
+						}
+					}
 				}
+				.priceshowgroup{
+					color: #e97b23;
+				}
+				.dividelinearea{
+					height: 20px;
+					.divideline{
+						background-color: #fff;
+						height: 1px;
+						margin: 10px 0;
+						opacity: 0.2;
+					}	
+				}
+				
 			}
 			.introducefix{
 				position: absolute;
@@ -807,6 +839,8 @@
 					    	h3{
 					    		font-size: 30px;
 					    		color: #fff;
+					    		display: inline-block;
+					    		margin: 0 10px;
 					    	}
 					    }
 						.detail{

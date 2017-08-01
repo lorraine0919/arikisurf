@@ -308,24 +308,6 @@ var newwidth = $('.selectAndNext .pattern').width()*patterns;
 $('.selectAndNext .patterns').width(newwidth);
 /*↑步驟二動態產生圖案group長度*/
 
-/*↓步驟二按圖換標題*/
-var count=1;
-$('.pattern').click(function(){
-	console.log('點了'+count+'下');
-	var index = $(this).index();
-	$('.patterntitle').text(patterntitlearr[index]);
-	$.post('customize_update.php',{
-		'clickpattern':'yes'
-	},function(rs){
-		$('#patternprice').text(rs);
-	});
-	count++;
-	showprice();
-	calculateprice();
-
-});
-
-/*↑步驟二按圖換標題*/
 
 /*↓步驟二按圖放到浪板上*/
 
@@ -337,6 +319,17 @@ $('.pattern').click(function(){
 // });
 for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 	document.getElementsByClassName('pattern')[i].onclick=function(e){
+		/*↓步驟二按圖換標題*/
+		var index = $(this).index();
+		$('.patterntitle').text(patterntitlearr[index]);
+		$.post('customize_update.php',{
+			'clickpattern':'yes'
+		},function(rs){
+			$('#patternprice').text(rs);
+		});
+		showprice();
+		calculateprice();
+		/*↑步驟二按圖換標題*/
 		function convertImgToDataURLviaCanvas(url, callback, outputFormat) {
 		  var img = new Image();
 		  img.crossOrigin = 'Anonymous';

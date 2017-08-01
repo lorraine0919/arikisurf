@@ -27,7 +27,7 @@
                         <img src="images/9backstage/add.png" class="news_add_btn" width="32" height="32">
                       </div>
                     <?php 
-                      require_once("connectBD101g2.php");
+                      require_once("connectBooks.php");
                       $sql = "select * from news order by newsno desc";
                       $news = $pdo->prepare( $sql );
                       $news->execute();

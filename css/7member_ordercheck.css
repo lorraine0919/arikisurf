@@ -75,9 +75,11 @@
         .member_ordercheck_23 .ordercheck-title ul .li-unclick:after {
           border-left: 50px solid #194165;
           border-top: 41px solid transparent; }
-    .member_ordercheck_23 .customize-txt,
-    .member_ordercheck_23 .fitting-txt,
-    .member_ordercheck_23 .history-txt {
+    .member_ordercheck_23 #fitting-txt, .member_ordercheck_23 #history-txt {
+      display: none; }
+    .member_ordercheck_23 #customize-txt {
+      display: block; }
+    .member_ordercheck_23 .item-txt {
       width: 90%;
       margin: 0 auto;
       background-color: #DDD;
@@ -85,42 +87,20 @@
       box-sizing: border-box;
       padding: 15px;
       padding-top: 5px; }
-      .member_ordercheck_23 .customize-txt .txt-title,
-      .member_ordercheck_23 .fitting-txt .txt-title,
-      .member_ordercheck_23 .history-txt .txt-title {
+      .member_ordercheck_23 .item-txt .txt-title {
         border-bottom: 1px solid #a1aab0; }
-        .member_ordercheck_23 .customize-txt .txt-title ul li:nth-child(3),
-        .member_ordercheck_23 .customize-txt .txt-title ul li:nth-child(4),
-        .member_ordercheck_23 .customize-txt .txt-title ul li:nth-child(5),
-        .member_ordercheck_23 .fitting-txt .txt-title ul li:nth-child(3),
-        .member_ordercheck_23 .fitting-txt .txt-title ul li:nth-child(4),
-        .member_ordercheck_23 .fitting-txt .txt-title ul li:nth-child(5),
-        .member_ordercheck_23 .history-txt .txt-title ul li:nth-child(3),
-        .member_ordercheck_23 .history-txt .txt-title ul li:nth-child(4),
-        .member_ordercheck_23 .history-txt .txt-title ul li:nth-child(5) {
+        .member_ordercheck_23 .item-txt .txt-title ul li:nth-child(3),
+        .member_ordercheck_23 .item-txt .txt-title ul li:nth-child(4),
+        .member_ordercheck_23 .item-txt .txt-title ul li:nth-child(5) {
           text-align: center; }
-      .member_ordercheck_23 .customize-txt .txt-val ul li:nth-child(1),
-      .member_ordercheck_23 .customize-txt .txt-val ul li:nth-child(2),
-      .member_ordercheck_23 .customize-txt .txt-val ul li:nth-child(3),
-      .member_ordercheck_23 .customize-txt .txt-val ul li:nth-child(4),
-      .member_ordercheck_23 .fitting-txt .txt-val ul li:nth-child(1),
-      .member_ordercheck_23 .fitting-txt .txt-val ul li:nth-child(2),
-      .member_ordercheck_23 .fitting-txt .txt-val ul li:nth-child(3),
-      .member_ordercheck_23 .fitting-txt .txt-val ul li:nth-child(4),
-      .member_ordercheck_23 .history-txt .txt-val ul li:nth-child(1),
-      .member_ordercheck_23 .history-txt .txt-val ul li:nth-child(2),
-      .member_ordercheck_23 .history-txt .txt-val ul li:nth-child(3),
-      .member_ordercheck_23 .history-txt .txt-val ul li:nth-child(4) {
+      .member_ordercheck_23 .item-txt .txt-val ul li:nth-child(1),
+      .member_ordercheck_23 .item-txt .txt-val ul li:nth-child(2),
+      .member_ordercheck_23 .item-txt .txt-val ul li:nth-child(3),
+      .member_ordercheck_23 .item-txt .txt-val ul li:nth-child(4) {
         padding-top: 17px; }
-      .member_ordercheck_23 .customize-txt .txt-val ul li:nth-child(3),
-      .member_ordercheck_23 .customize-txt .txt-val ul li:nth-child(4),
-      .member_ordercheck_23 .customize-txt .txt-val ul li:nth-child(5),
-      .member_ordercheck_23 .fitting-txt .txt-val ul li:nth-child(3),
-      .member_ordercheck_23 .fitting-txt .txt-val ul li:nth-child(4),
-      .member_ordercheck_23 .fitting-txt .txt-val ul li:nth-child(5),
-      .member_ordercheck_23 .history-txt .txt-val ul li:nth-child(3),
-      .member_ordercheck_23 .history-txt .txt-val ul li:nth-child(4),
-      .member_ordercheck_23 .history-txt .txt-val ul li:nth-child(5) {
+      .member_ordercheck_23 .item-txt .txt-val ul li:nth-child(3),
+      .member_ordercheck_23 .item-txt .txt-val ul li:nth-child(4),
+      .member_ordercheck_23 .item-txt .txt-val ul li:nth-child(5) {
         text-align: center; }
     .member_ordercheck_23 .decoration {
       width: 90%;

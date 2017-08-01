@@ -94,9 +94,13 @@
                 }
             }
         }
-        .customize-txt,
-        .fitting-txt,
-        .history-txt{
+        #fitting-txt,#history-txt{
+            display: none;
+        }
+        #customize-txt{
+            display: block;
+        }
+        .item-txt{
                 width: 90%;
                 margin:0 auto;
                 background-color:#DDD;

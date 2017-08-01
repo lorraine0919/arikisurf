@@ -476,5 +476,20 @@ $('#step3tostep4').click(function(){
 	$('#finaltotalprice').text($('.priceshow').text());
 });
 /*↑步驟三填寫資料送到步驟四*/
+
+
+/*↓步驟四跳出光箱，寫入資料庫*/
+$('#finishorder').click(function(){
+	$('.comfirmboxtotal').text($('.priceshow').text());
+	$('.comfirmlightboxgroup').fadeIn(100);
+	$('#comfirmclosebtn').click(function(){
+		$('.comfirmlightboxgroup').fadeOut(0);
+		console.log($('.priceshow').text());
+	});
+
+});
+
+/*↑步驟四跳出光箱，寫入資料庫*/
+
 };
 

@@ -60,6 +60,49 @@
           font-size: 30px;
           margin: 0 5px 0 0;
           color: #0e2334; }
+  .bg_forest_2 .comfirmlightboxgroup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none; }
+    .bg_forest_2 .comfirmlightboxgroup .comfirmlightboxarea {
+      max-width: 50vw;
+      background-color: white;
+      position: relative;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 6% 3%;
+      transform: translateY(-50%);
+      margin: 0 auto;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-image: url("../images/7member/7member_ordercheck/decoration.png");
+      background-repeat: no-repeat;
+      background-position: 0% 107%; }
+      .bg_forest_2 .comfirmlightboxgroup .comfirmlightboxarea p {
+        color: #4d6273;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 18px;
+        margin: 10% 0;
+        line-height: 30px; }
+      .bg_forest_2 .comfirmlightboxgroup .comfirmlightboxarea #comfirmclosebtn {
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .bg_forest_2 .comfirmlightboxgroup .comfirmlightboxarea #comfirmclosebtn .fa {
+          font-size: 30px;
+          margin: 0 5px 0 0;
+          color: #0e2334; }
+      .bg_forest_2 .comfirmlightboxgroup .comfirmlightboxarea .comfirmboxtotal {
+        color: #e97b23; }
   .bg_forest_2 .step1_maxContent {
     max-width: 1170px;
     margin: auto;

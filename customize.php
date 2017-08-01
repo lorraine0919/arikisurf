@@ -30,9 +30,25 @@ require_once('connectBooks.php');
 		</div> -->
 		<div class="lightboxgroup">
 			<div class="lightboxarea">
-				<h2></h2>
-				<p>請填寫完整資料</p>
+				<h2 class="lightboxtitle"></h2>
+				<p class="lightboxcontent">請填寫完整資料</p>
 				<div id="closebtn">
+					<i class="fa fa-times" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div class="comfirmlightboxgroup">
+			<div class="comfirmlightboxarea">
+				<h2 class="comfirmlightboxtitle">完成交易</h2>
+				<p class="comfirmlightboxcontent">
+					謝謝您購買酋長的客製化浪板，<br>
+					請於七日內匯款<span class="comfirmboxtotal"></span>元整至下列帳戶<br>
+					700-9487999887<br>
+					若未於七日內匯款，將視為取消交易<br>
+					
+				</p>
+				<a class="arikicommon_next_btn">前往訂單查詢</a>
+				<div id="comfirmclosebtn">
 					<i class="fa fa-times" aria-hidden="true"></i>
 				</div>
 			</div>

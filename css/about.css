@@ -309,7 +309,23 @@
       float: left;
       line-height: 1.8;
       height: 24px;
-      text-align: center; } }
+      text-align: center; } 
+
+    #goTop a {
+    display: block;
+    z-index: 11;
+    border: none;
+    text-decoration: none; }
+    #goTop a img {
+      width: 20%;
+      height: auto;
+      position: fixed;
+      bottom: 50px;
+      right: 10px;
+      z-index: 50;
+      transition: all 0.3s ease; }
+
+    }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
   .cen, .banner_bg_17 .about_title_17 {

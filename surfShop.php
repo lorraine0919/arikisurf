@@ -389,4 +389,3 @@ try{
  <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
 </body>
 </html>
- 

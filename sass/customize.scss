@@ -46,7 +46,7 @@
 	    display: none;
 	    .lightboxarea{
 	    	max-width: 200px;
-		    max-height: 150px;
+		    max-height: 20vh;
 		    background-color: white;
 		    position: relative;
 		    top: 50%;
@@ -66,6 +66,11 @@
 		    	position: absolute;
 		    	right: 0;
 		    	top: 0;
+		    	.fa{
+		    		font-size: 30px;
+		    		margin: 0 5px 0 0;
+		    		color:#0e2334;
+		    	}
 		    }
 	    }
 	}

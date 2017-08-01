@@ -30,7 +30,7 @@
     display: none; }
     .bg_forest_2 .lightboxgroup .lightboxarea {
       max-width: 200px;
-      max-height: 150px;
+      max-height: 20vh;
       background-color: white;
       position: relative;
       top: 50%;
@@ -49,6 +49,10 @@
         position: absolute;
         right: 0;
         top: 0; }
+        .bg_forest_2 .lightboxgroup .lightboxarea #closebtn .fa {
+          font-size: 30px;
+          margin: 0 5px 0 0;
+          color: #0e2334; }
   .bg_forest_2 .step1_maxContent {
     max-width: 1170px;
     margin: auto;

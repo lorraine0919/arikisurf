@@ -33,7 +33,7 @@ require_once('connectBooks.php');
 				<h2></h2>
 				<p>請填寫完整資料</p>
 				<div id="closebtn">
-					<img src="images/3accessories/Close.png" alt="">
+					<i class="fa fa-times" aria-hidden="true"></i>
 				</div>
 			</div>
 		</div>

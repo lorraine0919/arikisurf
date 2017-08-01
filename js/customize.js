@@ -469,6 +469,10 @@ $('#step3tostep4').click(function(){
 	$('#ordercolor').text($('#customercolor').val());
 	$('#orderpattern').text($('.patterntitle').eq(0).text());
 	$('#ordermaterial').text($('#customermaterial').val());
+	$('#finalboardprice').text($('#boardprice').text());
+	$('#finalpatternprice').text($('#patternprice').text());
+	$('#finalmaterialprice').text($('#materialprice').text());
+	$('#finaltotalprice').text($('.priceshow').text());
 });
 /*↑步驟三填寫資料送到步驟四*/
 };

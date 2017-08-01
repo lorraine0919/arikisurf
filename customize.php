@@ -414,7 +414,7 @@ require_once('connectBooks.php');
 							<div class="patternselectgroup">
 								<div class="patternselectgroupfix">
 									<div class="head">
-											<p class="patterntitle">尚未選擇圖樣</p>
+											<p class="patterntitle">未選擇圖樣</p>
 											<script>
 											var patterntitlearr=[];
 											<?php 
@@ -568,7 +568,7 @@ require_once('connectBooks.php');
 				<div class="fillfix">
 					
 					<div class="head">
-						<h3>填寫購買資料</h3>
+						<h3>確認購買資料</h3>
 					</div>
 					<div class="content">
 						<div class="demogroup col-sm-4">
@@ -580,32 +580,34 @@ require_once('connectBooks.php');
 							<div class="custominfo col-sm-12">
 								<div class="title"><h3>您的資料</h3></div>
 								<div class="infocontent">
-									<p>姓名：<sapn id="ordername">鄧浮雲</sapn><br>
-									電話：<sapn id="orderphone">03-94879487</sapn><br>
-									信箱：<sapn id="orderemail">mathi5566@gmail.com</sapn><br>
-									收件地址：<sapn id="orderaddress">桃園市中壢區中央路1段1號</sapn><br>
-									匯款帳號後五碼：<sapn id="orderaccount">59487</sapn><br>
-									其他留言：<sapn id="ordermessage">煩請回覆告知出貨時間</sapn><br>
+									<p>姓名　<sapn id="ordername">鄧浮雲</sapn><br>
+									電話　<sapn id="orderphone">03-94879487</sapn><br>
+									信箱　<sapn id="orderemail">mathi5566@gmail.com</sapn><br>
+									收件地址　<sapn id="orderaddress">桃園市中壢區中央路1段1號</sapn><br>
+									匯款帳號後五碼　<sapn id="orderaccount">59487</sapn><br>
+									其他留言　<sapn id="ordermessage">煩請回覆告知出貨時間</sapn><br>
 									</p>
 								</div>
 							</div>
 							<div class="boardinfo col-sm-6 col-xs-12">
 								<div class="title"><h3>您的浪板</h3></div>
 								<div class="infocontent">
-									<P>板型：<span id="orderboard">長板</span><br>
-									顏色：<span id="ordercolor">白色</span><br>
-									圖案：<span id="orderpattern">ARIKI BD101</span> <br>
-									材質：<span id="ordermaterial">玻璃纖維</span><br>
+									<P>板型　<span id="orderboard">長板</span><br>
+									顏色　<span id="ordercolor">白色</span><br>
+									圖案　<span id="orderpattern">ARIKI BD101</span> <br>
+									材質　<span id="ordermaterial">玻璃纖維</span><br>
 									</P>
 								</div>
 							</div>
 							<div class="totalinfo col-sm-6 col-xs-12">
-								<div class="title"><h3>應付金額</h3></div>
+								<div class="title"><h3>訂單明細</h3></div>
 								<div class="infocontent">
 									<p>
-										小計：94770元<br>
-										運費：100元<br>
-										總價：94870元<br>
+										板型　<span id="finalboardprice">94770</span><span class="unitdollar">元</span><br>
+										圖樣　<span id="finalpatternprice">94770</span> <span class="unitdollar">元</span><br>
+										材質　<span id="finalmaterialprice">94770</span><span class="unitdollar">元</span><br>
+										運費　<span>500</span> <span class="unitdollar">元</span><br>
+										<span class="finaltotalpricegroup">總價　<span id="finaltotalprice">94870</span> <span class="unitdollar">元</span></span><br>
 									</p>
 								</div>
 							</div>

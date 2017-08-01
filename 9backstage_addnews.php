@@ -7,6 +7,7 @@
 <body>
 <?php 
 
+
 switch($_FILES["newsimg"]["error"] ){
 	case UPLOAD_ERR_OK : 
 		// if( file_exists("newsimg") == false){

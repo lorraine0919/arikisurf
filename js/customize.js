@@ -46,11 +46,12 @@ window.onload=function(){
 
 	var boardimg = ['ongunboard','onlongboard','onfunboard','onshortboard','onfishboard','onbodyboard'];
 	var boarddemo = ['gunboard','longboard','funboard','shortboard','fishboard','bodyboard'];
-
+	var boardnouserpick;
 	$('.step1_maxContent .board').click(function(){
 		$(this).addClass('click');
 		$('.step1_maxContent .board').not(this).removeClass('click');
 		var index=$(this).index();
+		boardnouserpick=index+1;
 		$('.step1_maxContent .introduce .contentimg img').attr('src','images/2board/step1/'+boardimg[index]+'.png');
 		$('.step1_maxContent .head h3').html(boardnamearr[index]);
 		$('.step1_maxContent .content p').text(boardinfo[index]);
@@ -486,6 +487,20 @@ $('#finishorder').click(function(){
 		$('.comfirmlightboxgroup').fadeOut(0);
 		console.log($('.priceshow').text());
 	});
+	$.post('customize_update.php',{
+		'customize_tel':$('#orderphone').text(),
+		'customize_email':$('#orderemail').text(),
+		'customize_adress':$('#orderaddress').text(),
+		'customize_atm_acount':$('#orderaccount').text(),
+		'customize_usermessage':$('#ordermessage').text(),
+		'modelNo':boardnouserpick,
+		'materialNo':
+		'colorNo':
+		'boarddemo':
+		'customize_order_total':
+	},function(rs){
+
+	})
 
 });
 

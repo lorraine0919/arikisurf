@@ -1,3 +1,4 @@
+
 <?php 
 
  require_once("connectBooks.php");
@@ -19,4 +20,6 @@
   	
     echo json_encode($newsarr);
   }
+  
+
  ?>

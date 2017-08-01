@@ -11,9 +11,10 @@
 
 @media screen and (max-width: 767px) {
   .bg_15 {
-    background-image: url("../images/5news/bg_f.jpg");
+    background-image: url("../images/4wavepoint/bg_f.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-color: #2A6C84;
     height: auto;
     padding-top: 1rem; }
     .bg_15 .article_title_15 {
@@ -28,11 +29,10 @@
 
   .article_item {
     width: 100%;
-    padding-bottom: 5vh;
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); }
+    padding-bottom: 5vh; }
 
   .article_item_title {
-    font-size: 16px;
+    font-size: 18px;
     padding: 15px 10px;
     background-color: #1D4D66;
     color: #fff;
@@ -51,7 +51,7 @@
   .article_item_content {
     line-height: 2;
     padding: 30px;
-    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-color: rgba(29, 77, 102, 0.9);
     color: #fff;
     font-size: 18px; }
 
@@ -59,7 +59,12 @@
     display: inline-block;
     text-align: center;
     width: 100%;
-    margin-top: 30px; } }
+    margin-top: 20px; }
+
+  .btn_15_a {
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #fff; } }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
   .cen, .bg_15 .article_title_15 {
@@ -68,7 +73,7 @@
     margin: 0 auto; }
 
   .bg_15 {
-    background-image: url("../images/5news/bg_f.jpg");
+    background-image: url("../images/4wavepoint/bg_f.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
@@ -83,23 +88,27 @@
         color: #fff;
         margin-top: 15rem; }
 
-  .body_15 {
-    max-width: 1170px;
-    margin: auto; }
+  .article_title_15 {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px; }
 
   .article_item {
     width: 100%;
     padding: 7vh 0; }
 
-  .article_big_title {
-    color: #fff; }
-
   .article_item_title {
     font-size: 28px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #1D4D66;
     color: #fff;
-    border-bottom: 1px solid #ED8C00; }
+    border-bottom: 2px solid #ED8C00; }
     .article_item_title p {
       font-size: 16px;
       padding: 10px 0px; }
@@ -114,7 +123,7 @@
   .article_item_content {
     line-height: 2;
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(29, 77, 102, 0.1);
     color: #fff;
     font-size: 18px; }
 
@@ -122,5 +131,14 @@
     display: inline-block;
     text-align: center;
     width: 100%;
-    margin-top: 30px; } }
+    margin-top: 30px; }
+
+  .btn_15_a {
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #fff; }
+
+  .btn_15_a:hover {
+    border: 2px solid #ED8C00;
+    color: #ED8C00; } }
 /*桌機結束*/

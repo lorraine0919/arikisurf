@@ -8,10 +8,9 @@ $textarea = $_REQUEST["feed"];
 
 $member_no = 3;
 $name = "AAA";
-$mugshot = "123.jpg";
+$mugshot = "images/7member/123.jpg";
 $reply_time = date("Y-m-d H:i:s"); 
-
-if($textarea!=null){      
+    
 	require_once("connectBooks.php");
 	$sql = "insert into map_reply values(null,'$textarea',$member_no,'$name','$mugshot',$post_number,'$reply_time')";
 	$pdo->exec($sql);
@@ -21,11 +20,8 @@ if($textarea!=null){
 	$intoRow = $into->fetch(PDO::FETCH_ASSOC);
 	$jsonStr = json_encode($intoRow);     //送出json字串
     echo $jsonStr;
-	header("location:map_forum_discussion.php");
+	// header("location:map_forum_discussion.php");
 
-}else{
-  echo "GG";
-}
 
 
 ?>

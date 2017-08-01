@@ -35,7 +35,7 @@ $post_number = $_REQUEST["post_number"];
      </div><!-- lightbox_11 -->
      <div id="lightbox2_11">
            <div class="ustar">
-                 會員XX,你的評分為 <span></span> 顆星
+                 會員<span>XX</span>,你的評分為 <span></span> 顆星
                  <div id="cl">X</div>
            </div>
      </div><!-- lightbox2_11 -->
@@ -93,12 +93,12 @@ $post_number = $_REQUEST["post_number"];
        $re = $pdo->query($sqlreply);
        while($reRow = $re->fetch(PDO::FETCH_ASSOC)) {
 ?>                   
-                  <div class="feed">
-                    <div class="icon">
-                              <!-- <img src="images/4wavepoint/user/user3.png"> -->
-                              <img src="<?php echo $reRow["mugshot"] ?>">
-                        </div>                        
-                        <div class="feed_c">                        
+                  <div class="feed">                       
+                        <div class="feed_c">
+                             <div class="icon">
+                                  <!-- <img src="images/4wavepoint/user/user3.png"> -->
+                                  <img src="<?php echo $reRow["mugshot"] ?>">
+                             </div><!-- icon -->                           
                              <div class="feed_info">
                                   <div class="name"><?php echo $reRow["name"] ?></div>
                                   <span class="date"><?php echo substr($reRow["reply_time"],0,10) ?></span>
@@ -124,33 +124,63 @@ $post_number = $_REQUEST["post_number"];
                         </div>
                   </div>
 <script>
+
+
         function createTxt(jsonStr){
             var ct = JSON.parse( jsonStr );
-            console.log(ct);
+            console.log("接收的JSON字串");
+            var newfeed =  document.createElement("div");
+            newfeed.className = "feed";
+
+            var feed_t = document.getElementsByClassName("feed_t")[0];
+            document.getElementsByClassName("back")[0].insertBefore(newfeed,feed_t);
+            
+            var str='<div class="feed_c">';
+            str+='<div class="icon">';
+            str+='<img src="'+ct.mugshot+'">';
+            str+='</div>';
+            str+='<div class="feed_info">';
+            str+='<div class="name">';
+            str+=ct.name;
+            str+='</div>';
+            str+='<span class="date">';
+            str+=ct.reply_time.substr(0,10);
+            str+='</span>';
+            str+='</div>';
+            str+='<div class="txt">';
+            str+=ct.reply_content;
+            str+='</div>';
+            str+='</div>';
+            str+='<div class="quit">';
+            str+='檢舉';
+            str+='</div>';
+            document.getElementsByClassName("feed")[(document.getElementsByClassName("feed").length-1)].innerHTML = str;
         }
 
         $('#feedpo').click(function(){
-             console.log("123");
+             console.log("有點到");
              var xhr = new XMLHttpRequest();
              var her = $('#feed_txt').val();
+             $('#feed_txt').val('');//把textarea的內容清空
              console.log(her);
              var url = "map_replyintoDB.php?feed="+her;
              console.log(url);
-            //  xhr.open("get", url , true);
-            //  xhr.send(null);
+             xhr.open("get", url , true);
+             xhr.send(null);
 
-            //  xhr.onreadystatechange = function(){
-            //   if( xhr.readyState == 4){
-            //     if( xhr.status == 200){
-            //       createTxt(xhr.responseText); 
-            //     }else{
-            //       window.alert("錯誤".xhr.status);
-            //     }
-            //   }
-            // }
+             xhr.onreadystatechange = function(){
+              if( xhr.readyState == 4){
+                if( xhr.status == 200){
+                  createTxt(xhr.responseText); 
+                }else{
+                  window.alert("錯誤".xhr.status);
+                }
+              }
+            }
         });//click
+
 </script>                  
-            </div>
+            </div><!-- back -->
       </div><!-- main_11 -->    
      </div><!-- bg_11 --> 
      <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>

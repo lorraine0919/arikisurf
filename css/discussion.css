@@ -186,18 +186,17 @@ a {
             border-radius: 7px;
             vertical-align: middle; }
         .bg_11 .main_11 .back .feed .feed_c {
-          width: 25vw;
+          width: 100%;
           float: left;
           box-sizing: border-box;
           padding: 1%; }
           .bg_11 .main_11 .back .feed .feed_c .feed_info {
-            width: 50vw;
             color: #9aa2aa; }
             .bg_11 .main_11 .back .feed .feed_c .feed_info .name {
               display: inline-block;
               font-size: 22px; }
         .bg_11 .main_11 .back .feed .txt {
-          width: 50vw;
+          width: 93%;
           color: #fff; }
         .bg_11 .main_11 .back .feed .quit {
           position: absolute;
@@ -247,11 +246,11 @@ a {
             text-decoration: none;
             border: none;
             resize: none;
-            width: 27vw;
             height: 25vh;
             box-sizing: border-box;
             padding: 2%;
-            background-color: #29465e; }
+            background-color: #29465e;
+            color: #fff; }
             .bg_11 .main_11 .back .feed_t .last #feed_txt:focus {
               outline: none; }
           .bg_11 .main_11 .back .feed_t .last .less {

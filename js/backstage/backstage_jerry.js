@@ -46,7 +46,7 @@ $(function(){
 			 		'style' :  $(this).parent().siblings('.sellornotgroup').children().children().children('.style').val()			
 				},function(rs){
 					// alert(rs);
-			}); 
+			});
 		});
 	/*↑價格修改*/
 

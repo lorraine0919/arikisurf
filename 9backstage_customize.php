@@ -163,7 +163,7 @@ require_once('connectBooks.php');
                                             </div>
                                           </td>
                                       </tr>
-                                  </form> 
+                                  </form>
                                        <?php   
                                           $officialimgcount++;
                                           }/*↑如果抓的到官方圖樣資料*/

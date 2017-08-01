@@ -2,6 +2,8 @@
 ob_start();
 session_start();
 $wave_number = $_SESSION["map_wave"]["wave_number"];
+$_SESSION["map_reply"]["post_number"] = $_REQUEST["post_number"];
+// $post_number = $_REQUEST["post_number"];
 $post_number = $_REQUEST["post_number"];
  ?>
 <!DOCTYPE html>
@@ -110,7 +112,7 @@ $post_number = $_REQUEST["post_number"];
 <?php 
        }//while end
 ?>                       
-                  <form class="feed_t">
+                  <div class="feed_t">
                         <div class="icon">
                               <img src="images/4wavepoint/user/user.jpg">
                         </div>
@@ -120,14 +122,33 @@ $post_number = $_REQUEST["post_number"];
                                    <input type="submit" value="送出" id="feedpo">
                              </div>
                         </div>
-                  </form>
+                  </div>
 <script>
+        function createTxt(jsonStr){
+            var ct = JSON.parse( jsonStr );
+            console.log(ct);
+        }
+
         $('#feedpo').click(function(){
+             console.log("123");
              var xhr = new XMLHttpRequest();
-                  url = "map_replyintoDB.php";
-                  xhr.open("get", url , true);
-                  xhr.send(null);
-        });
+             var her = $('#feed_txt').val();
+             console.log(her);
+             var url = "map_replyintoDB.php?feed="+her;
+             console.log(url);
+            //  xhr.open("get", url , true);
+            //  xhr.send(null);
+
+            //  xhr.onreadystatechange = function(){
+            //   if( xhr.readyState == 4){
+            //     if( xhr.status == 200){
+            //       createTxt(xhr.responseText); 
+            //     }else{
+            //       window.alert("錯誤".xhr.status);
+            //     }
+            //   }
+            // }
+        });//click
 </script>                  
             </div>
       </div><!-- main_11 -->    

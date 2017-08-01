@@ -51,7 +51,7 @@ require_once('connectBooks.php');
                         $pdostatement=$pdo->prepare($sql);
                         $pdostatement->execute();
                         $i=0;
-                          while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){/*↓如果抓的到板型資料*/ 
+                          while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){ 
 
                    ?>
                   
@@ -76,7 +76,7 @@ require_once('connectBooks.php');
                       </tr>
                        <?php   
                           $i++;
-                          }/*↑如果抓的到板型資料*/
+                          }
 
                        ?>
 
@@ -95,7 +95,7 @@ require_once('connectBooks.php');
                     <th>商品價格</th>
                     <th>商品內容</th>
                     <th>商品庫存</th>
-                    <th class="numeric">上下架</th>
+                    <th class="numeric">修改資料</th>
                 </tr>
               </thead>
                 <tbody>
@@ -104,7 +104,7 @@ require_once('connectBooks.php');
                         $pdostatement=$pdo->prepare($sql);
                         $pdostatement->execute();
                         $i=0;
-                          while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){/*↓如果抓的到板型資料*/ 
+                          while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
 
                    ?>
                   
@@ -115,21 +115,13 @@ require_once('connectBooks.php');
                           <td><textarea class="deschange"><?php echo  $pdoRow['prod_des'] ?></textarea></td>
                           <td><input type="number" value="<?php echo  $pdoRow['prod_qua'] ?>" min="0" class="quachange"></td>
                           <td>
-                            <div class="input-group">
-                                <form action="9backstage_surfshop_update.php">
-                                    <div class="btn-group">
-                                        <input type="hidden" name="prod_sold" value="<?php echo $pdoRow['prod_sold'] ?>" class="sellornot">
-                                        <input type="hidden" name="prod_no" value="<?php echo $pdoRow['prod_no'] ?>" class="prod_no">
-                                        <a class="yesbtn btn btn-primary btn-sm">上架</a>
-                                        <a class="nobtn btn btn-primary btn-sm">下架</a>
-                                    </div>
-                                </form>
-                            </div>
+                          <input type="hidden" name="prod_no" value="<?php echo $pdoRow['prod_no'] ?>" class="prod_no">
+                           <a class="equchangebtn">修改</a> 
                           </td>
                       </tr>
                        <?php   
                           $i++;
-                          }/*↑如果抓的到板型資料*/
+                          }
 
                        ?>
 
@@ -138,13 +130,28 @@ require_once('connectBooks.php');
         </div>
     </div>
     <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <div class="model content-panel ">
+          <h4><i class="fa fa-angle-right"></i>配備新增管理</h4>
+          <table class="table table-bordered table-striped table-condensed">
+            <tr><td>商品名稱</td><td><textarea class="newName" cols="30" rows="2"></textarea></td></tr>
+            <tr><td>商品價格</td><td><input type="number" min="0" class="newPrice"></td></tr>
+            <tr><td>商品內容</td><td><textarea class="newDes" cols="30" rows="10"></textarea></td></tr>
+            <tr><td>商品庫存</td><td><input type="number" min="0" class="newQua"></td></tr>
+            <tr><td>商品品項</td><td><select class="newObj">
+              <option value="Leash">衝浪腳繩</option>
+              <option value="Fin">衝浪板舵</option>
+              <option value="Wax">浪板蠟及相關</option>
+              <option value="Suit">衝浪褲&防寒衣</option>
+            </select></td></tr>
+            <tr><td>圖檔</td><td><input type="file" name="image" class="newImg"></td></tr>
+            <tr><td colspan="2" align="center">
+              <input type="hidden" name="prod_no" value="<?php echo $pdoRow['prod_no'] ?>" class="prod_no">
+              <input type="button" value="確定加入" class="newAdd">
+            </td></tr>
+          </table>
+        </div>
     </div>
-   <!--  <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div> -->
+   
   </div>
 </div>
                        

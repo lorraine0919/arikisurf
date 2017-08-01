@@ -179,7 +179,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -231,7 +231,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -282,7 +282,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -333,7 +333,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                                 <!-- <a href="#" class="arikicommon_btn">加入購物車</a> -->
                                 <!-- <a href="#" class="arikicommon_btn">直接購買</a> -->

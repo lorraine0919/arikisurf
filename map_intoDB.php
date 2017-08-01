@@ -6,15 +6,15 @@ $textarea = $_REQUEST["textarea"];
 // echo $textarea;
 $datetime = date("Y-m-d H:i:s"); 
 $wave_number = $_SESSION["map_wave"]["wave_number"];
-// $a = mb_convert_encoding($_FILES["file"]["name"],"big5","utf-8");
 $a = $_FILES["file"]["name"];
-echo $a;
-switch($_FILES["file"]["error"] ){
-	case 0 : //上傳成功
+
+if(($title!=null)&&($textarea!=null)){      //判斷標題跟欄位user都有輸入
+
+	switch($_FILES["file"]["error"]){
+	case 0 : //上傳成功 把檔案傳到指定資料夾
 		// if( file_exists("images") == false){
 		// 	mkdir("images"); //make directory 創造一個資料夾
 		// }
-
 		$from = $_FILES["file"]["tmp_name"];
 		$ext=mb_convert_encoding($_FILES["file"]["name"],"big5","utf-8");
 		$to = "images/4wavepoint/".$wave_number."/fou/".$ext;
@@ -34,10 +34,16 @@ switch($_FILES["file"]["error"] ){
         echo "没有上傳檔案<br>";
     default:
         echo "上傳檔案失敗，錯誤代碼: ",$_FILES["error"],"請通知系統開發人員<br>";
+	}
+
+	require_once("connectBooks.php");
+	$sql = "insert into map_post values(null,$wave_number,'$a','$datetime','$title','$textarea',1,0,1,1)";
+	$into = $pdo->exec($sql);
+	header("location:map_forum.php");
+
+}else{
+  echo "GG";
 }
 
-require_once("connectBooks.php");
-$sql = "insert into map_post values(null,$wave_number,'$a','$datetime','$title','$textarea',1,0,1,1)";
-$into = $pdo->exec($sql);
-header("location:map_forum.php");
+
 ?>

@@ -28,8 +28,7 @@ window.onload=function(){
 	$('#step3tostep2').click(tostep2);
 	$('#step2tostep3').click(tostep3);
 	$('#step4tostep3').click(tostep3);
-	$('#step3tostep4').click(tostep4);
-
+	//三到四要驗證資料
 
 /*↑換頁相關*/
 
@@ -56,6 +55,7 @@ window.onload=function(){
 		$('.step1_maxContent .head h3').html(boardnamearr[index]);
 		$('.step1_maxContent .content p').text(boardinfo[index]);
 		$('.step1_maxContent .demo .boarddemo').attr('src','images/2board/'+boarddemo[index]+'/'+boarddemo[index]+'.png');
+		$('#customerboard').val(boardnamearr[index]);
 	});
 
 	/*我是rwd換圖片和敘述和按鈕顏色*/
@@ -67,6 +67,26 @@ window.onload=function(){
 		var index=$(this).index();
 		$('.step1_maxContent .rwdintroduce .rwdboardinfo').text(boardinfo[index]);
 	});
+
+/*↓步驟一按浪板換價錢*/
+	$('.boardprice').val($('.step1_maxContent .priceshow').text());
+	$('.step1_maxContent .board').click(function(){
+		var index = $(this).index()+1;
+		$.post('customize_update.php',{
+			'boardindex':index
+		},function(rs){
+			$('.step1_maxContent .priceshow').text(rs);
+			$('.step2_maxContent .priceshow').text(rs);
+			$('.boardprice').val(rs);
+			console.log('浪板'+$('.boardprice').val());
+		});
+
+	});
+
+/*↑步驟一按浪板換價錢*/
+
+
+
 /*↓步驟一rwd的拉出介紹*/
 	$('.btnfield').click(function(){
 		$('.rwdintroduce').toggleClass('show');
@@ -77,11 +97,6 @@ window.onload=function(){
 /*↓步驟一顯示svg板型，按按鈕換板型*/
 	function setsvgboard(boardshape){
 		$('.bordshape').attr('d',boardshape);
-
-		// for (var i = 0; i < $('.bordshape').length; i++) {
-
-		// }
-
 	}
 	var boardshape='M119,168.6C111.5,54.3,73.8,58.4,73.8,58.4v0c0,0-37.7-4-45.2,110.2 C20.9,286.2,33,451.9,63.2,485.3c3.5,3.8,6.7,2.9,10.6,2.9v0c3.9,0,7.1,0.9,10.6-2.9C114.6,451.9,126.7,286.2,119,168.6z';
 	setsvgboard(boardshape);
@@ -125,6 +140,40 @@ window.onload=function(){
 	});
 /*↑步驟一顯示svg板型*/
 
+
+/*↓步驟二加總價格*/
+	var total = $('.step1_maxContent .priceshow').text();
+	$('.step2_maxContent .priceshow').text(total);
+	function calculateprice(){
+		if($('.userpatternprice').val()==''){
+			console.log('沒有使用者上傳');
+			total = $('.boardprice').val()+$('.materialprice').val()+$('.officalpatternprice').val();
+			// console.log(total);
+			$('.step2_maxContent .priceshow').text(total);
+		}else if($('.officalpatternprice').val()==''){
+			console.log('沒有官方');
+			total = $('.boardprice').val()+$('.materialprice').val()+$('.userpatternprice').val();
+			$('.step2_maxContent .priceshow').text(total);
+		}else{
+			console.log('沒有圖樣');
+			total = $('.boardprice').val()+$('.materialprice').val();
+			$('.step2_maxContent .priceshow').text(total);
+		}	
+		
+	}
+
+/*↑步驟二加總價格*/
+
+
+/*↓步驟二，一到步驟二馬上加上材質價格*/
+	$('#step1tostep2').click(function(){
+		calculateprice();
+	});
+	
+/*↑步驟二，一到步驟二馬上加上材質價格*/
+
+
+
  /*↓步驟二的手風琴*/
 	$('.patternselectgroup').hide();
 	$('.textureselect').hide();
@@ -143,9 +192,9 @@ window.onload=function(){
 		$('.colorselectgroup').slideUp();
 		$('.textureselect').slideToggle();
 	});
-	$('.orangebtn').click(function(){
+	// $('.orangebtn').click(function(){
 
-	});
+	// });
 /*↑步驟二的手風琴*/
 
 /*↓步驟二rwd的手風琴*/
@@ -167,7 +216,7 @@ window.onload=function(){
 		$('.rwdselectstyle .patternarea').slideUp();
 	});
 	$('.orangebtn').click(function(){
-
+		// $('.step2_maxContent .priceshow').text();
 	});
 /*↑步驟二rwd的手風琴*/
 
@@ -181,6 +230,8 @@ window.onload=function(){
 		// console.log('1');
 		var index = $(this).index();
 		$('#maincolor2').html(boardcolorarr[index]);
+		var arr = ['白','藍','黃'];
+		$('#customercolor').val(arr[index]);
 		// $('.mainshapepath').css('fill','url(#maincolor2)');
 	});
 /*↑步驟二按按鈕換顏色*/
@@ -200,6 +251,12 @@ window.onload=function(){
 /*↑步驟二，色球顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
+	$.post('customize_update.php',{
+		'Epoxyprice':'yes'
+	},function(rs){
+		$('.materialprice').val(rs);
+		console.log('預設材質'+$('.materialprice').val());
+	});
 	$('.step2_maxContent .texturegorup .texture').click(function(){
 		var index=$(this).index();
 		$(this).addClass('click');
@@ -210,8 +267,17 @@ window.onload=function(){
 		'由頂尖品質的賽普里斯木製成，並由環氧樹脂所包覆，顯示出獨有的質感。最高規格的保護，非常適合收藏、裝飾。',
 		'其主要構造為PU泡棉(Foam)＋玻璃纖維布＋保麗樹脂，由於材質的關係所以重量較Epoxy的浪板略重，但是穩定性較佳，尤其是在浪況較大時可以明顯的感受到！<br><br>若要挑剔其缺點的話，就是較不耐撞擊，遭受到硬物的碰撞時可能會發生浪板表面的樹脂破裂的情形，不過這些都是可以經由修補復原的。'
 		];
+		$('#customermaterial').val(texturename[index]);
 		$('.step2_maxContent .introduce .content p').html(textureinfo[index]);
 		$('.step2_maxContent .introduce .head h3').text(texturename[index]);
+		index++;
+		$.post('customize_update.php',{
+			'customermaterial':index
+		},function(rs){
+			$('.materialprice').val(rs);
+			console.log('材質'+$('.materialprice').val());
+		});
+		calculateprice();
 	});
 /*↑步驟二換材質說明與按鈕外框*/
 
@@ -229,6 +295,7 @@ window.onload=function(){
 		$('.rwdintroduce .texturetitle').text(texturename[index]);
 		$('.rwdintroduce .rwdtextureinfo').html(textureinfo[index]);
 		$('.rwdselectstyle .texturegroup .title').text(texturename[index]);
+		$('#customermaterial').val(texturename[index]);
 	});
 /*↑步驟二rwd換材質說明與按鈕外框*/
 
@@ -238,6 +305,21 @@ var patterns=$('.selectAndNext .pattern').length;
 var newwidth = $('.selectAndNext .pattern').width()*patterns;
 $('.selectAndNext .patterns').width(newwidth);
 /*↑步驟二動態產生圖案group長度*/
+
+/*↓步驟二按圖換標題*/
+$('.pattern').click(function(){
+	var index = $(this).index();
+	$('.patterntitle').text(patterntitlearr[index]);
+	$.post('customize_update.php',{
+		'clickpattern':'yes'
+	},function(rs){
+		$('.officalpatternprice').val(rs);
+		console.log('官方圖片'+$('.officalpatternprice').val());
+		$('.userpatternprice').removeAttr('value');
+	});
+	calculateprice();
+});
+/*↑步驟二按圖換標題*/
 
 /*↓步驟二按圖放到浪板上*/
 
@@ -287,6 +369,15 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		readFile.addEventListener('load',function(){
 			document.getElementById('patternshow').setAttribute("xlink:href", readFile.result);
 		},false);
+
+		$.post('customize_update.php',{
+			'clickupload':'yes'
+		},function(rs){
+			$('.userpatternprice').val(rs);
+			console.log('使用者圖片'+$('.userpatternprice').val());
+			$('.officalpatternprice').removeAttr('value');
+		});
+		calculateprice();
 	}
 /*↑步驟二上傳圖片至demo區*/
 
@@ -309,6 +400,7 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
     var patternshow = d3.select('#patternshow')
             .call(drag);
 /*↑步驟二拖曳圖片*/
+
 
 
 /*↓步驟二儲存圖片到下一步驟*/
@@ -340,6 +432,28 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 	}
 /*↑步驟二儲存圖片到下一步驟*/
 
+/*↓步驟三驗證是否填妥*/
+function warningifnotfill(){
+
+}
+	
+	$('#step3tostep4').click(function(){
+		var count = 0;
+		var input=new Array();
+		for (var i = 0; i < $('.orederinput').length; i++) {
+			input.push( $('.orederinput').eq(i).val());
+		}
+		console.log(input);
+		if(input.includes('')==false){
+			tostep4();
+		}else{
+			$('.lightboxgroup').fadeIn(100);
+		}
+	});
+	$('#closebtn').click(function(){
+        $('.lightboxgroup').fadeOut(0);
+	});
+/*↑步驟三驗證是否填妥*/
 
 /*↓步驟三填寫資料送到步驟四*/
 $('#step3tostep4').click(function(){
@@ -350,9 +464,11 @@ $('#step3tostep4').click(function(){
 	$('#orderaccount').text($('#customeraccount').val());
 	$('#ordermessage').text($('#customermessage').val());
 	$('#orderpic').attr('src',$('#png-container img').attr('src'));
+	$('#orderboard').html($('#customerboard').val());
+	$('#ordercolor').text($('#customercolor').val());
+	$('#orderpattern').text($('.patterntitle').eq(0).text());
+	$('#ordermaterial').text($('#customermaterial').val());
 });
-
 /*↑步驟三填寫資料送到步驟四*/
 };
-
 

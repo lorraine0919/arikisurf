@@ -1,5 +1,5 @@
 function $id(id){
-   return document.getElementById(id);
+   return document.getElementById(id); 
 }
 
 function First(){

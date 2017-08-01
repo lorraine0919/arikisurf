@@ -23,11 +23,20 @@ require_once('connectBooks.php');
 <span>客製化衝浪版</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 <div class="wrapper">
-	
+
 	<div class="bg_forest_2">
 		<!-- 		<div class="pillar">
 			<img src="images/2board/pillar.png">
 		</div> -->
+		<div class="lightboxgroup">
+			<div class="lightboxarea">
+				<h2></h2>
+				<p>請填寫完整資料</p>
+				<div id="closebtn">
+					<img src="images/3accessories/Close.png" alt="">
+				</div>
+			</div>
+		</div>
 		<div class="step1_maxContent">
 			<div class="stepbar">
 				<div class="circle"></div>
@@ -37,6 +46,25 @@ require_once('connectBooks.php');
 				</div>
 			</div>
 			<div class="introduce">
+				<div class="pricegroup">
+					<span>總價</span>
+					<span class="priceshowgroup">
+						<input type="hidden" class="boardprice">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+						<span class="priceshow">
+						
+						<?php 
+							$sql = 'select * from customize_model';
+							$pdostatement = $pdo->query($sql); 
+							$pdostatement->fetch(PDO::FETCH_ASSOC);
+							$pdorow = $pdostatement->fetch(PDO::FETCH_ASSOC);
+							echo $pdorow['customize_model_price'];
+						?>
+							
+						</span>	
+					</span>
+					
+				</div>
 				<div class="introducefix">
 					<div class="head">
 						<h3>長板（Longboard）</h3>
@@ -125,6 +153,7 @@ require_once('connectBooks.php');
 						<div class="head">
 							<h3>長板<span>LONGBOARD</span></h3>
 						</div>
+						<input type="hidden" id="customerboard" value="長板<span>LONGBOARD</span>">
 						<div class="boardgroup">
 							<div class="board"><img src="images/2board/gunboard/gunboard_h.png" alt=""></div>
 							<div class="board click"><img src="images/2board/longboard/longboard_h.png" alt=""></div>
@@ -151,6 +180,13 @@ require_once('connectBooks.php');
 				</div>
 			</div>
 			<div class="introduce">
+				<div class="pricegroup">
+					<span>總價</span>
+					<span class="priceshowgroup">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+						<span class="priceshow"></span>	
+					</span>
+				</div>
 				<div class="introducefix">
 					<div class="head">
 						<h3>環氧樹脂（Epoxy）</h3>
@@ -161,6 +197,7 @@ require_once('connectBooks.php');
 						</div>
 					</div>
 					<div class="content">
+						
 						<p>構造由Eps(較高級的保麗龍)＋玻璃纖維布＋Epoxy樹脂所組成，重量較輕，靈敏度較佳，但是穩定度較差，少了玻纖板的紮實感！<br><br>
 						由於Epoxy樹脂的硬度較硬，所以優點是較耐撞擊，但是也因為硬而無彈性，在大浪時有可能發生直接斷裂的情形</p>
 					</div>					
@@ -217,6 +254,7 @@ require_once('connectBooks.php');
 				</div>	
 				<div class="rwdselectstyle">
 					<div class="colorgroup selectgroup">
+						<input type="hidden" id="customercolor" value="白">
 						<div class="btn click">選擇顏色</div>
 						<div class="clearfix"></div>
 						<div class="colorall">
@@ -236,11 +274,13 @@ require_once('connectBooks.php');
 						<div class="clearfix"></div>
 					</div>
 					<div class="patterngroup selectgroup">
+						<input type="hidden" id="customerpattern" value="未選擇圖片">
 						<div class="btn">選擇圖樣</div>
 						<div class="clearfix"></div>
 							<div class="patternarea">
 								<div class="top">
 									<div class="allpattern">
+										<input type="hidden" id="officalpatternprice" value="">
 										<?php 
 	                                        $sql = 'select * from customize_officialimg';
 	                                        $pdostatement=$pdo->prepare($sql);
@@ -262,6 +302,7 @@ require_once('connectBooks.php');
 								</div>
 								<div class="bottom">
 									<div class="left">
+										<input type="hidden" id="userpatternprice" value="">
 										<p>上傳您的圖案</p>
 									</div>
 									<div class="right">
@@ -273,6 +314,8 @@ require_once('connectBooks.php');
 							<div class="clearfix"></div>
 					</div>
 					<div class="texturegroup selectgroup">
+						<input type="hidden" id="customermaterial" value="環氧樹脂">
+						<input type="hidden" id="materialprice" value="">
 						<div class="btn">選擇材質</div>
 						<div class="clearfix"></div>
 						<div class="texturecontent">
@@ -333,7 +376,24 @@ require_once('connectBooks.php');
 							<div class="clearfix"></div>
 							<div class="patternselectgroup">
 								<div class="patternselectgroupfix">
-									<div class="head"><p>Ariki c2.0</p></div>
+									<div class="head">
+											<p class="patterntitle">尚未選擇圖樣</p>
+											<script>
+											var patterntitlearr=[];
+											<?php 
+		                                        $sql = 'select * from customize_officialimg';
+		                                        $pdostatement=$pdo->prepare($sql);
+		                                        $pdostatement->execute();
+		                                        while($pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
+											 ?>
+												patterntitlearr.push('<?php echo $pdoRow['officialimg_name']?>');
+											<?php 
+
+												}
+											 ?>
+											 // console.log(patterntitlearr);
+											 </script>										
+									</div>
 									<div class="patternframe">
 										<div class="patterns">
 											<?php 
@@ -357,7 +417,7 @@ require_once('connectBooks.php');
 									<div class="uploadgroup">
 										<div class="introduceUpload">
 											<h4>上傳您的圖案</h4>
-											<p>請上傳500MB內PNG、JPG格式圖檔。</p>
+											<p>格式限制：1MB內、長寬均為200px之PNG格式圖檔。</p>
 										</div>
 										<input type="file" id="uploadimg" style="display: none">
 										<label for="uploadimg">
@@ -427,27 +487,27 @@ require_once('connectBooks.php');
 							<table>
 								<tr>
 									<th><h3>姓名</h3></th>
-									<td><input type="text" name="" id="customername"></td>
+									<td><input type="text" name="" id="customername" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>電話</h3></th>
-									<td><input type="phone" name="" id="customerphone"></td>
+									<td><input type="phone" name="" id="customerphone" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>電子信箱</h3></th>
-									<td><input type="email" name="" id="customeremail"></td>
+									<td><input type="email" name="" id="customeremail" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>收件地址</h3></th>
-									<td><textarea rows="5" id="customeraddress"></textarea></td>
+									<td><textarea rows="5" id="customeraddress" class="orederinput"></textarea></td>
 								</tr>
 								<tr>
 									<th><h3>匯款帳號後五碼</h3></th>
-									<td><input type="text" name="" id="customeraccount"></td>
+									<td><input type="text" name="" id="customeraccount" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>其他留言</h3></th>
-									<td><textarea rows="5" id="customermessage"></textarea></td>
+									<td><textarea rows="5" id="customermessage" class="orederinput"></textarea></td>
 								</tr>
 							</table>
 							<div class="next">
@@ -495,10 +555,10 @@ require_once('connectBooks.php');
 							<div class="boardinfo col-sm-6 col-xs-12">
 								<div class="title"><h3>您的浪板</h3></div>
 								<div class="infocontent">
-									<P>板型：長板<br>
-									顏色：白色<br>
-									圖案：ARIKI BD101 <br>
-									材質：玻璃纖維<br>
+									<P>板型：<span id="orderboard">長板</span><br>
+									顏色：<span id="ordercolor">白色</span><br>
+									圖案：<span id="orderpattern">ARIKI BD101</span> <br>
+									材質：<span id="ordermaterial">玻璃纖維</span><br>
 									</P>
 								</div>
 							</div>

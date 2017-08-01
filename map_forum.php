@@ -2,6 +2,7 @@
 ob_start();
 session_start();
 $wave_number = $_SESSION["map_wave"]["wave_number"];
+require_once("connectBooks.php");
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +11,20 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
   <link rel="stylesheet" type="text/css" href="css/forum.css">
   <script src="js/showMap.js"></script>
   <script src="js/map_up.js"></script>
+  <script src="js/jquery.raty.js" type="text/javascript"></script>
+  <script>
+    $(document).ready(function(){
+          $('#result').hide();   //隱藏結果箱子
+          $('#star').raty({      
+              hints:[1,2,3,4,5], 
+              path : 'images/4wavepoint/img',
+              target:'#result',
+              targetKeep:true,
+              targetType:'number',
+              readOnly: true,
+          });
+    });//ready
+  </script>
   <title>酋長衝浪Ariki Surf-討論區</title>
 </head>
 <body>
@@ -61,12 +76,12 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
         </form>      
       </div><!-- content_10 -->
 <?php           
-           require_once("connectBooks.php");
+           
            $sql2="select * from map_wave where wave_number=$wave_number";
            $wave = $pdo->query($sql2);
            $waveRow = $wave->fetch(PDO::FETCH_ASSOC);         
 ?>
-       <div class="bg_10" id="bg_10">
+       <div class="bg_10">
          <div class="info_10">
            <div class="ic wave">
              <img src="images/4wavepoint/w1.png">
@@ -105,10 +120,9 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
        $sql="select * from map_post where wave_number=$wave_number order by post_date DESC";
        $data = $pdo->query($sql);
        while($dataItem = $data->fetch(PDO::FETCH_ASSOC)) {
-
 ?>
               <div class="item">
-                 <a href="map_forum_discussion.php" id="map_a">                  
+                 <a href="map_forum_discussion.php?post_number=<?php echo $dataItem["post_number"] ?>" id="map_a">                  
                      <div class="pic_i">
                            <!-- <img src="images/4wavepoint/fou/1.jpg"> -->                          
                             <img src='images/4wavepoint/<?php echo $wave_number ?>/fou/<?php echo $dataItem["post_img"]  ?>'>
@@ -129,7 +143,14 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
                      </div>
                  </a>
                      <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
+                         <!-- <div id="star"></div> -->
+                         <div id="star"></div>
+                              <script>
+                                var math = <?php echo $dataItem["star_score"] ?>;
+                                console.log(math);
+                                $('#star').raty({ score: 3 });
+                              </script>                                                                                
+                         <div id="result"></div>
                          <div class="view">
                              <div class="see">
                               <img src="images/4wavepoint/view.png" alt="view">
@@ -252,199 +273,10 @@ $wave_number = $_SESSION["map_wave"]["wave_number"];
                   }
               });//click
         </script>
-              <!--  <div class="item">
-                 <a href="map_forum_discussion.php">                    
-                     <div class="pic_i">
-                           <div class="v_p">
-                                <div class="v2">
-                                        <div class="arr">
-                                              ►
-                                        </div>
-                                </div>
-                           </div>
-                           <img src="images/4wavepoint/fou/2.jpg">
-                     </div>
-                     <div class="text">
-                         <h3>徵9尺長板</h3>
-                         <div class="day">2017/07/07</div>
-                         <div class="tt">
-                               希望10000內,小傷可,希望可在烏石看板謝謝
-                         </div>                
-                     </div>
-                 </a>
-                     <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
-                         <div class="view">
-                             <div class="see">
-                              <img src="images/4wavepoint/view.png" alt="view">
-                              </div>                             
-                              <div class="watch">120</div>      
-                         </div>
-                     </div>                    
-               </div> --><!-- item -->
-
-               <!-- <div class="item">
-                 <a href="map_forum_discussion.php">                    
-                     <div class="pic_i">
-                           <img src="images/4wavepoint/fou/3.jpg">
-                     </div>
-                     <div class="text">
-                         <h3>關於適合衝浪的日子</h1>
-                         <div class="day">2017/07/07</div>
-                         <div class="tt">
-                               <p>今天天氣不太好 有誰要衝一波?</p>
-                         </div>                
-                     </div>
-                 </a>
-                     <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
-                         <div class="view">
-                             <div class="see">
-                              <img src="images/4wavepoint/view.png" alt="view">
-                              </div>                             
-                              <div class="watch">120</div>      
-                         </div>
-                     </div>                    
-               </div> --><!-- item -->
-
-              <!--  <div class="item">
-                 <a href="map_forum_discussion.php">                    
-                     <div class="pic_i">
-                           <img src="images/4wavepoint/fou/4.jpg">
-                     </div>
-                     <div class="text">
-                         <h3>浪人生活與工作</h3>
-                         <div class="day">2017/07/07</div>
-                         <div class="tt">如果有在海邊生活過，你會發現被潮汐帶上岸的物品往往參雜人性的自私及浪費，如果能將這些物品轉化成富有藝術感及功能性的話，那我認為就是在做對的事。－Jalian Johnston 海廢藝術家與衝浪品牌VAST同樣來自加州的Jalian Johnston，高中時就成為衝浪職業選手，Jalian同時是一位橫跨衝浪界與時尚服裝界的新潮藝術家，擅長以海洋廢棄物如塑膠製品、回收布料進行創作，而大自然是他的靈感來源，孕育他的心靈跟藝術創作。
-                         </div>                
-                     </div>
-                 </a>
-                     <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
-                         <div class="view">
-                             <div class="see">
-                              <img src="images/4wavepoint/view.png" alt="view">
-                              </div>                             
-                              <div class="watch">120</div>      
-                         </div>
-                     </div>                    
-               </div> --><!-- item -->
-
-              <!--  <div class="item">
-                 <a href="map_forum_discussion.php">                    
-                     <div class="pic_i">
-                           <img src="images/4wavepoint/fou/5.jpg">
-                     </div>
-                     <div class="text">
-                         <h3>來海邊生活節</h3>
-                         <div class="day">2017/07/07</div>
-                         <div class="tt">來海邊不用想太多，盡情地做自己吧！ </div>                
-                     </div>
-                 </a>
-                     <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
-                         <div class="view">
-                             <div class="see">
-                              <img src="images/4wavepoint/view.png" alt="view">
-                              </div>                             
-                              <div class="watch">120</div>      
-                         </div>
-                     </div>                    
-               </div> --><!-- item -->
-
-              <!--  <div class="item">
-                 <a href="map_forum_discussion.php">                    
-                     <div class="pic_i">
-                           <img src="images/4wavepoint/fou/6.jpg">
-                     </div>
-                     <div class="text">
-                         <h3>朋友與海</h1>
-                         <div class="day">2017/07/07</div>
-                         <div class="tt">一群朋友在海邊，不用擔心今年Q3還沒達標、不用擔心還剩三天就是Deadline、不用為了應付奧客壓抑一整天，需要牽掛的，就是今天的浪，還有能不能和朋友一起分享這樣的好浪，這就是主辦單位想要傳達給大家的理念。</div>                
-                     </div>
-                 </a>
-                     <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
-                         <div class="view">
-                             <div class="see">
-                              <img src="images/4wavepoint/view.png" alt="view">
-                              </div>                             
-                              <div class="watch">120</div>      
-                         </div>
-                     </div>                    
-               </div> --><!-- item -->
-
-              <!--  <div class="item">
-                 <a href="map_forum_discussion.php">                    
-                     <div class="pic_i">
-                           <img src="images/4wavepoint/fou/7.jpg">
-                     </div>
-                     <div class="text">
-                         <h3>在衝浪歷史之中</h3>
-                         <div class="day">2017/07/07</div>
-                         <div class="tt">Alaia，這個有著濃濃夏威夷民族風味的名字，正代表著整個衝浪文化的起源。在這個玻璃纖維衝浪板盛行的時代裡，Alaia這種木製衝浪板更顯得樸實無華。確切的Alaia歷史從古老的夏威夷發跡，到如今已不可考。可以確定的是Alaia在當時的夏威夷原住民族中，駕乘它的技巧就等同於地位的象徵。而當時民族中的貴族，所使用的衝浪板被稱為「OLO」，這是一種十呎以上的木製衝浪板。能夠駕乘OLO的無非都是貴族，而這些人也被允許可以駕乘夏威夷Waikiki外海的大浪。如果衝浪技巧不足以服眾，那你在當時的部族中就只能做一個平民。平民所使用的板子即為五呎至六呎半的「Alaia」以及更短、趴著玩的「Paipo」，不只這樣，平民們只被允許在岸邊的Shorebreak。</div>                
-                     </div>
-                 </a>
-                     <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
-                         <div class="view">
-                             <div class="see">
-                              <img src="images/4wavepoint/view.png" alt="view">
-                              </div>                             
-                              <div class="watch">120</div>      
-                         </div>
-                     </div>                    
-               </div> --><!-- item -->
-
-              <!--  <div class="item">
-                 <a href="map_forum_discussion.php">                    
-                     <div class="pic_i">
-                           <img src="images/4wavepoint/fou/8.jpg">
-                     </div>
-                     <div class="text">
-                         <h3>新手常犯的錯誤</h3>
-                         <div class="day">2017/07/07</div>
-                         <div class="tt">夏天已經告一段落，意味著新手的衝浪季節也將邁入尾聲。脫離新手階段是每個甫接觸衝浪的人的第一個目標，但對很多人來說脫離inside區域卻難於上青天。不可否認，不管做甚麼事都需要有持之以恆及面對挫折的毅力，衝浪更是如此，但台灣衝浪發展至今，已有許多前輩們的經驗的積累，這對初入衝浪界的菜鳥們來說無疑是一大福音。以下整理出五個新手最常犯的錯誤，讓大家在資訊已經發達的今日，不用再摸著石頭過河。在一開始的時候如果可以看見問題並能找到解決方法的話，很多人都可以大大的縮減那在一開始不斷摸索、遭遇挫折的撞牆期。</div>                
-                     </div>
-                 </a>
-                     <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
-                         <div class="view">
-                             <div class="see">
-                              <img src="images/4wavepoint/view.png" alt="view">
-                              </div>                             
-                              <div class="watch">120</div>      
-                         </div>
-                     </div>                    
-               </div> --><!-- item -->
-
-               <!-- <div class="item">
-                 <a href="map_forum_discussion.html">                    
-                     <div class="pic_i">
-                           <img src="images/4wavepoint/fou/9.jpg">
-                     </div>
-                     <div class="text">
-                         <h3>身為浪人</h3>
-                         <div class="day">2017/07/07</div>
-                         <div class="tt">每項運動都有自己的規則，這個規則並非有著法律那樣的強制性，但在當你踏進這個運動的圈子裡時，你也同時背負起必須遵守這些規則的義務。而這個義務並非只是單純的遵守而已，而是必須主動地去瞭解它！衝浪運動的規則其來有自，最重要的原因自然就是確保每個衝浪人的安全，以及讓每個在海上的人可以盡興的衝浪，客觀的公平性是隨著衝浪的發展逐漸成形的</div>                
-                     </div>
-                 </a>
-                     <div class="item_border">
-                         <div class="star">★ ★ ★ ★ ★</div>
-                         <div class="view">
-                             <div class="see">
-                              <img src="images/4wavepoint/view.png" alt="view">
-                              </div>                             
-                              <div class="watch">120</div>      
-                         </div>
-                     </div>                    
-               </div> --><!-- item -->
-
            </section>
          </div><!-- fourm --> 
        </div><!-- bg_10 -->
       <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
-
   <script>
     var bgsrc = 'images/4wavepoint/<?php echo $wave_number ?>/bg_f.jpg';
     console.log(bgsrc);

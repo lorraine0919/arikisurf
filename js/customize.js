@@ -277,9 +277,10 @@ window.onload=function(){
 		},function(rs){
 			$('#materialprice').text(rs);
 			console.log('材質'+$('#materialprice').text());
+			showprice();
+			calculateprice();
 		});
-		showprice();
-		calculateprice();
+
 	});
 /*↑步驟二換材質說明與按鈕外框*/
 
@@ -326,9 +327,11 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 			'clickpattern':'yes'
 		},function(rs){
 			$('#patternprice').text(rs);
+			console.log($('#patternprice').text());
+			showprice();
+			calculateprice();
 		});
-		showprice();
-		calculateprice();
+
 		/*↑步驟二按圖換標題*/
 		function convertImgToDataURLviaCanvas(url, callback, outputFormat) {
 		  var img = new Image();

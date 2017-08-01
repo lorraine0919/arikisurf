@@ -147,16 +147,16 @@ window.onload=function(){
 	function calculateprice(){
 		if($('.userpatternprice').val()==''){
 			console.log('沒有使用者上傳');
-			total = $('.boardprice').val()+$('.materialprice').val()+$('.officalpatternprice').val();
+			total = $('#boardprice').val()+$('#materialprice').val()+$('#officalpatternprice').val();
 			// console.log(total);
 			$('.step2_maxContent .priceshow').text(total);
 		}else if($('.officalpatternprice').val()==''){
 			console.log('沒有官方');
-			total = $('.boardprice').val()+$('.materialprice').val()+$('.userpatternprice').val();
+			total = $('#boardprice').val()+$('#materialprice').val()+$('#userpatternprice').val();
 			$('.step2_maxContent .priceshow').text(total);
 		}else{
 			console.log('沒有圖樣');
-			total = $('.boardprice').val()+$('.materialprice').val();
+			total = $('#boardprice').val()+$('#materialprice').val();
 			$('.step2_maxContent .priceshow').text(total);
 		}	
 		

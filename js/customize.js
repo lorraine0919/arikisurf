@@ -142,19 +142,11 @@ window.onload=function(){
 
 /*↓步驟二秀出價格*/
 	function showprice(){
-			var boardprice =  parseInt($('#boardprice').text());
-			var materialprice,patternprice;
 			if(isNaN(parseInt($('#materialprice').text()))){
-				materialprice = 0;
 				$('#materialprice').text('0');
-			}else{
-				materialprice=parseInt($('#materialprice').text());
 			}
 			if(isNaN(parseInt($('#patternprice').text()))){
-				patternprice = 0;
 				$('#patternprice').text('0');
-			}else{
-				patternprice = parseInt($('#materialprice').text());
 			}
 	}
 	
@@ -162,6 +154,9 @@ window.onload=function(){
 
 /*↓步驟二加總價格*/
 	function calculateprice(){
+		console.log(parseInt($('#boardprice').text()));
+		console.log(parseInt($('#patternprice').text()));
+		console.log(parseInt($('#materialprice').text()));
 		var total = parseInt($('#boardprice').text())+parseInt($('#patternprice').text())+parseInt($('#materialprice').text());
 		$('.step2_maxContent .priceshow').text(total);
 	}
@@ -314,7 +309,9 @@ $('.selectAndNext .patterns').width(newwidth);
 /*↑步驟二動態產生圖案group長度*/
 
 /*↓步驟二按圖換標題*/
+var count=1;
 $('.pattern').click(function(){
+	console.log('點了'+count+'下');
 	var index = $(this).index();
 	$('.patterntitle').text(patterntitlearr[index]);
 	$.post('customize_update.php',{
@@ -322,9 +319,12 @@ $('.pattern').click(function(){
 	},function(rs){
 		$('#patternprice').text(rs);
 	});
+	count++;
 	showprice();
 	calculateprice();
+
 });
+
 /*↑步驟二按圖換標題*/
 
 /*↓步驟二按圖放到浪板上*/

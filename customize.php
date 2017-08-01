@@ -50,7 +50,7 @@ require_once('connectBooks.php');
 					<span>浪板價格</span>
 					<span class="priceshowgroup">
 						<i class="fa fa-usd" aria-hidden="true"></i>
-						<span class="priceshow">
+						<span class="boardpriceshow">
 						
 						<?php 
 							$sql = 'select * from customize_model';
@@ -195,6 +195,10 @@ require_once('connectBooks.php');
 							<td>材質價格</td>
 							<td><span id="materialprice" class="shownowprice"></span></td>
 						</tr>
+						<tr>
+							<td>運費</td>
+							<td><span>500</span></td>
+						</tr>						
 						<tr>
 							<td colspan="2" class="dividelinearea">
 								<div class="divideline"></div>
@@ -507,7 +511,7 @@ require_once('connectBooks.php');
 							<h4>總價（含運）</h4>
 							<div class="bottom">
 								<div class="number">
-									<h3>94870元</h3>
+									<h3 id="ordertotalprice">94870</h3><span>元</span>
 								</div>
 								<div class="detail">
 									<p>明細</p>

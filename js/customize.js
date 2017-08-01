@@ -69,13 +69,13 @@ window.onload=function(){
 	});
 
 /*↓步驟一按浪板換價錢*/
-	$('#boardprice').text($('.step1_maxContent .priceshow').text());
+	$('#boardprice').text($('.step1_maxContent .boardpriceshow').text());
 	$('.step1_maxContent .board').click(function(){
 		var index = $(this).index()+1;
 		$.post('customize_update.php',{
 			'boardindex':index
 		},function(rs){
-			$('.step1_maxContent .priceshow').text(rs);
+			$('.step1_maxContent .boardpriceshow').text(rs);
 			$('#boardprice').text(rs);
 			console.log('浪板'+$('#boardprice').text());
 		});
@@ -162,7 +162,7 @@ window.onload=function(){
 		console.log(parseInt($('#boardprice').text()));
 		console.log(parseInt($('#patternprice').text()));
 		console.log(parseInt($('#materialprice').text()));
-		var total = parseInt($('#boardprice').text())+parseInt($('#patternprice').text())+parseInt($('#materialprice').text());
+		var total = parseInt($('#boardprice').text())+parseInt($('#patternprice').text())+parseInt($('#materialprice').text())+500;
 		$('.step2_maxContent .priceshow').text(total);
 	}
 	
@@ -410,7 +410,7 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		// document.getElementById('svgstep2').width=1000;
 		// document.getElementById('svgstep2').setAttribute("viewbox","0 0 100 10");
 		document.getElementById("step3result").height=1500;
-
+		$('#ordertotalprice').text($('.priceshow').text());
 		var svgData = new XMLSerializer().serializeToString( document.getElementById('svgstep2') );
 		// document.getElementById("step3result").width=500;
 		var ctx = document.getElementById("step3result").getContext("2d");

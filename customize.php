@@ -47,9 +47,8 @@ require_once('connectBooks.php');
 			</div>
 			<div class="introduce">
 				<div class="pricegroup">
-					<span>總價</span>
+					<span>浪板價格</span>
 					<span class="priceshowgroup">
-						<input type="hidden" class="boardprice">
 						<i class="fa fa-usd" aria-hidden="true"></i>
 						<span class="priceshow">
 						
@@ -181,11 +180,41 @@ require_once('connectBooks.php');
 			</div>
 			<div class="introduce">
 				<div class="pricegroup">
-					<span>總價</span>
-					<span class="priceshowgroup">
-						<i class="fa fa-usd" aria-hidden="true"></i>
-						<span class="priceshow"></span>	
-					</span>
+					<table>
+						<tr>
+							<td>板型價格</td>
+							<td><span id="boardprice"></span></td>
+						</tr>
+						<tr>
+							<td>圖樣價格</td>
+							<td>
+								<span id="patternprice"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>材質價格</td>
+							<td><span id="materialprice"></span></td>
+						</tr>
+						<tr border="1">
+							<td><span>總價</span></td>
+							<td>
+								<span class="priceshowgroup">
+									<i class="fa fa-usd" aria-hidden="true"></i>
+									<span class="priceshow">
+									
+									<?php 
+										$sql = 'select * from customize_model';
+										$pdostatement = $pdo->query($sql); 
+										$pdostatement->fetch(PDO::FETCH_ASSOC);
+										$pdorow = $pdostatement->fetch(PDO::FETCH_ASSOC);
+										echo $pdorow['customize_model_price'];
+									?>
+										
+									</span>	
+								</span>
+							</td>
+						</tr>
+					</table>
 				</div>
 				<div class="introducefix">
 					<div class="head">
@@ -280,7 +309,7 @@ require_once('connectBooks.php');
 							<div class="patternarea">
 								<div class="top">
 									<div class="allpattern">
-										<input type="hidden" id="officalpatternprice" value="">
+										
 										<?php 
 	                                        $sql = 'select * from customize_officialimg';
 	                                        $pdostatement=$pdo->prepare($sql);
@@ -302,7 +331,7 @@ require_once('connectBooks.php');
 								</div>
 								<div class="bottom">
 									<div class="left">
-										<input type="hidden" id="userpatternprice" value="">
+										
 										<p>上傳您的圖案</p>
 									</div>
 									<div class="right">
@@ -315,7 +344,6 @@ require_once('connectBooks.php');
 					</div>
 					<div class="texturegroup selectgroup">
 						<input type="hidden" id="customermaterial" value="環氧樹脂">
-						<input type="hidden" id="materialprice" value="">
 						<div class="btn">選擇材質</div>
 						<div class="clearfix"></div>
 						<div class="texturecontent">

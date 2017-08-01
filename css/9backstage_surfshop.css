@@ -1,7 +1,5 @@
 .table textarea {
   resize: none; }
-.table .equchangebtn {
-  cursor: pointer; }
 .table .content-panel {
   padding: 20px;
   font-size: 17px; }

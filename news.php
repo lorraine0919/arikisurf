@@ -143,6 +143,4 @@ function textlength(truncated, maxLength){
 window.onload= news();
 </script>
 </body>
-
-
 </html>

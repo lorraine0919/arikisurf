@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <!--header-->
@@ -12,6 +13,7 @@
 <body>
 <!-- =================後臺管理================== -->
 <!--(bake module/backstage_header.html)--><?php require_once('publicpage/backstage_header.php'); ?>
+
 
 <!-- 最新消息管理面版 -->
         <div class="main35" id="main-content">

@@ -379,6 +379,7 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		});
 		showprice();
 		calculateprice();
+		$('.patterntitle').text('使用者上傳圖片');
 	}
 /*↑步驟二上傳圖片至demo區*/
 

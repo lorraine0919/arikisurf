@@ -58,14 +58,23 @@
 		    margin: 0 auto;
 		    box-sizing: border-box;
 		    border-radius: 5px;
+			background-image: url("../images/7member/7member_ordercheck/decoration.png");
+			background-repeat: no-repeat;
+			background-position: 0% 113%;
 		    p{
 		    	height: 20vh;
 		    	line-height: 20vh;
+			    color: #4d6273;
+			    font-weight: bold;
+			    letter-spacing: 2px;
+			    font-size: 18px;
 		    }
 		    #closebtn{
 		    	position: absolute;
 		    	right: 0;
 		    	top: 0;
+		    	
+
 		    	.fa{
 		    		font-size: 30px;
 		    		margin: 0 5px 0 0;

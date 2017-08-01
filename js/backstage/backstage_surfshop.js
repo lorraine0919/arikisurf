@@ -30,6 +30,61 @@ $(function(){
 		  });
 	});
 	/*↑按按鈕後改input的值*/
+
+	/*↓資料修改*/
+		$('.equchangebtn').click(function(){
+			console.log($(this).parent().siblings().children('.quachange').val());
+			$.post('9backstage_surfshop_update.php',{
+				    'prod_no' : $(this).siblings('.prod_no').val() , 
+			 		'name' : $(this).parent().siblings().children('.namechange').val() ,
+			 		'price' :  $(this).parent().siblings().children('.pricechange').val(),
+			 		'des' :  $(this).parent().siblings().children('.deschange').val(),
+			 		'qua' :  $(this).parent().siblings().children('.quachange').val()				
+				},function(rs){
+					// alert(rs);
+			});
+		});
+	/*↑資料修改*/
+
+
+
+
+		/*↓資料新增*/
+		// $('.newAdd').click(function(){
+		// 	console.log($(this).parent().parent().siblings().children().children('#newImg').val());
+		// 	var formData = new FormData();
+		// 		formData.append('newImg', $('#newImg')[0].files[0]);
+		// 		$.ajax({
+		// 		    url: '9backstage_surfshop_update.php',
+		// 		    type: 'POST',
+		// 		    cache: false,
+		// 		    contentType: false,
+		// 		    data: formData,
+		// 		    processData: false,
+		// 		    contentType: false
+		// 		}).done(function(res) {
+		// 			// location.reload();
+		// 			console.log(res);
+		// 		}).fail(function(res) {
+		// 			// alert('新增成功');
+		// 			console.log(res);
+		// 		});
+		// 	$.post('9backstage_surfshop_update.php',{
+		// 		    'prod_no' : $(this).siblings('.prod_no').val() , 
+		// 	 		'newName' : $(this).parent().parent().siblings().children().children('.newName').val() ,
+		// 	 		'newPrice' : $(this).parent().parent().siblings().children().children('.newPrice').val(),
+		// 	 		'newDes' : $(this).parent().parent().siblings().children().children('.newDes').val(),
+		// 	 		'newQua' : $(this).parent().parent().siblings().children().children('.newQua').val(),
+		// 	 		'newObj' : $(this).parent().parent().siblings().children().children('.newObj').val(),
+		// 	 		// 'newPic' : $(this).parent().parent().siblings().children().children('#newImg').val()
+			 						
+		// 		},function(rs){
+		// 			console.log(rs);
+		// 	});
+			
+		// });
+	/*↑資料新增*/
 })
+
 
 

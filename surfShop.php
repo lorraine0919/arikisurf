@@ -156,7 +156,8 @@ try{
 
     while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 ?>    	
-        <form action="cart_add.php" class="leashform">
+        <form action="surfShop_cart_add.php" class="leashform">
+        <input type="hidden" name="prod_no" class="prodno" value="<?php echo $prodRow["prod_no"]; ?>">
         <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
         <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
         <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
@@ -207,7 +208,8 @@ try{
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 			?>    	
-			        <form action="cart_add.php" class="finform">
+			        <form action="surfShop_cart_add.php" class="finform">
+			        <input type="hidden" name="prod_no" class="prodno" value="<?php echo $prodRow["prod_no"]; ?>">
 			        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
 			        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
 			        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
@@ -257,7 +259,8 @@ try{
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 			?>    	
-			        <form action="cart_add.php" class="waxform">
+			        <form action="surfShop_cart_add.php" class="waxform">
+			        <input type="hidden" name="prod_no" class="prodno" value="<?php echo $prodRow["prod_no"]; ?>">
 			        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
 			        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
 			        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">
@@ -307,7 +310,8 @@ try{
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 			?>    	
-			        <form action="cart_add.php" class="suitform">
+			        <form action="surfShop_cart_add.php" class="suitform">
+			        <input type="hidden" name="prod_no" class="prodno" value="<?php echo $prodRow["prod_no"]; ?>">
 			        <input type="hidden" name="prod_name" class="prodname" value="<?php echo $prodRow["prod_name"]; ?>">
 			        <input type="hidden" name="prod_price" class="prodprice" value="<?php echo $prodRow["prod_price"]; ?>">
 			        <input type="hidden" name="prod_img" class="prodimg" value="<?php echo $prodRow["prod_img"]; ?>">

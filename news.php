@@ -73,7 +73,7 @@ function writehtml(tmpobject){
 
   var newsimg = document.createElement("img");
   newsimg.className = "news_item_img";
-  newsimg.src = tmpobject.newsimg;
+  newsimg.src ="images/5news/"+tmpobject.newsimg;
 
   var newsitemtxt = document.createElement("div");
   newsitemtxt.className = "news_item_txt";
@@ -86,7 +86,7 @@ function writehtml(tmpobject){
   date14.innerHTML = tmpobject.newsdate;
 
   var newsp = document.createElement("p");
-  newsp.innerHTML = textlength(tmpobject.newstxt,50);
+  newsp.innerHTML = textlength(tmpobject.newstxt,30);
 
   document.getElementsByClassName("news_item_border")[0].appendChild(newsform);
   newsform.appendChild(newsitem);

@@ -67,6 +67,25 @@ window.onload=function(){
 		var index=$(this).index();
 		$('.step1_maxContent .rwdintroduce .rwdboardinfo').text(boardinfo[index]);
 	});
+
+/*↓步驟一按浪板換價錢*/
+	$('#boardprice').text($('.step1_maxContent .boardpriceshow').text());
+	$('.step1_maxContent .board').click(function(){
+		var index = $(this).index()+1;
+		$.post('customize_update.php',{
+			'boardindex':index
+		},function(rs){
+			$('.step1_maxContent .boardpriceshow').text(rs);
+			$('#boardprice').text(rs);
+			console.log('浪板'+$('#boardprice').text());
+		});
+
+	});
+
+/*↑步驟一按浪板換價錢*/
+
+
+
 /*↓步驟一rwd的拉出介紹*/
 	$('.btnfield').click(function(){
 		$('.rwdintroduce').toggleClass('show');
@@ -120,6 +139,47 @@ window.onload=function(){
 	});
 /*↑步驟一顯示svg板型*/
 
+
+/*↓步驟二秀出價格*/
+	function showprice(){
+			if(isNaN(parseInt($('#materialprice').text()))){
+				$.post('customize_update.php',{
+					'Epoxyprice':'yes'
+				},function(rs){
+					$('#materialprice').text(rs);
+					// console.log('預設材質'+$('#materialprice').val());
+				});
+			}
+			if(isNaN(parseInt($('#patternprice').text()))){
+				$('#patternprice').text('0');
+			}
+	}
+	showprice();
+/*↑步驟二秀出價格*/
+
+/*↓步驟二加總價格*/
+	function calculateprice(){
+		console.log(parseInt($('#boardprice').text()));
+		console.log(parseInt($('#patternprice').text()));
+		console.log(parseInt($('#materialprice').text()));
+		var total = parseInt($('#boardprice').text())+parseInt($('#patternprice').text())+parseInt($('#materialprice').text())+500;
+		$('.step2_maxContent .priceshow').text(total);
+	}
+	
+/*↓步驟二加總價格*/
+
+
+
+/*↓步驟二，一到步驟二馬上加上材質價格*/
+	$('#step1tostep2').click(function(){
+		showprice();
+		calculateprice();
+	});
+	
+/*↑步驟二，一到步驟二馬上加上材質價格*/
+
+
+
  /*↓步驟二的手風琴*/
 	$('.patternselectgroup').hide();
 	$('.textureselect').hide();
@@ -138,9 +198,9 @@ window.onload=function(){
 		$('.colorselectgroup').slideUp();
 		$('.textureselect').slideToggle();
 	});
-	$('.orangebtn').click(function(){
+	// $('.orangebtn').click(function(){
 
-	});
+	// });
 /*↑步驟二的手風琴*/
 
 /*↓步驟二rwd的手風琴*/
@@ -162,7 +222,7 @@ window.onload=function(){
 		$('.rwdselectstyle .patternarea').slideUp();
 	});
 	$('.orangebtn').click(function(){
-
+		// $('.step2_maxContent .priceshow').text();
 	});
 /*↑步驟二rwd的手風琴*/
 
@@ -197,6 +257,7 @@ window.onload=function(){
 /*↑步驟二，色球顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
+
 	$('.step2_maxContent .texturegorup .texture').click(function(){
 		var index=$(this).index();
 		$(this).addClass('click');
@@ -210,6 +271,16 @@ window.onload=function(){
 		$('#customermaterial').val(texturename[index]);
 		$('.step2_maxContent .introduce .content p').html(textureinfo[index]);
 		$('.step2_maxContent .introduce .head h3').text(texturename[index]);
+		index++;
+		$.post('customize_update.php',{
+			'customermaterial':index
+		},function(rs){
+			$('#materialprice').text(rs);
+			console.log('材質'+$('#materialprice').text());
+			showprice();
+			calculateprice();
+		});
+
 	});
 /*↑步驟二換材質說明與按鈕外框*/
 
@@ -238,12 +309,6 @@ var newwidth = $('.selectAndNext .pattern').width()*patterns;
 $('.selectAndNext .patterns').width(newwidth);
 /*↑步驟二動態產生圖案group長度*/
 
-/*↓步驟二按圖換標題*/
-$('.pattern').click(function(){
-	var index= $(this).index();
-	$('.patterntitle').text(patterntitlearr[index]);
-});
-/*↑步驟二按圖換標題*/
 
 /*↓步驟二按圖放到浪板上*/
 
@@ -255,6 +320,19 @@ $('.pattern').click(function(){
 // });
 for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 	document.getElementsByClassName('pattern')[i].onclick=function(e){
+		/*↓步驟二按圖換標題*/
+		var index = $(this).index();
+		$('.patterntitle').text(patterntitlearr[index]);
+		$.post('customize_update.php',{
+			'clickpattern':'yes'
+		},function(rs){
+			$('#patternprice').text(rs);
+			console.log($('#patternprice').text());
+			showprice();
+			calculateprice();
+		});
+
+		/*↑步驟二按圖換標題*/
 		function convertImgToDataURLviaCanvas(url, callback, outputFormat) {
 		  var img = new Image();
 		  img.crossOrigin = 'Anonymous';
@@ -293,6 +371,15 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		readFile.addEventListener('load',function(){
 			document.getElementById('patternshow').setAttribute("xlink:href", readFile.result);
 		},false);
+
+		$.post('customize_update.php',{
+			'clickupload':'yes'
+		},function(rs){
+			$('#patternprice').text(rs);
+		});
+		showprice();
+		calculateprice();
+		$('.patterntitle').text('使用者上傳圖片');
 	}
 /*↑步驟二上傳圖片至demo區*/
 
@@ -317,13 +404,14 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 /*↑步驟二拖曳圖片*/
 
 
+
 /*↓步驟二儲存圖片到下一步驟*/
 	document.getElementById('step2tostep3').onclick=function(){
 		console.log('a');
 		// document.getElementById('svgstep2').width=1000;
 		// document.getElementById('svgstep2').setAttribute("viewbox","0 0 100 10");
 		document.getElementById("step3result").height=1500;
-
+		$('#ordertotalprice').text($('.priceshow').text());
 		var svgData = new XMLSerializer().serializeToString( document.getElementById('svgstep2') );
 		// document.getElementById("step3result").width=500;
 		var ctx = document.getElementById("step3result").getContext("2d");
@@ -350,6 +438,23 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 function warningifnotfill(){
 
 }
+	
+	$('#step3tostep4').click(function(){
+		var count = 0;
+		var input=new Array();
+		for (var i = 0; i < $('.orederinput').length; i++) {
+			input.push( $('.orederinput').eq(i).val());
+		}
+		console.log(input);
+		if(input.includes('')==false){
+			tostep4();
+		}else{
+			$('.lightboxgroup').fadeIn(100);
+		}
+	});
+	$('#closebtn').click(function(){
+        $('.lightboxgroup').fadeOut(0);
+	});
 /*↑步驟三驗證是否填妥*/
 
 /*↓步驟三填寫資料送到步驟四*/
@@ -365,6 +470,10 @@ $('#step3tostep4').click(function(){
 	$('#ordercolor').text($('#customercolor').val());
 	$('#orderpattern').text($('.patterntitle').eq(0).text());
 	$('#ordermaterial').text($('#customermaterial').val());
+	$('#finalboardprice').text($('#boardprice').text());
+	$('#finalpatternprice').text($('#patternprice').text());
+	$('#finalmaterialprice').text($('#materialprice').text());
+	$('#finaltotalprice').text($('.priceshow').text());
 });
 /*↑步驟三填寫資料送到步驟四*/
 };

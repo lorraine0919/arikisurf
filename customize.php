@@ -31,9 +31,9 @@ require_once('connectBooks.php');
 		<div class="lightboxgroup">
 			<div class="lightboxarea">
 				<h2></h2>
-				<p></p>
+				<p>請填寫完整資料</p>
 				<div id="closebtn">
-					<img src="images/3accessories/Close.png" alt="">
+					<i class="fa fa-times" aria-hidden="true"></i>
 				</div>
 			</div>
 		</div>
@@ -46,6 +46,24 @@ require_once('connectBooks.php');
 				</div>
 			</div>
 			<div class="introduce">
+				<div class="pricegroup">
+					<span>浪板價格</span>
+					<span class="priceshowgroup">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+						<span class="boardpriceshow">
+						
+						<?php 
+							$sql = 'select * from customize_model';
+							$pdostatement = $pdo->query($sql); 
+							$pdostatement->fetch(PDO::FETCH_ASSOC);
+							$pdorow = $pdostatement->fetch(PDO::FETCH_ASSOC);
+							echo $pdorow['customize_model_price'];
+						?>
+							
+						</span>	
+					</span>
+					
+				</div>
 				<div class="introducefix">
 					<div class="head">
 						<h3>長板（Longboard）</h3>
@@ -161,6 +179,52 @@ require_once('connectBooks.php');
 				</div>
 			</div>
 			<div class="introduce">
+				<div class="pricegroup">
+					<table>
+						<tr>
+							<td>板型價格</td>
+							<td><span id="boardprice" class="shownowprice"></span></td>
+						</tr>
+						<tr>
+							<td>圖樣價格</td>
+							<td>
+								<span id="patternprice" class="shownowprice"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>材質價格</td>
+							<td><span id="materialprice" class="shownowprice"></span></td>
+						</tr>
+						<tr>
+							<td>運費</td>
+							<td><span>500</span></td>
+						</tr>						
+						<tr>
+							<td colspan="2" class="dividelinearea">
+								<div class="divideline"></div>
+							</td>
+						</tr>
+						<tr >
+							<td><span>總價</span></td>
+							<td>
+								<span class="priceshowgroup" class="shownowprice">
+									<i class="fa fa-usd" aria-hidden="true"></i>
+									<span class="priceshow">
+									
+									<?php 
+										$sql = 'select * from customize_model';
+										$pdostatement = $pdo->query($sql); 
+										$pdostatement->fetch(PDO::FETCH_ASSOC);
+										$pdorow = $pdostatement->fetch(PDO::FETCH_ASSOC);
+										echo $pdorow['customize_model_price'];
+									?>
+										
+									</span>	
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
 				<div class="introducefix">
 					<div class="head">
 						<h3>環氧樹脂（Epoxy）</h3>
@@ -171,6 +235,7 @@ require_once('connectBooks.php');
 						</div>
 					</div>
 					<div class="content">
+						
 						<p>構造由Eps(較高級的保麗龍)＋玻璃纖維布＋Epoxy樹脂所組成，重量較輕，靈敏度較佳，但是穩定度較差，少了玻纖板的紮實感！<br><br>
 						由於Epoxy樹脂的硬度較硬，所以優點是較耐撞擊，但是也因為硬而無彈性，在大浪時有可能發生直接斷裂的情形</p>
 					</div>					
@@ -253,6 +318,7 @@ require_once('connectBooks.php');
 							<div class="patternarea">
 								<div class="top">
 									<div class="allpattern">
+										
 										<?php 
 	                                        $sql = 'select * from customize_officialimg';
 	                                        $pdostatement=$pdo->prepare($sql);
@@ -274,6 +340,7 @@ require_once('connectBooks.php');
 								</div>
 								<div class="bottom">
 									<div class="left">
+										
 										<p>上傳您的圖案</p>
 									</div>
 									<div class="right">
@@ -347,7 +414,7 @@ require_once('connectBooks.php');
 							<div class="patternselectgroup">
 								<div class="patternselectgroupfix">
 									<div class="head">
-											<p class="patterntitle">尚未選擇圖樣</p>
+											<p class="patterntitle">未選擇圖樣</p>
 											<script>
 											var patterntitlearr=[];
 											<?php 
@@ -444,7 +511,7 @@ require_once('connectBooks.php');
 							<h4>總價（含運）</h4>
 							<div class="bottom">
 								<div class="number">
-									<h3>94870元</h3>
+									<h3 id="ordertotalprice">94870</h3><span>元</span>
 								</div>
 								<div class="detail">
 									<p>明細</p>
@@ -457,27 +524,27 @@ require_once('connectBooks.php');
 							<table>
 								<tr>
 									<th><h3>姓名</h3></th>
-									<td><input type="text" name="" id="customername"></td>
+									<td><input type="text" name="" id="customername" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>電話</h3></th>
-									<td><input type="phone" name="" id="customerphone"></td>
+									<td><input type="phone" name="" id="customerphone" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>電子信箱</h3></th>
-									<td><input type="email" name="" id="customeremail"></td>
+									<td><input type="email" name="" id="customeremail" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>收件地址</h3></th>
-									<td><textarea rows="5" id="customeraddress"></textarea></td>
+									<td><textarea rows="5" id="customeraddress" class="orederinput"></textarea></td>
 								</tr>
 								<tr>
 									<th><h3>匯款帳號後五碼</h3></th>
-									<td><input type="text" name="" id="customeraccount"></td>
+									<td><input type="text" name="" id="customeraccount" class="orederinput"></td>
 								</tr>
 								<tr>
 									<th><h3>其他留言</h3></th>
-									<td><textarea rows="5" id="customermessage"></textarea></td>
+									<td><textarea rows="5" id="customermessage" class="orederinput"></textarea></td>
 								</tr>
 							</table>
 							<div class="next">
@@ -501,7 +568,7 @@ require_once('connectBooks.php');
 				<div class="fillfix">
 					
 					<div class="head">
-						<h3>填寫購買資料</h3>
+						<h3>確認購買資料</h3>
 					</div>
 					<div class="content">
 						<div class="demogroup col-sm-4">
@@ -513,32 +580,34 @@ require_once('connectBooks.php');
 							<div class="custominfo col-sm-12">
 								<div class="title"><h3>您的資料</h3></div>
 								<div class="infocontent">
-									<p>姓名：<sapn id="ordername">鄧浮雲</sapn><br>
-									電話：<sapn id="orderphone">03-94879487</sapn><br>
-									信箱：<sapn id="orderemail">mathi5566@gmail.com</sapn><br>
-									收件地址：<sapn id="orderaddress">桃園市中壢區中央路1段1號</sapn><br>
-									匯款帳號後五碼：<sapn id="orderaccount">59487</sapn><br>
-									其他留言：<sapn id="ordermessage">煩請回覆告知出貨時間</sapn><br>
+									<p>姓名　<sapn id="ordername">鄧浮雲</sapn><br>
+									電話　<sapn id="orderphone">03-94879487</sapn><br>
+									信箱　<sapn id="orderemail">mathi5566@gmail.com</sapn><br>
+									收件地址　<sapn id="orderaddress">桃園市中壢區中央路1段1號</sapn><br>
+									匯款帳號後五碼　<sapn id="orderaccount">59487</sapn><br>
+									其他留言　<sapn id="ordermessage">煩請回覆告知出貨時間</sapn><br>
 									</p>
 								</div>
 							</div>
 							<div class="boardinfo col-sm-6 col-xs-12">
 								<div class="title"><h3>您的浪板</h3></div>
 								<div class="infocontent">
-									<P>板型：<span id="orderboard">長板</span><br>
-									顏色：<span id="ordercolor">白色</span><br>
-									圖案：<span id="orderpattern">ARIKI BD101</span> <br>
-									材質：<span id="ordermaterial">玻璃纖維</span><br>
+									<P>板型　<span id="orderboard">長板</span><br>
+									顏色　<span id="ordercolor">白色</span><br>
+									圖案　<span id="orderpattern">ARIKI BD101</span> <br>
+									材質　<span id="ordermaterial">玻璃纖維</span><br>
 									</P>
 								</div>
 							</div>
 							<div class="totalinfo col-sm-6 col-xs-12">
-								<div class="title"><h3>應付金額</h3></div>
+								<div class="title"><h3>訂單明細</h3></div>
 								<div class="infocontent">
 									<p>
-										小計：94770元<br>
-										運費：100元<br>
-										總價：94870元<br>
+										板型　<span id="finalboardprice">94770</span><span class="unitdollar">元</span><br>
+										圖樣　<span id="finalpatternprice">94770</span> <span class="unitdollar">元</span><br>
+										材質　<span id="finalmaterialprice">94770</span><span class="unitdollar">元</span><br>
+										運費　<span>500</span> <span class="unitdollar">元</span><br>
+										<span class="finaltotalpricegroup">總價　<span id="finaltotalprice">94870</span> <span class="unitdollar">元</span></span><br>
 									</p>
 								</div>
 							</div>

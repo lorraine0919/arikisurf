@@ -191,6 +191,7 @@ a {
           box-sizing: border-box;
           padding: 1%; }
           .bg_11 .main_11 .back .feed .feed_c .feed_info {
+            width: 50vw;
             color: #9aa2aa; }
             .bg_11 .main_11 .back .feed .feed_c .feed_info .name {
               display: inline-block;

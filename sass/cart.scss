@@ -1,5 +1,5 @@
 .clearfix{
-    clear:both;
+    clear:both; 
 }
 @mixin Width-size_8cart($width,$percent,$Mup,$Mdown){
     max-width: $width + px;

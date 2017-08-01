@@ -736,6 +736,10 @@
           padding: 2% 0px; }
           .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .infocontent #orderpattern {
             text-transform: capitalize; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .infocontent #finaltotalprice {
+            color: #e97b23; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .infocontent .unitdollar {
+            font-size: 9px; }
         .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next {
           text-align: right;
           margin: 0 34px 0 0; }

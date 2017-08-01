@@ -975,6 +975,13 @@
 							#orderpattern{
 								text-transform: capitalize;
 							}
+							#finaltotalprice{
+								color: #e97b23;
+								// border-top: 1px solid rgba(255,255,255,0.6);
+							}
+							.unitdollar{
+								font-size: 9px;
+							}
 						}
 						.next{
 							text-align: right;

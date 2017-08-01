@@ -69,7 +69,7 @@ window.onload=function(){
 	});
 
 /*↓步驟一按浪板換價錢*/
-	$('.boardprice').val($('.step1_maxContent .priceshow').text());
+	$('#boardprice').val($('.step1_maxContent .priceshow').text());
 	$('.step1_maxContent .board').click(function(){
 		var index = $(this).index()+1;
 		$.post('customize_update.php',{
@@ -77,8 +77,8 @@ window.onload=function(){
 		},function(rs){
 			$('.step1_maxContent .priceshow').text(rs);
 			$('.step2_maxContent .priceshow').text(rs);
-			$('.boardprice').val(rs);
-			console.log('浪板'+$('.boardprice').val());
+			$('#boardprice').val(rs);
+			console.log('浪板'+$('#boardprice').val());
 		});
 
 	});
@@ -254,8 +254,8 @@ window.onload=function(){
 	$.post('customize_update.php',{
 		'Epoxyprice':'yes'
 	},function(rs){
-		$('.materialprice').val(rs);
-		console.log('預設材質'+$('.materialprice').val());
+		$('#materialprice').val(rs);
+		console.log('預設材質'+$('#materialprice').val());
 	});
 	$('.step2_maxContent .texturegorup .texture').click(function(){
 		var index=$(this).index();
@@ -274,8 +274,8 @@ window.onload=function(){
 		$.post('customize_update.php',{
 			'customermaterial':index
 		},function(rs){
-			$('.materialprice').val(rs);
-			console.log('材質'+$('.materialprice').val());
+			$('#materialprice').val(rs);
+			console.log('材質'+$('#materialprice').val());
 		});
 		calculateprice();
 	});
@@ -313,9 +313,9 @@ $('.pattern').click(function(){
 	$.post('customize_update.php',{
 		'clickpattern':'yes'
 	},function(rs){
-		$('.officalpatternprice').val(rs);
-		console.log('官方圖片'+$('.officalpatternprice').val());
-		$('.userpatternprice').removeAttr('value');
+		$('#officalpatternprice').val(rs);
+		console.log('官方圖片'+$('#officalpatternprice').val());
+		$('#userpatternprice').removeAttr('value');
 	});
 	calculateprice();
 });
@@ -373,9 +373,9 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		$.post('customize_update.php',{
 			'clickupload':'yes'
 		},function(rs){
-			$('.userpatternprice').val(rs);
-			console.log('使用者圖片'+$('.userpatternprice').val());
-			$('.officalpatternprice').removeAttr('value');
+			$('#userpatternprice').val(rs);
+			console.log('使用者圖片'+$('#userpatternprice').val());
+			$('#officalpatternprice').removeAttr('value');
 		});
 		calculateprice();
 	}

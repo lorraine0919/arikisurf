@@ -30,6 +30,42 @@ $(function(){
 		  });
 	});
 	/*↑按按鈕後改input的值*/
+
+	/*↓資料修改*/
+		$('.equchangebtn').click(function(){
+			console.log($(this).parent().siblings().children('.quachange').val());
+			$.post('9backstage_surfshop_update.php',{
+				    'prod_no' : $(this).siblings('.prod_no').val() , 
+			 		'name' : $(this).parent().siblings().children('.namechange').val() ,
+			 		'price' :  $(this).parent().siblings().children('.pricechange').val(),
+			 		'des' :  $(this).parent().siblings().children('.deschange').val(),
+			 		'qua' :  $(this).parent().siblings().children('.quachange').val()				
+				},function(rs){
+					// alert(rs);
+			});
+		});
+	/*↑資料修改*/
+
+
+
+
+		/*↓資料新增*/
+		$('.newAdd').click(function(){
+			console.log($(this).parent().parent().siblings().children().children('.newImg').val());
+			$.post('9backstage_surfshop_update.php',{
+				  //   'prod_no' : $(this).siblings('.prod_no').val() , 
+			 		// 'newName' : $(this).parent().siblings().children('.namechange').val() ,
+			 		// 'newPrice' :  $(this).parent().siblings().children('.pricechange').val(),
+			 		// 'newDes' :  $(this).parent().siblings().children('.deschange').val(),
+			 		// 'newQua' :  $(this).parent().siblings().children('.quachange').val(),
+			 		// 'newObj' :  $(this).parent().siblings().children('.quachange').val(),
+			 		'newImg' :  $(this).parent().parent().siblings().children().children('.newImg').val()				
+				},function(rs){
+					// alert(rs);
+			});
+		});
+	/*↑資料新增*/
 })
+
 
 

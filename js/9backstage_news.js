@@ -11,7 +11,6 @@ $(document).ready(function(){
         $('.add-form').fadeOut(0);
 	});
 
-
 	$('.lightbox-btn-edit').click(function(){
         $('.edit-form').fadeIn(500);
         ($(this).children('.newsno').val());
@@ -31,7 +30,6 @@ $(document).ready(function(){
 
 			// var newsimg = document.getElementsByClassName("edit_news_img")[0];
 			//     newsimg.value = allnews[0].newsimg;
-			
 
 			var newsimgplace = document.getElementById("place_img");
 			    newsimgplace.src = "images/5news/"+allnews[0].newsimg;

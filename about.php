@@ -275,4 +275,5 @@
    <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
    <p id="goTop"><a href="#"><img src="images/6ariki/Webp.net-gifmaker.gif"></a> </p>
 </body>
+
 </html>

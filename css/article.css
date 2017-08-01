@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 767px) {
   .bg_15 {
-    background-image: url("../images/5news/bg_f.jpg");
+    background-image: url("../images/4wavepoint/bg_f.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     height: auto;
@@ -68,7 +68,7 @@
     margin: 0 auto; }
 
   .bg_15 {
-    background-image: url("../images/5news/bg_f.jpg");
+    background-image: url("../images/4wavepoint/bg_f.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;

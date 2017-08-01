@@ -132,23 +132,25 @@ require_once('connectBooks.php');
     <div id="menu2" class="tab-pane fade">
       <div class="model content-panel ">
           <h4><i class="fa fa-angle-right"></i>配備新增管理</h4>
+          <form action="9backstage_surfshop_update.php" method="post" enctype="multipart/form-data">
           <table class="table table-bordered table-striped table-condensed">
-            <tr><td>商品名稱</td><td><textarea class="newName" cols="30" rows="2"></textarea></td></tr>
-            <tr><td>商品價格</td><td><input type="number" min="0" class="newPrice"></td></tr>
-            <tr><td>商品內容</td><td><textarea class="newDes" cols="30" rows="10"></textarea></td></tr>
-            <tr><td>商品庫存</td><td><input type="number" min="0" class="newQua"></td></tr>
-            <tr><td>商品品項</td><td><select class="newObj">
+            <tr><td>商品名稱</td><td><textarea class="newName" name="newName" cols="30" rows="2"></textarea></td></tr>
+            <tr><td>商品價格</td><td><input type="number" min="0" class="newPrice" name="newPrice"></td></tr>
+            <tr><td>商品內容</td><td><textarea class="newDes" name="newDes" cols="30" rows="10"></textarea></td></tr>
+            <tr><td>商品庫存</td><td><input type="number" min="0" class="newQua" name="newQua"></td></tr>
+            <tr><td>商品品項</td><td><select class="newObj" name="newObj">
               <option value="Leash">衝浪腳繩</option>
               <option value="Fin">衝浪板舵</option>
               <option value="Wax">浪板蠟及相關</option>
               <option value="Suit">衝浪褲&防寒衣</option>
             </select></td></tr>
-            <tr><td>圖檔</td><td><input type="file" name="image" class="newImg"></td></tr>
+            <tr><td>圖檔</td><td><input type="file"  id="newImg" name="newImg"></td></tr>
             <tr><td colspan="2" align="center">
               <input type="hidden" name="prod_no" value="<?php echo $pdoRow['prod_no'] ?>" class="prod_no">
-              <input type="button" value="確定加入" class="newAdd">
+              <input type="submit" value="確定加入" class="newAdd">
             </td></tr>
           </table>
+          </form>
         </div>
     </div>
    

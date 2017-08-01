@@ -69,15 +69,16 @@ window.onload=function(){
 	});
 
 /*↓步驟一按浪板換價錢*/
-	$('#boardprice').text($('.step1_maxContent .boardpriceshow').text());
+	$('#boardprice').val($('.step1_maxContent .priceshow').text());
 	$('.step1_maxContent .board').click(function(){
 		var index = $(this).index()+1;
 		$.post('customize_update.php',{
 			'boardindex':index
 		},function(rs){
-			$('.step1_maxContent .boardpriceshow').text(rs);
-			$('#boardprice').text(rs);
-			console.log('浪板'+$('#boardprice').text());
+			$('.step1_maxContent .priceshow').text(rs);
+			$('.step2_maxContent .priceshow').text(rs);
+			$('#boardprice').val(rs);
+			console.log('浪板'+$('#boardprice').val());
 		});
 
 	});
@@ -140,39 +141,32 @@ window.onload=function(){
 /*↑步驟一顯示svg板型*/
 
 
-/*↓步驟二秀出價格*/
-	function showprice(){
-			if(isNaN(parseInt($('#materialprice').text()))){
-				$.post('customize_update.php',{
-					'Epoxyprice':'yes'
-				},function(rs){
-					$('#materialprice').text(rs);
-					// console.log('預設材質'+$('#materialprice').val());
-				});
-			}
-			if(isNaN(parseInt($('#patternprice').text()))){
-				$('#patternprice').text('0');
-			}
-	}
-	showprice();
-/*↑步驟二秀出價格*/
-
 /*↓步驟二加總價格*/
+	var total = $('.step1_maxContent .priceshow').text();
+	$('.step2_maxContent .priceshow').text(total);
 	function calculateprice(){
-		console.log(parseInt($('#boardprice').text()));
-		console.log(parseInt($('#patternprice').text()));
-		console.log(parseInt($('#materialprice').text()));
-		var total = parseInt($('#boardprice').text())+parseInt($('#patternprice').text())+parseInt($('#materialprice').text())+500;
-		$('.step2_maxContent .priceshow').text(total);
+		if($('.userpatternprice').val()==''){
+			console.log('沒有使用者上傳');
+			total = $('#boardprice').val()+$('#materialprice').val()+$('#officalpatternprice').val();
+			// console.log(total);
+			$('.step2_maxContent .priceshow').text(total);
+		}else if($('.officalpatternprice').val()==''){
+			console.log('沒有官方');
+			total = $('#boardprice').val()+$('#materialprice').val()+$('#userpatternprice').val();
+			$('.step2_maxContent .priceshow').text(total);
+		}else{
+			console.log('沒有圖樣');
+			total = $('#boardprice').val()+$('#materialprice').val();
+			$('.step2_maxContent .priceshow').text(total);
+		}	
+		
 	}
-	
-/*↓步驟二加總價格*/
 
+/*↑步驟二加總價格*/
 
 
 /*↓步驟二，一到步驟二馬上加上材質價格*/
 	$('#step1tostep2').click(function(){
-		showprice();
 		calculateprice();
 	});
 	
@@ -257,7 +251,12 @@ window.onload=function(){
 /*↑步驟二，色球顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
-
+	$.post('customize_update.php',{
+		'Epoxyprice':'yes'
+	},function(rs){
+		$('#materialprice').val(rs);
+		console.log('預設材質'+$('#materialprice').val());
+	});
 	$('.step2_maxContent .texturegorup .texture').click(function(){
 		var index=$(this).index();
 		$(this).addClass('click');
@@ -275,12 +274,10 @@ window.onload=function(){
 		$.post('customize_update.php',{
 			'customermaterial':index
 		},function(rs){
-			$('#materialprice').text(rs);
-			console.log('材質'+$('#materialprice').text());
-			showprice();
-			calculateprice();
+			$('#materialprice').val(rs);
+			console.log('材質'+$('#materialprice').val());
 		});
-
+		calculateprice();
 	});
 /*↑步驟二換材質說明與按鈕外框*/
 
@@ -309,6 +306,20 @@ var newwidth = $('.selectAndNext .pattern').width()*patterns;
 $('.selectAndNext .patterns').width(newwidth);
 /*↑步驟二動態產生圖案group長度*/
 
+/*↓步驟二按圖換標題*/
+$('.pattern').click(function(){
+	var index = $(this).index();
+	$('.patterntitle').text(patterntitlearr[index]);
+	$.post('customize_update.php',{
+		'clickpattern':'yes'
+	},function(rs){
+		$('#officalpatternprice').val(rs);
+		console.log('官方圖片'+$('#officalpatternprice').val());
+		$('#userpatternprice').removeAttr('value');
+	});
+	calculateprice();
+});
+/*↑步驟二按圖換標題*/
 
 /*↓步驟二按圖放到浪板上*/
 
@@ -320,19 +331,6 @@ $('.selectAndNext .patterns').width(newwidth);
 // });
 for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 	document.getElementsByClassName('pattern')[i].onclick=function(e){
-		/*↓步驟二按圖換標題*/
-		var index = $(this).index();
-		$('.patterntitle').text(patterntitlearr[index]);
-		$.post('customize_update.php',{
-			'clickpattern':'yes'
-		},function(rs){
-			$('#patternprice').text(rs);
-			console.log($('#patternprice').text());
-			showprice();
-			calculateprice();
-		});
-
-		/*↑步驟二按圖換標題*/
 		function convertImgToDataURLviaCanvas(url, callback, outputFormat) {
 		  var img = new Image();
 		  img.crossOrigin = 'Anonymous';
@@ -375,9 +373,10 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		$.post('customize_update.php',{
 			'clickupload':'yes'
 		},function(rs){
-			$('#patternprice').text(rs);
+			$('#userpatternprice').val(rs);
+			console.log('使用者圖片'+$('#userpatternprice').val());
+			$('#officalpatternprice').removeAttr('value');
 		});
-		showprice();
 		calculateprice();
 		$('.patterntitle').text('使用者上傳圖片');
 	}
@@ -411,7 +410,7 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		// document.getElementById('svgstep2').width=1000;
 		// document.getElementById('svgstep2').setAttribute("viewbox","0 0 100 10");
 		document.getElementById("step3result").height=1500;
-		$('#ordertotalprice').text($('.priceshow').text());
+
 		var svgData = new XMLSerializer().serializeToString( document.getElementById('svgstep2') );
 		// document.getElementById("step3result").width=500;
 		var ctx = document.getElementById("step3result").getContext("2d");

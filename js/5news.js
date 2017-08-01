@@ -1,5 +1,4 @@
-//scorll banner
-           
+//scorll banner           
 $(function (){
     TweenMax.fromTo('.news_title_14',1,
     {y:250,

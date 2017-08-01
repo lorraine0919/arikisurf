@@ -50,20 +50,39 @@ $(function(){
 
 
 		/*↓資料新增*/
-		$('.newAdd').click(function(){
-			console.log($(this).parent().parent().siblings().children().children('.newImg').val());
-			$.post('9backstage_surfshop_update.php',{
-				  //   'prod_no' : $(this).siblings('.prod_no').val() , 
-			 		// 'newName' : $(this).parent().siblings().children('.namechange').val() ,
-			 		// 'newPrice' :  $(this).parent().siblings().children('.pricechange').val(),
-			 		// 'newDes' :  $(this).parent().siblings().children('.deschange').val(),
-			 		// 'newQua' :  $(this).parent().siblings().children('.quachange').val(),
-			 		// 'newObj' :  $(this).parent().siblings().children('.quachange').val(),
-			 		'newImg' :  $(this).parent().parent().siblings().children().children('.newImg').val()				
-				},function(rs){
-					// alert(rs);
-			});
-		});
+		// $('.newAdd').click(function(){
+		// 	console.log($(this).parent().parent().siblings().children().children('#newImg').val());
+		// 	var formData = new FormData();
+		// 		formData.append('newImg', $('#newImg')[0].files[0]);
+		// 		$.ajax({
+		// 		    url: '9backstage_surfshop_update.php',
+		// 		    type: 'POST',
+		// 		    cache: false,
+		// 		    contentType: false,
+		// 		    data: formData,
+		// 		    processData: false,
+		// 		    contentType: false
+		// 		}).done(function(res) {
+		// 			// location.reload();
+		// 			console.log(res);
+		// 		}).fail(function(res) {
+		// 			// alert('新增成功');
+		// 			console.log(res);
+		// 		});
+		// 	$.post('9backstage_surfshop_update.php',{
+		// 		    'prod_no' : $(this).siblings('.prod_no').val() , 
+		// 	 		'newName' : $(this).parent().parent().siblings().children().children('.newName').val() ,
+		// 	 		'newPrice' : $(this).parent().parent().siblings().children().children('.newPrice').val(),
+		// 	 		'newDes' : $(this).parent().parent().siblings().children().children('.newDes').val(),
+		// 	 		'newQua' : $(this).parent().parent().siblings().children().children('.newQua').val(),
+		// 	 		'newObj' : $(this).parent().parent().siblings().children().children('.newObj').val(),
+		// 	 		// 'newPic' : $(this).parent().parent().siblings().children().children('#newImg').val()
+			 						
+		// 		},function(rs){
+		// 			console.log(rs);
+		// 	});
+			
+		// });
 	/*↑資料新增*/
 })
 

@@ -33,7 +33,7 @@ require_once('connectBooks.php');
 				<h2></h2>
 				<p>請填寫完整資料</p>
 				<div id="closebtn">
-					<i class="fa fa-times" aria-hidden="true"></i>
+					<img src="images/3accessories/Close.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -47,10 +47,11 @@ require_once('connectBooks.php');
 			</div>
 			<div class="introduce">
 				<div class="pricegroup">
-					<span>浪板價格</span>
+					<span>總價</span>
 					<span class="priceshowgroup">
+						<input type="hidden" class="boardprice">
 						<i class="fa fa-usd" aria-hidden="true"></i>
-						<span class="boardpriceshow">
+						<span class="priceshow">
 						
 						<?php 
 							$sql = 'select * from customize_model';
@@ -180,50 +181,11 @@ require_once('connectBooks.php');
 			</div>
 			<div class="introduce">
 				<div class="pricegroup">
-					<table>
-						<tr>
-							<td>板型價格</td>
-							<td><span id="boardprice" class="shownowprice"></span></td>
-						</tr>
-						<tr>
-							<td>圖樣價格</td>
-							<td>
-								<span id="patternprice" class="shownowprice"></span>
-							</td>
-						</tr>
-						<tr>
-							<td>材質價格</td>
-							<td><span id="materialprice" class="shownowprice"></span></td>
-						</tr>
-						<tr>
-							<td>運費</td>
-							<td><span>500</span></td>
-						</tr>						
-						<tr>
-							<td colspan="2" class="dividelinearea">
-								<div class="divideline"></div>
-							</td>
-						</tr>
-						<tr >
-							<td><span>總價</span></td>
-							<td>
-								<span class="priceshowgroup" class="shownowprice">
-									<i class="fa fa-usd" aria-hidden="true"></i>
-									<span class="priceshow">
-									
-									<?php 
-										$sql = 'select * from customize_model';
-										$pdostatement = $pdo->query($sql); 
-										$pdostatement->fetch(PDO::FETCH_ASSOC);
-										$pdorow = $pdostatement->fetch(PDO::FETCH_ASSOC);
-										echo $pdorow['customize_model_price'];
-									?>
-										
-									</span>	
-								</span>
-							</td>
-						</tr>
-					</table>
+					<span>總價</span>
+					<span class="priceshowgroup">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+						<span class="priceshow"></span>	
+					</span>
 				</div>
 				<div class="introducefix">
 					<div class="head">
@@ -318,7 +280,7 @@ require_once('connectBooks.php');
 							<div class="patternarea">
 								<div class="top">
 									<div class="allpattern">
-										
+										<input type="hidden" id="officalpatternprice" value="">
 										<?php 
 	                                        $sql = 'select * from customize_officialimg';
 	                                        $pdostatement=$pdo->prepare($sql);
@@ -340,7 +302,7 @@ require_once('connectBooks.php');
 								</div>
 								<div class="bottom">
 									<div class="left">
-										
+										<input type="hidden" id="userpatternprice" value="">
 										<p>上傳您的圖案</p>
 									</div>
 									<div class="right">
@@ -353,6 +315,7 @@ require_once('connectBooks.php');
 					</div>
 					<div class="texturegroup selectgroup">
 						<input type="hidden" id="customermaterial" value="環氧樹脂">
+						<input type="hidden" id="materialprice" value="">
 						<div class="btn">選擇材質</div>
 						<div class="clearfix"></div>
 						<div class="texturecontent">
@@ -511,7 +474,7 @@ require_once('connectBooks.php');
 							<h4>總價（含運）</h4>
 							<div class="bottom">
 								<div class="number">
-									<h3 id="ordertotalprice">94870</h3><span>元</span>
+									<h3>94870元</h3>
 								</div>
 								<div class="detail">
 									<p>明細</p>

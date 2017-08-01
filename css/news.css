@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 * {
   margin: 0;
   padding: 0;
@@ -98,7 +97,7 @@ body {
     margin: auto; }
 
   .bg_14 {
-    background-image: url("../images/5news/bg_f.jpg");
+    background-image: url("../images/4wavepoint/bg_f.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;

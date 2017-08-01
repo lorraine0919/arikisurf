@@ -13,6 +13,7 @@
 
 		$fileName = $_FILES["newsimg"]["name"];
 		
+	
 
 	try{
 			$sql = "update news set newstitle =:newstitle,newsdate=:newsdate,newsimg=:newsimg,newstxt=:newstxt where newsno =:newsno";
@@ -44,5 +45,4 @@ header("Location: 9backstage_news.php");
 exit;
 ?>    
 </body>
-
 </html>

@@ -15,6 +15,6 @@ try{
 	}	
 
 header("Location: 9backstage_news.php"); 
+ 
 exit;
-
  ?>

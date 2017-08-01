@@ -20,6 +20,9 @@ ob_start();
 <!--(bake module/member_top.html)--> <?php require_once('publicpage/member_top.php'); ?>
 <!-- =================會員專區================== -->
 <div class="member_ordercheck_23">
+    <?php
+        try{
+    ?>
     <div class="ordercheck-title">
         <ul>
             <li id="customize_ODC" class="li-click"><p>客製浪板</p></li>
@@ -29,7 +32,7 @@ ob_start();
         <div class="clearfix"></div>
     </div>
 
-    <div class="customize-txt">
+    <div class="item-txt" id="customize-txt">
         <div class="txt-title">
             <ul>
                 <li class="col-sm-2">訂單編號</li>
@@ -42,8 +45,8 @@ ob_start();
         </div>
         <div class="txt-val">
             
+                
                 <?php
-                    try{
                         require_once("connectBooks.php");
                         $sql = "select * from customize_order 
                                 join member, customize_color, customize_model, customize_material
@@ -56,24 +59,50 @@ ob_start();
                         while($order_CK = $order->fetch()){
                ?>
                     <ul>
-                        <li class="col-sm-2"><span><?php echo $order_CK["customize_orderNo"]?></span></li>
-                        <li class="col-sm-2"><span><?php echo $order_CK["customize_order_date"]?></span></li>
-                        <li class="col-sm-2"><span><?php echo $order_CK["customize_order_total"]?></span></li>
-                        <li class="col-sm-2"><span>出貨中</span></li>
+                        <li class="col-sm-2 orderNo"><span><?php echo $order_CK["customize_orderNo"]?></span></li>
+                        <li class="col-sm-2 orderDate"><span><?php echo $order_CK["customize_order_date"]?></span></li>
+                        <li class="col-sm-2 orderTotal"><span><?php echo $order_CK["customize_order_total"]?></span></li>
+                        <li class="col-sm-2 orderStatus">
+                            <span>
+                                <?php 
+                                    if($order_CK["customize_order_status"] == 1){
+                                        echo "未付款";
+                                    }else if($order_CK["customize_order_status"]==2){
+                                        echo "未出貨";
+                                    }else if($order_CK["customize_order_status"]==3){
+                                        echo "已出貨";
+                                    }else if($order_CK["customize_order_status"]==4){
+                                        echo "申請中";
+                                    }
+                                ?>
+                            </span></li>
                         <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn customize-order-btn"></li>
+                        <li class="clearfix"></li>
                     </ul>
-               <?php
-                        }
-                    }catch(PDOException $ex){
-                        echo "錯誤行號 : ", $e->getLine(), "<br>";
-                        echo "錯誤訊息 : ", $e->getMessage(), "<br>";
-                    }
-                ?>
+
+                    
+                    <div class="hideinput">
+                        <input type="hidden" name="" value="<?php echo $order_CK["customize_model_name"] ?>">
+                        <input type="hidden" name="" value="<?php echo $order_CK["customize_material_name"] ?>">
+                        <input type="hidden" name="" value="<?php echo $order_CK["customize_color_name"] ?>">
+                        <input type="hidden" name="" value="">
+
+                        <input type="hidden" name="" value="<?php echo $order_CK["customize_tel"] ?>">
+                        <input type="hidden" name="" value="<?php echo $order_CK["customize_email"] ?>">
+                        <input type="hidden" name="" value="<?php echo $order_CK["customize_adress"] ?>">
+                        <input type="hidden" name="" value="<?php echo $order_CK["customize_atm_acount"] ?>">
+                        <input type="hidden" name="" value="<?php echo $order_CK["customize_usermessage"] ?>">
+                    </div>
+               
+                
                   
-            <div class="clearfix"></div>
+            
+            <?php
+                        }
+            ?>
         </div>
     </div>
-    <div class="fitting-txt">
+    <div class="item-txt" id="fitting-txt">
         <div class="txt-title">
             <ul>
                 <li class="col-sm-2">訂單編號</li>
@@ -95,7 +124,7 @@ ob_start();
             <div class="clearfix"></div>
         </div>
     </div>
-    <div class="history-txt">
+    <div class="item-txt" id="history-txt">
         <div class="txt-title">
             <ul>
                 <li class="col-sm-2">訂單編號</li>
@@ -129,37 +158,37 @@ ob_start();
                         <div class="col-sm-6 white">
                             <div class="col-sm-6">
                                     <h4>訂單編號</h4>
-                                    <p id="cust-OD-No">A12131</p>
+                                    <p class="cust-OD-No"></p>
                             </div>
                             <div class="col-sm-6">
                                     <h4>訂單時間</h4>
-                                    <p id="cust-OD-date">2017/07/02</p>
+                                    <p class="cust-OD-date"></p>
                             </div>
                             <div class="col-sm-6">
                                     <h4>訂單狀態</h4>
-                                    <p id="cust-OD-status">出貨中</p>
+                                    <p class="cust-OD-status"></p>
                             </div>
                             <div class="col-sm-6">
                                     <h4>總價</h4>
-                                    <p id="cust-OD-total">60000</p>
+                                    <p class="cust-OD-total"></p>
                             </div>
                         </div>
                         <div class="col-sm-6 cust-OD-txt">
                             <div class="col-sm-6">
                                 <h4>板型</h4>
-                                <p>長板</p>
+                                <p class="cust-OD-model"></p>
                             </div>
                             <div class="col-sm-6">
                                 <h4>材質</h4>
-                                <p>玻璃纖維</p>
+                                <p class="cust-OD-material"></p>
                             </div>
                             <div class="col-sm-6">
                                 <h4>顏色</h4>
-                                <p>黃色</p>
+                                <p class="cust-OD-color"></p>
                             </div>
                             <div class="col-sm-6">
                                 <h4>圖案</h4>
-                                <p>123.png</p>
+                                <p class="cust-OD-img">123.png</p>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -167,18 +196,18 @@ ob_start();
                     </div>
                     <div class="col-sm-12 cust-userInput">
                         <ul>
-                            <li><h4>電話</h4><span>0941414141</span></li>
-                            <li><h4>信箱</h4><span>bd101g2@gmail.com</span></li>
-                            <li><h4>地址</h4><span>中央大學後門</span></li>
-                            <li><h4>匯款帳號</h4><span>948794</span></li>
-                            <li><h4>留言</h4><span>948794狂</span></li>
+                            <li><h4>電話</h4><span class="cust-OD-tel"></span></li>
+                            <li><h4>信箱</h4><span class="cust-OD-email"></span></li>
+                            <li><h4>地址</h4><span class="cust-OD-adress"></span></li>
+                            <li><h4>匯款帳號</h4><span class="cust-OD-atm"></span></li>
+                            <li><h4>留言</h4><span class="cust-OD-message"></span></li>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="col-sm-3 cust-img-btn-box">
                     <div class="cust-img">
-                        <img src="images/7member/7member_ordercheck/surf01.jpg" alt="">
+                        <img src="images/7member/7member_ordercheck/fishboard_yellow" alt="">
                     </div>
                     <div class="cust-btn">
                         <div class="arikicommon_bgwhite_btn">取消交易</div>
@@ -195,7 +224,13 @@ ob_start();
         <div class="history-LB LB-item" id="history-LB">
             <div class="history-box"></div>
         </div>
-    </div> 
+    </div>
+    <?php
+        }catch(PDOException $ex){
+            echo "錯誤行號 : ", $e->getLine(), "<br>";
+            echo "錯誤訊息 : ", $e->getMessage(), "<br>";
+        }
+    ?>
 </div>
 <!--(bake module/member_bottom.html)--><?php require_once('publicpage/member_bottom.php'); ?>
 <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>

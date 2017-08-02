@@ -179,6 +179,8 @@ a {
       color: #fff; }
       .bg_10 .fourm li:hover {
         color: #ED8C00; }
+      .bg_10 .fourm li:nth-child(1):hover {
+        color: #fff; }
       .bg_10 .fourm li:nth-child(4) {
         border-right: none; }
       .bg_10 .fourm li:last-child {
@@ -256,6 +258,12 @@ a {
             display: inline-block;
             float: right;
             color: #999; }
+          .bg_10 .fourm .talk .item {
+            transition: all 0.6s ;
+          }
+          .bg_10 .fourm .talk .item:hover{
+            background-color: rgba(255,255,255,.1);
+          }  
           .bg_10 .fourm .talk .item .text .tt {
             height: 70px;
             text-overflow: ellipsis;
@@ -323,7 +331,7 @@ a {
     .bg_10 .beach_10 {
       height: 100%; }
     .bg_10 .info_10 {
-      margin-top: 0rem; }
+      margin-top: 13vh; }
       .bg_10 .info_10 .ic {
         width: 45%;
         height: 6vh; }
@@ -335,15 +343,20 @@ a {
       .bg_10 .info_10 .weather {
         text-align: center; }
     .bg_10 .fourm ul {
-      padding: .5rem 1.5rem 2rem; }
+      padding: .5rem .5vw 1rem; }
       .bg_10 .fourm ul li {
         float: none;
         border-right: none;
-        width: 48%;
+        width:32%;
         text-align: center;
         margin: 0 auto;
-        padding: .2rem .3rem; }
+        padding: .2rem 0; }
+        .bg_10 .fourm li:nth-child(1){
+          float: none;
+          width: 100%;
+        }
         .bg_10 .fourm ul li:last-child {
+          width: 100%;
           float: none; }
     .bg_10 .fourm .talk {
       padding: .0; }

@@ -172,6 +172,7 @@ ob_start();
         </div>
     </div>
     <div class="decoration"></div>
+
     <div class="lightbox" id="lightbox">
         <div class="customize-LB LB-item" id="customize-LB">
             <div class="cust-box">
@@ -238,9 +239,32 @@ ob_start();
                 </div>
                 <div class="clearfix"></div>
             </div>
+            <div class="decoration"></div>
         </div>
         <div class="fitting-LB LB-item" id="fitting-LB">
-            <div class="fitt-box"></div>
+            <div class="fitt-box">
+                <div class="LB-item-h3">
+                    <h3>訂單明細</h3>
+                </div>
+                <div class="FT-list-title">
+                    <ul>
+                        <li class="col-sm-3">明細編號</li>
+                        <li class="col-sm-3">商品名稱</li>
+                        <li class="col-sm-3">數量</li>
+                        <li class="col-sm-3">圖片</li>
+                        <li class="clearfix"></li>
+                    </ul>
+                </div>
+                <div class="FT-list-val">
+                    <ul>
+                        <li class="col-sm-3"><span class="FT-OD-liNo">1</span></li>
+                        <li class="col-sm-3"><span class="FT-OD-Prod">衝浪褲(紅)</span></li>
+                        <li class="col-sm-3"><span class="FT-OD-qty">1</span></li>
+                        <li class="col-sm-3"><img src="images/8cart/surf-pants1.jpg" alt="" class="FT-OD-img"></li>
+                        <li class="clearfix"></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="history-LB LB-item" id="history-LB">
             <div class="history-box"></div>

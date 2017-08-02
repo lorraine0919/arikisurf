@@ -144,7 +144,7 @@
             padding-bottom: 7%;
         }
         .lightbox{
-            display: none;
+            // display: none;
             width: 100%;
             height: 100%;
             position: fixed;
@@ -169,7 +169,7 @@
                     margin:2% auto;
                 }
             }
-            .fitting-LB,.history-LB{
+            .history-LB{
                 display: none;
             }
             .customize-LB{
@@ -223,6 +223,43 @@
                         .cust-btn{
                             text-align: center;
                             margin-top:5%;
+                        }
+                    }
+                }
+                .decoration{
+                    width: 100%;
+                    margin:0 auto;
+                }
+            }
+            .fitting-LB{
+
+                .fitt-box{
+                    .FT-list-title{
+                        width: 90%;
+                        margin:0 auto;
+                        margin-bottom: 2%;
+                        background-color: #fff;
+                        ul{
+                            li{
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .FT-list-val{
+                        width: 90%;
+                        margin:0 auto;
+                        background-color: #fff;
+                        ul{
+                            li{
+                                span{
+                                    text-align: center;
+                                }
+                                img{
+                                    width: 30%;
+                                    margin:0 auto;
+                                    text-align: center;
+                                }
+                            }
                         }
                     }
                 }

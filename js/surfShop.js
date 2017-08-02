@@ -87,20 +87,28 @@ $(document).ready(function(){
         $(".info_txt").children('p').text(prodtxt);
         $(".info_price").children('p').text(prodpri);
 //-------光箱直接購買--------
-		$('#gotocart').click(function(){
-			// $('.leashsend').eq(index).value=$('.leashno').eq(index).value;
-			if($('.2222').eq(0).css('display')!='none'){
-				$('.leashform').eq(index).submit();
-			}else if($('.3333').eq(0).css('display')!='none'){
-				$('.finform').eq(index).submit();
-			}else if($('.4444').eq(0).css('display')!='none'){
-				$('.waxform').eq(index).submit();
-			}else{
-				$('.suitform').eq(index).submit();
-			}
-		});
+		// $('#gotocart').click(function(){
+		// 	// $('.leashsend').eq(index).value=$('.leashno').eq(index).value;
+		// 	if($('.2222').eq(0).css('display')!='none'){
+		// 		$('.leashform').eq(index).submit();
+		// 	}else if($('.3333').eq(0).css('display')!='none'){
+		// 		$('.finform').eq(index).submit();
+		// 	}else if($('.4444').eq(0).css('display')!='none'){
+		// 		$('.waxform').eq(index).submit();
+		// 	}else{
+		// 		$('.suitform').eq(index).submit();
+		// 	}
+		// });
 //-------光箱直接購買結束--------
 	});
+//--------直接購買----
+	// $('.goCart').click(function(){
+	// 	console.log('1');
+	// 	$(this).parent().parent().parent().parent().parent().submit();
+	// 		// $('.leashsend').eq(index).value=$('.leashno').eq(index).value;
+
+	// 	});
+//--------直接購買結束----
  //    var storage = sessionStorage;
  //    storage['gotocart']='';
 	// $('#addtocart').click(function(){
@@ -123,6 +131,7 @@ $(document).ready(function(){
 		});
 //-------光箱加入購物車結束--------
 
+//-------加入購物車--------
 	$('.addCart').click(function(){
 			console.log($(this).parent().parent().parent().parent().siblings('.prodimg').val());
 			$.post('surfShop_cart_add.php',{
@@ -134,7 +143,7 @@ $(document).ready(function(){
 					// alert(rs);
 			});
 		});
-
+//-------加入購物車--------
 	$('.pic').click(function(){
         $('#lightbox').fadeIn(500);
 	});

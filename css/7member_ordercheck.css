@@ -120,7 +120,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 100; }
       .member_ordercheck_23 .lightbox .LB-item {
-        padding: 0;
+        padding: 2% 0;
         width: 60%;
         height: 60%;
         background-color: #ddd;
@@ -159,7 +159,7 @@
           .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput ul li h4 {
             display: inline-block;
             width: 20%;
-            margin: 1.5% 0; }
+            margin: 1.5% 6%; }
           .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput ul li span {
             display: inline-block;
             margin-left: 1%; }

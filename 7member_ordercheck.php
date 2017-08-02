@@ -114,14 +114,39 @@ ob_start();
             <div class="clearfix"></div>
         </div>
         <div class="txt-val">
+            <?php
+                $sql = "select * from surfequipped_order
+                        join member
+                        where surfequipped_order.member_no = member.member_no;";
+                $surfOD = $pdo->query($sql);
+
+                while($order_SF = $surfOD->fetch()){
+            ?>
             <ul>
-                <li class="col-sm-2"><span>A101000</span></li>
-                <li class="col-sm-2"><span>2014/04/01</span></li>
-                <li class="col-sm-2"><span>200</span></li>
-                <li class="col-sm-2"><span>出貨中</span></li>
+                <li class="col-sm-2"><span><?php echo $order_SF["surfequipped_orderNo"];?></span></li>
+                <li class="col-sm-2"><span><?php echo $order_SF["order_date"];?></span></li>
+                <li class="col-sm-2"><span><?php echo $order_SF["order_total"];?></span></li>
+                <li class="col-sm-2">
+                    <span>
+                        <?php 
+                            if($order_SF["order_status"] == 1){
+                                echo "未付款";
+                            }else if($order_SF["order_status"]==2){
+                                echo "未出貨";
+                            }else if($order_SF["order_status"]==3){
+                                echo "已出貨";
+                            }else if($order_SF["order_status"]==4){
+                                echo "申請中";
+                            }
+                        ?>
+                    </span>
+                </li>
                 <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn"></li>
             </ul>
             <div class="clearfix"></div>
+            <?php
+                }
+            ?>
         </div>
     </div>
     <div class="item-txt" id="history-txt">
@@ -185,10 +210,6 @@ ob_start();
                             <div class="col-sm-6">
                                 <h4>顏色</h4>
                                 <p class="cust-OD-color"></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <h4>圖案</h4>
-                                <p class="cust-OD-img">123.png</p>
                             </div>
                             <div class="clearfix"></div>
                         </div>

@@ -73,12 +73,15 @@ $(document).ready(function(){
     	// console.log(index);
     	// console.log(index);
         var prodpic = $(this).children('img').attr('src');
+        prodImg = $(this).children('img').attr('src').replace('images/3accessories/','');
         var prodpri = $(this).next().children('p').text();
         var prodtit = $(this).next().children('h4').text();
         var prodtxt = $(this).next().children('div').children('p').text();
         var prodname = $(this).parent().parent().parent().parent().siblings('.prodname').val();
-       	$('.lightboxproductno').eq(0).text(prodname);
-        // console.log(prodtit);
+        var prodno = $(this).parent().parent().parent().parent().siblings('.prodno').val();
+       	$('.lightboxproductno').eq(0).text(prodno);
+       	$('.lightboxproductname').eq(0).text(prodname);
+        // console.log(prodno);
         $(".lig-pic img").attr("src",prodpic);
         $(".info_title").children('h4').text(prodtit);
         $(".info_txt").children('p').text(prodtxt);
@@ -98,14 +101,26 @@ $(document).ready(function(){
 		});
 
 	});
-    var storage = sessionStorage;
-    storage['gotocart']='';
+ //    var storage = sessionStorage;
+ //    storage['gotocart']='';
+	// $('#addtocart').click(function(){
+	// 	var lightboxproductno = $('.lightboxproductno').eq(0).text();
+	// 	console.log(lightboxproductno);
+	// 		storage[lightboxproductno]=true;		
+	// 		storage['gotocart'] += lightboxproductno + ',';
+	// });
+
 	$('#addtocart').click(function(){
-		var lightboxproductno = $('.lightboxproductno').eq(0).text();
-		console.log(lightboxproductno);
-			storage[lightboxproductno]=true;		
-			storage['gotocart'] += lightboxproductno + ',';
-	});
+			console.log(prodImg);
+			$.post('surfShop_cart_add.php',{
+				    'prod_no' : $('.lightboxproductno').eq(0).text() , 
+			 		'prod_name' : $('.lightboxproductname').eq(0).text() ,
+			 		'prod_price' :  $(this).parent().siblings().children('.pricechange').val(),
+			 		'prod_img' :  prodImg				
+				},function(rs){
+					// alert(rs);
+			});
+		});
 
 
 	$('.pic').click(function(){

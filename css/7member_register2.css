@@ -81,7 +81,8 @@ img {
             width: calc(calc(100% - 7em - 1vw)/2 - 4px - 6vw);
             margin-left: 6vw; }
           .setdown26 .form26 .detail26 .item26 .dist26 {
-            width: calc((calc(100% - 7em - 1vw - 5px)/2) - 4px); } }
+            width: calc((calc(100% - 7em - 1vw - 5px)/2) - 4px); }
+          }
 @media screen and (min-width: 1000px) {
   .register26 {
     background-image: url(../images/7member/register_bg.png); }

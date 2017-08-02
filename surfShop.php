@@ -179,7 +179,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -231,7 +231,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -282,7 +282,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                            </div>
                       </div>
@@ -333,7 +333,7 @@ try{
 	                   </div>
 	                  </div>
 	                  <div class="btngorup">
-                              <input type="button" name="" class="arikicommon_btn" value="加入購物車">
+                              <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
                               <input type="submit" name="" class="arikicommon_btn" value="直接購買">
                                 <!-- <a href="#" class="arikicommon_btn">加入購物車</a> -->
                                 <!-- <a href="#" class="arikicommon_btn">直接購買</a> -->
@@ -366,6 +366,7 @@ try{
 			</div>
 			<div class="lig-info col-xs-12 col-sm-12">
 				<span style="display: none;" class="lightboxproductno"></span>
+				<span style="display: none;" class="lightboxproductname"></span>
 				<div class="info info_title">
 					 <h4>Shapers -6呎腳繩 Supermo 螢光綠 7mm</h4>	
 				</div>

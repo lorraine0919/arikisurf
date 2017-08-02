@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <!--header-->
@@ -13,6 +14,7 @@
 <!-- =================後臺管理================== -->
 <!--(bake module/backstage_header.html)--><?php require_once('publicpage/backstage_header.php'); ?>
 
+
 <!-- 最新消息管理面版 -->
         <div class="main35" id="main-content">
             <div class="wrapper">
@@ -25,7 +27,7 @@
                         <img src="images/9backstage/add.png" class="news_add_btn" width="32" height="32">
                       </div>
                     <?php 
-                      require_once("connectBD101g2.php");
+                      require_once("connectBooks.php");
                       $sql = "select * from news order by newsno desc";
                       $news = $pdo->prepare( $sql );
                       $news->execute();

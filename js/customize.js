@@ -1,4 +1,5 @@
 window.onload=function(){
+	$('.loading_bg').fadeOut(1000);
 /*↓換頁相關*/
 	$('.step2_maxContent').hide();
 	$('.step3_maxContent').hide();
@@ -46,11 +47,12 @@ window.onload=function(){
 
 	var boardimg = ['ongunboard','onlongboard','onfunboard','onshortboard','onfishboard','onbodyboard'];
 	var boarddemo = ['gunboard','longboard','funboard','shortboard','fishboard','bodyboard'];
-
+	var boardnouserpick=1;
 	$('.step1_maxContent .board').click(function(){
 		$(this).addClass('click');
 		$('.step1_maxContent .board').not(this).removeClass('click');
 		var index=$(this).index();
+		boardnouserpick=index+1;
 		$('.step1_maxContent .introduce .contentimg img').attr('src','images/2board/step1/'+boardimg[index]+'.png');
 		$('.step1_maxContent .head h3').html(boardnamearr[index]);
 		$('.step1_maxContent .content p').text(boardinfo[index]);
@@ -232,9 +234,11 @@ window.onload=function(){
 		' <stop  offset="1.111794e-007" style="stop-color:#110C67"/> <stop  offset="1" style="stop-color:#00A0E9"/>',
 		'<stop  offset="0" style="stop-color:#B64621"/> <stop  offset="1" style="stop-color:#FFF100"/>'
 		];
+	var coloruserpic=1;
 	$('.color').click(function(){
 		// console.log('1');
 		var index = $(this).index();
+		coloruserpic=index+1;
 		$('#maincolor2').html(boardcolorarr[index]);
 		var arr = ['白','藍','黃'];
 		$('#customercolor').val(arr[index]);
@@ -257,9 +261,11 @@ window.onload=function(){
 /*↑步驟二，色球顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
-
+	var textureuserpic=1;
 	$('.step2_maxContent .texturegorup .texture').click(function(){
+
 		var index=$(this).index();
+		textureuserpic=index+1;
 		$(this).addClass('click');
 		$('.step2_maxContent .texturegorup .texture').not(this).removeClass('click');
 		var texturename=['環氧樹脂（Epoxy）','木質','玻璃纖維（POLY）'];
@@ -476,5 +482,34 @@ $('#step3tostep4').click(function(){
 	$('#finaltotalprice').text($('.priceshow').text());
 });
 /*↑步驟三填寫資料送到步驟四*/
+
+
+/*↓步驟四跳出光箱，寫入資料庫*/
+$('#finishorder').click(function(){
+	$('.comfirmboxtotal').text($('.priceshow').text());
+	$('.comfirmlightboxgroup').fadeIn(100);
+	$('#comfirmclosebtn').click(function(){
+		$('.comfirmlightboxgroup').fadeOut(0);
+		console.log($('.priceshow').text());
+	});
+	$.post('customize_update.php',{
+		'customize_tel':$('#orderphone').text(),
+		'customize_email':$('#orderemail').text(),
+		'customize_adress':$('#orderaddress').text(),
+		'customize_atm_acount':$('#orderaccount').text(),
+		'customize_usermessage':$('#ordermessage').text(),
+		'modelNo':boardnouserpick,
+		'materialNo':textureuserpic,
+		'colorNo':coloruserpic,
+		'boarddemo':$('.step4_maxContent .boarddemo').attr('src'),
+		'customize_order_total':$('.priceshow').text()
+	},function(rs){
+		alert(rs);
+	});
+
+});
+
+/*↑步驟四跳出光箱，寫入資料庫*/
+
 };
 

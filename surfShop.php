@@ -379,8 +379,8 @@ try{
 				</div>
 				<div class="btngorup">
 	          			
-	                    <a href="#" class="arikicommon_bgwhite_btn closeLb" id="addtocart">加入購物車</a>
-	                    <a href="#" class="arikicommon_bgwhite_btn closeLb" id="gotocart">直接購買</a>
+	                    <a class="arikicommon_bgwhite_btn closeLb" id="addtocart">加入購物車</a>
+	                    <a class="arikicommon_bgwhite_btn closeLb" id="gotocart">直接購買</a>
 		        </div>
 		        <div class="clearfix"></div>
 			</div>

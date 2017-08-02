@@ -1,4 +1,5 @@
 window.onload=function(){
+	$('.loading_bg').fadeOut(1000);
 /*↓換頁相關*/
 	$('.step2_maxContent').hide();
 	$('.step3_maxContent').hide();

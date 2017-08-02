@@ -12,12 +12,22 @@ require_once('connectBooks.php');
   <link rel="stylesheet" type="text/css" href="css/customize.css">
   <link rel="stylesheet" type="text/css" href="css/customize_rwd.css">
   <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/loading.css">
 <!--   <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C9807DD6-5F50-5349-A2DB-9C72E9BB087E/main.js" charset="UTF-8"></script> -->
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
  </head>
   <!--header end-->
 <body>
+  <div class="loading_bg">
+    <div class="loading wave">
+      ARIKI SURF
+    </div>
+    <div class="loading2 wave">
+      LOADING
+    </div>
+</div>
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>客製化衝浪版</span>

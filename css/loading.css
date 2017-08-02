@@ -1,0 +1,185 @@
+@media screen and (max-width: 767px) {
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
+
+  .loading_bg {
+  background-color: #11314C; 
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 50;
+}
+
+
+
+.loading {
+  text-transform: uppercase;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  height: 80px;
+  line-height: 70px;
+  vertical-align: bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 300px;
+  bottom: 0;
+  display: block;
+}
+
+.loading2 {
+  text-transform: uppercase;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  height: 80px;
+  line-height: 70px;
+  vertical-align: bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 450px;
+  bottom: 0;
+  display: block;
+}
+
+.loading-2-text {
+  font-size: 60px;
+  color: #FFF;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom;
+  }
+
+  100% {
+    background-position: 200px bottom;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    background-size: 200px 0px;
+  }
+
+  100% {
+    background-size: 200px 200px;
+  }
+}
+.wave {
+  background-image: url("../images/1common/uFpLbYt.png");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px rgba(255, 255, 255, 0.06);
+  animation: wave-animation .5s infinite linear, loading-animation 5s infinite linear alternate;
+  background-size: 200px 100px;
+  background-repeat: repeat-x;
+  opacity: 1;
+}
+}/*RWD結束*/
+
+
+
+@media screen and (min-width: 768px) {
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
+
+.loading_bg {
+  background-image: url(../images/1common/winning_load-bg.png);
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+   }
+
+
+
+.loading {
+  text-transform: uppercase;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  height: 80px;
+  line-height: 70px;
+  vertical-align: bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  bottom: 0;
+  display: block;
+}
+
+.loading2 {
+  text-transform: uppercase;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  height: 80px;
+  line-height: 70px;
+  vertical-align: bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 250px;
+  bottom: 0;
+  display: block;
+}
+
+.loading-2-text {
+  font-size: 60px;
+  color: #FFF;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom;
+  }
+
+  100% {
+    background-position: 200px bottom;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    background-size: 200px 0px;
+  }
+
+  100% {
+    background-size: 200px 200px;
+  }
+}
+.wave {
+  background-image: url("../uFpLbYt.png");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px rgba(255, 255, 255, 0.06);
+  animation: wave-animation .5s infinite linear, loading-animation 5s infinite linear alternate;
+  background-size: 200px 100px;
+  background-repeat: repeat-x;
+  opacity: 1;
+}
+}/*桌機結束*/

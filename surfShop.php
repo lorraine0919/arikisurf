@@ -366,6 +366,7 @@ try{
 			</div>
 			<div class="lig-info col-xs-12 col-sm-12">
 				<span style="display: none;" class="lightboxproductno"></span>
+				<span style="display: none;" class="lightboxproductname"></span>
 				<div class="info info_title">
 					 <h4>Shapers -6呎腳繩 Supermo 螢光綠 7mm</h4>	
 				</div>

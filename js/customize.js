@@ -47,7 +47,7 @@ window.onload=function(){
 
 	var boardimg = ['ongunboard','onlongboard','onfunboard','onshortboard','onfishboard','onbodyboard'];
 	var boarddemo = ['gunboard','longboard','funboard','shortboard','fishboard','bodyboard'];
-	var boardnouserpick;
+	var boardnouserpick=1;
 	$('.step1_maxContent .board').click(function(){
 		$(this).addClass('click');
 		$('.step1_maxContent .board').not(this).removeClass('click');
@@ -234,7 +234,7 @@ window.onload=function(){
 		' <stop  offset="1.111794e-007" style="stop-color:#110C67"/> <stop  offset="1" style="stop-color:#00A0E9"/>',
 		'<stop  offset="0" style="stop-color:#B64621"/> <stop  offset="1" style="stop-color:#FFF100"/>'
 		];
-	var coloruserpic;
+	var coloruserpic=1;
 	$('.color').click(function(){
 		// console.log('1');
 		var index = $(this).index();
@@ -261,7 +261,7 @@ window.onload=function(){
 /*↑步驟二，色球顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
-	var textureuserpic;
+	var textureuserpic=1;
 	$('.step2_maxContent .texturegorup .texture').click(function(){
 
 		var index=$(this).index();
@@ -501,10 +501,10 @@ $('#finishorder').click(function(){
 		'modelNo':boardnouserpick,
 		'materialNo':textureuserpic,
 		'colorNo':coloruserpic,
-		'boarddemo':$('.step4_maxContent .demo').attr('src'),
+		'boarddemo':$('.step4_maxContent .boarddemo').attr('src'),
 		'customize_order_total':$('.priceshow').text()
 	},function(rs){
-
+		alert(rs);
 	});
 
 });

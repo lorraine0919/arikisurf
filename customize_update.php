@@ -45,7 +45,8 @@
 		}
 			
 		if(isset($_REQUEST["customize_tel"])){
-			$sql = 'insert into `customize_order` (`customize_orderNo` , `member_no` , `customize_order_date` , `customize_tel` ,`customize_email`,`customize_adress`,`customize_order_status`,`customize_atm_acount`,`customize_usermessage`,`modelNo`,`materialNo`,`colorNo`,`boarddemo`,`customize_order_total`) values (null,  :member_no, :customize_order_date, :customize_tel, :customize_email,:customize_adress,1,:customize_atm_acount,:customize_usermessage,:modelNo,:colorNo,:boarddemo,:customize_order_total)';
+			echo date("Y-m-d");
+			$sql = 'insert into `customize_order` (`customize_orderNo` , `member_no` , `customize_order_date` , `customize_tel` ,`customize_email`,`customize_adress`,`customize_order_status`,`customize_atm_acount`,`customize_usermessage`,`modelNo`,`materialNo`,`colorNo`,`boarddemo`,`customize_order_total`) values (null,  :member_no, :customize_order_date, :customize_tel, :customize_email,:customize_adress,"1",:customize_atm_acount,:customize_usermessage,:modelNo,:materialNo,:colorNo,:boarddemo,:customize_order_total)';
 			$pdostatement = $pdo->prepare( $sql );
 			$pdostatement->bindValue(":member_no" , 1);
 			$pdostatement->bindValue(":customize_order_date" ,date("Y-m-d"));
@@ -55,10 +56,12 @@
 			$pdostatement->bindValue(":customize_atm_acount" ,$_REQUEST['customize_atm_acount']);
 			$pdostatement->bindValue(":customize_usermessage" , $_REQUEST['customize_usermessage']);
 			$pdostatement->bindValue(":modelNo" ,$_REQUEST['modelNo']);
+			$pdostatement->bindValue(":materialNo" ,$_REQUEST['materialNo']);
 			$pdostatement->bindValue(":colorNo" ,$_REQUEST['colorNo']);
 			$pdostatement->bindValue(":boarddemo" ,$_REQUEST['boarddemo'] );
 			$pdostatement->bindValue(":customize_order_total" ,$_REQUEST['customize_order_total']);
 			$pdostatement->execute();
+			echo "1";
 		}
 
 	}catch(PDOException $e){

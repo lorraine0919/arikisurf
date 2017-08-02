@@ -17,6 +17,7 @@ require_once('connectBooks.php');
 <!--   <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C9807DD6-5F50-5349-A2DB-9C72E9BB087E/main.js" charset="UTF-8"></script> -->
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript"></script>
  </head>
   <!--header end-->
 <body>

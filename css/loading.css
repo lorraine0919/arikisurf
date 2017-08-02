@@ -100,7 +100,8 @@
 }
 
 .loading_bg {
-  background-image: url(../images/1common/winning_load-bg.png);
+  background-color: #11314C; 
+  background-image: url('../images/1common/winning_load-bg.jpg');
   width: 100vw;
   height: 100vh;
   z-index: 50;
@@ -170,7 +171,7 @@
   }
 }
 .wave {
-  background-image: url("../uFpLbYt.png");
+  background-image: url("../images/1common/uFpLbYt.png");
   -moz-background-clip: text;
   -o-background-clip: text;
   -webkit-background-clip: text;

@@ -76,6 +76,42 @@
  </div> 
 </div>
 
+<script type="text/javascript">
+	$(document).ready(function(){
+         var session_mem =<?php echo isset($_SESSION["account"] )==false ? 0 : $_SESSION["account"] ; ?>;
+
+       $('.goCart').click(function(){
+		  if(session_mem==0){
+					alert('請登入會員');
+				}else{
+					$(this).parent().parent().parent().parent().parent().submit();
+				}
+
+		});
+
+
+       $('#gotocart').click(function(){
+			if(session_mem==0){
+					alert('請登入會員');
+				}else{
+					if($('.2222').eq(0).css('display')!='none'){
+					$('.leashform').eq(index).submit();
+					}else if($('.3333').eq(0).css('display')!='none'){
+						$('.finform').eq(index).submit();
+					}else if($('.4444').eq(0).css('display')!='none'){
+						$('.waxform').eq(index).submit();
+					}else{
+						$('.suitform').eq(index).submit();
+					}
+				}
+			
+		});
+
+
+
+	});
+</script>
+
 <div class="main_BG" style="display: none;">
     <div class="barbg">
      <div class="container">
@@ -180,7 +216,7 @@ try{
 	                  </div>
 	                  <div class="btngorup">
                               <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
-                              <input type="submit" name="" class="arikicommon_btn" value="直接購買">
+                              <input type="button" name="" class="arikicommon_btn goCart" value="直接購買">
                            </div>
                       </div>
               	 	</div>
@@ -232,7 +268,7 @@ try{
 	                  </div>
 	                  <div class="btngorup">
                               <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
-                              <input type="submit" name="" class="arikicommon_btn" value="直接購買">
+                              <input type="button" name="" class="arikicommon_btn goCart" value="直接購買">
                            </div>
                       </div>
               	 	</div>
@@ -283,7 +319,7 @@ try{
 	                  </div>
 	                  <div class="btngorup">
                               <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
-                              <input type="submit" name="" class="arikicommon_btn" value="直接購買">
+                              <input type="button" name="" class="arikicommon_btn goCart" value="直接購買">
                            </div>
                       </div>
               	 	</div>
@@ -334,7 +370,7 @@ try{
 	                  </div>
 	                  <div class="btngorup">
                               <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
-                              <input type="submit" name="" class="arikicommon_btn" value="直接購買">
+                              <input type="button" name="" class="arikicommon_btn goCart" value="直接購買">
                                 <!-- <a href="#" class="arikicommon_btn">加入購物車</a> -->
                                 <!-- <a href="#" class="arikicommon_btn">直接購買</a> -->
                                
@@ -358,6 +394,7 @@ try{
 	</div>
  </div>
 </div>
+
   <!-- =====================燈箱=========================-->
   <div id="lightbox">
 		<div id="info-box">
@@ -379,8 +416,8 @@ try{
 				</div>
 				<div class="btngorup">
 	          			
-	                    <a href="#" class="arikicommon_bgwhite_btn closeLb" id="addtocart">加入購物車</a>
-	                    <a href="#" class="arikicommon_bgwhite_btn closeLb" id="gotocart">直接購買</a>
+	                    <a class="arikicommon_bgwhite_btn closeLb" id="addtocart">加入購物車</a>
+	                    <a class="arikicommon_bgwhite_btn closeLb" id="gotocart">直接購買</a>
 		        </div>
 		        <div class="clearfix"></div>
 			</div>

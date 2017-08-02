@@ -111,7 +111,6 @@
       box-sizing: border-box;
       padding-bottom: 7%; }
     .member_ordercheck_23 .lightbox {
-      display: none;
       width: 100%;
       height: 100%;
       position: fixed;
@@ -134,7 +133,7 @@
         .member_ordercheck_23 .lightbox .LB-item .LB-item-h3 {
           width: 90%;
           margin: 2% auto; }
-      .member_ordercheck_23 .lightbox .fitting-LB, .member_ordercheck_23 .lightbox .history-LB {
+      .member_ordercheck_23 .lightbox .history-LB {
         display: none; }
       .member_ordercheck_23 .lightbox .customize-LB {
         display: none; }
@@ -167,4 +166,24 @@
           height: 430px; }
         .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-btn {
           text-align: center;
-          margin-top: 5%; } }
+          margin-top: 5%; }
+        .member_ordercheck_23 .lightbox .customize-LB .decoration {
+          width: 100%;
+          margin: 0 auto; }
+      .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-title {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 2%;
+        background-color: #fff; }
+        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-title ul li {
+          text-align: center; }
+      .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val {
+        width: 90%;
+        margin: 0 auto;
+        background-color: #fff; }
+        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li span {
+          text-align: center; }
+        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li img {
+          width: 30%;
+          margin: 0 auto;
+          text-align: center; } }

@@ -23,6 +23,10 @@
         position: relative; }
         .bg_forest_2 .step1_maxContent .demogroup .demo .base {
           bottom: -3%; }
+        .bg_forest_2 .step1_maxContent .demogroup .demo .svgboard {
+          top: 3%;
+          width: 129%;
+          right: -10%; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
         display: block;
         position: absolute;
@@ -105,7 +109,13 @@
         margin: auto;
         position: relative; }
         .bg_forest_2 .step2_maxContent .demogroup .demo .base {
-          bottom: -3%; }
+          bottom: -3%;
+          width: 153%;
+          left: -28%; }
+        .bg_forest_2 .step2_maxContent .demogroup .demo .svgboard {
+          width: 99%;
+          top: 3%;
+          left: -10%; }
       .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle {
         width: 82%;
         display: block;
@@ -127,7 +137,7 @@
             color: #12314c;
             border: none; }
         .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .selectgroup {
-          margin: 20px 0; }
+          margin: 10px 0; }
         .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup {
           color: #fff; }
           .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle .colorgroup .colorall {
@@ -257,15 +267,26 @@
     .bg_forest_2 .step2_maxContent .selectAndNextfix {
       display: none; }
     .bg_forest_2 .step2_maxContent .selectAndNext {
-      padding-top: 0; }
+      padding-top: 0;
+      width: 96%;
+      right: 0;
+      left: 0;
+      margin: auto; }
       .bg_forest_2 .step2_maxContent .selectAndNext .next {
         position: absolute;
-        right: -283%;
+        right: 0%;
         bottom: 0;
-        width: 100%; }
+        left: 2%;
+        margin: auto;
+        width: 100%;
+        transform: translateY(-24%); }
         .bg_forest_2 .step2_maxContent .selectAndNext .next #step2tostep3 {
-          margin: 0;
-          width: 58%; }
+          margin: 5px 8px;
+          width: 13.5%; }
+        .bg_forest_2 .step2_maxContent .selectAndNext .next #step2tostep1 {
+          width: 13.5%;
+          margin: 5px 8px;
+          float: left; }
   .bg_forest_2 .step3_maxContent {
     display: block;
     position: relative;

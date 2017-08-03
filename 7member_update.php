@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <link rel="stylesheet" type="text/css" href="css/header.css">
-        <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/grid.css">
-    	<link rel="stylesheet" type="text/css" href="css/commonclass.css">
-    	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
-    	<script src="js/jquery.js"></script>
-    	<script src="js/breadcrumb.js"></script>
+        <?php require_once('publicpage/head.php'); ?>
        
         <title>Ariki Surf - 會員專區</title>
         <link rel="stylesheet" type="text/css" href="css/member.css">
@@ -23,53 +14,16 @@
         <link rel="stylesheet" type="text/css" href="css/7member_update.css"> 
 </head>
 <body>
-<header>
-    <nav class="nav_0">
-        <div class="navDetail">
-            <div class="navfix">
-                <div class="navimg">
-                    <input type="checkbox" id="control">
-                    <div class="logo">
-                        <div class="logofix">
-                            <a href="index.html"><img src="images/1common/logo.png"></a>
-                            <div class="arikicommon_breadcrumb">                             
-                            <a href="index.html">首頁</a>
-                            <i class="fa fa-caret-right" aria-hidden="true"></i>
-                            <span>會員專區</span>
-                        </div>
-                    </div>
-                </div>
-                    <label class="hb" for="control">選單</label>
-                    <ul class="menu">
-                        <li class="rwdlogo"><a href="index.html" class="rwd"><img src="images/1common/logo.png"></a></li>
-                        <li><a href="customize.html">客製浪板</a></li>
-                        <li><a href="surfshop.html">衝浪配備</a></li>
-                        <li><a href="map.html">衝浪地圖</a></li>
-                        <li><a href="news.html">最新消息</a></li>
-                        <li><a href="about.html">關於酋長</a></li>
-                        <li><a href="7member_update.html" class="rwd">會員專區</a></li>
-                        <li><a href="cart.html" class="rwd">購物車</a></li>
-                    </ul>
-                    <div class="iconGroup">
-                        <ul>
-                            <li><a href="7member_update.html"><img src="images/1common/member.png" alt="">會員專區</a></li>
-                            <li class="line"></li>
-                            <li><a href="cart.html"><img src="images/1common/shop.png" alt="">購物車</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="topGround_0"></div>
-</header>
+<!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
+<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<span>會員專區</span>
+<!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 <?php 
 try{
     require_once("connectBooks.php");
     $sql="select * from member where account = 'hebe520'";
     $member = $pdo->query( $sql );
-
-    while($personData = $member->fetch(PDO::FETCH_ASSOC)){
+    $personData = $member->fetch(PDO::FETCH_ASSOC)
 ?>
 <div class="content20">
     <div class="main20">
@@ -205,7 +159,6 @@ try{
     $city = $personData["city"];
     $area = $personData["area"];
 
-        }
     }catch(PDOException $ex){
       echo "錯誤行號 : ", $ex->getLine(), "<br>";
       echo "錯誤訊息 : ", $ex->getMessage(), "<br>";

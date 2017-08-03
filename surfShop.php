@@ -48,19 +48,19 @@
 				</div>
 				<div class="photoSelect col-xs-12 col-sm-12">
 				  <div class="row">
-					<div class="222 photo selected" style="display: inline-block;">
+					<div class="LeashBtn photo selected" style="display: inline-block;">
 						<img src="images/3accessories/picselect1_s.png" alt="">
 						<p class="forRwd">衝浪腳繩</p>
 					</div>
-					<div class="333 photo" style="display: inline-block;">
+					<div class="FinBtn photo" style="display: inline-block;">
 						<img src="images/3accessories/picselect2.png" alt="">
 						<p class="forRwd">衝浪板舵</p>
 					</div>
-					<div class="444 photo" style="display: inline-block;">
+					<div class="WaxBtn photo" style="display: inline-block;">
 						<img src="images/3accessories/picselect3.png" alt="">
 						<p class="forRwd">衝浪板蠟</p>
 					</div>
-					<div class="555 photo" style="display: inline-block;">
+					<div class="WetsuitBtn photo" style="display: inline-block;">
 						<img src="images/3accessories/picselect4.png" alt="">
 						<p class="forRwd">衝浪衣褲</p>
 					</div>
@@ -76,16 +76,52 @@
  </div> 
 </div>
 
+<script type="text/javascript">
+	$(document).ready(function(){
+         var session_mem =<?php echo isset($_SESSION["account"] )==false ? 0 : $_SESSION["account"] ; ?>;
+
+       $('.goCart').click(function(){
+		  if(session_mem==0){
+					alert('請登入會員');
+				}else{
+					$(this).parent().parent().parent().parent().parent().submit();
+				}
+
+		});
+
+
+       $('#gotocart').click(function(){
+			if(session_mem==0){
+					alert('請登入會員');
+				}else{
+					if($('.Leash').eq(0).css('display')!='none'){
+					$('.leashform').eq(index).submit();
+					}else if($('.Fin').eq(0).css('display')!='none'){
+						$('.finform').eq(index).submit();
+					}else if($('.Wax').eq(0).css('display')!='none'){
+						$('.waxform').eq(index).submit();
+					}else{
+						$('.suitform').eq(index).submit();
+					}
+				}
+			
+		});
+
+
+
+	});
+</script>
+
 <div class="main_BG" style="display: none;">
     <div class="barbg">
      <div class="container">
 	  <div class="changebar">
 		    <ul>
 				<!-- <li class="111"></li> -->
-				<li class="222">衝浪腳繩</li>
-				<li class="333">衝浪板舵</li>
-				<li class="444">衝浪板蠟</li>
-				<li class="555">衝浪褲&防寒衣</li>
+				<li class="LeashBtn">衝浪腳繩</li>
+				<li class="FinBtn">衝浪板舵</li>
+				<li class="WaxBtn">衝浪板蠟</li>
+				<li class="WetsuitBtn">衝浪褲&防寒衣</li>
 			</ul>
 
 		</div>
@@ -98,19 +134,19 @@
 			    <h1>衝浪配備</h1>
 			    <p>Ariki surf Equipped</p>
 			</div> -->
-			<div class="2222 aa" style="display:none;">
+			<div class="Leash aa" style="display:none;">
 			    <h1>衝浪腳繩</h1>
 			    <p>Ariki surf Leash</p>
 			</div>
-			<div class="3333 aa" style="display:none;">
+			<div class="Fin aa" style="display:none;">
 			    <h1>衝浪板舵</h1>
 			    <p>Ariki surf Fin</p>
 			</div>
-			<div class="4444 aa" style="display:none;">
+			<div class="Wax aa" style="display:none;">
 			    <h1>衝浪板蠟</h1>
 			    <p>Ariki surf Wax</p>
 			</div>
-			<div class="5555 aa" style="display:none;">
+			<div class="Wetsuit aa" style="display:none;">
 			    <h1>衝浪褲&防寒衣</h1>
 			    <p>Ariki surf Wetsuit/Rash Guard</p>
 			</div>
@@ -142,7 +178,7 @@
 			</div> -->
 
 <!--================================= 腳繩 ==============================-->
-<div class="everyone 2222" style="display:none">
+<div class="everyone Leash" style="display:none">
 				<!-- <div class="title">
 					<h2>衝浪配件</h2>
 					<hr>
@@ -180,7 +216,7 @@ try{
 	                  </div>
 	                  <div class="btngorup">
                               <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
-                              <input type="submit" name="" class="arikicommon_btn" value="直接購買">
+                              <input type="button" name="" class="arikicommon_btn goCart" value="直接購買">
                            </div>
                       </div>
               	 	</div>
@@ -199,7 +235,7 @@ try{
 		    </div>
 
 <!--================================= 鯊魚鰭 ==============================-->
-			<div class="everyone 3333" style="display:none;">
+			<div class="everyone Fin" style="display:none;">
 				<?php 
 			try{
 			    require_once("connectBooks.php");
@@ -232,7 +268,7 @@ try{
 	                  </div>
 	                  <div class="btngorup">
                               <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
-                              <input type="submit" name="" class="arikicommon_btn" value="直接購買">
+                              <input type="button" name="" class="arikicommon_btn goCart" value="直接購買">
                            </div>
                       </div>
               	 	</div>
@@ -250,7 +286,7 @@ try{
 			</div>
 
 <!--================================= 衝浪板蠟 ==============================-->
-		<div class="everyone 4444" style="display:none">
+		<div class="everyone Wax" style="display:none">
 			<?php 
 			try{
 			    require_once("connectBooks.php");
@@ -283,7 +319,7 @@ try{
 	                  </div>
 	                  <div class="btngorup">
                               <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
-                              <input type="submit" name="" class="arikicommon_btn" value="直接購買">
+                              <input type="button" name="" class="arikicommon_btn goCart" value="直接購買">
                            </div>
                       </div>
               	 	</div>
@@ -301,7 +337,7 @@ try{
 		</div>
 
 <!--================================= 防寒衣 ==============================-->
-		<div class="everyone 5555" style="display:none">
+		<div class="everyone Wetsuit" style="display:none">
 				<?php 
 			try{
 			    require_once("connectBooks.php");
@@ -334,7 +370,7 @@ try{
 	                  </div>
 	                  <div class="btngorup">
                               <input type="button" name="" class="arikicommon_btn addCart" value="加入購物車">
-                              <input type="submit" name="" class="arikicommon_btn" value="直接購買">
+                              <input type="button" name="" class="arikicommon_btn goCart" value="直接購買">
                                 <!-- <a href="#" class="arikicommon_btn">加入購物車</a> -->
                                 <!-- <a href="#" class="arikicommon_btn">直接購買</a> -->
                                
@@ -358,6 +394,7 @@ try{
 	</div>
  </div>
 </div>
+
   <!-- =====================燈箱=========================-->
   <div id="lightbox">
 		<div id="info-box">
@@ -379,8 +416,8 @@ try{
 				</div>
 				<div class="btngorup">
 	          			
-	                    <a href="#" class="arikicommon_bgwhite_btn closeLb" id="addtocart">加入購物車</a>
-	                    <a href="#" class="arikicommon_bgwhite_btn closeLb" id="gotocart">直接購買</a>
+	                    <a class="arikicommon_bgwhite_btn closeLb" id="addtocart">加入購物車</a>
+	                    <a class="arikicommon_bgwhite_btn closeLb" id="gotocart">直接購買</a>
 		        </div>
 		        <div class="clearfix"></div>
 			</div>

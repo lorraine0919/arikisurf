@@ -315,6 +315,13 @@ var newwidth = $('.selectAndNext .pattern').width()*patterns;
 $('.selectAndNext .patterns').width(newwidth);
 /*↑步驟二動態產生圖案group長度*/
 
+/*↓步驟二rwd動態產生圖案group長度*/
+var rwdpatterns=$('.rwdselectstyle .pattern').length;
+var rwdnewwidth = $('.rwdselectstyle .pattern').width()*rwdpatterns*1.1;
+$('.rwdselectstyle .allpattern').width(rwdnewwidth);
+/*↑步驟二rwd動態產生圖案group長度*/
+
+
 
 /*↓步驟二按圖放到浪板上*/
 

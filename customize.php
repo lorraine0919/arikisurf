@@ -17,18 +17,24 @@ require_once('connectBooks.php');
 <!--   <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C9807DD6-5F50-5349-A2DB-9C72E9BB087E/main.js" charset="UTF-8"></script> -->
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript"></script>
+<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="
+libs/owl.carousel/dist/assets/owl.theme.default.min.css">
+<script src="libs/owl.carousel/dist/owl.carousel.js"></script>
  </head>
   <!--header end-->
 <body>
-  <div class="loading_bg">
-    <div class="loading wave">
-      ARIKI SURF
-    </div>
-    <div class="loading2 wave">
-      LOADING
-    </div>
-</div>
+  	<div class="loading_bg">
+	  <div class="loading_logo">
+	  	<img src="images/1common/logo_forloading.png">
+	  </div>  
+	    <div class="loading wave">
+	      ARIKI SURF
+	    </div>
+	    <div class="loading2 wave">
+	      LOADING...
+	    </div>
+ 	</div>
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>客製化衝浪版</span>

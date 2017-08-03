@@ -311,19 +311,7 @@
       height: 24px;
       text-align: center; } 
 
-    #goTop a {
-    display: block;
-    z-index: 11;
-    border: none;
-    text-decoration: none; }
-    #goTop a img {
-      width: 20%;
-      height: auto;
-      position: fixed;
-      bottom: 50px;
-      right: 10px;
-      z-index: 50;
-      transition: all 0.3s ease; }
+   
 
     }
 /*RWD結束*/
@@ -334,10 +322,10 @@
     margin: 0 auto; }
 
   .banner_bg_17 {
-    background-image: url("../images/6ariki/cc.png");
+    background-image: url("../images/6ariki/test1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 60vh;
     padding-top: 4rem;
     width: 100%; }
     .banner_bg_17 .about_title_17 {
@@ -664,20 +652,5 @@
     width: 1170px;
     height: 500px; }
 
-  #goTop a {
-    display: block;
-    z-index: 11;
-    border: none;
-    text-decoration: none; }
-    #goTop a img {
-      width: 6%;
-      height: auto;
-      position: fixed;
-      bottom: 30px;
-      right: 10px;
-      z-index: 50;
-      transition: all 0.3s ease; }
-
-  #goTop img:hover {
-    transform: translate(0px, -20px); } }
+  }
 /*桌機結束*/

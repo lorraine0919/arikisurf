@@ -1,6 +1,10 @@
 @media screen and (max-width: 767px) {
   .bg_forest_2 .lightboxgroup .lightboxarea {
     background-position: 0% 175%; }
+  .bg_forest_2 .comfirmlightboxgroup .comfirmlightboxarea {
+    margin: 10px; }
+    .bg_forest_2 .comfirmlightboxgroup .comfirmlightboxarea .comfirmlightboxcontent {
+      text-align: left; }
   .bg_forest_2 .step1_maxContent {
     position: relative;
     width: 100%;
@@ -394,11 +398,13 @@
         padding: 0px 20px;
         margin: 10px 0;
         box-sizing: border-box; }
+        .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .title {
+          width: 57%; }
         .bg_forest_2 .step4_maxContent .fill .fillfix .content .demogroup {
           width: 100%;
           position: absolute;
           right: -25%;
-          bottom: 14%; }
+          bottom: 5%; }
           .bg_forest_2 .step4_maxContent .fill .fillfix .content .demogroup .demo {
             width: 24%;
             margin: auto;
@@ -418,5 +424,19 @@
                 text-align: center; }
                 .bg_forest_2 .step4_maxContent .fill .fillfix .content .demogroup .rwdselectboard select option:hover {
                   background: #000; }
-        .bg_forest_2 .step4_maxContent .fill .fillfix .content .next {
-          text-align: right; } }
+        .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next {
+          text-align: right;
+          margin: 0;
+          width: 100%; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next .arikicommon_next_btn {
+            margin: 0;
+            width: 38%;
+            box-sizing: border-box;
+            padding: 5px 10px;
+            text-align: center; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next #step4tostep3 {
+            float: left; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next #finishorder {
+            float: right; }
+          .bg_forest_2 .step4_maxContent .fill .fillfix .content .right .next a {
+            margin: 10px; } }

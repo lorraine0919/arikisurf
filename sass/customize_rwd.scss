@@ -5,6 +5,14 @@
 				background-position: 0% 175%;
 			}			
 		} 
+		.comfirmlightboxgroup{
+			.comfirmlightboxarea{
+				margin: 10px;
+				.comfirmlightboxcontent{
+					text-align: left;
+				}
+			}			
+		}
 
 		.step1_maxContent{
 			position: relative;
@@ -523,11 +531,16 @@
 					margin: 10px 0;
 					box-sizing:border-box;
 					.content{
+						.right{
+							.title{
+								width: 57%;
+							}
+						}
 						.demogroup{
 							width: 100%;
 							position: absolute;
 							right: -25%;
-    						bottom: 14%;
+    						bottom: 5%;
 							.demo{
 								width: 24%;
 								margin: auto;
@@ -553,9 +566,30 @@
 			    				}
 							}
 						}
-						.next{
-							text-align: right;
-
+						.right{
+							.next{
+								text-align: right;
+								margin: 0;
+								width: 100%;
+								.arikicommon_next_btn{
+									margin: 0;
+								    width: 38%;
+								    box-sizing: border-box;
+								    padding: 5px 10px;
+								    text-align: center;
+								}
+								#step4tostep3{
+									float: left;
+								}
+								#finishorder{
+									float: right;
+								}
+								
+									a{
+										margin: 10px;
+									}	
+								
+							}
 						}
 
 					}

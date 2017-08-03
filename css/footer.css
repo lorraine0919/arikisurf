@@ -105,3 +105,8 @@
     margin: 40px 0;
     padding: 0;
     text-align: center; } }
+body .sl-widget-box {
+  opacity: 0 !important; }
+
+#wooo .sl-widget-box {
+  opacity: 1 !important; }

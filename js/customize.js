@@ -575,7 +575,7 @@ $('#finishorder').click(function(){
 		'boarddemo':$('.step4_maxContent .boarddemo').attr('src'),
 		'customize_order_total':$('.priceshow').text()
 	},function(rs){
-		alert(rs);
+		// alert(rs);
 	});
 
 });

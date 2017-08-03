@@ -64,7 +64,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 					若未於七日內匯款，將視為取消交易<br>
 					
 				</p>
-				<a class="arikicommon_next_btn">前往訂單查詢</a>
+				<a class="arikicommon_next_btn" href="7member_ordercheck.php">前往訂單查詢</a>
 				<div id="comfirmclosebtn">
 					<i class="fa fa-times" aria-hidden="true"></i>
 				</div>

@@ -377,8 +377,8 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 										<p>上傳您的圖案</p>
 									</div>
 									<div class="right">
-										<label for="rwduploadbtn"><div class="uploadbtn"><img src="images/2board/step2/uploadbtn.png"></div></label>
-										<input type="file" name="" id="rwduploadbtn" style="display: none">
+										<label for="uploadimg"><div class="uploadbtn"><img src="images/2board/step2/uploadbtn.png"></div></label>
+										
 									</div>
 								</div>
 							</div>

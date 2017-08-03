@@ -111,6 +111,7 @@
       box-sizing: border-box;
       padding-bottom: 7%; }
     .member_ordercheck_23 .lightbox {
+      display: none;
       width: 100%;
       height: 100%;
       position: fixed;
@@ -119,22 +120,24 @@
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 100; }
       .member_ordercheck_23 .lightbox .LB-item {
-        padding: 2% 0;
+        padding: 3% 0;
+        padding-bottom: 5%;
         width: 60%;
-        height: 60%;
         background-color: #ddd;
+        background-image: url("../images/7member/7member_ordercheck/decoration.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0% 105%;
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
-        margin: auto;
+        margin: 52px auto;
         color: rgba(0, 0, 0, 0.8); }
         .member_ordercheck_23 .lightbox .LB-item .LB-item-h3 {
           width: 90%;
           margin: 2% auto; }
-      .member_ordercheck_23 .lightbox .history-LB {
-        display: none; }
       .member_ordercheck_23 .lightbox .customize-LB {
         display: none; }
         .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info {
@@ -162,28 +165,139 @@
           .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput ul li span {
             display: inline-block;
             margin-left: 1%; }
-        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img img {
-          height: 430px; }
+        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img {
+          width: 50%;
+          margin: 0 auto;
+          padding-top: 170%;
+          position: relative;
+          overflow: hidden; }
+          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img img {
+            width: 100%;
+            position: absolute;
+            top: -14%;
+            left: 0;
+            right: 0;
+            margin: auto; }
         .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-btn {
           text-align: center;
           margin-top: 5%; }
-        .member_ordercheck_23 .lightbox .customize-LB .decoration {
-          width: 100%;
-          margin: 0 auto; }
-      .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-title {
-        width: 90%;
-        margin: 0 auto;
-        margin-bottom: 2%;
-        background-color: #fff; }
-        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-title ul li {
-          text-align: center; }
-      .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val {
-        width: 90%;
-        margin: 0 auto;
-        background-color: #fff; }
-        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li span {
-          text-align: center; }
-        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li img {
-          width: 30%;
+      .member_ordercheck_23 .lightbox .fitting-LB {
+        display: none; }
+        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-title {
+          width: 90%;
           margin: 0 auto;
-          text-align: center; } }
+          margin-bottom: 2%;
+          background-color: #fff; }
+          .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-title ul li {
+            text-align: center; }
+        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val {
+          width: 90%;
+          margin: 0 auto;
+          background-color: #fff; }
+          .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul {
+            padding: 10px 0;
+            border-bottom: 3px solid #ddd; }
+            .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li {
+              text-align: center; }
+              .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li span {
+                display: inline-block;
+                padding-top: 11%; }
+              .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li img {
+                width: 30%;
+                margin: 0 auto; }
+            .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li:nth-child(1) span {
+              padding-top: 24%; }
+            .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li:nth-child(3) span {
+              padding-top: 23%; }
+            .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li:nth-child(4) span {
+              padding-top: 54%; }
+        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-Info-val {
+          width: 90%;
+          margin: 2% auto; }
+          .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-Info-val .FT-Person-Info {
+            width: 50%;
+            background-color: #fff;
+            box-sizing: border-box;
+            padding: 2%;
+            float: left;
+            box-sizing: border-box;
+            border-right: solid #ddd 30px; }
+            .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-Info-val .FT-Person-Info ul li h4 {
+              display: inline-block;
+              width: 20%;
+              margin: 1.5% 6%; }
+            .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-Info-val .FT-Person-Info ul li span {
+              display: inline-block;
+              margin-left: 15%; }
+          .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-Info-val .FT-OD-Info {
+            width: 50%;
+            background-color: #fff;
+            float: left;
+            box-sizing: border-box;
+            border-left: solid #ddd 33px;
+            padding: 4%;
+            padding-bottom: 4.9%;
+            text-align: center; }
+        .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-btn {
+          width: 95%;
+          text-align: right; }
+      .member_ordercheck_23 .lightbox .history-LB {
+        display: none; }
+        .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-title {
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 2%;
+          background-color: #fff; }
+          .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-title ul li {
+            text-align: center; }
+        .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-val {
+          width: 90%;
+          margin: 0 auto;
+          background-color: #fff; }
+          .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-val ul {
+            padding: 10px 0;
+            border-bottom: 3px solid #ddd; }
+            .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-val ul li {
+              text-align: center; }
+              .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-val ul li span {
+                display: inline-block;
+                padding-top: 11%; }
+              .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-val ul li img {
+                width: 30%;
+                margin: 0 auto; }
+            .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-val ul li:nth-child(1) span {
+              padding-top: 24%; }
+            .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-val ul li:nth-child(3) span {
+              padding-top: 23%; }
+            .member_ordercheck_23 .lightbox .history-LB .history-box .HT-list-val ul li:nth-child(4) span {
+              padding-top: 54%; }
+        .member_ordercheck_23 .lightbox .history-LB .history-box .HT-Info-val {
+          width: 90%;
+          margin: 2% auto; }
+          .member_ordercheck_23 .lightbox .history-LB .history-box .HT-Info-val .HT-Person-Info {
+            width: 50%;
+            background-color: #fff;
+            box-sizing: border-box;
+            padding: 2%;
+            float: left;
+            box-sizing: border-box;
+            border-right: solid #ddd 30px; }
+            .member_ordercheck_23 .lightbox .history-LB .history-box .HT-Info-val .HT-Person-Info ul li h4 {
+              display: inline-block;
+              width: 20%;
+              margin: 1.5% 6%; }
+            .member_ordercheck_23 .lightbox .history-LB .history-box .HT-Info-val .HT-Person-Info ul li span {
+              display: inline-block;
+              margin-left: 15%; }
+          .member_ordercheck_23 .lightbox .history-LB .history-box .HT-Info-val .HT-OD-Info {
+            width: 50%;
+            background-color: #fff;
+            float: left;
+            box-sizing: border-box;
+            border-left: solid #ddd 33px;
+            padding: 4%;
+            padding-bottom: 4.9%;
+            text-align: center; }
+        .member_ordercheck_23 .lightbox .history-LB .history-box .HT-btn {
+          width: 95%;
+          text-align: right; } }

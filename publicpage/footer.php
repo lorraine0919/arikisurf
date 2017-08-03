@@ -55,10 +55,19 @@
 			// document.querySelector('#wooooo .sl-widget-box')[0].style.;
 			// // getElementsByClassName('sl-widget-box')
 	 	// },false);
-
+	 	var mesBtncount = 0;
 	 	$('#mesBtn').click(function(){
-	 		$('body').attr('id','wooo');
-	 		console.log('1');
+	 		if(mesBtncount==0){
+		 		$('body').attr('id','wooo');
+		 		console.log('1');
+		 		mesBtncount++;	
+		 		$('#mesBtn').text('關閉留言');		
+	 		}else{
+	 			$('body').removeAttr('id','wooo');
+	 			mesBtncount--;
+	 			$('#mesBtn').text('留言');	
+	 		}
+
 	 		// $('#wooo').attr('style','opacity:"1 !important";');
 	 	});
 

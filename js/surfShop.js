@@ -1,65 +1,59 @@
 $(document).ready(function(){
-	$('.111').click(function(){
-		// $('.1111').show();
-		// $('.2222').hide();
-		// $('.3333').hide();
-		// $('.4444').hide();
-		// $('.5555').hide();
-	});
 	
-	$('.222').click(function(){
+	
+	$('.LeashBtn').click(function(){
 		$('.main_BG').fadeIn(0);
-		$('.2222').fadeIn(300);
-		$('.3333').fadeOut(0);
-		$('.4444').fadeOut(0);
-		$('.5555').fadeOut(0);
+		$('.Leash').fadeIn(300);
+		$('.Fin').fadeOut(0);
+		$('.Wax').fadeOut(0);
+		$('.Wetsuit').fadeOut(0);
 		$('.showProd').fadeOut(0);
 	});
-	$('.333').click(function(){
+	$('.FinBtn').click(function(){
 		$('.main_BG').fadeIn(0);
-		$('.2222').fadeOut(0);
-		$('.3333').fadeIn(300);
-		$('.4444').fadeOut(0);
-		$('.5555').fadeOut(0);
+		$('.Leash').fadeOut(0);
+		$('.Fin').fadeIn(300);
+		$('.Wax').fadeOut(0);
+		$('.Wetsuit').fadeOut(0);
 		$('.showProd').fadeOut(0);
 	});
-	$('.444').click(function(){
+	$('.WaxBtn').click(function(){
 		$('.main_BG').fadeIn(0);
-		$('.2222').fadeOut(0);
-		$('.3333').fadeOut(0);
-		$('.4444').fadeIn(300);
-		$('.5555').fadeOut(0);
+		$('.Leash').fadeOut(0);
+		$('.Fin').fadeOut(0);
+		$('.Wax').fadeIn(300);
+		$('.Wetsuit').fadeOut(0);
 		$('.showProd').fadeOut(0);
 	});
-	$('.555').click(function(){
+	$('.WetsuitBtn').click(function(){
 		$('.main_BG').fadeIn(0);
-		$('.2222').fadeOut(0);
-		$('.3333').fadeOut(0);
-		$('.4444').fadeOut(0);
-		$('.5555').fadeIn(300);
+		$('.Leash').fadeOut(0);
+		$('.Fin').fadeOut(0);
+		$('.Wax').fadeOut(0);
+		$('.Wetsuit').fadeIn(300);
 		$('.showProd').fadeOut(0);
 	});
 
    if ($(window).width()>768) {
-	$('.222').mouseover(function(){
+	$('.LeashBtn').mouseover(function(){
 		$('.prodTitle1').fadeIn(0);
 		$('.prodTitle2').fadeOut(0);
 		$('.prodTitle3').fadeOut(0);
 		$('.prodTitle4').fadeOut(0);
 	});
-	$('.333').mouseover(function(){
+	$('.FinBtn').mouseover(function(){
 		$('.prodTitle1').fadeOut(0);
 		$('.prodTitle2').fadeIn(0);
 		$('.prodTitle3').fadeOut(0);
 		$('.prodTitle4').fadeOut(0);
 	});
-	$('.444').mouseover(function(){
+	$('.WaxBtn').mouseover(function(){
 		$('.prodTitle1').fadeOut(0);
 		$('.prodTitle2').fadeOut(0);
 		$('.prodTitle3').fadeIn(0);
 		$('.prodTitle4').fadeOut(0);
 	});
-	$('.555').mouseover(function(){
+	$('.WetsuitBtn').mouseover(function(){
 		$('.prodTitle1').fadeOut(0);
 		$('.prodTitle2').fadeOut(0);
 		$('.prodTitle3').fadeOut(0);
@@ -89,11 +83,11 @@ $(document).ready(function(){
 //-------光箱直接購買--------
 		// $('#gotocart').click(function(){
 		// 	// $('.leashsend').eq(index).value=$('.leashno').eq(index).value;
-		// 	if($('.2222').eq(0).css('display')!='none'){
+		// 	if($('.Leash').eq(0).css('display')!='none'){
 		// 		$('.leashform').eq(index).submit();
-		// 	}else if($('.3333').eq(0).css('display')!='none'){
+		// 	}else if($('.Fin').eq(0).css('display')!='none'){
 		// 		$('.finform').eq(index).submit();
-		// 	}else if($('.4444').eq(0).css('display')!='none'){
+		// 	}else if($('.Wax').eq(0).css('display')!='none'){
 		// 		$('.waxform').eq(index).submit();
 		// 	}else{
 		// 		$('.suitform').eq(index).submit();

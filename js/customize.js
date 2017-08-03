@@ -287,9 +287,9 @@ window.onload=function(){
 /*↑步驟二按按鈕換顏色*/
 
 /*↓步驟二rwd按按鈕換顏色*/
-	$('.selectAndNext .whitebtn').click(function(){
-		$(this).addClass('orangebtn');
-		$('.selectAndNext .whitebtn').not(this).removeClass('orangebtn');
+	$('.rwdselectstyle .btn').click(function(){
+		$(this).addClass('click');
+		$('.rwdselectstyle .btn').not(this).removeClass('click');
 	});
 /*↑步驟二rwd按按鈕換顏色*/
 

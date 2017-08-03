@@ -157,7 +157,10 @@
   padding-bottom: 20px;
   /*outline: 1px solid steelblue*/ }
 
-.myview .item:nth-child(3n+1) .myview .item {
+.leashform:nth-child(3n+1),
+.finform:nth-child(3n+1),
+.waxform:nth-child(3n+1),
+.suitform:nth-child(3n+1) {
   clear: left; }
 
 .myview::-webkit-scrollbar {

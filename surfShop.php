@@ -429,5 +429,26 @@ try{
 	</div>
 	<script src="js/surfShop.js"></script>
  <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+<!-- 	 <script type="text/javascript">
+
+	 	// document.getElementById('mesBtn').addEventListener('click',function(){
+	 	// 	console.log('123');
+	 	// 	document.getElementsByTagName('body').id='wooooo';
+			// document.querySelector('#wooooo .sl-widget-box')[0].style.;
+			// // getElementsByClassName('sl-widget-box')
+	 	// },false);
+
+	 	$('#mesBtn').click(function(){
+	 		$('body').attr('id','wooo');
+	 		console.log('1');
+	 		// $('#wooo').attr('style','opacity:"1 !important";');
+	 	});
+
+		(function(d, t) {
+		  var a = d.createElement(t), s = d.getElementsByTagName(t)[0];
+		  a.async = a.src = '//cdn.speaklyn.com/cb5f2d2d2658a34d74654803f63ae779.js';
+		  s.parentNode.insertBefore(a, s);
+		}(document, 'script'));
+	</script> -->
 </body>
 </html>

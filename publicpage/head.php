@@ -7,7 +7,9 @@
     <link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link rel="stylesheet" type="text/css" href="css/commonclass.css">
 	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/gotop.css">
 	 <script src="libs/jquery/dist/jquery.min.js"></script>
 	 <script src="js/loading.js"></script>
+	 <script type="text/javascript" src="js/gotop.js"></script>
 	<script src="js/breadcrumb.js"></script>
    

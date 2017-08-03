@@ -24,17 +24,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
  </head>
   <!--header end-->
 <body>
-  	<div class="loading_bg">
-	  <div class="loading_logo">
-	  	<img src="images/1common/logo_forloading.png">
-	  </div>  
-	    <div class="loading wave">
-	      ARIKI SURF
-	    </div>
-	    <div class="loading2 wave">
-	      LOADING...
-	    </div>
- 	</div>
+
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>客製化衝浪版</span>

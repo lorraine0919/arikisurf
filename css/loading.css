@@ -7,13 +7,22 @@
   list-style:none;
 }
 
+body{
+  overflow: hidden;
+}
+
+.body_overflowauto{
+  overflow: auto;
+}
+
 .loading_bg {
   background-color:#11314C;
-  width: 100vw;
-  height: 100vh;
+  width: 100vw ;
+  height:100vh;
   position: absolute;
   background-size: cover;
   z-index: 50;
+  overflow: hidden;
    }
 
 

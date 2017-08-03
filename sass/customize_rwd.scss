@@ -30,6 +30,11 @@
 					.base{
 						bottom: -3%;
 					}
+					.svgboard{
+						top: 3%;
+					    width: 129%;
+					    right: -10%;
+					}
 				}
 				.rwdselectboard{
 					display: block;
@@ -137,6 +142,13 @@
 					position: relative;
 					.base{
 						bottom: -3%;
+						width: 153%;
+						left: -28%;
+					}
+					.svgboard{
+					    width: 99%;
+					    top: 3%;
+					    left: -10%;
 					}
 				}
 				.rwdselectstyle{
@@ -162,7 +174,7 @@
 						}
 					}
 					.selectgroup{
-						margin: 20px 0;
+						margin: 10px 0;
 					}
 					.colorgroup{
 							color: #fff;
@@ -338,14 +350,26 @@
 			}
 			.selectAndNext{
 				padding-top: 0;
+				width: 96%;
+				right: 0;
+				left: 0;
+				margin: auto; 
 				.next{
 					position: absolute;
-					right: -283%;
+					right: 0%;
 					bottom: 0;
+					left: 2%;
+					margin:auto;
 					width: 100%;
+					transform:translateY(-24%);
 					#step2tostep3{
-						margin: 0;
-						width: 58%;
+						margin: 5px 8px;
+						width: 13.5%;
+					}
+					#step2tostep1{
+						width: 13.5%;
+						margin: 5px 8px;
+						float: left;
 					}
 				}	
 			}
@@ -381,6 +405,7 @@
 					position: relative;
 					.base{
 						bottom: -3%;
+
 					}
 				}
 				.rwdselectboard{

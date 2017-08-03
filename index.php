@@ -14,7 +14,10 @@
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
     <script type="text/javascript" src="libs/jquery.stellar/src/jquery.stellar.js"></script>
-
+    <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="
+libs/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <script src="libs/owl.carousel/dist/owl.carousel.js"></script>
  </head>
   <!--header end-->
 <body>

@@ -1,10 +1,14 @@
 <?php 
 ob_start();
 session_start();
+require_once("connectBooks.php");
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 $_SESSION["map_reply"]["post_number"] = $_REQUEST["post_number"];
 // $post_number = $_REQUEST["post_number"];
 $post_number = $_REQUEST["post_number"];
+
+$sqlview = "update map_post set post_view=post_view+1 where post_number=$post_number";
+$pdo->exec($sqlview);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +20,25 @@ $post_number = $_REQUEST["post_number"];
   <script src="js/showMap.js"></script>
   <script src="js/getStar.js"></script>
   <title>酋長衝浪Ariki Surf-討論區內頁</title>
+  <script>
+////////////加入收藏 或 取消收藏///////////////////////////////////
+    function switchFavorite(){
+       var love = document.getElementById("love");
+       love.src = "images/4wavepoint/heart_red.png";
+    }
+
+    function init(){
+////////////設定[加入收藏 或 取消收藏]的點按事件//////////////////
+        var love = document.getElementById("love");
+        $('#love').hover(function(){
+          $(this).attr('src', 'images/4wavepoint/heart_org.png');});
+
+        // love.onmouseover.src = "images/4wavepoint/heart_org.png";
+        love.addEventListener("click",switchFavorite,false);
+    }
+
+    window.onload = init;
+</script>
 </head>
 <body>
      <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
@@ -35,12 +58,11 @@ $post_number = $_REQUEST["post_number"];
      </div><!-- lightbox_11 -->
      <div id="lightbox2_11">
            <div class="ustar">
-                 會員XX,你的評分為 <span></span> 顆星
+                  會員<span>XX</span>,你的評分為 <span></span> 顆星
                  <div id="cl">X</div>
            </div>
      </div><!-- lightbox2_11 -->
 <?php 
-     require_once("connectBooks.php");
      $sql2="select * from map_post where wave_number=$wave_number and post_number=$post_number";
      $post = $pdo->query($sql2);
      while ($postRow = $post->fetch(PDO::FETCH_ASSOC)) {    
@@ -50,7 +72,7 @@ $post_number = $_REQUEST["post_number"];
           <!-- <h1>衝浪第一次接觸</h1> -->
           <h1><?php echo $postRow["post_title"]; ?></h1>
           <div class="quit">檢舉</div>
-          <div id="love">收藏</div>
+          <div class="lovepic"><img src="images/4wavepoint/heart_white.png" id="love"></div>
           <div id="star"></div>
           <div id="result"></div>
       </div><!-- title -->
@@ -93,12 +115,11 @@ $post_number = $_REQUEST["post_number"];
        $re = $pdo->query($sqlreply);
        while($reRow = $re->fetch(PDO::FETCH_ASSOC)) {
 ?>                   
-                  <div class="feed">
-                    <div class="icon">
-                              <!-- <img src="images/4wavepoint/user/user3.png"> -->
-                              <img src="<?php echo $reRow["mugshot"] ?>">
-                        </div>                        
-                        <div class="feed_c">                        
+                  <div class="feed">                                        
+                        <div class="feed_c">
+                             <div class="icon">                            
+                                  <img src="<?php echo $reRow["mugshot"] ?>">
+                             </div>                         
                              <div class="feed_info">
                                   <div class="name"><?php echo $reRow["name"] ?></div>
                                   <span class="date"><?php echo substr($reRow["reply_time"],0,10) ?></span>
@@ -126,28 +147,55 @@ $post_number = $_REQUEST["post_number"];
 <script>
         function createTxt(jsonStr){
             var ct = JSON.parse( jsonStr );
-            console.log(ct);
+            // console.log("接收的JSON字串");
+            var newfeed =  document.createElement("div");
+            newfeed.className = "feed";
+
+            var feed_t = document.getElementsByClassName("feed_t")[0];
+            document.getElementsByClassName("back")[0].insertBefore(newfeed,feed_t);
+            
+            var str='<div class="feed_c">';
+            str+='<div class="icon">';
+            str+='<img src="'+ct.mugshot+'">';
+            str+='</div>';
+            str+='<div class="feed_info">';
+            str+='<div class="name">';
+            str+=ct.name;
+            str+='</div>';
+            str+='<span class="date">';
+            str+=ct.reply_time.substr(0,10);
+            str+='</span>';
+            str+='</div>';
+            str+='<div class="txt">';
+            str+=ct.reply_content;
+            str+='</div>';
+            str+='</div>';
+            str+='<div class="quit">';
+            str+='檢舉';
+            str+='</div>';
+            document.getElementsByClassName("feed")[(document.getElementsByClassName("feed").length-1)].innerHTML = str;
         }
 
         $('#feedpo').click(function(){
-             console.log("123");
+             console.log("有點到");
              var xhr = new XMLHttpRequest();
              var her = $('#feed_txt').val();
+             $('#feed_txt').val('');//把textarea的內容清空
              console.log(her);
              var url = "map_replyintoDB.php?feed="+her;
              console.log(url);
-            //  xhr.open("get", url , true);
-            //  xhr.send(null);
+             xhr.open("get", url , true);
+             xhr.send(null);
 
-            //  xhr.onreadystatechange = function(){
-            //   if( xhr.readyState == 4){
-            //     if( xhr.status == 200){
-            //       createTxt(xhr.responseText); 
-            //     }else{
-            //       window.alert("錯誤".xhr.status);
-            //     }
-            //   }
-            // }
+             xhr.onreadystatechange = function(){
+              if( xhr.readyState == 4){
+                if( xhr.status == 200){
+                  createTxt(xhr.responseText); 
+                }else{
+                  window.alert("錯誤".xhr.status);
+                }
+              }
+            }
         });//click
 </script>                  
             </div>

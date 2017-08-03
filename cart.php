@@ -1,3 +1,7 @@
+<?php
+	ob_start();
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en"> 
 
@@ -14,8 +18,10 @@
 <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>購物車</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
+	<?php
+		try{
+	?>
 	<div class="cart-body_28">
-
 		<div class="flow">
 			<div class="flow-box">
 				<div class="flow-item"></div>
@@ -218,19 +224,21 @@
 				<div class="buyerInfo-box InfoArea-box-Item">
 					<ul>
 						<li><span class="Buyspan span-item">姓名</span><input type="text" class="arikicommon_inputtext buyerName"></span></li>
-						<li><span class="Buyspan span-item">電話</span><input type="text" class="arikicommon_inputtext buyerTel" placeholder="訂購者常用電話"></span></li>
+						<li><span class="Buyspan span-item">聯絡電話</span><input type="text" class="arikicommon_inputtext buyerTel" placeholder="訂購者常用電話"></span></li>
 						<li><span class="Buyspan span-item">E-mail</span><input type="text" class="arikicommon_inputtext buyerEmail"></span></li>
-						<li><input type="checkbox" id="buy-sync-member" class="item-sync-member"><label for="buy-sync-member">同會員資料</label></li>
+						<li><span class="Buyspan span-item">地址</span><input type="text" class="arikicommon_inputtext buyerEmail"></span></li>
+						<li><span class="Buyspan span-item">匯款帳號</span><input type="text" class="arikicommon_inputtext buyerEmail" placeholder="輸入5碼" maxlength="5"></span></li>
+						<!-- <li><input type="checkbox" id="buy-sync-member" class="item-sync-member"><label for="buy-sync-member">同會員資料</label></li> -->
 					</ul>
 					
 				</div>
 			</div>
 
-			<div class="big-title">
+			<!-- <div class="big-title">
 				<h3>收件人資訊</h3>
-			</div>
+			</div> -->
 
-			<div class="consigneeInfo InfoArea-Item">
+			<!-- <div class="consigneeInfo InfoArea-Item">
 				<div class="consigneeInfo-box InfoArea-box-Item">
 					<ul>
 						<li><input type="checkbox" id="CS-sync-member" class="item-sync-member"><label for="CS-sync-member">同訂購人資料</label></li>
@@ -240,7 +248,7 @@
 						<li><span class="span-item">收貨地址</span><input type="text" class="arikicommon_inputtext consigneeAdress"><span class="message-item"></span></li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		
 
@@ -332,6 +340,7 @@
 						<li><span class="OC-li-item">連絡電話</span><span class="get-li-item Telget">09123456</span></li>
 						<li><span class="OC-li-item">E-mail</span><span class="get-li-item Emailget">wagasaigyuu@fmail.com</span></li>
 						<li><span class="OC-li-item">收貨地址</span><span class="get-li-item Adressget">台北縣三重市平民窟</span></li>
+						<li><span class="OC-li-item">匯款帳號</span><span class="get-li-item Atm-account">55666</span></li>
 					</ul>
 				</div>
 			</div>
@@ -474,6 +483,12 @@
 		</div>
 	</div><!--order-over_31-->
 	
+	<?php
+		}catch(PDOException $ex){
+			echo "錯誤行號 : ", $e->getLine(), "<br>";
+            echo "錯誤訊息 : ", $e->getMessage(), "<br>";
+		}
+	?>
 <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
 </body>
 </html>

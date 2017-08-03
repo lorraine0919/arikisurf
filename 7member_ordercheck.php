@@ -10,6 +10,7 @@ ob_start();
     <link rel="stylesheet" type="text/css" href="css/7member_ordercheck.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/7member_ordercheck.js"></script>
+    <script type="text/javascript" src="js/ordercheck_catch.js"></script>
     
 </head>
 <body> 
@@ -85,7 +86,8 @@ ob_start();
                         <input type="hidden" name="" value="<?php echo $order_CK["customize_model_name"] ?>">
                         <input type="hidden" name="" value="<?php echo $order_CK["customize_material_name"] ?>">
                         <input type="hidden" name="" value="<?php echo $order_CK["customize_color_name"] ?>">
-                        <input type="hidden" name="" value="">
+                         <?php $custImg = $order_CK["boarddemo"];?> 
+                         <img src="<?php echo $custImg; ?>" style="display:none;">
 
                         <input type="hidden" name="" value="<?php echo $order_CK["customize_tel"] ?>">
                         <input type="hidden" name="" value="<?php echo $order_CK["customize_email"] ?>">
@@ -114,20 +116,45 @@ ob_start();
             <div class="clearfix"></div>
         </div>
         <div class="txt-val">
+            <?php
+                $sql2 = "select * from surfequipped_order
+                        join member
+                        where surfequipped_order.member_no = member.member_no;";
+                $surfOD = $pdo->query($sql2);
+
+                while($order_SF = $surfOD->fetch()){
+            ?>
             <ul>
-                <li class="col-sm-2"><span>A101000</span></li>
-                <li class="col-sm-2"><span>2014/04/01</span></li>
-                <li class="col-sm-2"><span>200</span></li>
-                <li class="col-sm-2"><span>出貨中</span></li>
-                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn"></li>
+                <li class="col-sm-2 FT_orderNo"><span><?php echo $order_SF["surfequipped_orderNo"];?></span></li>
+                <li class="col-sm-2"><span><?php echo $order_SF["order_date"];?></span></li>
+                <li class="col-sm-2"><span><?php echo $order_SF["order_total"];?></span></li>
+                <li class="col-sm-2">
+                    <span>
+                        <?php 
+                            if($order_SF["order_status"] == 1){
+                                echo "未付款";
+                            }else if($order_SF["order_status"]==2){
+                                echo "未出貨";
+                            }else if($order_SF["order_status"]==3){
+                                echo "已出貨";
+                            }else if($order_SF["order_status"]==4){
+                                echo "申請中";
+                            }
+                        ?>
+                    </span>
+                </li>
+                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn FT-order-btn"></li>
             </ul>
             <div class="clearfix"></div>
+            <?php
+                }
+            ?>
         </div>
     </div>
     <div class="item-txt" id="history-txt">
         <div class="txt-title">
             <ul>
-                <li class="col-sm-2">訂單編號</li>
+                <li class="col-sm-2">編號</li>
                 <li class="col-sm-2">訂購時間</li>
                 <li class="col-sm-2">訂單金額</li>
                 <li class="col-sm-2">訂單狀態</li>
@@ -141,12 +168,13 @@ ob_start();
                 <li class="col-sm-2"><span>2014/04/01</span></li>
                 <li class="col-sm-2"><span>200</span></li>
                 <li class="col-sm-2"><span>出貨中</span></li>
-                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn"></li>
+                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn HT-order-btn"></li>
             </ul>
             <div class="clearfix"></div>
         </div>
     </div>
     <div class="decoration"></div>
+
     <div class="lightbox" id="lightbox">
         <div class="customize-LB LB-item" id="customize-LB">
             <div class="cust-box">
@@ -186,10 +214,6 @@ ob_start();
                                 <h4>顏色</h4>
                                 <p class="cust-OD-color"></p>
                             </div>
-                            <div class="col-sm-6">
-                                <h4>圖案</h4>
-                                <p class="cust-OD-img">123.png</p>
-                            </div>
                             <div class="clearfix"></div>
                         </div>
                         <div class="clearfix"></div>
@@ -207,7 +231,7 @@ ob_start();
                 </div>
                 <div class="col-sm-3 cust-img-btn-box">
                     <div class="cust-img">
-                        <img src="images/7member/7member_ordercheck/fishboard_yellow" alt="">
+                        <img src="" class="cust-OD-img"> 
                     </div>
                     <div class="cust-btn">
                         <div class="arikicommon_bgwhite_btn">取消交易</div>
@@ -219,14 +243,110 @@ ob_start();
             </div>
         </div>
         <div class="fitting-LB LB-item" id="fitting-LB">
-            <div class="fitt-box"></div>
+            <div class="fitt-box">
+                <div class="LB-item-h3">
+                    <h3>訂單明細</h3>
+                </div>
+                <div class="FT-list-title">
+                    <ul>
+                        <li class="col-sm-2"><h4>明細編號</h4></li>
+                        <li class="col-sm-4"><h4>商品名稱</h4></li>
+                        <li class="col-sm-2"><h4>價格</h4></li>
+                        <li class="col-sm-1"><h4>數量</h4></li>
+                        <li class="col-sm-3"><h4>圖片</h4></li>
+                        <li class="clearfix"></li>
+                    </ul>
+                </div>
+                <div class="FT-list-val">
+                    <!-- <ul class="FT-OD-Group">
+                        <li class="col-sm-2"><span class="FT-OD-liNo"></span></li>
+                        <li class="col-sm-4"><span class="FT-OD-Prod"></span></li>
+                        <li class="col-sm-2"><span class="FT-OD-price"></span></li>
+                        <li class="col-sm-1"><span class="FT-OD-qty"></span></li>
+                        <li class="col-sm-3"><img src="" alt="" class="FT-OD-img"></li>
+                        <li class="clearfix"></li>
+                    </ul> -->
+                </div>
+                <div class="FT-Info-val">
+                    <div class="FT-Person-Info">
+                        <ul>
+                            <li><h4>收件人姓名</h4><span class="FT-OD-name"></span></li>
+                            <li><h4>收件人電話</h4><span class="FT-OD-tel"></span></li>
+                            <li><h4>E-mail</h4><span class="FT-OD-email"></span></li>
+                            <li><h4>收件人地址</h4><span class="FT-OD-adress"></span></li>
+                            <li><h4>匯款帳號</h4><span class="FT-OD-atm"></span></li>
+                        </ul>
+                    </div>
+                    <div class="FT-OD-Info">
+                        <div class="col-sm-6"><h4>訂單編號</h4><span class="FT-OD-No"></span></div>
+                        <div class="col-sm-6"><h4>訂單時間</h4><span class="FT-OD-date"></span></div>
+                        <div class="col-sm-6"><h4>訂單狀態</h4><span class="FT-OD-status"></span></div>
+                        <div class="col-sm-6"><h4>總額</h4><span class="FT-OD-total"></span></div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="FT-btn">
+                    <div class="arikicommon_bgwhite_btn">取消交易</div>
+                    <div class="arikicommon_important_btn FT-exit">確認離開</div>
+                </div>
+                <!-- <div class="decoration"></div> -->
+            </div>
         </div>
         <div class="history-LB LB-item" id="history-LB">
-            <div class="history-box"></div>
+            <div class="history-box">
+                <div class="HT-item-h3">
+                    <h3>訂單明細</h3>
+                </div>
+                <div class="HT-list-title">
+                    <ul>
+                        <li class="col-sm-2"><h4>明細編號</h4></li>
+                        <li class="col-sm-4"><h4>商品名稱</h4></li>
+                        <li class="col-sm-2"><h4>價格</h4></li>
+                        <li class="col-sm-1"><h4>數量</h4></li>
+                        <li class="col-sm-3"><h4>圖片</h4></li>
+                        <li class="clearfix"></li>
+                    </ul>
+                </div>
+                <div class="HT-list-val">
+                    <!-- <ul class="HT-OD-Group">
+                        <li class="col-sm-2"><span class="HT-OD-liNo"></span></li>
+                        <li class="col-sm-4"><span class="HT-OD-Prod"></span></li>
+                        <li class="col-sm-2"><span class="HT-OD-price"></span></li>
+                        <li class="col-sm-1"><span class="HT-OD-qty"></span></li>
+                        <li class="col-sm-3"><img src="" alt="" class="HT-OD-img"></li>
+                        <li class="clearfix"></li>
+                    </ul> -->
+                </div>
+                <div class="HT-Info-val">
+                    <div class="HT-Person-Info">
+                        <ul>
+                            <li><h4>收件人姓名</h4><span class="HT-OD-name"></span></li>
+                            <li><h4>收件人電話</h4><span class="HT-OD-tel"></span></li>
+                            <li><h4>E-mail</h4><span class="HT-OD-email"></span></li>
+                            <li><h4>收件人地址</h4><span class="HT-OD-adress"></span></li>
+                            <li><h4>匯款帳號</h4><span class="HT-OD-atm"></span></li>
+                        </ul>
+                    </div>
+                    <div class="HT-OD-Info">
+                        <div class="col-sm-6"><h4>訂單編號</h4><span class="HT-OD-No"></span></div>
+                        <div class="col-sm-6"><h4>訂單時間</h4><span class="HT-OD-date"></span></div>
+                        <div class="col-sm-6"><h4>訂單狀態</h4><span class="HT-OD-status"></span></div>
+                        <div class="col-sm-6"><h4>總額</h4><span class="HT-OD-total"></span></div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="HT-btn">
+                    <div class="arikicommon_bgwhite_btn">取消交易</div>
+                    <div class="arikicommon_important_btn HT-exit">確認離開</div>
+                </div>
+                <!-- <div class="decoration"></div> -->
+            </div>
         </div>
     </div>
     <?php
-        }catch(PDOException $ex){
+        }catch(PDOException $e){
             echo "錯誤行號 : ", $e->getLine(), "<br>";
             echo "錯誤訊息 : ", $e->getMessage(), "<br>";
         }

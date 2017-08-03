@@ -12,12 +12,19 @@ require_once('connectBooks.php');
   <link rel="stylesheet" type="text/css" href="css/customize.css">
   <link rel="stylesheet" type="text/css" href="css/customize_rwd.css">
   <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/loading.css">
 <!--   <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C9807DD6-5F50-5349-A2DB-9C72E9BB087E/main.js" charset="UTF-8"></script> -->
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="
+libs/owl.carousel/dist/assets/owl.theme.default.min.css">
+<script src="libs/owl.carousel/dist/owl.carousel.js"></script>
  </head>
   <!--header end-->
 <body>
+
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>客製化衝浪版</span>
@@ -47,7 +54,7 @@ require_once('connectBooks.php');
 					若未於七日內匯款，將視為取消交易<br>
 					
 				</p>
-				<a class="arikicommon_next_btn">前往訂單查詢</a>
+				<a class="arikicommon_next_btn" href="7member_ordercheck.php">前往訂單查詢</a>
 				<div id="comfirmclosebtn">
 					<i class="fa fa-times" aria-hidden="true"></i>
 				</div>
@@ -360,8 +367,8 @@ require_once('connectBooks.php');
 										<p>上傳您的圖案</p>
 									</div>
 									<div class="right">
-										<label for="rwduploadbtn"><div class="uploadbtn"><img src="images/2board/step2/uploadbtn.png"></div></label>
-										<input type="file" name="" id="rwduploadbtn" style="display: none">
+										<label for="uploadimg"><div class="uploadbtn"><img src="images/2board/step2/uploadbtn.png"></div></label>
+										
 									</div>
 								</div>
 							</div>

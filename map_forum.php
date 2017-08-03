@@ -109,11 +109,11 @@ require_once("connectBooks.php");
          </div><!-- beach_10 --> 
          <div class="fourm">
             <ul>
-             <li>排序依</li>
-             <li id="postDate">發表日期</li>
-             <li id="viewPost">瀏覽次數</li>
-             <li id="starPost">評價</li>
-             <li id="post">發表文章</li>
+               <li>排序</li>
+               <li id="postDate">發表日期</li>
+               <li id="viewPost">瀏覽次數</li>
+               <li id="starPost">評價分數</li>
+               <li id="post">發表文章</li>
            </ul>  
            <section class="talk">
 <?php 
@@ -122,7 +122,7 @@ require_once("connectBooks.php");
        while($dataItem = $data->fetch(PDO::FETCH_ASSOC)) {
 ?>
               <div class="item">
-                 <a href="map_forum_discussion.php?post_number=<?php echo $dataItem["post_number"] ?>" id="map_a">                  
+                 <a href="map_forum_discussion.php?post_number=<?php echo $dataItem["post_number"] ?>" class="map_a">                  
                      <div class="pic_i">
                            <!-- <img src="images/4wavepoint/fou/1.jpg"> -->                          
                             <img src='images/4wavepoint/<?php echo $wave_number ?>/fou/<?php echo $dataItem["post_img"]  ?>'>
@@ -144,12 +144,12 @@ require_once("connectBooks.php");
                  </a>
                      <div class="item_border">
                          <!-- <div id="star"></div> -->
-                         <div id="star"></div>
-                              <script>
+                         <div class="star">☆☆☆☆</div>
+                         <!--      <script>
                                 var math = <?php echo $dataItem["star_score"] ?>;
                                 console.log(math);
                                 $('#star').raty({ score: 3 });
-                              </script>                                                                                
+                              </script> -->                                                                                
                          <div id="result"></div>
                          <div class="view">
                              <div class="see">
@@ -168,7 +168,7 @@ require_once("connectBooks.php");
               function orderByDate(jsonStr){
                  var o_date = JSON.parse( jsonStr );
                  for(var x in o_date){
-                 console.log(o_date[x]);
+                 // console.log(o_date[x]);
                     var newimg = document.createElement("img"); 
                     newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;   
                     $('.item .pic_i').eq(x).append(newimg);
@@ -176,6 +176,8 @@ require_once("connectBooks.php");
                     $('.text h3').eq(x).text(o_date[x].post_title);
                     $('.tt').eq(x).text(o_date[x].post_text);
                     $('.watch').eq(x).text(o_date[x].post_view);
+                    var newhref="map_forum_discussion.php?post_number="+o_date[x].post_number;
+                    $('.map_a').eq(x).attr('href',newhref);
                  }                
               }//orderByDate function
 
@@ -204,7 +206,7 @@ require_once("connectBooks.php");
                function orderByView(jsonStr){
                  var o_date = JSON.parse( jsonStr );
                  for(var x in o_date){
-                 console.log(o_date[x]);
+                 // console.log(o_date[x]);
                     var newimg = document.createElement("img"); 
                     newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;   
                     $('.item .pic_i').eq(x).append(newimg);
@@ -212,6 +214,8 @@ require_once("connectBooks.php");
                     $('.text h3').eq(x).text(o_date[x].post_title);
                     $('.tt').eq(x).text(o_date[x].post_text);
                     $('.watch').eq(x).text(o_date[x].post_view);
+                    var newhref="map_forum_discussion.php?post_number="+o_date[x].post_number;
+                    $('.map_a').eq(x).attr('href',newhref);
                  }                
               }//orderByView function
 
@@ -240,7 +244,7 @@ require_once("connectBooks.php");
               function orderByStar(jsonStr){
                  var o_date = JSON.parse( jsonStr );
                  for(var x in o_date){
-                 console.log(o_date[x]);
+                 // console.log(o_date[x]);
                     var newimg = document.createElement("img"); 
                     newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;   
                     $('.item .pic_i').eq(x).append(newimg);
@@ -248,6 +252,8 @@ require_once("connectBooks.php");
                     $('.text h3').eq(x).text(o_date[x].post_title);
                     $('.tt').eq(x).text(o_date[x].post_text);
                     $('.watch').eq(x).text(o_date[x].post_view);
+                    var newhref="map_forum_discussion.php?post_number="+o_date[x].post_number;
+                    $('.map_a').eq(x).attr('href',newhref);
                  }                
               }//orderByView function
 

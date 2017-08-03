@@ -44,21 +44,21 @@
     <div class="about_bg">
     <div class="about_1170">
     <div class="container">
-    	<div class="row">
-    		<div class="col-xs-12 col-sm-6">
-    			<div class="about_img">
-    				<div class="about_leftSide_17" id="about_leftSide_17">
-    				<img src="images/6ariki/about_img_rwd2.png">
-    				</div>
-    			</div>
-    	   </div>
-    		<div class="col-xs-12 col-sm-6">
-    			<div class="about_rightSide_17">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="about_img">
+            <div class="about_leftSide_17" id="about_leftSide_17">
+            <img src="images/6ariki/about_img_rwd2.png">
+            </div>
+          </div>
+         </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="about_rightSide_17">
                 <h2 class="about_title">經營理念</h2>
-				<p class="about_txt">酋長Surf的創辦人牟那滷豆先生，因熱愛衝浪，希望擁有一張有自己故事又堅固耐用的衝浪板，因此，在2000年9月，成立的Ariki Surf 酋長衝浪，致力成為全世界衝浪板製造商的領頭羊。就如同部落裡的酋長一樣，是最棒也是技術最好的。自此，「 Your Board Always Top」的信念，便根植於Ariki Surf的品牌靈魂。</p>
-				</div>
-    		</div>
-    	 </div>
+        <p class="about_txt">酋長Surf的創辦人牟那滷豆先生，因熱愛衝浪，希望擁有一張有自己故事又堅固耐用的衝浪板，因此，在2000年9月，成立的Ariki Surf 酋長衝浪，致力成為全世界衝浪板製造商的領頭羊。就如同部落裡的酋長一樣，是最棒也是技術最好的。自此，「 Your Board Always Top」的信念，便根植於Ariki Surf的品牌靈魂。</p>
+        </div>
+        </div>
+       </div>
      </div>
     </div>
     </div>

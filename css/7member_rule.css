@@ -2,7 +2,9 @@
   padding-top: 1vh;
   width: 100%;
   text-align: center;
-  background-color: #32455B; }
+  position: absolute;  /*修改定位*/
+  top: 10vh;
+}
   .rule22 .subject22 {
     margin: 8% 0% 6% 0%;
     letter-spacing: 6px;
@@ -27,7 +29,7 @@
   .rule22 .section22 {
     color: #777; }
 
-.submit22 {
+#submit22 {  /*修改為ID*/
   margin-top: 2%;
   margin-bottom: 5%; }
 

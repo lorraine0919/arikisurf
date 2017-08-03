@@ -131,7 +131,7 @@
 		
 		.main_BG{
 			padding-top: 33px;
-			background-image: url("../images/3accessories/哈庫那馬他他.png"),
+			background-image: url("../images/3accessories/hakuna.png"),
 			linear-gradient(180deg, rgba(25, 52, 76, 1)35%, rgba(85, 70, 76, 0.8)100%); 
    //          background: -moz-linear-gradient(180deg, rgba(25, 52, 76, 1)35%, rgba(87, 70, 76, 0.8)100%); 
 			// background: -webkit-linear-gradient(180deg, rgba(25, 52, 76, 1)35%, rgba(87, 70, 76, 0.8)100%); 
@@ -255,7 +255,11 @@
         	// overflow: scroll;
         	// height: 550px;	
         }
-        .myview .item:nth-child(3n+1) .myview .item{
+
+        .leashform:nth-child(3n+1),
+        .finform:nth-child(3n+1),
+        .waxform:nth-child(3n+1),
+        .suitform:nth-child(3n+1){
         	clear: left;
         }
         .myview::-webkit-scrollbar{
@@ -341,7 +345,11 @@
 		#info-box{
 			max-width: 500px;
 			max-height: 650px;
-			background-color: white;
+			background-image: url("../images/3accessories/decoration.png"),
+			linear-gradient(rgba(255, 255, 255, 1)35%, rgba(255, 255, 255, 1)100%);  
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: content;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -507,3 +515,9 @@
 		  	max-height: 510px;
 		  }
 	   } 
+	  	// body .sl-widget-box{
+	   // 	opacity: 0 !important;
+	   // }
+	   // #wooo .sl-widget-box{
+	   // 	opacity: 1 !important;
+	   // }

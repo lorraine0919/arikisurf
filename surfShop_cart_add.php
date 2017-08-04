@@ -2,6 +2,7 @@
 ob_start();
 session_start();
 $psn = $_REQUEST["prod_no"];
+$_SESSION["products"][$psn]["prod_no"]=$_REQUEST["prod_no"];
 $_SESSION["products"][$psn]["prod_name"]=$_REQUEST["prod_name"];
 $_SESSION["products"][$psn]["prod_price"]=$_REQUEST["prod_price"];
 $_SESSION["products"][$psn]["prod_img"]=$_REQUEST["prod_img"];

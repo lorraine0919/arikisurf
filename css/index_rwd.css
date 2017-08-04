@@ -149,23 +149,8 @@
     padding: 10px 10px 0 10px; }
     .forum_1 .contentMax .title {
       display: none; }
-    .forum_1 .contentMax .postgroup {
-      overflow: hidden;
-      padding-top: 100%;
-      position: relative; }
-      .forum_1 .contentMax .postgroup .postfix {
-        width: 80%;
-        position: absolute;
-        top: 0;
-        left: 0; }
-        .forum_1 .contentMax .postgroup .postfix .post .content .postcontentgroup .mempic {
-          width: 12vw; }
-      .forum_1 .contentMax .postgroup .postfix:nth-child(1) {
-        left: 10%; }
-      .forum_1 .contentMax .postgroup .postfix:nth-child(2) {
-        left: -71%; }
-      .forum_1 .contentMax .postgroup .postfix:nth-child(3) {
-        right: -160%; }
+    .forum_1 .contentMax .postgroup .postfix .post .content .postcontentgroup .mempic {
+      width: 10vw; }
 
   .bulletin_1 .maxContent .title {
     text-align: center; }

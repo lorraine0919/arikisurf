@@ -241,32 +241,17 @@ $top:16vh;
 				display: none;
 			}
 			.postgroup{
-				overflow: hidden;
-				padding-top: 100%;
-				position: relative;
+				// all:unset;
 				.postfix{
-					width: 80%;
-					position: absolute;
-					top: 0;
-					left: 0;
 					.post{
 						.content{
 							.postcontentgroup{
 								.mempic{
-									width: 12vw;
+									width: 10vw;
 								}
 							}
 						}
 					}
-				}
-				.postfix:nth-child(1){
-					left: 10%;
-				}
-				.postfix:nth-child(2){
-					left: -71%;
-				}
-				.postfix:nth-child(3){
-					 right: -160%;
 				}
 			}
 		}

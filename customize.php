@@ -24,17 +24,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
  </head>
   <!--header end-->
 <body>
-  	<div class="loading_bg">
-	  <div class="loading_logo">
-	  	<img src="images/1common/logo_forloading.png">
-	  </div>  
-	    <div class="loading wave">
-	      ARIKI SURF
-	    </div>
-	    <div class="loading2 wave">
-	      LOADING...
-	    </div>
- 	</div>
+
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>客製化衝浪版</span>
@@ -64,7 +54,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 					若未於七日內匯款，將視為取消交易<br>
 					
 				</p>
-				<a class="arikicommon_next_btn">前往訂單查詢</a>
+				<a class="arikicommon_next_btn" href="7member_ordercheck.php">前往訂單查詢</a>
 				<div id="comfirmclosebtn">
 					<i class="fa fa-times" aria-hidden="true"></i>
 				</div>
@@ -377,8 +367,8 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 										<p>上傳您的圖案</p>
 									</div>
 									<div class="right">
-										<label for="rwduploadbtn"><div class="uploadbtn"><img src="images/2board/step2/uploadbtn.png"></div></label>
-										<input type="file" name="" id="rwduploadbtn" style="display: none">
+										<label for="uploadimg"><div class="uploadbtn"><img src="images/2board/step2/uploadbtn.png"></div></label>
+										
 									</div>
 								</div>
 							</div>

@@ -39,7 +39,7 @@
 		<div class="right col-xs-12 col-sm-6">
 			<h3>留言給我們</h3>
 			<p>arikisurf@arikisurf.com</p>
-			<a href="">留言</a>
+			<a id="mesBtn">留言</a>
 		</div>
 		<div class="clearfix"></div>
 		<div class="copyright">
@@ -47,4 +47,34 @@
 			</p>
 		</div>
     </div>
+    	 <script type="text/javascript">
+
+	 	// document.getElementById('mesBtn').addEventListener('click',function(){
+	 	// 	console.log('123');
+	 	// 	document.getElementsByTagName('body').id='wooooo';
+			// document.querySelector('#wooooo .sl-widget-box')[0].style.;
+			// // getElementsByClassName('sl-widget-box')
+	 	// },false);
+	 	var mesBtncount = 0;
+	 	$('#mesBtn').click(function(){
+	 		if(mesBtncount==0){
+		 		$('body').attr('id','wooo');
+		 		console.log('1');
+		 		mesBtncount++;	
+		 		$('#mesBtn').text('關閉留言');		
+	 		}else{
+	 			$('body').removeAttr('id','wooo');
+	 			mesBtncount--;
+	 			$('#mesBtn').text('留言');	
+	 		}
+
+	 		// $('#wooo').attr('style','opacity:"1 !important";');
+	 	});
+
+		(function(d, t) {
+		  var a = d.createElement(t), s = d.getElementsByTagName(t)[0];
+		  a.async = a.src = '//cdn.speaklyn.com/cb5f2d2d2658a34d74654803f63ae779.js';
+		  s.parentNode.insertBefore(a, s);
+		}(document, 'script'));
+	</script>
 </footer>

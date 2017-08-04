@@ -1,0 +1,33 @@
+/*css(RWD)*/
+ #goTop a {
+    display: block;
+    z-index: 11;
+    border: none;
+    text-decoration: none; }
+    #goTop a img {
+      width: 20%;
+      height: auto;
+      position: fixed;
+      bottom: 50px;
+      right: 10px;
+      z-index: 45;
+      transition: all 0.3s ease; }
+
+
+/*css(PC)*/
+#goTop a {
+    display: block;
+    z-index: 11;
+    border: none;
+    text-decoration: none; }
+    #goTop a img {
+      width: 6%;
+      height: auto;
+      position: fixed;
+      bottom: 30px;
+      right: 10px;
+      z-index: 45;
+      transition: all 0.3s ease; }
+
+  #goTop img:hover {
+    transform: translate(0px, -20px); }

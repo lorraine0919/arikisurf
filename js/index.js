@@ -33,7 +33,7 @@ $(function(){
 		$('#rwdcoatingleft').click(function(){
 			if(count<4){
 				count++;
-				$('.coating_1 .demoimg ul').animate({'margin-left':'-=80%'});
+				$('.coating_1 .demoimg ul').animate({'margin-left':'-=82%'});
 				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
 				// console.log(ulmarginleft/hundred);
 				// console.log(count);				
@@ -43,7 +43,7 @@ $(function(){
 		$('#rwdcoatingright').click(function(){
 			if(count>0){
 				count--;
-				$('.coating_1 .demoimg ul').animate({'margin-left':'+=80%'});
+				$('.coating_1 .demoimg ul').animate({'margin-left':'+=82%'});
 				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
 				// console.log(ulmarginleft/hundred);
 				// console.log(count);		
@@ -90,6 +90,30 @@ $(function(){
 		$('.forum_1 .selected').removeClass('selected');
 	});
 /*以上是討論區動畫*/
+
+/*以下是討論區rwd動畫*/
+
+	$('.loop').owlCarousel({
+	    center: true,
+	    items:2,
+	    loop:true,
+	    margin:10,
+	    responsive:{
+	    	0:{
+	    		items:1
+	    	},
+	        600:{
+	            items:3
+	        }
+    }
+	});
+	$('.owl-dots').css('display','none');
+
+
+
+
+/*以下是討論區rwd動畫*/
+
 
 /*以下是最新消息動畫*/
 	$('.bulletin_1 .news').click(function(){

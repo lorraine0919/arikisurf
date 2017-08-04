@@ -28,6 +28,9 @@
   color: #fff;
   font-weight: bold; }
 
+body {
+  overflow-x: hidden; }
+
 .navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb {
   display: none; }
 
@@ -291,26 +294,6 @@
     padding: 0 0 20vh 0; }
   .forum_1 .postgroup a {
     color: #fff; }
-  .forum_1 .postgroup .postfix:nth-child(1) .post .head {
-    background-image: url("../images/1common/1Pipeline.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .forum_1 .postgroup .postfix:nth-child(2) .post .head {
-    background-image: url("../images/1common/2SuperBank.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .forum_1 .postgroup .postfix:nth-child(3) .post .head {
-    background-image: url("../images/1common/3Jeffrey’s Bay.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .forum_1 .postgroup .postfix:nth-child(4) .post .head {
-    background-image: url("../images/1common/4Black Beach.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
   .forum_1 .postgroup .post {
     background-color: #223d55;
     border-radius: 10px; }
@@ -318,14 +301,20 @@
       background: #1a191c;
       padding: 37% 0% 0% 0%;
       border-radius: 10px 10px 0 0;
-      min-height: 4.5em; }
+      min-height: 4.5em;
+      background-size: cover;
+      transition: 1s; }
+      .forum_1 .postgroup .post .head.p1 {
+        background-image: url("../images/1common/1Pipeline.jpg"); }
+      .forum_1 .postgroup .post .head.p2 {
+        background-image: url("../images/1common/2SuperBank.jpg"); }
+      .forum_1 .postgroup .post .head.p3 {
+        background-image: url("../images/1common/3Jeffreys Bay.jpg"); }
       .forum_1 .postgroup .post .head .headword {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 5% 10%; }
         .forum_1 .postgroup .post .head .headword h3 {
           opacity: 0.9; }
-    .forum_1 .postgroup .post .head:hover {
-      background-size: 200%; }
     .forum_1 .postgroup .post .content {
       text-align: left; }
       .forum_1 .postgroup .post .content .word {

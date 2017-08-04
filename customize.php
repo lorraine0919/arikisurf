@@ -26,7 +26,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 <body>
 
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>客製化衝浪版</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 <div class="wrapper">

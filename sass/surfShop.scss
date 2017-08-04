@@ -104,28 +104,13 @@
 					}
 				}
 				.pic_man{
-					padding:2%;
-					animation: man .3s infinite alternate;
-					background-repeat: no-repeat;
-					background-position: center;
-					background-size: cover;
+					position: relative;
+				
 					img{
 						width: 100%;
 					}
 				}
-				@keyframes man{
-			     0%{background-image: url("../images/3accessories/1.png");}
-			     10%{background-image: url("../images/3accessories/2.png");}
-			     20%{background-image: url("../images/3accessories/3.png");}
-			     30%{background-image: url("../images/3accessories/4.png");}
-			     40%{background-image: url("../images/3accessories/5.png");}
-			     50%{background-image: url("../images/3accessories/6.png");}
-			     60%{background-image: url("../images/3accessories/7.png");}
-			     70%{background-image: url("../images/3accessories/8.png");}
-			     80%{background-image: url("../images/3accessories/9.png");}
-			     90%{background-image: url("../images/3accessories/9.png");}
-			     100%{background-image: url("../images/3accessories/9.png");}
-			    }
+				
 		}
 
 		

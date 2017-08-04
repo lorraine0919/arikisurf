@@ -534,6 +534,38 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 	}
 /*↑步驟二儲存圖片到下一步驟*/
 
+
+/*↓步驟二顏色停賣不能按*/
+	$('#step1tostep2').click(function(){
+		$.post('customize_update.php',{
+			'colorpatternmaterialsellornot':'yes'
+		},function(rs){
+			var threesellornot = rs.split('|');
+			console.log(threesellornot);
+			var colorsellornot=JSON.parse(threesellornot[0]);
+			var materialsellornot=JSON.parse(threesellornot[1]);
+			var officialimgsellornot=JSON.parse(threesellornot[2]);
+			console.log(colorsellornot);
+			for (i in colorsellornot) {
+				if(colorsellornot[i].customize_color_sellornot=='2'){
+					$('.step2_maxContent .selectAndNext .color').eq(i).css('display','none');
+				}
+			}
+			for (i in materialsellornot) {
+				if(materialsellornot[i].customize_material_sellornot=='2'){
+					$('.step2_maxContent .selectAndNext .texture').eq(i).css('display','none');
+				}
+			}
+			for (i in officialimgsellornot) {
+				if(officialimgsellornot[i].officialimg_sellornot=='2'){
+					$('.step2_maxContent .selectAndNext .pattern').eq(i).css('display','none');
+				}
+			}
+		});
+	})
+
+/*↑步驟二顏色停賣不能按*/
+
 /*↓步驟三驗證是否填妥*/
 function warningifnotfill(){
 

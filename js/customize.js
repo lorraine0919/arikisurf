@@ -302,6 +302,11 @@ window.onload=function(){
 		$('#customercolor').val(arr[index]);
 		// $('.mainshapepath').css('fill','url(#maincolor2)');
 	});
+
+	$('.step2_maxContent .selectAndNext .whitebtn').click(function(){
+		$(this).addClass('orangebtn');
+		$('.step2_maxContent .selectAndNext .whitebtn').not(this).removeClass('orangebtn');
+	});
 /*↑步驟二按按鈕換顏色*/
 
 /*↓步驟二rwd按按鈕換顏色*/

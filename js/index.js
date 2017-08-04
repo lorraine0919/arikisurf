@@ -33,7 +33,7 @@ $(function(){
 		$('#rwdcoatingleft').click(function(){
 			if(count<4){
 				count++;
-				$('.coating_1 .demoimg ul').animate({'margin-left':'-=80%'});
+				$('.coating_1 .demoimg ul').animate({'margin-left':'-=82%'});
 				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
 				// console.log(ulmarginleft/hundred);
 				// console.log(count);				
@@ -43,7 +43,7 @@ $(function(){
 		$('#rwdcoatingright').click(function(){
 			if(count>0){
 				count--;
-				$('.coating_1 .demoimg ul').animate({'margin-left':'+=80%'});
+				$('.coating_1 .demoimg ul').animate({'margin-left':'+=82%'});
 				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
 				// console.log(ulmarginleft/hundred);
 				// console.log(count);		

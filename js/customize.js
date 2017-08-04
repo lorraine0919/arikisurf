@@ -181,6 +181,24 @@ window.onload=function(){
 	});
 /*↑步驟一rwd顯示svg板型*/
 
+/*↓步驟一發現已下架就秀出光箱，讓圖片變成灰階，並且中間浪板不會改*/
+	$.post('customize_update.php',{
+		'knowboardsellornot':'yes'
+	},function(rs){
+		
+		var boardsellornotall=JSON.parse(rs);
+		console.log(boardsellornotall);
+		for(i in boardsellornotall){
+			if(boardsellornotall[i].customize_model_sellornot=='2'){
+				$('.step1_maxContent .boardgroup .board img').eq(i).css('opacity','0.1');
+				$('.step1_maxContent .boardgroup .board').eq(i).unbind('click');
+			}
+		}
+		
+	})
+
+/*↑步驟一發現已下架就秀出光箱，讓圖片變成灰階，並且中間浪板不會改*/
+
 
 /*↓步驟二秀出價格*/
 	function showprice(){

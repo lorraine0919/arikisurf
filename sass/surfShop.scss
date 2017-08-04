@@ -105,10 +105,31 @@
 				}
 				.pic_man{
 					position: relative;
+					 .aa,.bb,.cc,.dd,.ee,.ff,.gg{
+
+					      position: absolute;
+					      width: 100%;
+					      /*padding-top: 100%;*/
+					      top: 0;
+					      
+					    }
 				
 					img{
 						width: 100%;
 					}
+					#man_suit,#man_fin,#man_leash,#man_wax{
+						animation: man .3s infinite alternate;
+						
+					}
+				@keyframes man{
+			     0%{filter: drop-shadow(3px 3px 5px rgba(255,255,255,.8));}
+
+			     30%{filter: drop-shadow(-3px -3px 5px rgba(255,255,255,.8));}
+			     60%{filter: drop-shadow(4px 4px 6px rgba(255,255,255,.8));}
+			     
+			     100%{filter: drop-shadow(7px 7px 8px rgba(255,255,255,.8));}
+			    }
+
 				}
 				.mo-fire {
 				  width: 100px;

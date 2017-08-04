@@ -40,24 +40,36 @@ $(document).ready(function(){
 		$('.prodTitle2').fadeOut(0);
 		$('.prodTitle3').fadeOut(0);
 		$('.prodTitle4').fadeOut(0);
+		$('.man_ff').attr('id', 'man_leash');
+	}).mouseleave(function(){
+		$('.man_ff').attr('id', '');
 	});
 	$('.FinBtn').mouseover(function(){
 		$('.prodTitle1').fadeOut(0);
 		$('.prodTitle2').fadeIn(0);
 		$('.prodTitle3').fadeOut(0);
 		$('.prodTitle4').fadeOut(0);
+		$('.man_ee').attr('id', 'man_fin');
+	}).mouseleave(function(){
+		$('.man_ee').attr('id', '');
 	});
 	$('.WaxBtn').mouseover(function(){
 		$('.prodTitle1').fadeOut(0);
 		$('.prodTitle2').fadeOut(0);
 		$('.prodTitle3').fadeIn(0);
 		$('.prodTitle4').fadeOut(0);
+		$('.man_gg').attr('id', 'man_wax');
+	}).mouseleave(function(){
+		$('.man_gg').attr('id', '');
 	});
 	$('.WetsuitBtn').mouseover(function(){
 		$('.prodTitle1').fadeOut(0);
 		$('.prodTitle2').fadeOut(0);
 		$('.prodTitle3').fadeOut(0);
 		$('.prodTitle4').fadeIn(0);
+		$('.man_bb').attr('id', 'man_suit');
+	}).mouseleave(function(){
+		$('.man_bb').attr('id', '');
 	});
     }
 

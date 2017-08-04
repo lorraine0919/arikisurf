@@ -86,6 +86,21 @@ window.onload=function(){
 
 /*↑步驟一按浪板換價錢*/
 
+/*↓步驟一按浪板rwd換價錢*/
+	$('.rwdSelectboardMenu li').click(function(){
+		var index = $(this).index()+1;
+		$.post('customize_update.php',{
+			'boardindex':index
+		},function(rs){
+			$('.step1_maxContent .boardpriceshow').text(rs);
+			$('#boardprice').text(rs);
+			console.log('浪板'+$('#boardprice').text());
+		});
+
+	});
+
+/*↑步驟一按浪板rwd換價錢*/
+
 
 
 /*↓步驟一rwd的拉出介紹*/

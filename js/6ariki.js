@@ -29,12 +29,13 @@ $(function (){
     opacity:0},
     {y:0,
     opacity:1,
+    delay:3,
     ease: Back.easeOut
     });
     TweenMax.fromTo('.about_txt_17',1,
     {opacity:0},
     {opacity:1,
-    delay:1,
+    delay:4,
     ease: Back.easeOut
 
 });

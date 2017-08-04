@@ -26,7 +26,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 <body>
 
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>客製化衝浪版</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 <div class="wrapper">
@@ -40,6 +40,14 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 				<h2 class="lightboxtitle"></h2>
 				<p class="lightboxcontent">請填寫完整資料</p>
 				<div id="closebtn">
+					<i class="fa fa-times" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div class="stopselllightboxgroup">
+			<div class="stopselllightboxarea">
+				<p class="stopselllightboxcontent">本項目已停賣</p>
+				<div id="stopsellclosebtn">
 					<i class="fa fa-times" aria-hidden="true"></i>
 				</div>
 			</div>

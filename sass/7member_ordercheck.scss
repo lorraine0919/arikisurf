@@ -15,10 +15,6 @@
         @include Width-Size(1170,100% ,3% ,auto );
         box-sizing: border-box;
         padding:10px;
-        .fitting-txt,
-        .history-txt{
-            display: none;
-        }
         .ordercheck-title{
             width: 90%;
             margin:0 auto;
@@ -94,11 +90,41 @@
                 }
             }
         }
-        #fitting-txt,#history-txt{
+        #fitting-txt{
             display: none;
+            .rwdtitleshow{
+                display: none;
+            }
+            .rwd-FT-title{
+                display: none;
+            }
         }
         #customize-txt{
             display: block;
+            .rwdtitleshow{
+                display: none;
+            }
+        }
+        #history-txt{
+            display:none;
+            .txt-val{
+                .rwdtitleshow{
+                    display: none;
+                }
+                .HT-cust-box{
+                    margin:3% 0;
+                    margin-bottom:20%;
+                    h3{
+                        margin-bottom:1%;
+                    }
+                }
+                .HT-fitt-box{
+                    margin:3% 0;
+                    h3{
+                        margin-bottom:1%;
+                    }
+                }
+            }
         }
         .item-txt{
                 width: 90%;
@@ -265,6 +291,9 @@
                                     display: inline-block;
                                     padding-top:11%;
                                 }
+                                .hideFT{
+                                    display: none;
+                                }
                                 img{
                                     width: 30%;
                                     margin:0 auto;
@@ -425,13 +454,338 @@
 @media screen and (max-width:767px){
     .member_ordercheck_23{
         .ordercheck-title{
-
+            text-align: center;
+            box-sizing: border-box;
+            padding: 20px;
+            // margin:2% auto;
+            ul{
+                li{
+                    display:inline-block;
+                    box-sizing: border-box;
+                    padding:0 10px;
+                }
+                li:nth-child(2){
+                    border-left:1px dotted #ddd;
+                    border-right:1px dotted #ddd;
+                }
+            }
         }
-        .ordercheck-txt{
-
+        #customize-txt{
+            // display: none;
+            background-color:#ddd;
+            color:#194165;
+            .txt-title{
+                display: none;
+            }
+            .txt-val{
+                .rwdtitleshow{
+                    display: inline;
+                    margin: 0 30px;
+                }
+                ul{
+                    padding:7% 0;
+                    padding-left:19%;
+                    border-bottom:1px solid #194165;
+                    li{
+                        display: block;
+                    }
+                }
+                
+            }
         }
-        .decoration{
-            
+        #fitting-txt{
+            display: none;
+            .txt-title{
+                display: none;
+            }
+            .txt-val{
+                width: 100%;
+                box-sizing: border-box;
+                // padding: 23px 0  0 30px;
+                background-color: #ddd;
+                color:#194165;
+                .rwd-FT-box{
+                    width: 80%;
+                    margin:0 auto;
+                    padding:5% 0;
+                    border-bottom: 1px solid #194165;
+                    ul{
+                        box-sizing: border-box;
+                        // padding: 23px 0  0 30px;
+                    }
+                    .rwd-FT-title{
+                        // margin-left:40px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        text-align: right;
+                        ul{
+                            .rwdtitleshow{
+                            }
+                        }
+                    }
+                    .DSrwd-FT-val{
+                        display: inline-block;
+                        vertical-align: middle;
+                        // width: 55%;
+                    }
+                }
+                    
+            }
+        }
+        #history-txt{
+            display: none;
+            background-color:#ddd;
+            color:#194165;
+            h3{
+                margin-left:10px;
+            }
+            .txt-val{
+                padding:7% 0;
+                .HT-cust-box,.HT-fitt-box{
+                    .txt-title{
+                        display:none;
+                    }
+                }
+            }
+            .CT-HT-list{
+                // margin-left:19%;
+                padding:7% 0;
+                // padding-left:19%;
+                width: 80%;
+                margin:0 auto;
+                margin-bottom:25%;
+                border-bottom:1px solid #194165;
+                .rwdtitleshow{
+                    display: inline;
+                    margin:0 30px;
+                    margin-left:20%;
+                }
+            }
+            .CT-HT-list:last-child{
+                border-bottom:0px;
+            }
+            .FT-HT-list{
+                padding:7% 0;
+                width: 80%;
+                margin:0 auto;
+                margin-bottom:10%;
+                border-bottom:1px solid #194165;
+                .rwdtitleshow{
+                    display: inline;
+                    margin:0 30px;
+                    margin-left:20%;
+                }
+            }
+            .FT-HT-list:last-child{
+                border-bottom:0px solid #194165;
+
+            }
+        }
+        .lightbox{
+            display: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            z-index: 100;
+            color:#11314c;
+            #customize-LB{
+                display: none;
+                background-color: #ddd;
+                width: 90%;
+                height: 90%;
+                position: absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                margin:auto;
+                overflow: scroll;
+                .cust-box{
+                    .LB-item-h3{
+                        box-sizing: border-box;
+                        padding:10px;
+                    }
+                    .cust-Info-box{
+                        width: 90%;
+                        margin:1% 5%;
+                        padding:1% 0;
+                        .cust-OD-Info{
+                            padding:0;
+                            .white{
+                                background-color: white;
+                                margin:2% 0 5%;
+                                h4{
+                                    display: inline-block;
+                                    width: 30%;
+                                }
+                                p{
+                                    display: inline-block;
+                                    margin-left:10%;
+                                }
+                            }
+                        }
+                        .cust-OD-txt{
+                            background-color: white;
+                            margin:2% 0 5%;
+                            h4{
+                                display: inline-block;
+                                width: 30%;
+                            }
+                            p{
+                                display: inline-block;
+                                margin-left:10%;
+                            }
+                        }
+                        .cust-userInput{
+                            background-color: white;
+                            margin:2% 0 5%;
+                            ul{
+                                li{
+                                    padding:10px;
+                                    h4{
+                                        display: inline-block;
+                                        width: 30%;
+                                        vertical-align: middle;
+                                    }
+                                    span{
+                                        display: inline-block;
+                                        margin-left:10%;
+                                        vertical-align: middle;
+                                        width: 60%;
+                                    }
+                                }
+                                    
+                            }
+                        }
+                        
+                    }
+                    .cust-img-btn-box{
+                        .cust-img{
+                            position: relative;
+                            padding-top: 131%;
+                            img{
+                                width: 35%;
+                                position: absolute;
+                                top:-23%;
+                                left: 0;
+                                right:0;
+                                margin:auto;
+                            }
+                        }
+                        .cust-btn{
+                            margin:3% auto;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            #fitting-LB{
+                display:none;
+                background-color: #ddd;
+                width: 90%;
+                height: 90%;
+                position: absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                margin:auto;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                .fitt-box{
+                    .LB-item-h3{
+                        box-sizing: border-box;
+                        padding:10px;
+                    }
+                    .FT-list-title{
+                        width: 90%;
+                        margin:1% 5%;
+                        padding:1% 0;
+                        background-color: #fff;
+                        display: none;
+                    }
+                    .FT-list-val{
+                        ul{
+                            background-color: #fff;
+                            width: 90%;
+                            margin:2% auto 5%;
+                            box-sizing: border-box;
+                            border:1px solid rgba(25, 65, 101, 0.5);
+                            li{
+                                .hideFT{
+                                    display: inline-block;
+                                    width: 31%;
+                                    vertical-align: middle;
+                                }
+                                span{
+                                    display: inline-block;
+                                    margin-left:10%;
+                                    vertical-align: middle;
+                                    width: 59%;
+                                }
+                                img{
+                                    width: 30%;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                    }
+                    .FT-Info-val{
+                        .FT-Person-Info{
+                            width: 90%;
+                            margin:2% auto 5%;
+                            padding:1% 0;
+                            background-color: #fff;
+                            li{
+                                width: 100%;
+                                padding:10px;
+
+                                h4{
+                                    display: inline-block;
+                                    width: 31%;
+                                    vertical-align: middle;
+                                }
+                                span{
+                                    display: inline-block;
+                                    margin-left:10%;
+                                    vertical-align: middle;
+                                    width: 59%;
+                                }
+                            }
+                        }
+                        .FT-OD-Info{
+                            width: 90%;
+                            margin:2% auto 5%;
+                            padding:1% 0;
+                            background-color: #fff;
+                            h4{
+                                display: inline-block;
+                                width: 30%;
+                                vertical-align: middle;
+                            }
+                            span{
+                                display: inline-block;
+                                margin-left:10%;
+                                vertical-align: middle;
+                                width: 60%;
+                            }
+                        }
+                    }
+                    .FT-btn{
+                        margin:3% auto;
+                        text-align: center;
+                    }
+                    
+                }
+            }
+            #history-LB{
+                display:none;
+            }
         }
     }
 }
+// <span class="rwdtitleshow">訂單編號</span>

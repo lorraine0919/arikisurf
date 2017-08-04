@@ -20,7 +20,9 @@ function First(){
         customize_txt.style.display = "block";
         fitting_txt.style.display = "none";
         history_txt.style.display = "none";
-
+        
+        fitting_ODC.className = "li-unclick";
+        history_ODC.className   = "li-unclick";
         customize_ODC.className = "li-click";
         fitting_ODC.className = "li-unclick";
         history_ODC.className   = "li-unclick";
@@ -52,10 +54,10 @@ function First(){
         customize_LB.style.display = "block";
         
 
-        var ODNo = $(this).parent().parent().children('.orderNo').children('span').text();
-        var ODDate = $(this).parent().parent().children('.orderDate').children('span').text();
-        var ODTotal = $(this).parent().parent().children('.orderTotal').children('span').text();
-        var ODStatus = $(this).parent().parent().children('.orderStatus').children('span').text();
+        var ODNo = $(this).parent().parent().children('.orderNo').children('.shinvalue').text();
+        var ODDate = $(this).parent().parent().children('.orderDate').children('.shinvalue').text();
+        var ODTotal = $(this).parent().parent().children('.orderTotal').children('.shinvalue').text();
+        var ODStatus = $(this).parent().parent().children('.orderStatus').children('.shinvalue').text();
         
         // var ODModel = $(this).parent().parent().next().val();
 

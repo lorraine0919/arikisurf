@@ -181,7 +181,7 @@ window.onload=function(){
 	});
 /*↑步驟一rwd顯示svg板型*/
 
-/*↓步驟一發現已下架就秀出光箱，讓圖片變成灰階，並且中間浪板不會改*/
+/*↓步驟一浪板停賣，讓圖片變成灰階，並且中間浪板不會改*/
 	$.post('customize_update.php',{
 		'knowboardsellornot':'yes'
 	},function(rs){
@@ -192,6 +192,7 @@ window.onload=function(){
 			if(boardsellornotall[i].customize_model_sellornot=='2'){
 				$('.step1_maxContent .boardgroup .board img').eq(i).css('opacity','0.1');
 				$('.step1_maxContent .boardgroup .board').eq(i).unbind('click');
+				$('.rwdSelectboardMenu li').eq(i).css('display','none');
 			}
 		}
 		

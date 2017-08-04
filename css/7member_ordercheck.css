@@ -12,9 +12,6 @@
     margin: 3% auto;
     box-sizing: border-box;
     padding: 10px; }
-    .member_ordercheck_23 .fitting-txt,
-    .member_ordercheck_23 .history-txt {
-      display: none; }
     .member_ordercheck_23 .ordercheck-title {
       width: 90%;
       margin: 0 auto; }
@@ -75,10 +72,29 @@
         .member_ordercheck_23 .ordercheck-title ul .li-unclick:after {
           border-left: 50px solid #194165;
           border-top: 41px solid transparent; }
-    .member_ordercheck_23 #fitting-txt, .member_ordercheck_23 #history-txt {
+    .member_ordercheck_23 #fitting-txt {
       display: none; }
+      .member_ordercheck_23 #fitting-txt .rwdtitleshow {
+        display: none; }
+      .member_ordercheck_23 #fitting-txt .rwd-FT-title {
+        display: none; }
     .member_ordercheck_23 #customize-txt {
       display: block; }
+      .member_ordercheck_23 #customize-txt .rwdtitleshow {
+        display: none; }
+    .member_ordercheck_23 #history-txt {
+      display: none; }
+      .member_ordercheck_23 #history-txt .txt-val .rwdtitleshow {
+        display: none; }
+      .member_ordercheck_23 #history-txt .txt-val .HT-cust-box {
+        margin: 3% 0;
+        margin-bottom: 20%; }
+        .member_ordercheck_23 #history-txt .txt-val .HT-cust-box h3 {
+          margin-bottom: 1%; }
+      .member_ordercheck_23 #history-txt .txt-val .HT-fitt-box {
+        margin: 3% 0; }
+        .member_ordercheck_23 #history-txt .txt-val .HT-fitt-box h3 {
+          margin-bottom: 1%; }
     .member_ordercheck_23 .item-txt {
       width: 90%;
       margin: 0 auto;
@@ -202,6 +218,8 @@
               .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li span {
                 display: inline-block;
                 padding-top: 11%; }
+              .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li .hideFT {
+                display: none; }
               .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-val ul li img {
                 width: 30%;
                 margin: 0 auto; }
@@ -301,3 +319,239 @@
         .member_ordercheck_23 .lightbox .history-LB .history-box .HT-btn {
           width: 95%;
           text-align: right; } }
+@media screen and (max-width: 767px) {
+  .member_ordercheck_23 .ordercheck-title {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px; }
+    .member_ordercheck_23 .ordercheck-title ul li {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 0 10px; }
+    .member_ordercheck_23 .ordercheck-title ul li:nth-child(2) {
+      border-left: 1px dotted #ddd;
+      border-right: 1px dotted #ddd; }
+  .member_ordercheck_23 #customize-txt {
+    background-color: #ddd;
+    color: #194165; }
+    .member_ordercheck_23 #customize-txt .txt-title {
+      display: none; }
+    .member_ordercheck_23 #customize-txt .txt-val .rwdtitleshow {
+      display: inline;
+      margin: 0 30px; }
+    .member_ordercheck_23 #customize-txt .txt-val ul {
+      padding: 7% 0;
+      padding-left: 19%;
+      border-bottom: 1px solid #194165; }
+      .member_ordercheck_23 #customize-txt .txt-val ul li {
+        display: block; }
+  .member_ordercheck_23 #fitting-txt {
+    display: none; }
+    .member_ordercheck_23 #fitting-txt .txt-title {
+      display: none; }
+    .member_ordercheck_23 #fitting-txt .txt-val {
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #ddd;
+      color: #194165; }
+      .member_ordercheck_23 #fitting-txt .txt-val .rwd-FT-box {
+        width: 80%;
+        margin: 0 auto;
+        padding: 5% 0;
+        border-bottom: 1px solid #194165; }
+        .member_ordercheck_23 #fitting-txt .txt-val .rwd-FT-box ul {
+          box-sizing: border-box; }
+        .member_ordercheck_23 #fitting-txt .txt-val .rwd-FT-box .rwd-FT-title {
+          display: inline-block;
+          vertical-align: middle;
+          text-align: right; }
+        .member_ordercheck_23 #fitting-txt .txt-val .rwd-FT-box .DSrwd-FT-val {
+          display: inline-block;
+          vertical-align: middle; }
+  .member_ordercheck_23 #history-txt {
+    display: none;
+    background-color: #ddd;
+    color: #194165; }
+    .member_ordercheck_23 #history-txt h3 {
+      margin-left: 10px; }
+    .member_ordercheck_23 #history-txt .txt-val {
+      padding: 7% 0; }
+      .member_ordercheck_23 #history-txt .txt-val .HT-cust-box .txt-title, .member_ordercheck_23 #history-txt .txt-val .HT-fitt-box .txt-title {
+        display: none; }
+    .member_ordercheck_23 #history-txt .CT-HT-list {
+      padding: 7% 0;
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 25%;
+      border-bottom: 1px solid #194165; }
+      .member_ordercheck_23 #history-txt .CT-HT-list .rwdtitleshow {
+        display: inline;
+        margin: 0 30px;
+        margin-left: 20%; }
+    .member_ordercheck_23 #history-txt .CT-HT-list:last-child {
+      border-bottom: 0px; }
+    .member_ordercheck_23 #history-txt .FT-HT-list {
+      padding: 7% 0;
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 10%;
+      border-bottom: 1px solid #194165; }
+      .member_ordercheck_23 #history-txt .FT-HT-list .rwdtitleshow {
+        display: inline;
+        margin: 0 30px;
+        margin-left: 20%; }
+    .member_ordercheck_23 #history-txt .FT-HT-list:last-child {
+      border-bottom: 0px solid #194165; }
+  .member_ordercheck_23 .lightbox {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    color: #11314c; }
+    .member_ordercheck_23 .lightbox #customize-LB {
+      display: none;
+      background-color: #ddd;
+      width: 90%;
+      height: 90%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      overflow: scroll; }
+      .member_ordercheck_23 .lightbox #customize-LB .cust-box .LB-item-h3 {
+        box-sizing: border-box;
+        padding: 10px; }
+      .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box {
+        width: 90%;
+        margin: 1% 5%;
+        padding: 1% 0; }
+        .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-OD-Info {
+          padding: 0; }
+          .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-OD-Info .white {
+            background-color: white;
+            margin: 2% 0 5%; }
+            .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-OD-Info .white h4 {
+              display: inline-block;
+              width: 30%; }
+            .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-OD-Info .white p {
+              display: inline-block;
+              margin-left: 10%; }
+        .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-OD-txt {
+          background-color: white;
+          margin: 2% 0 5%; }
+          .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-OD-txt h4 {
+            display: inline-block;
+            width: 30%; }
+          .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-OD-txt p {
+            display: inline-block;
+            margin-left: 10%; }
+        .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-userInput {
+          background-color: white;
+          margin: 2% 0 5%; }
+          .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-userInput ul li {
+            padding: 10px; }
+            .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-userInput ul li h4 {
+              display: inline-block;
+              width: 30%;
+              vertical-align: middle; }
+            .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-Info-box .cust-userInput ul li span {
+              display: inline-block;
+              margin-left: 10%;
+              vertical-align: middle;
+              width: 60%; }
+      .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-img-btn-box .cust-img {
+        position: relative;
+        padding-top: 131%; }
+        .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-img-btn-box .cust-img img {
+          width: 35%;
+          position: absolute;
+          top: -23%;
+          left: 0;
+          right: 0;
+          margin: auto; }
+      .member_ordercheck_23 .lightbox #customize-LB .cust-box .cust-img-btn-box .cust-btn {
+        margin: 3% auto;
+        text-align: center; }
+    .member_ordercheck_23 .lightbox #fitting-LB {
+      display: none;
+      background-color: #ddd;
+      width: 90%;
+      height: 90%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      overflow-y: scroll;
+      overflow-x: hidden; }
+      .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .LB-item-h3 {
+        box-sizing: border-box;
+        padding: 10px; }
+      .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-list-title {
+        width: 90%;
+        margin: 1% 5%;
+        padding: 1% 0;
+        background-color: #fff;
+        display: none; }
+      .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-list-val ul {
+        background-color: #fff;
+        width: 90%;
+        margin: 2% auto 5%;
+        box-sizing: border-box;
+        border: 1px solid rgba(25, 65, 101, 0.5); }
+        .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-list-val ul li .hideFT {
+          display: inline-block;
+          width: 31%;
+          vertical-align: middle; }
+        .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-list-val ul li span {
+          display: inline-block;
+          margin-left: 10%;
+          vertical-align: middle;
+          width: 59%; }
+        .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-list-val ul li img {
+          width: 30%;
+          vertical-align: middle; }
+      .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-Info-val .FT-Person-Info {
+        width: 90%;
+        margin: 2% auto 5%;
+        padding: 1% 0;
+        background-color: #fff; }
+        .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-Info-val .FT-Person-Info li {
+          width: 100%;
+          padding: 10px; }
+          .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-Info-val .FT-Person-Info li h4 {
+            display: inline-block;
+            width: 31%;
+            vertical-align: middle; }
+          .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-Info-val .FT-Person-Info li span {
+            display: inline-block;
+            margin-left: 10%;
+            vertical-align: middle;
+            width: 59%; }
+      .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-Info-val .FT-OD-Info {
+        width: 90%;
+        margin: 2% auto 5%;
+        padding: 1% 0;
+        background-color: #fff; }
+        .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-Info-val .FT-OD-Info h4 {
+          display: inline-block;
+          width: 30%;
+          vertical-align: middle; }
+        .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-Info-val .FT-OD-Info span {
+          display: inline-block;
+          margin-left: 10%;
+          vertical-align: middle;
+          width: 60%; }
+      .member_ordercheck_23 .lightbox #fitting-LB .fitt-box .FT-btn {
+        margin: 3% auto;
+        text-align: center; }
+    .member_ordercheck_23 .lightbox #history-LB {
+      display: none; } }

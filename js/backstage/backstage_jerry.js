@@ -1,4 +1,16 @@
 $(function(){
+	/*不可以讓長板下架*/
+		$('.modeltr.t1 .sellornotgroup').css('display','none');
+	/*不可以讓長板下架*/
+
+	/*不可以讓白色下架*/
+		$('.colortr.t0 .sellornotgroup').css('display','none');
+	/*不可以讓白色下架*/
+
+	/*不可以讓環氧樹脂下架*/
+		$('.materialtr.t0 .sellornotgroup').css('display','none');
+	/*不可以讓環氧樹脂下架*/
+
 	/*修改好後跳出光箱*/
 		$('.pressgolightbox').click(function(){
 			$('.lightboxgroup').fadeIn(100);

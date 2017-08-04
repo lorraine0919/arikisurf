@@ -44,6 +44,14 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 				</div>
 			</div>
 		</div>
+		<div class="stopselllightboxgroup">
+			<div class="stopselllightboxarea">
+				<p class="stopselllightboxcontent">本項目已停賣</p>
+				<div id="stopsellclosebtn">
+					<i class="fa fa-times" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
 		<div class="comfirmlightboxgroup">
 			<div class="comfirmlightboxarea">
 				<h2 class="comfirmlightboxtitle">完成交易</h2>

@@ -64,7 +64,7 @@
      </div>
     </div>
   </div><!-- banner_bg_17 -->
-</div>
+
 
 <!-- 品牌沿革****************** -->
     <div class="business_bg">
@@ -89,6 +89,7 @@
          </div><!-- container -->
          </div><!-- business_1170 -->
     </div><!-- business_bg -->
+  </div>
 
  <!-- 得獎紀錄**********************       -->
 <div class="winning_bg">

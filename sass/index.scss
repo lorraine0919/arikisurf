@@ -388,16 +388,6 @@ body{
 				a{
 					color: #fff;
 				}
-				$images:("1Pipeline","2SuperBank","3Jeffrey’s Bay","4Black Beach");	
-				@for $i from 1 through 4{
-					.postfix:nth-child(#{$i}) .post .head{
-						background-image: url('../images/1common/#{nth($images,$i)}.jpg');
-						background-size: cover;
-						background-repeat: no-repeat;
-						background-position: center;
-
-					}
-				} 
 				.post{
 					background-color: #223d55;
 					border-radius:10px;
@@ -406,6 +396,17 @@ body{
 						padding: 37% 0% 0% 0%;
 						border-radius:10px 10px 0 0;
 						min-height: 4.5em;
+						background-size: cover;
+						transition:1s;
+						&.p1{
+							background-image: url('../images/1common/1Pipeline.jpg');
+						}
+						&.p2{
+							background-image: url('../images/1common/2SuperBank.jpg');
+						}
+						&.p3{
+							background-image: url('../images/1common/3Jeffreys Bay.jpg');
+						}
 						.headword{
 							background-color: rgba(0,0,0,0.5);
 							padding: 5% 10%;
@@ -415,7 +416,7 @@ body{
 						}
 					}
 					.head:hover{
-						background-size: 200%;
+						// background-size: 200%;
 					}
 					.content{
 						.word{

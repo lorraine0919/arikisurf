@@ -550,16 +550,19 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 			for (i in colorsellornot) {
 				if(colorsellornot[i].customize_color_sellornot=='2'){
 					$('.step2_maxContent .selectAndNext .color').eq(i).css('display','none');
+					$('.step2_maxContent .rwdselectstyle .color').eq(i).css('display','none');
 				}
 			}
 			for (i in materialsellornot) {
 				if(materialsellornot[i].customize_material_sellornot=='2'){
 					$('.step2_maxContent .selectAndNext .texture').eq(i).css('display','none');
+					$('.step2_maxContent .rwdselectstyle .texture').eq(i).css('display','none');
 				}
 			}
 			for (i in officialimgsellornot) {
 				if(officialimgsellornot[i].officialimg_sellornot=='2'){
 					$('.step2_maxContent .selectAndNext .pattern').eq(i).css('display','none');
+					$('.step2_maxContent .rwdselectstyle .pattern').eq(i).css('display','none');
 				}
 			}
 		});

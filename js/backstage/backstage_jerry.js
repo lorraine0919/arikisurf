@@ -1,4 +1,13 @@
 $(function(){
+	/*修改好後跳出光箱*/
+		$('.pressgolightbox').click(function(){
+			$('.lightboxgroup').fadeIn(100);
+		});
+		$('#closebtn').click(function(){
+	        $('.lightboxgroup').fadeOut(0);
+		});
+	/*修改好後跳出光箱*/
+
 	/*↓畫面一進來就撈資料庫資料決定現在是否停賣*/
 		for (var i = 0; i < $('.sellornot').length; i++) {
 			if($('.sellornot').eq(i).attr('value')=='1'){
@@ -82,6 +91,17 @@ $(function(){
 
 		});
 	/*↑上傳圖片*/
+
+	/*↓刪除圖片*/
+		$('.deletebtn').click(function(){
+			$.post('9backstage_customize_update.php',{
+				'deleteimgnum':$(this).siblings('.no').val()
+			},function(rs){
+				console.log(rs);
+				location.reload();
+			})
+		});	
+	/*↑刪除圖片*/
 })
 
 

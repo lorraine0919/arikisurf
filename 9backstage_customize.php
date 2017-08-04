@@ -18,6 +18,14 @@ require_once('connectBooks.php');
 <!--(bake module/backstage_header.html)--><?php require_once('publicpage/backstage_header.php'); ?>
         <div class="main35" id="main-content">
             <div class="wrapper">
+              <div class="lightboxgroup">
+                <div class="lightboxarea">
+                  <p class="lightboxcontent">修改成功</p>
+                  <div id="closebtn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
                 <div class="row mt">
                   
                     <div class="whitearea col-lg-12 table">
@@ -56,8 +64,8 @@ require_once('connectBooks.php');
                                                         <input type="hidden" value="<?php echo $pdoRow['modelNo'] ?>" class="no">
                                                         <input type="hidden" value="model" class="style">
   
-                                                        <a class="yesbtn btn btn-primary btn-sm">上架</a>
-                                                        <a class="nobtn btn btn-primary btn-sm">下架</a>
+                                                        <a class="yesbtn btn btn-primary btn-sm pressgolightbox">上架</a>
+                                                        <a class="nobtn btn btn-primary btn-sm pressgolightbox">下架</a>
                                                     </div>
                                             </div>
                                           </td>
@@ -103,8 +111,8 @@ require_once('connectBooks.php');
                                                         <input type="hidden" value="<?php echo $pdoRow['customize_color_sellornot'] ?>" class="sellornot">
                                                         <input type="hidden" value="<?php echo $pdoRow['colorNo'] ?>" class="no">
                                                         <input type="hidden" value="color" class="style">
-                                                        <a class="yesbtn btn btn-primary btn-sm">上架</a>
-                                                        <a class="nobtn btn btn-primary btn-sm">下架</a>
+                                                        <a class="yesbtn btn btn-primary btn-sm pressgolightbox">上架</a>
+                                                        <a class="nobtn btn btn-primary btn-sm pressgolightbox">下架</a>
                                                     </div>
                                             </div>
                                           </td>
@@ -156,8 +164,9 @@ require_once('connectBooks.php');
                                                         <input type="hidden" value="<?php echo $pdoRow['officialimg_sellornot'] ?>" class="sellornot">
                                                         <input type="hidden" value="<?php echo $pdoRow['officialimgNo'] ?>" class="no">
                                                         <input type="hidden" value="officialimg" class="style">
-                                                        <a class="yesbtn btn btn-primary btn-sm">上架</a>
-                                                        <a class="nobtn btn btn-primary btn-sm">下架</a>
+                                                        <a class="yesbtn btn btn-primary btn-sm pressgolightbox">上架</a>
+                                                        <a class="nobtn btn btn-primary btn-sm pressgolightbox">下架</a>
+                                                        <a class="deletebtn btn btn-primary btn-sm">刪除</a>
                                                     </div>
                                                 </form>
                                             </div>
@@ -213,8 +222,8 @@ require_once('connectBooks.php');
                                                         <input type="hidden" value="<?php echo $pdoRow['customize_material_sellornot'] ?>" class="sellornot">
                                                         <input type="hidden" value="<?php echo $pdoRow['materialNo'] ?>" class="no">
                                                         <input type="hidden" value="material" class="style">
-                                                        <a class="yesbtn btn btn-primary btn-sm">上架</a>
-                                                        <a class="nobtn btn btn-primary btn-sm">下架</a>
+                                                        <a class="yesbtn btn btn-primary btn-sm pressgolightbox">上架</a>
+                                                        <a class="nobtn btn btn-primary btn-sm pressgolightbox">下架</a>
                                                     </div>
                                                 </form>
                                             </div>

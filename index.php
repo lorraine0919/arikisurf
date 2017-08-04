@@ -189,44 +189,44 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
             <div class="title">
                 <h2>浪點討論</h2>
             </div>
-            <div class="postgroup">
-                    <div class="postfix col-sm-4 selected">    
-                        <div class="post selected">
-                            <a href="map_forum_discussion.html">
-                            <div class="head">
-                                <!-- <div class="headword">
-                                    <h3>現代衝浪的發源地</h3>
-                                    <h4>Pipeline</h4>
-                                </div> -->
+            <div class="postgroup loop owl-carousel owl-theme">
+                <div class="postfix selected item">    
+                    <div class="post selected">
+                        <a href="map_session.php?wave_number=101">
+                            <div class="head p1">
+                            <!-- <div class="headword">
+                                <h3>現代衝浪的發源地</h3>
+                                <h4>Pipeline</h4>
+                            </div> -->
                             </div>
-                            </a>
-                            <div class="content selected">
-                                <div class="word">
-                                    <h3>現代衝浪的發源地</h3>
-                                    <h4>Pipeline</h4>                                
-                                </div>
-                                
-                                <div class="postcontentgroup">
-                                    <div class="mempic"><img src="images/1common/posthebe.png" alt=""></a></div>
-                                    <div class="postcontent">
-                                        <h5>馥甄</h5>
-                                        <p>「高手雲集的精彩海岸！」</p>
-                                    </div>                             
-                                </div>
+                        </a>
+                        <div class="content selected">
+                            <div class="word">
+                                <h3>現代衝浪的發源地</h3>
+                                <h4>Pipeline</h4>                                
+                            </div>
+                            
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/posthebe.png" alt=""></a></div>
+                                <div class="postcontent">
+                                    <h5>馥甄</h5>
+                                    <p>「高手雲集的精彩海岸！」</p>
+                                </div>                             
+                            </div>
 
-                            </div>
                         </div>
                     </div>
-                <div class="postfix col-sm-4">
+                </div>
+                <div class="postfix item">
                     <div class="post">
-                        <a href="map_forum_discussion.html">
-                        <div class="head">
+                        <a href="map_session.php?wave_number=102">
+                            <div class="head p2">
                             <!--                             <div class="headword">
                                 <h3>Quicksilver職業比賽地</h3>
                                 <h4>SuperBank</h4>
                             </div> -->
                             </div>
-                            </a>
+                        </a>
                         <div class="content">
                             <div class="word">
                                 <h3>Quicksilver職業比賽地</h3>
@@ -243,14 +243,16 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                         </div>
                     </div>
                 </div>
-                <div class="postfix col-sm-4">
+                <div class="postfix item">
                     <div class="post">
-                        <a href="map_forum_discussion.html"><div class="head">
+                        <a href="map_session.php?wave_number=103">
+                            <div class="head p3">
                             <!--                             <div class="headword">
                                 <h3>浪人心中的最佳浪點</h3>
                                 <h4>Jeffrey’s Bay</h4>
                             </div> -->
-                        </div></a>
+                            </div>
+                        </a>
                         <div class="content">
                             <div class="word">
                                 <h3>浪人心中的最佳浪點</h3>
@@ -268,7 +270,6 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                         </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
             </div>
         </div>
     </div>

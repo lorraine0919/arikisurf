@@ -91,6 +91,30 @@ $(function(){
 	});
 /*以上是討論區動畫*/
 
+/*以下是討論區rwd動畫*/
+
+	$('.loop').owlCarousel({
+	    center: true,
+	    items:2,
+	    loop:true,
+	    margin:10,
+	    responsive:{
+	    	0:{
+	    		items:1
+	    	},
+	        600:{
+	            items:3
+	        }
+    }
+	});
+	$('.owl-dots').css('display','none');
+
+
+
+
+/*以下是討論區rwd動畫*/
+
+
 /*以下是最新消息動畫*/
 	$('.bulletin_1 .news').click(function(){
 		$('.bulletin_1 .left img').attr('src',$(this).find("img").attr('src'));

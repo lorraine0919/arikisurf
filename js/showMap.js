@@ -16,7 +16,7 @@ $(document).ready(function(){
         $("#lightbox2_11").hide();
     });//click close
 
-    $('.quit').click(function(){
+    $('#quit').click(function(){
         $("#lightbox_11").show();
         console.log(123);
     });

@@ -3,28 +3,16 @@ ob_start();
 session_start();
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 require_once("connectBooks.php");
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
   <link rel="stylesheet" type="text/css" href="css/forum.css">
+  <link rel="stylesheet" type="text/css" href="css/star.css">
   <script src="js/showMap.js"></script>
   <script src="js/map_up.js"></script>
-  <script src="js/jquery.raty.js" type="text/javascript"></script>
-  <script>
-    $(document).ready(function(){
-          $('#result').hide();   //隱藏結果箱子
-          $('#star').raty({      
-              hints:[1,2,3,4,5], 
-              path : 'images/4wavepoint/img',
-              target:'#result',
-              targetKeep:true,
-              targetType:'number',
-              readOnly: true,
-          });
-    });//ready
-  </script>
+  <script src="js/map_addColor.js"></script>
   <title>酋長衝浪Ariki Surf-討論區</title>
 </head>
 <body>
@@ -68,7 +56,7 @@ require_once("connectBooks.php");
                            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                            <div class="bt">
                                  <input type="submit" value="送出">
-                                 <input type="reset" value="清除">
+                                 <input type="reset" value="清除" id="gg">
                            </div>
                      </div>
                </div>
@@ -86,7 +74,27 @@ require_once("connectBooks.php");
            <div class="ic wave">
              <img src="images/4wavepoint/w1.png">
              <span>滿潮</span><br>
-             <span>浪況 : <span class="good">優良</span></span> 
+             <span>浪況 : <span class="good">
+             <?php 
+                  switch($waveRow["wave_state"]){
+                    case 1:
+                           echo "差";
+                           break;
+                    case 2:
+                           echo "不良";
+                           break;
+                    case 3:
+                           echo "普通";
+                           break;              
+                    case 4:
+                           echo "好";
+                           break;
+                    case 5:
+                           echo "優良";
+                           break;              
+                  }
+             ?>
+             </span></span> 
            </div>
            <!-- <div class="ic weather">32°C</div>  -->
            <div class="ic weather"><?php echo $waveRow["wave_weather"] ?></div>    
@@ -123,34 +131,19 @@ require_once("connectBooks.php");
 ?>
               <div class="item">
                  <a href="map_forum_discussion.php?post_number=<?php echo $dataItem["post_number"] ?>" class="map_a">                  
-                     <div class="pic_i">
-                           <!-- <img src="images/4wavepoint/fou/1.jpg"> -->                          
+                     <div class="pic_i">                      
                             <img src='images/4wavepoint/<?php echo $wave_number ?>/fou/<?php echo $dataItem["post_img"]  ?>'>
                      </div>
                      <div class="text">
-                         <!-- <h3>衝浪第一次接觸</h3> -->
                          <h3><?php echo $dataItem["post_title"]  ?></h3>
-                         <!-- <div class="day">2017/07/07</div> -->
                          <div class="day"><?php echo substr($dataItem["post_date"],0,10)?></div>
-                       <!--   <div class="tt">
-                         Mathi是北部人,第一次衝浪的地方是在金山中角灣.  還記得那天剛好是颱風過境後的第一天.穿了件短褲,  交了800元後教練先在沙灘上胡亂解說一遍,就把我推下水了.老實說,  他說的天花亂墬,  我卻是有聽沒有懂.總覺得聽起來很容易,但實地下水後,  整個感覺就不一樣了.
-                         那時候我還不會看浪,  也不記得浪有幾人高.  總覺得浪一排一排的蓋過來,  看到腿都軟了.腦袋裡一片空白,  只聽到耳邊震耳欲聾的海浪聲,以及教練聲嘶力竭的叫我拚命劃.哇咧!!!我心裡只想著逃命,這不是在玩命嘛?眼前都是整排蓋下來的浪和飛濺起的白花,而且白花中似乎夾雜的血淋淋的斷肢殘臂(有沒有那ㄇ誇張阿?!)掙紮了五分鐘後,  教練宣佈放棄,  他告訴我今天颱風浪不適合初學者下水,  我就被招呼上岸了.  老實說,  雖然覺得交了800元居然只有下水五分鐘,  但是上岸的那一霎那真的有死裡逃生的感覺.
-                         上岸之後我的朋友告訴我,  今天的浪是他最近以來碰過最大的浪了.這才稍稍安慰了我挫敗的心.
-                         </div>  -->  
                          <div class="tt">
                                <?php echo $dataItem["post_text"]  ?>
                          </div>             
                      </div>
                  </a>
                      <div class="item_border">
-                         <!-- <div id="star"></div> -->
-                         <div class="star">☆☆☆☆</div>
-                         <!--      <script>
-                                var math = <?php echo $dataItem["star_score"] ?>;
-                                console.log(math);
-                                $('#star').raty({ score: 3 });
-                              </script> -->                                                                                
-                         <div id="result"></div>
+                         <div class="star"></div>
                          <div class="view">
                              <div class="see">
                               <img src="images/4wavepoint/view.png" alt="view">
@@ -165,6 +158,12 @@ require_once("connectBooks.php");
  ?>
 
        <script>
+              $('#gg').click(function(){
+                  $('#title').val('');
+                  $('#image').src('');
+                  $('#textarea').val('');            
+              });
+
               function orderByDate(jsonStr){
                  var o_date = JSON.parse( jsonStr );
                  for(var x in o_date){

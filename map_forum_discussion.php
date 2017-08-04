@@ -2,43 +2,27 @@
 ob_start();
 session_start();
 require_once("connectBooks.php");
+
+$member_no = $_SESSION["member"]["member_no"];
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 $_SESSION["map_reply"]["post_number"] = $_REQUEST["post_number"];
-// $post_number = $_REQUEST["post_number"];
+
 $post_number = $_REQUEST["post_number"];
 
 $sqlview = "update map_post set post_view=post_view+1 where post_number=$post_number";
 $pdo->exec($sqlview);
- ?>
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
   <link rel="stylesheet" type="text/css" href="css/star.css">
-   <link rel="stylesheet" type="text/css" href="css/discussion.css">
-  <script src="js/jquery.raty.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="css/discussion.css">
+  <link rel="stylesheet" type="text/css" href="css/star-rating-svg.css">
+  <script src="js/jquery.star-rating-svg.js"></script>
   <script src="js/showMap.js"></script>
-  <script src="js/getStar.js"></script>
   <title>酋長衝浪Ariki Surf-討論區內頁</title>
-  <script>
-////////////加入收藏 或 取消收藏///////////////////////////////////
-    function switchFavorite(){
-       var love = document.getElementById("love");
-       love.src = "images/4wavepoint/heart_red.png";
-    }
-
-    function init(){
-////////////設定[加入收藏 或 取消收藏]的點按事件//////////////////
-        var love = document.getElementById("love");
-        $('#love').hover(function(){
-          $(this).attr('src', 'images/4wavepoint/heart_org.png');});
-
-        // love.onmouseover.src = "images/4wavepoint/heart_org.png";
-        love.addEventListener("click",switchFavorite,false);
-    }
-
-    window.onload = init;
-</script>
 </head>
 <body>
      <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
@@ -46,16 +30,44 @@ $pdo->exec($sqlview);
       <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.php">討論區</a><i class="fa fa-caret-right" aria-hidden="true"></i>討論區內文
       <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
      <div id="lightbox_11">
-          <form class="gun">
+          <div class="gun">
                <span class="reason">檢舉原因</span> 
-               <input type="text" class="report">
+               <input type="text" class="report" name="report">
                <div class="io">
                     <input type="button" value="取消" id="cancel">
                     <input type="submit" value="送出" id="submit">
                </div>
                <div id="close">X</div>
-          </form>           
+          </div>           
      </div><!-- lightbox_11 -->
+     <script>          
+           $('#cancel').click(function(){
+                $('.report').val('');
+           });
+           var submitcount=0;
+           $('#submit').click(function(){
+                
+                  if(submitcount==0){         //送出沒點過
+                    var a = $('.report').val();
+                    console.log(a);
+                    function reqListener(){
+                      console.log(this.responseText);                  
+                  }
+
+                  var xhr = new XMLHttpRequest();
+                  xhr.onload = reqListener;
+                  var url = "map_quittoDB.php?post_number=<?php echo $post_number?>&report="+a;
+                  console.log(url);
+                  xhr.open("get", url , true);
+                  xhr.send(null);
+
+                  $('#lightbox_11').hide(); 
+                  $('#quit').text("已檢舉");
+                  $('#quit').css('color','#ED8C00');
+                }
+                submitcount++;
+           })
+     </script>
      <div id="lightbox2_11">
            <div class="ustar">
                   會員<span>XX</span>,你的評分為 <span></span> 顆星
@@ -63,7 +75,7 @@ $pdo->exec($sqlview);
            </div>
      </div><!-- lightbox2_11 -->
 <?php 
-     $sql2="select * from map_post where wave_number=$wave_number and post_number=$post_number";
+     $sql2="select * from member,map_post where member.member_no = map_post.member_no and wave_number=$wave_number and post_number=$post_number ";
      $post = $pdo->query($sql2);
      while ($postRow = $post->fetch(PDO::FETCH_ASSOC)) {    
  ?>    
@@ -71,19 +83,40 @@ $pdo->exec($sqlview);
       <div class="title">
           <!-- <h1>衝浪第一次接觸</h1> -->
           <h1><?php echo $postRow["post_title"]; ?></h1>
-          <div class="quit">檢舉</div>
-          <div class="lovepic"><img src="images/4wavepoint/heart_white.png" id="love"></div>
-          <div id="star"></div>
-          <div id="result"></div>
+          <div class="gol">
+                <!-- <div class="my-rating"></div>               -->
+<?php 
+      $sqllove = "select * from map_like where post_number=$post_number";
+      $aba = $pdo->query($sqllove);
+      $love = ($aba->rowCount()!=0) ? "heart_red.png" : "heart_white.png";
+?>          
+                <div id="starBg" class="star_bg">                     
+                    <input type="radio" id="starScore1" class="score score_1" value="1" name="score">
+                    <a class="star star_1" title="差"><label class="lab" for="starScore1">差</label></a>
+                    <input type="radio" id="starScore2" class="score score_2" value="2" name="score">
+                    <a class="star star_2" title="較差"><label class="lab" for="starScore2">較差</label></a>
+                    <input type="radio" id="starScore3" class="score score_3" value="3" name="score">
+                    <a class="star star_3" title="普通"><label class="lab" for="starScore3">普通</label></a>
+                    <input type="radio" id="starScore4" class="score score_4" value="4" name="score">
+                    <a class="star star_4" title="較好"><label class="lab" for="starScore4">較好</label></a>
+                    <input type="radio" id="starScore5" class="score score_5" value="5" name="score">
+                    <a class="star star_5" title="好"><label class="lab" for="starScore5">好</label></a>
+                </div>
+                <div class="lovepic">
+                     <img src="images/4wavepoint/<?php echo $love;?>" id="love">
+                     <div id="loveinfo"></div>         
+                </div>
+                <div class="quit" id="quit">檢舉</div>
+          </div>         
       </div><!-- title -->
 
      	<div class="main_11">
             <div class="box_t">
                   <div class="user">
-                        <img src="images/4wavepoint/user/user2.png">
+                        <img src="<?php echo $postRow["mugshot"] ?>">
                   </div>
                   <div class="pos">
-                        <div class="name">Mathi</div>
+                        <div class="name"><?php echo $postRow["name"] ?></div>
                         <!-- <div class="time">發表時間 <span class="date">2017/07/17</span></div> -->
                         <div class="time">發表時間 <span class="date"><?php echo substr($postRow["post_date"],0,10)?></span></div>
                   </div>
@@ -97,11 +130,6 @@ $pdo->exec($sqlview);
                          <img src="<?php echo $src ?>">
                          
                   </div>
-<!--              <div class="txt">
-                        Mathi是北部人,第一次衝浪的地方是在金山中角灣.  還記得那天剛好是颱風過境後的第一天.穿了件短褲,  交了800元後教練先在沙灘上胡亂解說一遍,就把我推下水了.老實說,  他說的天花亂墬,  我卻是有聽沒有懂.總覺得聽起來很容易,但實地下水後,  整個感覺就不一樣了.
-                         那時候我還不會看浪,  也不記得浪有幾人高.  總覺得浪一排一排的蓋過來,  看到腿都軟了.腦袋裡一片空白,  只聽到耳邊震耳欲聾的海浪聲,以及教練聲嘶力竭的叫我拚命劃.哇咧!!!我心裡只想著逃命,這不是在玩命嘛?眼前都是整排蓋下來的浪和飛濺起的白花,而且白花中似乎夾雜的血淋淋的斷肢殘臂(有沒有那ㄇ誇張阿?!)掙紮了五分鐘後,  教練宣佈放棄,  他告訴我今天颱風浪不適合初學者下水,  我就被招呼上岸了.  老實說,  雖然覺得交了800元居然只有下水五分鐘, 但是上岸的那一霎那真的有死裡逃生的感覺.
-                        上岸之後我的朋友告訴我,  今天的浪是他最近以來碰過最大的浪了.這才稍稍安慰了我挫敗的心.
-                  </div> -->
                   <div class="txt">
                         <?php echo $postRow["post_text"] ?>
                   </div>
@@ -111,7 +139,8 @@ $pdo->exec($sqlview);
 ?>             
             <div class="back">
 <?php 
-       $sqlreply="select * from map_reply where post_number=$post_number order by post_number ";
+       $sqlreply="select * from member,map_reply where member.member_no = map_reply.member_no
+                  and post_number=$post_number";
        $re = $pdo->query($sqlreply);
        while($reRow = $re->fetch(PDO::FETCH_ASSOC)) {
 ?>                   
@@ -128,14 +157,41 @@ $pdo->exec($sqlview);
                                   <?php echo $reRow["reply_content"] ?>                              
                              </div>
                         </div><!-- feed_c -->                                           
-                        <div class="quit">檢舉</div>
+                        <div class="quit many">檢舉</div>
                   </div><!-- feed -->
+
 <?php 
        }//while end
-?>                       
+?>                  
+                <script>
+                         $('.many').click(function(){
+                              console.log("按到內文檢舉");
+                              // var a = $('.report').val();
+                              // console.log(a);
+                              // function reqListener(){
+                              //   console.log(this.responseText);
+                              // }
+                              //    var xhr = new XMLHttpRequest();
+                              //    xhr.onload = reqListener;
+                              //    var url = "map_quit2toDB.php?post_number=<?php echo $post_number?>&report="+a;
+                              //    console.log(url);
+                              //    xhr.open("get", url , true);
+                              //    xhr.send(null);
+
+                              $(this).text("已檢舉");
+                              $(this).css('color','#ED8C00');
+                              var index=$(this).parent().index();
+                              console.log(index);
+                         })                   
+                  </script>
+<?php 
+     $sqlimg="select mugshot from member where member_no=$member_no";
+     $imgdata = $pdo->query($sqlimg);
+     $imgRow = $imgdata->fetch(PDO::FETCH_ASSOC);
+?>                                    
                   <div class="feed_t">
-                        <div class="icon">
-                              <img src="images/4wavepoint/user/user.jpg">
+                        <div class="icon">                            
+                             <img src="<?php echo $imgRow["mugshot"] ?>">
                         </div>
                         <div class="last">
                              <textarea name="feed" id="feed_txt"></textarea>
@@ -147,16 +203,17 @@ $pdo->exec($sqlview);
 <script>
         function createTxt(jsonStr){
             var ct = JSON.parse( jsonStr );
-            // console.log("接收的JSON字串");
+            console.log("接收的JSON字串");
             var newfeed =  document.createElement("div");
             newfeed.className = "feed";
 
             var feed_t = document.getElementsByClassName("feed_t")[0];
             document.getElementsByClassName("back")[0].insertBefore(newfeed,feed_t);
-            
+            var c='<?php echo $imgRow["mugshot"] ?>';
+            console.log(c);
             var str='<div class="feed_c">';
             str+='<div class="icon">';
-            str+='<img src="'+ct.mugshot+'">';
+            str+='<img src="'+c+'">';
             str+='</div>';
             str+='<div class="feed_info">';
             str+='<div class="name">';
@@ -182,7 +239,8 @@ $pdo->exec($sqlview);
              var her = $('#feed_txt').val();
              $('#feed_txt').val('');//把textarea的內容清空
              console.log(her);
-             var url = "map_replyintoDB.php?feed="+her;
+             var post_number=<?php echo $post_number?>;
+             var url = "map_replyintoDB.php?feed="+her+"&post_number="+post_number;
              console.log(url);
              xhr.open("get", url , true);
              xhr.send(null);
@@ -197,6 +255,37 @@ $pdo->exec($sqlview);
               }
             }
         });//click
+        
+        $('#love').click(function(){
+           // console.log("有點到");
+           var a = $('#love').attr('src');
+           // console.log(a);
+           function reqListener () {
+                  console.log(this.responseText);
+                };
+           var xhr = new XMLHttpRequest();
+           xhr.onload = reqListener;
+
+           if(a=="images/4wavepoint/heart_white.png"){
+               console.log("AAA");
+               $('#loveinfo').text("已加入收藏").fadeIn(900).fadeOut(500);;           
+               $('#love').attr('src','images/4wavepoint/heart_red.png');
+               
+               var url = "map_liketoDB.php?post_number=<?php echo $post_number?>";
+               console.log(url);
+               xhr.open("get", url , true);
+               xhr.send(null);
+
+           }else{    
+               $('#loveinfo').text("已取消收藏").fadeIn(900).fadeOut(500);;           
+               $('#love').attr('src','images/4wavepoint/heart_white.png');
+               
+               var url = "map_disliketoDB.php?post_number=<?php echo $post_number?>";
+               console.log(url);
+               xhr.open("get", url , true);
+               xhr.send(null);
+           }
+        });
 </script>                  
             </div>
       </div><!-- main_11 -->    

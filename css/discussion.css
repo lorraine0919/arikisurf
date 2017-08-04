@@ -1,3 +1,5 @@
+
+
 .navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb {
   min-width: 20em; }
 
@@ -121,15 +123,24 @@ a {
     .bg_11 .title #result {
       display: none; }
     .bg_11 .title h1 {
+      float: left;
       margin-left: 4.5vw;
       display: inline-block; }
+    .bg_11 .title .gol{
+      float:right;
+    }  
     .bg_11 .title div {
-      float: right;
-      padding: 0 10px;
+      float: left;
       margin: 0 5px;
       cursor: pointer; }
-      .bg_11 .title div:hover {
-        color: #ED8C00; }
+    .bg_11 .title .lovepic{
+      position: relative;
+      margin-left: 25px;
+      margin-right: 25px;
+    }  
+    .bg_11 .title .quit:hover{
+      color: #ED8C00;
+    }  
   .bg_11 .main_11 {
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.5); }
@@ -139,9 +150,12 @@ a {
       background-color: rgba(93, 107, 119, 0.6);
       box-shadow: 0px 0px 66px 2px #6a8399 inset; }
       .bg_11 .main_11 .box_t .user {
+        width: 60px;
+        height: 60px;
         float: left;
         padding-right: 1vw; }
         .bg_11 .main_11 .box_t .user img {
+          width: 100%;
           border-radius: 7px; }
       .bg_11 .main_11 .box_t .pos {
         float: left;
@@ -188,13 +202,17 @@ a {
         .bg_11 .main_11 .back .feed .feed_c {
           width: 100%;
           box-sizing: border-box;
-          padding: 1%; }
+          padding: 0 1%; }
           .bg_11 .main_11 .back .feed .feed_c .feed_info {
             color: #9aa2aa; }
             .bg_11 .main_11 .back .feed .feed_c .feed_info .name {
               display: inline-block;
+              margin-right: .5vw;
               font-size: 22px; }
         .bg_11 .main_11 .back .feed .txt {
+          box-sizing: border-box;
+          padding: 0 2%;
+          word-break: break-all;
           width: 93%;
           color: #fff; }
         .bg_11 .main_11 .back .feed .quit {
@@ -216,6 +234,7 @@ a {
         padding: 1vw;
         background-color: #14344e; }
         .bg_11 .main_11 .back .feed_t .icon {
+          margin-left: 1%;
           width: 60px;
           height: 60px;
           float: left;
@@ -226,6 +245,7 @@ a {
             border-radius: 7px;
             vertical-align: middle; }
         .bg_11 .main_11 .back .feed_t .last {
+          position: relative;
           float: left;
           width: 80.2%;
           height: auto;
@@ -237,8 +257,8 @@ a {
             border: 13px solid red;
             border-color: transparent #29465e transparent transparent;
             position: absolute;
-            left: 5.1vw;
-            top: 4vh; }
+            left: -5%;
+            top: 4%; }
           .bg_11 .main_11 .back .feed_t .last #feed_txt {
             width: 100%;
             height: 10;
@@ -270,6 +290,9 @@ a {
               outline: none; }
 
 @media screen and (max-width: 767px) {
+   .arikicommon_breadcrumb {
+    display:block;  }
+    
   img {
     width: auto;
     height: auto; }
@@ -305,27 +328,43 @@ a {
     .bg_11 .title {
       height: auto;
       margin-top: 13vh;
-      padding: 1.5rem 0 1.5rem; }
+      padding: 1.5rem 0 2rem; }
       .bg_11 .title #result {
         display: none; }
-      .bg_11 .title #star {
-        width: 25%; }
-      .bg_11 .title h1 {
-        display: block;
-        text-align: center; }
-      .bg_11 .title div {
-        width: 30%;
+
+      .bg_11 .title .gol{
+        width: 80%;
+        float: none;
         margin: 0 auto;
-        padding: 0;
+      }  
+      .bg_11 .title .gol .star_bg{
+        /*margin-left: 12%;*/
+      }
+      .bg_11 .title h1 {
+        float: none;
+        display: block;
+        margin-left: 0;
+        margin-bottom: 1vh;
         text-align: center; }
+
     .bg_11 .main_11 {
       padding: 0; }
+      .bg_11 .main_11 .box_b{
+           background-color: rgb(135, 148, 160);
+      }
+      .bg_11 .main_11 .box_t .user{
+        margin-right: 3vw;
+      }
       .bg_11 .main_11 .back {
         padding: 1rem 0; }
+        .bg_11 .main_11 .back .feed .txt {
+          padding: 0 12%;}
         .bg_11 .main_11 .back .feed {
           width: 100%;
           margin-left: 0; }
           .bg_11 .main_11 .back .feed .icon {
+            width: 12%;
+            height: 12%;
             margin-left: 5vw; }
         .bg_11 .main_11 .back .feed_t {
           width: 100%;
@@ -333,6 +372,8 @@ a {
           margin-top: 1vh;
           padding-left: 5vw; }
           .bg_11 .main_11 .back .feed_t .icon {
+            width: 17%;
+            height: 17%;
             margin-bottom: 2vh; }
           .bg_11 .main_11 .back .feed_t .last {
             width: 94.5%; }
@@ -344,3 +385,35 @@ a {
   #lightbox_11 #close {
     top: 0px;
     right: 0px; } }
+
+  #loveinfo{
+    display: none;
+    position: absolute;
+    top: -500%;
+    right: 0;
+    bottom: 0;
+    left: -162%;
+    margin: auto;   
+    width: 90px;
+    height: 50px;
+    background-color:rgba(255,255,255,.5);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+  }  
+
+  #loveinfo:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 10px 0 10px;
+    border-color: rgba(255,255,255,.5) transparent transparent transparent;
+  }

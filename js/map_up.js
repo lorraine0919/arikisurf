@@ -8,13 +8,7 @@ function doFirst() {
 function fileChange(){
     var file = document.getElementById('file').files[0];
     var content = '';
-
-    // content += 'File Name: '+file.name+'\n';
-    // content += 'File Size: '+file.size+' byte(s)\n';
-    // content += 'File Type: '+file.type+'\n';
-    // content += 'Last Modified: '+file.lastModifiedDate.toDateString()+'\n';
-    // document.getElementById('fileInfo').innerHTML = content;
-
+    
     var readFile = new FileReader();
     readFile.readAsDataURL(file);
     readFile.addEventListener('load',function(){

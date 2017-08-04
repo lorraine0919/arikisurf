@@ -10,7 +10,7 @@
   <!--header end-->
 <body>
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>衝浪配備</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 <div class="showProd" style="display:";>
@@ -69,7 +69,30 @@
 			</div> 
 		</div>
 		<div class="pic_man col-xs-12 col-sm-6">
-			<img src="images/3accessories/torch.png">
+			<img src="images/3accessories/0.png">
+			<div class="aa">
+			   <img src="images/3accessories/1.png">
+			    <div class="bb">
+			      <img src="images/3accessories/2.png" class="man_bb">
+			      <div class="cc">
+			       <img src="images/3accessories/3.png">
+			        <div class="dd">
+			         <img src="images/3accessories/4.png">
+			          <div class="ee">
+			           <img src="images/3accessories/5.png" class="man_ee">
+			            <div class="ff">
+			             <img src="images/3accessories/6.png" class="man_ff">
+			              <div class="gg">
+			                <img src="images/3accessories/7.png" class="man_gg">
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			  
+
 			<div class="mo-fire">
 			  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 width="125px" height="189.864px" viewBox="0 0 125 189.864" enable-background="new 0 0 125 189.864" xml:space="preserve">

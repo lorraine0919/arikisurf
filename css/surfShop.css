@@ -72,8 +72,24 @@
     z-index: 2; }
   .showProd .pic_man {
     position: relative; }
+    .showProd .pic_man .aa, .showProd .pic_man .bb, .showProd .pic_man .cc, .showProd .pic_man .dd, .showProd .pic_man .ee, .showProd .pic_man .ff, .showProd .pic_man .gg {
+      position: absolute;
+      width: 100%;
+      /*padding-top: 100%;*/
+      top: 0; }
     .showProd .pic_man img {
       width: 100%; }
+    .showProd .pic_man #man_suit, .showProd .pic_man #man_fin, .showProd .pic_man #man_leash, .showProd .pic_man #man_wax {
+      animation: man .3s infinite alternate; }
+@keyframes man {
+  0% {
+    filter: drop-shadow(3px 3px 5px rgba(255, 255, 255, 0.8)); }
+  30% {
+    filter: drop-shadow(-3px -3px 5px rgba(255, 255, 255, 0.8)); }
+  60% {
+    filter: drop-shadow(4px 4px 6px rgba(255, 255, 255, 0.8)); }
+  100% {
+    filter: drop-shadow(7px 7px 8px rgba(255, 255, 255, 0.8)); } }
   .showProd .mo-fire {
     width: 100px;
     height: auto;

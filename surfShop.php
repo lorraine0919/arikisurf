@@ -66,7 +66,7 @@
 					</div>
 				  </div>
 				</div>	
-			</div>
+			</div> 
 		</div>
 		<div class="pic_man col-xs-12 col-sm-6">
 			<img src="images/3accessories/torch.png">

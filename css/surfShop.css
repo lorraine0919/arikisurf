@@ -74,7 +74,61 @@
     position: relative; }
     .showProd .pic_man img {
       width: 100%; }
-
+  .showProd .mo-fire {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    left: 25%;
+    margin-left: -100px;
+    top: -45px; }
+  .showProd .mo-fire svg {
+    width: 100%;
+    height: auto;
+    position: relative; }
+  .showProd .flame {
+    animation-name: flamefly;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    transform-origin: 50% 50% 0; }
+  .showProd .flame.one {
+    animation-delay: 1s;
+    animation-duration: 3s; }
+  .showProd .flame3.two {
+    animation-duration: 5s;
+    animation-delay: 1s; }
+  .showProd .flame-main {
+    animation-name: flameWobble;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
+  .showProd .flame-main.one {
+    animation-duration: 4s;
+    animation-delay: 1s; }
+  .showProd .flame-main.two {
+    animation-duration: 3s;
+    animation-delay: 2s; }
+  .showProd .flame-main.three {
+    animation-duration: 2.1s;
+    animation-delay: 3s; }
+  .showProd .flame-main.four {
+    animation-duration: 3.2s;
+    animation-delay: 4s; }
+  .showProd .flame-main.five {
+    animation-duration: 2.5s;
+    animation-delay: 5s; }
+@keyframes flameWobble {
+  50% {
+    transform: scale(1, 1.2) translate(0, -30px) rotate(-2deg); } }
+@keyframes flamefly {
+  0% {
+    transform: translate(0) rotate(180deg); }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: translate(-20px, -100px) rotate(180deg);
+    opacity: 0; } }
 .main_BG {
   padding-top: 33px;
   background-image: url("../images/3accessories/hakuna.png"), linear-gradient(180deg, #19344c 35%, rgba(85, 70, 76, 0.8) 100%);
@@ -289,11 +343,21 @@
     max-height: 550px; }
 
   .main_BG {
-    background-position: left top; } }
+    background-position: left top; }
+
+  .showProd .mo-fire {
+    width: 62px;
+    left: 36%;
+    top: -27px; } }
 @media screen and (max-width: 321px) {
   .barbg .changebar li {
     font-size: 13px; }
 
   #info-box {
     max-width: 300px;
-    max-height: 510px; } }
+    max-height: 510px; }
+
+  .showProd .mo-fire {
+    width: 60px;
+    left: 39%;
+    top: -30px; } }

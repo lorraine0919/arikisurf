@@ -36,71 +36,69 @@ ob_start();
     <div class="item-txt" id="customize-txt">
         <div class="txt-title">
             <ul>
-                <li class="col-sm-2">訂單編號</li>
-                <li class="col-sm-2">訂購時間</li>
-                <li class="col-sm-2">訂單金額</li>
-                <li class="col-sm-2">訂單狀態</li>
-                <li class="col-sm-4">訂單明細</li>
+                <li class="col-sm-2 col-xs-2">訂單編號</li>
+                <li class="col-sm-2 col-xs-2">訂購時間</li>
+                <li class="col-sm-2 col-xs-2">訂單金額</li>
+                <li class="col-sm-2 col-xs-2">訂單狀態</li>
+                <li class="col-sm-4 col-xs-4">訂單明細</li>
             </ul>
             <div class="clearfix"></div>
         </div>
         <div class="txt-val">
-            
-                
-                <?php
-                        require_once("connectBooks.php");
-                        $sql = "select * from customize_order 
-                                join member, customize_color, customize_model, customize_material
-                                where customize_order.member_no = member.member_no and 
-                                      customize_order.colorNo = customize_color.colorNo and
-                                      customize_order.modelNo = customize_model.modelNo and
-                                      customize_order.materialNo = customize_material.materialNo;";
-                        $order = $pdo->query($sql);
-
-                        while($order_CK = $order->fetch()){
-               ?>
-                    <ul>
-                        <li class="col-sm-2 orderNo"><span><?php echo $order_CK["customize_orderNo"]?></span></li>
-                        <li class="col-sm-2 orderDate"><span><?php echo $order_CK["customize_order_date"]?></span></li>
-                        <li class="col-sm-2 orderTotal"><span><?php echo $order_CK["customize_order_total"]?></span></li>
-                        <li class="col-sm-2 orderStatus">
-                            <span>
-                                <?php 
-                                    if($order_CK["customize_order_status"] == 1){
-                                        echo "未付款";
-                                    }else if($order_CK["customize_order_status"]==2){
-                                        echo "未出貨";
-                                    }else if($order_CK["customize_order_status"]==3){
-                                        echo "已出貨";
-                                    }else if($order_CK["customize_order_status"]==4){
-                                        echo "申請中";
-                                    }
-                                ?>
-                            </span></li>
-                        <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn customize-order-btn"></li>
-                        <li class="clearfix"></li>
-                    </ul>
-
-                    
-                    <div class="hideinput">
-                        <input type="hidden" name="" value="<?php echo $order_CK["customize_model_name"] ?>">
-                        <input type="hidden" name="" value="<?php echo $order_CK["customize_material_name"] ?>">
-                        <input type="hidden" name="" value="<?php echo $order_CK["customize_color_name"] ?>">
-                         <?php $custImg = $order_CK["boarddemo"];?> 
-                         <img src="<?php echo $custImg; ?>" style="display:none;">
-
-                        <input type="hidden" name="" value="<?php echo $order_CK["customize_tel"] ?>">
-                        <input type="hidden" name="" value="<?php echo $order_CK["customize_email"] ?>">
-                        <input type="hidden" name="" value="<?php echo $order_CK["customize_adress"] ?>">
-                        <input type="hidden" name="" value="<?php echo $order_CK["customize_atm_acount"] ?>">
-                        <input type="hidden" name="" value="<?php echo $order_CK["customize_usermessage"] ?>">
-                    </div>
-               
-                
-                  
-            
             <?php
-                        }
+                require_once("connectBooks.php");
+                $sql = "select * from customize_order 
+                        join member, customize_color, customize_model, customize_material
+                        where   customize_order.member_no = member.member_no and 
+                                customize_order.colorNo = customize_color.colorNo and
+                                customize_order.modelNo = customize_model.modelNo and
+                                customize_order.materialNo = customize_material.materialNo;";
+                $order = $pdo->query($sql);
+
+                while($order_CK = $order->fetch()){
+            ?>
+                <ul>
+                    <li class="col-sm-2 col-xs-12 orderNo"><span class="rwdtitleshow">訂單編號</span><span class="shinvalue"><?php echo $order_CK["customize_orderNo"]?></span></li>
+                    <li class="col-sm-2 col-xs-12 orderDate"><span class="rwdtitleshow">訂購時間</span><span class="shinvalue"><?php echo $order_CK["customize_order_date"]?></span></li>
+                    <li class="col-sm-2 col-xs-12 orderTotal"><span class="rwdtitleshow">訂單金額</span><span class="shinvalue"><?php echo $order_CK["customize_order_total"]?></span></li>
+                    <li class="col-sm-2 col-xs-12 orderStatus"><span class="rwdtitleshow">訂單狀態</span>
+                        <span class="shinvalue">
+                            <?php 
+                                if($order_CK["customize_order_status"] == 1){
+                                    echo "未付款";
+                                }else if($order_CK["customize_order_status"]==2){
+                                    echo "未出貨";
+                                }else if($order_CK["customize_order_status"]==3){
+                                    echo "已出貨";
+                                }else if($order_CK["customize_order_status"]==4){
+                                    echo "申請中";
+                                }else if($order_CK["customize_order_status"]==5){
+                                    echo "取消交易";
+                                }else if($order_CK["customize_order_status"]==6){
+                                    echo "交易完成";
+                                }
+                            ?>
+                        </span>
+                    </li>
+                    <li class="col-sm-4"><span class="rwdtitleshow">訂單明細</span><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn customize-order-btn"></li>
+                    <li class="clearfix"></li>
+                </ul>
+                    
+                <div class="hideinput">
+                    <input type="hidden" name="" value="<?php echo $order_CK["customize_model_name"] ?>">
+                    <input type="hidden" name="" value="<?php echo $order_CK["customize_material_name"] ?>">
+                    <input type="hidden" name="" value="<?php echo $order_CK["customize_color_name"] ?>">
+                    <?php $custImg = $order_CK["boarddemo"];?> 
+                    <img src="<?php echo $custImg; ?>" style="display:none;">
+
+                    <input type="hidden" name="" value="<?php echo $order_CK["customize_tel"] ?>">
+                    <input type="hidden" name="" value="<?php echo $order_CK["customize_email"] ?>">
+                    <input type="hidden" name="" value="<?php echo $order_CK["customize_adress"] ?>">
+                    <input type="hidden" name="" value="<?php echo $order_CK["customize_atm_acount"] ?>">
+                    <input type="hidden" name="" value="<?php echo $order_CK["customize_usermessage"] ?>">
+                </div>
+            <?php
+                }
             ?>
         </div>
     </div>
@@ -124,27 +122,44 @@ ob_start();
 
                 while($order_SF = $surfOD->fetch()){
             ?>
-            <ul>
-                <li class="col-sm-2 FT_orderNo"><span><?php echo $order_SF["surfequipped_orderNo"];?></span></li>
-                <li class="col-sm-2"><span><?php echo $order_SF["order_date"];?></span></li>
-                <li class="col-sm-2"><span><?php echo $order_SF["order_total"];?></span></li>
-                <li class="col-sm-2">
-                    <span>
-                        <?php 
-                            if($order_SF["order_status"] == 1){
-                                echo "未付款";
-                            }else if($order_SF["order_status"]==2){
-                                echo "未出貨";
-                            }else if($order_SF["order_status"]==3){
-                                echo "已出貨";
-                            }else if($order_SF["order_status"]==4){
-                                echo "申請中";
-                            }
-                        ?>
-                    </span>
-                </li>
-                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn FT-order-btn"></li>
-            </ul>
+            
+            <div class="rwd-FT-box">
+                <ul class="rwd-FT-title col-xs-6 col-sm-12">
+                    <li class="col-xs-12"><span>訂單編號</span></li>
+                    <li class="col-xs-12"><span>訂單時間</span></li>
+                    <li class="col-xs-12"><span>訂單金額</span></li>
+                    <li class="col-xs-12"><span>訂單狀態</span></li>
+                    <li class="col-xs-12"><span>訂單明細</span></li>
+                    <li class="clearfix"></li>
+                </ul>
+                <ul class="DSrwd-FT-val col-xs-6 col-sm-12">
+                    <li class="col-sm-2 col-xs-12 FT_orderNo"><span><?php echo $order_SF["surfequipped_orderNo"];?></span></li>
+                    <li class="col-sm-2 col-xs-12"><span><?php echo $order_SF["order_date"];?></span></li>
+                    <li class="col-sm-2 col-xs-12"><span><?php echo $order_SF["order_total"];?></span></li>
+                    <li class="col-sm-2 col-xs-12">
+                        <span>
+                            <?php 
+                                if($order_SF["order_status"] == 1){
+                                    echo "未付款";
+                                }else if($order_SF["order_status"]==2){
+                                    echo "未出貨";
+                                }else if($order_SF["order_status"]==3){
+                                    echo "已出貨";
+                                }else if($order_SF["order_status"]==4){
+                                    echo "申請中";
+                                }else if($order_SF["order_status"]==5){
+                                    echo "取消交易";
+                                }else if($order_SF["order_status"]==6){
+                                    echo "交易完成";
+                                }
+                            ?>
+                        </span>
+                    </li>
+                    <li class="col-sm-4 col-xs-12"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn FT-order-btn"></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+                
             <div class="clearfix"></div>
             <?php
                 }
@@ -152,25 +167,104 @@ ob_start();
         </div>
     </div>
     <div class="item-txt" id="history-txt">
-        <div class="txt-title">
-            <ul>
-                <li class="col-sm-2">編號</li>
-                <li class="col-sm-2">訂購時間</li>
-                <li class="col-sm-2">訂單金額</li>
-                <li class="col-sm-2">訂單狀態</li>
-                <li class="col-sm-4">訂單明細</li>
-            </ul>
-            <div class="clearfix"></div>
-        </div>
+        
         <div class="txt-val">
-            <ul>
-                <li class="col-sm-2"><span>A101000</span></li>
-                <li class="col-sm-2"><span>2014/04/01</span></li>
-                <li class="col-sm-2"><span>200</span></li>
-                <li class="col-sm-2"><span>出貨中</span></li>
-                <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn HT-order-btn"></li>
-            </ul>
+            <div class="HT-cust-box">
+                <h3>客製浪板歷史訂單</h3>
+                <div class="txt-title">
+                    <ul>
+                        <li class="col-sm-3">編號</li>
+                        <li class="col-sm-3">訂購時間</li>
+                        <li class="col-sm-3">訂單金額</li>
+                        <li class="col-sm-3">訂單狀態</li>
+                        <!-- <li class="col-sm-4">訂單明細</li> -->
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <?php
+                    $sql_CT = "select * from customize_order 
+                               join member 
+                               where customize_order.member_no = member.member_no and
+                                     customize_order_status = 5 or
+                                     customize_order_status = 6 and
+                                     member.member_no = :account
+                               order by customize_order.customize_orderNo";
+                    $HT_sql1 = $pdo->prepare($sql_CT);
+                    $HT_sql1->bindValue(":account",1);
+                    $HT_sql1->execute();
+                    
+                    while($HT_IP = $HT_sql1->fetch()){
+                ?>
+                <ul class="CT-HT-list">
+                    <li class="col-sm-3 col-xs-12"><span class="rwdtitleshow">訂單編號</span><span><?php echo $HT_IP["customize_orderNo"];?></span></li>
+                    <li class="col-sm-3 col-xs-12"><span class="rwdtitleshow">訂購時間</span><span><?php echo $HT_IP["customize_order_date"];?></span></li>
+                    <li class="col-sm-3 col-xs-12"><span class="rwdtitleshow">訂單金額</span><span><?php echo $HT_IP["customize_order_total"];?></span></li>
+                    <li class="col-sm-3 col-xs-12"><span class="rwdtitleshow">訂單狀態</span>
+                        <span>
+                            <?php if($HT_IP["customize_order_status"]==5){
+                                echo "取消交易";
+                            }else if($HT_IP["customize_order_status"]==6){
+                                echo "交易完成";
+                            }?>
+                        </span>
+                    </li>
+                    <!-- <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn HT-order-btn"></li> -->
+                    <li class="clearfix"></li>
+                </ul>
+                <?php
+                        }
+                    
+                ?>
+            </div>
+            <div class="HT-fitt-box">
+                <h3>衝浪配備歷史訂單</h3>
+                <div class="txt-title">
+                    <ul>
+                        <li class="col-sm-3">編號</li>
+                        <li class="col-sm-3">訂購時間</li>
+                        <li class="col-sm-3">訂單金額</li>
+                        <li class="col-sm-3">訂單狀態</li>
+                        <!-- <li class="col-sm-4">訂單明細</li> -->
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <?php
+                    $sql_FT = "select * from   surfequipped_order 
+                                join member 
+                                where  surfequipped_order.member_no = member.member_no and
+                                    order_status = 5 or
+                                    order_status = 6 and
+                                    member.member_no = :account
+                                order by surfequipped_order.surfequipped_orderNo";
+                    $HT_sql2 = $pdo->prepare($sql_FT);
+                    $HT_sql2->bindValue(":account",1);
+                    $HT_sql2->execute();
+                    
+                    while($HT_IP = $HT_sql2->fetch()){
+                ?>
+                <ul class="FT-HT-list">
+                    <li class="col-sm-3 col-xs-12"><span class="rwdtitleshow">訂單編號</span><span><?php echo $HT_IP["surfequipped_orderNo"]?></span></li>
+                    <li class="col-sm-3 col-xs-12"><span class="rwdtitleshow">訂購時間</span><span><?php echo $HT_IP["order_date"]?></span></li>
+                    <li class="col-sm-3 col-xs-12"><span class="rwdtitleshow">訂單金額</span><span><?php echo $HT_IP["order_total"]?></span></li>
+                    <li class="col-sm-3 col-xs-12"><span class="rwdtitleshow">訂單狀態</span>
+                        <span>
+                            <?php if($HT_IP["order_status"]==5){
+                                echo "取消交易";
+                            }else if($HT_IP["order_status"]==6){
+                                echo "交易完成";
+                            }?>
+                        </span>
+                    </li>
+                    <!-- <li class="col-sm-4"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn HT-order-btn"></li> -->
+                    <li class="clearfix"></li>
+                </ul>
+                <?php 
+                    }
+                ?>
+            </div>
+
             <div class="clearfix"></div>
+            
         </div>
     </div>
     <div class="decoration"></div>
@@ -181,36 +275,36 @@ ob_start();
                 <div class="LB-item-h3">
                     <h3>訂單明細</h3>
                 </div>
-                <div class="col-sm-9 cust-Info-box">
-                    <div class="col-sm-12 cust-OD-Info">
-                        <div class="col-sm-6 white">
-                            <div class="col-sm-6">
+                <div class="col-sm-9 col-xs-12 cust-Info-box">
+                    <div class="col-sm-12 col-xs-12 cust-OD-Info">
+                        <div class="col-sm-6 col-xs-12 white">
+                            <div class="col-sm-6 col-xs-12">
                                     <h4>訂單編號</h4>
                                     <p class="cust-OD-No"></p>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 col-xs-12">
                                     <h4>訂單時間</h4>
                                     <p class="cust-OD-date"></p>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 col-xs-12">
                                     <h4>訂單狀態</h4>
                                     <p class="cust-OD-status"></p>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 col-xs-12">
                                     <h4>總價</h4>
                                     <p class="cust-OD-total"></p>
                             </div>
                         </div>
-                        <div class="col-sm-6 cust-OD-txt">
-                            <div class="col-sm-6">
+                        <div class="col-sm-6 col-xs-12 cust-OD-txt">
+                            <div class="col-sm-6 col-xs-12">
                                 <h4>板型</h4>
                                 <p class="cust-OD-model"></p>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 col-xs-12">
                                 <h4>材質</h4>
                                 <p class="cust-OD-material"></p>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 col-xs-12">
                                 <h4>顏色</h4>
                                 <p class="cust-OD-color"></p>
                             </div>
@@ -218,7 +312,7 @@ ob_start();
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="col-sm-12 cust-userInput">
+                    <div class="col-sm-12 col-xs-12 cust-userInput">
                         <ul>
                             <li><h4>電話</h4><span class="cust-OD-tel"></span></li>
                             <li><h4>信箱</h4><span class="cust-OD-email"></span></li>
@@ -229,7 +323,7 @@ ob_start();
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="col-sm-3 cust-img-btn-box">
+                <div class="col-sm-3 col-xs-12 cust-img-btn-box">
                     <div class="cust-img">
                         <img src="" class="cust-OD-img"> 
                     </div>
@@ -249,11 +343,11 @@ ob_start();
                 </div>
                 <div class="FT-list-title">
                     <ul>
-                        <li class="col-sm-2"><h4>明細編號</h4></li>
-                        <li class="col-sm-4"><h4>商品名稱</h4></li>
-                        <li class="col-sm-2"><h4>價格</h4></li>
-                        <li class="col-sm-1"><h4>數量</h4></li>
-                        <li class="col-sm-3"><h4>圖片</h4></li>
+                        <li class="col-sm-2 col-xs-12"><h4>明細編號</h4></li>
+                        <li class="col-sm-4 col-xs-12"><h4>商品名稱</h4></li>
+                        <li class="col-sm-2 col-xs-12"><h4>價格</h4></li>
+                        <li class="col-sm-1 col-xs-12"><h4>數量</h4></li>
+                        <li class="col-sm-3 col-xs-12"><h4>圖片</h4></li>
                         <li class="clearfix"></li>
                     </ul>
                 </div>
@@ -278,10 +372,10 @@ ob_start();
                         </ul>
                     </div>
                     <div class="FT-OD-Info">
-                        <div class="col-sm-6"><h4>訂單編號</h4><span class="FT-OD-No"></span></div>
-                        <div class="col-sm-6"><h4>訂單時間</h4><span class="FT-OD-date"></span></div>
-                        <div class="col-sm-6"><h4>訂單狀態</h4><span class="FT-OD-status"></span></div>
-                        <div class="col-sm-6"><h4>總額</h4><span class="FT-OD-total"></span></div>
+                        <div class="col-sm-6 col-xs-12"><h4>訂單編號</h4><span class="FT-OD-No"></span></div>
+                        <div class="col-sm-6 col-xs-12"><h4>訂單時間</h4><span class="FT-OD-date"></span></div>
+                        <div class="col-sm-6 col-xs-12"><h4>訂單狀態</h4><span class="FT-OD-status"></span></div>
+                        <div class="col-sm-6 col-xs-12"><h4>總額</h4><span class="FT-OD-total"></span></div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>

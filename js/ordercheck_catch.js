@@ -34,11 +34,11 @@ $(function(){
                 // console.log('你從頁面抓的訂單編號'+FT_orderNo);     
                 // console.log('有進來判斷式的圈數'+i);
                 $('.FT-list-val').append('<ul class="FT-OD-Group"></ul>');
-                $('.FT-OD-Group').eq(i).append('<li class="col-sm-2"><span class="FT-OD-liNo"></span></li>');
-                $('.FT-OD-Group').eq(i).append('<li class="col-sm-4"><span class="FT-OD-Prod"></span></li>');
-                $('.FT-OD-Group').eq(i).append('<li class="col-sm-2"><span class="FT-OD-price"></span></li>');
-                $('.FT-OD-Group').eq(i).append('<li class="col-sm-1"><span class="FT-OD-qty"></span></li>');
-                $('.FT-OD-Group').eq(i).append('<li class="col-sm-3"><img class="FT-OD-img" ></li>');
+                $('.FT-OD-Group').eq(i).append('<li class="col-sm-2 col-xs-12"><h4 class="hideFT">明細編號</h4><span class="FT-OD-liNo"></span></li>');
+                $('.FT-OD-Group').eq(i).append('<li class="col-sm-4 col-xs-12"><h4 class="hideFT">商品名稱</h4><span class="FT-OD-Prod"></span></li>');
+                $('.FT-OD-Group').eq(i).append('<li class="col-sm-2 col-xs-12"><h4 class="hideFT">價格</h4><span class="FT-OD-price"></span></li>');
+                $('.FT-OD-Group').eq(i).append('<li class="col-sm-1 col-xs-12"><h4 class="hideFT">數量</h4><span class="FT-OD-qty"></span></li>');
+                $('.FT-OD-Group').eq(i).append('<li class="col-sm-3 col-xs-12"><h4 class="hideFT">圖片</h4><img class="FT-OD-img" ></li>');
                 $('.FT-OD-Group').append('<li class="clearfix"></li>');
 
             }
@@ -83,6 +83,10 @@ $(function(){
                                 $('.FT-OD-status').text("已出貨");
                             }else if(ODNo[8]==4){
                                 $('.FT-OD-status').text("申請中");
+                            }else if(ODNo[8]==5){
+                                $('.FT-OD-status').text("取消交易");
+                            }else if(ODNo[8]==6){
+                                $('.FT-OD-status').text("交易完成");
                             }
             $('.FT-OD-total').text(ODNo[9]);
         });

@@ -1,7 +1,9 @@
 <?php
 	ob_start();
 	session_start();
+	
 ?>
+
 <!DOCTYPE html>
 <html lang="en"> 
 
@@ -53,6 +55,42 @@
 					<div class="clearfix"></div>
 				</ul>
 			</div>
+			<?php
+				require_once("connectBooks.php");
+				$sql = "select * from surfequipped 
+						where prod_no = :prod_no";
+				$Prod_cart = $pdo->prepare($sql);
+				$Prod_cart->bindValue(":prod_no",$_SESSION["prod_no"]);
+				$Prod_cart->execute();
+
+				while($PD_CT = $Prod_cart->fetch()){
+
+				
+			?>
+			<div class="list-group_28">
+				<div class="img-name col-sm-4">
+					<div class="list-Pimg_28 list-item_28 col-sm-6">
+						<img src="images/8cart/surf-pants1.jpg" alt="" class="Pimg">
+					</div>
+					<div class="list-Pname_28 list-item_28 col-sm-6">
+						<p><span class="Pname"><?php echo $PD_CT["prod_name"];?></span></p>
+					</div>
+				</div>
+				
+				<div class="list-context_28 list-item_28 col-sm-6">
+					<p class="col-sm-2"><span class="Pmoney"></span>元</p>
+					<p class="col-sm-2"><input type="number" name="" value="1" min="1" maxlength="5" class="Pamount arikicommon_inputtext"></p>
+					<p class="col-sm-2"><span class="Psub"></span></p>
+				</div>
+				<div class="list-Pchange_28 list-item_28 col-sm-2">
+					<div class="Pchange-changebtn arikicommon_bgwhite_btn">修改數量</div>
+					<div class="Pchange-deletbtn arikicommon_bgwhite_btn">刪除</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<?php
+				}
+			?>
 			<div class="list-group_28">
 				<div class="img-name col-sm-4">
 					<div class="list-Pimg_28 list-item_28 col-sm-6">

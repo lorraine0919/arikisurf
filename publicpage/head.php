@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link rel="stylesheet" type="text/css" href="css/commonclass.css">
 	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/gotop.css">
 	 <script src="libs/jquery/dist/jquery.min.js"></script>
 	 <script src="js/loading.js"></script>

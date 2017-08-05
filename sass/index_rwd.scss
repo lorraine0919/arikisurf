@@ -260,6 +260,7 @@ $top:16vh;
 		}
 	}
 	.bulletin_1{
+		background-position: 100% 100%;
 		.maxContent{
 			.title{
 				text-align: center;
@@ -271,6 +272,16 @@ $top:16vh;
 				margin: auto;
 				.right {
 					height: auto;
+
+					.news{
+						.newsimg{
+							width: 100%;
+							margin: 0;
+						}
+						.newcontent{
+							width: 100%;
+						}
+					}
 				}
 				.left {
 					display: none;

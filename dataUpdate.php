@@ -1,6 +1,7 @@
 <?php
 
-
+require_once("connectBooks.php");
+$remain = 0;
 
 switch($_FILES["upload21"]["error"] ){
 	//case 0 :
@@ -30,14 +31,13 @@ switch($_FILES["upload21"]["error"] ){
     // case 4:
 	case UPLOAD_ERR_NO_FILE:
         echo "未選擇上傳檔案<br>";
+        $remain = 1;
         break;
     default:
         echo "上傳檔案失敗，錯誤代碼: ",$_FILES["error"],"請通知系統開發人員<br>";
 }
 
 try {
-	
-	require_once("connectBooks.php");
 	$sqla = "UPDATE `member` SET `name`=:name, `city`=:city, 
 	      `area`=:area, `address`=:address, `phone`=:phone,
 	     `email`=:email,`mugshot`=:mugshot,`renew_time`=:renew_time WHERE `account` = 'hebe520'";
@@ -49,7 +49,11 @@ try {
 	  $updateData ->bindValue(":address" , $_REQUEST["addr"]);
 	  $updateData ->bindValue(":phone" , $_REQUEST["tel"]);
 	  $updateData ->bindValue(":email" , $_REQUEST["email"]);
-	  $updateData ->bindValue(":mugshot" , "images/7member/mugshots/".$_FILES["upload21"]["name"]);
+	  if($remain == 0){
+	  	$updateData ->bindValue(":mugshot" , "images/7member/mugshots/".$_FILES["upload21"]["name"]);
+	  }elseif($remain == 1){
+	  	$updateData ->bindValue(":mugshot" , $_REQUEST["mugshot"]);
+	  }
 	  $updateData ->bindValue(":renew_time" , '2017-08-04 17:48:40');
 	  $updateData ->execute();
 	  echo "資料修改成功<br>";
@@ -59,5 +63,4 @@ try {
 	}
 
 	header("Location:7member_update.php" );
-
  ?>    

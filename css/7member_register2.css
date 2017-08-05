@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 img {
   width: 100%; }
@@ -37,7 +38,7 @@ img {
       margin-bottom: 10px; }
       .setdown26 .form26 .item26 .dist26:nth-child(2) {
         margin-right: 5px; }
-    .setdown26 .form26 .submit26 {
+    .setdown26 .form26 #submit26 {  /*修改*/
       display: block;
       color: #000;
       margin: auto;
@@ -121,6 +122,6 @@ img {
           margin-left: 2vw; }
         .setdown26 .form26 .item26 .dist26 {
           width: calc((calc(100% - 9em - 1vw - 5px)/2) - 4px); }
-      .setdown26 .form26 .submit26 {
+      .setdown26 .form26 #submit26 {  /*修改*/
         position: relative;
         left: calc(65px/2); } }

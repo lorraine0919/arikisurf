@@ -80,3 +80,4 @@
 		}(document, 'script'));
 	</script>
 </footer>
+<script src="js/member_login.js"></script>

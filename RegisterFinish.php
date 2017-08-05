@@ -16,10 +16,10 @@
 		$member -> bindValue(":address",$_REQUEST["addr"]);
 		$member -> bindValue(":phone",$_REQUEST["tel"]);
 		$member -> bindValue(":email",$_REQUEST["mail"]);
-		$member -> bindValue(":mugshot","../images/7member/mugshots/KimTaeHee.jpg");
+		$member -> bindValue(":mugshot","images/7member/mugshots/KimTaeHee.jpg");
 		$member -> bindValue(":suspension","1");
-		$member -> bindValue(":join_time",date_add());
-		$member -> bindValue(":renew_time",'2017-08-01 10:54:10');	
+		$member -> bindValue(":join_time",'2017-08-05 10:54:10');
+		$member -> bindValue(":renew_time",'2017-08-05 10:54:10');	
 		$member -> execute();
 		echo "新增成功";	
 

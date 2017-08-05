@@ -1,5 +1,5 @@
             <div id="trigger20"></div>
-        </form><!-- right20 -->
+        </div><!-- right20 -->
     </div><!-- main20 -->
 </div><!-- content20 -->
 

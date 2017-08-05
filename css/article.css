@@ -9,6 +9,10 @@
 .clearfix {
   clear: both; }
 
+body{
+overflow-y:scroll
+}
+
 @media screen and (max-width: 767px) {
   .bg_15 {
     background-image: url("../images/5news/bg_f.jpg");

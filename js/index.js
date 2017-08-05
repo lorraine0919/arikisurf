@@ -95,6 +95,7 @@ $(function(){
 			rwdpiccount++;
 		}
 		$('.photo.selected img').attr('src','images/1common/picselect'+rwdpiccount+'_s.png');
+		$('.picture_1 .surfboard img').attr('src','images/1common/surfboardwithlogo'+rwdpiccount+'.png');
 	});
 	$('.rwdpicright').click(function(){
 		// console.log(rwdpiccount);
@@ -105,6 +106,7 @@ $(function(){
 			rwdpiccount--;
 		}
 		$('.photo.selected img').attr('src','images/1common/picselect'+rwdpiccount+'_s.png');
+		$('.picture_1 .surfboard img').attr('src','images/1common/surfboardwithlogo'+rwdpiccount+'.png');
 	});
 /*以上是rwd換圖動畫*/
 

@@ -2,10 +2,7 @@
 /*文字陰影*/
 @media screen and (max-width: 960px) {
   .banner_1 {
-    background-image: url("../surfopening.gif");
-    background-size: cover; }
-    .banner_1 video {
-      display: none; }
+    display: none; }
 
   .coating_1 .maxContent .demo {
     display: none; }

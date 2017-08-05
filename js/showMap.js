@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    var countmapin = sessionStorage;
+    countmapin['mapcountloading']=1;
     $('.point_9').mouseover(function(){
 	 $(".show").show();
     })//mouse

@@ -9,7 +9,7 @@
       <title>酋長衝浪Ariki Surf - 會員專區</title>
       <?php require_once('publicpage/member_head.php'); ?>
       <link rel="stylesheet" type="text/css" href="css/7member_update.css">
-      <!-- <script src="js/7member_update.js"></script> -->
+      <script src="js/7member_update.js"></script>
 </head>
 <body>
     <!-- =================主選單================== -->
@@ -93,6 +93,7 @@ try{
 
                 <div class="row21">
                     <label class="label21">性別</label>
+                    <input type="hidden" value="<?php echo $gender; ?>" id="gendervalue">
                     <div class="arikicommon_radio gender21">
                         <label>
                             <input type="radio" id="male21" name="sex">
@@ -111,7 +112,9 @@ try{
 
                 <div class="row21">
                     <label class="label21">地址</label>
+                    <input type="hidden" value="<?php echo $city; ?>" id="cityvalue">
                     <select class="arikicommon_select dist21" id="slct1" name="slct1" onchange = "EachCity(this.value)";>
+
                         <option value="請選擇">請選擇</option>
                         <option value="台北市">台北市</option>
                         <option value="新北市">新北市</option>
@@ -172,7 +175,6 @@ try{
 <?php require_once('publicpage/member_bottom.php'); ?>
 <?php require_once('publicpage/footer.php'); ?>
 
-<?php require_once('publicpage/member_login.php'); ?>
 </body>
 </html>
 

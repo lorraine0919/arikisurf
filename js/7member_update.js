@@ -1,5 +1,3 @@
-<script type="text/javascript">
-
 	function SendA(){
 
 	    name21 = $id("name21").value;
@@ -27,12 +25,13 @@
 	}
 
 	function init(){
-	    var gender = "<?php echo $gender; ?>";
+	    var gender = $id('gendervalue').value;
+
 	    if (gender == 2){
 	        $id("female21").checked = true;
 	    }else{$id("male21").checked = true;}
 
-	    var city = "<?php echo $city; ?>";
+	    var city =$id('cityvalue').value;
 	    EachCity(city);
 
 	    for (var i = 0; i <$id('slct1').childNodes.length; i++) {
@@ -45,5 +44,3 @@
 	}; 
 
 	window.onload=init;
-	
-</script>

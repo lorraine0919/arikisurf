@@ -173,7 +173,8 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 							<p>板型介紹</p>
 						</div>
 						
-						<p class="rwdboardinfo">長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強</p>	
+						<p class="rwdboardinfo">長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強</p>
+						p	
 					</div>
 				</div>		
 			</div>

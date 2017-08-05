@@ -13,7 +13,7 @@
       <script src="js/jquery.js"></script>
       <script src="js/breadcrumb.js"></script>
       <title>酋長衝浪Ariki Surf - 會員註冊</title>
-      <link rel="stylesheet" type="text/css" href="css/7member_register.css">
+      <link rel="stylesheet" type="text/css" href="css/7member_regist.css">
       <link rel="stylesheet" type="text/css" href="css/member_login.css">
       <link rel="stylesheet" type="text/css" href="css/7member_rule.css">
 </head>
@@ -34,10 +34,10 @@
             <input type="password" minlength="6" maxlength="12" placeholder="密碼" class="input19" id="memPsw">
             <p class="help19">
                 <span>
-                    <input type="checkbox" name="">記住我  | 
+                    <input type="checkbox" name="">忘記密碼  | 
                 </span>
                 <span>
-                    <a href="7member_register.html">馬上註冊</a>
+                    <a href="7member_register.php">馬上註冊</a>
                 </span>
             </p>
             <a class="input19" id="submit19">登 入</a>
@@ -45,8 +45,8 @@
         <a href="javascript:window.close();" id="close19">X</a>
     </form>
 </div>
-<!-- =================主選單================== -->
 <header>
+    <!-- =================主選單================== -->
     <nav class="nav_0">
         <div class="navDetail">
             <div class="navfix">
@@ -92,7 +92,7 @@
     </nav>
     <div class="topGround_0"></div>
 </header>
-<!-- ======================會員註冊==================== -->
+<!-- =====================會員註冊A==================== -->
 <div style="" class="register26">
     <div style="visibility: visible;" class="setdown26" id="setdown26">
 
@@ -110,7 +110,7 @@
             <div class="detail26">
                 <div class="item26">
                     <label class="label26">設定帳號</label>
-                    <input type="text" minlength="4" maxlength="10" placeholder="請輸入4-10碼英數字組合" class="input26 arikicommon_inputtext" id="memId26" name="memId26" required>
+                    <input type="text" minlength="4" maxlength="10" placeholder="請輸入4-10碼英數字組合" class="input26 arikicommon_inputtext" id="memId26" name="memId26" onchange="Uniqueness(this.value);" required>
                 </div>
                 <div class="item26">
                     <label class="label26">設定密碼</label>
@@ -122,10 +122,11 @@
                 </div>
                 <div class="item26 verticle26">
                     <label maxlength="4" class="label26">請輸入驗證碼</label>
-                    <input type="number" class="check26 arikicommon_inputtext" id="inputNumber26" pattern="[0-9]{4}" title="未輸入驗證碼或格式有誤">
+                    <input type="text" class="check26 arikicommon_inputtext" id="Verify26">
                     <br class="br26">
                     <label class="label26 br26"></label>
                     <div id="number26"></div>
+                    <div id="reset26"><img src="images/7member/reset.png"></div>
                 </div>
                 <div class="read26">
                     <div class="arikicommon_checkbox">
@@ -139,7 +140,7 @@
                      </div>
                 </div>
                 <div class="item26">
-                    <button type="button" class="arikicommon_btn" id="submit26">下一步</button>
+                    <input type="submit" class="arikicommon_btn" id="submit26" value="下一步">
                 </div>
             </div><!-- detail26 -->
 
@@ -289,12 +290,16 @@
 
 </html>
 
+<?php
+    ob_start();
+    session_start();
+?>
+
 <script type="text/javascript">
 
 function $id(id){return document.getElementById(id);}
 
-//========================會員登入登出=========================
-
+//=======================會員登入登出(缺rwd版)=========================
 function ShowLightBox(){
   if( $id("login1").innerHTML === '會員登入'){
     $id("memId").value="";
@@ -316,7 +321,7 @@ function LoginCheck(){
 	 		'memPsw2' :  memPsw
 	 		 },function(rs){
     	 	if( rs == 1){
-                $id("memberArea").innerHTML = "會員專區";
+                $id("memberArea").innerHTML = "<a href='7member_update.php'>會員專區</a>";
                 // $id("memberArea").location.href = "7member_update.php";
                 $id("login1").innerHTML = "登出";
                 $id("lightbox19").style.display="none";
@@ -330,60 +335,74 @@ function LoginCheck(){
 
 function CancelLogin(){$id("lightbox19").style.display = "none";}
 
-//==========================會員註冊==========================
+//==========================會員註冊A==========================
+//-------------------------檢查帳號--------------------------
+function Uniqueness(ID){
+        $.post('Uniqueness.php',{ 
+        'accountcheck' : ID ,
+         },function(R){
+            if( R == 1){
+                alert("此帳號已被使用");
+                return;
+             }
+        }
+    );
+}
+//--------------------------驗證碼--------------------------
+var CheckText;
 
+function ResetNumber(){
+    var VerifyImgs = new Array('6ne3','D7YS','e5hb','H2DE','HRA1','k4ez','mqKi','w62K','XDHY','M8k2');
+    var i = Math.floor(Math.random()*10);
+
+    var VerifyImg = document.createElement("img");
+    VerifyImg.src = "images/7member/VarifyImages/" + VerifyImgs[i] + ".jpg";
+    VerifyImg.alt = '驗證碼';
+    $id("number26").appendChild(VerifyImg);
+    CheckText = VerifyImgs[i];
+}
+function RemoveNumber(){
+    $id("number26").removeChild($id("number26").childNodes[0]);
+    ResetNumber();
+}
+
+//--------------------------下一步--------------------------
 function VerifyA(){
 
     memId26 = $id("memId26").value;
     memPsw26 = $id("memPsw26").value;
     memPswCheck26 = $id("memPswCheck26").value;
-    inputNumber26 = $id("inputNumber26").value;
-    // var number26 = $id("number26").img.;
+    Verify26 = $id("Verify26").value;
+    // console.log(CheckText);
+    // console.log(Verify26);
 
-    alert("Verify註冊");
     IDPattern = /^(?=^.{4,10}$)((?=.*[0-9])(?=.*[a-z|A-Z]))^.*$/;
+    PswPattern = /^(?=^.{6,12}$)((?=.*[0-9])(?=.*[a-z|A-Z]))^.*$/;
+    // VerifyPattern = /^\w{4,5}$/;
+
     if (!IDPattern.test(memId26)){
         alert("帳號格式有誤！");
         return;
-    }
-    PswPattern = /^(?=^.{6,12}$)((?=.*[0-9])(?=.*[a-z|A-Z]))^.*$/;
-    if (!PswPattern.test(memPsw26)){
+    }else if (!PswPattern.test(memPsw26)){
         alert("密碼格式有誤！");
         return;
-    }
-    if (memPsw26 !== memPswCheck26){
+    }else if (memPsw26 !== memPswCheck26){
         alert("兩次輸入密碼不相符！");
         return;
+    }else if (Verify26 !== CheckText){
+        alert("請輸入正確驗證碼！");
+        return;
+    }else{
+         $.post('Register.php',{ 
+            'memId' : memId26 ,
+            'memPsw':memPsw26
+             },function(rs){
+                window.location="7member_register2.php";
+             }); 
+         /*注意格式，最後一個不用，function後是必需的格式*/
+         /*window.location必須放在function內才管用，不知為何?!*/
     }
-    // NumberPattern = /^/d{4}$/;
-    // if (NumberPattern.test(inputNumber26)) {
-    // 	alert("未輸入驗證碼或格式有誤！");
-    //     return;
-    // }
-
-    $.post('Register.php',{ 
-        'accountcheck' : memId26 ,
-         },function(R){
-        if( R == 1){
-            alert("此帳號已被使用");
-            return;
-         }else{
-            window.location="7member_register2.php";
-            }
-        }
-    );
 }
-
-//=========================驗證碼=========================
-
-var VerifyImgs = new Array('6ne3','D7YS','e5hb','H2DE','HRA1','k4ez','mqKi','w62K','XDHY');
-var i = parseInt(Math.random()*10);
-
-var VerifyImg = document.createElement("img");
-VerifyImg.src = "images/7member/VarifyImages/" + VerifyImgs[i] + ".jpg";
-VerifyImg.alt = '驗證碼';
-$id("number26").appendChild(VerifyImg);
-
 //=========================會員條款=========================
 function ShowRule(){
 	$id("memberRule").style.display = "";
@@ -395,8 +414,8 @@ function HaveRead(){
 	$id("Read26").checked = true;
 }
 
-function init(){
 
+function init(){
 //=======================會員登入登出========================
   $id("login1").onclick = ShowLightBox;
   $id("submit19").onclick = LoginCheck;
@@ -404,7 +423,9 @@ function init(){
 
 //=========================會員註冊==========================
   $id("submit26").onclick = VerifyA;
-
+//=========================驗證碼更新==========================
+  ResetNumber();
+  $id("reset26").onclick = RemoveNumber;
 //=========================會員條款==========================
   $id("rule26").onclick = ShowRule;
   $id("submit22").onclick = HaveRead;

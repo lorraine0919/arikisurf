@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <?php require_once('publicpage/head.php'); ?>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="css/header.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+    	<link rel="stylesheet" type="text/css" href="css/commonclass.css">
+    	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
+    	<script src="js/jquery.js"></script>
+    	<script src="js/breadcrumb.js"></script>
        
         <title>Ariki Surf - 會員專區</title>
         <link rel="stylesheet" type="text/css" href="css/member.css">
@@ -11,20 +20,103 @@
         <script src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
         <script src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
         <script src="libs/jquery.stellar/src/jquery.stellar.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/7member_update.css"> 
+        <link rel="stylesheet" type="text/css" href="css/7member_update.css">
+        <link rel="stylesheet" type="text/css" href="css/member_login.css"> 
 </head>
 <body>
-<!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
-<span>會員專區</span>
-<!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
+<header>
+    <!-- =================主選單================== -->
+    <nav class="nav_0">
+        <div class="navDetail">
+            <div class="navfix">
+                <div class="navimg">
+                    <input type="checkbox" id="control">
+                    <div class="logo">
+                        <div class="logofix">
+                            <a href="index.html">
+                               <img src="images/1common/logo.png">
+                            </a>
+                            <div class="arikicommon_breadcrumb">                       
+                                <a href="index.html">首頁</a>
+                                <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                <span>會員註冊</span>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="hb" for="control">選單</label>
+                    <ul class="menu">
+                        <li class="rwdlogo"><a href="index.html" class="rwd"><img src="images/1common/logo.png"></a></li>
+                        <li><a href="customize.html">客製浪板</a></li>
+                        <li><a href="surfshop.html">衝浪配備</a></li>
+                        <li><a href="map.html">衝浪地圖</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="about.html">關於酋長</a></li>
+                        <li><a href="#" class="rwd" id="login2">會員登入</a></li>
+                        <li><a href="cart.html" class="rwd">購物車</a></li>
+                    </ul>
+                    <div class="iconGroup">
+                        <ul>
+                            <li><a href="#">
+                                <img src="images/1common/member.png" alt="">
+                                <span id="memberArea"></span>
+                                <span id="login1">會員登入</span>
+                            </a></li>
+                            <li class="line"></li>
+                            <li><a href="cart.html"><img src="images/1common/shop.png" alt="" >購物車</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="topGround_0"></div>
+</header>
 <?php 
 try{
+    ob_start();
+    session_start();
     require_once("connectBooks.php");
     $sql="select * from member where account = 'hebe520'";
     $member = $pdo->query( $sql );
-    $personData = $member->fetch(PDO::FETCH_ASSOC)
+
+    $personData = $member->fetch(PDO::FETCH_ASSOC);
+    $gender = $personData["gender"];
+    $city = $personData["city"];
+    $area = $personData["area"];
+
+    }catch(PDOException $ex){
+      echo "錯誤行號 : ", $ex->getLine(), "<br>";
+      echo "錯誤訊息 : ", $ex->getMessage(), "<br>";
+    }
 ?>
+
+<!-- =================會員登入================== -->
+<div class="content19"  style="display:none;" id="lightbox19">
+    <form class="main19" method="post" id="form19">
+        <div class="head19">
+            <p>會員登入</p>
+            <p class="slogan19">
+                <i>Your board always top!</i>
+            </p>
+        </div>
+        <div class="login19">
+            <input type="text" minlength="4" maxlength="10" placeholder="帳號" class="input19" id="memId">
+            <input type="password" minlength="6" maxlength="12" placeholder="密碼" class="input19" id="memPsw">
+            <p class="help19">
+                <span>
+                    <input type="checkbox" name="">忘記密碼  | 
+                </span>
+                <span>
+                    <a href="7member_register.php">馬上註冊</a>
+                </span>
+            </p>
+            <a class="input19" id="submit19">登 入</a>
+        </div>
+        <a href="javascript:window.close();" id="close19">X</a>
+    </form>
+</div>
+
+<!-- =================會員專區================== -->
 <div class="content20">
     <div class="main20">
 
@@ -33,14 +125,14 @@ try{
                 <div class="base20">
 
                     <div class="photo20">
-                        <img src="<?php echo $personData["mugshot"]; ?>">
+                        <img src="<?php echo $personData["mugshot"]; ?>" name="photo">
                     </div>
 
                     <div class="block20">
-                        <div class="account20"><span><?php echo $personData["name"]; ?></span></div>
+                        <div class="account20"><span><?php echo $personData["account"]; ?></span></div>
                         <div class="row20">
                             <div class="icon20"><img src="images/7member/m_icon01.png"></div>
-                            <span class="hello20">Mathi5566</span>
+                            <span class="hello20"><?php echo $personData["name"]; ?></span>
                         </div>
 
                         <div class="row20">
@@ -64,16 +156,16 @@ try{
             </div><!-- sidebar20 -->
         </div><!-- left20 -->
 
-        <form class="right20">
+        <div class="right20">
 
-<!-- =================會員專區================== -->
+<!-- ===================個人資料修改==================== -->
             <p class="title20">基本資料</p>
 
-            <div class="personal21">
+            <form method="post" enctype="multipart/form-data" action="dataUpdate.php" class="personal21" id="basicform">
 
                 <div class="row21">
                     <label class="label21">姓名</label>
-                    <input type="text" class="input21 short21 arikicommon_inputtext" id="name21" value="<?php echo $personData["name"]; ?>"></input>
+                    <input type="text" class="input21 short21 arikicommon_inputtext" id="name21" name="name" value="<?php echo $personData["name"]; ?>"></input>
                 </div>
 
                 <div class="row21">
@@ -108,74 +200,60 @@ try{
                     <select class="arikicommon_select dist21" id="slct2" name="slct2"></select>
                     <br>
                     <label class="label21"></label>
-                    <input type="text" name="" class="input21 arikicommon_inputtext" id="addr21" value="<?php echo $personData["address"]; ?>"></input>
+                    <input type="text" name="addr" class="input21 arikicommon_inputtext" id="addr21" value="<?php echo $personData["address"]; ?>"></input>
                 </div>
 
                 <div class="row21">
                     <label class="label21">電話</label>
-                    <input type="text" class="input21 short21 arikicommon_inputtext" id="tel21" value="0<?php echo $personData['phone']; ?>"></input>
+                    <input type="text" name="tel" class="input21 short21 arikicommon_inputtext" id="tel21" value="0<?php echo $personData['phone']; ?>"></input>
                 </div>
 
                 <div class="row21">
                     <label class="label21">電子郵件</label>
-                    <input type="email" class="input21 long21 arikicommon_inputtext" id="mail21" value="<?php echo $personData['email']; ?>"></input>
+                    <input type="email" name="email" class="input21 long21 arikicommon_inputtext" id="email21" value="<?php echo $personData['email']; ?>"></input>
                 </div>
 
                 <div class="row21">
                     <label class="label21" id="mugshot21">修改大頭照</label>
-                    <button class="arikicommon_btn" id="upload21">上傳大頭照</button>
+                    <label class="arikicommon_btn">
+                        <input type="file" style="display: none;" name="upload21" id="upload21">選擇大頭照
+                    </label>
                 </div>
 
-                <button class="arikicommon_btn submit21" id="s1">確認修改基本資料</button>
-            </div><!-- personal20 -->
+                <input type="submit" class="arikicommon_btn submit21" id="send1" value="確認修改基本資料">
+            </form><!-- personal20 -->
             
             <p class="title20">變更密碼</p>
-            <div class="changepsw21">
+
+            <form class="changepsw21">
 
                 <div class="row21">
                     <label class="label21">輸入舊密碼</label>
-                    <input type="psw" maxlength="10" size="12" value="" class="input21  short21 arikicommon_inputtext" id="oldpsw21">
+                    <input type="password" maxlength="10" size="12" name="oldpsw21" class="input21  short21 arikicommon_inputtext" id="oldpsw21">
                 </div>
 
                 <div class="row21">
                     <label class="label21">輸入新密碼</label>
-                    <input type="psw" maxlength="10" size="12" value="" class="input21 short21 arikicommon_inputtext" id="newpsw21">
+                    <input type="password" maxlength="10" size="12" name="newpsw21" class="input21 short21 arikicommon_inputtext" id="newpsw21">
                 </div>
 
                 <div class="row21">
                     <label class="label21">確認新密碼</label>
-                    <input type="psw" maxlength="10" size="12" value="" class="input21 short21 arikicommon_inputtext" id="confirm21">
+                    <input type="password" maxlength="10" size="12" name="confirm21" class="input21 short21 arikicommon_inputtext" id="confirm21" >
                 </div>
 
-                <button class="arikicommon_btn submit21" id="s2">確認修改密碼</button>
-            </div><!-- changepsw20 -->
+                <input type="button" class="arikicommon_btn submit21" id="send2" value="確認修改密碼">
+            </form><!-- changepsw20 -->
             <div id="trigger20"></div>
-        </form><!-- right20 -->
+        </div><!-- right20 -->
     </div><!-- main20 -->
 </div><!-- content20 -->
-<?php
+<!-- <?php
 
-    $gender = $personData["gender"];
-    $city = $personData["city"];
-    $area = $personData["area"];
+?>  -->
+<!-- <script type="text/javascript">
 
-    }catch(PDOException $ex){
-      echo "錯誤行號 : ", $ex->getLine(), "<br>";
-      echo "錯誤訊息 : ", $ex->getMessage(), "<br>";
-    }
-?> 
-<script type="text/javascript">
-  $(function(){
-    var controller = new ScrollMagic.Controller();
-    var move  = new ScrollMagic.Scene({
-        triggerElement:"#trigger20",
-        offset:'-400px'
-    })
-    .setClassToggle('.left20','move20')
-    // .addIndicators({name:'對應點'})
-    .addTo(controller);
-  });
-</script>
+</script> -->
 </div>
 <footer class="footer_0">
     <div class="maxContent">
@@ -234,6 +312,43 @@ try{
 
 function $id(id){return document.getElementById(id);}
 
+//=======================會員登入登出(缺rwd版)=========================
+function ShowLightBox(){
+  if( $id("login1").innerHTML === '會員登入'){
+    $id("memId").value="";
+    $id("memPsw").value="";
+    $id("lightbox19").style.display="";
+  }else{
+    $id("login1").innerHTML="會員登入";
+    $id("memberArea").style.display="none";
+  }           
+}
+
+function LoginCheck(){
+
+    memId = $id("memId").value;
+    memPsw = $id("memPsw").value;
+
+    $.post('sessionLogin.php',{ 
+            'memId2' : memId ,
+            'memPsw2' :  memPsw
+             },function(rs){
+            if( rs == 1){
+                $id("memberArea").innerHTML = "<a href='7member_update.php'>會員專區</a>";
+                // $id("memberArea").location.href = "7member_update.php";
+                $id("login1").innerHTML = "登出";
+                $id("lightbox19").style.display="none";
+             }else{
+                alert("帳號或密碼錯誤");
+                return;
+                }
+            }
+    );
+}
+
+function CancelLogin(){$id("lightbox19").style.display = "none";}
+
+
 function EachCity(s1){
 
     $id("slct2").innerHTML = "";
@@ -274,7 +389,53 @@ function EachCity(s1){
     }
 }
 
+//==========================修改基本資料==========================
+function SendA(){
+
+    name21 = $id("name21").value;
+    slct1 = $id("slct1").value;
+    slct2 = $id("slct2").value;
+    addr21 = $id("addr21").value;
+    tel21 = $id("tel21").value;
+    email21 = $id("email21").value;
+    // upFile = $id("upload21").files[0];
+    
+    $id(basicform).submit();
+    // $.post('dataUpdate.php',{ 
+    // 'name' : name21,
+    // 'city' : slct1,
+    // 'area' : slct2,
+    // 'addr' : addr21,
+    // 'tel' : tel21,
+    // 'email' : email21,
+    // 'upFile' : upFile
+    //  },function(rs){
+    //     alert(rs);
+    //  });
+}
+
+//============================修改密碼============================
+// function SendB(){
+
+//     oldpsw21 = $id("oldpsw21").value;
+//     newpsw21 = $id("newpsw21").value;
+//     confirm21 = $id("confirm21").value;
+
+//     $.post('pswUpdate.php',{ 
+//     'oldpsw21' : oldpsw21,
+//     'newpsw21' : newpsw21,
+//     'confirm21' : confirm21
+//      },function(rs){
+//         alert(rs);
+//      });
+// }
+
 function init(){
+
+    //=======================會員登入登出========================
+    $id("login1").onclick = ShowLightBox;
+    $id("submit19").onclick = LoginCheck;
+    $id("close19").onclick = CancelLogin;
 
     var gender = "<?php echo $gender; ?>";
     if (gender == 2){
@@ -289,8 +450,21 @@ function init(){
             $id('slct1').childNodes[i].setAttribute('selected','selected');
         }
     }
+    $id("send1").onclick = SendA;
+    // $id("send2").onclick = SendB;
 }; 
 
 window.onload=init;
+
+$(function(){
+var controller = new ScrollMagic.Controller();
+var move  = new ScrollMagic.Scene({
+    triggerElement:"#trigger20",
+    offset:'-400px'
+})
+.setClassToggle('.left20','move20')
+// .addIndicators({name:'對應點'})
+.addTo(controller);
+});
 
 </script>

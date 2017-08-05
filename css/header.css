@@ -177,6 +177,8 @@
           width: 33%;
           text-align: right;
           vertical-align: bottom; }
+          .navDetail .navfix .navimg .iconGroup #login1 {
+            cursor: pointer; }
           .navDetail .navfix .navimg .iconGroup ul li {
             display: inline-block;
             margin-right: 2%; }

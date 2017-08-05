@@ -21,9 +21,10 @@
 <?php 
 try{
     require_once("connectBooks.php");
-    $sql="select * from member where account = 'hebe520'";
-    $member = $pdo->query( $sql );
-
+    $sql="select * from member where account = :account";
+    $member = $pdo->prepare( $sql );
+    $member->bindValue(':account',$_SESSION['account']);
+    $member->execute();
     $personData = $member->fetch(PDO::FETCH_ASSOC);
     $gender = $personData["gender"];
     $city = $personData["city"];

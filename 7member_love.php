@@ -1,67 +1,68 @@
+<?php
+session_start();
+ob_start(); 
+require_once("connectBooks.php");
+$member_no=$_SESSION["member"]["member_no"];
+$sql="select *
+      from map_like,map_post
+      where map_like.post_number = map_post.post_number
+      and map_like.member_no=$member_no
+      order by post_date DESC;";
+$like = $pdo->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <?php require_once('publicpage/head.php'); ?>     
-        <title>Ariki Surf - 會員專區</title>
-        <link rel="stylesheet" type="text/css" href="css/member.css">
-        <script type="text/javascript" src="libs/jquery/dist/jquery.min.js">
-        </script>
-        <script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
-        <script src="libs/Scrollmagic/scrollmagic/minified/Scrollmagic.min.js"></script>
-        <script src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-        <script src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-        <script src="libs/jquery.stellar/src/jquery.stellar.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/7member_update.css"> 
+    <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
+    <!--(bake module/member_head.html)--><?php require_once('publicpage/member_head.php'); ?>
+    <link rel="stylesheet" type="text/css" href="css/7member_love.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body> 
-<?php require_once('publicpage/header.php'); ?>                       
+<!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>會員專區</span>
-<?php require_once('publicpage/headerend.php'); ?>
-<div class="content20">
-    <div class="main20">
-
-        <div class="left20">
-            <div class="sidebar20">
-                <div class="base20">
-
-                    <div class="photo20">
-                        <img src="images/7member/bunny.jpg">
-                    </div>
-
-                    <div class="block20">
-                        <div class="account20"><span>Mathi</span></div>
-                        <div class="row20">
-                            <div class="icon20"><img src="images/7member/m_icon01.png"></div>
-                            <span class="hello20">Mathi5566</span>
-                        </div>
-
-                        <div class="row20">
-                            <div class="icon20"><img src="images/7member/m_icon02.png"></div>
-                            <span class="hello20">0933850473</span>
-                        </div>
-
-                        <div class="row20">
-                            <div class="icon20"><img src="images/7member/m_icon03.png"></div>
-                            <span class="hello20">fran0115@yahoo.com.tw</span>
-                        </div>
-                    </div><!-- block20 -->
-
-                </div><!-- base20 -->
-                <ul class="menu20">
-                    <li><a href="#">修改資料</a></li>
-                    <li><a href="#">訂單查詢</a></li>
-                    <li><a href="#">我的收藏</a></li>
-                    <li><a href="#">我的發表</a></li>
-                </ul><!-- menu20 -->
-            </div><!-- sidebar20 -->
-        </div><!-- left20 -->
-        <div class="right_love">
-            
-        </div><!-- right_love -->
-    </div><!-- main20 -->
-</div><!-- content20 -->
-</div>
-<?php require_once('publicpage/footer.php'); ?>
+<!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
+<!--(bake module/member_top.html)--> <?php require_once('publicpage/member_top.php'); ?>
+<!-- =================會員專區================== -->
+<div class="member_love_23">
+    <div class="love-title">
+         已收藏的文章
+    </div>
+<?php 
+     while ($likeRow = $like->fetch(PDO::FETCH_ASSOC)) {
+     
+ ?>    
+     <div class="item">
+                 <a href="map_forum_discussion.php?post_number=<?php echo $likeRow["post_number"] ?>" class="map_a">                  
+                     <div class="pic_i">                      
+                            <img src='images/4wavepoint/<?php echo $likeRow["wave_number"] ?>/fou/<?php echo 
+                            $likeRow["post_img"]  ?>'>
+                     </div>
+                     <div class="text">
+                         <h3><?php echo $likeRow["post_title"]  ?></h3>
+                         <div class="day"><?php echo substr($likeRow["post_date"],0,10)?></div>
+                         <div class="tt">
+                               <?php echo $likeRow["post_text"]  ?>
+                         </div>             
+                     </div>
+                 </a>
+                     <div class="item_border">
+                         <div class="star">☆☆☆☆</div>
+                         <div id="result"></div>
+                         <div class="view">
+                             <div class="see">
+                              <img src="images/4wavepoint/view.png" alt="view">
+                              </div>                             
+                              <div class="watch"><?php echo $likeRow["post_view"]  ?></div>      
+                         </div>
+                     </div>                    
+     </div><!-- item -->
+<?php 
+      }
+ ?>               
+</div><!-- member_ordercheck_23 -->
+<!--(bake module/member_bottom.html)--><?php require_once('publicpage/member_bottom.php'); ?>
+<!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
 </body>
 </html>

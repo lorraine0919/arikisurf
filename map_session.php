@@ -18,6 +18,6 @@ $_SESSION["member"]["name"] = $nameRow["name"];
 ?>
 
 
- <?php 
+<?php 
 header("location:map_forum.php");
- ?>
+?>

@@ -1,5 +1,10 @@
+.loading_bg{
+  display: none;
+}
 
-
+body{
+  overflow-y:scroll; 
+}
 .navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb {
   min-width: 20em; }
 
@@ -66,6 +71,54 @@ a {
     transition: 1s; }
     #lightbox_11 #close:hover {
       color: #ED8C00; }
+
+#lightbox_12 {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  z-index: 999; }
+  #lightbox_12 .gun2 {
+    box-sizing: border-box;
+    padding: 15px;
+    width: 960px;
+    height: 70px;
+    margin: 100px auto;
+    background: linear-gradient(to right, #1BBCB3, #37B9E9);
+    font-size: 20px;
+    position: relative;
+    color: #fff; }
+    #lightbox_12 .gun2 .reason2 {
+      vertical-align: bottom; }
+    #lightbox_12 .gun2 .report2 {
+      margin-left: 10px;
+      padding: 2px;
+      vertical-align: bottom; }
+    #lightbox_12 .gun2 .io2 {
+      display: inline-block; }
+      #lightbox_12 .gun2 .io2 input {
+        vertical-align: middle;
+        padding: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        border: none; }
+  #lightbox_12 #close2 {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: 1s; }
+    #lightbox_12 #close2:hover {
+      color: #ED8C00; }      
 
 #lightbox2_11 {
   display: none;

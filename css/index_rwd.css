@@ -74,7 +74,8 @@
 
   .picture_1 .maxContent {
     padding: 44vh 0 20vh 0;
-    position: relative; }
+    position: relative;
+    background-image: none; }
     .picture_1 .maxContent .demo {
       display: none; }
     .picture_1 .maxContent .demorwd {

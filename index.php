@@ -148,7 +148,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                 </div>
             </div>
             <div class="button col-sm-12 col-xs-12">
-                <a href="customize.html">MORE INFO</a>
+                <a href="customize.php">MORE INFO</a>
             </div>
             <div class="demo col-sm-12 col-xs-12">
                 <div class="surfboard">
@@ -175,7 +175,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
             </div>
             <div class="map col-sm-12">
                 <div class="mapimg">
-                    <a href="map.html"><img src="images/1common/map.png" class="mapimgpic"></a>
+                    <a href="map.php"><img src="images/1common/map.png" class="mapimgpic"></a>
                     <div class="pin">
                         <img src="images/1common/pin.png" class="pinpic">
                     </div>

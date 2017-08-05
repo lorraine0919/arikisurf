@@ -18,7 +18,7 @@
   <link rel="stylesheet" type="text/css" href="css/news.css">
 
        
-<body>
+<body> 
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>                           
                             
 <a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>

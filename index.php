@@ -148,7 +148,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                 </div>
             </div>
             <div class="button col-sm-12 col-xs-12">
-                <a href="customize.html">MORE INFO</a>
+                <a href="customize.php">MORE INFO</a>
             </div>
             <div class="demo col-sm-12 col-xs-12">
                 <div class="surfboard">
@@ -175,7 +175,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
             </div>
             <div class="map col-sm-12">
                 <div class="mapimg">
-                    <a href="map.html"><img src="images/1common/map.png" class="mapimgpic"></a>
+                    <a href="map.php"><img src="images/1common/map.png" class="mapimgpic"></a>
                     <div class="pin">
                         <img src="images/1common/pin.png" class="pinpic">
                     </div>
@@ -278,52 +278,60 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
             <div class="title">
                 <h2>最新消息</h2>
             </div>
+            <?php 
+                require_once('connectBooks.php');
+                $sql='select * from news ORDER BY newsno DESC';
+                $pdostatement=$pdo->query($sql);
+                $pdorow=$pdostatement->fetch(PDO::FETCH_ASSOC);
+             ?>
             <div class="infoarea">
                 <div class="left col-xs-12 col-sm-6">
                     <div class="leftfix">
-                         <img src="images/5news/news_item_img_8.jpg">
+                         <img src="images/5news/<?php echo $pdorow['newsimg']?>">
                     </div>     
                 </div>
                 <div class="right col-xs-12 col-sm-6">
                     <div class="news">
-                        <div class="newsimg"><img src="images/5news/news_item_img_8.jpg"></div>
+                        <div class="newsimg"><img src="images/5news/<?php echo $pdorow['newsimg']?>"></div>
                         <div class="newcontent">
                             <div class="date">
-                                <p><span>NEW</span>2017-07-12 22:28</p>
+                                <p><span class="newtag">NEW</span><?php echo $pdorow['newsdate']?></p>
                             </div>
                             <div class="newsptitle">
-                                <h3>2017 台東金樽衝浪公開錦標賽來囉!</h3>
+                                <h3><?php echo $pdorow['newstitle']?></h3>
                             </div>
                             <div class="btn">
-                                <a href="article.html">more info</a>
+                                <a href="article.php?articleno=<?php echo $pdorow['newsno']?>">more info</a>
                             </div>
                         </div>
                     </div>
+                    <?php $pdorow=$pdostatement->fetch(PDO::FETCH_ASSOC); ?>
                     <div class="news">
-                        <div class="newsimg"><img src="images/5news/news_item_img_2.jpg"></div>
+                        <div class="newsimg"><img src="images/5news/<?php echo $pdorow['newsimg']?>"></div>
                         <div class="newcontent">
                             <div class="date">
-                                <p><span>NEW</span>2017-07-08 14:28</p>
+                                <p><span class="newtag">NEW</span><?php echo $pdorow['newsdate']?></p>
                             </div>
                             <div class="newsptitle">
-                                <h3>2017 東浪盃世界衝浪錦標賽!</h3>
+                                <h3><?php echo $pdorow['newstitle']?></h3>
                             </div>
                             <div class="btn">
-                                <a href="article_1.html">more info</a>
+                                <a href="article.php?articleno=<?php echo $pdorow['newsno']?>">more info</a>
                             </div>
                         </div>
                     </div>
+                    <?php $pdorow=$pdostatement->fetch(PDO::FETCH_ASSOC); ?>
                     <div class="news">
-                        <div class="newsimg"><img src="images/1common/newrushguard.png"></div>
+                        <div class="newsimg"><img src="images/5news/<?php echo $pdorow['newsimg']?>"></div>
                         <div class="newcontent">
                             <div class="date">
-                                <p><span>NEW</span>2017.08.20</p>
+                                <p><span class="newtag">NEW</span><?php echo $pdorow['newsdate']?></p>
                             </div>
                             <div class="newsptitle">
-                                <h3>BILLABONG 2MM 防寒衣新款上市</h3>
+                                <h3><?php echo $pdorow['newstitle']?></h3>
                             </div>
                             <div class="btn">
-                                <a href="article_1.html">more info</a>
+                                <a href="article.php?articleno=<?php echo $pdorow['newsno']?>">more info</a>
                             </div>
                         </div>
                     </div>

@@ -28,15 +28,6 @@ require_once("connectBooks.php");
                           <input type="text" id="title" name="title" placeholder="最多10個字" maxlength="10">
                     </div>
                </div>
-               <div class="poItem i2">
-                     <div class="pot">文章分類</div>
-                     <div class="pob">
-                           <select name="select" id="select">
-                                    <option value="0">圖片</option>
-                                    <option value="1">影片</option>
-                           </select>
-                     </div>
-               </div>
                <div class="poItem i3">
                      <div class="dl">
                           <div class="pot">上傳檔案</div>

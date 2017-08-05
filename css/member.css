@@ -45,7 +45,8 @@ img {
             line-height: 20px; }
     .left20 .sidebar20 .menu20 a {
       color: #fff;
-      padding: 0px 10px; }
+      padding: 0px 10px;
+      cursor: pointer; }
 
 /*left20*/
 .right20 {

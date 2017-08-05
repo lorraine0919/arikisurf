@@ -1,12 +1,9 @@
 @charset "UTF-8";
-
 /*=========清除浮動=========*/
 .personal21:after, .changepsw21:after, .row21:after {
   content: '';
   display: block;
   clear: both; }
-
-.personal21{display: block;}
 
 .right20 .personal21, .right20 .changepsw21 {
   margin: auto; }

@@ -29,9 +29,10 @@
 
                 </div><!-- base20 -->
                 <ul class="menu20">
-                    <li><a href="">修改個人資料</a></li>
-                    <li><a href="#">訂單查詢</a></li>
-                    <li><a href="#">我的收藏</a></li>
+                    <li><a >修改個人資料</a></li>
+                    <li><a >訂單查詢</a></li>
+                    <li><a >我的收藏</a></li>
+                    <li><a >登出</a></li>
                 </ul><!-- menu20 -->
             </div><!-- sidebar20 -->
         </div><!-- left20 -->

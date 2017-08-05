@@ -116,10 +116,12 @@ $(function(){
 
 
 /*以下是最新消息動畫*/
+
 	$('.bulletin_1 .news').click(function(){
 		$('.bulletin_1 .left img').attr('src',$(this).find("img").attr('src'));
 	});
 	var x = 1;
 /*以上是最新消息動畫*/
+
 
 });//我是結尾

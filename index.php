@@ -143,8 +143,8 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                 <div class="photo selected"><img src="images/1common/picselect2_s.png" alt=""></div>
                 <div class="photo"><img src="images/1common/picselect3.png" alt=""></div>
                 <div class="arrowrwd">
-                    <i class="fa fa-caret-left" aria-hidden="true"></i>
-                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    <i class="fa fa-caret-left rwdpicleft" aria-hidden="true"></i>
+                    <i class="fa fa-caret-right rwdpicright" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="button col-sm-12 col-xs-12">

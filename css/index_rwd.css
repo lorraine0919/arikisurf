@@ -114,12 +114,14 @@
         position: absolute;
         right: 51%;
         font-size: 48px;
-        bottom: 51%; }
+        bottom: 51%;
+        z-index: 10; }
       .picture_1 .maxContent .photoSelect .arrowrwd .fa-caret-right {
         position: absolute;
         right: 3%;
         font-size: 48px;
-        bottom: 51%; }
+        bottom: 51%;
+        z-index: 10; }
     .picture_1 .maxContent .button {
       text-align: center; }
 

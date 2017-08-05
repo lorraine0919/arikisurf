@@ -564,6 +564,9 @@ body{
 							}
 							.newcontent{
 								width: 65%;
+								.newsptitle{
+									transition:1s;
+								}
 								.date{
 									display: block;
 									p{
@@ -572,12 +575,16 @@ body{
 											@extend %orangetitle;
 										}
 									}
+									.newtag{
+										margin: 0 5px 0 0;
+									}
 								}
 								.btn{
 									text-align: right;
 									padding: 20px 0;
 									display: block;
 									a{
+										transition:1s;
 										@extend %blackbtn;
 										&:hover{
 											background-color: #e97b23;

@@ -295,7 +295,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                         <div class="newsimg"><img src="images/5news/<?php echo $pdorow['newsimg']?>"></div>
                         <div class="newcontent">
                             <div class="date">
-                                <p><span>NEW</span><?php echo $pdorow['newsdate']?></p>
+                                <p><span class="newtag">NEW</span><?php echo $pdorow['newsdate']?></p>
                             </div>
                             <div class="newsptitle">
                                 <h3><?php echo $pdorow['newstitle']?></h3>
@@ -310,7 +310,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                         <div class="newsimg"><img src="images/5news/<?php echo $pdorow['newsimg']?>"></div>
                         <div class="newcontent">
                             <div class="date">
-                                <p><span>NEW</span><?php echo $pdorow['newsdate']?></p>
+                                <p><span class="newtag">NEW</span><?php echo $pdorow['newsdate']?></p>
                             </div>
                             <div class="newsptitle">
                                 <h3><?php echo $pdorow['newstitle']?></h3>
@@ -325,7 +325,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                         <div class="newsimg"><img src="images/5news/<?php echo $pdorow['newsimg']?>"></div>
                         <div class="newcontent">
                             <div class="date">
-                                <p><span>NEW</span><?php echo $pdorow['newsdate']?></p>
+                                <p><span class="newtag">NEW</span><?php echo $pdorow['newsdate']?></p>
                             </div>
                             <div class="newsptitle">
                                 <h3><?php echo $pdorow['newstitle']?></h3>

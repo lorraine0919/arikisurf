@@ -41,6 +41,10 @@
   border-radius: 8px;
   padding-left: 10px; }
 
+.login19 .help19{
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
 .login19 .help19 a{color: #777;}/*修改*/
 .login19 .help19 a:hover{
   color: #15344F;
@@ -88,7 +92,10 @@
 @media screen and (min-width: 801px) {
   .main19 {
     width: 40%;
-    padding: 7vh 0vh; }
+    max-width: 450px;
+    padding: 6vh 0vh;
+    padding-top: 7vh
+  }
 
   .slogan19 {
     font-size: 18px; }

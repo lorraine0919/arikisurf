@@ -2,12 +2,12 @@
 * {text-decoration: none; }
 
 .content19 {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   box-sizing: border-box;
   z-index: 47;
   position: fixed;
-  top: 50;
+  top: 0;
   left: 0;
   background: linear-gradient(rgba(219, 219, 219, 0.3), rgba(55, 137, 200, 0.4)); }
 

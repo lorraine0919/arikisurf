@@ -81,3 +81,4 @@
 	</script>
 </footer>
 <script src="js/member_login.js"></script>
+<script src="js/breadcrumb.js"></script>

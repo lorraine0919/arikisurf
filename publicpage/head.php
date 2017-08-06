@@ -14,6 +14,6 @@
 	 <script src="libs/jquery/dist/jquery.min.js"></script>
 	 <script src="js/loading.js"></script>
 	 <script type="text/javascript" src="js/gotop.js"></script>
-	<script src="js/breadcrumb.js"></script>
+	
 
    

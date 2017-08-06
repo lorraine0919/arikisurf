@@ -41,11 +41,12 @@ $top:16vh;
 
 @media screen and (max-width:960px){
 	.banner_1{
-		background-image: url('../surfopening.gif');
-		background-size: cover;
-		video{
-			display: none;
-		}
+		display: none;
+		// background-image: url('../surfopening.gif');
+		// background-size: cover;
+		// video{
+		// 	display: none;
+		// }
 	}
 	.coating_1{
 		.maxContent{
@@ -135,6 +136,7 @@ $top:16vh;
 		.maxContent{
 			padding: 44vh 0 20vh 0;
 			position: relative;
+			background-image: none;
 			.demo{
 				display: none;
 			}
@@ -186,12 +188,14 @@ $top:16vh;
 					    right: 51%;
 					    font-size: 48px;
 					    bottom: 51%;
+					    z-index: 10;
 					}
 					.fa-caret-right{
 						position: absolute;
 					    right: 3%;
 					    font-size: 48px;
 					    bottom: 51%;
+					    z-index: 10;
 					}
 				}
 			}
@@ -247,7 +251,7 @@ $top:16vh;
 						.content{
 							.postcontentgroup{
 								.mempic{
-									width: 10vw;
+									width: 18vw;
 								}
 							}
 						}
@@ -257,6 +261,7 @@ $top:16vh;
 		}
 	}
 	.bulletin_1{
+		background-position: 100% 100%;
 		.maxContent{
 			.title{
 				text-align: center;
@@ -268,6 +273,16 @@ $top:16vh;
 				margin: auto;
 				.right {
 					height: auto;
+
+					.news{
+						.newsimg{
+							width: 100%;
+							margin: 0;
+						}
+						.newcontent{
+							width: 100%;
+						}
+					}
 				}
 				.left {
 					display: none;

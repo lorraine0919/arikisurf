@@ -1,6 +1,8 @@
 <?php 
 try{
 require_once('connectBooks.php');
+session_start();
+ob_start();
  ?>
 
 <!DOCTYPE html>
@@ -26,7 +28,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 <body>
 
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>客製化衝浪版</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 <div class="wrapper">
@@ -40,6 +42,14 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 				<h2 class="lightboxtitle"></h2>
 				<p class="lightboxcontent">請填寫完整資料</p>
 				<div id="closebtn">
+					<i class="fa fa-times" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div class="stopselllightboxgroup">
+			<div class="stopselllightboxarea">
+				<p class="stopselllightboxcontent">本項目已停賣</p>
+				<div id="stopsellclosebtn">
 					<i class="fa fa-times" aria-hidden="true"></i>
 				</div>
 			</div>
@@ -165,7 +175,8 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 							<p>板型介紹</p>
 						</div>
 						
-						<p class="rwdboardinfo">長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強</p>	
+						<p class="rwdboardinfo">長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強</p>
+						p	
 					</div>
 				</div>		
 			</div>

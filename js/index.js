@@ -85,6 +85,31 @@ $(function(){
 	
 /*以上是換圖動畫*/
 
+/*以下是rwd換圖動畫*/
+	var rwdpiccount = 2;
+	$('.rwdpicleft').click(function(){
+		// console.log('1');
+		if(rwdpiccount>2){
+			rwdpiccount=1;
+		}else{
+			rwdpiccount++;
+		}
+		$('.photo.selected img').attr('src','images/1common/picselect'+rwdpiccount+'_s.png');
+		$('.picture_1 .surfboard img').attr('src','images/1common/surfboardwithlogo'+rwdpiccount+'.png');
+	});
+	$('.rwdpicright').click(function(){
+		// console.log(rwdpiccount);
+		if(rwdpiccount<2){
+			// console.log('1');
+			rwdpiccount=3;
+		}else{
+			rwdpiccount--;
+		}
+		$('.photo.selected img').attr('src','images/1common/picselect'+rwdpiccount+'_s.png');
+		$('.picture_1 .surfboard img').attr('src','images/1common/surfboardwithlogo'+rwdpiccount+'.png');
+	});
+/*以上是rwd換圖動畫*/
+
 /*以下是討論區動畫*/
 	$('.forum_1 .postfix').mouseover(function(){
 		$('.forum_1 .selected').removeClass('selected');
@@ -115,11 +140,35 @@ $(function(){
 /*以下是討論區rwd動畫*/
 
 
-/*以下是最新消息動畫*/
+/*以下是最新消息動畫點按換圖*/
+
 	$('.bulletin_1 .news').click(function(){
 		$('.bulletin_1 .left img').attr('src',$(this).find("img").attr('src'));
 	});
 	var x = 1;
-/*以上是最新消息動畫*/
+/*以上是最新消息動畫點按換圖*/
+
+/*以下是最新消息動畫計時器*/
+
+    changenewspicbytime();
+    var newsnocount=0;
+
+    function changenewspicbytime() {
+    	// console.log('newsnocount');
+       setTimeout(changenewspicbytime,3000);
+       $('.bulletin_1 .left img').attr('src',$('.bulletin_1 .news').eq(newsnocount).find('img').attr('src'));
+       $('.bulletin_1 .news').find('.newsptitle').css('color','#ffffff');
+       $('.bulletin_1 .news').eq(newsnocount).find('.newsptitle').css('color','#e97b23');
+        $('.bulletin_1 .news').find('.btn a').css('background-color','#1a191c');           
+        $('.bulletin_1 .news').eq(newsnocount).find('.btn a').css('background-color','#e97b23');      
+       if(newsnocount<2){
+       	newsnocount++;
+       }else{
+       	newsnocount=0;
+       }
+       
+    }
+/*以上是最新消息動畫計時器*/
+
 
 });//我是結尾

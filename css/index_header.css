@@ -1,0 +1,6 @@
+@media screen and (min-width: 768px) {
+  header {
+    position: fixed;
+    z-index: 30;
+    top: -300px;
+    transition: 1.5s cubic-bezier(0.68, 0.05, 0.22, 0.75); } }

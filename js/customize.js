@@ -86,6 +86,21 @@ window.onload=function(){
 
 /*↑步驟一按浪板換價錢*/
 
+/*↓步驟一按浪板rwd換價錢*/
+	$('.rwdSelectboardMenu li').click(function(){
+		var index = $(this).index()+1;
+		$.post('customize_update.php',{
+			'boardindex':index
+		},function(rs){
+			$('.step1_maxContent .boardpriceshow').text(rs);
+			$('#boardprice').text(rs);
+			console.log('浪板'+$('#boardprice').text());
+		});
+
+	});
+
+/*↑步驟一按浪板rwd換價錢*/
+
 
 
 /*↓步驟一rwd的拉出介紹*/
@@ -180,6 +195,25 @@ window.onload=function(){
 		}		
 	});
 /*↑步驟一rwd顯示svg板型*/
+
+/*↓步驟一浪板停賣，讓圖片變成灰階，並且中間浪板不會改*/
+	$.post('customize_update.php',{
+		'knowboardsellornot':'yes'
+	},function(rs){
+		
+		var boardsellornotall=JSON.parse(rs);
+		console.log(boardsellornotall);
+		for(i in boardsellornotall){
+			if(boardsellornotall[i].customize_model_sellornot=='2'){
+				$('.step1_maxContent .boardgroup .board img').eq(i).css('opacity','0.1');
+				$('.step1_maxContent .boardgroup .board').eq(i).unbind('click');
+				$('.rwdSelectboardMenu li').eq(i).css('display','none');
+			}
+		}
+		
+	})
+
+/*↑步驟一發現已下架就秀出光箱，讓圖片變成灰階，並且中間浪板不會改*/
 
 
 /*↓步驟二秀出價格*/
@@ -283,6 +317,11 @@ window.onload=function(){
 		var arr = ['白','藍','黃'];
 		$('#customercolor').val(arr[index]);
 		// $('.mainshapepath').css('fill','url(#maincolor2)');
+	});
+
+	$('.step2_maxContent .selectAndNext .whitebtn').click(function(){
+		$(this).addClass('orangebtn');
+		$('.step2_maxContent .selectAndNext .whitebtn').not(this).removeClass('orangebtn');
 	});
 /*↑步驟二按按鈕換顏色*/
 
@@ -510,6 +549,41 @@ for (var i = 0; i < document.getElementsByClassName('pattern').length; i++) {
 		// console.log( document.getElementById('step3result').toDataURL( "image/png" ) );
 	}
 /*↑步驟二儲存圖片到下一步驟*/
+
+
+/*↓步驟二顏色停賣不能按*/
+	$('#step1tostep2').click(function(){
+		$.post('customize_update.php',{
+			'colorpatternmaterialsellornot':'yes'
+		},function(rs){
+			var threesellornot = rs.split('|');
+			console.log(threesellornot);
+			var colorsellornot=JSON.parse(threesellornot[0]);
+			var materialsellornot=JSON.parse(threesellornot[1]);
+			var officialimgsellornot=JSON.parse(threesellornot[2]);
+			console.log(colorsellornot);
+			for (i in colorsellornot) {
+				if(colorsellornot[i].customize_color_sellornot=='2'){
+					$('.step2_maxContent .selectAndNext .color').eq(i).css('display','none');
+					$('.step2_maxContent .rwdselectstyle .color').eq(i).css('display','none');
+				}
+			}
+			for (i in materialsellornot) {
+				if(materialsellornot[i].customize_material_sellornot=='2'){
+					$('.step2_maxContent .selectAndNext .texture').eq(i).css('display','none');
+					$('.step2_maxContent .rwdselectstyle .texture').eq(i).css('display','none');
+				}
+			}
+			for (i in officialimgsellornot) {
+				if(officialimgsellornot[i].officialimg_sellornot=='2'){
+					$('.step2_maxContent .selectAndNext .pattern').eq(i).css('display','none');
+					$('.step2_maxContent .rwdselectstyle .pattern').eq(i).css('display','none');
+				}
+			}
+		});
+	})
+
+/*↑步驟二顏色停賣不能按*/
 
 /*↓步驟三驗證是否填妥*/
 function warningifnotfill(){

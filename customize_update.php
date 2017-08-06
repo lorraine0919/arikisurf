@@ -63,6 +63,37 @@
 			$pdostatement->execute();
 			echo "1";
 		}
+		if(isset($_REQUEST['knowboardsellornot'])){
+			$sql='select customize_model_sellornot from customize_model';
+			$pdostatement = $pdo->prepare( $sql );
+			$pdostatement->execute();
+			$pdoRow=$pdostatement->fetchAll(PDO::FETCH_ASSOC);
+			$jsonStr = json_encode($pdoRow);
+			echo $jsonStr;
+		}
+		if(isset($_REQUEST['colorpatternmaterialsellornot'])){
+			$sql='select  customize_color_sellornot from  customize_color';
+			$pdostatement = $pdo->prepare( $sql );
+			$pdostatement->execute();
+			$pdoRow=$pdostatement->fetchAll(PDO::FETCH_ASSOC);
+			$jsonStr = json_encode($pdoRow);
+			echo $jsonStr.'|';
+
+			$sql='select  customize_material_sellornot from  customize_material';
+			$pdostatement = $pdo->prepare( $sql );
+			$pdostatement->execute();
+			$pdoRow=$pdostatement->fetchAll(PDO::FETCH_ASSOC);
+			$jsonStr = json_encode($pdoRow);
+			echo $jsonStr.'|';
+
+			$sql='select  officialimg_sellornot from  customize_officialimg';
+			$pdostatement = $pdo->prepare( $sql );
+			$pdostatement->execute();
+			$pdoRow=$pdostatement->fetchAll(PDO::FETCH_ASSOC);
+			$jsonStr = json_encode($pdoRow);
+			echo $jsonStr;
+
+		}
 
 	}catch(PDOException $e){
 		echo $e->getLine();

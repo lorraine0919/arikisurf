@@ -7,3 +7,4 @@
     <script src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
     <script src="libs/jquery.stellar/src/jquery.stellar.js"></script>
+    <script src="js/member_logout.js"></script>

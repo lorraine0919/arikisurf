@@ -20,12 +20,11 @@
        
 <body>
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>關於酋長</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 
     
-
 <div class="banner_bg_17">
   <div class="body_17">
     <div class="about_title_17">
@@ -34,11 +33,14 @@
                 <p>波里尼西亞酋長們以展現他們在浪上的特技來作為其威信的象徵。</p>
            </div>
            <div class="about_txt_17">
-               <p>衝浪是波里尼西亞人的一項古老文化。他們的酋長是部落中技術最好的駕浪者、並擁有使用最好的樹木所製造最好的衝浪板。統治階級並擁有最好的海灘和板子。</p>                
+               <p>衝浪是波里尼西亞人的一項古老文化。他們的酋長是部落中技術最好的駕浪者、並擁有使用最好的樹木所製造最好的衝浪板。統治階級並擁有最好的海灘和板子。</p>
+               <p>一般階級的民眾不准進入他們的沙灘，但民眾可以經由優良的衝浪技術而晉升得到這些特權。</p>
+               <p>歐洲人最早目擊衝浪是1767年由Dolphin的船員在大溪地所記錄。之後James King中尉於1779年庫克船長死亡時在庫克船長的日誌亦記載了衝浪的藝術。
+               衝浪運動是波里尼西亞人的生活、就像今日西方世界的運動一樣。它影響了波里尼西亞的社會、宗教和神話。波里尼西亞酋長們以展現他們在浪上的特技來作為其威信的象徵。</p>             
            </div>        
       </div>
   </div>
-</div>
+
 
 <!-- 經營理念****************************** -->
     <div class="about_bg">
@@ -61,7 +63,8 @@
        </div>
      </div>
     </div>
-    </div>
+  </div><!-- banner_bg_17 -->
+
 
 <!-- 品牌沿革****************** -->
     <div class="business_bg">
@@ -86,6 +89,7 @@
          </div><!-- container -->
          </div><!-- business_1170 -->
     </div><!-- business_bg -->
+  </div>
 
  <!-- 得獎紀錄**********************       -->
 <div class="winning_bg">

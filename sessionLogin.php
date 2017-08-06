@@ -1,8 +1,5 @@
 <?php
-	//記得要使用session之前，要先啟用serssion
-	//啟用輸出緩衝區
 	ob_start();
-	//啟用session
 	session_start();
 
 	try{
@@ -17,7 +14,8 @@
 	       
 		if( $member->rowCount() !=0 ){
 		    $memRow = $member->fetch(PDO::FETCH_ASSOC);
-	        $_SESSION["account"] = $memRow["account"];
+		    $_SESSION["account"] = $memRow["account"];
+	        $_SESSION["member_no"] = $memRow["member_no"];
 	        $_SESSION["psw"] = $memRow["psw"];
 			echo 1;
 		}else{

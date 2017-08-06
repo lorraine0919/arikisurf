@@ -1,51 +1,47 @@
 @charset "UTF-8";
-img {
-  width: 100%; }
 
+img {width: 100%; }
 /*=========清除浮動=========*/
-.topbar26:after, .item26:after {
+/*.topbar26:after, .item26:after {
   content: '';
   display: block;
-  clear: both; }
-
-.register26 {
+  clear: both; }*/
+.box27{
   width: 100%;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  background-image: url("../images/7member/surfingmember.jpg");
-  background-size: cover; }
-
-.setdown26 {
-  width: 55vw;
-  padding: 12% 7%;
+  box-sizing: border-box;
+  position: relative;
+}
+.img27{
+  display: inline-block;
+  z-index: -1;
+}
+.welcome27 {
+  display: inline-block;
+  width: 100%;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.1); }
-  .setdown26 .submit26 {
-    display: inline-block;
-    padding: 0% 3%;
-    line-height: 2.5em;
-    margin: auto;
-    text-align: center;
-    font-size: 16px;
-    text-decoration: none;
-    letter-spacing: 3px;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    background-color: #8af; }
+  margin-top: -70vh;
+  padding: 3vw; 
+  box-sizing: border-box;
 
-.submit26:hover {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); }
+  text-align: center;
+  
+  font-size: 30;
+  line-height: 2;
+  letter-spacing: 5px;
+  color: white;
+  font-weight: bold;
 
-@media screen and (max-width: 999px) {
-  .setdown26 {
-    width: 90%;
-    padding: 20vh 2%; }
-    .setdown26 .subject26 {
-      margin-bottom: 50px;
-      letter-spacing: 6px; } }
-@media screen and (min-width: 1000px) {
-  .setdown26 .subject26 {
-    margin-bottom: 10vh;
-    letter-spacing: 7px; } }
+  box-shadow: 2px 2px 5px rgba(255,255,255,255,0.8);
+}
+
+@media screen and (min-width: 767px) {
+
+  .box27{
+    width: 100%;
+    height: auto;
+  }
+  .welcome27 {
+    
+  }
+
+}

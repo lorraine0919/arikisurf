@@ -12,11 +12,11 @@
 
 @media screen and (max-width: 767px) {
   .banner_bg_17 {
-    background-image: url("../images/6ariki/cc.png");
+    background-image: url("../images/6ariki/test1.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-color: #2A6C84;
-    padding-top: 2rem;
+    padding-top: 1rem;
     width: 100%; }
 
   .about_title_17 {
@@ -74,7 +74,8 @@
   .about_txt, .business_txt {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 1s ease-out; }
+    transition: all 1s ease-out;
+     }
 
   .business_philosophy_title {
     text-align: center;
@@ -323,25 +324,27 @@
     margin: 0 auto; }
 
   .banner_bg_17 {
-    background-image: url("../images/6ariki/test1.png");
+    background-image: url("../images/6ariki/about-3_01_03.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;
-    padding-top: 4rem;
-    width: 100%; }
+    height: auto;
+    padding-top: 1vh;
+     }
     .banner_bg_17 .about_title_17 {
-      box-sizing: border-box; }
+      box-sizing: border-box;
+    }
       .banner_bg_17 .about_title_17 .about_title_17_txt {
         box-sizing: border-box;
         padding: 1rem 2rem 1rem;
         background-image: url("../images/4wavepoint/talk.jpg");
         background-repeat: no-repeat;
         color: #fff;
-        margin-top: 10rem; }
+        margin-top: 12rem; }
       .banner_bg_17 .about_title_17 .about_txt_17 {
         position: relative;
         box-sizing: border-box;
         padding: 2rem;
+        font-size: 18px;
         color: #fff;
         background: linear-gradient(#5F7F92, #29465E); }
         .banner_bg_17 .about_title_17 .about_txt_17:after {
@@ -356,28 +359,21 @@
           height: 95%;
           border: 1px solid #95AFBA; }
         .banner_bg_17 .about_title_17 .about_txt_17 p {
-          margin-bottom: .8rem; }
+          margin-bottom: 1rem; }
 
   .body_17 {
     margin: auto; }
 
-  .about_bg {
-    background-image: url("../images/6ariki/about_bg4.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 8%;
-    padding-bottom: 14%; }
-
+  
   .about_1170 {
     max-width: 1170px;
     margin: auto; }
 
   .about_title {
-    padding-top: 5vh;
-    padding-bottom: 1vh;
+    padding-top: 50%;
+    padding-bottom: 1%;
     color: #fff;
-    margin: 0px 4%; }
+    margin: 0px 6%; }
 
   .about_leftSide_17 {
     width: 100%; }
@@ -385,38 +381,42 @@
       display: none; }
 
   .about_rightSide_17 .about_txt {
-    margin: 0 5%;
+    margin:0% 5%;
+    margin-top: 10%;
     line-height: 2;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 300px;
+    height: 600px;
     font-weight: 700;
     color: #fff; }
 
   .about_txt, .business_txt {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 1s ease-out; }
+    transition: all 1s ease-out;
+    text-shadow: 1px 1px #000;
+    font-size: 18px;
+     }
 
   .fade-in {
     opacity: 1;
     transform: translateY(0); }
 
-  .business_bg {
+ /* .business_bg {
     background-image: url("../images/6ariki/business_bg1.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 8%;
-    padding-bottom: 13%; }
+    padding-bottom: 13%; }*/
 
   .business_1170 {
     max-width: 1170px;
     margin: auto; }
 
   .business_philosophy_title {
-    margin-top: 5vh;
+    margin:0% 5%;
+    margin-top: 10vh;
     margin-bottom: 1vh;
     color: #fff; }
 
@@ -425,12 +425,12 @@
     display: none; }
 
   .business_rightSide_17 p {
-    margin-left: 0px 5%;
+    margin:0% 5%;
+    margin-top: 10%;
     line-height: 2;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 300px;
+    height: 600px;
     font-weight: 700;
     color: #fff; }
 

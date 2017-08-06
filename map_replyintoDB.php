@@ -1,17 +1,17 @@
 <?php 
 ob_start();
 session_start();
-$wave_number = $_SESSION["map_wave"]["wave_number"];
-$post_number = $_SESSION["map_reply"]["post_number"];
-$textarea = $_REQUEST["feed"];
 
-$member_no = 3;
-$name = "AAA";
-$mugshot = "images/7member/123.jpg";
+$wave_number = $_SESSION["map_wave"]["wave_number"];
+$post_number=$_REQUEST["post_number"];
+$textarea = $_REQUEST["feed"];
+$member_no = $_SESSION["member_no"];
+$name = $_SESSION["member"]["name"];
+
 $reply_time = date("Y-m-d H:i:s"); 
 
     require_once("connectBooks.php");
- 	$sql = "insert into map_reply values(null,'$textarea',$member_no,'$name','$mugshot',$post_number,'$reply_time')";
+ 	$sql = "insert into map_reply values(null,'$textarea',$member_no,'$name',$post_number,'$reply_time')";
  	$pdo->exec($sql);
 
 	$sql2="select * from map_reply order by reply_time desc limit 1";

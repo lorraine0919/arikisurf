@@ -1,3 +1,10 @@
+.loading_bg{
+  display: none;
+}
+
+body{
+  overflow-y:scroll; 
+}
 .cen, .bg_10 .info_10, .bg_10 .beach_10, .bg_10 .fourm {
   width: 100%;
   max-width: 1170px;
@@ -45,6 +52,7 @@ a {
       display: block;
       width: 71px; }
       #content_10 #po #upload img {
+        cursor: pointer;
         width: 100%;
         vertical-align: top; }
     #content_10 #po #textarea {
@@ -65,7 +73,7 @@ a {
       #content_10 #po .poItem .preview {
         width: 150px;
         height: 150px;
-        background-color: #fff; }
+        /*background-color: #fff;*/ }
     #content_10 #po .i3 .dr, #content_10 #po .i3 .dl {
       float: left;
       width: 50%;
@@ -180,6 +188,7 @@ a {
       .bg_10 .fourm li:hover {
         color: #ED8C00; }
       .bg_10 .fourm li:nth-child(1):hover {
+        cursor: default;
         color: #fff; }
       .bg_10 .fourm li:nth-child(4) {
         border-right: none; }
@@ -284,23 +293,23 @@ a {
           border-top: 1px solid #fff; }
           .bg_10 .fourm .talk .item .item_border .star {
             float: left;
-            width: 50%;
+            width: 69%;
             height: 4vh;
             line-height: 4vh;
             color: #FFBA01;
             font-size: 23px; }
           .bg_10 .fourm .talk .item .item_border .view {
-            float: right;
-            width: 28%; }
+            float: left;
+            width: 31%; }
             .bg_10 .fourm .talk .item .item_border .view .see {
               display: inline-block;
               width: 50%;
               height: 4vh;
               text-align: center; }
               .bg_10 .fourm .talk .item .item_border .view .see img {
-                width: 31px;
+                width: 29px;
                 height: auto;
-                vertical-align: -3px; }
+                vertical-align: -2px; }
             .bg_10 .fourm .talk .item .item_border .view .watch {
               text-align: center;
               height: 4vh;
@@ -343,6 +352,7 @@ a {
       .bg_10 .info_10 .weather {
         text-align: center; }
     .bg_10 .fourm ul {
+      text-align: center;
       padding: .5rem .5vw 1rem; }
       .bg_10 .fourm ul li {
         float: none;
@@ -374,6 +384,13 @@ a {
           .bg_10 .fourm .talk .item .text .day {
             color: #eec49e; }
           .bg_10 .fourm .talk .item .text .tt {
+            padding-top: 2vh;
             height: 60px; }
         .bg_10 .fourm .talk .item .item_border {
-          position: static; } }
+          width: 98%;
+          position: static; } 
+
+        }
+.addColor{
+  color: #ED8C00 !important;
+}

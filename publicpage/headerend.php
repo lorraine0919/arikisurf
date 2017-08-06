@@ -10,22 +10,57 @@
                         <li><a href="map.php">衝浪地圖</a></li>
                         <li><a href="news.php">最新消息</a></li>
                         <li><a href="about.php">關於酋長</a></li>
-                        <li><a href="7member_update.php" class="rwd">會員專區</a></li>
+                        <li><a class="rwd" id="login2">會員登入</a></li>
                         <li><a href="cart.php" class="rwd">購物車</a></li>
                     </ul>
                     <div class="iconGroup">
                         <ul>
-                            <li><a href="7member_update.php"><img src="images/1common/member.png" alt="">會員專區</a></li>
+                            <li><a>
+                                <img src="images/1common/member.png" alt="">
+                                <span id="memberArea"></span>
+                                
+                                <?php 
+                                    // echo $_SESSION["account"];
+                                    if(isset($_SESSION["account"])){
+                                        echo "<a href='7member_update.php'><span id='login1'>會員專區</span></a>";
+                                    }else{
+                                        echo "<span id='login1'>會員登入</span>";
+                                    }
+                                 ?>
+                                </span>
+                            </a></li>
                             <li class="line"></li>
                             <li><a href="cart.php"><img src="images/1common/shop.png" alt="">購物車</a></li>
                         </ul>
                     </div>
-                    <!-- <div class="idHello">
-                        <p>ID：<span>煞氣a周子瑜 §醉ㄞ金城武</span> 您好</p>
-                    </div> -->
                 </div>
             </div>
             </div>
     </nav>
     <div class="topGround_0"></div>
 </header>
+<div class="content19"  style="display:none;" id="lightbox19">
+    <form class="main19" method="post" id="form19">
+        <div class="head19">
+            <p>會員登入</p>
+            <p class="slogan19">
+                <i>Your board always top!</i>
+            </p>
+        </div>
+        <div class="login19">
+            <input type="text" minlength="4" maxlength="10" placeholder="帳號" class="input19" id="memId">
+            <input type="password" minlength="6" maxlength="12" placeholder="密碼" class="input19" id="memPsw">
+            <p class="help19">
+                <span>
+                    <input type="checkbox" name="">忘記密碼  | 
+                </span>
+                <span>
+                    <a href="7member_register.php">馬上註冊</a>
+                </span>
+            </p>
+            <a class="input19" id="submit19">登 入</a>
+        </div>
+        <a id="close19">X</a>
+    </form>
+</div>
+

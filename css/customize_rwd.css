@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 960px) {
   #goTop {
     display: none; }
 
@@ -31,9 +31,10 @@
         margin: auto;
         position: relative; }
         .bg_forest_2 .step1_maxContent .demogroup .demo .base {
-          bottom: -3%; }
+          bottom: 0%; }
         .bg_forest_2 .step1_maxContent .demogroup .demo .svgboard {
-          top: 3%;
+          top: auto;
+          bottom: 3%;
           width: 129%;
           right: -10%; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
@@ -126,7 +127,7 @@
           left: -28%; }
         .bg_forest_2 .step2_maxContent .demogroup .demo .svgboard {
           width: 99%;
-          top: 3%;
+          bottom: 3%;
           left: -10%; }
       .bg_forest_2 .step2_maxContent .demogroup .rwdselectstyle {
         width: 82%;

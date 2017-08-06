@@ -1,4 +1,4 @@
-@media screen and (max-width:767px){
+@media screen and (max-width:960px){
 	#goTop{
 		display: none;
 	}
@@ -45,10 +45,11 @@
 					margin: auto;
 					position: relative;
 					.base{
-						bottom: -3%;
+						bottom: 0%;
 					}
 					.svgboard{
-						top: 3%;
+						top: auto;
+						bottom: 3%;
 					    width: 129%;
 					    right: -10%;
 					}
@@ -168,7 +169,7 @@
 					}
 					.svgboard{
 					    width: 99%;
-					    top: 3%;
+					    bottom: 3%;
 					    left: -10%;
 					}
 				}

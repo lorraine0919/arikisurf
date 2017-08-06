@@ -1,4 +1,7 @@
 @media screen and (max-width:767px){
+	#goTop{
+		display: none;
+	}
 	.bg_forest_2{
 		.lightboxgroup{
 			.lightboxarea{
@@ -13,7 +16,7 @@
 				}
 			}			
 		}
-
+		
 		.step1_maxContent{
 			position: relative;
 			width: 100%;

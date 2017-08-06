@@ -1,4 +1,7 @@
 @media screen and (max-width: 767px) {
+  #goTop {
+    display: none; }
+
   .bg_forest_2 .lightboxgroup .lightboxarea {
     background-position: 0% 175%; }
   .bg_forest_2 .comfirmlightboxgroup .comfirmlightboxarea {

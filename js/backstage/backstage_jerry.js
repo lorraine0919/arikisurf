@@ -1,14 +1,17 @@
 $(function(){
 	/*不可以讓長板下架*/
 		$('.modeltr.t1 .sellornotgroup').css('display','none');
+		$('.modeltr.t1').append('<td></td>');
 	/*不可以讓長板下架*/
 
 	/*不可以讓白色下架*/
 		$('.colortr.t0 .sellornotgroup').css('display','none');
+		$('.colortr.t0').append('<td></td>');
 	/*不可以讓白色下架*/
 
 	/*不可以讓環氧樹脂下架*/
 		$('.materialtr.t0 .sellornotgroup').css('display','none');
+		$('.materialtr.t0').append('<td></td>');
 	/*不可以讓環氧樹脂下架*/
 
 	/*修改好後跳出光箱*/

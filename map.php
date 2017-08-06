@@ -12,7 +12,7 @@
 <body class="map_bamboo">
       <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
-<span>客製浪板</span>
+<span>衝浪地圖</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
       <div class="map_bamboo_3">
         

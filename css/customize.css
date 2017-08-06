@@ -448,7 +448,7 @@
         position: absolute;
         width: 125%;
         left: -19%;
-        bottom: -21%; }
+        top: 30%; }
         .bg_forest_2 .step2_maxContent .introduce .introducefix .head {
           padding: 8px 20px;
           color: #fff;
@@ -917,7 +917,7 @@
 
 @media screen and (min-width: 1154px) {
   .bg_forest_2 .step2_maxContent .introduce .introducefix {
-    bottom: 0; }
+    top: 20%; }
   .bg_forest_2 .step2_maxContent .selectAndNext {
     padding-top: 40%; }
     .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup {

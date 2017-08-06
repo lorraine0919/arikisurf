@@ -37,69 +37,160 @@
       margin: 0% 2.6%;
       padding: 2.6% 0%;
       position: relative;
-      background-image: url("../images/1common/nav2.png"); }
+      background-image: url("../images/1common/nav2.png");
+      /* Sing In Button */
+      /*
+      ---- Overlay
+      */
+      /*        .overlay ul li a:hover:after,
+              .overlay ul li a:focus:after,
+              .overlay ul li a:active:after {
+                width: 100%;
+                background: #ea2e49;
+              }*/
+      /*
+      ---- Responsive
+      */ }
       .navfix .navimg .logo {
         float: left;
         width: 11.73%;
         height: 0px;
         padding-bottom: 11.73%;
         display: none; }
-      .navfix .navimg .hb {
-        display: block;
-        width: 39px;
-        height: 0px;
-        padding-bottom: calc(10% - 5px);
-        float: right;
-        margin-top: 0.865%;
+      .navfix .navimg .navbar-buttons {
         position: relative;
+        width: 155px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .navfix .navimg .button {
+        background-color: rgba(44, 45, 47, 0.749);
+        width: 97px;
+        height: 30px;
+        font-size: 12px;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
         cursor: pointer; }
-        .navfix .navimg .hb:before {
-          content: "";
-          display: block;
-          width: 80%;
-          height: 0.6vh;
-          position: absolute;
-          top: 0px;
-          bottom: 0px;
-          left: 10%;
-          margin: auto;
-          z-index: 20;
-          background-color: #fff;
-          box-shadow: 0vh -12px 0vh #fff, 0vh 12px 0vh #fff; }
-      .navfix .navimg .menu {
-        width: 40vh;
-        height: 0px;
-        padding-bottom: calc(100vh - 16%);
-        background-color: #49545d;
+      .navfix .navimg .overlay {
         position: fixed;
-        right: -40vh;
-        bottom: 1.1%;
-        transition: .5s;
-        z-index: 20;
-        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2) inset; }
-        .navfix .navimg .menu li:hover {
-          color: yellow;
-          background-color: rgba(255, 255, 255, 0.1); }
-        .navfix .navimg .menu li a {
-          height: 2em;
-          line-height: 1.5em;
+        background: rgba(51, 55, 69, 0.8);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .35s, visibility .35s, height .35s;
+        overflow: hidden; }
+        .navfix .navimg .overlay .menu .rwdlogo {
+          margin: auto;
+          width: 50%; }
+          .navfix .navimg .overlay .menu .rwdlogo img {
+            width: 100%; }
+        .navfix .navimg .overlay.open {
+          opacity: 1;
+          visibility: visible;
+          height: 100%; }
+          .navfix .navimg .overlay.open li {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s; }
+          .navfix .navimg .overlay.open li:nth-of-type(2) {
+            animation-delay: .4s; }
+          .navfix .navimg .overlay.open li:nth-of-type(3) {
+            animation-delay: .45s; }
+          .navfix .navimg .overlay.open li:nth-of-type(4) {
+            animation-delay: .50s; }
+          .navfix .navimg .overlay.open li:nth-of-type(5) {
+            animation-delay: .55s; }
+          .navfix .navimg .overlay.open li:nth-of-type(6) {
+            animation-delay: .60s; }
+          .navfix .navimg .overlay.open li:nth-of-type(7) {
+            animation-delay: .65s; }
+          .navfix .navimg .overlay.open li:nth-of-type(8) {
+            animation-delay: .70s; }
+        .navfix .navimg .overlay .nav-title {
+          font-size: 22px;
+          color: #fff;
           font-weight: bold;
+          text-transform: uppercase;
           text-align: center;
-          text-decoration: none;
-          color: white;
-          display: block;
-          padding: 4.5% 0%;
-          font-size: 1em;
-          line-height: 2; }
-        .navfix .navimg .menu li.rwdlogo {
-          width: 100%; }
-          .navfix .navimg .menu li.rwdlogo a.rwd {
-            width: 100%;
-            display: inline-block;
-            padding: 0 0 20% 0; }
-            .navfix .navimg .menu li.rwdlogo a.rwd img {
-              width: 36%; }
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+          top: 8%;
+          letter-spacing: 4px;
+          opacity: 0.6; }
+        .navfix .navimg .overlay nav {
+          position: relative;
+          height: 50%;
+          top: 40%;
+          transform: translateY(-50%);
+          font-size: 50px;
+          font-weight: 400;
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: 10px; }
+        .navfix .navimg .overlay ul {
+          list-style: none;
+          padding: 0;
+          margin: 0 auto;
+          display: inline-block;
+          position: relative;
+          height: 100%; }
+          .navfix .navimg .overlay ul li {
+            display: block;
+            position: relative;
+            opacity: 0;
+            margin: 0 0 10px 0; }
+            .navfix .navimg .overlay ul li.closerwdmenuli {
+              margin: 20px 0; }
+            .navfix .navimg .overlay ul li a {
+              display: block;
+              position: relative;
+              color: #FFF;
+              text-decoration: none;
+              overflow: hidden;
+              font-size: 17px;
+              letter-spacing: 5px; }
+              .navfix .navimg .overlay ul li a:hover, .navfix .navimg .overlay ul li a:focus, .navfix .navimg .overlay ul li a:active {
+                color: #ea2e49; }
+              .navfix .navimg .overlay ul li a:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 43.5%;
+                width: 0%;
+                transform: translateX(-50%);
+                height: 3px;
+                background: #FFF;
+                transition: .35s; }
+      .navfix .navimg button:focus {
+        outline: 0; }
+      .navfix .navimg .open-menu,
+      .navfix .navimg .close-menu,
+      .navfix .navimg .button {
+        cursor: pointer;
+        transition: transform 0.30s; }
+      .navfix .navimg .open-menu:hover,
+      .navfix .navimg .close-menu:hover,
+      .navfix .navimg .button:hover {
+        transform: scale(1.1); }
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%; }
+    100% {
+      opacity: 1;
+      left: 0; } } }
+    @media screen and (max-width: 767px) and (max-width: 670px) {
+      .navfix .navimg .overlay nav {
+        font-size: 30px; } }
+    @media screen and (max-width: 767px) and (max-width: 550px) {
+      .navfix .navimg .overlay nav {
+        font-size: 20px; } }
 
+@media screen and (max-width: 767px) {
   /*=========原max-width:767px開始處=========*/
   .iconGroup, .idHello {
     display: none; }

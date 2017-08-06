@@ -10,6 +10,10 @@
 .clearfix {
   clear: both; }
 
+  .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(5) a{
+  color: #e97b23;
+}
+
 body {
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   background-repeat: no-repeat;

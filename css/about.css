@@ -10,6 +10,10 @@
 .clearfix {
   clear: both; }
 
+  .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(6) a{
+  color: #e97b23;
+}
+
 @media screen and (max-width: 767px) {
   .banner_bg_17 {
     background-image: url("../images/6ariki/test1.png");

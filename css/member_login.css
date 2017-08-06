@@ -14,14 +14,18 @@
 /*主區塊*/
 .main19 {
   position: relative;
-  margin: 20vh auto;
+  margin: 25vh auto;
   border-radius: 10px;
   color: #777;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 0px 10px 0 rgba(100, 100, 255, 0.5);
 }
 
-.head19:first-child {font-size: 25px;}
+.head19:first-child {
+  font-size: 25px;
+}
+
+.head19 p:first-child{letter-spacing:6px;}
 
 .head19, .login19 {
   margin: auto;
@@ -29,8 +33,8 @@
 
 .slogan19 {
   padding-top: 1vh;
-  padding-bottom: 5vh;
-  color: #fa0; }
+  padding-bottom: 2vh;
+  color: #DFA144; }
 
 .login19 .input19 {
   display: block;
@@ -38,15 +42,15 @@
   padding-left: 10px; }
 
 .login19 .help19 a{color: #777;}/*修改*/
+.login19 .help19 a:hover{
+  color: #15344F;
+  font-weight: bold;
+}
 
 #submit19 {   /*刪除與修改*/
-/*  width: 60px;
-  margin-top: 2vw;
-  padding: 2px;*/
   color: #fff;
-  background-color: #fa0;
+  background-color: #DFA144;
   cursor: pointer;
-  /*border-radius: 8px; */
 }
 
 #close19 {    /*修改*/
@@ -68,7 +72,7 @@
 #submit19:hover {   /*修改*/
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .main19 {
     width: 80%;
     padding: 5vh 0vh; }
@@ -81,7 +85,7 @@
     max-width: 210px;
     padding: 4px;
     margin: 10px auto; } }
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 801px) {
   .main19 {
     width: 40%;
     padding: 7vh 0vh; }
@@ -92,5 +96,5 @@
   .login19 .input19 {
     width: 55%;
     max-width: 220px;
-    padding: 5px;
+    padding: 8px;
     margin: 20px auto; } }

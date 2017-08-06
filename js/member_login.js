@@ -65,7 +65,10 @@ $(function(){
 			console.log('進入登入click事件');
 			$('#lightbox19').fadeIn(200);
 		});
-
+		$('#login2').click(function(){
+			console.log('進入登入click事件');
+			$('#lightbox19').fadeIn(200);
+		});
 	}
 	$('#submit19').click(function(){
 	    $.post('sessionLogin.php',{ 

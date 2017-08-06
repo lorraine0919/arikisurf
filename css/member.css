@@ -1,8 +1,9 @@
 @charset "UTF-8";
-* {text-decoration: none; }
-img {width: 100%; }
 .loading_bg{display: none;}
-body{overflow: scroll;}
+body{overflow-y: scroll;}
+
+img {width: 100%;}
+* {text-decoration: none; }
 /*字體大小*/
 .content20:after, .base20:after {
   content: '';

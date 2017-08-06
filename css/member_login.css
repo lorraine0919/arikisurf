@@ -2,8 +2,8 @@
 * {text-decoration: none; }
 
 .content19 {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   box-sizing: border-box;
   z-index: 47;
   position: fixed;

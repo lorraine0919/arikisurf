@@ -12,6 +12,9 @@
 body{
 overflow-y:scroll
 }
+.navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(5) a{
+  color: #e97b23;
+}
 
 @media screen and (max-width: 767px) {
   .bg_15 {

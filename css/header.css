@@ -285,7 +285,7 @@
                 margin: 0 10px; }
         .navDetail .navfix .navimg .iconGroup {
           display: inline-block;
-          width: 33%;
+          width: 18%;
           text-align: right;
           vertical-align: middle; }
           .navDetail .navfix .navimg .iconGroup #login1 {
@@ -295,7 +295,7 @@
             vertical-align: middle;
             margin-right: 2%; }
             .navDetail .navfix .navimg .iconGroup ul li.line {
-              width: 2px;
+              width: 1px;
               height: 5vh;
               display: inline-block;
               background-color: #0b0b0b;

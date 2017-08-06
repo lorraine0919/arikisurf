@@ -351,12 +351,12 @@
               }
               .overlay-menu{
                 display: inline-block;
-                vertical-align: middle;
+                vertical-align: bottom;
                 .menu{
                   width: auto;
                   li{
                     a{
-                      padding: 0 10px;
+                      padding: 0 20px;
                     }
                   }
                 }
@@ -410,6 +410,7 @@
               ul{
                 li {
                   display: inline-block;
+                  vertical-align: middle;
                   margin-right: 2%;
                   &.line {
                     width: 2px;

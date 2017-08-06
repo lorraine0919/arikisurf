@@ -244,11 +244,11 @@
             display: none; }
           .navDetail .navfix .navimg .overlay .overlay-menu {
             display: inline-block;
-            vertical-align: middle; }
+            vertical-align: bottom; }
             .navDetail .navfix .navimg .overlay .overlay-menu .menu {
               width: auto; }
               .navDetail .navfix .navimg .overlay .overlay-menu .menu li a {
-                padding: 0 10px; }
+                padding: 0 20px; }
         .navDetail .navfix .navimg .logo {
           width: 15%;
           display: inline-block;
@@ -286,6 +286,7 @@
             cursor: pointer; }
           .navDetail .navfix .navimg .iconGroup ul li {
             display: inline-block;
+            vertical-align: middle;
             margin-right: 2%; }
             .navDetail .navfix .navimg .iconGroup ul li.line {
               width: 2px;

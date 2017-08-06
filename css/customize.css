@@ -914,3 +914,11 @@
       display: inline-block;
       padding-top: 40%;
       position: relative; }
+
+@media screen and (min-width: 1154px) {
+  .bg_forest_2 .step2_maxContent .introduce .introducefix {
+    bottom: 0; }
+  .bg_forest_2 .step2_maxContent .selectAndNext {
+    padding-top: 40%; }
+    .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup {
+      padding-top: 96%; } }

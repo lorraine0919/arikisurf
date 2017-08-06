@@ -52,7 +52,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 
             <div class="Button_Entrance"> 
                 <a class="Button_Entrance2 Entrance3" href="#">前端</a>
-               <a class="Button_Entrance2" href="9backstage_login.html">後端</a>
+               <a class="Button_Entrance2" href="9backstage_login.php">後端</a>
             </div>
             <div class="cloud">
 
@@ -266,7 +266,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                     <p>你體內征服者的細胞正在蠢蠢欲動嗎？<br>
                         對於平淡無奇的波幅已經感到厭倦了嗎？<br>
                         酋長衝浪將給你全新的浪點、全新的視野。</p>
-                    <a href="map.html">MORE INFO</a>
+                    <a href="map.php">MORE INFO</a>
                 </div>
 
 

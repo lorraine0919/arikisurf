@@ -295,6 +295,5 @@ function init(){
 window.onload=init;
 
 </script>
-<?php require_once('publicpage/member_login.php'); ?>
 </body>
 </html>

@@ -9,7 +9,7 @@ $sql = "select name
         where member_no = :member_no";
 
 $name = $pdo->prepare($sql);
-$name->bindValue(":member_no",$_SESSION["member"]["member_no"]);
+$name->bindValue(":member_no",$_SESSION["member_no"]);
 $name->execute();
 $nameRow = $name->fetch(PDO::FETCH_ASSOC);
 $_SESSION["member"]["name"] = $nameRow["name"];

@@ -1,8 +1,10 @@
+img{width: 100%;}
+.loading_bg{display: none;}
+body{overflow: scroll;}
+
 $F2:16px;
 $F3:16px;
 $F4:16px;
-
-img{width: 100%;}
 /*=========清除浮動=========*/
 .topbar26:after,.item26:after{
   content: '';

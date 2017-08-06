@@ -11,7 +11,9 @@
   <head>
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
   <link  rel="stylesheet" type="text/css" href="css/cart.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script type="text/javascript" src="js/cart_process_28.js"></script>
+  <script type="text/javascript" src="js/cart_update.js"></script>
   <title>購物車</title>
  </head>
   <!--header end-->
@@ -57,89 +59,51 @@
 			</div>
 			<?php
 				require_once("connectBooks.php");
-				$sql = "select * from surfequipped 
-						where prod_no = :prod_no";
-				$Prod_cart = $pdo->prepare($sql);
-				$Prod_cart->bindValue(":prod_no",$_SESSION["prod_no"]);
-				$Prod_cart->execute();
 
-				while($PD_CT = $Prod_cart->fetch()){
+				if(isset($_SESSION["products"])==true){
+					foreach($_SESSION["products"] as $psn=>$PD_CT){
 
+						
+
+						$sql = "select * from surfequipped where prod_no=:prod_no";
+						$ODcatch = $pdo->prepare($sql);
+						$ODcatch->bindValue(":prod_no",$PD_CT["prod_no"]);
+						$ODcatch->execute();
+						$ODVL = $ODcatch->fetch();
+						$SMmoney = (int)($ODVL["prod_price"]) * (int)($PD_CT["quantity"]);
 				
 			?>
 			<div class="list-group_28">
 				<div class="img-name col-sm-4">
 					<div class="list-Pimg_28 list-item_28 col-sm-6">
-						<img src="images/8cart/surf-pants1.jpg" alt="" class="Pimg">
+						<img src="images/3accessories/<?php echo $ODVL["prod_img"];?>" alt="" class="Pimg">
 					</div>
 					<div class="list-Pname_28 list-item_28 col-sm-6">
-						<p><span class="Pname"><?php echo $PD_CT["prod_name"];?></span></p>
+						<p><span class="Pname"><?php echo $ODVL["prod_name"];?></span></p>
 					</div>
 				</div>
 				
 				<div class="list-context_28 list-item_28 col-sm-6">
-					<p class="col-sm-2"><span class="Pmoney"></span>元</p>
-					<p class="col-sm-2"><input type="number" name="" value="1" min="1" maxlength="5" class="Pamount arikicommon_inputtext"></p>
-					<p class="col-sm-2"><span class="Psub"></span></p>
+					<p class="col-sm-2"><span class="Pmoney PC_money"><?php echo $ODVL["prod_price"];?></span>元</p>
+					<p class="col-sm-2"><input type="number" name="Pamount" value="1" min="1" maxlength="5" class="Pamount arikicommon_inputtext"></p>
+					<p class="col-sm-2"><span class="Psub PC_sub"><?php echo $SMmoney;?></span></p>
 				</div>
 				<div class="list-Pchange_28 list-item_28 col-sm-2">
+					<input type="hidden" name="Prod_Num" class="Prod_Num" value="<?php echo $ODVL["prod_no"];?>">
 					<div class="Pchange-changebtn arikicommon_bgwhite_btn">修改數量</div>
-					<div class="Pchange-deletbtn arikicommon_bgwhite_btn">刪除</div>
+					<div class="Pchange-deletbtn Pchange-deletbtn_PC arikicommon_bgwhite_btn">刪除</div>
 				</div>
 				<div class="clearfix"></div>
 			</div>
 			<?php
+					}//foreach
+				}else{
+					echo "<div class='col-xs-12 col-sm-12 list-group_28 list-noInfo'>目前並無資料</div>";
 				}
 			?>
-			<div class="list-group_28">
-				<div class="img-name col-sm-4">
-					<div class="list-Pimg_28 list-item_28 col-sm-6">
-						<img src="images/8cart/surf-pants1.jpg" alt="" class="Pimg">
-					</div>
-					<div class="list-Pname_28 list-item_28 col-sm-6">
-						<p><span class="Pname">AKUR海灘褲</span></p>
-					</div>
-				</div>
-				
-				<div class="list-context_28 list-item_28 col-sm-6">
-					<p class="col-sm-2"><span class="Pmoney">100</span>元</p>
-					<p class="col-sm-2"><input type="number" name="" value="1" min="1" maxlength="5" class="Pamount arikicommon_inputtext"></p>
-					<p class="col-sm-2"><span class="Psub">100</span></p>
-				</div>
-				<div class="list-Pchange_28 list-item_28 col-sm-2">
-					<div class="Pchange-changebtn arikicommon_bgwhite_btn">修改數量</div>
-					<div class="Pchange-deletbtn arikicommon_bgwhite_btn">刪除</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-
-			<div class="list-group_28">
-				<div class="img-name col-sm-4">
-					<div class="list-Pimg_28 list-item_28 col-sm-6">
-						<img src="images/8cart/surf-pants2.jpg" alt="" class="Pimg">
-					</div>
-					<div class="list-Pname_28 list-item_28 col-sm-6">
-						<p><span class="Pname">AKUR海灘褲</span></p>
-					</div>
-				</div>
-				
-				<div class="list-context_28 list-item_28 col-sm-6">
-					<p class="col-sm-2"><span class="Pmoney">100</span>元</p>
-					<p class="col-sm-2"><input type="number" name="" value="1" min="1" maxlength="5" class="Pamount arikicommon_inputtext"></p>
-					<p class="col-sm-2"><span class="Psub">100</span></p>
-				</div>
-				<div class="list-Pchange_28 list-item_28 col-sm-2">
-					<div class="Pchange-changebtn arikicommon_bgwhite_btn">修改數量</div>
-					<div class="Pchange-deletbtn arikicommon_bgwhite_btn">刪除</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		
-			
-		
 			<div class="total_28">
 				<div class="total-sum">
-					<p>共<span class="total-num">2</span>件商品，總金額<span class="total-money">200</span>元</p>
+					<p>共<span class="total-num PC-num"></span>件商品，總金額<span class="total-money PC-total"></span>元</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -151,32 +115,38 @@
 				<h2>購物車</h2>
 			</div>
 			
+			<?php 
+				if(isset($_SESSION["products"])==true){
+					foreach ($_SESSION["products"] as $psn => $PD_CT){
+						# code...
+						$sql = "select * from surfequipped where prod_no=:prod_no";
+						$ODcatch = $pdo->prepare($sql);
+						$ODcatch->bindValue(":prod_no",$PD_CT["prod_no"]);
+						$ODcatch->execute();
+						$ODVL = $ODcatch->fetch();
+						$SMmoney = (int)($ODVL["prod_price"]) * (int)($PD_CT["quantity"]);
+			?>
 			<div class="cart1-box">
 				<div class="list-product list-Proitem  col-xs-6">
 					<div class="list-ProImgtxt">
-						<img src="images/8cart/surf-pants1.jpg" alt="" class="Pimg">
-						<span class="Pname">AKUR海灘褲</span>
+						<img src="images/3accessories/<?php echo $ODVL["prod_img"];?>" alt="" class="Pimg">
+						<span class="Pname"><?php echo $ODVL["prod_name"];?></span>
 					</div>
 				</div>
 		
 				<div class="list-introduction list-Txtitem col-xs-6">
 					<ul>
-						<li>金額:<span class="Pmoney">100</span>元</li>
-						<li>數量:
-							<select class="Pamount">
-								<option value="">1</option>
-								<option value="">2</option>
-							</select>
-						</li>
-						<li>小計:<span class="Psub">100</span></li>
-						<li class="Pchange-changebtn arikicommon_btn">修改數量</li>
-						<li class="Pchange-deletbtn arikicommon_btn">刪除</li>
+						<li>金額:<span class="Pmoney Pmoney_phone"><?php echo $ODVL["prod_price"];?></span>元</li>
+						<li>數量:<input type="number" name="" value="1" class="arikicommon_inputtext Pamount Pamount_phone"></li>
+						<li>小計:<span class="Psub Psub_phone"><?php echo $SMmoney; ?></span></li>
+						<li class="Pchange-changebtn_phone arikicommon_btn">修改數量</li>
+						<li class="Pchange-deletbtn_phone arikicommon_btn">刪除</li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
 			</div>
 		
-			<div class="cart1-box">
+			<!-- <div class="cart1-box">
 				<div class="list-product list-Proitem  col-xs-6">
 					<div class="list-ProImgtxt">
 						<img src="images/8cart/surf-pants2.jpg" alt="" class="Pimg">
@@ -199,14 +169,17 @@
 					</ul>
 				</div>
 				<div class="clearfix"></div>
-			</div>
-			
+			</div> -->
+			<?php
+					}
+				}
+			?>
 			<div class="horizontal-phone">
 				<div class="horizontal-line"></div>
 			</div>
 
 			<div class="total-phone" >
-				<p>共<span class="total-num">2</span>件商品，總金額<span class="total-money">200</span>元</p>
+				<p>共<span class="total-num num_phone"></span>件商品，總金額<span class="total-money total_phone"></span>元</p>
 			</div>
 		</div><!--cart1-phone_28-->
 		
@@ -230,7 +203,7 @@
 		
 		<div class="change-page_28">
 			<div class="arikicommon_btn btn-goshop" id="btn-goshop">
-				<a href="">繼續購買</a>
+				<a href="surfShop.php">繼續購買</a>
 			</div>
 			<div class="arikicommon_btn btn-checkout" id="btn-checkout">進行結帳</div>
 			<div class="clearfix"></div>
@@ -258,14 +231,15 @@
 				<h3>訂購人資訊</h3>
 			</div>
 
+
 			<div class="buyerInfo InfoArea-Item">
 				<div class="buyerInfo-box InfoArea-box-Item">
 					<ul>
-						<li><span class="Buyspan span-item">姓名</span><input type="text" class="arikicommon_inputtext buyerName"></span></li>
-						<li><span class="Buyspan span-item">聯絡電話</span><input type="text" class="arikicommon_inputtext buyerTel" placeholder="訂購者常用電話"></span></li>
-						<li><span class="Buyspan span-item">E-mail</span><input type="text" class="arikicommon_inputtext buyerEmail"></span></li>
-						<li><span class="Buyspan span-item">地址</span><input type="text" class="arikicommon_inputtext buyerEmail"></span></li>
-						<li><span class="Buyspan span-item">匯款帳號</span><input type="text" class="arikicommon_inputtext buyerEmail" placeholder="輸入5碼" maxlength="5"></span></li>
+						<li><span class="Buyspan span-item">姓名</span><input type="text" class="arikicommon_inputtext buyerName" id="buyerName"></span></li>
+						<li><span class="Buyspan span-item">聯絡電話</span><input type="text" class="arikicommon_inputtext buyerTel" id="buyerTel" placeholder="訂購者常用電話"></span></li>
+						<li><span class="Buyspan span-item">E-mail</span><input type="text" class="arikicommon_inputtext buyerEmail" id="buyerEmail"></span></li>
+						<li><span class="Buyspan span-item">地址</span><input type="text" class="arikicommon_inputtext buyerAdress" id="buyerAdress"></span></li>
+						<li><span class="Buyspan span-item">匯款帳號</span><input type="text" class="arikicommon_inputtext buyerAtm" id="buyerAtm" placeholder="輸入5碼" maxlength="5"></span></li>
 						<!-- <li><input type="checkbox" id="buy-sync-member" class="item-sync-member"><label for="buy-sync-member">同會員資料</label></li> -->
 					</ul>
 					
@@ -329,18 +303,27 @@
 						</ul>
 						<div class="clearfix"></div>
 					</div>
-
+					<?php
+						if(isset($_SESSION["products"])==true){
+							foreach ($_SESSION["products"] as $psn => $PD_CT){
+								$sql = "select * from surfequipped where prod_no=:prod_no";
+								$ODcatch = $pdo->prepare($sql);
+								$ODcatch->bindValue(":prod_no",$PD_CT["prod_no"]);
+								$ODcatch->execute();
+								$ODVL = $ODcatch->fetch();
+								$SMmoney = (int)($ODVL["prod_price"]) * (int)($PD_CT["quantity"]);
+					?>
 					<div class="Cfirm-pro">
 						<ul>
-							<li class="col-sm-6"><span class="getProName">AKUR海灘褲(紅)</span></li>
-							<li class="col-sm-2"><span class="getPrice">100</span>元</li>
-							<li class="col-sm-2"><span class="getMath">1</span></li>
-							<li class="col-sm-2"><span class="getSum">100</span></li>
+							<li class="col-sm-6"><span class="getProName getProName_PC"><?php echo $ODVL['prod_name'];?></span></li>
+							<li class="col-sm-2"><span class="getPrice getPrice_PC"><?php echo $ODVL['prod_price'];?></span>元</li>
+							<li class="col-sm-2"><span class="getMath getMath_PC"><?php echo $PD_CT['quantity'];?></span></span></li>
+							<li class="col-sm-2"><span class="getSum getSum_PC"><?php echo $SMmoney;?></span></li>
 						</ul>
 						<div class="clearfix"></div>
 					</div>
 
-					<div class="Cfirm-pro">
+					<!-- <div class="Cfirm-pro">
 						<ul>
 							<li class="col-sm-6"><span class="getProName">AKUR海灘褲(藍)</span></li>
 							<li class="col-sm-2"><span class="getPrice">100</span>元</li>
@@ -348,25 +331,42 @@
 							<li class="col-sm-2"><span class="getSum">100</span></li>
 						</ul>
 						<div class="clearfix"></div>
-					</div>
-
+					</div> -->
+					<?php
+							}
+						}
+					?>
 					<div class="Cfrim-total">
-						<p>共<span class="getTotalMath">2</span>項商品，總金額<span class="getTotalPrice">200</span>元</p>
+						<p>共<span class="getTotalMath" id="getTotalMath"></span>項商品，總金額<span class="getTotalPrice" id="getTotalPrice"></span>元</p>
 					</div>
 				</div>
 			</div>
 
 			<div class="ProCfirmInfo-phone">
 				<div class="ProCfirmInfo-phone-box">
+					<?php
+						if(isset($_SESSION["products"])==true){
+							foreach ($_SESSION["products"] as $psn => $PD_CT){
+								$sql = "select * from surfequipped where prod_no=:prod_no";
+								$ODcatch = $pdo->prepare($sql);
+								$ODcatch->bindValue(":prod_no",$PD_CT["prod_no"]);
+								$ODcatch->execute();
+								$ODVL = $ODcatch->fetch();
+								$SMmoney = (int)($ODVL["prod_price"]) * (int)($PD_CT["quantity"]);
+					?>
 					<ul>
-						<li><span class="li-tit-item">商品明細</span><span class="getProName li-get-item">AKUR海灘褲(紅)</span></li>
-						<li><span class="li-tit-item">金額</span><span class="getPrice li-get-item">100</span>元</li>
-						<li><span class="li-tit-item">數量</span><span class="getMath li-get-item">1</span></li>
-						<li><span class="li-tit-item">小計</span><span class="getSum li-get-item">100</span></li>
+						<li><span class="li-tit-item">商品明細</span><span class="getProName li-get-item getProName_phone"><?php echo $ODVL['prod_name'];?></span></li>
+						<li><span class="li-tit-item">金額</span><span class="getPrice li-get-item getPrice_phone"><?php echo $ODVL['prod_price'];?></span></li>
+						<li><span class="li-tit-item">數量</span><span class="getMath li-get-item getMath_phone"><?php echo $PD_CT['quantity'];?></span></li>
+						<li><span class="li-tit-item">小計</span><span class="getSum li-get-item getSum_phone"><?php echo $SMmoney;?></span></li>
 					</ul>
+					<?php
+							}	
+						}
+					?>
 				</div>
 			</div>
-
+			
 			<div class="big-title">
 				<h3>寄送資訊</h3>
 			</div>
@@ -374,11 +374,11 @@
 			<div class="OCfirmInfo"><!--O=Order,Cf=comfirm-->
 				<div class="OCfirmInfo-box">
 					<ul>
-						<li><span class="OC-li-item">收件者</span><span class="get-li-item CSget">FiveOneThree</span></li>
-						<li><span class="OC-li-item">連絡電話</span><span class="get-li-item Telget">09123456</span></li>
-						<li><span class="OC-li-item">E-mail</span><span class="get-li-item Emailget">wagasaigyuu@fmail.com</span></li>
-						<li><span class="OC-li-item">收貨地址</span><span class="get-li-item Adressget">台北縣三重市平民窟</span></li>
-						<li><span class="OC-li-item">匯款帳號</span><span class="get-li-item Atm-account">55666</span></li>
+						<li><span class="OC-li-item">收件者</span><span class="get-li-item CSget" id="CSget"></span></li>
+						<li><span class="OC-li-item">連絡電話</span><span class="get-li-item Telget" id="Telget"></span></li>
+						<li><span class="OC-li-item">E-mail</span><span class="get-li-item Emailget" id="Emailget"></span></li>
+						<li><span class="OC-li-item">收貨地址</span><span class="get-li-item Adressget" id="Adressget"></span></li>
+						<li><span class="OC-li-item">匯款帳號</span><span class="get-li-item Atm-account" id="Atm-account"></span></li>
 					</ul>
 				</div>
 			</div>

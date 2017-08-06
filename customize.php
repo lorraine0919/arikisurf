@@ -109,7 +109,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 				</div>
 				<div class="introducefix">
 					<div class="head">
-						<h3>長板（Longboard）</h3>
+						<h3>長板（LONGBOARD）</h3>
 					</div>
 					<div class="content">
 						<p>長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強</p>

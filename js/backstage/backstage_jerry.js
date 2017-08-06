@@ -67,6 +67,9 @@ $(function(){
 			 		'style' :  $(this).parent().siblings('.sellornotgroup').children().children().children('.style').val()			
 				},function(rs){
 					// alert(rs);
+					$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						location.reload();
+					});
 			});
 		});
 	/*↑價格修改*/
@@ -93,7 +96,9 @@ $(function(){
 				    processData: false,
 				    contentType: false
 				}).done(function(res) {
-					location.reload();
+					$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						location.reload();
+					});
 				}).fail(function(res) {
 					// alert(res);
 				});
@@ -110,10 +115,26 @@ $(function(){
 				'deleteimgnum':$(this).siblings('.no').val()
 			},function(rs){
 				console.log(rs);
-				location.reload();
+				$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						location.reload();
+					});
 			})
 		});	
 	/*↑刪除圖片*/
+
+	/*↓修改圖片價格*/
+		$('.patternpricechangebtn').click(function(){
+			$.post('9backstage_customize_update.php',{
+				'patternprice': $(this).siblings('.patternpricechange').val(),
+				'offioruser':$(this).parent().parent().index()
+			},function(rs){
+				// alert(rs);
+				$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						location.reload();
+					});
+			})
+		});
+	/*↑修改圖片價格*/
 })
 
 

@@ -160,6 +160,9 @@
               // margin-bottom: 60px;
               &.closerwdmenuli{
                 margin: 20px 0;
+                img{
+                  width: 20%;
+                }
               }
               a {
                 display: block;
@@ -358,6 +361,10 @@
                   li{
                     a{
                       padding: 0 20px;
+                      transition:0.5s;
+                      &:hover{
+                        color: #ed8c00;
+                      }
                     }
                   }
                 }

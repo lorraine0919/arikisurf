@@ -146,6 +146,8 @@
             margin: 0 0 10px 0; }
             .navfix .navimg .overlay ul li.closerwdmenuli {
               margin: 20px 0; }
+              .navfix .navimg .overlay ul li.closerwdmenuli img {
+                width: 20%; }
             .navfix .navimg .overlay ul li a {
               display: block;
               position: relative;
@@ -249,7 +251,10 @@
             .navDetail .navfix .navimg .overlay .overlay-menu .menu {
               width: auto; }
               .navDetail .navfix .navimg .overlay .overlay-menu .menu li a {
-                padding: 0 20px; }
+                padding: 0 20px;
+                transition: 0.5s; }
+                .navDetail .navfix .navimg .overlay .overlay-menu .menu li a:hover {
+                  color: #ed8c00; }
         .navDetail .navfix .navimg .logo {
           width: 15%;
           display: inline-block;

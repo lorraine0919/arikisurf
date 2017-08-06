@@ -24,6 +24,7 @@ try{
     $sql="select * from member where account = :account";
     $member = $pdo->prepare( $sql );
     $member->bindValue(':account',$_SESSION['account']);
+    
     $member->execute();
     $personData = $member->fetch(PDO::FETCH_ASSOC);
     $gender = $personData["gender"];

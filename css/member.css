@@ -1,10 +1,8 @@
 @charset "UTF-8";
-* {
-  text-decoration: none; }
-
-img {
-  width: 100%; }
-
+* {text-decoration: none; }
+img {width: 100%; }
+.loading_bg{display: none;}
+body{overflow: scroll;}
 /*字體大小*/
 .content20:after, .base20:after {
   content: '';
@@ -29,7 +27,8 @@ img {
       font-size: 10px;
       /*block20*/ }
       .left20 .sidebar20 .base20 .photo20 {
-        width: 130px;
+        width: 150px;
+        margin:auto;
         box-shadow: -4px 2px 0px #ed9046; }
       .left20 .sidebar20 .base20 .block20 {
         /*row20*/ }
@@ -44,9 +43,10 @@ img {
           .left20 .sidebar20 .base20 .block20 .row20 .hello20 {
             line-height: 20px; }
     .left20 .sidebar20 .menu20 a {
+      padding: 0px 10px; 
       color: #fff;
-      padding: 0px 10px;
-      cursor: pointer; }
+      cursor: pointer;
+    }
 
 /*left20*/
 .right20 {

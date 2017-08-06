@@ -1,4 +1,6 @@
 <?php
+session_start();
+ob_start();
 
 require_once("connectBooks.php");
 $remain = 0;
@@ -40,7 +42,7 @@ switch($_FILES["upload21"]["error"] ){
 try {
 	$sqla = "UPDATE `member` SET `name`=:name, `city`=:city, 
 	      `area`=:area, `address`=:address, `phone`=:phone,
-	     `email`=:email,`mugshot`=:mugshot,`renew_time`=:renew_time WHERE `account` = 'hebe520'";
+	     `email`=:email,`mugshot`=:mugshot,`renew_time`=:renew_time WHERE `account` = :account";
 
 	  $updateData = $pdo->prepare( $sqla);
 	  $updateData ->bindValue(":name" , $_REQUEST["name"]);
@@ -49,12 +51,14 @@ try {
 	  $updateData ->bindValue(":address" , $_REQUEST["addr"]);
 	  $updateData ->bindValue(":phone" , $_REQUEST["tel"]);
 	  $updateData ->bindValue(":email" , $_REQUEST["email"]);
+	  $updateData ->bindValue(":account" ,$_SESSION["account"]);
+	  
 	  if($remain == 0){
 	  	$updateData ->bindValue(":mugshot" , "images/7member/mugshots/".$_FILES["upload21"]["name"]);
 	  }elseif($remain == 1){
 	  	$updateData ->bindValue(":mugshot" , $_REQUEST["mugshot"]);
 	  }
-	  $updateData ->bindValue(":renew_time" , '2017-08-04 17:48:40');
+	  $updateData ->bindValue(":renew_time" , '2017-08-06 17:48:40');
 	  $updateData ->execute();
 	  echo "資料修改成功<br>";
 	} catch (PDOException $e) {

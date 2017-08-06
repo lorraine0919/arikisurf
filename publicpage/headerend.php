@@ -21,9 +21,9 @@
                                     <?php 
                                         // echo $_SESSION["account"];
                                         if(isset($_SESSION["account"])){
-                                            echo "<a class='rwd' id='login2' href='7member_update.php'><span id='login1'>會員專區</span></a>";
+                                            echo "<a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a>";
                                         }else{
-                                            echo "<span id='login2'>會員登入</span>";
+                                            echo "<a class='rwd'><span id='login2' >會員登入</span></a>";
                                         }
                                      ?>                                    
                                 </li>

@@ -48,8 +48,8 @@ $(document).ready(function(){
 		console.log(newhref);
 
 		/*以下是編輯時好知道定位點在哪*/
-		$('.map_bamboo_1 .po').css('border','2px solid #f00'); 
-		$('.map_bamboo_1 .po').eq(index).css('border','2px solid #00f');
+		// $('.map_bamboo_1 .po').css('border','2px solid #f00'); 
+		// $('.map_bamboo_1 .po').eq(index).css('border','2px solid #00f');
 
 		var cssleft =$('.map_bamboo_1 .po').eq(index).position().left;
 		var wholewidth=$('.map_bamboo_1').width();

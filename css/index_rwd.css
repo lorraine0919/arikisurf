@@ -2,10 +2,7 @@
 /*文字陰影*/
 @media screen and (max-width: 960px) {
   .banner_1 {
-    background-image: url("../surfopening.gif");
-    background-size: cover; }
-    .banner_1 video {
-      display: none; }
+    display: none; }
 
   .coating_1 .maxContent .demo {
     display: none; }
@@ -114,12 +111,14 @@
         position: absolute;
         right: 51%;
         font-size: 48px;
-        bottom: 51%; }
+        bottom: 51%;
+        z-index: 10; }
       .picture_1 .maxContent .photoSelect .arrowrwd .fa-caret-right {
         position: absolute;
         right: 3%;
         font-size: 48px;
-        bottom: 51%; }
+        bottom: 51%;
+        z-index: 10; }
     .picture_1 .maxContent .button {
       text-align: center; }
 
@@ -151,16 +150,23 @@
     .forum_1 .contentMax .title {
       display: none; }
     .forum_1 .contentMax .postgroup .postfix .post .content .postcontentgroup .mempic {
-      width: 10vw; }
+      width: 18vw; }
 
-  .bulletin_1 .maxContent .title {
-    text-align: center; }
-  .bulletin_1 .maxContent .infoarea {
-    background-position: top;
-    background-size: contain;
-    width: 85%;
-    margin: auto; }
-    .bulletin_1 .maxContent .infoarea .right {
-      height: auto; }
-    .bulletin_1 .maxContent .infoarea .left {
-      display: none; } }
+  .bulletin_1 {
+    background-position: 100% 100%; }
+    .bulletin_1 .maxContent .title {
+      text-align: center; }
+    .bulletin_1 .maxContent .infoarea {
+      background-position: top;
+      background-size: contain;
+      width: 85%;
+      margin: auto; }
+      .bulletin_1 .maxContent .infoarea .right {
+        height: auto; }
+        .bulletin_1 .maxContent .infoarea .right .news .newsimg {
+          width: 100%;
+          margin: 0; }
+        .bulletin_1 .maxContent .infoarea .right .news .newcontent {
+          width: 100%; }
+      .bulletin_1 .maxContent .infoarea .left {
+        display: none; } }

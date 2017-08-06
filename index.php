@@ -1,12 +1,30 @@
+<?php 
+    ob_start();
+    session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <!--header-->
   <head>
   <!--(bake module/head.html)--> <?php require_once('publicpage/head.php'); ?>
     <title>酋長衝浪Ariki Surf-專業客製化衝浪板</title>
+    <script>
+        // change the default namespace for the CreateJS libraries:
+        var createjs5566 = createjs5566||{};
+        var createjs = createjs5566;
+    </script> 
+    <script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+    <script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
+    <script src="http://code.createjs.com/movieclip-0.6.0.min.js"></script>
+
+    <script src="js/LOGO_Animation.js"></script>
+    <script src="js/coconut.js"></script>
+    <script src="js/coconut_donkey.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/index_rwd.css">
+    <link rel="stylesheet" type="text/css" href="css/index_header.css">
     <script type="text/javascript" src="libs/jquery/dist/jquery.min.js">
     </script>
     <script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
@@ -18,21 +36,111 @@
     <link rel="stylesheet" href="
 libs/owl.carousel/dist/assets/owl.theme.default.min.css">
     <script src="libs/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/index_bamboo.js"></script>
+    <script>
+        $(function(){
+
+            var canvas, stage, exportRoot,coconut1,coconut2;
+
+                function init() {
+                    canvas = document.getElementById("canvas1");
+                    exportRoot = new lib5566.LOGO_Animation();
+
+                    stage = new createjs5566.Stage(canvas);
+                    stage.addChild(exportRoot);
+                    stage.update();
+
+                     createjs5566.Ticker.setFPS(24);
+                    createjs5566.Ticker.addEventListener("tick", stage);
+
+            } 
+            
+            init();
+            
+        });
+
+        
+    </script>
  </head>
   <!--header end-->
-<body>
+<body class="Sashimi">
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
     <div class="banner_1">
-        <video src="0713.mp4" autoplay muted></video>   
-    </div>
-    <div class="slogan_1">
-        <div class="gradient">
-            <h1>ARIKI SURF</h1> 
-            <h3>在古玻里尼西亞文化中，酋長這個身分，<br>
-            不只代表了一個人在部落的領導地位，<br>
-            更代表了他在衝浪技巧上，無可取代的存在。</h3> 
+        <div class="logo_canvas1">
+            <canvas id="canvas1" width="500" height="360"></canvas>
+
+                <h2>Your Board Always Top</h2>  
+
+            <div class="Button_Entrance"> 
+                <a class="Button_Entrance2 Entrance3" href="#">前端</a>
+               <a class="Button_Entrance2" href="9backstage_login.html">後端</a>
+            </div>
+            <div class="cloud">
+
+                <div class="cloud4 clouda">
+                    <img class="cloud1" src="images/1common/Im_a_cloud.png">
+                </div>
+
+                <div class="cloud3 clouda">
+                    <img class="cloud1" src="images/1common/Im_a_cloud.png">
+                </div>
+
+                <div class="cloud2 clouda">
+                    <img class="cloud1" src="images/1common/Im_a_cloud.png">
+                </div>
+
+
+                <div class="gradient_bambooo">
+                    <span>
+                    <h1>ARIKI SURF</h1> 
+                    <h3>在古玻里尼西亞文化中，酋長這個身分，<br>
+                        不只代表了一個人在部落的領導地位，<br>
+                        更代表了他在衝浪技巧上，無可取代的存在。</h3>
+                    </span>         
+                </div>
+                   
+                 <div class="wood_surf">
+
+                    <img class="wood_meat" src="images/1common/wood_surf.png">
+                     
+                 </div>
+                 <div class="wood_surf2">
+
+                    <img src="images/1common/wood_surf.png">
+                     
+                 </div>
+                 <div class="wood_surf3">
+
+                    <img src="images/1common/wood_surf.png">
+                     
+                 </div>    
+
+                <dvi class="seawater">
+                    
+                    <div class="Will_hurt_the_stoneA">
+                        <img src="images/1common/Will_hurt_the_stone.png">
+                    </div>
+                    <div class="Will_hurt_the_stoneB">
+                        <img src="images/1common/Will_hurt_the_stone.png">
+                    </div>
+                    <div class="coconut">
+                        <canvas id="coconut" width="500" height="700"></canvas>
+                    </div>
+                    <div class="coconut2">
+                        <canvas id="coconut2" width="500" height="700"></canvas>
+                    </div>
+                    
+
+                </dvi>
+                
+                <img class="cloud1" src="images/1common/coastal.jpg">
+                
+            </div>
+
         </div>
+          
     </div>
     <div id="explodetrigger"></div>
     <div class="coating_1">
@@ -143,8 +251,8 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                 <div class="photo selected"><img src="images/1common/picselect2_s.png" alt=""></div>
                 <div class="photo"><img src="images/1common/picselect3.png" alt=""></div>
                 <div class="arrowrwd">
-                    <i class="fa fa-caret-left" aria-hidden="true"></i>
-                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    <i class="fa fa-caret-left rwdpicleft" aria-hidden="true"></i>
+                    <i class="fa fa-caret-right rwdpicright" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="button col-sm-12 col-xs-12">
@@ -340,7 +448,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
             </div>
         </div>
     </div>
-    <script src="js/index.js"></script>
+    <!-- <script src="js/index.js"></script> -->
      <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
 </body>
 </html>

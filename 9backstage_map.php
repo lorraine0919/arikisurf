@@ -10,6 +10,9 @@ $map = $pdo->query($sql);
       <!--(bake module/backstage_head.html)--><?php require_once('publicpage/backstage_head.php'); ?>
     <title>Ariki Surf - 後臺管理</title> 
     <style type="text/css">
+      #g4{
+        width: 300px;
+      }
       #g5{
         width: 600px;
         resize: none;
@@ -43,7 +46,7 @@ $map = $pdo->query($sql);
                               <tr>
                                   <th>浪點編號</th>
                                   <th>浪點名稱</th>
-                                  <!-- <th id="g4">浪點標題</th> -->
+                                  <th id="g4">浪點標題</th>
                                   <th id="g5">浪點簡介</th>
                                   <th>浪點狀況</th>
                                   <th>浪點溫度</th>
@@ -55,7 +58,7 @@ $map = $pdo->query($sql);
                               <tr>
                                   <td><?php echo $mapRow["wave_number"]?></td>
                                   <td><input type="text" value="<?php echo $mapRow["wave_title"]?>"></td>
-                                  <!-- <td><?php echo $mapRow["wave_p"]; ?></td> -->
+                                  <td><input type="text" id="g4" value="<?php echo $mapRow["wave_p"]?>"></td>
                                   <td>
                                   <textarea name="textarea" id="g5" cols="30" rows="10"><?php echo $mapRow["wave_info"]; ?>
                                   </textarea></td>
@@ -86,7 +89,8 @@ $map = $pdo->query($sql);
                                       <form action="#">
                                           <div class="btn-group">
                                               <input type="hidden" name="prod_sold" value="<?php echo $mapRow['wave_number']?>" >
-                                              <a class="yesbtn btn btn-primary btn-sm change" >修改</a>
+                                              <a class="yesbtn btn btn-primary btn-sm change" id="upmap">清除</a>
+                                              <a class="yesbtn btn btn-primary btn-sm change" id="upmap">修改</a>
                                           </div>
                                      </form>                           
                                   </td>
@@ -132,5 +136,16 @@ $map = $pdo->query($sql);
         </div><!-- main35 -->
 <!--(bake module/backstage_footer.html)--><?php require_once('publicpage/backstage_footer.php'); ?>
 </body>
-
+<script>
+        $(document).ready(function(){
+           $('#upmap').click(function(){
+              console.log("123");
+              $.post('9backstage_map_up1.php',{
+                'member_no':$(this)...
+              },function(rs){
+                  location.reload('9backstage_map.php');
+              });
+           });
+        });
+</script>
 </html>

@@ -1,98 +1,24 @@
+<?php
+    ob_start();
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head> 
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-      <link rel="stylesheet" type="text/css" href="css/header.css">
-      <link rel="stylesheet" type="text/css" href="css/footer.css">
-      <link rel="stylesheet" type="text/css" href="css/grid.css">
-      <link rel="stylesheet" type="text/css" href="css/commonclass.css">
-      <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
-      <script src="js/jquery.js"></script>
-      <script src="js/breadcrumb.js"></script>
+      <?php require_once('publicpage/head.php'); ?>
       <title>酋長衝浪Ariki Surf - 會員註冊</title>
-      <link rel="stylesheet" type="text/css" href="css/7member_register.css">
-      <link rel="stylesheet" type="text/css" href="css/member_login.css">
+      <link rel="stylesheet" type="text/css" href="css/7member_regist.css">
       <link rel="stylesheet" type="text/css" href="css/7member_rule.css">
 </head>
-
 <body>
 
-<!-- =================會員登入================== -->
-<div class="content19"  style="display:none;" id="lightbox19">
-    <form class="main19" method="post" id="form19">
-        <div class="head19">
-            <p>會員登入</p>
-            <p class="slogan19">
-                <i>Your board always top!</i>
-            </p>
-        </div>
-        <div class="login19">
-            <input type="text" minlength="4" maxlength="10" placeholder="帳號" class="input19" id="memId">
-            <input type="password" minlength="6" maxlength="12" placeholder="密碼" class="input19" id="memPsw">
-            <p class="help19">
-                <span>
-                    <input type="checkbox" name="">記住我  | 
-                </span>
-                <span>
-                    <a href="7member_register.html">馬上註冊</a>
-                </span>
-            </p>
-            <a class="input19" id="submit19">登 入</a>
-        </div>
-        <a href="javascript:window.close();" id="close19">X</a>
-    </form>
-</div>
 <!-- =================主選單================== -->
-<header>
-    <nav class="nav_0">
-        <div class="navDetail">
-            <div class="navfix">
-                <div class="navimg">
-                    <input type="checkbox" id="control">
-                    <div class="logo">
-                        <div class="logofix">
-                            <a href="index.html">
-                               <img src="images/1common/logo.png">
-                            </a>
-                            <div class="arikicommon_breadcrumb">                       
-                                <a href="index.html">首頁</a>
-                                <i class="fa fa-caret-right" aria-hidden="true"></i>
-                                <span>會員註冊</span>
-                            </div>
-                        </div>
-                    </div>
-                    <label class="hb" for="control">選單</label>
-                    <ul class="menu">
-                        <li class="rwdlogo"><a href="index.html" class="rwd"><img src="images/1common/logo.png"></a></li>
-                        <li><a href="customize.html">客製浪板</a></li>
-                        <li><a href="surfshop.html">衝浪配備</a></li>
-                        <li><a href="map.html">衝浪地圖</a></li>
-                        <li><a href="news.html">最新消息</a></li>
-                        <li><a href="about.html">關於酋長</a></li>
-                        <li><a href="#" class="rwd" id="login2">會員登入</a></li>
-                        <li><a href="cart.html" class="rwd">購物車</a></li>
-                    </ul>
-                    <div class="iconGroup">
-                        <ul>
-                            <li><a href="#">
-                                <img src="images/1common/member.png" alt="">
-                                <span id="memberArea"></span>
-                                <span id="login1">會員登入</span>
-                            </a></li>
-                            <li class="line"></li>
-                            <li><a href="cart.html"><img src="images/1common/shop.png" alt="" >購物車</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="topGround_0"></div>
-</header>
-<!-- ======================會員註冊==================== -->
+<?php require_once('publicpage/header.php'); ?>
+<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<span>會員註冊</span>
+<?php require_once('publicpage/headerend.php'); ?>
+
+<!-- =====================會員註冊A==================== -->
 <div style="" class="register26">
     <div style="visibility: visible;" class="setdown26" id="setdown26">
 
@@ -110,7 +36,7 @@
             <div class="detail26">
                 <div class="item26">
                     <label class="label26">設定帳號</label>
-                    <input type="text" minlength="4" maxlength="10" placeholder="請輸入4-10碼英數字組合" class="input26 arikicommon_inputtext" id="memId26" name="memId26" required>
+                    <input type="text" minlength="4" maxlength="10" placeholder="請輸入4-10碼英數字組合" class="input26 arikicommon_inputtext" id="memId26" name="memId26" onchange="Uniqueness(this.value);" required>
                 </div>
                 <div class="item26">
                     <label class="label26">設定密碼</label>
@@ -122,10 +48,11 @@
                 </div>
                 <div class="item26 verticle26">
                     <label maxlength="4" class="label26">請輸入驗證碼</label>
-                    <input type="number" class="check26 arikicommon_inputtext" id="inputNumber26" pattern="[0-9]{4}" title="未輸入驗證碼或格式有誤">
+                    <input type="text" class="check26 arikicommon_inputtext" id="Verify26">
                     <br class="br26">
                     <label class="label26 br26"></label>
                     <div id="number26"></div>
+                    <div id="reset26"><img src="images/7member/reset.png"></div>
                 </div>
                 <div class="read26">
                     <div class="arikicommon_checkbox">
@@ -139,7 +66,7 @@
                      </div>
                 </div>
                 <div class="item26">
-                    <button type="button" class="arikicommon_btn" id="submit26">下一步</button>
+                    <input type="submit" class="arikicommon_btn" id="submit26" value="下一步">
                 </div>
             </div><!-- detail26 -->
 
@@ -234,67 +161,12 @@
     </div> 
     <a class="arikicommon_btn" id="submit22">閱讀完畢</a>
 </div>
-
-<footer class="footer_0">
-    <div class="maxContent">
-    	<div class="titlegroup">
-	     	<ul class="itemtitle">
-	    		<li>酋長商城</li>
-	    		<li><a href="">衝浪地圖</a></li>
-	    		<li><a href="">關於酋長</a></li>
-	    		<li><a href="">會員中心</a></li>
-	    	</ul>   		
-    	</div>
-    	<div class="left col-xs-12 col-sm-6">
-	    	<ul class="store">
-	    		<li><a href="">客製浪板</a></li>
-	    		<li><a href="">衝浪配備</a></li>
-	    		<li><a href="">購物車</a></li>
-	    	</ul>
-	    	<ul class="map">
-	    		<li><a href="">Pipeline</a></li>
-	    		<li><a href="">Superbank</a></li>
-	    		<li><a href="">Jeffrey's Bay</a></li>
-	    		<li><a href="">Black Beach</a></li>
-	    		<li><a href="">Teahupo'o</a></li>
-	    		<li><a href="">La Graviere</a></li>
-	    		<li><a href="">Uluwatu</a></li>
-	    	</ul>
-	    	<ul class="about">
-	    		<li><a href="">最新消息</a></li>
-	    		<li><a href="">經營理念</a></li>
-	    		<li><a href="">品牌沿革</a></li>
-	    		<li><a href="">得獎紀錄</a></li>
-	    		<li><a href="">全球據點</a></li>
-	    	</ul>
-	    	<ul class="member">
-	    		<li><a href="">基本資料</a></li>
-	    		<li><a href="">我的收藏</a></li>
-	    		<li><a href="">訂單查詢</a></li>
-	    	</ul> 		
-    	</div>
-		<div class="right col-xs-12 col-sm-6">
-			<h3>留言給我們</h3>
-			<p>arikisurf@arikisurf.com</p>
-			<a href="">留言</a>
-		</div>
-		<div class="clearfix"></div>
-		<div class="copyright">
-			<p>©2017 Ariki Surf All Rights Reserved. 
-			</p>
-		</div>
-    </div>
-</footer>
-</body>
-
-</html>
-
+<?php require_once('publicpage/footer.php'); ?>
 <script type="text/javascript">
 
 function $id(id){return document.getElementById(id);}
 
-//========================會員登入登出=========================
-
+//=======================會員登入登出(缺rwd版)=========================
 function ShowLightBox(){
   if( $id("login1").innerHTML === '會員登入'){
     $id("memId").value="";
@@ -312,12 +184,11 @@ function LoginCheck(){
     memPsw = $id("memPsw").value;
 
     $.post('sessionLogin.php',{ 
-	 		'memId2' : memId ,
-	 		'memPsw2' :  memPsw
-	 		 },function(rs){
-    	 	if( rs == 1){
-                $id("memberArea").innerHTML = "會員專區";
-                // $id("memberArea").location.href = "7member_update.php";
+            'memId2' : memId ,
+            'memPsw2' :  memPsw
+             },function(rs){
+            if( rs == 1){
+                $id("memberArea").innerHTML = "<a href='7member_update.php'>會員專區</a>";
                 $id("login1").innerHTML = "登出";
                 $id("lightbox19").style.display="none";
              }else{
@@ -330,86 +201,99 @@ function LoginCheck(){
 
 function CancelLogin(){$id("lightbox19").style.display = "none";}
 
-//==========================會員註冊==========================
+//==========================會員註冊A==========================
+//-------------------------檢查帳號--------------------------
+function Uniqueness(ID){
+    console.log('1');
+        $.post('Uniqueness.php',{ 
+        'accountcheck' : ID ,
+         },function(R){
+            if( R == 1){
+                alert("此帳號已被使用");
+                return;
+             }
+        }
+    );
+}
+//--------------------------驗證碼--------------------------
+var CheckText;
 
+function ResetNumber(){
+    var VerifyImgs = new Array('6ne3','D7YS','e5hb','H2DE','HRA1','k4ez','mqKi','w62K','XDHY','M8k2');
+    var i = Math.floor(Math.random()*10);
+
+    var VerifyImg = document.createElement("img");
+    VerifyImg.src = "images/7member/VarifyImages/" + VerifyImgs[i] + ".jpg";
+    VerifyImg.alt = '驗證碼';
+    $id("number26").appendChild(VerifyImg);
+    CheckText = VerifyImgs[i];
+}
+function RemoveNumber(){
+    $id("number26").removeChild($id("number26").childNodes[0]);
+    ResetNumber();
+}
+
+//--------------------------下一步--------------------------
 function VerifyA(){
 
     memId26 = $id("memId26").value;
     memPsw26 = $id("memPsw26").value;
     memPswCheck26 = $id("memPswCheck26").value;
-    inputNumber26 = $id("inputNumber26").value;
-    // var number26 = $id("number26").img.;
+    Verify26 = $id("Verify26").value;
+    // console.log(CheckText);
+    // console.log(Verify26);
 
-    alert("Verify註冊");
     IDPattern = /^(?=^.{4,10}$)((?=.*[0-9])(?=.*[a-z|A-Z]))^.*$/;
+    PswPattern = /^(?=^.{6,12}$)((?=.*[0-9])(?=.*[a-z|A-Z]))^.*$/;
+    // VerifyPattern = /^\w{4,5}$/;
+
     if (!IDPattern.test(memId26)){
         alert("帳號格式有誤！");
         return;
-    }
-    PswPattern = /^(?=^.{6,12}$)((?=.*[0-9])(?=.*[a-z|A-Z]))^.*$/;
-    if (!PswPattern.test(memPsw26)){
+    }else if (!PswPattern.test(memPsw26)){
         alert("密碼格式有誤！");
         return;
-    }
-    if (memPsw26 !== memPswCheck26){
+    }else if (memPsw26 !== memPswCheck26){
         alert("兩次輸入密碼不相符！");
         return;
+    }else if (Verify26 !== CheckText){
+        alert("請輸入正確驗證碼！");
+        return;
+    }else{
+         $.post('Register.php',{ 
+            'memId' : memId26 ,
+            'memPsw':memPsw26
+             },function(rs){
+                window.location="7member_register2.php";
+             }); 
+         /*注意格式，最後一個不用，function後是必需的格式*/
+         /*window.location必須放在function內才管用，不知為何?!*/
     }
-    // NumberPattern = /^/d{4}$/;
-    // if (NumberPattern.test(inputNumber26)) {
-    // 	alert("未輸入驗證碼或格式有誤！");
-    //     return;
-    // }
-
-    $.post('Register.php',{ 
-        'accountcheck' : memId26 ,
-         },function(R){
-        if( R == 1){
-            alert("此帳號已被使用");
-            return;
-         }else{
-            window.location="7member_register2.php";
-            }
-        }
-    );
 }
-
-//=========================驗證碼=========================
-
-var VerifyImgs = new Array('6ne3','D7YS','e5hb','H2DE','HRA1','k4ez','mqKi','w62K','XDHY');
-var i = parseInt(Math.random()*10);
-
-var VerifyImg = document.createElement("img");
-VerifyImg.src = "images/7member/VarifyImages/" + VerifyImgs[i] + ".jpg";
-VerifyImg.alt = '驗證碼';
-$id("number26").appendChild(VerifyImg);
-
 //=========================會員條款=========================
 function ShowRule(){
-	$id("memberRule").style.display = "";
-	$id("setdown26").style.visibility = "hidden";
+    $id("memberRule").style.display = "";
+    $id("setdown26").style.visibility = "hidden";
 }
 function HaveRead(){
-	$id("memberRule").style.display = "none";
-	$id("setdown26").style.visibility = "visible";
-	$id("Read26").checked = true;
+    $id("memberRule").style.display = "none";
+    $id("setdown26").style.visibility = "visible";
+    $id("Read26").checked = true;
 }
 
+
 function init(){
-
-//=======================會員登入登出========================
-  $id("login1").onclick = ShowLightBox;
-  $id("submit19").onclick = LoginCheck;
-  $id("close19").onclick = CancelLogin;
-
-//=========================會員註冊==========================
-  $id("submit26").onclick = VerifyA;
-
-//=========================會員條款==========================
   $id("rule26").onclick = ShowRule;
   $id("submit22").onclick = HaveRead;
+
+  ResetNumber();
+  $id("reset26").onclick = RemoveNumber;
+
+  $id("submit26").onclick = VerifyA;
 }; 
 
 window.onload=init;
 
 </script>
+</body>
+</html>

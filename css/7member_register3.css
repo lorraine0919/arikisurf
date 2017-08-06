@@ -1,51 +1,49 @@
 @charset "UTF-8";
-img {
-  width: 100%; }
+.loading_bg{display: none;}
+body{overflow-y: scroll;}
 
+img {width: 100%;}
 /*=========清除浮動=========*/
-.topbar26:after, .item26:after {
-  content: '';
-  display: block;
-  clear: both; }
+.box27{
+  position: relative;
+  padding-top: calc(100vh - 5.2% - 0.865% - 10% + 5px);
 
-.register26 {
-  width: 100%;
+  box-sizing: border-box;
+  background-image: url(../images/7member/rwdsuccess.png);
+  background-size: cover;
+}
+.welcome27 {
+  position: absolute;
+  top: calc(calc(calc(100vh - 5.2% - 0.865% - 10% + 5px)/2) - 3em);
+  left: 0;
+  right: 0;
+  margin:auto;
+
   text-align: center;
-  color: #fff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  background-image: url("../images/7member/surfingmember.jpg");
-  background-size: cover; }
+  font-size: 22px;
+  line-height: 2.5;
+  letter-spacing: 5px;
+  color: white;
+  font-weight: bold;
 
-.setdown26 {
-  width: 55vw;
-  padding: 12% 7%;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.1); }
-  .setdown26 .submit26 {
-    display: inline-block;
-    padding: 0% 3%;
-    line-height: 2.5em;
-    margin: auto;
-    text-align: center;
-    font-size: 16px;
-    text-decoration: none;
-    letter-spacing: 3px;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    background-color: #8af; }
+  text-shadow: 2px 2px 3px rgba(0,100,110,1);
+}
+.welcome27 a{color: #ffa;}
+.welcome27 a:hover{color: #ed8c00;}
 
-.submit26:hover {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); }
+@media screen and (min-width: 767px) {
 
-@media screen and (max-width: 999px) {
-  .setdown26 {
-    width: 90%;
-    padding: 20vh 2%; }
-    .setdown26 .subject26 {
-      margin-bottom: 50px;
-      letter-spacing: 6px; } }
-@media screen and (min-width: 1000px) {
-  .setdown26 .subject26 {
-    margin-bottom: 10vh;
-    letter-spacing: 7px; } }
+  .box27{
+    width: 100vw;
+    padding-top: 65.364vw;
+    background-image: url(../images/7member/success.png);
+    background-size: cover;
+  }
+  .welcome27{
+    top: calc(calc(65.364vw/2) - 3em);
+    font-size: 35px;
+    line-height: 3;
+    letter-spacing: 8px;
+  }
+
+}

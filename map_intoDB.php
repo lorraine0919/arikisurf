@@ -5,7 +5,7 @@ $title = $_REQUEST["title"];
 $textarea = $_REQUEST["textarea"];
 $datetime = date("Y-m-d H:i:s"); 
 $wave_number = $_SESSION["map_wave"]["wave_number"];
-$member_no = $_SESSION["member"]["member_no"];
+$member_no = $_SESSION["member_no"];
 $a = $_FILES["file"]["name"];
 
 try{

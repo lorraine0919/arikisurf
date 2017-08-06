@@ -85,6 +85,31 @@ $(function(){
 	
 /*以上是換圖動畫*/
 
+/*以下是rwd換圖動畫*/
+	var rwdpiccount = 2;
+	$('.rwdpicleft').click(function(){
+		// console.log('1');
+		if(rwdpiccount>2){
+			rwdpiccount=1;
+		}else{
+			rwdpiccount++;
+		}
+		$('.photo.selected img').attr('src','images/1common/picselect'+rwdpiccount+'_s.png');
+		$('.picture_1 .surfboard img').attr('src','images/1common/surfboardwithlogo'+rwdpiccount+'.png');
+	});
+	$('.rwdpicright').click(function(){
+		// console.log(rwdpiccount);
+		if(rwdpiccount<2){
+			// console.log('1');
+			rwdpiccount=3;
+		}else{
+			rwdpiccount--;
+		}
+		$('.photo.selected img').attr('src','images/1common/picselect'+rwdpiccount+'_s.png');
+		$('.picture_1 .surfboard img').attr('src','images/1common/surfboardwithlogo'+rwdpiccount+'.png');
+	});
+/*以上是rwd換圖動畫*/
+
 /*以下是討論區動畫*/
 	$('.forum_1 .postfix').mouseover(function(){
 		$('.forum_1 .selected').removeClass('selected');

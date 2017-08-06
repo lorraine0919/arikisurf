@@ -1020,6 +1020,10 @@
 						color: rgba(255,255,255,0.6);
 						padding: 7px 10px 10px 10px;
 						display: inline-block;
+						input,textarea{
+							font-size: 16px;
+						}
+						
 						h3{
 							font-weight: 100;
 						}

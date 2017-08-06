@@ -35,13 +35,18 @@ window.onload=function(){
 				$('.loginremindlightboxgroup').fadeOut(500,function(){
 					$('.content19').fadeIn(500);
 					$('#submit19').click(function(){
-						$.post('sessionLogin.php',{
+						$.post('customize_update.php',{
 				            'memId2' : $('#memId').val() ,
 				            'memPsw2' :  $('#memPsw').val()
 						},function(rs){
 							// alert(rs);
-							if(rs=='1'){
+							var rsarr=rs.split('|');
+							if(rsarr[0]=='1'){
 								$('.memberloginornot').val('1');
+								$('#customername').val(rsarr[1]);
+								$('#customerphone').val(rsarr[2]);
+								$('#customeremail').val(rsarr[3]);
+								$('#customeraddress').val(rsarr[4]);
 							}else{
 
 							}
@@ -54,7 +59,24 @@ window.onload=function(){
 				$('.loginremindlightboxgroup').fadeOut(500);
 			})
 		}else{
-			tostep3();
+			$.post('customize_update.php',{
+				'havelogin':'yes'
+			},function(rs){
+				// alert(rs);
+				var rsarr=rs.split('|');
+				console.log(rsarr);
+				if(rsarr[0]=='1'){
+					$('.memberloginornot').val('1');
+					$('#customername').val(rsarr[1]);
+					$('#customerphone').val(rsarr[2]);
+					$('#customeremail').val(rsarr[3]);
+					$('#customeraddress').val(rsarr[4]);
+					tostep3();
+				}else{
+
+				}
+			});	
+			
 		}
 	});
 	$('#step4tostep3').click(tostep3);

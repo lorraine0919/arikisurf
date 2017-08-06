@@ -96,6 +96,7 @@ ob_start();
 			echo $jsonStr;
 
 		}
+		/*在客製化頁面登入*/
 		if(isset($_REQUEST['memId2'])){
 			require_once("connectBooks.php");
 			$sql = "select * from member where account = :memId and psw = :memPsw";
@@ -111,10 +112,28 @@ ob_start();
 			    $_SESSION["account"] = $memRow["account"];
 		        $_SESSION["member_no"] = $memRow["member_no"];
 		        $_SESSION["psw"] = $memRow["psw"];
-				echo '1';
+				echo '1'.'|';
+				echo $memRow["name"].'|';
+				echo $memRow["phone"].'|';
+				echo $memRow["email"].'|';
+				echo $memRow["city"].$memRow["area"].$memRow["address"];
 			}else{
 				echo '2';
 			}
+		}
+		/*在其他頁面登入*/
+		if(isset($_REQUEST['havelogin'])){
+			require_once("connectBooks.php");
+			$sql = "select * from member where member_no=:member_no";
+			$member = $pdo->prepare($sql);
+			$member -> bindValue(":member_no",$_SESSION["member_no"]);
+			$member -> execute();
+			$memRow = $member->fetch(PDO::FETCH_ASSOC);
+			echo '1'.'|';
+			echo $memRow["name"].'|';
+			echo $memRow["phone"].'|';
+			echo $memRow["email"].'|';
+			echo $memRow["city"].$memRow["area"].$memRow["address"];						
 		}
 
 	}catch(PDOException $e){

@@ -582,7 +582,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 								</tr>
 								<tr>
 									<th><h3>收件地址</h3></th>
-									<td><textarea rows="5" id="customeraddress" class="orederinput"></textarea></td>
+									<td><textarea rows="3" id="customeraddress" class="orederinput"></textarea></td>
 								</tr>
 								<tr>
 									<th><h3>匯款帳號後五碼</h3></th>

@@ -789,6 +789,8 @@
             color: rgba(255, 255, 255, 0.6);
             padding: 7px 10px 10px 10px;
             display: inline-block; }
+            .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content input, .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content textarea {
+              font-size: 16px; }
             .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content h3 {
               font-weight: 100; }
             .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content table {

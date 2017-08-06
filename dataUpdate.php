@@ -59,6 +59,7 @@ try {
 	  	$updateData ->bindValue(":mugshot" , $_REQUEST["mugshot"]);
 	  }
 	  $updateData ->bindValue(":renew_time" , '2017-08-06 17:48:40');
+	  
 	  $updateData ->execute();
 	  echo "資料修改成功<br>";
 	} catch (PDOException $e) {

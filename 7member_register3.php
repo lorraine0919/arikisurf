@@ -17,15 +17,28 @@
     <span>會員註冊</span>
     <?php require_once('publicpage/headerend.php'); ?>
     <div class="box27">
-        <div class="img27">
-            <img src="images/7member/success.png">
-        </div>
         <div class="welcome27">
-            <p>恭喜您！註冊成功！</p>
-            <a href="">前往會員專區</a>
+            <p>恭喜您已註冊成功！</p>
+            <p><span id="jump27">5</span>秒後自動跳回<a href="index.php">首頁</a></p>
         </div>
     </div>
     <?php require_once('publicpage/footer.php'); ?>
-    <?php require_once('publicpage/member_login.php'); ?>
 </body>
+<script type="text/javascript">
+    var num = 5;
+    var timeId;
+
+    function countDown(){
+        num--;
+        if (num == 0 ){
+            clearInterval(timeId);
+            window.location="index.php";
+        }
+        document.getElementById("jump27").innerHTML = num;
+    }
+    function init(){
+        timerId = setInterval(countDown,1000);
+    }
+    window.onload=init;
+</script>
 </html>

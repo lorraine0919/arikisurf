@@ -1,47 +1,49 @@
 @charset "UTF-8";
+.loading_bg{display: none;}
+body{overflow-y: scroll;}
 
-img {width: 100%; }
+img {width: 100%;}
 /*=========清除浮動=========*/
-/*.topbar26:after, .item26:after {
-  content: '';
-  display: block;
-  clear: both; }*/
 .box27{
-  width: 100%;
-  box-sizing: border-box;
   position: relative;
-}
-.img27{
-  display: inline-block;
-  z-index: -1;
+  padding-top: calc(100vh - 5.2% - 0.865% - 10% + 5px);
+
+  box-sizing: border-box;
+  background-image: url(../images/7member/rwdsuccess.png);
+  background-size: cover;
 }
 .welcome27 {
-  display: inline-block;
-  width: 100%;
-  margin: auto;
-  margin-top: -70vh;
-  padding: 3vw; 
-  box-sizing: border-box;
+  position: absolute;
+  top: calc(calc(calc(100vh - 5.2% - 0.865% - 10% + 5px)/2) - 3em);
+  left: 0;
+  right: 0;
+  margin:auto;
 
   text-align: center;
-  
-  font-size: 30;
-  line-height: 2;
+  font-size: 22px;
+  line-height: 2.5;
   letter-spacing: 5px;
   color: white;
   font-weight: bold;
 
-  box-shadow: 2px 2px 5px rgba(255,255,255,255,0.8);
+  text-shadow: 2px 2px 3px rgba(0,100,110,1);
 }
+.welcome27 a{color: #ffa;}
+.welcome27 a:hover{color: #ed8c00;}
 
 @media screen and (min-width: 767px) {
 
   .box27{
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    padding-top: 65.364vw;
+    background-image: url(../images/7member/success.png);
+    background-size: cover;
   }
-  .welcome27 {
-    
+  .welcome27{
+    top: calc(calc(65.364vw/2) - 3em);
+    font-size: 35px;
+    line-height: 3;
+    letter-spacing: 8px;
   }
 
 }

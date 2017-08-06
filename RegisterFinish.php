@@ -18,10 +18,11 @@
 		$member -> bindValue(":email",$_REQUEST["mail"]);
 		$member -> bindValue(":mugshot","images/7member/mugshots/KimTaeHee.jpg");
 		$member -> bindValue(":suspension","1");
-		$member -> bindValue(":join_time",'2017-08-05 10:54:10');
-		$member -> bindValue(":renew_time",'2017-08-05 10:54:10');	
+		$member -> bindValue(":join_time",'2017-08-05 15:54:10');
+		$member -> bindValue(":renew_time",'2017-08-05 15:54:10');	
 		$member -> execute();
-		echo "新增成功";	
+		echo "新增成功";
+		header("Refresh: 2; url=7member_register3.php");
 
 	}catch(PDOException $ex){
 		echo "資料庫操作失敗,原因：",$ex->getMessage(),"<br>";

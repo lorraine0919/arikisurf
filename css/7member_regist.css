@@ -1,8 +1,8 @@
 @charset "UTF-8";
-img {width: 100%; }
-
 .loading_bg{display: none;}
-body{overflow: scroll;}
+body{overflow-y: scroll;}
+
+img {width: 100%;}
 /*=========清除浮動=========*/
 .setdown26:after {
   content: '';

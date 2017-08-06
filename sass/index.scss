@@ -690,6 +690,7 @@ body{
 			
 			.title{
 				@extend %orangetitle;
+				margin: 20px 0;
 			}
 			.contentMax{
 				@extend %navmax;

@@ -464,6 +464,8 @@ body {
   padding: 20vh 0 0 0;
   background-color: #13324c;
   color: #fff; }
+  .forum_1 .title {
+    margin: 20px 0; }
   .forum_1 .contentMax {
     border-bottom: 1px solid #fff;
     padding: 0 0 20vh 0; }

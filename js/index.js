@@ -123,6 +123,8 @@ $(function(){
 	    items:2,
 	    loop:true,
 	    margin:10,
+	    autoplay: true,
+	    slideSpeed : 2000,
 	    responsive:{
 	    	0:{
 	    		items:1

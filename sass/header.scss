@@ -186,7 +186,7 @@
             }
           }
         }
-/*        .overlay ul li a:hover:after,
+        /*        .overlay ul li a:hover:after,
         .overlay ul li a:focus:after,
         .overlay ul li a:active:after {
           width: 100%;
@@ -291,6 +291,7 @@
   }
 }
 @media screen and (min-width:768px){
+
   .rwd{
     display: none;
   }
@@ -339,6 +340,28 @@
           border-radius: 8px;
           position: relative;
           padding: 2% 0px 1% 0px; 
+            .navbar{
+              display: none;
+            }
+            .overlay{
+              display: inline-block;
+              width: 80%;
+              .nav-title{
+                display: none;
+              }
+              .overlay-menu{
+                display: inline-block;
+                vertical-align: middle;
+                .menu{
+                  width: auto;
+                  li{
+                    a{
+                      padding: 0 10px;
+                    }
+                  }
+                }
+              }
+            }
             .logo {
               width: 15%;
               display: inline-block;
@@ -379,7 +402,8 @@
               display: inline-block;
               width: 33%;
               text-align: right;
-              vertical-align: bottom; 
+              // vertical-align: bottom; 
+              vertical-align: middle;
               #login1{
                 cursor: pointer;
               }
@@ -402,6 +426,7 @@
                   }
                   a {
                     color: #fff; 
+
                   }
                 }
               }
@@ -416,6 +441,9 @@
                 display: inline-block;
                 border-right: 1px solid #0b0b0b;
                 box-shadow: 1px 0px 0px #878a8d; 
+                &.closerwdmenuli{
+                  display: none;
+                }
                 &:nth-child(6) {
                   border-right: none;
                   box-shadow: none; 
@@ -425,6 +453,7 @@
                   color: #fff;
                   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); 
                 }
+
               }
             }
             .idHello {

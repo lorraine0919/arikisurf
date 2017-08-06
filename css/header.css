@@ -43,11 +43,11 @@
       ---- Overlay
       */
       /*        .overlay ul li a:hover:after,
-              .overlay ul li a:focus:after,
-              .overlay ul li a:active:after {
-                width: 100%;
-                background: #ea2e49;
-              }*/
+      .overlay ul li a:focus:after,
+      .overlay ul li a:active:after {
+        width: 100%;
+        background: #ea2e49;
+      }*/
       /*
       ---- Responsive
       */ }
@@ -235,6 +235,20 @@
         border-radius: 8px;
         position: relative;
         padding: 2% 0px 1% 0px; }
+        .navDetail .navfix .navimg .navbar {
+          display: none; }
+        .navDetail .navfix .navimg .overlay {
+          display: inline-block;
+          width: 80%; }
+          .navDetail .navfix .navimg .overlay .nav-title {
+            display: none; }
+          .navDetail .navfix .navimg .overlay .overlay-menu {
+            display: inline-block;
+            vertical-align: middle; }
+            .navDetail .navfix .navimg .overlay .overlay-menu .menu {
+              width: auto; }
+              .navDetail .navfix .navimg .overlay .overlay-menu .menu li a {
+                padding: 0 10px; }
         .navDetail .navfix .navimg .logo {
           width: 15%;
           display: inline-block;
@@ -267,7 +281,7 @@
           display: inline-block;
           width: 33%;
           text-align: right;
-          vertical-align: bottom; }
+          vertical-align: middle; }
           .navDetail .navfix .navimg .iconGroup #login1 {
             cursor: pointer; }
           .navDetail .navfix .navimg .iconGroup ul li {
@@ -294,6 +308,8 @@
             display: inline-block;
             border-right: 1px solid #0b0b0b;
             box-shadow: 1px 0px 0px #878a8d; }
+            .navDetail .navfix .navimg ul.menu li.closerwdmenuli {
+              display: none; }
             .navDetail .navfix .navimg ul.menu li:nth-child(6) {
               border-right: none;
               box-shadow: none; }

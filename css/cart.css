@@ -1,6 +1,12 @@
 .clearfix {
   clear: both; }
 
+.loading_bg {
+  display: none; }
+
+body {
+  overflow-y: scroll; }
+
 @media screen and (min-width: 768px) {
   .body_28 {
     background-image: url("../images/8cart/bg_f.jpg");
@@ -145,6 +151,8 @@
         box-sizing: border-box; }
         .cart-body_28 .cart1-pc_28 .title-group_28 ul li {
           font-size: 20px; }
+      .cart-body_28 .cart1-pc_28 .list-noInfo {
+        padding: 1% 0; }
       .cart-body_28 .cart1-pc_28 .list-group_28 {
         width: 100%;
         margin-bottom: 1px;
@@ -1248,13 +1256,17 @@
           background-color: rgba(255, 255, 255, 0.6);
           box-sizing: border-box;
           padding: 20px 0px; }
-          .order-confirm_30 .ProCfirmInfo-phone .ProCfirmInfo-phone-box ul li .li-tit-item {
-            display: inline-block;
-            width: 30%;
-            margin-left: 10%;
-            margin-bottom: 1%; }
-          .order-confirm_30 .ProCfirmInfo-phone .ProCfirmInfo-phone-box ul li .li-get-item {
-            display: inline-block; }
+          .order-confirm_30 .ProCfirmInfo-phone .ProCfirmInfo-phone-box ul li {
+            margin-bottom: 3%; }
+            .order-confirm_30 .ProCfirmInfo-phone .ProCfirmInfo-phone-box ul li .li-tit-item {
+              display: inline-block;
+              width: 30%;
+              vertical-align: middle;
+              margin-left: 10%; }
+            .order-confirm_30 .ProCfirmInfo-phone .ProCfirmInfo-phone-box ul li .li-get-item {
+              width: 50%;
+              vertical-align: middle;
+              display: inline-block; }
     .order-confirm_30 .OCfirmInfo {
       max-width: 767px;
       width: 100%;

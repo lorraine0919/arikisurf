@@ -1,6 +1,14 @@
 .clearfix{
     clear:both; 
 }
+.loading_bg{
+    display: none;
+}
+
+body{
+    overflow-y: scroll;
+}
+
 @mixin Width-size_8cart($width,$percent,$Mup,$Mdown){
     max-width: $width + px;
     width: $percent ;
@@ -185,7 +193,9 @@ $main-color_29:#5A929E;
                     }
                 }
             }
-
+            .list-noInfo{
+                padding:1% 0;
+            }
             .list-group_28{
                 // border:2px #ccc solid;
                 width: 100%;
@@ -1613,13 +1623,16 @@ $main-color_29:#5A929E;
                     box-sizing: border-box;
                     padding: 20px 0px;
                     li{
+                        margin-bottom:3%;
                         .li-tit-item{
                             display: inline-block;
                             width: 30%;
+                            vertical-align: middle;
                             margin-left:10%;
-                            margin-bottom:1%;
                         }
                         .li-get-item{
+                            width: 50%;
+                            vertical-align: middle;
                             display: inline-block;
                         }
                     }   

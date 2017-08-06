@@ -270,7 +270,7 @@ require_once('connectBooks.php');
                                   <tr>
                                     <td>2</td>
                                     <td>官方圖樣價格</td>
-                                    <td><input class="patternpricechange" type="number" min="0" value="<?php echo $pdoRow['systemparameter_value']?>"><a class="patternpricechangebtn">修改</a></td>
+                                    <td><input class="patternpricechange" type="number" min="0" value="<?php echo $pdoRow['systemparameter_value']?>"><a class="patternpricechangebtn"> 修改</a></td>
                                   </tr>
                                 </tbody>
                           </table>

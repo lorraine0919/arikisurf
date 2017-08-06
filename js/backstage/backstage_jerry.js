@@ -97,7 +97,7 @@ $(function(){
 				    contentType: false
 				}).done(function(res) {
 					$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
-						location.reload();
+						location.reload(); 
 					});
 				}).fail(function(res) {
 					// alert(res);
@@ -124,9 +124,11 @@ $(function(){
 
 	/*↓修改圖片價格*/
 		$('.patternpricechangebtn').click(function(){
+			console.log($(this).siblings('.patternpricechange').val());
+			console.log($(this).parent().parent().index());
 			$.post('9backstage_customize_update.php',{
 				'patternprice': $(this).siblings('.patternpricechange').val(),
-				'offioruser':$(this).parent().parent().index()
+				'offioruser':$(this).parent().parent().index()+1
 			},function(rs){
 				// alert(rs);
 				$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){

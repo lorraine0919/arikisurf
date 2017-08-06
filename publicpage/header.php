@@ -9,7 +9,7 @@
           </div>
      </div>
  </div>
-<p id="goTop"><a href="#"><img src="images/6ariki/Webp.net-gifmaker.gif"></a> </p>
+<p id="goTop"><a href="#"><img src="images/1common/top.png"></a> </p>
 <header>
     <nav class="nav_0">
         <div class="navDetail">

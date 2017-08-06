@@ -32,7 +32,8 @@
     background-image: url("../images/1common/nav2.png");
     background: #11314c;
     position: fixed;
-    z-index: 20; }
+    z-index: 20;
+    padding: 10px; }
     .navfix .navimg {
       margin: 0% 2.6%;
       padding: 2.6% 0%;

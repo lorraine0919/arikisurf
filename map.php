@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css">
   <script src="js/showMap-bamboo.js"></script>
   <script src="js/showMap.js"></script>
-  <title>Map</title> 
+  <title>酋長衝浪Ariki Surf-衝浪地圖</title> 
 </head>
 <body class="map_bamboo">
       <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>

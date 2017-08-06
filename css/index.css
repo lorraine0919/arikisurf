@@ -32,7 +32,11 @@
   font-weight: bold; }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+.loading_bg {
+  display: none; }
 
 .navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb {
   display: none; }

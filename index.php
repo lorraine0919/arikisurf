@@ -38,30 +38,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
     <script src="libs/owl.carousel/dist/owl.carousel.js"></script>
     <script src="js/index.js"></script>
     <script src="js/index_bamboo.js"></script>
-    <script>
-        $(function(){
 
-            var canvas, stage, exportRoot,coconut1,coconut2;
-
-                function init() {
-                    canvas = document.getElementById("canvas1");
-                    exportRoot = new lib5566.LOGO_Animation();
-
-                    stage = new createjs5566.Stage(canvas);
-                    stage.addChild(exportRoot);
-                    stage.update();
-
-                     createjs5566.Ticker.setFPS(24);
-                    createjs5566.Ticker.addEventListener("tick", stage);
-
-            } 
-            
-            init();
-            
-        });
-
-        
-    </script>
  </head>
   <!--header end-->
 <body class="Sashimi">
@@ -464,5 +441,29 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
     </div>
     <!-- <script src="js/index.js"></script> -->
      <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+         <script>
+        $(function(){
+
+            var canvas, stage, exportRoot,coconut1,coconut2;
+
+                function init() {
+                    canvas = document.getElementById("canvas1");
+                    exportRoot = new lib5566.LOGO_Animation();
+
+                    stage = new createjs5566.Stage(canvas);
+                    stage.addChild(exportRoot);
+                    stage.update();
+
+                     createjs5566.Ticker.setFPS(24);
+                    createjs5566.Ticker.addEventListener("tick", stage);
+
+            } 
+            
+            init();
+            
+        });
+
+        
+    </script>
 </body>
 </html>

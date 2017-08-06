@@ -360,9 +360,10 @@
 				}
 				.svgboard{
 					position: absolute;
-					top: 0;
+					top: auto;
 					z-index: 2;
 					width: 100%; 
+					bottom: -30%;
 				}
 				
 				
@@ -612,10 +613,11 @@
 
 				.svgboard{
 					position: absolute;
-					top: 0;
+					top: auto;
 					left: 9%;
 					z-index: 2;
 					width: 100%;
+					bottom:-30%;
 				}
 				img{
 					width: 100%;

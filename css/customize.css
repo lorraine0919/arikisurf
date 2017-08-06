@@ -289,9 +289,10 @@
           width: 150%; }
         .bg_forest_2 .step1_maxContent .demogroup .demo .svgboard {
           position: absolute;
-          top: 0;
+          top: auto;
           z-index: 2;
-          width: 100%; }
+          width: 100%;
+          bottom: -30%; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdselectboard {
         display: none; }
       .bg_forest_2 .step1_maxContent .demogroup .rwdintroduce {
@@ -476,10 +477,11 @@
         padding-top: 109%; }
         .bg_forest_2 .step2_maxContent .demogroup .demo .svgboard {
           position: absolute;
-          top: 0;
+          top: auto;
           left: 9%;
           z-index: 2;
-          width: 100%; }
+          width: 100%;
+          bottom: -30%; }
         .bg_forest_2 .step2_maxContent .demogroup .demo img {
           width: 100%;
           position: absolute; }

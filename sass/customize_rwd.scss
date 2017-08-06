@@ -45,11 +45,11 @@
 					margin: auto;
 					position: relative;
 					.base{
-						bottom: 0%;
+						bottom: -4%;
 					}
 					.svgboard{
 						top: auto;
-						bottom: 3%;
+						bottom: -1%;
 					    width: 129%;
 					    right: -10%;
 					}
@@ -130,7 +130,7 @@
 			    margin: 0;
 			    width: 100%;
 			    box-sizing: border-box;
-			    padding: 5px 10px;
+			    padding: 5px 18px;
 
 				}
 			}
@@ -163,13 +163,13 @@
 					margin: auto;
 					position: relative;
 					.base{
-						bottom: -3%;
+						bottom: -4%;
 						width: 153%;
 						left: -28%;
 					}
 					.svgboard{
 					    width: 99%;
-					    bottom: 3%;
+					    bottom: -1%;
 					    left: -10%;
 					}
 				}
@@ -377,6 +377,7 @@
 				left: 0;
 				margin: auto; 
 				.next{
+					text-align: center;
 					position: absolute;
 					right: 0%;
 					bottom: 0;
@@ -389,6 +390,7 @@
 						width: 23.5%;
 						box-sizing:border-box;
 						padding: 5px 10px;
+						float: right;
 					}
 					#step2tostep1{
 						width: 23.5%;
@@ -485,6 +487,7 @@
 								font-size: 15px;
 							}
 							.next{
+								text-align: center;
 								.arikicommon_next_btn{
 									margin: 5px 8px;
 									width: 29.5%;
@@ -493,6 +496,9 @@
 								}
 								#step3tostep2{
 									float: left;
+								}
+								#step3tostep4{
+									float: right;
 								}
 							}
 						}

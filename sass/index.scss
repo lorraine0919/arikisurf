@@ -10,7 +10,9 @@ $top:16vh;
 .Sashimi {
   overflow-y: hidden; 
 }
-
+#goTop{
+	display: none;
+}
 
 %textsha{
 	text-shadow:1px 1px 5px rgba(0,0,0,0.8);

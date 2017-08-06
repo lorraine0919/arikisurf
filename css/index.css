@@ -3,6 +3,9 @@
 .Sashimi {
   overflow-y: hidden; }
 
+#goTop {
+  display: none; }
+
 .slogan_1, .coating_1, .picture_1, .map_1 {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   color: #fff; }

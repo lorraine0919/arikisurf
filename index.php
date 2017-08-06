@@ -273,22 +273,36 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
     </div>
     <div class="map_1">
         <div class="contentMax">
+            <div class="map_box col-sm-12">
+                <div class="Earth_shadow">
+                    
+                </div>
+                <div class="map_Earth">
+                    <div class="map_islands">
+                        <img src="images/1common/map-1.png">
+                    </div>
+                </div>
+            </div>
             <div class="introduce col-xs-12 col-sm-12">
                 <div class="introduceWord">
                     <h2>走向高手雲集浪點 衝破完美弧線</h2>
                     <p>你體內征服者的細胞正在蠢蠢欲動嗎？<br>
                         對於平淡無奇的波幅已經感到厭倦了嗎？<br>
                         酋長衝浪將給你全新的浪點、全新的視野。</p>
+                    <a href="map.html">MORE INFO</a>
                 </div>
+
+
+
             </div>
-            <div class="map col-sm-12">
-                <div class="mapimg">
-                    <a href="map.php"><img src="images/1common/map.png" class="mapimgpic"></a>
+            
+                <!-- <div class="mapimg">
+                    
                     <div class="pin">
                         <img src="images/1common/pin.png" class="pinpic">
                     </div>
-                </div>
-            </div>
+                </div> -->
+            
             <div class="clearfix"></div>
         </div>
     </div>

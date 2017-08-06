@@ -646,13 +646,29 @@ body{
 
 		}
 		.map_1{
+			// height: 85vh;
+			position: relative;
 			background-color: #0e2334;
-			padding: 20vh 0 0 0;
+			padding: 20vh 0 47vh 0;
 			background-image: url('../images/1common/maplight.png');
 			@extend %bgnrpc;
 			@extend %whiteword;
 			background-size: cover;
+			&:before{
+				content: '';
+				position: absolute;
+				top:0;
+				left:0;
+
+				display:block; 
+				height: 100%;
+				width: 100%;
+				background-image: url('../images/1common/map-9487.png');
+				background-size: contain;
+
+			}
 			.contentMax{
+				// height: 85vh;
 				@extend %navmax;
 				.introduce{
 					text-align: right;
@@ -661,26 +677,114 @@ body{
 						display: inline-block;
 						text-align: left;
 					}
+				a{
+					position: absolute;
+					margin:5vh 0 5vh; 
+					color: #fff;
+    				text-shadow: none;
+ 					padding: 20px;
+    				border: 1px solid #fff;
+    				border-radius: 10px;
+    				font-weight: bold;
+    				display: inline-block;
+
 				}
-				.map{
-					margin: 0 0 0vh 0;
-					.mapimg{
-						position: relative;
-						.mapimgpic{
-							width: 100%;
-						}
-						.pin{
-							display: none;
-							width: 8%;
+
+				a:hover {
+  					background-color: #e97b23;
+    				border: none;
+				}	
+
+				}
+
+				.map_box{
+					position:relative;
+
+					.Earth_shadow{
+
+						position:absolute;
+						top:0;
+						left:10%; 
+						z-index:2;
+						border-radius: 50%;
+
+						height:500px;
+						width:500px;
+						box-shadow: 13px -10px 35px 0px #0e2334 inset,13px -10px 85px 10px #11314c inset,13px -10px 185px 10px #11314c inset,13px -10px 185px 10px rgba(101,161,212,0.3),3px 1px 15px 0px #0f2435,-13px 10px 35px 0px #0e2334,-13px 10px 55px 0px #0e2334;
+
+					}
+
+					.map_Earth{
+						height:500px;
+						width:500px;
+						// box-shadow: 13px -10px 35px 0px #0e2334 inset,13px -10px 85px 10px #11314c inset,13px -10px 185px 10px #11314c inset,13px -10px 185px 10px rgba(101,161,212,0.3),3px 1px 15px 0px #0f2435,-13px 10px 35px 0px #0e2334,-13px 10px 55px 0px #0e2334;
+					
+						overflow: hidden;
+						position:absolute;
+						top:0;
+						left:10%; 
+						z-index:1;
+						border-radius: 50%;
+						// background-color: #17c0ff;  
+						background: rgb(30,87,153); /* Old browsers */
+					    background: -webkit-linear-gradient(bottom left, rgb(30,87,153) 0%, rgb(125,185,232) 100%);
+					    background: -o-linear-gradient(bottom left, rgb(30,87,153) 0%, rgb(125,185,232) 100%);
+					    background: linear-gradient(to top right, rgb(30,87,153) 0%, rgb(125,185,232) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+
+						
+						.map_islands{
 							position: absolute;
-						    top: 29%;
-						    left: 37%;
-							.pinpic{
+							top:35%;
+							left:30%;
+							width: 60vw;
+							height: 60vh;
+							animation:map 15s linear infinite;
+    						
+
+							img{
 								width: 100%;
 							}
 						}
+
+				
+
+
 					}
+
 				}
+
+
+				@keyframes map {
+							  0%{
+							   	top:35%;
+								left:30%;
+							  }
+							  
+							  100%{
+							    top:-95%;
+								left:-100%;
+							  }
+							}					
+			
+				// .map{
+				// 	margin: 0 0 0vh 0;
+				// 	.mapimg{
+				// 		position: relative;
+				// 		.mapimgpic{
+				// 			width: 100%;
+				// 		}
+				// 		.pin{
+				// 			display: none;
+				// 			width: 8%;
+				// 			position: absolute;
+				// 		    top: 29%;
+				// 		    left: 37%;
+				// 			.pinpic{
+				// 				width: 100%;
+				// 			}
+				// 		}
+				// 	}
+				// }
 			}
 		}
 		.forum_1{

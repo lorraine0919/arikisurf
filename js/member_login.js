@@ -77,7 +77,7 @@ $(function(){
 		                // $("#login1").text("登出");
 		                $("#lightbox19").css('display',"none");
 		                logined = 2;
-		                // location.reload();
+		                location.reload();
 		             }else{
 		                alert("帳號或密碼錯誤");
 		                return;

@@ -124,7 +124,7 @@ $pdo->exec($sqlview);
                        });
                        var submitcount=0;
                        $('#submit').click(function(){                           
-                            if(submitcount==0){         //送出沒點過
+                            if(submitcount==0){           //送出沒點過
                               var a = $('.report').val();
                               console.log(a);
                               function reqListener(){
@@ -174,10 +174,25 @@ $pdo->exec($sqlview);
     }//while end
 ?>             
             <div class="back">
+            <script>
+            var bangarr=[
 <?php 
-       $sqlreply="select * from member,map_reply 
-                  where member.member_no = map_reply.member_no
-                  and post_number=$post_number";
+  $sqlreplybang="select *   
+                 from  map_replybang 
+                 where post_number=$post_number;";
+  $pdostatement=$pdo->query($sqlreplybang);
+  while($pdorow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
+    echo  $pdorow['reply_number'].',';
+  }
+ ?>                ];
+            console.log(bangarr);
+            </script>
+ 
+<?php 
+       $sqlreply="select map_replybang.result,map_reply.reply_content,member.mugshot,member.name,map_reply.reply_time , map_replybang.post_number 
+         from member,map_reply,map_replybang
+         where member.member_no = map_reply.member_no
+         and map_replybang.post_number=$post_number and map_reply.post_number=$post_number";
        $re = $pdo->query($sqlreply);
        while($reRow = $re->fetch(PDO::FETCH_ASSOC)) {
 ?>                   
@@ -193,14 +208,25 @@ $pdo->exec($sqlview);
                          <div class="txt">
                               <?php echo $reRow["reply_content"] ?>                              
                          </div>
-                         <input type="hidden" class="reply_number" name="reply_number" value="<?php echo $reRow["reply_number"]; ?>">
+                         <!-- <input type="hidden" class="reply_number" name="reply_number" value="<?php echo $reRow["reply_number"]; ?>"> -->
                          <input type="hidden" class="post_number" name="post_number" value="<?php echo $post_number ?>">
-                    </div><!-- feed_c -->                                           
+                    </div><!-- feed_c -->                                         
                     <div class="quit many">檢舉</div>
+                    <input type="hidden" class="result" name="result" value="<?php echo $reRow["result"] ?>">
               </div><!-- feed -->
 <?php 
        }//while end
-?>                  
+?>                 
+    <script>
+      for (var i = 0; i < $('.result').length; i++) {
+        if($('.result').eq(i).val()=="2"){
+          $('.many').eq(i).css('color','#f00');
+        }
+      }
+      
+    </script>
+
+
 <?php 
      $sqlimg="select mugshot from member where member_no=$member_no";
      $imgdata = $pdo->query($sqlimg);

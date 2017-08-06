@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 $replyBang_reason = $_REQUEST["report"];
-$result = 1;
+$result = 2;
 $member_no=$_SESSION["member"]["member_no"];
 $post_number = $_REQUEST["post_number"];
 $reply_number = $_REQUEST["reply_number"];

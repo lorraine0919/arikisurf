@@ -30,10 +30,17 @@ require_once('connectBooks.php');
                                   <input type="text" name="" class="new_guardsR">
                                 </td>
                                 <td>
-                                  <input type="password" name="" class="new_guardsG">
+                                    <select class=" " id=" " name=" " onchange = " ";>
+                                        <option value="">排序方式</option>
+                                        <option value="account">帳號</option>
+                                        <option value="name">姓名</option>
+                                        <option value="city">城市</option>
+                                        <option value="renew_time">更新時間</option>
+                                        <option value="join_time">註冊時間</option>
+                                    </select>
                                 </td>
                                 <td>
-                                  <input type="submit" name="" class="new_guardsB" value="查詢">
+                                  <input type="button" name="btn38" id="btn38" class="new_guardsB" value="查詢">
                                </td>
                               </tr>
                           </table><!-- 上table結束 -->
@@ -53,8 +60,11 @@ require_once('connectBooks.php');
                             </thead>
                               <tbody>
                                 <?php 
-                                      $sql = 'select * from member';
+                                      $choise = 'member_no';
+                                      $sql = 'select * from member order by :choise';
                                       $memberList=$pdo->prepare($sql);
+                                      $member->bindValue(":choise",$choise);
+                                      /*問題一:排序*/
                                       $memberList->execute();
                                       $i=0;
                                         while($eachMember=$memberList->fetch(PDO::FETCH_ASSOC)){
@@ -63,6 +73,17 @@ require_once('connectBooks.php');
                                       if($gender==1){
                                         $title="<br>先生";
                                       }else{$title="<br>女士";}
+
+                                      $suspension==$eachMember['suspension'];
+                                      if($suspension==1){
+                                        
+                                      }else{
+                                      // for (var i = 0; i <$id('slct2').childNodes.length; i++) {
+                                      //     if($id('slct2').childNodes[i].value==area){
+                                      //         $id('slct2').childNodes[i].setAttribute('selected','selected');
+                                      //     }
+                                      // }
+                                      }
                                 ?>
 
                                     <tr class="modeltr t<?php echo $i?>">
@@ -106,7 +127,10 @@ require_once('connectBooks.php');
 <?php require_once('publicpage/backstage_footer.php'); ?>
 
 <script type="text/javascript" src="js/backstage/backstage_backboo.js"></script>
+<script type="text/javascript">
 
+  window.onload = document.getElementById("btn38").addEventListener('click',Order,false);
+</script>
 <?php 
   }catch(PDOException $e){
     echo $e->getLine();

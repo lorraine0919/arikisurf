@@ -27,7 +27,58 @@ window.onload=function(){
 	$('#step2tostep1').click(tostep1);
 	$('#step1tostep2').click(tostep2);
 	$('#step3tostep2').click(tostep2);
-	$('#step2tostep3').click(tostep3);
+	$('#step2tostep3').click(function(){
+		// alert($('.memberloginornot').val());
+		if($('.memberloginornot').val()=='2'){
+			$('.loginremindlightboxgroup').fadeIn(500);
+			$('#gotologin').click(function(){
+				$('.loginremindlightboxgroup').fadeOut(500,function(){
+					$('.content19').fadeIn(500);
+					$('#submit19').click(function(){
+						$.post('customize_update.php',{
+				            'memId2' : $('#memId').val() ,
+				            'memPsw2' :  $('#memPsw').val()
+						},function(rs){
+							// alert(rs);
+							var rsarr=rs.split('|');
+							if(rsarr[0]=='1'){
+								$('.memberloginornot').val('1');
+								$('#customername').val(rsarr[1]);
+								$('#customerphone').val(rsarr[2]);
+								$('#customeremail').val(rsarr[3]);
+								$('#customeraddress').val(rsarr[4]);
+							}else{
+
+							}
+						});						
+					});
+				});
+				
+			});
+			$('#loginremindclosebtn').click(function(){
+				$('.loginremindlightboxgroup').fadeOut(500);
+			})
+		}else{
+			$.post('customize_update.php',{
+				'havelogin':'yes'
+			},function(rs){
+				// alert(rs);
+				var rsarr=rs.split('|');
+				console.log(rsarr);
+				if(rsarr[0]=='1'){
+					$('.memberloginornot').val('1');
+					$('#customername').val(rsarr[1]);
+					$('#customerphone').val(rsarr[2]);
+					$('#customeremail').val(rsarr[3]);
+					$('#customeraddress').val(rsarr[4]);
+					tostep3();
+				}else{
+
+				}
+			});	
+			
+		}
+	});
 	$('#step4tostep3').click(tostep3);
 	//三到四要驗證資料
 

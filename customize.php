@@ -46,6 +46,16 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 				</div>
 			</div>
 		</div>
+		<div class="loginremindlightboxgroup">
+			<div class="loginremindlightboxarea">
+				<h2 class="loginremindlightboxtitle"></h2>
+				<p class="loginremindlightboxcontent">請先登入</p>
+				<a class="arikicommon_next_btn" id="gotologin">前往登入</a>
+				<div id="loginremindclosebtn">
+					<i class="fa fa-times" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
 		<div class="stopselllightboxgroup">
 			<div class="stopselllightboxarea">
 				<p class="stopselllightboxcontent">本項目已停賣</p>
@@ -99,7 +109,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 				</div>
 				<div class="introducefix">
 					<div class="head">
-						<h3>長板（Longboard）</h3>
+						<h3>長板（LONGBOARD）</h3>
 					</div>
 					<div class="content">
 						<p>長板，非常適合初學者進階練習的好板型，浮力大、滑水輕鬆、穩定性強</p>
@@ -523,6 +533,8 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 			</div>
 		</div>
 		<div class="step3_maxContent">	
+			<input type="hidden" value="<?php echo isset($_SESSION['member_no']) ?  '1' :  '2'; ?>" class="memberloginornot">
+			<!-- 1是有登入，2是沒登入 -->
 			<div class="stepbar">
 				<div class="circle"></div>
 				<h3 class="undercircle">填寫購買資料</h3>
@@ -570,7 +582,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 								</tr>
 								<tr>
 									<th><h3>收件地址</h3></th>
-									<td><textarea rows="5" id="customeraddress" class="orederinput"></textarea></td>
+									<td><textarea rows="3" id="customeraddress" class="orederinput"></textarea></td>
 								</tr>
 								<tr>
 									<th><h3>匯款帳號後五碼</h3></th>

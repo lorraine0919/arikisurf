@@ -60,6 +60,48 @@
           font-size: 30px;
           margin: 0 5px 0 0;
           color: #0e2334; }
+  .bg_forest_2 .loginremindlightboxgroup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none; }
+    .bg_forest_2 .loginremindlightboxgroup .loginremindlightboxarea {
+      max-width: 263px;
+      max-height: 30vh;
+      background-color: white;
+      position: relative;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 27px 27px 61px 27px;
+      transform: translateY(-50%);
+      margin: 0 auto;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-image: url("../images/7member/7member_ordercheck/decoration.png");
+      background-repeat: no-repeat;
+      background-position: 0% 113%; }
+      .bg_forest_2 .loginremindlightboxgroup .loginremindlightboxarea p {
+        height: 15vh;
+        line-height: 15vh;
+        color: #4d6273;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 18px; }
+      .bg_forest_2 .loginremindlightboxgroup .loginremindlightboxarea #loginremindclosebtn {
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .bg_forest_2 .loginremindlightboxgroup .loginremindlightboxarea #loginremindclosebtn .fa {
+          font-size: 30px;
+          margin: 0 5px 0 0;
+          color: #0e2334; }
   .bg_forest_2 .comfirmlightboxgroup {
     width: 100%;
     height: 100%;
@@ -747,6 +789,8 @@
             color: rgba(255, 255, 255, 0.6);
             padding: 7px 10px 10px 10px;
             display: inline-block; }
+            .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content input, .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content textarea {
+              font-size: 16px; }
             .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content h3 {
               font-weight: 100; }
             .bg_forest_2 .step3_maxContent .fill .fillfix .contentgroup .content table {

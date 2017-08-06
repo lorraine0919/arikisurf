@@ -1,4 +1,6 @@
 <?php 
+session_start();
+ob_start();
 	try{
 		require_once('connectBooks.php');
 		/*步驟一倒出浪板價錢*/
@@ -48,7 +50,7 @@
 			echo date("Y-m-d");
 			$sql = 'insert into `customize_order` (`customize_orderNo` , `member_no` , `customize_order_date` , `customize_tel` ,`customize_email`,`customize_adress`,`customize_order_status`,`customize_atm_acount`,`customize_usermessage`,`modelNo`,`materialNo`,`colorNo`,`boarddemo`,`customize_order_total`) values (null,  :member_no, :customize_order_date, :customize_tel, :customize_email,:customize_adress,"1",:customize_atm_acount,:customize_usermessage,:modelNo,:materialNo,:colorNo,:boarddemo,:customize_order_total)';
 			$pdostatement = $pdo->prepare( $sql );
-			$pdostatement->bindValue(":member_no" , 1);
+			$pdostatement->bindValue(":member_no" , $_SESSION['member_no']);
 			$pdostatement->bindValue(":customize_order_date" ,date("Y-m-d"));
 			$pdostatement->bindValue(":customize_tel" , $_REQUEST['customize_tel']);
 			$pdostatement->bindValue(":customize_email" ,$_REQUEST['customize_email']);
@@ -93,6 +95,45 @@
 			$jsonStr = json_encode($pdoRow);
 			echo $jsonStr;
 
+		}
+		/*在客製化頁面登入*/
+		if(isset($_REQUEST['memId2'])){
+			require_once("connectBooks.php");
+			$sql = "select * from member where account = :memId and psw = :memPsw";
+			$member = $pdo->prepare($sql);
+			$member -> bindValue(":memId",$_REQUEST["memId2"]);
+			$member -> bindValue(":memPsw",$_REQUEST["memPsw2"]);
+			$member -> execute();
+				
+			//登入成功，將登入者資訊寫入session
+		       
+			if( $member->rowCount() !=0 ){
+			    $memRow = $member->fetch(PDO::FETCH_ASSOC);
+			    $_SESSION["account"] = $memRow["account"];
+		        $_SESSION["member_no"] = $memRow["member_no"];
+		        $_SESSION["psw"] = $memRow["psw"];
+				echo '1'.'|';
+				echo $memRow["name"].'|';
+				echo $memRow["phone"].'|';
+				echo $memRow["email"].'|';
+				echo $memRow["city"].$memRow["area"].$memRow["address"];
+			}else{
+				echo '2';
+			}
+		}
+		/*在其他頁面登入*/
+		if(isset($_REQUEST['havelogin'])){
+			require_once("connectBooks.php");
+			$sql = "select * from member where member_no=:member_no";
+			$member = $pdo->prepare($sql);
+			$member -> bindValue(":member_no",$_SESSION["member_no"]);
+			$member -> execute();
+			$memRow = $member->fetch(PDO::FETCH_ASSOC);
+			echo '1'.'|';
+			echo $memRow["name"].'|';
+			echo $memRow["phone"].'|';
+			echo $memRow["email"].'|';
+			echo $memRow["city"].$memRow["area"].$memRow["address"];						
 		}
 
 	}catch(PDOException $e){

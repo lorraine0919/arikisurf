@@ -3,7 +3,7 @@ ob_start();
 session_start();
 require_once("connectBooks.php");
 
-$member_no = $_SESSION["member"]["member_no"];
+$member_no = $_SESSION["member_no"];
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 $_SESSION["map_reply"]["post_number"] = $_REQUEST["post_number"];
 

@@ -14,7 +14,8 @@
 	       
 		if( $member->rowCount() !=0 ){
 		    $memRow = $member->fetch(PDO::FETCH_ASSOC);
-	        $_SESSION["account"] = $memRow["account"];
+		    $_SESSION["account"] = $memRow["account"];
+	        $_SESSION["member_no"] = $memRow["member_no"];
 	        $_SESSION["psw"] = $memRow["psw"];
 			echo 1;
 		}else{

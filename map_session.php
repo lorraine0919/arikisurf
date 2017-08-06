@@ -4,8 +4,6 @@ session_start();
 require_once("connectBooks.php");
 $_SESSION["map_wave"]["wave_number"] = $_REQUEST["wave_number"];
 
-$_SESSION["member"]["member_no"] = 3;
-
 $sql = "select name
         from member
         where member_no = :member_no";

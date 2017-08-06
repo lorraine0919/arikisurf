@@ -5,7 +5,7 @@ session_start();
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 $post_number=$_REQUEST["post_number"];
 $textarea = $_REQUEST["feed"];
-$member_no = $_SESSION["member"]["member_no"];
+$member_no = $_SESSION["member_no"];
 $name = $_SESSION["member"]["name"];
 
 $reply_time = date("Y-m-d H:i:s"); 

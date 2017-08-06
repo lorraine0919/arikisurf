@@ -2,7 +2,7 @@
 session_start();
 ob_start(); 
 require_once("connectBooks.php");
-$member_no=$_SESSION["member"]["member_no"];
+$member_no=$_SESSION["member_no"];
 $sql="select *
       from map_like,map_post
       where map_like.post_number = map_post.post_number

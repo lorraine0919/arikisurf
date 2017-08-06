@@ -6,7 +6,7 @@ try{
 	$post_number = $_REQUEST["post_number"];
     $postBang_reason = $_REQUEST["report"];
     $reason=2;
-    $member_no=$_SESSION["member"]["member_no"];
+    $member_no=$_SESSION["member_no"];
 	$sql="insert into map_postbang values(null,'$postBang_reason',$reason,$member_no,$post_number)";
     if($postBang_reason!=""){
     	$pdo->exec($sql);

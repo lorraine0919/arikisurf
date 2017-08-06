@@ -1,4 +1,7 @@
 @media screen and (max-width: 767px) {
+  #goTop {
+    display: none; }
+
   .map_bamboo_3 {
     padding-top: 100vh;
     position: absolute;

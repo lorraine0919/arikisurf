@@ -4,6 +4,9 @@
 body {
   overflow-y: scroll; }
 
+#goTop {
+  display: none; }
+
 .map_bamboo_3 {
   max-width: 1170px;
   margin: auto;

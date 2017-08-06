@@ -14,6 +14,9 @@
 .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(2) a {
   color: #e97b23; }
 
+#goTop {
+  display: none; }
+
 .bg_forest_2 {
   background-image: url("../images/2board/forest.png");
   background-size: cover;

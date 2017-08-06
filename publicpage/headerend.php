@@ -52,7 +52,7 @@
 <div class="content19"  style="display:none;" id="lightbox19">
     <form class="main19" method="post" id="form19">
         <div class="head19">
-            <p>會員登入</p>
+            <p> 會員登入</p>
             <p class="slogan19">
                 <i>Your board always top!</i>
             </p>
@@ -62,7 +62,7 @@
             <input type="password" minlength="6" maxlength="12" placeholder="密碼" class="input19" id="memPsw">
             <p class="help19">
                 <span>
-                    <input type="checkbox" name="">忘記密碼  | 
+                    <a href="7member_register.php">忘記密碼</a>  | 
                 </span>
                 <span>
                     <a href="7member_register.php">馬上註冊</a>

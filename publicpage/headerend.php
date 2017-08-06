@@ -17,7 +17,16 @@
                                 <li><a href="map.php">衝浪地圖</a></li>
                                 <li><a href="news.php">最新消息</a></li>
                                 <li><a href="about.php">關於酋長</a></li>
-                                <li><a class="rwd" id="login2">會員登入</a></li>
+                                <li>
+                                    <?php 
+                                        // echo $_SESSION["account"];
+                                        if(isset($_SESSION["account"])){
+                                            echo "<a class='rwd' id='login2' href='7member_update.php'><span id='login1'>會員專區</span></a>";
+                                        }else{
+                                            echo "<span id='login2'>會員登入</span>";
+                                        }
+                                     ?>                                    
+                                </li>
                                 <li><a href="cart.php" class="rwd">購物車</a></li>
                                 <li class="closerwdmenuli"><img class="close-menu" src="images/1common/close.svg" alt=""/></li>
                             </ul>

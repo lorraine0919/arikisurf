@@ -312,7 +312,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>Pipeline</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content selected">
                             <div class="word">
                                 <h3>現代衝浪的發源地</h3>
@@ -328,6 +328,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Superbank -->
@@ -340,7 +341,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>SuperBank</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content">
                             <div class="word">
                                 <h3>Quicksilver職業比賽地</h3>
@@ -355,6 +356,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Jeffrey's Bay -->
@@ -367,7 +369,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>Jeffrey’s Bay</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content">
                             <div class="word">
                                 <h3>浪人心中的最佳浪點</h3>
@@ -383,6 +385,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Black Beach -->
@@ -395,7 +398,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>SuperBank</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content">
                             <div class="word">
                                 <h3>浪高五米的進階浪點</h3>
@@ -410,6 +413,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Teahupo'o -->
@@ -422,7 +426,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>Jeffrey’s Bay</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content">
                             <div class="word">
                                 <h3>衝浪最早的起源地</h3>
@@ -438,6 +442,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
                 <!-- La Graviere -->
@@ -450,7 +455,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>SuperBank</h4>
                             </div> -->
                             </div>
-                        </a>
+                       
                         <div class="content">
                             <div class="word">
                                 <h3>適合初學者的好浪點</h3>
@@ -465,6 +470,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                         </a>
                     </div>
                 </div>
                 <!-- Uluwatu -->
@@ -477,7 +483,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>Jeffrey’s Bay</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content">
                             <div class="word">
                                 <h3>經典礁石浪</h3>
@@ -493,6 +499,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Cloudbreak -->
@@ -505,7 +512,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>SuperBank</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content">
                             <div class="word">
                                 <h3>全年有好浪的浪點</h3>
@@ -520,6 +527,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Maverick's -->
@@ -532,7 +540,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>Jeffrey’s Bay</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content">
                             <div class="word">
                                 <h3>勇敢浪人挑戰點</h3>
@@ -548,6 +556,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
             </div>

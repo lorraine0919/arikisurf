@@ -319,7 +319,10 @@
               display: block;
               margin: auto; }
             .navDetail .navfix .navimg .iconGroup ul li a {
-              color: #fff; }
+              color: #fff;
+              transition: 0.5s; }
+              .navDetail .navfix .navimg .iconGroup ul li a:hover {
+                color: #ed8c00; }
         .navDetail .navfix .navimg ul.menu {
           display: inline-block;
           width: 50%;

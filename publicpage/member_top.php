@@ -36,9 +36,9 @@
 
                 </div><!-- base20 -->
                 <ul class="menu20">
-                    <li><a href="7member_update.php">修改個人資料</a></li>
-                    <li><a href="7member_ordercheck.php">訂單查詢</a></li>
-                    <li><a href="7member_love.php">我的收藏</a></li>
+                    <li><a id="mem_1" href="7member_update.php">個人資料</a></li>
+                    <li><a id="mem_2" href="7member_ordercheck.php">訂單查詢</a></li>
+                    <li><a id="mem_3" href="7member_love.php">我的收藏</a></li>
                     <li><a id="logout">登出</a></li>
                 </ul><!-- menu20 -->
             </div><!-- sidebar20 -->

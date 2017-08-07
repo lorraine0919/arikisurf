@@ -17,8 +17,10 @@ $pdo->exec($sqlview);
 <html lang="en">
 <head>
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
-  <link rel="stylesheet" type="text/css" href="css/star.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fontawesome-stars.css">
   <link rel="stylesheet" type="text/css" href="css/discussion.css">
+  <script src="js/jquery.barrating.min.js" type="text/javascript"></script>
   <script src="js/showMap.js"></script>
   <script src="js/reply.js"></script>
   <style type="text/css">
@@ -69,31 +71,36 @@ $pdo->exec($sqlview);
      $sql2="select * from member,map_post 
             where member.member_no = map_post.member_no 
             and wave_number=$wave_number 
-            and post_number=$post_number ";
+            and post_number=$post_number";
      $post = $pdo->query($sql2);
      while ($postRow = $post->fetch(PDO::FETCH_ASSOC)) {    
- ?>    
+?>    
      <div class="bg_11">
       <div class="title">
           <h1><?php echo $postRow["post_title"]; ?></h1>
           <div class="gol">
+          <select class="star">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <input class="gg" type="hidden" value="<?php echo $postRow["star_score"]; ?>">
+          </select>
+<script>
+      $(document).ready(function(){
+         $('.star').barrating({
+                theme: 'fontawesome-stars'
+           });
+         console.log($('.gg').val());
+         $('.star').barrating('set',$('.gg').val());
+       });
+</script>          
 <?php 
       $sqllove = "select * from map_like where post_number=$post_number";
       $aba = $pdo->query($sqllove);
       $love = ($aba->rowCount()!=0) ? "heart_red.png" : "heart_white.png";
-?>          
-          <div id="starBg" class="star_bg">                     
-              <input type="radio" id="starScore1" class="score score_1" value="1" name="score">
-              <a class="star star_1" title="差"><label class="lab" for="starScore1">差</label></a>
-              <input type="radio" id="starScore2" class="score score_2" value="2" name="score">
-              <a class="star star_2" title="較差"><label class="lab" for="starScore2">較差</label></a>
-              <input type="radio" id="starScore3" class="score score_3" value="3" name="score">
-              <a class="star star_3" title="普通"><label class="lab" for="starScore3">普通</label></a>
-              <input type="radio" id="starScore4" class="score score_4" value="4" name="score">
-              <a class="star star_4" title="較好"><label class="lab" for="starScore4">較好</label></a>
-              <input type="radio" id="starScore5" class="score score_5" value="5" name="score">
-              <a class="star star_5" title="好"><label class="lab" for="starScore5">好</label></a>
-          </div>
+?>
           <div class="lovepic">
                <img src="images/4wavepoint/<?php echo $love;?>" id="love">
                <div id="loveinfo"></div>         

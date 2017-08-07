@@ -23,7 +23,13 @@ ob_start();
 <div class="member_ordercheck_23">
     <?php
         try{
+            if(isset($_SESSION["account"]) == false){
+		echo "<script>window.alert('尚未登入,請登入');location.href='index.php';</script>";
+        }else{
+            
+        
     ?>
+    <input type="hidden" name="" value="<?php echo $_SESSION["member_no"]?>" class="memNo">
     <div class="ordercheck-title">
         <ul>
             <li id="customize_ODC" class="li-click"><p>客製浪板</p></li>
@@ -52,8 +58,12 @@ ob_start();
                         where   customize_order.member_no = member.member_no and 
                                 customize_order.colorNo = customize_color.colorNo and
                                 customize_order.modelNo = customize_model.modelNo and
-                                customize_order.materialNo = customize_material.materialNo;";
-                $order = $pdo->query($sql);
+                                customize_order.materialNo = customize_material.materialNo and
+                                customize_order.member_no = :member and
+                                customize_order.customize_order_status <5 ";
+                $order = $pdo->prepare($sql);
+                $order->bindValue(':member',$_SESSION["member_no"]);
+                $order->execute();
 
                 while($order_CK = $order->fetch()){
             ?>
@@ -72,10 +82,6 @@ ob_start();
                                     echo "已出貨";
                                 }else if($order_CK["customize_order_status"]==4){
                                     echo "申請中";
-                                }else if($order_CK["customize_order_status"]==5){
-                                    echo "取消交易";
-                                }else if($order_CK["customize_order_status"]==6){
-                                    echo "交易完成";
                                 }
                             ?>
                         </span>
@@ -96,6 +102,7 @@ ob_start();
                     <input type="hidden" name="" value="<?php echo $order_CK["customize_adress"] ?>">
                     <input type="hidden" name="" value="<?php echo $order_CK["customize_atm_acount"] ?>">
                     <input type="hidden" name="" value="<?php echo $order_CK["customize_usermessage"] ?>">
+                    
                 </div>
             <?php
                 }
@@ -117,8 +124,12 @@ ob_start();
             <?php
                 $sql2 = "select * from surfequipped_order
                         join member
-                        where surfequipped_order.member_no = member.member_no;";
-                $surfOD = $pdo->query($sql2);
+                        where surfequipped_order.member_no = member.member_no and
+                              member.member_no = :member and
+                              surfequipped_order.order_status <5";
+                $surfOD = $pdo->prepare($sql2);
+                $surfOD->bindValue(':member',$_SESSION["member_no"]);
+                $surfOD->execute();
 
                 while($order_SF = $surfOD->fetch()){
             ?>
@@ -147,10 +158,6 @@ ob_start();
                                     echo "已出貨";
                                 }else if($order_SF["order_status"]==4){
                                     echo "申請中";
-                                }else if($order_SF["order_status"]==5){
-                                    echo "取消交易";
-                                }else if($order_SF["order_status"]==6){
-                                    echo "交易完成";
                                 }
                             ?>
                         </span>
@@ -190,7 +197,7 @@ ob_start();
                                      member.member_no = :account
                                order by customize_order.customize_orderNo";
                     $HT_sql1 = $pdo->prepare($sql_CT);
-                    $HT_sql1->bindValue(":account",1);
+                    $HT_sql1->bindValue(":account",$_SESSION["account"]);
                     $HT_sql1->execute();
                     
                     while($HT_IP = $HT_sql1->fetch()){
@@ -237,7 +244,7 @@ ob_start();
                                     member.member_no = :account
                                 order by surfequipped_order.surfequipped_orderNo";
                     $HT_sql2 = $pdo->prepare($sql_FT);
-                    $HT_sql2->bindValue(":account",1);
+                    $HT_sql2->bindValue(":account",$_SESSION["account"]);
                     $HT_sql2->execute();
                     
                     while($HT_IP = $HT_sql2->fetch()){
@@ -328,7 +335,7 @@ ob_start();
                         <img src="" class="cust-OD-img"> 
                     </div>
                     <div class="cust-btn">
-                        <div class="arikicommon_bgwhite_btn">取消交易</div>
+                        <div class="arikicommon_bgwhite_btn customize-cancle">取消交易</div>
                         <div class="arikicommon_important_btn customize-exit">確認離開</div>
                     </div>
                     <div class="clearfix"></div>
@@ -440,6 +447,7 @@ ob_start();
         </div>
     </div>
     <?php
+            }
         }catch(PDOException $e){
             echo "錯誤行號 : ", $e->getLine(), "<br>";
             echo "錯誤訊息 : ", $e->getMessage(), "<br>";

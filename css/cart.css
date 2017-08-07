@@ -564,6 +564,8 @@ body {
       box-sizing: border-box; }
       .order-confirm_30 .PvNext-page-btn2 .next-page2 {
         margin-left: 10px; }
+      .order-confirm_30 .PvNext-page-btn2 #next-page_phone {
+        display: none; }
 
   .order-over_31 {
     display: none;
@@ -1297,6 +1299,8 @@ body {
         box-sizing: border-box;
         padding: 7px;
         background-color: #ccc; }
+      .order-confirm_30 .PvNext-page-btn2 #next-page2 {
+        display: none; }
 
   .order-over_31 {
     display: none;
@@ -1464,9 +1468,12 @@ body {
               width: 33%;
               margin-left: 3%;
               margin-right: 5%;
-              margin-bottom: 2%; }
+              margin-bottom: 2%;
+              vertical-align: middle; }
             .order-over_31 .Order-box .Odover-phone .Odover-phone-box ul li .li-get-item {
-              display: inline-block; }
+              display: inline-block;
+              width: 50%;
+              vertical-align: middle; }
         .order-over_31 .Order-box .Odover-phone .Odover-phone-total .Odover-total p {
           width: 90%;
           margin: 0 5%;

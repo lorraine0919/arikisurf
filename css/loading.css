@@ -18,7 +18,7 @@ body{
 .loading_bg {
   background-color:#11314C;
   width: 100vw ;
-  height:100vh;
+  height:200vh;
   position: absolute;
   background-size: cover;
   z-index: 50;
@@ -165,7 +165,7 @@ body{
   background-size: cover;
   background-color: #11314C; 
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   z-index: 50;
  
 }

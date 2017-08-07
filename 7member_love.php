@@ -33,6 +33,7 @@ $like = $pdo->query($sql);
          已收藏的文章
     </div>
 <?php 
+     $count=0;
      while ($likeRow = $like->fetch(PDO::FETCH_ASSOC)) {     
 ?>    
      <div class="item">
@@ -57,16 +58,7 @@ $like = $pdo->query($sql);
                             <option value="4">4</option>
                             <option value="5">5</option>
                             <input class="gg" type="hidden" value="<?php echo $likeRow["star_score"]; ?>">
-                        </select>
-<script>
-      $(document).ready(function(){
-         $('.star').barrating({
-                theme: 'fontawesome-stars'
-           });
-         console.log($('.gg').val());
-         $('.star').barrating('set',$('.gg').val());
-       });
-</script>                                              
+                        </select>                                             
                          <div class="view">
                              <div class="see">
                               <img src="images/4wavepoint/view.png" alt="view">
@@ -76,9 +68,24 @@ $like = $pdo->query($sql);
                      </div>                    
      </div><!-- item -->
 <?php 
+      $count++;
       }
  ?>                  
 </div><!-- member_ordercheck_23 -->
+<script>
+      $(document).ready(function(){
+         var j =<?php echo $count ?>;
+         $('.star').barrating({
+                theme: 'fontawesome-stars'
+           });
+
+         for(var i=0;i<j;i++){
+           $('.star').eq(i).barrating('set',$('.gg').eq(i).val());
+         }
+
+         $('.star').barrating('readonly',true);
+       });
+</script> 
 <!--(bake module/member_bottom.html)--><?php require_once('publicpage/member_bottom.php'); ?>
 <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
 </body>

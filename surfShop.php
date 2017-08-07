@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php 
+    if(!isset($_SESSION)) {
+      ob_start();
+      session_start();      
+    }
+ ?>
 <html lang="en">
 
   <!--header-->
@@ -13,7 +19,7 @@
 <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>衝浪配備</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
-<div class="showProd" style="display:";>
+<div class="showProd" style="display:">
  <div class="showProd_bg_up">
   <div class="container showProd_bg">
 	<div class="row">
@@ -120,10 +126,10 @@
   </div>
  </div> 
 </div>
-
+<span class="session_acc" style="display: none;"><?php echo isset($_SESSION["account"] )==false ? 0 : $_SESSION["account"] ; ?></span>
 <script type="text/javascript">
 	$(document).ready(function(){
-         var session_mem =<?php echo isset($_SESSION["account"] )==false ? 0 : $_SESSION["account"] ; ?>;
+         var session_mem =$('.session_acc').text();
 
        $('.goCart').click(function(){
 		  if(session_mem==0){

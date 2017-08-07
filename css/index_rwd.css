@@ -1,8 +1,37 @@
 @charset "UTF-8";
 /*文字陰影*/
+.logo_canvas2 {
+  display: none; }
+
 @media screen and (max-width: 960px) {
-  .banner_1 {
+  .map_box {
     display: none; }
+
+  .contentMax {
+    padding: 5vh 0 5vh; }
+
+  .banner_1 {
+    padding-top: 50vh;
+    padding-bottom: 40vh;
+    overflow: hidden; }
+    .banner_1 .logo_S_canvas2 {
+      position: absolute;
+      top: 5%;
+      padding: 10%;
+      animation: LOGO 3s linear infinite; }
+      .banner_1 .logo_S_canvas2 img {
+        width: 100%; }
+  @keyframes LOGO {
+    0% {
+      top: 5%; }
+    50% {
+      top: 3%; }
+    100% {
+      top: 5%; } }
+    .banner_1 .logo_canvas2 {
+      display: block; }
+    .banner_1 .logo_canvas1 {
+      display: none; }
 
   .coating_1 .maxContent .demo {
     display: none; }
@@ -123,9 +152,20 @@
       text-align: center; }
 
   .map_1 {
+    width: 100vw;
     background-image: none;
     background-color: #13324c;
     padding: 11vh 0 0 0; }
+    .map_1:before {
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .map_1 .map_phone {
+      position: relative;
+      padding: 1%; }
+      .map_1 .map_phone img {
+        width: 100%; }
+    .map_1 .contentMax .introduce a {
+      position: relative; }
     .map_1 .contentMax .introduce .introduceWord {
       text-align: center; }
       .map_1 .contentMax .introduce .introduceWord p {

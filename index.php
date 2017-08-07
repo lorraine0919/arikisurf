@@ -47,6 +47,14 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
     <div class="banner_1">
+        <div class="logo_canvas2">
+            <div class="logo_S_canvas2">
+                <img class="cloud1" src="images/1common/logo.png">
+            </div>
+           <!--  <canvas id="canvas1" width="500" height="360"></canvas> -->
+            <h4>Your Board Always Top</h4>  
+        </div>
+
         <div class="logo_canvas1">
             <canvas id="canvas1" width="500" height="360"></canvas>
 
@@ -54,7 +62,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 
             <div class="Button_Entrance"> 
                 <a class="Button_Entrance2 Entrance3" href="#">前端</a>
-               <a class="Button_Entrance2" href="9backstage_login.php">後端</a>
+               <a class="Button_Entrance2" href="9backstage_login.html">後端</a>
             </div>
             <div class="cloud">
 
@@ -262,13 +270,16 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                     </div>
                 </div>
             </div>
-            <div class="introduce col-xs-12 col-sm-12">
+            <div class="map_phone">
+                <img src="images/1common/map.png">
+            </div>
+            <div class="map_text introduce col-xs-12 col-sm-12">
                 <div class="introduceWord">
                     <h2>走向高手雲集浪點 衝破完美弧線</h2>
                     <p>你體內征服者的細胞正在蠢蠢欲動嗎？<br>
                         對於平淡無奇的波幅已經感到厭倦了嗎？<br>
                         酋長衝浪將給你全新的浪點、全新的視野。</p>
-                    <a href="map.php">MORE INFO</a>
+                    <a href="map.html">MORE INFO</a>
                 </div>
 
 

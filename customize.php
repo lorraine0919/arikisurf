@@ -1,8 +1,10 @@
 <?php 
 try{
 require_once('connectBooks.php');
-session_start();
-ob_start();
+if(!isset($_SESSION)) {
+      ob_start();
+      session_start();      
+    }
  ?>
 
 <!DOCTYPE html>

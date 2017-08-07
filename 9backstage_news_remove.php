@@ -1,4 +1,3 @@
-
 <?php 
 try{
 		require_once("connectBooks.php");

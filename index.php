@@ -289,6 +289,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                 <h2>浪點討論</h2>
             </div>
             <div class="postgroup loop owl-carousel owl-theme">
+                <!-- Pipeline -->
                 <div class="postfix selected item">    
                     <div class="post selected">
                         <a href="map_session.php?wave_number=101">
@@ -316,6 +317,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                         </div>
                     </div>
                 </div>
+                <!-- Superbank -->
                 <div class="postfix item">
                     <div class="post">
                         <a href="map_session.php?wave_number=102">
@@ -342,6 +344,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                         </div>
                     </div>
                 </div>
+                <!-- Jeffrey's Bay -->
                 <div class="postfix item">
                     <div class="post">
                         <a href="map_session.php?wave_number=103">
@@ -363,6 +366,171 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <div class="postcontent">
                                     <h5>小五郎</h5>
                                     <p>「超級管浪灣！」</p>
+                                </div>                     
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Black Beach -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=104">
+                            <div class="head p4">
+                            <!--                             <div class="headword">
+                                <h3>Quicksilver職業比賽地</h3>
+                                <h4>SuperBank</h4>
+                            </div> -->
+                            </div>
+                        </a>
+                        <div class="content">
+                            <div class="word">
+                                <h3>浪高五米的進階浪點</h3>
+                                <h4>Black-Beach</h4>                                
+                            </div>
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postbean.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>阿宅</h5>
+                                    <p>「衝浪兼顧眼睛」</p>
+                                </div>                    
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Teahupo'o -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=105">
+                            <div class="head p5">
+                            <!--                             <div class="headword">
+                                <h3>浪人心中的最佳浪點</h3>
+                                <h4>Jeffrey’s Bay</h4>
+                            </div> -->
+                            </div>
+                        </a>
+                        <div class="content">
+                            <div class="word">
+                                <h3>衝浪最早的起源地</h3>
+                                <h4>Teahupo'o</h4>                                
+                            </div>
+                            
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postfran.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>Fran</h5>
+                                    <p>「20米高超危險巨浪」</p>
+                                </div>                     
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- La Graviere -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=106">
+                            <div class="head p6">
+                            <!--                             <div class="headword">
+                                <h3>Quicksilver職業比賽地</h3>
+                                <h4>SuperBank</h4>
+                            </div> -->
+                            </div>
+                        </a>
+                        <div class="content">
+                            <div class="word">
+                                <h3>適合初學者的好浪點</h3>
+                                <h4>La Graviere</h4>                                
+                            </div>
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postbear.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>熊熊</h5>
+                                    <p>「法式浪漫的浪點」</p>
+                                </div>                    
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Uluwatu -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=107">
+                            <div class="head p7">
+                            <!--                             <div class="headword">
+                                <h3>浪人心中的最佳浪點</h3>
+                                <h4>Jeffrey’s Bay</h4>
+                            </div> -->
+                            </div>
+                        </a>
+                        <div class="content">
+                            <div class="word">
+                                <h3>經典礁石浪</h3>
+                                <h4>Uluwatu</h4>                                
+                            </div>
+                            
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postpeggy.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>Peggy</h5>
+                                    <p>「溫暖海水上有一群高手」</p>
+                                </div>                     
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Cloudbreak -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=108">
+                            <div class="head p8">
+                            <!--                             <div class="headword">
+                                <h3>Quicksilver職業比賽地</h3>
+                                <h4>SuperBank</h4>
+                            </div> -->
+                            </div>
+                        </a>
+                        <div class="content">
+                            <div class="word">
+                                <h3>全年有好浪的浪點</h3>
+                                <h4>Cloudbreak</h4>                                
+                            </div>
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postenerge.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>榕樹下活力姐</h5>
+                                    <p>「水質清澈，可觀賞珊瑚礁」</p>
+                                </div>                    
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Maverick's -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=109">
+                            <div class="head p9">
+                            <!--                             <div class="headword">
+                                <h3>浪人心中的最佳浪點</h3>
+                                <h4>Jeffrey’s Bay</h4>
+                            </div> -->
+                            </div>
+                        </a>
+                        <div class="content">
+                            <div class="word">
+                                <h3>勇敢浪人挑戰點</h3>
+                                <h4>Maverick's</h4>                                
+                            </div>
+                            
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postanna.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>安娜</h5>
+                                    <p>「需要做摩托艇才能前往的危險浪點！」</p>
                                 </div>                     
                             </div>
 

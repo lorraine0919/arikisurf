@@ -33,9 +33,16 @@
 	    		<li><a href="news.php">全球據點</a></li>
 	    	</ul>
 	    	<ul class="member">
-	    		<li><a href="7member_update.php">基本資料</a></li>
-	    		<li><a href="7member_update.php">我的收藏</a></li>
-	    		<li><a href="7member_update.php">訂單查詢</a></li>
+	    		<input type="hidden" class="footermemberloginornot" value="<?php 
+	    			if(isset($_SESSION['member'])){
+	    				echo 1;
+	    			}else{
+	    				echo 2;
+	    			}
+	    		?>">
+	    		<li><a class="footermember">基本資料</a></li>
+	    		<li><a class="footermember">我的收藏</a></li>
+	    		<li><a class="footermember">訂單查詢</a></li>
 	    	</ul> 		
     	</div>
 		<div class="right col-xs-12 col-sm-6">
@@ -78,6 +85,14 @@
 		  a.async = a.src = '//cdn.speaklyn.com/cb5f2d2d2658a34d74654803f63ae779.js';
 		  s.parentNode.insertBefore(a, s);
 		}(document, 'script'));
+
+		$('.footermember').click(function(){
+			if($('.footermemberloginornot').val()==1){
+				location.href="7member_update.php";
+			}else{
+				$('#lightbox19').fadeIn(500);
+			}
+		});
 	</script>
 </footer>
 <script src="js/member_login.js"></script>

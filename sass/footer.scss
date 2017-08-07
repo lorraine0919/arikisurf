@@ -37,7 +37,9 @@
 				}
 			}
 		}
-
+		.footermember{
+			cursor: pointer;
+		}
 		.titlegroup:after{
 			content: '';
 			display: block;

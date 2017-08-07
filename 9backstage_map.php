@@ -37,8 +37,8 @@ $map = $pdo->query($sql);
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#home">浪點管理</a></li>
-                            <li><a data-toggle="tab" href="#menu1">討論區狀態管理</a></li>
-                            <li><a data-toggle="tab" href="#menu2">留言狀態管理</a></li>
+                            <li><a data-toggle="tab" href="#menu1">討論區檢舉管理</a></li>
+                            <li><a data-toggle="tab" href="#menu2">留言檢舉管理</a></li>
                         </ul>
                     </div><!-- col-sm-12 -->
                     <div class="col-md-12">

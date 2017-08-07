@@ -1,3 +1,9 @@
+.br-wrapper.br-theme-fontawesome-stars{
+  float: left;
+  width: 68% !important;
+} 
+
+
 .clearfix {
   clear: both; }
 .content20:after{
@@ -73,6 +79,7 @@
             font-size: 23px; }
 
 .item .item_border .view {
+            height: 3vh;
             float: left;
             width: 31%; }
 
@@ -85,11 +92,11 @@
 .item .item_border .view .see img {
                 width: 29px;
                 height: auto;
-                vertical-align: -2px; }  
+                vertical-align: 3px; }  
 .item .item_border .view .watch {
+              vertical-align: 4px;
               text-align: center;
               height: 4vh;
-              line-height: 4vh;
               display: inline-block;
               color: #fff;
               font-size: 16px; }                                        

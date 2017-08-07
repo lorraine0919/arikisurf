@@ -60,10 +60,10 @@ require_once('connectBooks.php');
                             </thead>
                               <tbody>
                                 <?php 
-                                      $choise = 'member_no';
-                                      $sql = 'select * from member order by :choise';
+                                      $choise = $_SESSION["map_wave"]["wave_number"];
+                                      $sql = 'select * from member order by choise=$choise';
                                       $memberList=$pdo->prepare($sql);
-                                      $member->bindValue(":choise",$choise);
+                                      // $member->bindValue(":choise",$choise);
                                       /*問題一:排序*/
                                       $memberList->execute();
                                       $i=0;

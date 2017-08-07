@@ -3,11 +3,11 @@
 </div>
                     </div>
                         <div class="navbar">
-                            <a href="index.php">
+                            <!-- <a href="index.php"> -->
                                 <div class="rwdlogoonbar">
-                                    <img src="images/1common/titlerwd.png">
+                                    <!-- <img src="images/1common/titlerwd.png"> -->
                                 </div>
-                            </a>
+                            <!-- </a> -->
                           <div class="navbar-buttons">
                             <span><img class="open-menu" src="images/1common/menu.svg" alt=""/></span>
                           </div>

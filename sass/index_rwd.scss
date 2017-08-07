@@ -39,14 +39,62 @@ $top:16vh;
 	font-weight: bold;	
 }
 
-@media screen and (max-width:960px){
-	.banner_1{
+.logo_canvas2{
 		display: none;
-		// background-image: url('../surfopening.gif');
-		// background-size: cover;
-		// video{
-		// 	display: none;
-		// }
+}
+
+@media screen and (max-width:960px){
+	.map_box{
+		display: none;
+	}
+	.contentMax{
+		padding:5vh 0 5vh;
+
+	}
+	.banner_1{
+		padding-top:50vh;
+		padding-bottom:40vh; 
+		
+		overflow: hidden;
+
+		.logo_S_canvas2{
+				position: absolute;
+				top:5%;
+				 padding: 10%;
+				 animation:LOGO 3s linear infinite;
+				 img{
+				 	width: 100%;
+
+				 }
+
+
+				@keyframes LOGO {
+
+			   		0%{
+			   			top:5%;
+			   			
+			   		}
+
+			   		50%{
+			   			top:3%;
+
+			   		}
+
+   			 		100%{
+   			 			top:5%;
+   			 			
+   			 		}
+   			 	}	
+			}
+
+		.logo_canvas2{
+			display:block;
+		}
+
+		.logo_canvas1{
+			display: none;
+		}
+
 	}
 	.coating_1{
 		.maxContent{
@@ -205,11 +253,29 @@ $top:16vh;
 		}
 	}
 	.map_1{
+		width:100vw;
 		background-image:none;
 		background-color: #13324c;
 		padding: 11vh 0 0 0;
+		&:before{
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.map_phone{
+			position:relative;
+			// margin:auto; 
+			padding:1%; 
+			img{
+				width: 100%;
+			}
+
+		}
 		.contentMax{
+
 			.introduce{
+				a{
+					position: relative;
+				}
 				.introduceWord{
 					text-align: center;
 					p{

@@ -458,6 +458,8 @@ body {
     width: 100%;
     background-image: url("../images/1common/map-9487.png");
     background-size: contain; }
+  .map_1 .contentMax .map_phone {
+    display: none; }
   .map_1 .contentMax .introduce {
     text-align: right; }
     .map_1 .contentMax .introduce .introduceWord {

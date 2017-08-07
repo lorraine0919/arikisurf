@@ -89,7 +89,7 @@
   60% {
     filter: drop-shadow(4px 4px 6px rgba(255, 255, 255, 0.8)); }
   100% {
-    filter: drop-shadow(7px 7px 8px rgba(255, 255, 255, 0.8)); } }
+    filter: drop-shadow(-4px -4px 6px rgba(255, 255, 255, 0.8)); } }
   .showProd .mo-fire {
     width: 100px;
     height: auto;

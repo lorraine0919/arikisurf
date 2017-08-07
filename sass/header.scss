@@ -35,6 +35,7 @@
     position: fixed;
     z-index: 20;
     padding:0 10px;
+
     .navimg{
       position: relative;
       background-image: url("../images/1common/nav2.png");
@@ -51,8 +52,13 @@
         width: 35%;
         box-sizing:border-box;
         padding: 0 10px;
+        padding-top: 14%;
+        position: relative;
         img{
-          width: 100%;
+          width: 110%;
+          top: -1%;
+          left: 4%;
+          position: absolute;
         }
       }
         .navbar-buttons {

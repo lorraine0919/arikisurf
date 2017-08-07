@@ -955,14 +955,15 @@
 				}
 			}		
 		}
-		.fill{
+		.fill{/*我是步驟三*/
 			vertical-align: top;
 			display: inline-block;
 			// background-image: url('../images/2board/insidebox.png');
 			background-repeat: no-repeat;
 			background-position: top;
 			background-size: cover;
-			padding: 26%;
+			padding-top: 61%;
+			width: 49%;
 			position: relative;
 			.fillfix{
 			    position: absolute;
@@ -1225,6 +1226,12 @@
 						}
 					}
 				}
+			}
+		}
+		.step3_maxContent{
+			.fill{
+				padding-top: 49%;
+				width: 49%;
 			}
 		}		
 	}

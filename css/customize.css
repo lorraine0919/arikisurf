@@ -736,12 +736,14 @@
           top: 0;
           left: 0; }
     .bg_forest_2 .step3_maxContent .fill {
+      /*我是步驟三*/
       vertical-align: top;
       display: inline-block;
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover;
-      padding: 26%;
+      padding-top: 61%;
+      width: 49%;
       position: relative; }
       .bg_forest_2 .step3_maxContent .fill .fillfix {
         position: absolute;
@@ -923,4 +925,7 @@
   .bg_forest_2 .step2_maxContent .selectAndNext {
     padding-top: 40%; }
     .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup .patternselectgroup {
-      padding-top: 96%; } }
+      padding-top: 96%; }
+  .bg_forest_2 .step3_maxContent .fill {
+    padding-top: 49%;
+    width: 49%; } }

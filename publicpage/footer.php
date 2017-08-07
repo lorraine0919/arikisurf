@@ -34,7 +34,7 @@
 	    	</ul>
 	    	<ul class="member">
 	    		<input type="hidden" class="footermemberloginornot" value="<?php 
-	    			if(isset($_SESSION['member'])){
+	    			if(isset($_SESSION['member_no'])){
 	    				echo 1;
 	    			}else{
 	    				echo 2;

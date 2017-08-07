@@ -677,6 +677,9 @@ body{
 			.contentMax{
 				// height: 85vh;
 				@extend %navmax;
+				.map_phone{
+					display: none;
+				}
 				.introduce{
 					text-align: right;
 					.introduceWord{

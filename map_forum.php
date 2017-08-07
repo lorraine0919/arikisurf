@@ -10,9 +10,13 @@ require_once("connectBooks.php");
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
   <link rel="stylesheet" type="text/css" href="css/forum.css">
   <link rel="stylesheet" type="text/css" href="css/star.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fontawesome-stars.css">
   <script src="js/showMap.js"></script>
   <script src="js/map_up.js"></script>
   <script src="js/map_addColor.js"></script>
+  <script src="js/jquery.barrating.min.js" type="text/javascript"></script>
+  <!-- <script src="js/getStar.js" type="text/javascript"></script> -->
   <title>酋長衝浪Ariki Surf-討論區</title>
 </head>
 <body>
@@ -87,7 +91,6 @@ require_once("connectBooks.php");
              ?>
              </span></span> 
            </div>
-           <!-- <div class="ic weather">32°C</div>  -->
            <div class="ic weather"><?php echo $waveRow["wave_weather"] ?></div>    
          </div> <!-- info_10 div1-->     
          <div class="beach_10">
@@ -97,12 +100,6 @@ require_once("connectBooks.php");
                 <p><?php  echo $waveRow["wave_p"]?></p>
            </div>
            <div class="beach_txt">
-               <!--  <p>頭頂著一輪俏皮的彎月,靜靜地享受和愛的人在一起的寧靜時光。來吧,嘉善路邊的月砂森林,這裡有你遺落的安然。</p>
-                <p>小屋是來自米蘭國際設計週的設計師@企鵝沈虹設計的,位於嘉善路和永康路的三岔口永盛里內,四通八達的小巷把老上海的風味都嵌在了裡面,別晃
-                眼~這裡真的有沙灘哦!出門50米,有老人坐在門口聽著滬劇小調聊著天,再往外走就是不得不來上一杯的永康路,露天酒吧、法式麵包店、質感家具店
-                和街道旁隨處停著的哈雷機車......一切都在嘗試拖住你的步伐,讓你慢下來享受這個瞬間。</p>
-                <p>穿過熱鬧非凡的街道,回到月砂森林,關上白色的小門。迎接你的是紮染的質感布條,木質、竹編的椅子,還有帶著年輪的樹樁,直接把你捲入了清香瀰漫
-                的靜謐海畔叢林。</p> -->
                 <?php  echo $waveRow["wave_info"]?>
            </div><!-- beach_txt -->          
          </div><!-- beach_10 --> 
@@ -118,6 +115,7 @@ require_once("connectBooks.php");
 <?php 
        $sql="select * from map_post where wave_number=$wave_number order by post_date DESC";
        $data = $pdo->query($sql);
+       $count=0;
        while($dataItem = $data->fetch(PDO::FETCH_ASSOC)) {
 ?>
               <div class="item">
@@ -134,37 +132,91 @@ require_once("connectBooks.php");
                      </div>
                  </a>
                      <div class="item_border">
-                         <div class="star"></div>
+                        <select class="star">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <input class="gg" type="hidden" value="<?php echo $dataItem["star_score"]; ?>">
+                        </select>
                          <div class="view">
                              <div class="see">
                               <img src="images/4wavepoint/view.png" alt="view">
                               </div>                             
-                              <!-- <div class="watch">120</div>       -->
                               <div class="watch"><?php echo $dataItem["post_view"]  ?></div>      
                          </div>
                      </div>                    
                </div><!-- item -->
 <?php 
+              $count++;
      }//while end
  ?>
+      <script>
+        var j =<?php echo $count ?>;
+         $('.star').barrating({
+            theme: 'fontawesome-stars'
+         });
+         
+         for(var i=0;i<j;i++){
+           $('.star').eq(i).barrating('set',$('.gg').eq(i).val());
+         }
 
-       <script>
-              $('#gg').click(function(){
-                  $('#title').val('');
-                  $('#image').src('');
-                  $('#textarea').val('');            
-              });
+         $('.star').barrating('readonly',true);
+      
+         $('#gg').click(function(){
+            $('#title').val('');
+            $('#image').src('');
+            $('#textarea').val(''); 
+            $('.star').remove();           
+         });
 
+      $(document).ready(function(){
               function orderByDate(jsonStr){
                  var o_date = JSON.parse( jsonStr );
                  for(var x in o_date){
                  // console.log(o_date[x]);
                     var newimg = document.createElement("img"); 
-                    newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;   
+                    newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;  
+                    var newStar = document.createElement("select");
+                    newStar.className = "star";
+                     
+                    var newop1 = document.createElement("option");
+                    $(newop1).text('1');
+                    $(newop1).val(1);
+                    var newop2 = document.createElement("option");
+                    $(newop2).text('2');
+                    $(newop2).val(2);
+                    var newop3 = document.createElement("option");
+                    $(newop3).text('3');
+                    $(newop3).val(3);
+                    var newop4 = document.createElement("option");
+                    $(newop4).text('4');
+                    $(newop4).val(4);
+                    var newop5 = document.createElement("option");
+                    $(newop5).text('5');
+                    $(newop5).val(5);
+
+                    var newinput = document.createElement("input");
+                    newinput.className = "gg";
+                    newinput.type = 'hidden';
+                    newinput.value =o_date[x].star_score;
+                    $(newStar).append(newop1);
+                    $(newStar).append(newop2);
+                    $(newStar).append(newop3);
+                    $(newStar).append(newop4);
+                    $(newStar).append(newop5); 
                     $('.item .pic_i').eq(x).append(newimg);
                     $('.day').eq(x).text(o_date[x].post_date.substr(0,10));
                     $('.text h3').eq(x).text(o_date[x].post_title);
                     $('.tt').eq(x).text(o_date[x].post_text);
+                    $('.item_border').eq(x).append(newStar);
+                    $('.item_border').eq(x).append(newinput); 
+                    $('.star').barrating({
+                        theme: 'fontawesome-stars'
+                     });
+                    $('.star').eq(x).barrating('set',$('.gg').eq(x).val());
+                    $('.view').css('float','right');
                     $('.watch').eq(x).text(o_date[x].post_view);
                     var newhref="map_forum_discussion.php?post_number="+o_date[x].post_number;
                     $('.map_a').eq(x).attr('href',newhref);
@@ -184,7 +236,9 @@ require_once("connectBooks.php");
                         $('.day').text('');
                         $('.text h3').text('');
                         $('.tt').text('');
-                        $('.watch').text('');
+                        $('.watch').text('');                      
+                        $('body').find('.br-wrapper.br-theme-fontawesome-stars').remove();
+                        $('.gg').remove();
                         orderByDate(xhr.responseText); 
                       }else{
                         window.alert("錯誤".xhr.status);
@@ -198,12 +252,47 @@ require_once("connectBooks.php");
                  for(var x in o_date){
                  // console.log(o_date[x]);
                     var newimg = document.createElement("img"); 
-                    newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;   
+                    newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;
+                    var newStar = document.createElement("select");
+                    newStar.className = "star";
+                     
+                    var newop1 = document.createElement("option");
+                    $(newop1).text('1');
+                    $(newop1).val(1);
+                    var newop2 = document.createElement("option");
+                    $(newop2).text('2');
+                    $(newop2).val(2);
+                    var newop3 = document.createElement("option");
+                    $(newop3).text('3');
+                    $(newop3).val(3);
+                    var newop4 = document.createElement("option");
+                    $(newop4).text('4');
+                    $(newop4).val(4);
+                    var newop5 = document.createElement("option");
+                    $(newop5).text('5');
+                    $(newop5).val(5);
+
+                    var newinput = document.createElement("input");
+                    newinput.className = "gg";
+                    newinput.type = 'hidden';
+                    newinput.value =o_date[x].star_score;
+                    $(newStar).append(newop1);
+                    $(newStar).append(newop2);
+                    $(newStar).append(newop3);
+                    $(newStar).append(newop4);
+                    $(newStar).append(newop5);   
                     $('.item .pic_i').eq(x).append(newimg);
                     $('.day').eq(x).text(o_date[x].post_date.substr(0,10));
                     $('.text h3').eq(x).text(o_date[x].post_title);
                     $('.tt').eq(x).text(o_date[x].post_text);
                     $('.watch').eq(x).text(o_date[x].post_view);
+                    $('.item_border').eq(x).append(newStar);
+                    $('.item_border').eq(x).append(newinput); 
+                    $('.star').barrating({
+                        theme: 'fontawesome-stars'
+                     });
+                    $('.star').eq(x).barrating('set',$('.gg').eq(x).val());
+                    $('.view').css('float','right');
                     var newhref="map_forum_discussion.php?post_number="+o_date[x].post_number;
                     $('.map_a').eq(x).attr('href',newhref);
                  }                
@@ -223,6 +312,8 @@ require_once("connectBooks.php");
                         $('.text h3').text('');
                         $('.tt').text('');
                         $('.watch').text('');
+                        $('body').find('.br-wrapper.br-theme-fontawesome-stars').remove();
+                        $('.gg').remove();
                         orderByDate(xhr.responseText); 
                       }else{
                         window.alert("錯誤".xhr.status);
@@ -232,16 +323,53 @@ require_once("connectBooks.php");
               });//click
 
               function orderByStar(jsonStr){
-                 var o_date = JSON.parse( jsonStr );
-                 for(var x in o_date){
+               var o_date = JSON.parse( jsonStr );
+
+               for(var x in o_date){
                  // console.log(o_date[x]);
                     var newimg = document.createElement("img"); 
-                    newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img;   
-                    $('.item .pic_i').eq(x).append(newimg);
+                    newimg.src = "images/4wavepoint/"+"<?php echo $wave_number ?>"+"/fou/"+o_date[x].post_img; 
+                    var newStar = document.createElement("select");
+                    newStar.className = "star";
+                     
+                    var newop1 = document.createElement("option");
+                    $(newop1).text('1');
+                    $(newop1).val(1);
+                    var newop2 = document.createElement("option");
+                    $(newop2).text('2');
+                    $(newop2).val(2);
+                    var newop3 = document.createElement("option");
+                    $(newop3).text('3');
+                    $(newop3).val(3);
+                    var newop4 = document.createElement("option");
+                    $(newop4).text('4');
+                    $(newop4).val(4);
+                    var newop5 = document.createElement("option");
+                    $(newop5).text('5');
+                    $(newop5).val(5);
+
+                    var newinput = document.createElement("input");
+                    newinput.className = "gg";
+                    newinput.type = 'hidden';
+                    newinput.value =o_date[x].star_score;
+                    $(newStar).append(newop1);
+                    $(newStar).append(newop2);
+                    $(newStar).append(newop3);
+                    $(newStar).append(newop4);
+                    $(newStar).append(newop5);  
+                    
+                    $('.item .pic_i').eq(x).append(newimg);                                        
                     $('.day').eq(x).text(o_date[x].post_date.substr(0,10));
                     $('.text h3').eq(x).text(o_date[x].post_title);
                     $('.tt').eq(x).text(o_date[x].post_text);
                     $('.watch').eq(x).text(o_date[x].post_view);
+                    $('.item_border').eq(x).append(newStar);
+                    $('.item_border').eq(x).append(newinput); 
+                    $('.star').barrating({
+                        theme: 'fontawesome-stars'
+                     });
+                    $('.star').eq(x).barrating('set',$('.gg').eq(x).val());
+                    $('.view').css('float','right');
                     var newhref="map_forum_discussion.php?post_number="+o_date[x].post_number;
                     $('.map_a').eq(x).attr('href',newhref);
                  }                
@@ -261,6 +389,8 @@ require_once("connectBooks.php");
                         $('.text h3').text('');
                         $('.tt').text('');
                         $('.watch').text('');
+                        $('body').find('.br-wrapper.br-theme-fontawesome-stars').remove();
+                        $('.gg').remove();
                         orderByStar(xhr.responseText); 
                       }else{
                         window.alert("錯誤".xhr.status);
@@ -268,11 +398,14 @@ require_once("connectBooks.php");
                     }
                   }
               });//click
+                   
+              
+       });
         </script>
            </section>
          </div><!-- fourm --> 
        </div><!-- bg_10 -->
-      <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+     <?php require_once('publicpage/footer.php'); ?>
   <script>
     var bgsrc = 'images/4wavepoint/<?php echo $wave_number ?>/bg_f.jpg';
     console.log(bgsrc);

@@ -14,6 +14,7 @@ function First(){
     $id('next-page').addEventListener('click',goOrder_confirm,false);//去確認
     $id('previous-page2').addEventListener('click',goInputInfo,false);//回輸入
     $id('next-page2').addEventListener('click',goOrder_over,false);//去結束
+    $id('next-page_phone').addEventListener('click',goOrder_over,false);
 }
 
 

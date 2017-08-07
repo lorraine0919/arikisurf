@@ -23,8 +23,31 @@
 <span>購物車</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 	<?php
+	if(isset($_SESSION["account"]) == false){
+		echo "<script>window.alert('尚未登入,請登入');location.href='index.php';</script>";
+	}else{
 		try{
+			require_once("connectBooks.php");
+			// foreach()
+			$sql = "select * from member 
+					where account=:account and
+							member_no=:member_no and
+							psw = :psw";
+			$ifmember = $pdo->prepare($sql);
+			$ifmember->bindValue("account",$_SESSION["account"]);
+			$ifmember->bindvalue("member_no",$_SESSION["member_no"]);
+			$ifmember->bindvalue("psw",$_SESSION["psw"]);
+			$ifmember->execute();
+
+
+			$member_account = $_SESSION["account"];
+			$member_no = $_SESSION["member_no"];
+			$member_psw = $_SESSION["psw"];
+
 	?>
+	<input type="hidden" name="" value="<?php echo $member_account;?>" id="MB_AC">
+	<input type="hidden" name="" value="<?php echo $member_no;?>" id="MB_NO">
+	<input type="hidden" name="" value="<?php echo $member_psw;?>" id="MB_PSW">
 	<div class="cart-body_28">
 		<div class="flow">
 			<div class="flow-box">
@@ -139,6 +162,7 @@
 						<li>金額:<span class="Pmoney Pmoney_phone"><?php echo $ODVL["prod_price"];?></span>元</li>
 						<li>數量:<input type="number" name="" value="1" class="arikicommon_inputtext Pamount Pamount_phone"></li>
 						<li>小計:<span class="Psub Psub_phone"><?php echo $SMmoney; ?></span></li>
+						<input type="hidden" name="Prod_Num" class="Prod_Num" value="<?php echo $ODVL["prod_no"];?>">
 						<li class="Pchange-changebtn_phone arikicommon_btn">修改數量</li>
 						<li class="Pchange-deletbtn_phone arikicommon_btn">刪除</li>
 					</ul>
@@ -343,28 +367,29 @@
 			</div>
 
 			<div class="ProCfirmInfo-phone">
-				<div class="ProCfirmInfo-phone-box">
-					<?php
-						if(isset($_SESSION["products"])==true){
-							foreach ($_SESSION["products"] as $psn => $PD_CT){
-								$sql = "select * from surfequipped where prod_no=:prod_no";
-								$ODcatch = $pdo->prepare($sql);
-								$ODcatch->bindValue(":prod_no",$PD_CT["prod_no"]);
-								$ODcatch->execute();
-								$ODVL = $ODcatch->fetch();
-								$SMmoney = (int)($ODVL["prod_price"]) * (int)($PD_CT["quantity"]);
+				<?php
+					if(isset($_SESSION["products"])==true){
+						foreach ($_SESSION["products"] as $psn => $PD_CT){
+							// echo $PD_CT;
+							$sql = "select * from surfequipped where prod_no=:prod_no";
+							$ODcatch = $pdo->prepare($sql);
+							$ODcatch->bindValue(":prod_no",$PD_CT["prod_no"]);
+							$ODcatch->execute();
+							$ODVL = $ODcatch->fetch();
+							$SMmoney = (int)($ODVL["prod_price"]) * (int)($PD_CT["quantity"]);
 					?>
+				<div class="ProCfirmInfo-phone-box">
 					<ul>
 						<li><span class="li-tit-item">商品明細</span><span class="getProName li-get-item getProName_phone"><?php echo $ODVL['prod_name'];?></span></li>
 						<li><span class="li-tit-item">金額</span><span class="getPrice li-get-item getPrice_phone"><?php echo $ODVL['prod_price'];?></span></li>
 						<li><span class="li-tit-item">數量</span><span class="getMath li-get-item getMath_phone"><?php echo $PD_CT['quantity'];?></span></li>
 						<li><span class="li-tit-item">小計</span><span class="getSum li-get-item getSum_phone"><?php echo $SMmoney;?></span></li>
 					</ul>
-					<?php
-							}	
-						}
-					?>
 				</div>
+				<?php
+						}	
+					}
+				?>
 			</div>
 			
 			<div class="big-title">
@@ -388,6 +413,7 @@
 		<div class="PvNext-page-btn2"><!-- Pv = previous上一頁-->
 			<div class="previous-page2 arikicommon_btn" id="previous-page2"><span>上一頁</span></div>
 			<div class="next-page2 arikicommon_important_btn" id="next-page2"><span>確認結帳無誤</span></div>
+			<div class="next-page2 arikicommon_important_btn" id="next-page_phone"><span>確認結帳無誤</span></div>
 			<div class="clearfix"></div>
 		</div>
 	</div><!--order-confirm_30-->
@@ -443,18 +469,31 @@
 						</ul>
 						<div class="clearfix"></div>
 					</div>
-			
+					<?php
+						if(isset($_SESSION["products"])==true){
+							foreach ($_SESSION["products"] as $psn => $PD_CT){
+								$sql = "select * from surfequipped where prod_no=:prod_no";
+								$ODcatch = $pdo->prepare($sql);
+								$ODcatch->bindValue(":prod_no",$PD_CT["prod_no"]);
+								$ODcatch->execute();
+								$ODVL = $ODcatch->fetch();
+								$SMmoney = (int)($ODVL["prod_price"]) * (int)($PD_CT["quantity"]);
+					?>
 					<div class="Odover-pro">
 						<ul>
-							<li class="col-sm-6"><span class="getOdoName">AKUR海灘褲(紅)</span></li>
-							<li class="col-sm-2"><span class="getOdoPrice">100</span>元</li>
-							<li class="col-sm-2"><span class="getOdoMath">1</span></li>
-							<li class="col-sm-2"><span class="getOdoSum">100</span></li>
+							<li class="col-sm-6"><span class="getOdoName PC_getOdoName"><?php echo $ODVL["prod_name"];?></span></li>
+							<li class="col-sm-2"><span class="getOdoPrice PC_getOdoPrice"><?php echo $ODVL["prod_price"];?></span>元</li>
+							<li class="col-sm-2"><span class="getOdoMath PC_getOdoMath">1</span></li>
+							<li class="col-sm-2"><span class="getOdoSum PC_getOdoSum"><?php echo $SMmoney;?></span></li>
 						</ul>
 						<div class="clearfix"></div>
 					</div>
-			
-					<div class="Odover-pro">
+
+					<?php
+							}
+						}
+					?>
+					<!-- <div class="Odover-pro">
 						<ul>
 							<li class="col-sm-6"><span class="getOdoName">AKUR海灘褲(藍)</span></li>
 							<li class="col-sm-2"><span class="getOdoPricee">100</span>元</li>
@@ -462,35 +501,49 @@
 							<li class="col-sm-2"><span class="getOdoSum">100</span></li>
 						</ul>
 						<div class="clearfix"></div>
-					</div>
+					</div> -->
 			
 					<div class="Odover-total">
-						<p>共<span class="getOdoTotalMath">2</span>項商品，總金額<span class="getOdoTotalPrice">200</span>元</p>
+						<p>共<span class="getOdoTotalMath" id="PC_finish_Math"></span>項商品，總金額<span class="getOdoTotalPrice" id="PC_finish_Price"></span>元</p>
 					</div>
 				</div>
 			</div>
 			
 			<div class="Odover-phone">
+				<?php
+						if(isset($_SESSION["products"])==true){
+							foreach ($_SESSION["products"] as $psn => $PD_CT){
+								$sql = "select * from surfequipped where prod_no=:prod_no";
+								$ODcatch = $pdo->prepare($sql);
+								$ODcatch->bindValue(":prod_no",$PD_CT["prod_no"]);
+								$ODcatch->execute();
+								$ODVL = $ODcatch->fetch();
+								$SMmoney = (int)($ODVL["prod_price"]) * (int)($PD_CT["quantity"]);
+					?>
 				<div class="Odover-phone-box">
 					<ul>
-						<li><span class="li-tit-item"><h3>商品明細</h3></span><span class="getOdoName li-get-item">AKUR海灘褲(紅)</span></li>
-						<li><span class="li-tit-item"><h3>金額</h3></span><span class="getOdoPrice li-get-item">100</span>元</li>
-						<li><span class="li-tit-item"><h3>數量</h3></span><span class="getOdoMath li-get-item">1</span></li>
-						<li><span class="li-tit-item"><h3>小計</h3></span><span class="getOdoSum li-get-item">100</span></li>
+						<li><span class="li-tit-item"><h3>商品明細</h3></span><span class="getOdoName li-get-item"><?php echo $ODVL["prod_name"];?></span></li>
+						<li><span class="li-tit-item"><h3>金額</h3></span><span class="getOdoPrice li-get-item"><?php echo $ODVL["prod_price"];?></span></li>
+						<li><span class="li-tit-item"><h3>數量</h3></span><span class="getOdoMath li-get-item"><?php echo $PD_CT["quantity"];?></span></li>
+						<li><span class="li-tit-item"><h3>小計</h3></span><span class="getOdoSum li-get-item"><?php echo $SMmoney;?></span></li>
 					</ul>
 				</div>
-				<div class="Odover-phone-box">
+				<?php
+						}
+					}
+				?>
+				<!-- <div class="Odover-phone-box">
 					<ul>
 						<li><span class="li-tit-item"><h3>商品明細</h3></span><span class="getOdoName li-get-item">AKUR海灘褲(藍)</span></li>
 						<li><span class="li-tit-item"><h3>金額</h3></span><span class="getOdoPrice li-get-item">100</span>元</li>
 						<li><span class="li-tit-item"><h3>數量</h3></span><span class="getOdoMath li-get-item">1</span></li>
 						<li><span class="li-tit-item"><h3>小計</h3></span><span class="getOdoSum li-get-item">100</span></li>
 					</ul>
-				</div>
+				</div> -->
 				
 				<div class="Odover-phone-total">
 					<div class="Odover-total">
-						<p>共<span class="getOdoTotalMath">2</span>項商品，總金額<span class="getOdoTotalPrice">200</span>元</p>
+						<p>共<span class="getOdoTotalMath " id="getOdoTotalMath_phone"></span>項商品，總金額<span class="getOdoTotalPrice" id="getOdoTotalPrice_phone"></span>元</p>
 					</div>
 				</div>
 			</div>
@@ -514,8 +567,8 @@
 		</div>
 		<div class="Odover-PM-btn">
 			<div class="btn-box">
-				<div class="Odover-Product-btn arikicommon_btn"><a href="">繼續購買</a></div>
-				<div class="Odover-Member-btn arikicommon_btn"><a href="">會員管理</a></div>
+				<div class="Odover-Product-btn arikicommon_btn"id="Odover-Product-btn"><a href="surfshop.php">繼續購買</a></div>
+				<div class="Odover-Member-btn arikicommon_btn" id="Odover-Member-btn"><a href="7member_update.php">會員管理</a></div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
@@ -523,9 +576,10 @@
 	
 	<?php
 		}catch(PDOException $ex){
-			echo "錯誤行號 : ", $e->getLine(), "<br>";
-            echo "錯誤訊息 : ", $e->getMessage(), "<br>";
+			echo "錯誤行號 : ", $ex->getLine(), "<br>";
+            echo "錯誤訊息 : ", $ex->getMessage(), "<br>";
 		}
+	}
 	?>
 <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
 </body>

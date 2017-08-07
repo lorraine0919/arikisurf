@@ -4,7 +4,8 @@ $(function(){
         console.log('訂單變數'+FT_orderNo);
         $.post('7member_ordercheck_update.php',{
             'FT_no':FT_orderNo,
-            'FT_name':FT_orderNo
+            'FT_name':FT_orderNo,
+            'memNo':$('.memNo').val()
         },function(rs){
             // $('.catch').val(rs);
             // alert(rs);

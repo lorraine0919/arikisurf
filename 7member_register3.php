@@ -19,13 +19,13 @@
     <div class="box27">
         <div class="welcome27">
             <p>恭喜您已註冊成功！</p>
-            <p><span id="jump27">5</span>秒後自動跳回<a href="index.php">首頁</a></p>
+            <p><span id="jump27">7</span>秒後自動跳回<a href="index.php">首頁</a></p>
         </div>
     </div>
     <?php require_once('publicpage/footer.php'); ?>
 </body>
 <script type="text/javascript">
-    var num = 5;
+    var num = 7;
     var timeId;
 
     function countDown(){

@@ -60,7 +60,7 @@ img {width: 100%;}
     padding: 0.7em 1.25em;
     background-color: rgba(217, 217, 217, 0.2); }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 949px) {
   .left20 {
     /*sidebar20*/ }
     .left20 .sidebar20 {
@@ -78,7 +78,6 @@ img {width: 100%;}
         .left20 .sidebar20 .base20 .block20 {
           width: 10em;
           margin-left: 10vw;
-          text-align: center;
           position: relative;
           right: 30vw;
           bottom: 2vh;
@@ -91,39 +90,96 @@ img {width: 100%;}
         z-index: 2;
         width: 100%;
         font-size: 0px; }
-        .left20 .sidebar20 .menu20 li {
-          width: 100%;
-          vertical-align: middle; }
-          .left20 .sidebar20 .menu20 li a {
-            float: left;
-            vertical-align: middle;
-            width: calc(25% - 4px);
-            height: 2.5em;
-            line-height: 2.5em;
-            padding: 5px 0px;
-            border: 2px solid #40666a;
-            border-radius: 7px 7px 0px 0px;
-            font-size: 18px;
-            text-align: center;
-            background-color: #51677a; }
-          .left20 .sidebar20 .menu20 li a:hover {
-            background-color: #ed9046; }
+      .left20 .sidebar20 .menu20 li {
+        width: 100%;
+        vertical-align: middle; }
+      .left20 .sidebar20 .menu20 li a {
+        float: left;
+        vertical-align: middle;
+        width: calc(25% - 4px);
+        height: 2.5em;
+        line-height: 2.5em;
+        padding: 5px 0px;
+        border: 2px solid #40666a;
+        border-radius: 7px 7px 0px 0px;
+        font-size: 18px;
+        text-align: center;
+        background-color: #51677a; }
+      .left20 .sidebar20 .menu20 li a:hover {
+        background-color: #ed9046; }
+
+      /*left20*/
+      .right20 .title20 {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 23px;
+        font-weight: bold;
+        letter-spacing: 6px; } }
+
+@media screen and (min-width: 950px) {
+  .main20 {
+    width: 80%;
+    max-width: 1170px;
+    padding-top: 90px; }
+
+  /*main20*/
+  .left20 {
+    float: left;
+    background-color: rgba(3, 31, 54, 0.5);
+    /*sidebar20*/
+    /*sidebar20*/ }
+    .left20 .sidebar20 {
+      padding: 3vw 2vw;
+      /*base20*/ }
+      .left20 .sidebar20 .base20 {
+        font-size: 10px;
+        /*block20*/ }
+        .left20 .sidebar20 .base20 .block20 {
+          /*row20*/ }
+          .left20 .sidebar20 .base20 .block20 .account20 {
+            width: 100%;
+            margin: 30px 0px;
+            padding: 14px 0px;
+            font-size: 22px;
+            box-shadow: 0px 3px 0px rgba(73, 100, 122, 0.5); }
+            .left20 .sidebar20 .base20 .block20 .account20 span {
+              margin-left: 3px; }
+          .left20 .sidebar20 .base20 .block20 .row20 {
+            margin-top: 6px; }
+            .left20 .sidebar20 .base20 .block20 .row20 .icon20 {
+              display: inline-block;
+              width: 20px;
+              vertical-align: middle; }
+            .left20 .sidebar20 .base20 .block20 .row20 .hello20 {
+              line-height: 20px; }
+    .left20 .menu20 {
+      padding: 30px; }
+      .left20 .menu20 a {
+        display: block;
+        margin: 40px 0px;
+        font-size: 16px;
+        box-shadow: -5px 0px 0px rgba(73, 100, 122, 0.5); }
+      .left20 .menu20 a:hover {
+        color: #ed9046;
+        box-shadow: -5px 0px 0px #ed9046; }
 
   /*left20*/
-  .right20 .title20 {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 23px;
-    font-weight: bold;
-    letter-spacing: 6px; } }
-@media screen and (max-width: 1122px) {
-  .personal21, .changepsw21 {
-    width: 100%; }
-
   .right20 {
-    padding-right: 10%; } }
+    float: right;
+    width: calc(100% - 245px - 3vw);
+    padding-right: 10%;/*修改*/
+    padding-bottom: 60px;
+    background-image: url(../images/7member/member_pic.png); }
+    .right20 .title20 {
+      display: inline-block;
+      width: 235px;
+      margin: 60px 0px;
+      text-align: right;
+      font-size: 20px; }
+
+  /*right20*/ }
 /*平板*/
-@media screen and (min-width: 1123px) {
+@media screen and (min-width: 1320px) {
   .main20 {
     width: 58.333%;
     max-width: 1170px;
@@ -174,7 +230,7 @@ img {width: 100%;}
   .right20 {
     float: right;
     width: calc(100% - 245px - 3vw);
-    padding-right: 16%;
+    padding-right: 10%;/*修改*/
     padding-bottom: 60px;
     background-image: url(../images/7member/member_pic.png); }
     .right20 .title20 {

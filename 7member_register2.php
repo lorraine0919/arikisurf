@@ -144,7 +144,7 @@ function VerifyB(){
     
     var namePattern = /^[\u4e00-\u9fa5_a-zA-Z\s]+$/;    
     var addrWrong = new Array('~','`','!','@','#','%','&','=',':',';','\\+','\\?','\\*','\\^','\\$');
-    var telPattern = "0123456789-_#";
+    var telPattern = "0123456789-#";
     // var telPattern = /^[0-9]{2,5}[-_]?[0-9]{2,8}[-_]?[0-9]{3,8}$/;
     var mailPattern = /^[a-zA-Z](\w*[-_]?\w+)*@(\w*[-_]?\w+)+[\.][a-zA-Z]{2,3}([\.][a-zA-Z]{2})?$/;
 
@@ -195,6 +195,7 @@ function VerifyB(){
 
 
     var telephone = tel.split('');
+    console.log(telephone);
     var hint;
     var judg = 0;
     if(tel.length < 6){
@@ -202,14 +203,16 @@ function VerifyB(){
     }else{
             for( var i=0; i<telephone.length; i++){
                 var phone = telPattern.match(telephone[i]);
+                console.log("phone",phone,"telephone[i]",telephone[i]);
                 if(phone == null){
                     hint = 1;
                 }else{hint = 0;}
-                judg += hint;
+                    judg += hint;
+                    console.log("judg",judg,"hint",hint);
             }
             if (judg !== 0){
-                alert('電話欄位格式有誤，只可輸入數字與 - # ( )');
-            }else alert('電話格式正確');
+                alert('電話欄位格式有誤，只可輸入數字與 - #');
+            }
     }
 
 

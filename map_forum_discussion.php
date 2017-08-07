@@ -21,6 +21,11 @@ $pdo->exec($sqlview);
   <link rel="stylesheet" type="text/css" href="css/discussion.css">
   <script src="js/showMap.js"></script>
   <script src="js/reply.js"></script>
+  <style type="text/css">
+    .red{
+      color: #ed8c00;
+    }
+  </style>
   <title>酋長衝浪Ariki Surf-討論區內頁</title>
 </head>
 <body>
@@ -106,45 +111,45 @@ $pdo->exec($sqlview);
                           }
                     ?></div>
                 <script>//發言檢舉
-                      $(document).ready(function(){                          
-                          var a = $('#quit').text();
-                          console.log("有發言被檢舉"+a);
-                          if(a=="已檢舉"){
-                             $('#quit').css('color','#ED8C00');
-                             $('#quit').unbind();
-                          }
-                      }) 
+                    $(document).ready(function(){                          
+                        var a = $('#quit').text();
+                        // console.log("有發言被檢舉"+a);
+                        if(a=="已檢舉"){
+                           $('#quit').css('color','#ED8C00');
+                           $('#quit').unbind();
+                        }
+                    }) 
 
-                      if($('#quit').text()=="已檢舉"){
+                    if($('#quit').text()=="已檢舉"){
+                        $('#quit').unbind();
+                     }
+
+                     $('#cancel').click(function(){
+                          $('.report').val('');
+                     });
+                     var submitcount=0;
+                     $('#submit').click(function(){                           
+                          if(submitcount==0){           //送出沒點過
+                            var a = $('.report').val();
+                            console.log(a);
+                            function reqListener(){
+                              console.log(this.responseText);                  
+                          }
+
+                          var xhr = new XMLHttpRequest();
+                          xhr.onload = reqListener;
+                          var url = "map_quittoDB.php?post_number=<?php echo $post_number?>&report="+a;
+                          console.log(url);
+                          xhr.open("get", url , true);
+                          xhr.send(null);
+
+                          $('#lightbox_11').hide(); 
+                          $('#quit').text("已檢舉");
+                          $('#quit').css('color','#ED8C00');
                           $('#quit').unbind();
-                       }
-
-                       $('#cancel').click(function(){
-                            $('.report').val('');
-                       });
-                       var submitcount=0;
-                       $('#submit').click(function(){                           
-                            if(submitcount==0){           //送出沒點過
-                              var a = $('.report').val();
-                              console.log(a);
-                              function reqListener(){
-                                console.log(this.responseText);                  
-                            }
-
-                            var xhr = new XMLHttpRequest();
-                            xhr.onload = reqListener;
-                            var url = "map_quittoDB.php?post_number=<?php echo $post_number?>&report="+a;
-                            console.log(url);
-                            xhr.open("get", url , true);
-                            xhr.send(null);
-
-                            $('#lightbox_11').hide(); 
-                            $('#quit').text("已檢舉");
-                            $('#quit').css('color','#ED8C00');
-                            $('#quit').unbind();
-                          }
-                          submitcount++;
-                       })  
+                        }
+                        submitcount++;
+                     })  
                 </script>
           </div>         
       </div><!-- title -->
@@ -189,10 +194,10 @@ $pdo->exec($sqlview);
             </script>
  
 <?php 
-       $sqlreply="select map_replybang.result,map_reply.reply_content,member.mugshot,member.name,map_reply.reply_time , map_replybang.post_number 
-         from member,map_reply,map_replybang
-         where member.member_no = map_reply.member_no
-         and map_replybang.post_number=$post_number and map_reply.post_number=$post_number";
+       $sqlreply="select *
+                  from member,map_reply
+                  where member.member_no = map_reply.member_no
+                  and post_number = $post_number";
        $re = $pdo->query($sqlreply);
        while($reRow = $re->fetch(PDO::FETCH_ASSOC)) {
 ?>                   
@@ -208,10 +213,15 @@ $pdo->exec($sqlview);
                          <div class="txt">
                               <?php echo $reRow["reply_content"] ?>                              
                          </div>
-                         <!-- <input type="hidden" class="reply_number" name="reply_number" value="<?php echo $reRow["reply_number"]; ?>"> -->
+                         <input type="hidden" class="reply_number" name="reply_number" value="<?php echo $reRow["reply_number"]; ?>">
                          <input type="hidden" class="post_number" name="post_number" value="<?php echo $post_number ?>">
                     </div><!-- feed_c -->                                         
-                    <div class="quit many">檢舉</div>
+                    <div class="quit many"><?php
+                    if($reRow["reply_state"]==1){
+                          echo "檢舉";
+                      }else{
+                          echo '<span class="red">已檢舉</sapn>';
+                        }?></div>
                     <input type="hidden" class="result" name="result" value="<?php echo $reRow["result"] ?>">
               </div><!-- feed -->
 <?php 

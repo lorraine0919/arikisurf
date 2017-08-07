@@ -32,11 +32,8 @@
     background-image: url("../images/1common/nav2.png");
     background: #11314c;
     position: fixed;
-    z-index: 20;
-    padding: 10px; }
+    z-index: 20; }
     .navfix .navimg {
-      margin: 0% 2.6%;
-      padding: 2.6% 0%;
       position: relative;
       background-image: url("../images/1common/nav2.png");
       /* Sing In Button */
@@ -58,12 +55,22 @@
         height: 0px;
         padding-bottom: 11.73%;
         display: none; }
+      .navfix .navimg .rwdlogoonbar {
+        display: inline-block;
+        vertical-align: middle;
+        width: 20%;
+        box-sizing: border-box;
+        padding: 0 10px; }
+        .navfix .navimg .rwdlogoonbar img {
+          width: 100%; }
       .navfix .navimg .navbar-buttons {
         position: relative;
-        width: 155px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0px 20px;
+        width: 76%;
+        box-sizing: border-box;
+        text-align: right; }
       .navfix .navimg .button {
         background-color: rgba(44, 45, 47, 0.749);
         width: 97px;

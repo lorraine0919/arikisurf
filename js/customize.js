@@ -34,25 +34,29 @@ window.onload=function(){
 			$('#gotologin').click(function(){
 				$('.loginremindlightboxgroup').fadeOut(500,function(){
 					$('.content19').fadeIn(500);
-					$('#submit19').unbind('click');
+					$('#submit19').off('click');
 					$('#submit19').click(function(){
+						
 						$.post('customize_update.php',{
 				            'memId2' : $('#memId').val() ,
 				            'memPsw2' :  $('#memPsw').val()
 						},function(rs){
-							// alert(rs);
 							var rsarr=rs.split('|');
 							if(rsarr[0]=='1'){
+								console.log('1');
+								
 								$('.memberloginornot').val('1');
 								$('#customername').val(rsarr[1]);
 								$('#customerphone').val(rsarr[2]);
 								$('#customeremail').val(rsarr[3]);
 								$('#customeraddress').val(rsarr[4]);
+								$('#lightbox19').fadeOut(500);
 							}else{
 
 							}
 						});						
-					});
+					});		
+				
 				});
 				
 			});

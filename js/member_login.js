@@ -70,7 +70,7 @@ $(function(){
 			$('#lightbox19').fadeIn(200);
 		});
 	}
-	$('#submit19').click(function(){
+	$('#submit19').on("click" ,function(){
 	    $.post('sessionLogin.php',{ 
 	            'memId2' : $('#memId').val() ,
 	            'memPsw2' :  $('#memPsw').val()
@@ -88,8 +88,9 @@ $(function(){
 		                return;
 	                 }
 	            }
-	    );
+	    );		
 	});
+
 	$('#close19').click(function(){
 		$('#lightbox19').fadeOut(200);
 	})

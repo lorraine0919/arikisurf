@@ -263,7 +263,7 @@
   max-height: 650px;
   background-image: url("../images/3accessories/decoration.png"), linear-gradient(white 35%, white 100%);
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: 100% 100%;
   background-size: content;
   position: absolute;
   top: 0;

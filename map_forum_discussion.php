@@ -23,6 +23,7 @@ $pdo->exec($sqlview);
   <script src="js/jquery.barrating.min.js" type="text/javascript"></script>
   <script src="js/showMap.js"></script>
   <script src="js/reply.js"></script>
+  <script src="js/getStar.js"></script>
   <style type="text/css">
     .red{
       color: #ed8c00;

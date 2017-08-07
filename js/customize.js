@@ -34,6 +34,7 @@ window.onload=function(){
 			$('#gotologin').click(function(){
 				$('.loginremindlightboxgroup').fadeOut(500,function(){
 					$('.content19').fadeIn(500);
+					$('#submit19').unbind('click');
 					$('#submit19').click(function(){
 						$.post('customize_update.php',{
 				            'memId2' : $('#memId').val() ,

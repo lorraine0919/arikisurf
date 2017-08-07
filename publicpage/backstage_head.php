@@ -3,7 +3,7 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
+    <link rel="icon" href="images/1common/icon.png">
     <!-- Bootstrap core CSS -->
     <link href="css/backstage/bootstrap.css" rel="stylesheet">
     <!--external css-->

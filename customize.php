@@ -672,8 +672,9 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 		</div>
 	</div>
 </div>
-<script src="js/customize.js"></script>
+
  <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+ <script src="js/customize.js"></script>
 <?php 
 
 

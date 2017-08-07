@@ -5,7 +5,7 @@
                         <div class="navbar">
                             <a href="index.php">
                                 <div class="rwdlogoonbar">
-                                    <img src="images/1common/picselect2_s.png">
+                                    <img src="images/1common/titlerwd.png">
                                 </div>
                             </a>
                           <div class="navbar-buttons">

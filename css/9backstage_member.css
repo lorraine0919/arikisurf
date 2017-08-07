@@ -1,0 +1,27 @@
+ul.sidebar-menu li a[href="9backstage_member.php"] {
+  background-color: #e97b23; }
+
+.table .content-panel {
+  padding: 20px;
+  font-size: 18px; }
+.table .content-panel .officialimgshow {
+  text-align: center; }
+.table .content-panel th{
+  padding: 10px;
+  min-width: 4em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1); }
+.table .content-panel td {
+  padding: 10px;
+  color: #11314c; }
+.table .content-panel td:last-child {
+  padding: 10px 22px;}
+.table .content-panel h4 {
+  color: #e97b23; }
+.table .content-panel table {
+  max-width: 800px; }
+.table .content-panel a {
+  cursor: pointer; }
+#stop38,#start38{
+  margin: 8px auto;
+}

@@ -1,8 +1,8 @@
 @charset "UTF-8";
-img {width: 100%;}
-
 .loading_bg{display: none;}
-body{overflow: scroll;}
+body{overflow-y: scroll;}
+
+img {width: 100%;}
 /*=========清除浮動=========*/
 .setdown26:after {
   content: '';
@@ -45,7 +45,7 @@ body{overflow: scroll;}
       width: 150px; }
 
 /*setdown26*/
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 909px) {
   .setdown26 {
     width: 100%; }
     .setdown26 .prompt26 {
@@ -84,7 +84,7 @@ body{overflow: scroll;}
           .setdown26 .form26 .detail26 .item26 .dist26 {
             width: calc((calc(100% - 7em - 1vw - 5px)/2) - 4px); }
           }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 910px) {
   .register26 {
     background-image: url(../images/7member/register_bg.png); }
 

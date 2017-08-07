@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php 
+    if(!isset($_SESSION)) {
+      ob_start();
+      session_start();      
+    }
+ ?>
 <html lang="en">
 
   <!--header-->
@@ -13,7 +19,7 @@
 <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>衝浪配備</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
-<div class="showProd" style="display:";>
+<div class="showProd" style="display:">
  <div class="showProd_bg_up">
   <div class="container showProd_bg">
 	<div class="row">
@@ -120,14 +126,14 @@
   </div>
  </div> 
 </div>
-
+<span class="session_acc" style="display: none;"><?php echo isset($_SESSION["account"] )==false ? 0 : $_SESSION["account"] ; ?></span>
 <script type="text/javascript">
 	$(document).ready(function(){
-         var session_mem =<?php echo isset($_SESSION["account"] )==false ? 0 : $_SESSION["account"] ; ?>;
+         var session_mem =$('.session_acc').text();
 
        $('.goCart').click(function(){
 		  if(session_mem==0){
-					alert('請登入會員');
+			alert('請先登入');
 				}else{
 					$(this).parent().parent().parent().parent().parent().submit();
 				}
@@ -137,8 +143,9 @@
 
        $('#gotocart').click(function(){
 			if(session_mem==0){
-					alert('請登入會員');
+			 alert('請先登入');
 				}else{
+					var index = $(this).parent().parent().parent().parent().parent().index();
 					if($('.Leash').eq(0).css('display')!='none'){
 					$('.leashform').eq(index).submit();
 					}else if($('.Fin').eq(0).css('display')!='none'){
@@ -151,6 +158,44 @@
 				}
 			
 		});
+
+       //-------光箱加入購物車--------
+	$('#addtocart').click(function(){
+		if(session_mem==0){
+			 alert('請先登入');
+				}else{
+		    alert('已加入購物車')
+			console.log(prodImg);
+			$.post('surfShop_cart_add.php',{
+				    'prod_no' : $('.lightboxproductno').eq(0).text() , 
+			 		'prod_name' : $('.lightboxproductname').eq(0).text() ,
+			 		'prod_price' :  prodprice,
+			 		'prod_img' :  prodImg				
+				},function(rs){
+					// alert(rs);
+			});
+		  }
+		});
+//-------光箱加入購物車結束--------
+
+//-------加入購物車--------
+	$('.addCart').click(function(){
+		if(session_mem==0){
+			 alert('請先登入');
+				}else{
+		  alert('已加入購物車')
+			console.log($(this).parent().parent().parent().parent().siblings('.prodimg').val());
+			$.post('surfShop_cart_add.php',{
+				    'prod_no' : $(this).parent().parent().parent().parent().siblings('.prodno').val(), 
+			 		'prod_name' : $(this).parent().parent().parent().parent().siblings('.prodname').val() ,
+			 		'prod_price' :  $(this).parent().parent().parent().parent().siblings('.prodprice').val(),
+			 		'prod_img' :  $(this).parent().parent().parent().parent().siblings('.prodimg').val()				
+				},function(rs){
+					// alert(rs);
+			});
+		  }
+		});
+//-------加入購物車結束--------
 
 
 
@@ -472,6 +517,16 @@ try{
 			<div class="clearfix"></div>
 		</div>
 	</div>
+	<div class="loginremindlightboxgroup">
+			<div class="loginremindlightboxarea">
+				<h2 class="loginremindlightboxtitle"></h2>
+				<p class="loginremindlightboxcontent">請先登入</p>
+				<a class="arikicommon_next_btn" id="gotologin">前往登入</a>
+				<div id="loginremindclosebtn">
+					<i class="fa fa-times" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
 	<script src="js/surfShop.js"></script>
  <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
 <!-- 	 <script type="text/javascript">
@@ -494,6 +549,57 @@ try{
 		  a.async = a.src = '//cdn.speaklyn.com/cb5f2d2d2658a34d74654803f63ae779.js';
 		  s.parentNode.insertBefore(a, s);
 		}(document, 'script'));
+	</script> -->
+	<!-- <script type="text/javascript">
+
+		var ALERT_TITLE = "Oops!";
+		var ALERT_BUTTON_TEXT = "Ok";
+
+		if(document.getElementById) {
+			window.alert = function(txt) {
+				createCustomAlert(txt);
+			}
+		}
+
+		function createCustomAlert(txt) {
+			d = document;
+
+			if(d.getElementById("modalContainer")) return;
+
+			mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+			mObj.id = "modalContainer";
+			// mObj.style.height = d.documentElement.scrollHeight + "px";
+			
+			alertObj = mObj.appendChild(d.createElement("div"));
+			alertObj.id = "alertBox";
+			if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+			alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+			alertObj.style.visiblity="visible";
+
+			h1 = alertObj.appendChild(d.createElement("h1"));
+			h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+			msg = alertObj.appendChild(d.createElement("p"));
+			//msg.appendChild(d.createTextNode(txt));
+			msg.innerHTML = txt;
+
+			btn = alertObj.appendChild(d.createElement("a"));
+			btn.id = "closeBtn";
+			btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+			btn.href = "#";
+			btn.focus();
+			btn.onclick = function() { removeCustomAlert();return false; }
+
+			alertObj.style.display = "block";
+			
+		}
+
+		function removeCustomAlert() {
+			document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+		}
+		function ful(){
+		alert('Alert this pages');
+		}
 	</script> -->
 </body>
 </html>

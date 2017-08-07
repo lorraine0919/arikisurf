@@ -144,32 +144,11 @@ function VerifyB(){
     
     var namePattern = /^[\u4e00-\u9fa5_a-zA-Z\s]+$/;    
     var addrWrong = new Array('~','`','!','@','#','%','&','=',':',';','\\+','\\?','\\*','\\^','\\$');
-    var telPattern = /^[0-9]{2,5}[-_]?[0-9]{2,8}[-_]?[0-9]{3,8}$/;
+    var telPattern = "0123456789-_#";
+    // var telPattern = /^[0-9]{2,5}[-_]?[0-9]{2,8}[-_]?[0-9]{3,8}$/;
     var mailPattern = /^[a-zA-Z](\w*[-_]?\w+)*@(\w*[-_]?\w+)+[\.][a-zA-Z]{2,3}([\.][a-zA-Z]{2})?$/;
 
-    // var telPattern = new Array('0','1','2','3','4','5','6','7','8','9','-','_','#');
-
-    // var hint;
-    // var judg = 0;
-    // if(tel.length < 5){
-    //     alert("請填寫電話(至少5碼)");
-    //     return;
-    // }else{
-    //     for( var i=0; i<telPattern.length; i++){
-    //         var phone = tel.match(telPattern[i]);
-    //         if(phone == null){
-    //             hint = 0;
-    //         }else{hint = 1;}
-    //         judg += hint;
-    //         console.log("@索引",i,"值",phone);
-    //         console.log("hint",hint,"judg",judg);
-    //     }
-    //     if (judg !== tel.length){
-    //         alert('電話欄位格式有誤，不可輸入 _ - # 與數字"以外"字元及空白鍵！');
-    //     }
-    // }
-
-// ========================================================================
+    
     if(name==""){
         alert("請輸入姓名");
         return;
@@ -215,22 +194,34 @@ function VerifyB(){
     }
 
 
-    if(telPattern.length < 5){
-        alert("請填寫電話(至少5碼)");
-        return;
-    }else if(!telPattern.test(tel)){
-        alert("電話欄位格式有誤，或誤植 _ - 與數字以外之字元。");
-        return;
+    var telephone = tel.split('');
+    var hint;
+    var judg = 0;
+    if(tel.length < 6){
+        alert("請填寫電話(至少6碼)");
+    }else{
+            for( var i=0; i<telephone.length; i++){
+                var phone = telPattern.match(telephone[i]);
+                if(phone == null){
+                    hint = 1;
+                }else{hint = 0;}
+                judg += hint;
+            }
+            if (judg !== 0){
+                alert('電話欄位格式有誤，只可輸入數字與 - # ( )');
+            }else alert('電話格式正確');
     }
 
 
-    if(mail.length < 1){
-        alert("請填寫電子郵件");
+
+    if(mail.length < 10){
+        alert("電子郵件地址未查填完整!");
         return;
     }else if(!mailPattern.test(mail)){
         alert("電子郵件欄位格式有誤！");
         return;
     }
+
 
     $.post('RegisterFinish.php',{ 
         'name' : name,
@@ -241,9 +232,14 @@ function VerifyB(){
         'tel' : tel,
         'mail' : mail
          },function(rs){
-            alert(rs);
+            window.setTimeout("window.location='7member_register3.php'",1000);
+            //window.setTimeout("Code1;Code2",時間間隔);
          });
 }
+
+//上一頁
+// <input type="button" value="Back" onclick="goBack()">
+// function goBack();
 
 function init(){
     $id("submit26").onclick = VerifyB;
@@ -252,6 +248,5 @@ function init(){
 window.onload=init;
 
 </script>
-<?php require_once('publicpage/member_login.php'); ?>
 </body>
 </html>

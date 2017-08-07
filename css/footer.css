@@ -23,6 +23,8 @@
           display: inline-block; }
           .footer_0 .maxContent .titlegroup .itemtitle li a {
             opacity: 1; }
+    .footer_0 .maxContent .footermember {
+      cursor: pointer; }
     .footer_0 .maxContent .titlegroup:after {
       content: '';
       display: block;

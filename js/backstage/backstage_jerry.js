@@ -1,14 +1,17 @@
 $(function(){
 	/*不可以讓長板下架*/
 		$('.modeltr.t1 .sellornotgroup').css('display','none');
+		$('.modeltr.t1').append('<td></td>');
 	/*不可以讓長板下架*/
 
 	/*不可以讓白色下架*/
 		$('.colortr.t0 .sellornotgroup').css('display','none');
+		$('.colortr.t0').append('<td></td>');
 	/*不可以讓白色下架*/
 
 	/*不可以讓環氧樹脂下架*/
 		$('.materialtr.t0 .sellornotgroup').css('display','none');
+		$('.materialtr.t0').append('<td></td>');
 	/*不可以讓環氧樹脂下架*/
 
 	/*修改好後跳出光箱*/
@@ -67,6 +70,9 @@ $(function(){
 			 		'style' :  $(this).parent().siblings('.sellornotgroup').children().children().children('.style').val()			
 				},function(rs){
 					// alert(rs);
+					$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						location.reload();
+					});
 			});
 		});
 	/*↑價格修改*/
@@ -93,7 +99,9 @@ $(function(){
 				    processData: false,
 				    contentType: false
 				}).done(function(res) {
-					location.reload();
+					$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						location.reload(); 
+					});
 				}).fail(function(res) {
 					// alert(res);
 				});
@@ -110,10 +118,28 @@ $(function(){
 				'deleteimgnum':$(this).siblings('.no').val()
 			},function(rs){
 				console.log(rs);
-				location.reload();
+				$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						location.reload();
+					});
 			})
 		});	
 	/*↑刪除圖片*/
+
+	/*↓修改圖片價格*/
+		$('.patternpricechangebtn').click(function(){
+			console.log($(this).siblings('.patternpricechange').val());
+			console.log($(this).parent().parent().index());
+			$.post('9backstage_customize_update.php',{
+				'patternprice': $(this).siblings('.patternpricechange').val(),
+				'offioruser':$(this).parent().parent().index()+1
+			},function(rs){
+				// alert(rs);
+				$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						location.reload();
+					});
+			})
+		});
+	/*↑修改圖片價格*/
 })
 
 

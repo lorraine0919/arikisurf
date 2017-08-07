@@ -62,28 +62,35 @@ $(function(){
 	console.log($('#login1').text());
 	if($('#login1').text()=='會員登入'){
 		$('#login1').click(function(){
-			console.log('進入登入click事件');
+			// console.log('進入登入click事件');
 			$('#lightbox19').fadeIn(200);
-			$('#submit19').click(function(){
-			    $.post('sessionLogin.php',{ 
-			            'memId2' : $('#memId').val() ,
-			            'memPsw2' :  $('#memPsw').val()
-			             },function(rs){
-				            if(rs == 1){
-				            	$('#login1').html("<a href='7member_update.php'>會員專區</a>");
-				                // $("#login1").text("登出");
-				                $("#lightbox19").css('display',"none");
-				                logined = 2;
-				             }else{
-				                alert("帳號或密碼錯誤");
-				                return;
-			                 }
-			            }
-			    );
-			});
 		});
-
+		$('#login2').click(function(){
+			// console.log('進入登入click事件');
+			$('#lightbox19').fadeIn(200);
+		});
 	}
+	$('#submit19').on("click" ,function(){
+	    $.post('sessionLogin.php',{ 
+	            'memId2' : $('#memId').val() ,
+	            'memPsw2' :  $('#memPsw').val()
+	             },function(rs){
+		            if(rs == 1){
+		            	console.log();
+		            	$('#login1').html("<a href='7member_update.php'>會員專區</a>");
+		                // $("#login1").text("登出");
+		                $("#lightbox19").css('display',"none");
+
+		                logined = 2;
+		                location.reload();
+		             }else{
+		                alert("帳號或密碼錯誤");
+		                return;
+	                 }
+	            }
+	    );		
+	});
+
 	$('#close19').click(function(){
 		$('#lightbox19').fadeOut(200);
 	})

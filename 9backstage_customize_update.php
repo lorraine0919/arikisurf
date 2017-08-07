@@ -97,6 +97,17 @@ try{
 				$pdostatement->execute();				
 			}
 		/*↑刪除官方圖片*/
+
+		/*↓修改圖片價格*/
+			if(isset($_REQUEST['patternprice'])){
+				require_once('connectBooks.php');
+				$sql = "update system_parameter set systemparameter_value = :systemparameter_value where systemparameter_no=	:systemparameter_no";	
+				$pdostatement = $pdo->prepare( $sql );
+				$pdostatement->bindValue(":systemparameter_value" , $_REQUEST['patternprice']);
+				$pdostatement->bindValue(":systemparameter_no" , $_REQUEST['offioruser']);
+				$pdostatement->execute();					
+			}
+		/*↑修改圖片價格*/
 }catch(PDOException $e){
   echo $e->getLine();
   echo $e->getMessage();

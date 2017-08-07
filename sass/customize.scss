@@ -25,6 +25,17 @@
 	}	
 }
 
+.navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(2) a{
+  color: #e97b23;
+}
+
+#goTop{
+	display: none;
+}
+
+
+
+
 .bg_forest_2{
 	background-image: url('../images/2board/forest.png');
 	@extend %bgrp;
@@ -83,6 +94,56 @@
 		    }
 	    }
 	}
+	.loginremindlightboxgroup{
+		width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.5);
+	    text-align: center;
+	    position: fixed;
+	    left: 0;
+	    top: 0;
+	    z-index: 100;
+	    display: none;
+	    .loginremindlightboxarea{
+	    	max-width: 263px;
+		    max-height: 30vh;
+		    background-color: white;
+		    position: relative;
+		    top: 50%;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    padding: 27px 27px 61px 27px;
+		    transform:translateY(-50%);
+		    margin: 0 auto;
+		    box-sizing: border-box;
+		    border-radius: 5px;
+			background-image: url("../images/7member/7member_ordercheck/decoration.png");
+			background-repeat: no-repeat;
+			background-position: 0% 113%;
+		    p{
+		    	height: 15vh;
+		    	line-height: 15vh;
+			    color: #4d6273;
+			    font-weight: bold;
+			    letter-spacing: 2px;
+			    font-size: 18px;
+		    }
+		    #loginremindclosebtn{
+		    	position: absolute;
+		    	right: 0;
+		    	top: 0;
+		    	
+
+		    	.fa{
+		    		font-size: 30px;
+		    		margin: 0 5px 0 0;
+		    		color:#0e2334;
+		    	}
+		    }
+	    }
+	}
+
 	.comfirmlightboxgroup{
 		width: 100%;
 	    height: 100%;
@@ -237,14 +298,14 @@
 			background-position: top;
 			background-size: cover;
 			padding: 4% 0 4% 4%;
-			margin: 2% 0 0 9%;
+			margin: 0% 0 0 9%;
 			position: relative;
 			.pricegroup{
-				width: 44%;
+				width: 47%;
 				position: absolute;
 				color: #fff;
 				top: -14%;
-    			left: 47%;
+    			left: 43%;
 				background: rgba(0,0,0,0.1);
 				box-shadow: 0px 0px 5px rgba(0,0,0,0.2) inset;
 				border-radius: 10px;
@@ -256,7 +317,7 @@
 			.introducefix{
 				position: absolute;
 				.head{
-					padding: 8px 20px;
+					padding: 8px 10px;
 					color: #fff;
 					background-image: url('../images/2board/introducehead.png');
 
@@ -299,9 +360,10 @@
 				}
 				.svgboard{
 					position: absolute;
-					top: 0;
+					top: auto;
 					z-index: 2;
 					width: 100%; 
+					bottom: -30%;
 				}
 				
 				
@@ -511,7 +573,8 @@
 			.introducefix{
 				position: absolute;
 				width: 125%;
-				left: -19%;
+			    left: -19%;
+			    top: 30%; 
 				.head{
 					padding: 8px 20px;
 					color: #fff;
@@ -521,7 +584,7 @@
 						.headimgfix{
 							position: absolute;
 						    top: -135%;
-						    right: -7%;
+						    right: -16%;
 							img{
 								width: 100%;
 							}
@@ -550,10 +613,11 @@
 
 				.svgboard{
 					position: absolute;
-					top: 0;
+					top: auto;
 					left: 9%;
 					z-index: 2;
 					width: 100%;
+					bottom:-30%;
 				}
 				img{
 					width: 100%;
@@ -591,7 +655,7 @@
 		.selectAndNext{
 			width: 25%;
 			display: inline-block;
-			padding-top: 40%;
+			padding-top: 48%;
 			position: relative;
 			margin: -2% 0 0 0;
 			.selectAndNextfix{
@@ -647,7 +711,7 @@
 							    width: 140%;
 							    padding-top: 140%;
 							    top: -26%;
-							    left: -22.7%;							
+							    left: -22.9%;							
 							}
 							p{
 								margin: 10px 0 0 0;
@@ -660,12 +724,12 @@
 					margin:3% 0;
 					.patternselectgroup{
 						background-image: url('../images/2board/step2/patternselectfield.png');
-						background-size: 103% 103%;
+						background-size: 103% 128%;
 						background-repeat: no-repeat;
 						background-position: 100% 5%;
 						margin:2% -5%;
 						position: relative;
-						padding-top: 104%;
+						padding-top: 121%;
 						.patternselectgroupfix{
 							width: 100%;
 							position: absolute;
@@ -777,7 +841,7 @@
 							.texturegroup{
 								width: 90%;
 								margin: auto;
-								.texture{
+								.texture{ 
 									width: 32%;
 									display: inline-block;
 									@extend %whiteblacklineright;
@@ -795,8 +859,8 @@
 			}
 			.next{
 				position: absolute;
-				width: 94%;
-				bottom: -9%;
+				width: 109%;
+				bottom: -7%;
 				right: 0;
 				float: right;
 				text-align: right;
@@ -891,14 +955,15 @@
 				}
 			}		
 		}
-		.fill{
+		.fill{/*我是步驟三*/
 			vertical-align: top;
 			display: inline-block;
 			// background-image: url('../images/2board/insidebox.png');
 			background-repeat: no-repeat;
 			background-position: top;
 			background-size: cover;
-			padding: 26%;
+			padding-top: 61%;
+			width: 49%;
 			position: relative;
 			.fillfix{
 			    position: absolute;
@@ -970,6 +1035,10 @@
 						color: rgba(255,255,255,0.6);
 						padding: 7px 10px 10px 10px;
 						display: inline-block;
+						input,textarea{
+							font-size: 16px;
+						}
+						
 						h3{
 							font-weight: 100;
 						}
@@ -1138,4 +1207,33 @@
 		}
 
 	}
+}
+
+@media screen and (min-width:1154px) {
+	.bg_forest_2{
+		.step2_maxContent{
+			.introduce{
+				.introducefix{
+					top: 20%;
+				}
+			}
+			.selectAndNext{
+				padding-top: 40%;
+				.selectAndNextfix{
+					.patterngroup{
+						.patternselectgroup{
+							padding-top: 96%;
+						}
+					}
+				}
+			}
+		}
+		.step3_maxContent{
+			.fill{
+				padding-top: 49%;
+				width: 49%;
+			}
+		}		
+	}
+
 }

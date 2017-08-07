@@ -4,6 +4,8 @@
 
     unset($_SESSION['account']);
     unset($_SESSION['psw']);
+    unset($_SESSION['member_no']);
+
 
 
  ?>

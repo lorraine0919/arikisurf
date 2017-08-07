@@ -241,6 +241,41 @@ require_once('connectBooks.php');
                         </div>
                       <!-- 材質控制結束 -->
 
+                      <!-- 圖樣價格控制開始 -->
+                        <div class="material content-panel ">
+                          <h4><i class="fa fa-angle-right"></i>圖樣價格管理</h4>
+                          <table class="table table-bordered table-striped table-condensed">
+                            <?php 
+                              $sql='select * from system_parameter';
+                              $pdostatement=$pdo->query($sql);
+                              $pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC);
+                             ?>
+                              <thead>
+                                <tr>
+                                    <th>編號</th>
+                                    <th>名稱</th>
+                                    <th>價格</th>
+                                </tr>
+                              </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>使用者上傳圖樣價格</td>
+                                    <td><input class="patternpricechange" type="number" min="0" value="<?php echo $pdoRow['systemparameter_value']?>">
+                                    <a class="patternpricechangebtn">修改</a></td>
+                                  </tr>
+                                  <?php 
+                                    $pdoRow=$pdostatement->fetch(PDO::FETCH_ASSOC);
+                                   ?>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>官方圖樣價格</td>
+                                    <td><input class="patternpricechange" type="number" min="0" value="<?php echo $pdoRow['systemparameter_value']?>"><a class="patternpricechangebtn"> 修改</a></td>
+                                  </tr>
+                                </tbody>
+                          </table>
+                        </div>
+                      <!-- 圖樣價格控制結束 -->
                     </div><!-- 白色區域結束 -->        
                   
                </div>

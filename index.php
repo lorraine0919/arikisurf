@@ -1,6 +1,8 @@
 <?php 
-    ob_start();
-    session_start();
+if(!isset($_SESSION)) {
+      ob_start();
+      session_start();      
+    }
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,36 +40,21 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
     <script src="libs/owl.carousel/dist/owl.carousel.js"></script>
     <script src="js/index.js"></script>
     <script src="js/index_bamboo.js"></script>
-    <script>
-        $(function(){
 
-            var canvas, stage, exportRoot,coconut1,coconut2;
-
-                function init() {
-                    canvas = document.getElementById("canvas1");
-                    exportRoot = new lib5566.LOGO_Animation();
-
-                    stage = new createjs5566.Stage(canvas);
-                    stage.addChild(exportRoot);
-                    stage.update();
-
-                     createjs5566.Ticker.setFPS(24);
-                    createjs5566.Ticker.addEventListener("tick", stage);
-
-            } 
-            
-            init();
-            
-        });
-
-        
-    </script>
  </head>
   <!--header end-->
 <body class="Sashimi">
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
     <div class="banner_1">
+        <div class="logo_canvas2">
+            <div class="logo_S_canvas2">
+                <img class="cloud1" src="images/1common/logo.png">
+            </div>
+           <!--  <canvas id="canvas1" width="500" height="360"></canvas> -->
+            <h4>Your Board Always Top</h4>  
+        </div>
+
         <div class="logo_canvas1">
             <canvas id="canvas1" width="500" height="360"></canvas>
 
@@ -273,22 +260,39 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
     </div>
     <div class="map_1">
         <div class="contentMax">
-            <div class="introduce col-xs-12 col-sm-12">
+            <div class="map_box col-sm-12">
+                <div class="Earth_shadow">
+                    
+                </div>
+                <div class="map_Earth">
+                    <div class="map_islands">
+                        <img src="images/1common/map-1.png">
+                    </div>
+                </div>
+            </div>
+            <div class="map_phone">
+                <img src="images/1common/map.png">
+            </div>
+            <div class="map_text introduce col-xs-12 col-sm-12">
                 <div class="introduceWord">
                     <h2>走向高手雲集浪點 衝破完美弧線</h2>
                     <p>你體內征服者的細胞正在蠢蠢欲動嗎？<br>
                         對於平淡無奇的波幅已經感到厭倦了嗎？<br>
                         酋長衝浪將給你全新的浪點、全新的視野。</p>
+                    <a href="map.html">MORE INFO</a>
                 </div>
+
+
+
             </div>
-            <div class="map col-sm-12">
-                <div class="mapimg">
-                    <a href="map.php"><img src="images/1common/map.png" class="mapimgpic"></a>
+            
+                <!-- <div class="mapimg">
+                    
                     <div class="pin">
                         <img src="images/1common/pin.png" class="pinpic">
                     </div>
-                </div>
-            </div>
+                </div> -->
+            
             <div class="clearfix"></div>
         </div>
     </div>
@@ -298,6 +302,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                 <h2>浪點討論</h2>
             </div>
             <div class="postgroup loop owl-carousel owl-theme">
+                <!-- Pipeline -->
                 <div class="postfix selected item">    
                     <div class="post selected">
                         <a href="map_session.php?wave_number=101">
@@ -307,7 +312,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>Pipeline</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content selected">
                             <div class="word">
                                 <h3>現代衝浪的發源地</h3>
@@ -323,8 +328,10 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
+                <!-- Superbank -->
                 <div class="postfix item">
                     <div class="post">
                         <a href="map_session.php?wave_number=102">
@@ -334,7 +341,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>SuperBank</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content">
                             <div class="word">
                                 <h3>Quicksilver職業比賽地</h3>
@@ -349,8 +356,10 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
                     </div>
                 </div>
+                <!-- Jeffrey's Bay -->
                 <div class="postfix item">
                     <div class="post">
                         <a href="map_session.php?wave_number=103">
@@ -360,7 +369,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                                 <h4>Jeffrey’s Bay</h4>
                             </div> -->
                             </div>
-                        </a>
+                        
                         <div class="content">
                             <div class="word">
                                 <h3>浪人心中的最佳浪點</h3>
@@ -376,6 +385,178 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                             </div>
 
                         </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Black Beach -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=104">
+                            <div class="head p4">
+                            <!--                             <div class="headword">
+                                <h3>Quicksilver職業比賽地</h3>
+                                <h4>SuperBank</h4>
+                            </div> -->
+                            </div>
+                        
+                        <div class="content">
+                            <div class="word">
+                                <h3>浪高五米的進階浪點</h3>
+                                <h4>Black-Beach</h4>                                
+                            </div>
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postbean.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>阿宅</h5>
+                                    <p>「衝浪兼顧眼睛」</p>
+                                </div>                    
+                            </div>
+
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Teahupo'o -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=105">
+                            <div class="head p5">
+                            <!--                             <div class="headword">
+                                <h3>浪人心中的最佳浪點</h3>
+                                <h4>Jeffrey’s Bay</h4>
+                            </div> -->
+                            </div>
+                        
+                        <div class="content">
+                            <div class="word">
+                                <h3>衝浪最早的起源地</h3>
+                                <h4>Teahupo'o</h4>                                
+                            </div>
+                            
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postfran.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>Fran</h5>
+                                    <p>「20米高超危險巨浪」</p>
+                                </div>                     
+                            </div>
+
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- La Graviere -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=106">
+                            <div class="head p6">
+                            <!--                             <div class="headword">
+                                <h3>Quicksilver職業比賽地</h3>
+                                <h4>SuperBank</h4>
+                            </div> -->
+                            </div>
+                       
+                        <div class="content">
+                            <div class="word">
+                                <h3>適合初學者的好浪點</h3>
+                                <h4>La Graviere</h4>                                
+                            </div>
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postbear.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>熊熊</h5>
+                                    <p>「法式浪漫的浪點」</p>
+                                </div>                    
+                            </div>
+
+                        </div>
+                         </a>
+                    </div>
+                </div>
+                <!-- Uluwatu -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=107">
+                            <div class="head p7">
+                            <!--                             <div class="headword">
+                                <h3>浪人心中的最佳浪點</h3>
+                                <h4>Jeffrey’s Bay</h4>
+                            </div> -->
+                            </div>
+                        
+                        <div class="content">
+                            <div class="word">
+                                <h3>經典礁石浪</h3>
+                                <h4>Uluwatu</h4>                                
+                            </div>
+                            
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postpeggy.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>Peggy</h5>
+                                    <p>「溫暖海水上有一群高手」</p>
+                                </div>                     
+                            </div>
+
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Cloudbreak -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=108">
+                            <div class="head p8">
+                            <!--                             <div class="headword">
+                                <h3>Quicksilver職業比賽地</h3>
+                                <h4>SuperBank</h4>
+                            </div> -->
+                            </div>
+                        
+                        <div class="content">
+                            <div class="word">
+                                <h3>全年有好浪的浪點</h3>
+                                <h4>Cloudbreak</h4>                                
+                            </div>
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postenerge.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>榕樹下活力姐</h5>
+                                    <p>「水質清澈，可觀賞珊瑚礁」</p>
+                                </div>                    
+                            </div>
+
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Maverick's -->
+                <div class="postfix item">
+                    <div class="post">
+                        <a href="map_session.php?wave_number=109">
+                            <div class="head p9">
+                            <!--                             <div class="headword">
+                                <h3>浪人心中的最佳浪點</h3>
+                                <h4>Jeffrey’s Bay</h4>
+                            </div> -->
+                            </div>
+                        
+                        <div class="content">
+                            <div class="word">
+                                <h3>勇敢浪人挑戰點</h3>
+                                <h4>Maverick's</h4>                                
+                            </div>
+                            
+                            <div class="postcontentgroup">
+                                <div class="mempic"><img src="images/1common/postanna.png" alt=""></div>
+                                <div class="postcontent">
+                                    <h5>安娜</h5>
+                                    <p>「需要做摩托艇才能前往的危險浪點！」</p>
+                                </div>                     
+                            </div>
+
+                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -450,5 +631,29 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
     </div>
     <!-- <script src="js/index.js"></script> -->
      <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
+         <script>
+        $(function(){
+
+            var canvas, stage, exportRoot,coconut1,coconut2;
+
+                function init() {
+                    canvas = document.getElementById("canvas1");
+                    exportRoot = new lib5566.LOGO_Animation();
+
+                    stage = new createjs5566.Stage(canvas);
+                    stage.addChild(exportRoot);
+                    stage.update();
+
+                     createjs5566.Ticker.setFPS(24);
+                    createjs5566.Ticker.addEventListener("tick", stage);
+
+            } 
+            
+            init();
+            
+        });
+
+        
+    </script>
 </body>
 </html>

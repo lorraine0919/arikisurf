@@ -114,39 +114,33 @@ $(document).ready(function(){
 			
 	$('.bamboo_Direction_right').click(function(){
 
-			if(rwdarrowcount<9){
-				$('.bamboo_menu_phone .title').text(titlearr[rwdarrowcount]);
-				$('.bamboo_menu_phone_text .info').text(infoarr[rwdarrowcount]);
-
-				controlpoint(rwdarrowcount);
+			if(rwdarrowcount==0){
+				rwdarrowcount=8;
 			}else{
-				rwdarrowcount=0;
-				$('.bamboo_menu_phone .title').text(titlearr[rwdarrowcount]);
-				$('.bamboo_menu_phone_text .info').text(infoarr[rwdarrowcount]);
-
-				controlpoint(rwdarrowcount);				
+				rwdarrowcount--;
 			}
-			rwdarrowcount++;
+			$('.bamboo_menu_phone .title').text(titlearr[rwdarrowcount]);
+			$('.bamboo_menu_phone_text .info').text(infoarr[rwdarrowcount]);
+
+			controlpoint(rwdarrowcount);
+			console.log(rwdarrowcount);				
 
 			
 	});
 
 	$('.bamboo_Direction_left').click(function(){
 
-			if(rwdarrowcount<9){
-				$('.bamboo_menu_phone .title').text(titlearr[rwdarrowcount]);
-				$('.bamboo_menu_phone_text .info').text(infoarr[rwdarrowcount]);
 
-				controlpoint(rwdarrowcount);
-			}else{
+			if(rwdarrowcount==8){
 				rwdarrowcount=0;
-				$('.bamboo_menu_phone .title').text(titlearr[rwdarrowcount]);
-				$('.bamboo_menu_phone_text .info').text(infoarr[rwdarrowcount]);
-
-				controlpoint(rwdarrowcount);				
+			}else{
+				rwdarrowcount++;
 			}
+			$('.bamboo_menu_phone .title').text(titlearr[rwdarrowcount]);
+			$('.bamboo_menu_phone_text .info').text(infoarr[rwdarrowcount]);
 
-			rwdarrowcount--;
+			controlpoint(rwdarrowcount);	
+			console.log(rwdarrowcount);					
 	});
 
 

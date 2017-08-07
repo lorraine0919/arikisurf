@@ -81,6 +81,7 @@ $(document).ready(function(){
         var prodpic = $(this).children('img').attr('src');
         prodImg = $(this).children('img').attr('src').replace('images/3accessories/','');
         var prodpri = $(this).next().children('p').text();
+        prodprice =  $(this).next().children('p').text().replace('建議售價　$','').replace('元','');
         var prodtit = $(this).next().children('h4').text();
         var prodtxt = $(this).next().children('div').children('p').text();
         var prodname = $(this).parent().parent().parent().parent().siblings('.prodname').val();
@@ -124,32 +125,34 @@ $(document).ready(function(){
 	// 		storage['gotocart'] += lightboxproductno + ',';
 	// });
 //-------光箱加入購物車--------
-	$('#addtocart').click(function(){
-			console.log(prodImg);
-			$.post('surfShop_cart_add.php',{
-				    'prod_no' : $('.lightboxproductno').eq(0).text() , 
-			 		'prod_name' : $('.lightboxproductname').eq(0).text() ,
-			 		'prod_price' :  $(this).parent().siblings().children('.pricechange').val(),
-			 		'prod_img' :  prodImg				
-				},function(rs){
-					// alert(rs);
-			});
-		});
-//-------光箱加入購物車結束--------
+// 	$('#addtocart').click(function(){
+// 		alert('已加入購物車')
+// 			console.log(prodImg);
+// 			$.post('surfShop_cart_add.php',{
+// 				    'prod_no' : $('.lightboxproductno').eq(0).text() , 
+// 			 		'prod_name' : $('.lightboxproductname').eq(0).text() ,
+// 			 		'prod_price' :  prodprice,
+// 			 		'prod_img' :  prodImg				
+// 				},function(rs){
+// 					// alert(rs);
+// 			});
+// 		});
+// //-------光箱加入購物車結束--------
 
-//-------加入購物車--------
-	$('.addCart').click(function(){
-			console.log($(this).parent().parent().parent().parent().siblings('.prodimg').val());
-			$.post('surfShop_cart_add.php',{
-				    'prod_no' : $(this).parent().parent().parent().parent().siblings('.prodno').val(), 
-			 		'prod_name' : $(this).parent().parent().parent().parent().siblings('.prodname').val() ,
-			 		'prod_price' :  $(this).parent().parent().parent().parent().siblings('.prodprice').val(),
-			 		'prod_img' :  $(this).parent().parent().parent().parent().siblings('.prodimg').val()				
-				},function(rs){
-					// alert(rs);
-			});
-		});
-//-------加入購物車--------
+// //-------加入購物車--------
+// 	$('.addCart').click(function(){
+// 		alert('已加入購物車')
+// 			console.log($(this).parent().parent().parent().parent().siblings('.prodimg').val());
+// 			$.post('surfShop_cart_add.php',{
+// 				    'prod_no' : $(this).parent().parent().parent().parent().siblings('.prodno').val(), 
+// 			 		'prod_name' : $(this).parent().parent().parent().parent().siblings('.prodname').val() ,
+// 			 		'prod_price' :  $(this).parent().parent().parent().parent().siblings('.prodprice').val(),
+// 			 		'prod_img' :  $(this).parent().parent().parent().parent().siblings('.prodimg').val()				
+// 				},function(rs){
+// 					// alert(rs);
+// 			});
+// 		});
+//-------加入購物車結束--------
 	$('.pic').click(function(){
         $('#lightbox').fadeIn(500);
 	});

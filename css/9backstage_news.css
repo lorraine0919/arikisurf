@@ -1,5 +1,9 @@
 @charset "UTF-8";
+ul.sidebar-menu li a[href="9backstage_news.php"] {
+    background-color: #e97b23;
+}
 @media screen and (max-width: 767px) {
+
 .back_newsmodify{
 		width: 26%;
 	}
@@ -159,7 +163,7 @@ input:focus, textarea:focus {
 }
 /*RWD結束*/
 @media screen and (min-width: 768px) {
-
+	
 	.back_newsno{
 		width: 10%;
 	}

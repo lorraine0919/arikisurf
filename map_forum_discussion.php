@@ -17,10 +17,17 @@ $pdo->exec($sqlview);
 <html lang="en">
 <head>
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
-  <link rel="stylesheet" type="text/css" href="css/star.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fontawesome-stars.css">
   <link rel="stylesheet" type="text/css" href="css/discussion.css">
+  <script src="js/jquery.barrating.min.js" type="text/javascript"></script>
   <script src="js/showMap.js"></script>
   <script src="js/reply.js"></script>
+  <style type="text/css">
+    .red{
+      color: #ed8c00;
+    }
+  </style>
   <title>酋長衝浪Ariki Surf-討論區內頁</title>
 </head>
 <body>
@@ -64,31 +71,36 @@ $pdo->exec($sqlview);
      $sql2="select * from member,map_post 
             where member.member_no = map_post.member_no 
             and wave_number=$wave_number 
-            and post_number=$post_number ";
+            and post_number=$post_number";
      $post = $pdo->query($sql2);
      while ($postRow = $post->fetch(PDO::FETCH_ASSOC)) {    
- ?>    
+?>    
      <div class="bg_11">
       <div class="title">
           <h1><?php echo $postRow["post_title"]; ?></h1>
           <div class="gol">
+          <select class="star">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <input class="gg" type="hidden" value="<?php echo $postRow["star_score"]; ?>">
+          </select>
+<script>
+      $(document).ready(function(){
+         $('.star').barrating({
+                theme: 'fontawesome-stars'
+           });
+         console.log($('.gg').val());
+         $('.star').barrating('set',$('.gg').val());
+       });
+</script>          
 <?php 
       $sqllove = "select * from map_like where post_number=$post_number";
       $aba = $pdo->query($sqllove);
       $love = ($aba->rowCount()!=0) ? "heart_red.png" : "heart_white.png";
-?>          
-          <div id="starBg" class="star_bg">                     
-              <input type="radio" id="starScore1" class="score score_1" value="1" name="score">
-              <a class="star star_1" title="差"><label class="lab" for="starScore1">差</label></a>
-              <input type="radio" id="starScore2" class="score score_2" value="2" name="score">
-              <a class="star star_2" title="較差"><label class="lab" for="starScore2">較差</label></a>
-              <input type="radio" id="starScore3" class="score score_3" value="3" name="score">
-              <a class="star star_3" title="普通"><label class="lab" for="starScore3">普通</label></a>
-              <input type="radio" id="starScore4" class="score score_4" value="4" name="score">
-              <a class="star star_4" title="較好"><label class="lab" for="starScore4">較好</label></a>
-              <input type="radio" id="starScore5" class="score score_5" value="5" name="score">
-              <a class="star star_5" title="好"><label class="lab" for="starScore5">好</label></a>
-          </div>
+?>
           <div class="lovepic">
                <img src="images/4wavepoint/<?php echo $love;?>" id="love">
                <div id="loveinfo"></div>         
@@ -106,45 +118,45 @@ $pdo->exec($sqlview);
                           }
                     ?></div>
                 <script>//發言檢舉
-                      $(document).ready(function(){                          
-                          var a = $('#quit').text();
-                          console.log("有發言被檢舉"+a);
-                          if(a=="已檢舉"){
-                             $('#quit').css('color','#ED8C00');
-                             $('#quit').unbind();
-                          }
-                      }) 
+                    $(document).ready(function(){                          
+                        var a = $('#quit').text();
+                        // console.log("有發言被檢舉"+a);
+                        if(a=="已檢舉"){
+                           $('#quit').css('color','#ED8C00');
+                           $('#quit').unbind();
+                        }
+                    }) 
 
-                      if($('#quit').text()=="已檢舉"){
+                    if($('#quit').text()=="已檢舉"){
+                        $('#quit').unbind();
+                     }
+
+                     $('#cancel').click(function(){
+                          $('.report').val('');
+                     });
+                     var submitcount=0;
+                     $('#submit').click(function(){                           
+                          if(submitcount==0){           //送出沒點過
+                            var a = $('.report').val();
+                            console.log(a);
+                            function reqListener(){
+                              console.log(this.responseText);                  
+                          }
+
+                          var xhr = new XMLHttpRequest();
+                          xhr.onload = reqListener;
+                          var url = "map_quittoDB.php?post_number=<?php echo $post_number?>&report="+a;
+                          console.log(url);
+                          xhr.open("get", url , true);
+                          xhr.send(null);
+
+                          $('#lightbox_11').hide(); 
+                          $('#quit').text("已檢舉");
+                          $('#quit').css('color','#ED8C00');
                           $('#quit').unbind();
-                       }
-
-                       $('#cancel').click(function(){
-                            $('.report').val('');
-                       });
-                       var submitcount=0;
-                       $('#submit').click(function(){                           
-                            if(submitcount==0){           //送出沒點過
-                              var a = $('.report').val();
-                              console.log(a);
-                              function reqListener(){
-                                console.log(this.responseText);                  
-                            }
-
-                            var xhr = new XMLHttpRequest();
-                            xhr.onload = reqListener;
-                            var url = "map_quittoDB.php?post_number=<?php echo $post_number?>&report="+a;
-                            console.log(url);
-                            xhr.open("get", url , true);
-                            xhr.send(null);
-
-                            $('#lightbox_11').hide(); 
-                            $('#quit').text("已檢舉");
-                            $('#quit').css('color','#ED8C00');
-                            $('#quit').unbind();
-                          }
-                          submitcount++;
-                       })  
+                        }
+                        submitcount++;
+                     })  
                 </script>
           </div>         
       </div><!-- title -->
@@ -189,10 +201,10 @@ $pdo->exec($sqlview);
             </script>
  
 <?php 
-       $sqlreply="select map_replybang.result,map_reply.reply_content,member.mugshot,member.name,map_reply.reply_time , map_replybang.post_number 
-         from member,map_reply,map_replybang
-         where member.member_no = map_reply.member_no
-         and map_replybang.post_number=$post_number and map_reply.post_number=$post_number";
+       $sqlreply="select *
+                  from member,map_reply
+                  where member.member_no = map_reply.member_no
+                  and post_number = $post_number";
        $re = $pdo->query($sqlreply);
        while($reRow = $re->fetch(PDO::FETCH_ASSOC)) {
 ?>                   
@@ -208,10 +220,15 @@ $pdo->exec($sqlview);
                          <div class="txt">
                               <?php echo $reRow["reply_content"] ?>                              
                          </div>
-                         <!-- <input type="hidden" class="reply_number" name="reply_number" value="<?php echo $reRow["reply_number"]; ?>"> -->
+                         <input type="hidden" class="reply_number" name="reply_number" value="<?php echo $reRow["reply_number"]; ?>">
                          <input type="hidden" class="post_number" name="post_number" value="<?php echo $post_number ?>">
                     </div><!-- feed_c -->                                         
-                    <div class="quit many">檢舉</div>
+                    <div class="quit many"><?php
+                    if($reRow["reply_state"]==1){
+                          echo "檢舉";
+                      }else{
+                          echo '<span class="red">已檢舉</sapn>';
+                        }?></div>
                     <input type="hidden" class="result" name="result" value="<?php echo $reRow["result"] ?>">
               </div><!-- feed -->
 <?php 

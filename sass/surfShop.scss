@@ -426,7 +426,7 @@
 			background-image: url("../images/3accessories/decoration.png"),
 			linear-gradient(rgba(255, 255, 255, 1)35%, rgba(255, 255, 255, 1)100%);  
 			background-repeat: no-repeat;
-			background-position: center bottom;
+			background-position: 100% 100%;
 			background-size: content;
 			position: absolute;
 			top: 0;
@@ -479,6 +479,58 @@
 			right:0px;
 			top:0px;
 		}
+
+
+
+		.loginremindlightboxgroup{
+		width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.5);
+	    text-align: center;
+	    position: fixed;
+	    left: 0;
+	    top: 0;
+	    z-index: 100;
+	    display: none;
+	    .loginremindlightboxarea{
+	    	max-width: 263px;
+		    max-height: 30vh;
+		    background-color: white;
+		    position: relative;
+		    top: 50%;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    padding: 27px 27px 61px 27px;
+		    transform:translateY(-50%);
+		    margin: 0 auto;
+		    box-sizing: border-box;
+		    border-radius: 5px;
+			background-image: url("../images/7member/7member_ordercheck/decoration.png");
+			background-repeat: no-repeat;
+			background-position: 0% 113%;
+		    p{
+		    	height: 15vh;
+		    	line-height: 15vh;
+			    color: #4d6273;
+			    font-weight: bold;
+			    letter-spacing: 2px;
+			    font-size: 18px;
+		    }
+		    #loginremindclosebtn{
+		    	position: absolute;
+		    	right: 0;
+		    	top: 0;
+		    	
+
+		    	.fa{
+		    		font-size: 30px;
+		    		margin: 0 5px 0 0;
+		    		color:#0e2334;
+		    	}
+		    }
+	    }
+	}
 		//----lightboxend----
 		@media screen and (min-width:768px){
 			#prodTitleM{
@@ -575,7 +627,7 @@
 		  
 
     	.main_BG{
-             background-position: left top;
+             background-position: 0% -4%;
     	   }
     	.showProd{
 		   .mo-fire {
@@ -588,6 +640,7 @@
 	   @media screen and (max-width:321px){
 	   	.barbg{
 			.changebar{
+				padding-top: 15px;
 			 // padding-bottom: 18px;
 		   li{
 			font-size: 13px;
@@ -612,3 +665,131 @@
 	   // #wooo .sl-widget-box{
 	   // 	opacity: 1 !important;
 	   // }
+.navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(3) a{
+  color: #e97b23;
+}
+	// 	#modalContainer {
+		  
+	// 	  	background-color: rgba(0,0,0,0.5);
+	// 		position:fixed;
+	// 	  	top:0;
+	// 		width:100%;
+	// 		height:100%;
+	// 		left:0px;
+	// 		z-index:10000;
+		 
+	// 	}
+
+	// 	#alertBox {
+	// 		position:relative;
+	// 		width:25%;
+	// 		min-height:100px;
+	// 	  	max-height:300px;
+	// 		margin-top:50px;
+	// 		box-shadow: 1px 1PX 7PX #102c38;
+	// 		background-color:rgba(255, 255, 255,0.9);
+	// 		background-repeat:no-repeat;
+	// 	  	top:30%;
+	// 	  	border-radius: 5px;
+	// 		z-index:10000;
+		  
+	// 	}
+
+	// 	#modalContainer > #alertBox {
+	// 		position:fixed;
+	// 	}
+
+	// 	#alertBox h1 {
+	// 		text-align: center;
+	// 		margin:0;
+	// 		font:bold 1em arial;
+	// 		color:#FFF;
+	// 		background-image: linear-gradient(60deg, rgba(57, 74, 108, 1) 0%, rgba(77, 87, 162, 0.8) 100%);
+	// 		border-bottom:1px solid rgba(12,35,66,0.75);
+	// 		padding:10px 0 10px 5px;
+	// 		border-radius: 5px 5px 0px 0px;;
+	// 	}
+
+
+	// 	#alertBox p {
+	// 	  	height: 2.5vw;
+	// 	    padding-left: 5px;
+	// 	    padding-top: 2vw;
+	// 	    text-align: center;
+	// 	    vertical-align: middle;
+	// 	}
+
+	// 	#alertBox #closeBtn {
+	// 		display:block;
+	// 		position:relative;
+	// 		margin:10px auto 25px auto;
+	// 		text-transform:uppercase;
+	// 		text-align:center;
+	// 		border-radius: 5px;
+	// 		text-decoration:none;
+	// 		width: 90px;
+	// 	    height: 35px;
+	// 	    line-height: 40px;
+	// 	    color: #fff;
+	// 	    background-color: rgba(67, 142, 176, 1);
+	// 	  	outline:0!important;
+	// 	  	transition: 0.3s;
+	// 	}
+	// 	#alertBox #closeBtn:hover{
+	// 		background-color: #6cf;
+	// 	}
+
+	// 	/* unrelated styles */
+
+	// 	#mContainer {
+	// 		position:relative;
+	// 		width:600px;
+	// 		margin:auto;
+	// 		padding:5px;
+	// 		border-top:2px solid #fff;
+	// 		border-bottom:2px solid #fff;
+	// 	}
+
+	// 	h1,h2 {
+	// 		margin:0;
+	// 		padding:4px;
+	// 	}
+
+	// 	code {
+	// 		font-size:1.2em;
+	// 		color:#069;
+	// 	}
+
+	// 	#credits {
+	// 		position:relative;
+	// 		margin:25px auto 0px auto;
+	// 		width:350px; 
+	// 		font:0.7em verdana;
+	// 		border-top:1px solid #000;
+	// 		border-bottom:1px solid #000;
+	// 		height:90px;
+	// 		padding-top:4px;
+	// 	    border-radius:5px;
+	// 	}
+
+	// 	#credits img {
+	// 		float:left;
+	// 		margin:5px 10px 5px 0px;
+	// 		border:1px solid #000000;
+	// 		width:80px;
+	// 		height:79px;
+	// 	}
+
+	// 	.important {
+	// 		background-color:#F5FCC8;
+	// 		padding:2px;
+
+	// 	}
+
+	// 	@media screen and (max-width: 600px){
+	// 	  #alertBox{
+	// 		position:relative;
+	// 		width:90%;
+	// 	  	top:30%;
+	// 	}
+	// }

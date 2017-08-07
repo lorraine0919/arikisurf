@@ -12,11 +12,12 @@
       <link href="css/backstage/bootstrap.css" rel="stylesheet">
       <!--external css-->
       <link href="css/fontawesome/css/font-awesome.css" rel="stylesheet">
-          
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <!-- Custom styles for this template -->
       <link href="css/backstage/style.css" rel="stylesheet">
       <link href="css/backstage/style-responsive.css" rel="stylesheet">
       <script src="js/backstage/chart-master/Chart.js"></script>
+      <script src="js/backstage/9backstage_login.js"></script>
   
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
@@ -25,7 +26,7 @@
       <![endif]-->
     <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;display: block;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;padding: 5px 5px 8px 5px;font: 10px arial, san serif;text-align: left;}</style>
     `
-    <title>Ariki Surf - 登入</title>
+    <title >Ariki Surf - 登入</title>
     <!-- <link rel="stylesheet" type="text/css" href="css/9backstage_welcome.css">  -->
     <style type="text/css">
     	.form-control{
@@ -45,19 +46,19 @@
 <!-- =================後臺管理================== -->
 	<div id="login-page">
 		<div class="container">
-			<form class="form-login" action="index.html">
+			<div class="form-login" >
 		        <h2 class="form-login-heading">管理者登入</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="管理者帳號" autofocus="">
+		            <input type="text" class="form-control form-controlA" placeholder="管理者帳號" autofocus="">
 		            <br>
-		            <input type="password" class="form-control" placeholder="管理者密碼">
+		            <input type="password" class="form-control form-controlB" placeholder="管理者密碼">
 		            <!-- <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
 		
 		                </span>
 		            </label> -->
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i>登入</button>
+		            <button class="btn btn-theme btn-block"><i class="fa fa-lock"></i>登入</button>
 
 		          
 		
@@ -85,7 +86,7 @@
 		          </div>
 		          <!-- modal -->
 		
-		      </form>
+		      </div>
 		</div>
 	</div>
 	<script src="js/backstage/jquery.js"></script>

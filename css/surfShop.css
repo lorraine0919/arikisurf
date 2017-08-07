@@ -359,7 +359,7 @@
     max-height: 550px; }
 
   .main_BG {
-    background-position: left top; }
+    background-position: left bottom; }
 
   .showProd .mo-fire {
     width: 62px;
@@ -377,3 +377,5 @@
     width: 60px;
     left: 39%;
     top: -30px; } }
+.navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(3) a {
+  color: #e97b23; }

@@ -60,7 +60,7 @@ img {width: 100%;}
     padding: 0.7em 1.25em;
     background-color: rgba(217, 217, 217, 0.2); }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 949px) {
   .left20 {
     /*sidebar20*/ }
     .left20 .sidebar20 {
@@ -78,7 +78,6 @@ img {width: 100%;}
         .left20 .sidebar20 .base20 .block20 {
           width: 10em;
           margin-left: 10vw;
-          text-align: center;
           position: relative;
           right: 30vw;
           bottom: 2vh;
@@ -168,7 +167,7 @@ img {width: 100%;}
   .right20 {
     float: right;
     width: calc(100% - 245px - 3vw);
-    padding-right: 16%;
+    padding-right: 10%;/*修改*/
     padding-bottom: 60px;
     background-image: url(../images/7member/member_pic.png); }
     .right20 .title20 {
@@ -180,7 +179,7 @@ img {width: 100%;}
 
   /*right20*/ }
 /*平板*/
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1320px) {
   .main20 {
     width: 58.333%;
     max-width: 1170px;
@@ -231,7 +230,7 @@ img {width: 100%;}
   .right20 {
     float: right;
     width: calc(100% - 245px - 3vw);
-    padding-right: 16%;
+    padding-right: 10%;/*修改*/
     padding-bottom: 60px;
     background-image: url(../images/7member/member_pic.png); }
     .right20 .title20 {

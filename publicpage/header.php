@@ -1,6 +1,6 @@
  <script type="text/javascript">
 
-        var ALERT_TITLE = "Oops!";
+        var ALERT_TITLE = "ArikiSurf";
         var ALERT_BUTTON_TEXT = "Ok";
 
         if(document.getElementById) {

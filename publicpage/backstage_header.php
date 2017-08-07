@@ -2,16 +2,16 @@
     <div class="sidebar-toggle-box">
           <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
     </div>
-    <a href="9backstage_welcome.html" class="logo"><b>後臺管理</b></a>
+    <a href="9backstage_welcome.php" class="logo"><b>後臺管理</b></a>
 </div>
 <div class="content35">
     <div class="box35">
         <div id="sidebar" class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none; margin-left: 0px;">
             <ul class="sidebar-menu" id="nav-accordion" style="display: block;">
-                <p class="centered"><a href="profile.html"><img src="images/9backstage/hebe.jpg" class="img-circle" width="60"></a></p>
+                <p class="centered"><img src="images/9backstage/hebe.jpg" class="img-circle" width="60"></p>
                 <h5 class="centered">管理員A</h5>
                 <li class="mt">
-                      <a href="9backstage_welcome.html">
+                      <a href="9backstage_welcome.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>

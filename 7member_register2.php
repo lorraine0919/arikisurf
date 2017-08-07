@@ -224,8 +224,8 @@ function VerifyB(){
     }
 
 
-    if(mail.length < 1){
-        alert("請填寫電子郵件");
+    if(mail.length < 10){
+        alert("電子郵件地址未查填完整!");
         return;
     }else if(!mailPattern.test(mail)){
         alert("電子郵件欄位格式有誤！");
@@ -242,8 +242,14 @@ function VerifyB(){
         'mail' : mail
          },function(rs){
             alert(rs);
+            window.setTimeout("window.location='7member_register3.php'",2500);
+            //window.setTimeout("Code1;Code2",時間間隔);
          });
 }
+
+//上一頁
+// <input type="button" value="Back" onclick="goBack()">
+// function goBack();
 
 function init(){
     $id("submit26").onclick = VerifyB;

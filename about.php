@@ -1,7 +1,4 @@
-<?php 
-    ob_start();
-    session_start();
- ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +51,7 @@
         <div class="col-xs-12 col-sm-6">
           <div class="about_img">
             <div class="about_leftSide_17" id="about_leftSide_17">
-            <img src="images/6ariki/about_img_rwd2.png">
+            <img src="images/6ariki/about_img_rwd3.png">
             </div>
           </div>
          </div>
@@ -78,7 +75,7 @@
             <div class="col-xs-12 col-sm-6 col-sm-push-7">
                 <div class="business_img">
                     <div class="business_leftSide_17">
-                    <img src="images/6ariki/business_img_rwd.png">
+                    <img src="images/6ariki/business_img_rwd2.png">
                     </div>
                 </div>
             </div>

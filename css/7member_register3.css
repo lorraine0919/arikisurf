@@ -4,9 +4,14 @@ body{overflow-y: scroll;}
 
 img {width: 100%;}
 /*=========清除浮動=========*/
+body{
+  background-image:linear-gradient(-8deg,#136175  44%,#4D7D6B 57%,#158896 79%);
+  /*background-image:linear-gradient(-8deg,#496B5F 47%,#178E99 79%,#138896 116%);*/
+  /*.padding27{max-height: 843.79px;}*/
+}
 .box27{
   position: relative;
-  padding-top: calc(100vh - 5.2% - 0.865% - 10% + 5px);
+  padding-top: calc(100vh - 5.2% - 0.865% - 10% + 10px);
 
   box-sizing: border-box;
   background-image: url(../images/7member/rwdsuccess.png);
@@ -35,14 +40,16 @@ img {width: 100%;}
 
   .box27{
     width: 100vw;
+    max-width: 1290px;
+    margin: auto;
     padding-top: 65.364vw;
     background-image: url(../images/7member/success.png);
-    background-size: cover;
+    background-repeat: no-repeat;
   }
   .welcome27{
     top: calc(calc(65.364vw/2) - 3em);
     font-size: 35px;
-    line-height: 3;
+    line-height: 2;
     letter-spacing: 8px;
   }
 

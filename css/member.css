@@ -117,7 +117,7 @@ img {width: 100%;}
         font-weight: bold;
         letter-spacing: 6px; } }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 950px) {
   .main20 {
     width: 80%;
     max-width: 1170px;

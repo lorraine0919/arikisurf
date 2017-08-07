@@ -241,8 +241,7 @@ function VerifyB(){
         'tel' : tel,
         'mail' : mail
          },function(rs){
-            alert(rs);
-            window.setTimeout("window.location='7member_register3.php'",2500);
+            window.setTimeout("window.location='7member_register3.php'",1000);
             //window.setTimeout("Code1;Code2",時間間隔);
          });
 }

@@ -57,42 +57,38 @@
 		</div>
     </div>
     	 <script type="text/javascript">
+    	 $(function(){
+				var mesBtncount = 0;
+			 	$('#mesBtn').click(function(){
+			 		if(mesBtncount==0){
+				 		$('body').attr('id','wooo');
+				 		console.log('1');
+				 		mesBtncount++;	
+				 		$('#mesBtn').text('關閉留言');		
+			 		}else{
+			 			$('body').removeAttr('id','wooo');
+			 			mesBtncount--;
+			 			$('#mesBtn').text('留言');	
+			 		}
 
-	 	// document.getElementById('mesBtn').addEventListener('click',function(){
-	 	// 	console.log('123');
-	 	// 	document.getElementsByTagName('body').id='wooooo';
-			// document.querySelector('#wooooo .sl-widget-box')[0].style.;
-			// // getElementsByClassName('sl-widget-box')
-	 	// },false);
-	 	var mesBtncount = 0;
-	 	$('#mesBtn').click(function(){
-	 		if(mesBtncount==0){
-		 		$('body').attr('id','wooo');
-		 		console.log('1');
-		 		mesBtncount++;	
-		 		$('#mesBtn').text('關閉留言');		
-	 		}else{
-	 			$('body').removeAttr('id','wooo');
-	 			mesBtncount--;
-	 			$('#mesBtn').text('留言');	
-	 		}
+			 		// $('#wooo').attr('style','opacity:"1 !important";');
+			 	});
 
-	 		// $('#wooo').attr('style','opacity:"1 !important";');
-	 	});
+				(function(d, t) {
+				  var a = d.createElement(t), s = d.getElementsByTagName(t)[0];
+				  a.async = a.src = '//cdn.speaklyn.com/cb5f2d2d2658a34d74654803f63ae779.js';
+				  s.parentNode.insertBefore(a, s);
+				}(document, 'script'));
 
-		(function(d, t) {
-		  var a = d.createElement(t), s = d.getElementsByTagName(t)[0];
-		  a.async = a.src = '//cdn.speaklyn.com/cb5f2d2d2658a34d74654803f63ae779.js';
-		  s.parentNode.insertBefore(a, s);
-		}(document, 'script'));
-
-		$('.footermember').click(function(){
-			if($('.footermemberloginornot').val()==1){
-				location.href="7member_update.php";
-			}else{
-				$('#lightbox19').fadeIn(500);
-			}
-		});
+				$('.footermember').click(function(){
+					if($('.footermemberloginornot').val()==1){
+						location.href="7member_update.php";
+					}else{
+						$('#lightbox19').fadeIn(500);
+					}
+				});
+    	 });
+	 	
 	</script>
 </footer>
 <script src="js/member_login.js"></script>

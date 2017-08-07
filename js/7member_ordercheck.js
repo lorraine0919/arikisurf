@@ -119,6 +119,22 @@ function First(){
         $('.lightbox').hide();
         history_LB.style.display = "none";
     });
+
+    $('.customize-cancle').click(function(){
+        var str;
+        str = prompt("請說出取消原因");
+        if(str==""){
+            alert("已關閉");
+        }else{
+            $.post("cust_cancle.php",{
+                'strMsg':str,
+                'ODNO':$('.cust-OD-No').text()
+            },function(rs){
+                alert.log(rs);
+                location.reload();
+            });
+        }
+    });
 }
 
 window.addEventListener('load',First,false);

@@ -193,6 +193,8 @@
                 top:0;
                 bottom: 0;
                 margin:52px auto;
+                overflow-y:scroll;
+                overflow-x: none; 
                 color:rgba(0, 0, 0, 0.8);
                 .LB-item-h3{
                     width: 90%;

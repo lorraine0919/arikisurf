@@ -745,6 +745,9 @@ $main-color_29:#5A929E;
                 .next-page2{
                     margin-left:10px;
                 }
+                #next-page_phone{
+                    display: none;
+                }
         }
 
     }//order-confirm_30
@@ -1677,6 +1680,9 @@ $main-color_29:#5A929E;
                 padding: 7px;
                 background-color: #ccc;
             }
+            #next-page2{
+                display: none;
+            }
         }
 
     }//order-confirm_30
@@ -1878,10 +1884,12 @@ $main-color_29:#5A929E;
                                 margin-left:3%;
                                 margin-right:5%;
                                 margin-bottom:2%;
+                                vertical-align: middle;
                             }
                             .li-get-item{
                                 display: inline-block;
-                                // width: 50%;
+                                width: 50%;
+                                vertical-align: middle;
                             }
                             
                         }   

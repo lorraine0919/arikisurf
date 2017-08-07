@@ -36,7 +36,7 @@ body{
   height: 55%;
   position: absolute;
   left : 70%;
-  top: 10%;
+  top: 4%;
 }
 
 .load-person{
@@ -48,7 +48,7 @@ body{
   height: 60%;
   position: absolute;
   left :2%;
-  top: 40%;
+  top: 20%;
 }
 
 .loading {
@@ -63,13 +63,13 @@ body{
   position: absolute;
   left: 0;
   right: 0;
-  top: 300px;
+  top: 100%;
   bottom: 0;
   display: block;
 }
 
 .loading-2 {
-  top: 300px;
+  top: 15%;
   width: 533px;
   height: 245px;
   font-size: 0;
@@ -191,7 +191,7 @@ body{
   height: 30%;
   position: absolute;
   left :5%;
-  top: 65%;
+  top: 34%;
 }
 
 .loading {

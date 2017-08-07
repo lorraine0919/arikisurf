@@ -2,7 +2,7 @@
     <div class="sidebar-toggle-box">
           <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
     </div>
-    <a href="9backstage_welcome.php" class="logo"><b>後臺管理</b></a>
+    <a class="logo"><b>後臺管理</b></a>
 </div>
 <div class="content35">
     <div class="box35">
@@ -10,12 +10,6 @@
             <ul class="sidebar-menu" id="nav-accordion" style="display: block;">
                 <p class="centered"><img src="images/9backstage/hebe.jpg" class="img-circle" width="60"></p>
                 <h5 class="centered">管理員A</h5>
-                <li class="mt">
-                      <a href="9backstage_welcome.php">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
-                      </a>
-                </li>
                 <li><a href="9backstage_customize.php">客製浪板頁面管理</a></li>
                 <li><a href="9backstage_surfshop.php">衝浪配備頁面管理</a></li>
                 <li><a href="9backstage_map.php">浪點資訊/討論區管理</a></li>

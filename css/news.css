@@ -23,7 +23,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .bg_14 {
-    background-image: url("../images/5news/bg_f_red.jpg");
+    background-image: url("../images/5news/33.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
@@ -102,7 +102,7 @@ body {
     margin: auto; }
 
   .bg_14 {
-    background-image: url("../images/5news/bg_f.jpg");
+    background-image: url("../images/5news/33.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;

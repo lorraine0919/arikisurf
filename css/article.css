@@ -18,7 +18,7 @@ overflow-y:scroll
 
 @media screen and (max-width: 767px) {
   .bg_15 {
-    background-image: url("../images/5news/bg_f.jpg");
+    background-image: url("../images/5news/33.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     height: auto;
@@ -81,7 +81,7 @@ overflow-y:scroll
     margin: 0 auto; }
 
   .bg_15 {
-    background-image: url("../images/5news/bg_f.jpg");
+    background-image: url("../images/5news/33.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;

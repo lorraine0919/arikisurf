@@ -19,7 +19,7 @@ $(function(){
 			},function(rs){
 					console.log(rs);
 					if(rs=='1'){
-						location.assign('9backstage_welcome.php');
+						location.assign('9backstage_customize.php');
 					}else{
 						alert('帳號密碼錯誤');
 					}

@@ -11,12 +11,24 @@
             margin: auto;
         }
         h4{
+            width: 80%;
             font-size: 30px;
             text-align: center;
             letter-spacing: 10px;
+            margin: 20px auto;
+            padding: 50px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
+
         .logophoto{
             display: inline-block;
+        }
+        img{
+            opacity: 0.6;
+        }
+        .logogroup{
+            width: 80%;
+            margin: auto;
         }
     </style>
 </head>
@@ -43,7 +55,9 @@
                                     <div class="logophoto"><img src="images/9backstage/logo_waveface.png" alt=""></div>
                                     <div class="logophoto"><img src="images/9backstage/logo_wind.png" alt=""></div>  
                                     <div class="logophoto"><img src="images/9backstage/logo_hebe.png" alt=""></div>   
-                                    <div class="logophoto"><img src="images/9backstage/logo_totem.png" alt=""></div>                    
+                                    <div class="logophoto"><img src="images/9backstage/logo_totem.png" alt=""></div> 
+                                    <div class="logophoto"><img src="images/9backstage/logo_hunky.png" alt=""></div>   
+                                    <div class="logophoto"><img src="images/9backstage/pilar.png" alt=""></div>                      
                                 </div>
                         </div>
                     </div>

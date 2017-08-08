@@ -16,7 +16,7 @@ $pdo->exec($sqlview);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
+  <?php require_once('publicpage/head.php'); ?>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/fontawesome-stars.css">
   <link rel="stylesheet" type="text/css" href="css/discussion.css">
@@ -87,16 +87,7 @@ $pdo->exec($sqlview);
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <input class="gg" type="hidden" value="<?php echo $postRow["star_score"]; ?>">
-          </select>
-<script>
-      $(document).ready(function(){
-         $('.star').barrating({
-                theme: 'fontawesome-stars'
-           });
-         console.log($('.gg').val());
-         $('.star').barrating('set',$('.gg').val());
-       });
-</script>          
+          </select>        
 <?php 
       $sqllove = "select * from map_like where post_number=$post_number";
       $aba = $pdo->query($sqllove);
@@ -198,7 +189,7 @@ $pdo->exec($sqlview);
     echo  $pdorow['reply_number'].',';
   }
  ?>                ];
-            console.log(bangarr);
+            // console.log(bangarr);
             </script>
  
 <?php 
@@ -230,7 +221,7 @@ $pdo->exec($sqlview);
                       }else{
                           echo '<span class="red">已檢舉</sapn>';
                         }?></div>
-                    <input type="hidden" class="result" name="result" value="<?php echo $reRow["result"] ?>">
+                    <input type="hidden" class="result" name="result" value="<?php echo $reRow["reply_state"] ?>">
               </div><!-- feed -->
 <?php 
        }//while end

@@ -3,6 +3,12 @@ ob_start();
 session_start();
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 require_once("connectBooks.php");
+
+if(isset($_SESSION["member_no"])==true){
+  $member_no = $_SESSION["member_no"];  
+}else{
+  $member_no = 7;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +18,11 @@ require_once("connectBooks.php");
   <link rel="stylesheet" type="text/css" href="css/star.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/fontawesome-stars.css">
+  <script src="js/jquery.barrating.min.js" type="text/javascript"></script>
   <script src="js/showMap.js"></script>
   <script src="js/map_up.js"></script>
   <script src="js/map_addColor.js"></script>
-  <script src="js/jquery.barrating.min.js" type="text/javascript"></script>
+  <script src="js/forum_check.js"></script>
   <title>酋長衝浪Ariki Surf-討論區</title>
 </head>
 <body>
@@ -26,14 +33,14 @@ require_once("connectBooks.php");
       <div id="content_10">
         <form id="po" method="post" action="map_intoDB.php" enctype="multipart/form-data">              
                <div class="poItem i1">
-                    <div class="pot">文章標題</div> 
+                    <div class="pot">文章標題<span class="sred"> *</span></div> 
                     <div class="pob">
-                          <input type="text" id="title" name="title" placeholder="最多10個字" maxlength="10">
+                      <input type="text" id="title" name="title" placeholder="最多10個字" maxlength="10">
                     </div>
                </div>
                <div class="poItem i3">
                      <div class="dl">
-                          <div class="pot">上傳檔案</div>
+                          <div class="pot">上傳檔案<span class="sred"> *</span></div>
                           <label for="file" id="upload">
                                  <img src="images/4wavepoint/uploadbtn.jpg">
                           </label>
@@ -41,15 +48,15 @@ require_once("connectBooks.php");
                      </div>
                      <div class="dr">
                           <div class="pot">預覽</div>
-                          <div class="preview"><img id="image"></div>
+                          <div class="preview"><img id="image" src=" "></div>
                      </div>
                </div>
                <div class="poItem i4">
-                     <div class="pot">文章內容</div>                   
+                     <div class="pot">文章內容<span class="sred"> *</span></div>                   
                      <div class="last">
                            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                            <div class="bt">
-                                 <input type="submit" value="送出">
+                                 <input type="button" value="送出" id="godb">
                                  <input type="reset" value="清除" id="gg">
                            </div>
                      </div>
@@ -161,9 +168,7 @@ require_once("connectBooks.php");
          for(var i=0;i<j;i++){
            $('.star').eq(i).barrating('set',$('.gg').eq(i).val());
          }
-
-         $('.star').barrating('readonly',true);
-      
+         $('.star').barrating('readonly',true);      
          $('#gg').click(function(){
             $('#title').val('');
             $('#image').src('');
@@ -172,6 +177,13 @@ require_once("connectBooks.php");
          });
 
       $(document).ready(function(){
+        $('#post').click(function(){
+            if(<?php echo $member_no ?>==7){
+               alert("請登入會員");
+            }else{
+               $("#content_10").show();
+            }          
+          });
               function orderByDate(jsonStr){
                  var o_date = JSON.parse( jsonStr );
                  for(var x in o_date){

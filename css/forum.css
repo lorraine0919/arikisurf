@@ -10,6 +10,9 @@
 body{
   overflow-y:scroll; 
 }
+.sred{
+  color: red;
+}
 .cen, .bg_10 .info_10, .bg_10 .beach_10, .bg_10 .fourm {
   width: 100%;
   max-width: 1170px;

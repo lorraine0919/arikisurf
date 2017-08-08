@@ -230,9 +230,12 @@
               border-right: none;
               box-shadow: none; }
             .navDetail .navfix .navimg ul.menu li a {
+              transition: 0.5s;
               padding: 1.2vw 1vw;
               color: #fff;
               text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+              .navDetail .navfix .navimg ul.menu li a:hover {
+                color: #ed8c00; }
         .navDetail .navfix .navimg .idHello {
           display: inline-block;
           width: 33%;

@@ -49,7 +49,7 @@
                         <li><a href="map.php">衝浪地圖</a></li>
                         <li><a href="news.php">最新消息</a></li>
                         <li><a href="about.php">關於酋長</a></li>
-                        <li><a class="rwd">
+                        <li>
                          <?php 
                                         // echo $_SESSION["account"];
                                         if(isset($_SESSION["account"])){
@@ -58,7 +58,7 @@
                                             echo "<a class='rwd'><span id='login2' >會員專區</span></a>";
                                         }
                                      ?>    
-                        </a></li>
+                        </li>
                         <li><a href="cart.php" class="rwd">購物車</a></li>
                     </ul>
 

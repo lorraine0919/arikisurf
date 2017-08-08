@@ -9,7 +9,7 @@ $(document).ready(function(){
 	    	$.post('9backstage_map_up2.php',{
 		        'post_number':c
 	        },function(rs){
-	          // alert(rs);
+	          alert(rs);
 	          location.reload('9backstage_map.php');
 	        });
             

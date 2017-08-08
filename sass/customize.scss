@@ -24,10 +24,12 @@
 		box-shadow: none;
 	}	
 }
-
-.navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(2) a{
-  color: #e97b23;
+.navDetail .navfix .navimg ul.menu li:nth-child(2) a{
+	color: #e97b23;
 }
+// .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(2) a{
+//   color: #e97b23;
+// }
 
 #goTop{
 	display: none;

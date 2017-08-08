@@ -647,8 +647,8 @@
 
     #alertBox {
       position:relative;
-      width:25%;
-      min-height:100px;
+      width:20%;
+      min-height:150px;
         max-height:300px;
       margin-top:50px;
       box-shadow: 1px 1px 7px #102c38;
@@ -659,7 +659,7 @@
       background-size: content;
         top:30%;
         border-radius: 5px;
-      z-index:1000;
+      z-index:100;
       
     }
 
@@ -706,7 +706,7 @@
         transition: 0.3s;
     }
     #alertBox #closeBtn:hover{
-      background-color: #6cf;
+      background-color: #e97b23;
     }
 
     /* unrelated styles */

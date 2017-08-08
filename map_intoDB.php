@@ -35,7 +35,7 @@ try{
 
 		require_once("connectBooks.php");
 		$sql = "insert into map_post values(null,$wave_number,'$a','$datetime','$title','$textarea',1,0,$member_no,$star_score)";
-		$into = $pdo->exec($sql);
+		$pdo->exec($sql);
 		header("location:map_forum.php");
 
 }catch(PDOException $ex){

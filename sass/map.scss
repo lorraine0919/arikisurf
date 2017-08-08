@@ -24,10 +24,12 @@ body{
 	}
 }
 
-.navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(4) a{
-  color: #e97b23;
-}
-
+// .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(4) a{
+//   color: #e97b23;
+// }
+    .navDetail .navfix .navimg ul.menu li:nth-child(4) a{
+        color: #e97b23;
+    }
 
 .mobile{
 	transition:1.5s cubic-bezier(.68,.05,.22,.75);

@@ -1,31 +1,18 @@
-.br-wrapper.br-theme-fontawesome-stars{
-  
-}
-.loading_bg{
-  display: none;
-}
-
-body{
-  overflow-y:scroll; 
-}
-.navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb {
-  min-width: 20em; }
-
-.cen, .bg_11 .title, .bg_11 .main_11 {
+.cen, .bg_11 .bread_11, .bg_11 .main_11, .bg_11 .feedback_11, .bg_11 .back_11, .bg_11 .send {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto; }
 
-.bc, .bg_11 .main_11:after, .bg_11 .main_11 .box_t:after, .bg_11 .main_11 .back .feed:after, .bg_11 .main_11 .back .feed_t:after, .bg_11 .main_11 .back .feed_t .last .less:after {
+.bc, .bg_11 .main_11:after, .bg_11 .feedback_11:after {
   content: '';
   display: block;
   clear: both; }
 
 a {
   text-decoration: none;
-  color: #fff; }
+  color: #000; }
   a:visited {
-    color: #fff; }
+    color: #000; }
 
 #lightbox_11 {
   display: none;
@@ -39,437 +26,134 @@ a {
     box-sizing: border-box;
     padding: 15px;
     width: 960px;
-    height: 70px;
+    height: 150px;
     margin: 100px auto;
-    background: linear-gradient(to right, #1BBCB3, #37B9E9);
+    border: 1px solid black;
+    background-color: yellow;
     font-size: 20px;
-    position: relative;
-    color: #fff; }
-    #lightbox_11 .gun .reason {
-      vertical-align: bottom; }
-    #lightbox_11 .gun .report {
-      margin-left: 10px;
-      padding: 2px;
-      vertical-align: bottom; }
-    #lightbox_11 .gun .io {
-      display: inline-block; }
-      #lightbox_11 .gun .io input {
-        vertical-align: middle;
-        padding: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        border: none; }
+    position: relative; }
   #lightbox_11 #close {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: black;
     color: white;
     text-align: center;
-    cursor: pointer;
-    transition: 1s; }
-    #lightbox_11 #close:hover {
-      color: #ED8C00; }
-
-#lightbox_12 {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  z-index: 999; }
-  #lightbox_12 .gun2 {
-    box-sizing: border-box;
-    padding: 15px;
-    width: 960px;
-    height: 70px;
-    margin: 100px auto;
-    background: linear-gradient(to right, #1BBCB3, #37B9E9);
-    font-size: 20px;
-    position: relative;
-    color: #fff; }
-    #lightbox_12 .gun2 .reason2 {
-      vertical-align: bottom; }
-    #lightbox_12 .gun2 .report2 {
-      margin-left: 10px;
-      padding: 2px;
-      vertical-align: bottom; }
-    #lightbox_12 .gun2 .io2 {
-      display: inline-block; }
-      #lightbox_12 .gun2 .io2 input {
-        vertical-align: middle;
-        padding: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        border: none; }
-  #lightbox_12 #close2 {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    transition: 1s; }
-    #lightbox_12 #close2:hover {
-      color: #ED8C00; }      
-
-#lightbox2_11 {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  z-index: 999; }
-  #lightbox2_11 .ustar {
-    box-sizing: border-box;
-    padding: 15px;
-    width: 960px;
-    height: 70px;
-    margin: 100px auto;
-    background: linear-gradient(to right, #1BBCB3, #37B9E9);
-    font-size: 20px;
-    position: relative;
-    color: #fff; }
-    #lightbox2_11 .ustar span {
-      color: #EFA400;
-      font-weight: bold;
-      font-size: 30px; }
-  #lightbox2_11 #cl {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    transition: 1s; }
-    #lightbox2_11 #cl:hover {
-      color: #ED8C00; }
+    cursor: pointer; }
 
 .bg_11 {
-  background-image: url("../images/4wavepoint/bg_f.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../images/4wavepoint/bg.jpg");
   background-size: cover;
-  height: auto;
+  height: 100vh;
   padding-top: 4rem;
-  padding-bottom: 2rem; }
-  .bg_11 .title {
-    height: 10vh;
+  padding-bottom: 10rem; }
+  .bg_11 .bread_11 {
+    background-color: rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
-    padding: 1rem 2rem 0;
-    margin-top: 10rem;
-    color: #fff;
-    background-image: url("../images/4wavepoint/talk.jpg");
-    background-repeat: no-repeat; }
-    .bg_11 .title #result {
-      display: none; }
-    .bg_11 .title h1 {
-      float: left;
-      margin-left: 4.5vw;
+    padding: .5em 1.5em; }
+    .bg_11 .bread_11 li {
       display: inline-block; }
-    .bg_11 .title .gol{
-      float:right;
-    }  
-    .bg_11 .title div {
-      float: left;
-      margin: 0 5px;
-      cursor: pointer; }
-    .bg_11 .title .lovepic{
-      position: relative;
-      margin-left: 25px;
-      margin-right: 25px;
-    }  
-    .bg_11 .title .quit:hover{
-      color: #ED8C00;
-    }  
   .bg_11 .main_11 {
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.5); }
-    .bg_11 .main_11 .box_t {
-      box-sizing: border-box;
-      padding: 1.9vw 6.5vw;
-      background-color: rgba(93, 107, 119, 0.6);
-      box-shadow: 0px 0px 66px 2px #6a8399 inset; }
-      .bg_11 .main_11 .box_t .user {
-        width: 60px;
-        height: 60px;
-        float: left;
-        padding-right: 1vw; }
-        .bg_11 .main_11 .box_t .user img {
-          width: 100%;
-          border-radius: 7px; }
-      .bg_11 .main_11 .box_t .pos {
-        float: left;
-        color: #fff; }
-        .bg_11 .main_11 .box_t .pos .name {
-          font-size: 25px; }
-    .bg_11 .main_11 .box_b {
-      box-sizing: border-box;
-      padding: 1.9vw 6.5vw;
-      box-shadow: 0px 0px 66px 2px #6a8399 inset; }
-      .bg_11 .main_11 .box_b .pic {
-        width: 60%;
-        height: auto; }
-        .bg_11 .main_11 .box_b .pic img {
-          width: 100%; }
-      .bg_11 .main_11 .box_b .txt {
-        color: #fff;
-        margin-top: 1.9vh; }
-    .bg_11 .main_11 .back {
-      box-sizing: border-box;
-      padding: 1rem;
-      width: 100%;
-      height: auto;
-      background-image: url(../images/4wavepoint/bgg.jpg); }
-      .bg_11 .main_11 .back .feed {
-        position: relative;
-        width: 60%;
-        height: auto;
-        margin-left: 5.1vw;
-        margin-bottom: 2vh;
-        box-sizing: border-box;
-        padding: 1vw;
-        background-color: #14344e; }
-        .bg_11 .main_11 .back .feed .icon {
-          width: 60px;
-          height: 60px;
-          float: left;
-          margin-right: 2.2vw; }
-          .bg_11 .main_11 .back .feed .icon img {
-            width: 100%;
-            height: 100%;
-            border-radius: 7px;
-            vertical-align: middle; }
-        .bg_11 .main_11 .back .feed .feed_c {
-          width: 100%;
-          box-sizing: border-box;
-          padding: 0 1%; }
-          .bg_11 .main_11 .back .feed .feed_c .feed_info {
-            color: #9aa2aa; }
-            .bg_11 .main_11 .back .feed .feed_c .feed_info .name {
-              display: inline-block;
-              margin-right: .5vw;
-              font-size: 22px; }
-        .bg_11 .main_11 .back .feed .txt {
-          box-sizing: border-box;
-          padding: 0 2%;
-          word-break: break-all;
-          width: 93%;
-          color: #fff; }
-        .bg_11 .main_11 .back .feed .quit {
-          position: absolute;
-          top: 2vh;
-          right: 2vw;
-          color: #9aa2aa;
-          cursor: pointer; }
-          .bg_11 .main_11 .back .feed .quit:hover {
-            color: #ED8C00; }
-      .bg_11 .main_11 .back .feed_t {
-        position: relative;
-        width: 60%;
-        height: auto;
-        margin-left: 5.1vw;
-        margin-top: 2vh;
-        margin-bottom: 2vh;
-        box-sizing: border-box;
-        padding: 1vw;
-        background-color: #14344e; }
-        .bg_11 .main_11 .back .feed_t .icon {
-          margin-left: 1%;
-          width: 60px;
-          height: 60px;
-          float: left;
-          margin-right: 2.3vw; }
-          .bg_11 .main_11 .back .feed_t .icon img {
-            width: 100%;
-            height: 100%;
-            border-radius: 7px;
-            vertical-align: middle; }
-        .bg_11 .main_11 .back .feed_t .last {
-          position: relative;
-          float: left;
-          width: 80.2%;
-          height: auto;
-          background-color: #29465e; }
-          .bg_11 .main_11 .back .feed_t .last:after {
-            content: "";
-            width: 0;
-            height: 0;
-            border: 13px solid red;
-            border-color: transparent #29465e transparent transparent;
-            position: absolute;
-            left: -5%;
-            top: 4%; }
-          .bg_11 .main_11 .back .feed_t .last #feed_txt {
-            width: 100%;
-            height: 10;
-            text-decoration: none;
-            border: none;
-            resize: none;
-            height: 25vh;
-            box-sizing: border-box;
-            padding: 2%;
-            background-color: #29465e;
-            color: #fff; }
-            .bg_11 .main_11 .back .feed_t .last #feed_txt:focus {
-              outline: none; }
-          .bg_11 .main_11 .back .feed_t .last .less {
-            width: 100%; }
-          .bg_11 .main_11 .back .feed_t .last #feedpo {
-            text-align: center;
-            width: 60px;
-            float: right;
-            border: none;
-            padding: 15px 40px 15px 20px;
-            margin-right: 1vw;
-            margin-bottom: 1vh;
-            color: #fff;
-            background-color: #14344e;
-            cursor: pointer; }
-            .bg_11 .main_11 .back .feed_t .last #feedpo:focus {
-              font-family: Microsoft JhengHei;
-              outline: none; }
-
-@media screen and (max-width: 767px) {
-   .arikicommon_breadcrumb {
-    display:block;  }
-    
-  img {
-    width: auto;
-    height: auto; }
-
-  #lightbox_11 .gun {
-    width: 100%;
-    height: 130px; }
-    #lightbox_11 .gun .io {
-      display: block;
-      width: 100px;
-      margin: 15px auto; }
-  #lightbox_11 #close {
-    position: absolute;
-    right: 0;
-    bottom: -85px;
-    left: 0;
-    margin: auto; }
-
-  #lightbox2_11 .ustar {
-    width: 100%;
-    height: 130px; }
-  #lightbox2_11 #cl {
-    position: absolute;
-    right: 0;
-    bottom: -85px;
-    left: 0;
-    margin: auto; }
-
-  .bg_11 {
-    padding-top: .4rem;
-    background-size: 100%;
-    background-color: #29475E; }
-    .bg_11 .title {
-      height: auto;
-      margin-top: 13vh;
-      padding: 1.5rem 0 2rem; }
-      .bg_11 .title #result {
-        display: none; }
-
-      .bg_11 .title .gol{
-        width: 80%;
-        float: none;
+    padding: .5em .5em 1.5em;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 8px 5px #888888; }
+    .bg_11 .main_11 h1 {
+      padding: .5em 1em; }
+      .bg_11 .main_11 h1 span {
+        float: right;
+        margin: 0 5px;
+        padding: 0 10px;
+        background-color: yellow;
+        cursor: pointer; }
+    .bg_11 .main_11 .content-l, .bg_11 .main_11 .content-r {
+      float: left; }
+    .bg_11 .main_11 .content-l {
+      width: 25%;
+      text-align: center; }
+      .bg_11 .main_11 .content-l .icon {
+        width: 40%;
+        height: 100%;
         margin: 0 auto;
-      }  
-      .bg_11 .title .gol .star_bg{
-        /*margin-left: 12%;*/
-      }
-      .bg_11 .title h1 {
-        float: none;
+        margin-bottom: 1em; }
+        .bg_11 .main_11 .content-l .icon img {
+          width: 100%;
+          border-radius: 50%; }
+      .bg_11 .main_11 .content-l .user {
+        margin-bottom: 1em; }
+    .bg_11 .main_11 .content-r {
+      width: 65%;
+      padding: 0 3em;
+      position: relative; }
+      .bg_11 .main_11 .content-r:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #0b0b0b; }
+      .bg_11 .main_11 .content-r .pic {
+        margin-bottom: 1em; }
+  .bg_11 .feedback_11 {
+    margin-top: 1em; }
+    .bg_11 .feedback_11 .top {
+      height: 10vh;
+      background-color: pink; }
+      .bg_11 .feedback_11 .top div {
+        float: left; }
+      .bg_11 .feedback_11 .top .icon {
+        width: 10%;
+        height: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: .5rem; }
+        .bg_11 .feedback_11 .top .icon img {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          line-height: 12vh; }
+      .bg_11 .feedback_11 .top .user {
+        box-sizing: border-box;
+        padding: .5rem; }
+        .bg_11 .feedback_11 .top .user p {
+          margin-bottom: .5rem; }
+      .bg_11 .feedback_11 .top .quit {
         display: block;
-        margin-left: 0;
-        margin-bottom: 1vh;
-        text-align: center; }
-
-    .bg_11 .main_11 {
-      padding: 0; }
-      .bg_11 .main_11 .box_b{
-           background-color: rgb(135, 148, 160);
-      }
-      .bg_11 .main_11 .box_t .user{
-        margin-right: 3vw;
-      }
-      .bg_11 .main_11 .back {
-        padding: 1rem 0; }
-        .bg_11 .main_11 .back .feed .txt {
-          padding: 0 12%;}
-        .bg_11 .main_11 .back .feed {
-          width: 100%;
-          margin-left: 0; }
-          .bg_11 .main_11 .back .feed .icon {
-            width: 12%;
-            height: 12%;
-            margin-left: 5vw; }
-        .bg_11 .main_11 .back .feed_t {
-          width: 100%;
-          margin-left: 0;
-          margin-top: 1vh;
-          padding-left: 5vw; }
-          .bg_11 .main_11 .back .feed_t .icon {
-            width: 17%;
-            height: 17%;
-            margin-bottom: 2vh; }
-          .bg_11 .main_11 .back .feed_t .last {
-            width: 94.5%; }
-          .bg_11 .main_11 .back .feed_t .last:after {
-            display: none; }
-
-  #lightbox_11 .gun {
-    width: 100%; }
-  #lightbox_11 #close {
-    top: 0px;
-    right: 0px; } }
-
-  #loveinfo{
-    display: none;
-    position: absolute;
-    top: -500%;
-    right: 0;
-    bottom: 0;
-    left: -162%;
-    margin: auto;   
-    width: 90px;
-    height: 50px;
-    background-color:rgba(255,255,255,.5);
-    color: #fff;
-    text-align: center;
-    line-height: 50px;
-  }  
-
-  #loveinfo:after{
-    content: '';
-    display: block;
-    position: absolute;
-    top: 65px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 15px 10px 0 10px;
-    border-color: rgba(255,255,255,.5) transparent transparent transparent;
-  }
+        width: 8%;
+        height: 100%;
+        float: right;
+        box-sizing: border-box;
+        text-align: center;
+        padding: .5rem; }
+    .bg_11 .feedback_11 .text {
+      padding: 1rem 1.5rem;
+      background-color: rgba(255, 255, 255, 0.5); }
+  .bg_11 .back_11 {
+    height: 15vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background-color: green; }
+    .bg_11 .back_11 textarea {
+      width: 100%;
+      height: 100%;
+      resize: none;
+      box-sizing: border-box;
+      padding: .5rem; }
+  .bg_11 .send {
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center; }
+    .bg_11 .send input {
+      width: 30%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: .4rem;
+      margin: 0 .2rem;
+      cursor: pointer; }
+    .bg_11 .send #submit {
+      background-color: #ED8C00; }

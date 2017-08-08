@@ -11,7 +11,7 @@
   .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color:last-child, .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .texturegorup .textureselect .textureselectfix .texturegroup .texture:last-child {
     box-shadow: none; }
 
-.navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(2) a {
+.navDetail .navfix .navimg ul.menu li:nth-child(2) a {
   color: #e97b23; }
 
 #goTop {

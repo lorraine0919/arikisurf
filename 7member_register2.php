@@ -150,10 +150,10 @@ function VerifyB(){
 
     
     if(name==""){
-        alert("請輸入姓名");
+        alert("請輸入姓名<br>");
         return;
     }else if(!namePattern.test(name)){
-        alert("姓名欄位格式有誤，請勿輸入特殊符號及數字！");
+        alert("姓名欄位格式有誤，請勿輸入特殊符號及數字！<br>");
         return;
     }
 
@@ -163,21 +163,21 @@ function VerifyB(){
     }else if($id("female26").checked == true){
         gender = document.getElementsByName("sex")[1].value;
     }else{
-        alert("請選擇性別");
+        alert("請選擇性別<br>");
         return;
     }
 
 
     if(city==""){
-        alert("請選擇所在縣市");
+        alert("請選擇所在縣市<br>");
         return;
     }
     if(area == "0"){
-        alert("請選擇所在區域");
+        alert("請選擇所在區域<br>");
         return;
     }
     if(addr.length < 1){
-        alert("請填寫地址");
+        alert("請填寫地址<br>");
         return;
     }else{
         var result = ' ';
@@ -188,7 +188,7 @@ function VerifyB(){
                 }
             }
         if (result != ' '){
-            alert("地址欄位不可輸入"+result+' '+" 等符號！");
+            alert("地址欄位不可輸入"+result+' '+" 等符號！<br>");
             return;
         }
     }
@@ -199,7 +199,7 @@ function VerifyB(){
     var hint;
     var judg = 0;
     if(tel.length < 6){
-        alert("請填寫電話(至少6碼)");
+        alert("請填寫電話(至少6碼)<br>");
     }else{
             for( var i=0; i<telephone.length; i++){
                 var phone = telPattern.match(telephone[i]);
@@ -211,17 +211,17 @@ function VerifyB(){
                     console.log("judg",judg,"hint",hint);
             }
             if (judg !== 0){
-                alert('電話欄位格式有誤，只可輸入數字與 - #');
+                alert('電話欄位格式有誤，只可輸入數字與 - #<br>');
             }
     }
 
 
 
     if(mail.length < 10){
-        alert("電子郵件地址未查填完整!");
+        alert("電子郵件地址未查填完整!<br>");
         return;
     }else if(!mailPattern.test(mail)){
-        alert("電子郵件欄位格式有誤！");
+        alert("電子郵件欄位格式有誤！<br>");
         return;
     }
 

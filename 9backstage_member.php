@@ -61,7 +61,7 @@ require_once('connectBooks.php');
                               <tbody>
                                 <?php 
                                       $choise = $_SESSION["map_wave"]["wave_number"];
-                                      $sql = 'select * from member order by choise=$choise';
+                                      $sql = 'select * from member';
                                       $memberList=$pdo->prepare($sql);
                                       // $member->bindValue(":choise",$choise);
                                       /*問題一:排序*/
@@ -73,17 +73,6 @@ require_once('connectBooks.php');
                                       if($gender==1){
                                         $title="<br>先生";
                                       }else{$title="<br>女士";}
-
-                                      $suspension==$eachMember['suspension'];
-                                      if($suspension==1){
-                                        
-                                      }else{
-                                      // for (var i = 0; i <$id('slct2').childNodes.length; i++) {
-                                      //     if($id('slct2').childNodes[i].value==area){
-                                      //         $id('slct2').childNodes[i].setAttribute('selected','selected');
-                                      //     }
-                                      // }
-                                      }
                                 ?>
 
                                     <tr class="modeltr t<?php echo $i?>">
@@ -101,10 +90,10 @@ require_once('connectBooks.php');
                                         <td class="sellornotgroup">
                                           <div class="input-group">
                                                 <div class="btn-group">
-                                                    <input type="hidden" value="<?php echo $eachMember['status'] ?>" class="status">
+                                                    <input type="hidden" value="<?php echo $eachMember['suspension'] ?>" class="suspension">
                                                     <input type="hidden" value="<?php echo $eachMember['manager_no'] ?>" class="no">
-                                                    <a class="yesbtn btn btn-primary btn-sm backbooa" id="stop38">停用</a><br>
-                                                    <a class="nobtn btn btn-primary btn-sm backboob" id="start38">啟用</a>
+                                                    <a class="availiblebtn btn btn-primary btn-sm backbooa">啟用</a><br>
+                                                    <a class="stopbtn btn btn-primary btn-sm backboob">停用</a>
                                                 </div>
                                           </div>
                                         </td>
@@ -127,15 +116,42 @@ require_once('connectBooks.php');
 <?php require_once('publicpage/backstage_footer.php'); ?>
 
 <script type="text/javascript" src="js/backstage/backstage_backboo.js"></script>
-<script type="text/javascript">
 
-  window.onload = document.getElementById("btn38").addEventListener('click',Order,false);
+<script type="text/javascript">
+  console.log($('.availiblebtn').length);
+
+  for(var i=0;i<$('.availiblebtn').length;i++){
+    console.log($('.suspension').eq(i).val());
+   if ($('.suspension').eq(i).val()=='1') {
+      $('.availiblebtn').eq(i).css('background-color','#e97b23');
+      $('.availiblebtn').eq(i).css('border-color','#fa0');
+   }else{
+      $('.stopbtn').eq(i).css('background-color','#e97b23');
+      $('.stopbtn').eq(i).css('border-color','#fa0');
+   }
+  }
+
+  function Change(){
+
+  }
+
+  function Status(){
+    for(var i=0;i<$('.availiblebtn').length;i++){
+      document.getElementsByClassName("availiblebtn")[i].addEventListener('click',Change,false);
+      document.getElementsByClassName("stopbtn")[i].addEventListener('click',Change,false);
+    }
+  }
+
+  window.onload=Status;
+
 </script>
+
 <?php 
   }catch(PDOException $e){
     echo $e->getLine();
     echo $e->getMessage();
   }
- ?>
+?>
+
 </body>
 </html>

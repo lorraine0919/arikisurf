@@ -10,10 +10,6 @@ $(document).ready(function(){
 	 $(".show").show();
     })//mouse
 
-    $('#post').click(function(){
-    	$("#content_10").show();
-    });//click content
-
     $('#close').click(function(){
     	$("#content_10").hide();
     	$("#lightbox_11").hide();
@@ -22,10 +18,5 @@ $(document).ready(function(){
     $('#cl').click(function(){
         $("#lightbox2_11").hide();
     });//click close
-
-    $('#quit').click(function(){
-        $("#lightbox_11").show();
-        console.log(123);
-    });
 
 });//ready

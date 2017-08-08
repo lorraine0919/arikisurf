@@ -410,7 +410,19 @@ body {
   .showProd .mo-fire {
     width: 62px;
     left: 36%;
-    top: -27px; } }
+    top: -27px; }
+
+  .pic_man {
+    position: relative; }
+    .pic_man .aa, .pic_man .bb, .pic_man .cc, .pic_man .dd, .pic_man .ee, .pic_man .ff, .pic_man .gg {
+      position: absolute;
+      width: 100%;
+      /*padding-top: 100%;*/
+      top: 0;
+      max-width: 350px; }
+    .pic_man img {
+      width: 100%;
+      max-width: 350px; } }
 @media screen and (max-width: 321px) {
   .barbg .changebar {
     padding-top: 15px; }
@@ -424,6 +436,18 @@ body {
   .showProd .mo-fire {
     width: 60px;
     left: 39%;
-    top: -30px; } }
+    top: -30px; }
+
+  .pic_man {
+    position: relative; }
+    .pic_man .aa, .pic_man .bb, .pic_man .cc, .pic_man .dd, .pic_man .ee, .pic_man .ff, .pic_man .gg {
+      position: absolute;
+      width: 100%;
+      /*padding-top: 100%;*/
+      top: 0;
+      max-width: 300px; }
+    .pic_man img {
+      width: 100%;
+      max-width: 300px; } }
 .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(3) a {
   color: #e97b23; }

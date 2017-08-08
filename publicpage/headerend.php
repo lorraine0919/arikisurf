@@ -64,7 +64,7 @@
 
                         <div class="iconGroup">
                             <ul>
-                                <li><a>
+                                <li>
                                     <span>
                                     <?php 
 
@@ -81,7 +81,7 @@
 
                                     ?>
                                     </span>
-                                </a></li>
+                                </li>
                                 <li class="line"></li>
                                 <li><a href="cart.php"><img src="images/1common/shop.png" alt="">購物車</a></li>
                             </ul>

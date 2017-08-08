@@ -16,9 +16,8 @@
   height: 0px;
   opacity: 0; }
 
-.hb {
-  font-size: 0px; }
-
+.hb {font-size: 0px;}
+#login1{color:#fff;}
 @media screen and (max-width: 767px) {
   /*=========清除浮動=========*/
   .navimg:after {

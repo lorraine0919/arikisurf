@@ -28,7 +28,6 @@ try{
        
 	if( $member->rowCount() !=0 ){
 	    $memRow = $member->fetch(PDO::FETCH_ASSOC);
-		//echo $memRow["memName"] , "您好<br>";
         $_SESSION["memId"] = $memRow["memId"];
         $_SESSION["memName"] = $memRow["memName"];
         $_SESSION["email"] = $memRow["email"];

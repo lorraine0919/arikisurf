@@ -65,7 +65,7 @@
                         <div class="iconGroup">
                             <ul>
                                 <li><a>
-                                    <img src="images/1common/member.png" alt="">
+                                    <img src="images/1common/member.png" alt="" id="showlogin">
                                     <span id="memberArea"></span>
                                     
                                     <?php 

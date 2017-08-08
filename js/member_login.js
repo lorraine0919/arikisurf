@@ -51,10 +51,7 @@
 //     $id("submit19").addEventListener('click',LoginCheck,false);
 //     $id("close19").addEventListener('click',CancelLogin,false);
 
-
 // }
-
-
 
 	
 $(function(){
@@ -79,7 +76,6 @@ $(function(){
 		            	alert("您已被停權<br>");
 		                return;
 		             }else if(rs == 2){
-		             	console.log();
 		            	$('#login1').html("<a href='7member_update.php'>會員專區</a>");
 		                // $("#login1").text("登出");
 		                $("#lightbox19").css('display',"none");
@@ -99,3 +95,4 @@ $(function(){
 	})
 });
 
+// showlogin

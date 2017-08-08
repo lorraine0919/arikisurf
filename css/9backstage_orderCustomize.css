@@ -18,6 +18,8 @@
         padding: 20px; }
       .backstage_orderCustomize .CT_navbar ul .have {
         background-color: rgba(255, 255, 255, 0.8); }
+  .backstage_orderCustomize .tab-content {
+    font-size: 1.3em; }
   .backstage_orderCustomize .item-box {
     background-color: #fff;
     box-sizing: border-box;
@@ -97,3 +99,6 @@
           margin: 3% 10%; }
     .backstage_orderCustomize #lightbox #LT-CT-box {
       display: none; }
+
+ul.sidebar-menu li a[href="9backstage_orderCustomize.php"] {
+  background-color: #e97b23; }

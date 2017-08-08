@@ -23,24 +23,26 @@ require_once('connectBooks.php');
 <body>
 <!-- =================後臺管理================== -->
 <!--(bake module/backstage_header.html)--><?php require_once('publicpage/backstage_header.php'); ?>
+
+
+
+
     <div id="main-content">
         <div class="wrapper">
-            <div class="row mt">
-                <div class="whitearea col-lg-12 table">
-                    <div class="backstage_orderCustomize">
-                        <div class="CT_navbar">
-                            <ul>
-                                <li class="nav-item have" id="nav_CT">客製浪板</li>
-                                <li class="nav-item" id="nav_HT">歷史訂單</li>
-                            </ul>
-                        </div><!-- CT_navbar -->
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">客製浪板</a></li>
+            <li><a data-toggle="tab" href="#menu1">歷史訂單</a></li>
+           
+          </ul>
 
-                        <div class="OD_box item-box" id="OD_box">
+          <div class="tab-content" style="font-size: 1.3em;">
+            <div id="home" class="tab-pane fade in active">
+              <div class="OD_box item-box model content-panel" id="OD_box">
                             <div class="OD-title">
                                 <h3>客製浪板訂單管理</h3>
                             </div>
                             <div class="OD_box">
-                                <table>
+                                <table class="table table-bordered table-striped table-condensed">
                                     <tr>
                                         <th>訂單編號</th>
                                         <th>會員編號</th>
@@ -77,7 +79,7 @@ require_once('connectBooks.php');
                                                 }else if($OD_CT["customize_order_status"]==3){
                                                     echo "<td style='color:blue'>已出貨</td>";
                                                 }else if($OD_CT["customize_order_status"]==4){
-                                                    echo "<td style='color:orange'>申請中</td>";
+                                                    echo "<td style='color:#ed8c00;'>申請中</td>";
                                                 }
                                             ?>
                                         
@@ -111,15 +113,16 @@ require_once('connectBooks.php');
                                 ?>
                                 </table>
                             </div>
-                        </div><!-- OD_box -->
-
-                        <div class="HT_box item-box" id="HT_box">
+                        </div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+              <div class="HT_box item-box model content-panel" id="HT_box">
                             <div class="OD-title">
                                 <h3>歷史訂單管理</h3>
                             </div>
 
                             <div class="OD_box">
-                                <table>
+                                <table class="table table-bordered table-striped table-condensed">
                                     <tr>
                                         <th>訂單編號</th>
                                         <th>會員編號</th>
@@ -161,7 +164,14 @@ require_once('connectBooks.php');
                                 </table>
                             </div>
                             
-                        </div> <!-- HT_box -->
+                        </div> 
+            </div>
+           
+          </div>
+           
+                <div class="whitearea col-lg-12 table">
+                    <div class="backstage_orderCustomize">
+                      
 
 
                         <div id="lightbox">
@@ -253,7 +263,7 @@ require_once('connectBooks.php');
                         </div><!--lightbox-->
                 </div>
             </div>
-        </div>
+        
     </div>
 
 

@@ -24,8 +24,11 @@
                 
             }
         }//navbar
-        
+         .tab-content{
+            font-size: 1.3em; 
+         }
         .item-box{
+
             background-color: #fff;
             box-sizing: border-box;
             padding:10px 20px;
@@ -132,3 +135,6 @@
                 
         }
     }
+ul.sidebar-menu li a[href="9backstage_orderCustomize.php"] {
+    background-color: #e97b23;
+}

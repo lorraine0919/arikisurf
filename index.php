@@ -129,6 +129,14 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
         </div>
           
     </div>
+    <div class="slogan_1">
+        <div class="gradient">
+            <h1>ARIKI SURF</h1> 
+            <h3>在古玻里尼西亞文化中，酋長這個身分，<br>
+            不只代表了一個人在部落的領導地位，<br>
+            更代表了他在衝浪技巧上，無可取代的存在。</h3> 
+        </div>
+    </div>
     <div id="explodetrigger"></div>
     <div class="coating_1">
 

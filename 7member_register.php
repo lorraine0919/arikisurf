@@ -166,40 +166,40 @@
 
 function $id(id){return document.getElementById(id);}
 
-//=======================會員登入登出(缺rwd版)=========================
-function ShowLightBox(){
-  if( $id("login1").innerHTML === '會員登入'){
-    $id("memId").value="";
-    $id("memPsw").value="";
-    $id("lightbox19").style.display="";
-  }else{
-    $id("login1").innerHTML="會員登入";
-    $id("memberArea").style.display="none";
-  }           
-}
+//=======================會員登入登出=========================
+// function ShowLightBox(){
+//   if( $id("login1").innerHTML === '會員登入'){
+//     $id("memId").value="";
+//     $id("memPsw").value="";
+//     $id("lightbox19").style.display="";
+//   }else{
+//     $id("login1").innerHTML="會員登入";
+//     $id("memberArea").style.display="none";
+//   }           
+// }
 
-function LoginCheck(){
+// function LoginCheck(){
 
-    memId = $id("memId").value;
-    memPsw = $id("memPsw").value;
+//     memId = $id("memId").value;
+//     memPsw = $id("memPsw").value;
 
-    $.post('sessionLogin.php',{ 
-            'memId2' : memId ,
-            'memPsw2' :  memPsw
-             },function(rs){
-            if( rs == 1){
-                $id("memberArea").innerHTML = "<a href='7member_update.php'>會員專區</a>";
-                $id("login1").innerHTML = "登出";
-                $id("lightbox19").style.display="none";
-             }else{
-                alert("帳號或密碼錯誤");
-                return;
-                }
-            }
-    );
-}
+//     $.post('sessionLogin.php',{ 
+//             'memId2' : memId ,
+//             'memPsw2' :  memPsw
+//              },function(rs){
+//             if( rs == 1){
+//                 $id("memberArea").innerHTML = "<a href='7member_update.php'>會員專區</a>";
+//                 $id("login1").innerHTML = "登出";
+//                 $id("lightbox19").style.display="none";
+//              }else{
+//                 alert("帳號或密碼錯誤<br>");
+//                 return;
+//                 }
+//             }
+//     );
+// }
 
-function CancelLogin(){$id("lightbox19").style.display = "none";}
+// function CancelLogin(){$id("lightbox19").style.display = "none";}
 
 //==========================會員註冊A==========================
 //-------------------------檢查帳號--------------------------
@@ -209,7 +209,7 @@ function Uniqueness(ID){
         'accountcheck' : ID ,
          },function(R){
             if( R == 1){
-                alert("此帳號已被使用");
+                alert("此帳號已被使用<br>");
                 return;
              }
         }
@@ -248,16 +248,16 @@ function VerifyA(){
     // VerifyPattern = /^\w{4,5}$/;
 
     if (!IDPattern.test(memId26)){
-        alert("帳號格式有誤！");
+        alert("帳號格式有誤！<br>");
         return;
     }else if (!PswPattern.test(memPsw26)){
-        alert("密碼格式有誤！");
+        alert("密碼格式有誤！<br>");
         return;
     }else if (memPsw26 !== memPswCheck26){
-        alert("兩次輸入密碼不相符！");
+        alert("兩次輸入密碼不相符！<br>");
         return;
     }else if (Verify26 !== CheckText){
-        alert("請輸入正確驗證碼！");
+        alert("請輸入正確驗證碼！<br>");
         return;
     }else{
          $.post('Register.php',{ 

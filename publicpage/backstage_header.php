@@ -14,8 +14,8 @@
                 <li><a href="9backstage_surfshop.php">衝浪配備頁面管理</a></li>
                 <li><a href="9backstage_map.php">浪點資訊/討論區管理</a></li>
                 <li><a href="9backstage_news.php">最新消息頁面管理</a></li>
-                <li><a href="#">客製浪板訂單管理</a></li>
-                <li><a href="#">衝浪配備訂單管理</a></li>
+                <li><a href="9backstage_orderCustomize.php">客製浪板訂單管理</a></li>
+                <li><a href="9backstage_orderSurf.php">衝浪配備訂單管理</a></li>
                 <li><a href="9backstage_member.php">會員帳號管理</a></li>
                 <li><a href="9backstage_Guards.php">管理者帳號管理</a></li>
             </ul><!-- sidebar35 -->      

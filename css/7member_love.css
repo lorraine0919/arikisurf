@@ -1,3 +1,8 @@
+.br-wrapper.br-theme-fontawesome-stars{
+  float: left;
+  width: 68% !important;
+} 
+
 .clearfix {
   clear: both; }
 .content20:after{
@@ -63,6 +68,7 @@
           margin: auto;
           box-sizing: border-box;
           padding-bottom: .5vh;
+          padding-top: 1.5%;
           border-top: 1px solid #fff; }
 .item .item_border .star {
             float: left;
@@ -73,6 +79,7 @@
             font-size: 23px; }
 
 .item .item_border .view {
+            height: 3vh;
             float: left;
             width: 31%; }
 
@@ -85,15 +92,29 @@
 .item .item_border .view .see img {
                 width: 29px;
                 height: auto;
-                vertical-align: -2px; }  
+                vertical-align: 3px; }  
 .item .item_border .view .watch {
+              vertical-align: 4px;
               text-align: center;
               height: 4vh;
-              line-height: 4vh;
               display: inline-block;
               color: #fff;
-              font-size: 16px; }                                        
-@media screen and (max-width: 768px) {
+              font-size: 16px; }                                         
+
+@media screen and (max-width: 1122px){
+  .right20{
+    padding-right: 0;
+  }
+} 
+
+@media screen and (min-width: 1123px){
+   .right20{
+    padding-right: 0;
+  }
+
+}   
+
+@media screen and (max-width: 768px){
   .member_love_23 {
     max-width: 1170px;
     width: 100%;
@@ -107,25 +128,18 @@
       padding: 2%;
       text-align: center;
       margin: 0 auto; }
-       }
+      
    .item { 
+        background: linear-gradient(to bottom, #1BBCB3, #1b5a81); 
+        width: 99%;
+        float: none;
         box-sizing: border-box;
-        padding: .7em;
+        padding: .5em;
         background-color: #3A3A3A;
-        height: auto;
+        height: 44vh;
         position: relative;
-        margin:2%  2%;
-        overflow: hidden; }     
-
-@media screen and (max-width: 1122px){
-  .right20{
-    padding-right: 0;
-  }
+        margin:3% auto;
+        overflow: hidden; }  
 } 
 
-@media screen and (min-width: 1123px){
-   .right20{
-    padding-right: 0;
-  }
-
-}      
+   

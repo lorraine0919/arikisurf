@@ -2,7 +2,7 @@
 .loading_bg{display: none;}
 body{overflow-y: scroll;}
 
-img {width: 100%;}
+.register26 img {width: 100%;}
 /*=========清除浮動=========*/
 .setdown26:after {
   content: '';

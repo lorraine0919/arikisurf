@@ -12,7 +12,7 @@
 	    	<ul class="store">
 	    		<li><a href="customize.php">客製浪板</a></li>
 	    		<li><a href="surfShop.php">衝浪配備</a></li>
-	    		<li><a href="cart.php">購物車</a></li>
+	    		<li><a class="footercart">購物車</a></li>
 	    	</ul>
 	    	<ul class="map">
 	    		<li><a href="map_session.php?wave_number=101">Pipeline</a></li>
@@ -80,7 +80,17 @@
 				  s.parentNode.insertBefore(a, s);
 				}(document, 'script'));
 
+				/*footer的member被按到時的反應*/
 				$('.footermember').click(function(){
+					if($('.footermemberloginornot').val()==1){
+						location.href="7member_update.php";
+					}else{
+						$('#lightbox19').fadeIn(500);
+					}
+				});
+
+				/*footer的購物車被按到的反應*/
+				$('.footercart').click(function(){
 					if($('.footermemberloginornot').val()==1){
 						location.href="7member_update.php";
 					}else{

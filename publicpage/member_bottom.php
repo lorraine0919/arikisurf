@@ -14,5 +14,12 @@
     // .addIndicators({name:'對應點'})
     .addTo(controller);
   });
+
+  // function ChangeStyle(){$("mem_1").css('background-color',"#e97b23");}
+
+  // function connect(){$id("mem_1").addEventListener('click',ChangeStyle,false);};
+
+  // window.onload=connect;
+
 </script>
 </div>

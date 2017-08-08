@@ -38,7 +38,7 @@ $(function(){
 				'no':index,
 				'status':'1'
 			},function(rs){
-					alert(rs);
+					// alert(rs);
 					location.reload();
 			});
 		});
@@ -55,7 +55,7 @@ $(function(){
 				'no':index,
 				'status':'2'
 			},function(rs){
-					alert(rs);
+					// alert(rs);
 					location.reload();
 			});
 		});

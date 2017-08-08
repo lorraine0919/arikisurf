@@ -58,10 +58,10 @@ try {
 	  }elseif($remain == 1){
 	  	$updateData ->bindValue(":mugshot" , $_REQUEST["mugshot"]);
 	  }
-	  $updateData ->bindValue(":renew_time" , '2017-08-06 17:48:40');
+	  $updateData ->bindValue(":renew_time" , date("Y-m-d H:i:s",time()));
 	  
 	  $updateData ->execute();
-	  echo "資料修改成功<br>";
+	  // alert("資料修改成功");
 	} catch (PDOException $e) {
 	  echo "錯誤行號 : ", $e->getLine(), "<br>";
 	  echo "錯誤訊息 : ", $e->getMessage(), "<br>";		

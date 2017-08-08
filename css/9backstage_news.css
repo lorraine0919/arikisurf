@@ -8,12 +8,12 @@ ul.sidebar-menu li a[href="9backstage_news.php"] {
 		width: 26%;
 	}
 	.content-panel{
-		background-color: #ED8C00;
+		background-color: #E5E5E5;
 		padding-top: 0px;
     	padding-bottom: 0px;
 	}
 	th{
-		color:#fff;
+		color:#444;
 		font-size: 16px;
 	}
 	td{
@@ -175,12 +175,12 @@ input:focus, textarea:focus {
 		width: 15%;
 	}
 	.content-panel{
-		background-color: #ED8C00;
+		background-color: #E5E5E5;
 		padding-top: 0px;
     	padding-bottom: 0px;
 	}
 	th{
-		color:#fff;
+		color:#444;
 		font-size: 16px;
 	}
 	td{

@@ -21,6 +21,7 @@
 			$_SESSION["member_no"] = $memRow["member_no"];
 		    $_SESSION["account"] = $memRow["account"];
 		    $_SESSION["psw"] = $memRow["psw"];
+		    $_SESSION["mugshot"] = $memRow["mugshot"];
 			echo 2;
 		}else{
 			echo 3;

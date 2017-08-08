@@ -50,14 +50,14 @@
                         <li><a href="news.php">最新消息</a></li>
                         <li><a href="about.php">關於酋長</a></li>
                         <li>
-                         <?php 
-                                        // echo $_SESSION["account"];
-                                        if(isset($_SESSION["account"])){
-                                            echo "<a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a>";
-                                        }else{
-                                            echo "<a class='rwd'><span id='login2' >會員專區</span></a>";
-                                        }
-                                     ?>    
+                        <?php 
+                                    // echo $_SESSION["account"];
+                                    if(isset($_SESSION["account"])){
+                                        echo "<a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a>";
+                                    }else{
+                                        echo "<a class='rwd'><span id='login2' >會員專區</span></a>";
+                                    }
+                         ?>    
                         </li>
                         <li><a href="cart.php" class="rwd">購物車</a></li>
                     </ul>
@@ -65,17 +65,23 @@
                         <div class="iconGroup">
                             <ul>
                                 <li><a>
-                                    <img src="images/1common/member.png" alt="" id="showlogin">
-                                    <span id="memberArea"></span>
-                                    
+<!--                                     <img src="images/1common/member.png" alt="" id="showlogin">
+                                    <span id="memberArea"></span>     -->
                                     <?php 
+
                                         // echo $_SESSION["account"];
                                         if(isset($_SESSION["account"])){
-                                            echo "<a href='7member_update.php'><span id='login1'>會員專區</span></a>";
+                                            echo "<img src=",$_SESSION['mugshot']," alt='' id='showlogin'>
+                                                <span id='memberArea'></span>
+                                                <a href='7member_update.php'>
+                                                <span id='login1'>會員專區</span></a>";
                                         }else{
-                                            echo "<span id='login1'>會員登入</span>";
+                                            echo '<img src="images/1common/member.png" alt="" id="showlogin">
+                                                <span id="memberArea"></span>
+                                                <span id="login1">會員登入</span>';
                                         }
-                                     ?>
+
+                                    ?>
                                     </span>
                                 </a></li>
                                 <li class="line"></li>

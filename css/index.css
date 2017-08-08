@@ -228,6 +228,7 @@ body {
   100% {
     top: -230%; } }
 .slogan_1 {
+  display: none;
   width: 100%;
   text-align: center;
   background-color: #11314c;

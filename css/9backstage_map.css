@@ -9,8 +9,12 @@
    color:red;
 }
 
-.postBang,.replyWidth{
+.postBang{
    width: 600px;
+}
+
+.replyWidth{
+  width: 300px;
 }
 
 .lightmap{
@@ -67,4 +71,8 @@
   color: black;
   cursor: pointer;
   padding: 3px;
+}
+
+.postT{
+  width: 150px !important;
 }

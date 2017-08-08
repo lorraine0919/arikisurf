@@ -5,7 +5,6 @@ $map = $pdo->query($sql);
  ?>
 <!DOCTYPE html>
 <html lang="en">
-<!--header-->
 <head> 
 <?php require_once('publicpage/backstage_head.php'); ?>
     <title>Ariki Surf - 後臺管理</title> 
@@ -13,7 +12,6 @@ $map = $pdo->query($sql);
     <script src="js/jquery.js"></script>
     <script src="js/9backstage_map.js"></script>
 </head>
-<!--header end-->
 <body>
 <!-- =================刪除光箱================== -->
 <div class="lightmap">
@@ -126,7 +124,7 @@ $map = $pdo->query($sql);
                               <tbody>
                                 <tr>
                                   <td><?php echo $dataRow["wave_number"]; ?></td>
-                                  <td><?php echo $dataRow["post_title"]; ?></td>
+                                  <td class="postT"><?php echo $dataRow["post_title"]; ?></td>
                                   <td class="postBang"><?php echo $dataRow["post_text"]; ?></td>
                                   <td><?php echo $dataRow["member_no"]; ?></td>
                                   <td><?php echo $dataRow["post_date"]; ?></td>

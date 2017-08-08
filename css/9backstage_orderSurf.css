@@ -1,0 +1,93 @@
+.clearfix {
+  clear: left; }
+
+.backstage_orderCustomize {
+  font-size: 18px;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto; }
+  .backstage_orderCustomize .CT_navbar {
+    width: 90%;
+    box-sizing: border-box;
+    padding: 0px 20px; }
+    .backstage_orderCustomize .CT_navbar ul {
+      margin-bottom: 0; }
+      .backstage_orderCustomize .CT_navbar ul li {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 20px; }
+      .backstage_orderCustomize .CT_navbar ul .have {
+        background-color: rgba(255, 255, 255, 0.8); }
+  .backstage_orderCustomize .item-box {
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    width: 90%;
+    margin: 1% auto;
+    margin-top: 0; }
+    .backstage_orderCustomize .item-box .OD_box table {
+      width: 100%;
+      padding: 20px; }
+      .backstage_orderCustomize .item-box .OD_box table tr {
+        padding: 20px 0;
+        border: 1px solid #ddd; }
+        .backstage_orderCustomize .item-box .OD_box table tr th {
+          background-color: rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          border: 1px solid #ddd; }
+        .backstage_orderCustomize .item-box .OD_box table tr td {
+          padding: 20px;
+          border: 1px solid #ddd; }
+  .backstage_orderCustomize .HT_box {
+    display: none; }
+  .backstage_orderCustomize #lightbox {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000; }
+    .backstage_orderCustomize #lightbox .LT-item-box {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: white;
+      width: 80%;
+      height: 80%;
+      z-index: 2001;
+      overflow-y: scroll;
+      overflow-x: hidden; }
+      .backstage_orderCustomize #lightbox .LT-item-box .title {
+        width: 93%;
+        margin: 0 auto; }
+      .backstage_orderCustomize #lightbox .LT-item-box .val {
+        width: 100%; }
+        .backstage_orderCustomize #lightbox .LT-item-box .val .val_sm_item {
+          width: 100%; }
+          .backstage_orderCustomize #lightbox .LT-item-box .val .val_sm_item table {
+            width: 90%;
+            margin: 3% auto;
+            padding: 20px; }
+            .backstage_orderCustomize #lightbox .LT-item-box .val .val_sm_item table tr {
+              padding: 20px 0;
+              border: 1px solid #ddd; }
+              .backstage_orderCustomize #lightbox .LT-item-box .val .val_sm_item table tr th {
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border: 1px solid #ddd; }
+              .backstage_orderCustomize #lightbox .LT-item-box .val .val_sm_item table tr td {
+                padding: 20px;
+                border: 1px solid #ddd; }
+      .backstage_orderCustomize #lightbox .LT-item-box .btn {
+        width: 50%;
+        margin: 0 auto;
+        font-size: 18px; }
+        .backstage_orderCustomize #lightbox .LT-item-box .btn #closeLG {
+          margin: 3% 10%; }
+    .backstage_orderCustomize #lightbox #LT-CT-box {
+      display: none; }

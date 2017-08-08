@@ -97,8 +97,8 @@ var PamountVal2 = sessionStorage;
 
 
     $('.PC-num').text(ltCtxt.length);
-    document.getElementById('getTotalPrice').innerText = total;
-    document.getElementById('getTotalMath').innerText = ltCtxt.length;
+    document.getElementById('PC_finish_Price').innerText = total;
+    document.getElementById('PC_finish_Math').innerText = ltCtxt.length;
     
 
 

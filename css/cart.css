@@ -8,6 +8,9 @@ body {
   overflow-y: scroll; }
 
 @media screen and (min-width: 768px) {
+  .navDetail .navfix .navimg .iconGroup ul li:nth-child(3) a {
+    color: #e97b23; }
+
   .body_28 {
     background-image: url("../images/8cart/bg_f.jpg");
     background-size: cover; }
@@ -768,6 +771,9 @@ body {
         .order-over_31 .Odover-PM-btn .btn-box .Odover-Member-btn {
           margin-left: 10px; } }
 @media screen and (max-width: 767px) {
+  .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(8) a {
+    color: #e97b23; }
+
   .body_28 {
     background-image: url("../images/8cart/bg_f.jpg");
     background-size: cover; }

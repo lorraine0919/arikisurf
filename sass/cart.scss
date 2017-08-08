@@ -17,6 +17,9 @@ body{
 $main-color_29:#5A929E;
 
 @media screen and (min-width:768px){
+    .navDetail .navfix .navimg .iconGroup ul li:nth-child(3) a{
+        color: #e97b23;
+    }
     .body_28{
         background-image: url("../images/8cart/bg_f.jpg");
         background-size: cover;
@@ -1025,6 +1028,9 @@ $main-color_29:#5A929E;
 }//media screen and (mix-width:768px)
 
 @media screen and (max-width:767px){
+    .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(8) a{
+        color: #e97b23;
+    }
     .body_28{
         background-image: url("../images/8cart/bg_f.jpg");
         background-size: cover;

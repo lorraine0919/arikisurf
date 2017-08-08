@@ -28,15 +28,287 @@
   }
   /*=========圖片設定=========*/
 
-  .navfix{
+  // .navfix{
+    //   width: 100%;
+    //   background-image: url("../images/1common/nav2.png");
+    //   background: #11314c;
+    //   position: fixed;
+    //   z-index: 20;
+    //   padding:0 10px;
+
+    //   .navimg{
+    //     position: relative;
+    //     background-image: url("../images/1common/nav2.png");
+    //     .logo{
+    //       float: left;
+    //       width: 11.73%;
+    //       height: 0px;
+    //       padding-bottom:11.73%; 
+    //       display: none;
+    //     }
+    //     .rwdlogoonbar{
+    //       display: inline-block;
+    //       vertical-align: middle;
+    //       width: 35%;
+    //       box-sizing:border-box;
+    //       padding: 0 10px;
+    //       padding-top: 14%;
+    //       position: relative;
+    //       img{
+    //         width: 110%;
+    //         top: -1%;
+    //         left: 4%;
+    //         position: absolute;
+    //       }
+    //     }
+    //       .navbar-buttons {
+    //         position: relative;
+    //         display: inline-block;
+    //         // float: right;
+    //         vertical-align: middle;
+    //         padding:0px 20px;
+    //         width: 58%;
+    //         box-sizing:border-box;
+    //         text-align: right;
+    //       }
+
+    //       /* Sing In Button */
+    //       .button {
+    //         background-color: rgba(44, 45, 47, 0.749);
+    //         width: 97px;
+    //         height: 30px;
+    //         font-size: 12px;
+    //         color: #fff;
+    //         border: none;
+    //         border-radius: 20px;
+    //         cursor: pointer;
+    //       }
+
+    //       /*
+    //       ---- Overlay
+    //       */
+    //       .overlay {
+    //         position: fixed;
+    //         background: rgba(51, 55, 69, 0.80);
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //         opacity: 0;
+    //         visibility: hidden;
+    //         transition: opacity .35s, visibility .35s, height .35s;
+    //         overflow: hidden;
+    //         .menu{
+    //           .rwdlogo{
+    //             margin: auto;
+    //             width: 50%;
+    //             img{
+    //               width: 100%;
+    //             }
+                
+    //           }
+    //         }
+    //         &.open {
+    //           opacity: 1;
+    //           visibility: visible;
+    //           height: 100%;
+    //           li {
+    //             animation: fadeInRight .5s ease forwards;
+    //             animation-delay: .35s;
+    //           }
+    //           li:nth-of-type(2) {
+    //             animation-delay: .4s;
+    //           }
+    //           li:nth-of-type(3) {
+    //             animation-delay: .45s;
+    //           }
+    //           li:nth-of-type(4) {
+    //             animation-delay: .50s;
+    //           }
+    //           li:nth-of-type(5) {
+    //             animation-delay: .55s;
+    //           }
+    //           li:nth-of-type(6) {
+    //             animation-delay: .60s;
+    //           }
+    //           li:nth-of-type(7) {
+    //             animation-delay: .65s;
+    //           }
+    //           li:nth-of-type(8) {
+    //             animation-delay: .70s;
+    //           }
+    //         }
+    //         .nav-title {
+    //           font-size: 22px;
+    //           color: #fff;
+    //           font-weight: bold;
+    //           text-transform: uppercase;
+    //           text-align: center;
+    //           position: absolute;
+    //           left: 50%;
+    //           transform: translate(-50%);
+    //           top: 8%;
+    //           letter-spacing: 4px;
+    //           opacity: 0.6;
+    //         }
+    //         nav {
+    //           position: relative;
+    //           height: 50%;
+    //           top: 40%;
+    //           transform: translateY(-50%);
+    //           font-size: 50px;
+    //           font-weight: 400;
+    //           text-transform: uppercase;
+    //           text-align: center;
+    //           letter-spacing: 10px;
+    //         }
+    //         ul {
+    //           list-style: none;
+    //           padding: 0;
+    //           margin: 0 auto;
+    //           display: inline-block;
+    //           position: relative;
+    //           height: 100%;
+    //           li {
+    //             display: block;
+    //             position: relative;
+    //             opacity: 0;
+    //             margin: 0 0 10px 0;
+    //             // margin-bottom: 60px;
+    //             &.closerwdmenuli{
+    //               margin: 20px 0;
+    //               img{
+    //                 width: 20%;
+    //               }
+    //             }
+    //             a {
+    //               display: block;
+    //               position: relative;
+    //               color: #FFF;
+    //               text-decoration: none;
+    //               overflow: hidden;
+    //               font-size: 17px;
+    //               letter-spacing: 5px;
+    //               &:hover,&:focus,&:active{
+    //                 color: #ea2e49;
+    //               }
+    //               &:after {
+    //                 content: '';
+    //                 position: absolute;
+    //                 top: 50%;
+    //                 left: 43.5%;
+    //                 width: 0%;
+    //                 transform: translateX(-50%);
+    //                 height: 3px;
+    //                 background: #FFF;
+    //                 transition: .35s;
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //       /*        .overlay ul li a:hover:after,
+    //       .overlay ul li a:focus:after,
+    //       .overlay ul li a:active:after {
+    //         width: 100%;
+    //         background: #ea2e49;
+    //       }*/
+
+    //       button:focus {
+    //         outline: 0;
+    //       }
+
+    //       .open-menu,
+    //       .close-menu,
+    //       .button {
+    //         cursor: pointer;
+    //         transition: transform 0.30s;
+    //       }
+    //       .open-menu:hover,
+    //       .close-menu:hover,
+    //       .button:hover {
+    //         transform: scale(1.1);
+    //       }
+
+    //       @keyframes fadeInRight {
+    //         0% {
+    //           opacity: 0;
+    //           left: 20%;
+    //         }
+    //         100% {
+    //           opacity: 1;
+    //           left: 0;
+    //         }
+    //       }
+
+    //       /*
+    //       ---- Responsive
+    //       */
+
+    //       @media (max-width: 670px) {
+    //         .overlay nav {
+    //           font-size: 30px;
+    //         }
+    //       }
+    //       @media (max-width: 550px) {
+    //         .overlay nav {
+    //           font-size: 20px;
+    //         }
+    //       }
+    //     // .menu{
+    //     //   width: 40vh;
+    //     //   height: 0px;
+    //     //   padding-bottom: calc(100vh - 16%);
+    //     //   background-color: #49545d;
+    //     //   position: fixed;
+    //     //   right: -40vh;
+    //     //   bottom: 1.1%; 
+    //     //   transition: .5s;
+    //     //   z-index: 20;
+    //     //   box-shadow: 5px 5px 20px rgba(0,0,0,0.2) inset;
+    //     //   li{
+    //     //     &:hover{
+    //     //       color: yellow;
+    //     //       background-color:hsla(100, 100%, 100%, 0.1);
+    //     //     }
+    //     //     a{
+    //     //       height: 2em;
+    //     //       line-height: 1.5em;
+    //     //       font-weight: bold;
+    //     //       text-align: center;
+    //     //       text-decoration: none;
+    //     //       color: white;
+    //     //       display: block;
+    //     //       padding: 4.5% 0%;
+    //     //       font-size: 1em;
+    //     //       line-height: 2;
+    //     //      }
+    //     //     &.rwdlogo{
+    //     //       width: 100%;
+    //     //       a.rwd{
+    //     //         width: 100%;
+    //     //         display: inline-block;
+    //     //         padding: 0 0 20% 0;
+    //     //         img{
+    //     //           width: 36%;
+    //     //         }
+    //     //       }
+    //     //     }
+            
+    //     //   }
+    //     // }
+    //   }
+  // }
+
+   .navfix{
     width: 100%;
     background-image: url("../images/1common/nav2.png");
     background: #11314c;
     position: fixed;
     z-index: 20;
-    padding:0 10px;
-
     .navimg{
+      margin: 0% 2.6%;
+      padding: 2.6% 0%;
       position: relative;
       background-image: url("../images/1common/nav2.png");
       .logo{
@@ -46,257 +318,74 @@
         padding-bottom:11.73%; 
         display: none;
       }
-      .rwdlogoonbar{
-        display: inline-block;
-        vertical-align: middle;
-        width: 35%;
-        box-sizing:border-box;
-        padding: 0 10px;
-        padding-top: 14%;
-        position: relative;
-        img{
-          width: 110%;
-          top: -1%;
-          left: 4%;
-          position: absolute;
+      .hb{
+          display: block;
+          width: 39px;
+          height: 0px;
+          padding-bottom: calc(10% - 5px);
+          float: right;
+          margin-top: 0.865%;
+          position: relative;
+          cursor: pointer;
+          &:before{
+            content: "";
+            display: block;
+            width: 80%;
+            height: 0.6vh;
+
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 10%;
+            margin: auto;
+            z-index: 20;
+            background-color:#fff;
+            box-shadow: 0vh -12px 0vh #fff,
+                        0vh 12px 0vh #fff; 
+          }
+      }
+      .menu{
+        width: 40vh;
+        height: 0px;
+        padding-bottom: calc(100vh - 16%);
+        background-color: #49545d;
+        position: fixed;
+        right: -40vh;
+        bottom: 1.1%; 
+        transition: .5s;
+        z-index: 20;
+        box-shadow: 5px 5px 20px rgba(0,0,0,0.2) inset;
+        li{
+          &:hover{
+            color: yellow;
+            background-color:hsla(100, 100%, 100%, 0.1);
+          }
+          a{
+            height: 2em;
+            line-height: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 4.5% 0%;
+            font-size: 1em;
+            line-height: 2;
+           }
+          &.rwdlogo{
+            width: 100%;
+            a.rwd{
+              width: 100%;
+              display: inline-block;
+              padding: 0 0 20% 0;
+              img{
+                width: 36%;
+              }
+            }
+          }
+          
         }
       }
-        .navbar-buttons {
-          position: relative;
-          display: inline-block;
-          // float: right;
-          vertical-align: middle;
-          padding:0px 20px;
-          width: 58%;
-          box-sizing:border-box;
-          text-align: right;
-        }
-
-        /* Sing In Button */
-        .button {
-          background-color: rgba(44, 45, 47, 0.749);
-          width: 97px;
-          height: 30px;
-          font-size: 12px;
-          color: #fff;
-          border: none;
-          border-radius: 20px;
-          cursor: pointer;
-        }
-
-        /*
-        ---- Overlay
-        */
-        .overlay {
-          position: fixed;
-          background: rgba(51, 55, 69, 0.80);
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity .35s, visibility .35s, height .35s;
-          overflow: hidden;
-          .menu{
-            .rwdlogo{
-              margin: auto;
-              width: 50%;
-              img{
-                width: 100%;
-              }
-              
-            }
-          }
-          &.open {
-            opacity: 1;
-            visibility: visible;
-            height: 100%;
-            li {
-              animation: fadeInRight .5s ease forwards;
-              animation-delay: .35s;
-            }
-            li:nth-of-type(2) {
-              animation-delay: .4s;
-            }
-            li:nth-of-type(3) {
-              animation-delay: .45s;
-            }
-            li:nth-of-type(4) {
-              animation-delay: .50s;
-            }
-            li:nth-of-type(5) {
-              animation-delay: .55s;
-            }
-            li:nth-of-type(6) {
-              animation-delay: .60s;
-            }
-            li:nth-of-type(7) {
-              animation-delay: .65s;
-            }
-            li:nth-of-type(8) {
-              animation-delay: .70s;
-            }
-          }
-          .nav-title {
-            font-size: 22px;
-            color: #fff;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-align: center;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-            top: 8%;
-            letter-spacing: 4px;
-            opacity: 0.6;
-          }
-          nav {
-            position: relative;
-            height: 50%;
-            top: 40%;
-            transform: translateY(-50%);
-            font-size: 50px;
-            font-weight: 400;
-            text-transform: uppercase;
-            text-align: center;
-            letter-spacing: 10px;
-          }
-          ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 auto;
-            display: inline-block;
-            position: relative;
-            height: 100%;
-            li {
-              display: block;
-              position: relative;
-              opacity: 0;
-              margin: 0 0 10px 0;
-              // margin-bottom: 60px;
-              &.closerwdmenuli{
-                margin: 20px 0;
-                img{
-                  width: 20%;
-                }
-              }
-              a {
-                display: block;
-                position: relative;
-                color: #FFF;
-                text-decoration: none;
-                overflow: hidden;
-                font-size: 17px;
-                letter-spacing: 5px;
-                &:hover,&:focus,&:active{
-                  color: #ea2e49;
-                }
-                &:after {
-                  content: '';
-                  position: absolute;
-                  top: 50%;
-                  left: 43.5%;
-                  width: 0%;
-                  transform: translateX(-50%);
-                  height: 3px;
-                  background: #FFF;
-                  transition: .35s;
-                }
-              }
-            }
-          }
-        }
-        /*        .overlay ul li a:hover:after,
-        .overlay ul li a:focus:after,
-        .overlay ul li a:active:after {
-          width: 100%;
-          background: #ea2e49;
-        }*/
-
-        button:focus {
-          outline: 0;
-        }
-
-        .open-menu,
-        .close-menu,
-        .button {
-          cursor: pointer;
-          transition: transform 0.30s;
-        }
-        .open-menu:hover,
-        .close-menu:hover,
-        .button:hover {
-          transform: scale(1.1);
-        }
-
-        @keyframes fadeInRight {
-          0% {
-            opacity: 0;
-            left: 20%;
-          }
-          100% {
-            opacity: 1;
-            left: 0;
-          }
-        }
-
-        /*
-        ---- Responsive
-        */
-
-        @media (max-width: 670px) {
-          .overlay nav {
-            font-size: 30px;
-          }
-        }
-        @media (max-width: 550px) {
-          .overlay nav {
-            font-size: 20px;
-          }
-        }
-      // .menu{
-      //   width: 40vh;
-      //   height: 0px;
-      //   padding-bottom: calc(100vh - 16%);
-      //   background-color: #49545d;
-      //   position: fixed;
-      //   right: -40vh;
-      //   bottom: 1.1%; 
-      //   transition: .5s;
-      //   z-index: 20;
-      //   box-shadow: 5px 5px 20px rgba(0,0,0,0.2) inset;
-      //   li{
-      //     &:hover{
-      //       color: yellow;
-      //       background-color:hsla(100, 100%, 100%, 0.1);
-      //     }
-      //     a{
-      //       height: 2em;
-      //       line-height: 1.5em;
-      //       font-weight: bold;
-      //       text-align: center;
-      //       text-decoration: none;
-      //       color: white;
-      //       display: block;
-      //       padding: 4.5% 0%;
-      //       font-size: 1em;
-      //       line-height: 2;
-      //      }
-      //     &.rwdlogo{
-      //       width: 100%;
-      //       a.rwd{
-      //         width: 100%;
-      //         display: inline-block;
-      //         padding: 0 0 20% 0;
-      //         img{
-      //           width: 36%;
-      //         }
-      //       }
-      //     }
-          
-      //   }
-      // }
     }
   }
   
@@ -479,6 +568,10 @@
                   box-shadow: none; 
                 }
                 a {
+                  transition:0.5s;
+                  &:hover{
+                    color:#ed8c00;
+                  }
                   padding: 1.2vw 1vw;
                   color: #fff;
                   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); 
@@ -554,8 +647,8 @@
 
     #alertBox {
       position:relative;
-      width:25%;
-      min-height:100px;
+      width:20%;
+      min-height:150px;
         max-height:300px;
       margin-top:50px;
       box-shadow: 1px 1px 7px #102c38;
@@ -566,7 +659,7 @@
       background-size: content;
         top:30%;
         border-radius: 5px;
-      z-index:1000;
+      z-index:100;
       
     }
 
@@ -613,7 +706,7 @@
         transition: 0.3s;
     }
     #alertBox #closeBtn:hover{
-      background-color: #6cf;
+      background-color: #e97b23;
     }
 
     /* unrelated styles */

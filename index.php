@@ -129,6 +129,14 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
         </div>
           
     </div>
+    <div class="slogan_1">
+        <div class="gradient">
+            <h1>ARIKI SURF</h1> 
+            <h3>在古玻里尼西亞文化中，酋長這個身分，<br>
+            不只代表了一個人在部落的領導地位，<br>
+            更代表了他在衝浪技巧上，無可取代的存在。</h3> 
+        </div>
+    </div>
     <div id="explodetrigger"></div>
     <div class="coating_1">
 
@@ -279,7 +287,7 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
                     <p>你體內征服者的細胞正在蠢蠢欲動嗎？<br>
                         對於平淡無奇的波幅已經感到厭倦了嗎？<br>
                         酋長衝浪將給你全新的浪點、全新的視野。</p>
-                    <a href="map.html">MORE INFO</a>
+                    <a href="map.php">MORE INFO</a>
                 </div>
 
 

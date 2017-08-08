@@ -16,7 +16,6 @@ require_once("connectBooks.php");
   <script src="js/map_up.js"></script>
   <script src="js/map_addColor.js"></script>
   <script src="js/jquery.barrating.min.js" type="text/javascript"></script>
-  <!-- <script src="js/getStar.js" type="text/javascript"></script> -->
   <title>酋長衝浪Ariki Surf-討論區</title>
 </head>
 <body>
@@ -60,7 +59,8 @@ require_once("connectBooks.php");
       </div><!-- content_10 -->
 <?php           
            
-           $sql2="select * from map_wave where wave_number=$wave_number";
+           $sql2="select * from map_wave 
+                  where wave_number=$wave_number";
            $wave = $pdo->query($sql2);
            $waveRow = $wave->fetch(PDO::FETCH_ASSOC);         
 ?>

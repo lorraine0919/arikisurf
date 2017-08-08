@@ -140,7 +140,7 @@ $map = $pdo->query($sql);
                                   <td>
                                     <div class="input-group">
                                         <div class="btn-group">
-                                          <input type="hidden" class="post_number" name="post_number" value="<?php echo $mapRow['post_number']?>" >
+                                          <input type="hidden" class="post_number" name="post_number" value="<?php echo $dataRow['post_number']?>" >
                                           <a class="yesbtn btn btn-primary btn-sm dpost">修改</a>
                                      </div>
                                   </td>

@@ -65,8 +65,7 @@
                         <div class="iconGroup">
                             <ul>
                                 <li><a>
-<!--                                     <img src="images/1common/member.png" alt="" id="showlogin">
-                                    <span id="memberArea"></span>     -->
+                                    <span>
                                     <?php 
 
                                         // echo $_SESSION["account"];
@@ -74,7 +73,7 @@
                                             echo "<img src=",$_SESSION['mugshot']," alt='' id='showlogin'>
                                                 <span id='memberArea'></span>
                                                 <a href='7member_update.php'>
-                                                <span id='login1'>會員專區</span></a>";
+                                                <span id='login1'>會員專區</span>";
                                         }else{
                                             echo '<img src="images/1common/member.png" alt="" id="showlogin">
                                                 <span id="memberArea"></span>

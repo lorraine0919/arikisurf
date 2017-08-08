@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
 .showProd .photoSelect .photo, .showProd .photoSelect .selected:after {
   background-repeat: no-repeat;
   background-position: center; }

@@ -22,6 +22,11 @@
 		$member -> bindValue(":renew_time",date("Y-m-d H:i:s",time()));	
 		$member -> execute();
 
+		$memRow = $member->fetch(PDO::FETCH_ASSOC);
+		$_SESSION["member_no"] = $memRow["member_no"];
+	    $_SESSION["account"] = $memRow["account"];
+	    $_SESSION["psw"] = $memRow["psw"];
+
 	}catch(PDOException $ex){
 		echo "資料庫操作失敗,原因：",$ex->getMessage(),"<br>";
 		echo "行號：",$ex->getLine(),"<br>";

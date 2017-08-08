@@ -204,7 +204,6 @@ $pdo->exec($sqlview);
  ?>                ];
             // console.log(bangarr);
             </script>
- 
 <?php 
        $sqlreply="select *
                   from member,map_reply

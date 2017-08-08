@@ -1,10 +1,9 @@
-body{
-  overflow-x: hidden;
-}
-
 .showProd .photoSelect .photo, .showProd .photoSelect .selected:after {
   background-repeat: no-repeat;
   background-position: center; }
+
+body {
+  overflow-x: hidden; }
 
 .container {
   max-width: 1170px; }

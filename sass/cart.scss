@@ -273,7 +273,7 @@ $main-color_29:#5A929E;
                     .total-num,
                     .total-money{
                         display: inline-block;
-                        color:orange;
+                        color:#EA8A00;
                         font-size: 25px;
                         margin: 0 5px;
                     }
@@ -725,7 +725,7 @@ $main-color_29:#5A929E;
                             background-color: rgba(255, 255, 255, 0.4);
                             
                             span{
-                                color:orange;
+                                color:#EA8A00;
                                 font-size: 20px;
                             }
                             .getTotalMath,
@@ -971,12 +971,12 @@ $main-color_29:#5A929E;
                             padding:2% 30px;
                             
                             span{
-                                color:orange;
-                                font-size: 20px;
+                                color:#EA8A00;
+                                font-size: 25px;
                             }
                             .getOdoTotalMath,
                             .getOdoTotalPrice{
-                                margin:0 7px;
+                                margin:0 1%;
                             }
                         }
                     }
@@ -1243,7 +1243,7 @@ $main-color_29:#5A929E;
                 padding-bottom: 5%;
                 .total-num,
                 .total-money{
-                    color:orange; 
+                    color:#EA8A00; 
                     font-size: 25px;
                     margin:0 1%;
                 }
@@ -1648,6 +1648,39 @@ $main-color_29:#5A929E;
                     
                 }
             }
+            .horizontal-phone{
+                max-width: 767px;
+                width: 90%;
+                margin: 0 5%;
+                height: 20px;
+                background-color: rgba(255, 255, 255, 0.6);
+                .horizontal-line{
+                    width: 90%;
+                    height: 1px;
+                    margin: 0 5%;
+                    background-color: white;
+                }
+            }
+            .Cfrim-total{
+                max-width: 767px; 
+                width: 90%;
+                margin:0 5%;
+                background-color: rgba(255, 255, 255, 0.6);
+                color: white;
+                font-size: 20px;
+                text-align: center;
+                padding-bottom: 5%;
+                .getTotalMath{
+                    color: #EA8A00;
+                    font-size: 25px;
+                    margin: 0 1%;
+                }
+                .getTotalPrice{
+                    color: #EA8A00;
+                    font-size: 25px;
+                    margin: 0 1%;
+                }
+            }
         }
         .OCfirmInfo{
             @include Width-size_8cart(767, 100%, 0, auto);
@@ -1914,11 +1947,15 @@ $main-color_29:#5A929E;
                             padding:10px;
                             .getOdoTotalMath{
                                 display: inline-block;
-                                margin-top:1%;
-                                color:orange;
+                                // margin-top:1%;
+                                color:#EA8A00;
+                                font-size: 25px;
+                                margin: 0 1%;
                             }
                             .getOdoTotalPrice{
-                                color:orange;
+                                color:#EA8A00;
+                                font-size: 25px;
+                                margin: 0 1%;
                             }
                         }
                     }

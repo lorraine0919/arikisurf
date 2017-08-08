@@ -92,14 +92,11 @@
   width: 100%;
   padding: 20px; }
   .OD_box table tr {
-    padding: 20px 0;
     border: 1px solid #ddd; }
     .OD_box table tr th {
       background-color: rgba(0, 0, 0, 0.1);
-      padding: 20px;
       border: 1px solid #ddd; }
     .OD_box table tr td {
-      padding: 20px;
       border: 1px solid #ddd; }
 
 .model {

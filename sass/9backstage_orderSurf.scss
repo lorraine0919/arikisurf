@@ -1,0 +1,126 @@
+.clearfix{
+    clear:left;
+}
+
+    .backstage_orderCustomize{
+        font-size: 18px;
+        width: 100%;
+        max-width: 1170px;
+        margin:0 auto;
+        .CT_navbar{
+            width: 90%;
+            box-sizing: border-box;
+            padding:0px 20px;
+            ul{
+                margin-bottom:0;
+                li{
+                    display: inline-block;
+                    box-sizing: border-box;
+                    padding:20px;
+                }
+                .have{
+                    background-color:rgba(255,255,255,0.8);
+                }
+                
+            }
+        }//navbar
+        
+        .item-box{
+            background-color: #fff;
+            box-sizing: border-box;
+            padding:10px 20px;
+            width: 90%;
+            margin:1% auto;
+            margin-top:0;
+            .OD-title{
+
+            }
+            .OD_box{
+                table{
+                    width: 100%;
+                    padding:20px;
+                    tr{
+                        padding:20px 0;
+                        border:1px solid #ddd;
+                        th{
+                            background-color:rgba(0,0,0,0.1);
+                            padding:20px;
+                            border:1px solid #ddd;
+                        }
+                        td{
+                            padding:20px;
+                            border:1px solid #ddd;
+                        }
+                    }
+                }
+            }
+        }
+        .HT_box{
+            display: none;
+        }
+
+        #lightbox{
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2000;
+            .LT-item-box{
+                position: absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                margin:auto;
+                background-color: white;
+                width: 80%;
+                height: 80%;
+                z-index: 2001;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                .title{
+                    width: 93%;
+                    margin:0 auto;
+                }
+                .val{
+                    width: 100%;
+                    .val_sm_item{
+                        width: 100%;
+                        table{
+                            width: 90%;
+                            margin:3% auto;
+                            padding:20px;
+                            tr{
+                                padding:20px 0;
+                                border:1px solid #ddd;
+                                th{
+                                    background-color:rgba(0,0,0,0.1);
+                                    padding:20px;
+                                    border:1px solid #ddd;
+                                }
+                                td{
+                                    padding:20px;
+                                    border:1px solid #ddd;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn{
+                    width: 50%;
+                    margin:0 auto;
+                    font-size: 18px;
+                    #closeLG{
+                        margin:3% 10%;
+                    }
+                }
+            }
+            #LT-CT-box{
+                display: none;
+            }
+                
+        }
+    }

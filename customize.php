@@ -438,11 +438,11 @@ libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 							</div>
 							<div class="color">
 								<div class="circle"></div>
-								<p>黃色</p>
+								<p>藍色</p>
 							</div>
 							<div class="color">
 								<div class="circle"></div>
-								<p>藍色</p>
+								<p>黃色</p>
 							</div>
 							<!-- <div class="color">
 								<div class="circle"></div>

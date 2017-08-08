@@ -91,3 +91,6 @@
           margin: 3% 10%; }
     .backstage_orderCustomize #lightbox #LT-CT-box {
       display: none; }
+
+ul.sidebar-menu li a[href="9backstage_orderSurf.php"] {
+  background-color: #e97b23; }

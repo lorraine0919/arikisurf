@@ -94,8 +94,8 @@ require_once('connectBooks.php');
                                                 <form action="authority.php?test=2">
                                                     <input type="hidden" name="suspension" value="<?php echo $eachMember['suspension'] ?>" class="suspension">
                                                     <input type="hidden" name="member_no" value="<?php echo $eachMember['member_no'] ?>" class="no">
-                                                    <input type="submit"  class="availiblebtn btn btn-primary btn-sm backbooa" <?php echo ($eachMember['suspension']==2)? "":"disabled"; ?> value="啟用"><br>
-                                                    <input type="submit"  class="stopbtn btn btn-primary btn-sm backboob" <?php echo ($eachMember['suspension']==1)? "":"disabled"; ?> value="停權" >
+                                                    <input type="submit"  class="availiblebtn btn btn-primary btn-sm backbooa" <?php echo ($eachMember['suspension']==2)? "disabled":""; ?> value="啟用"><br>
+                                                    <input type="submit"  class="stopbtn btn btn-primary btn-sm backboob" <?php echo ($eachMember['suspension']==1)? "disabled":""; ?> value="停權" >
                                                 </form>
                                                 </div>
                                           </div>
@@ -128,9 +128,11 @@ require_once('connectBooks.php');
    if ($('.suspension').eq(i).val()=='1') {
       $('.availiblebtn').eq(i).css('background-color','#e97b23');
       $('.availiblebtn').eq(i).css('border-color','#fa0');
+      $('.stopbtn').eq(i).css('display','none');
    }else{
-      $('.stopbtn').eq(i).css('background-color','#e97b23');
-      $('.stopbtn').eq(i).css('border-color','#fa0');
+      $('.stopbtn').eq(i).css('background-color','#428bca');
+      $('.stopbtn').eq(i).css('border-color','#357ebd');
+      $('.availiblebtn').eq(i).css('display','none');
    }
   }
 </script>

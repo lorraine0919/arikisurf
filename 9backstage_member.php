@@ -23,8 +23,8 @@ require_once('connectBooks.php');
                         <!-- 內容開始 -->
 
                           <!-- 上table開始 -->
-                          <h4><i class="fa fa-angle-right"></i>會員搜尋</h4>
-                          <table class="table table-bordered table-striped table-condensed">
+                          <h4 style="display: none;"><i class="fa fa-angle-right"></i>會員搜尋</h4>
+                          <table class="table table-bordered table-striped table-condensed" style="display: none;">
                               <tr>
                                 <td>
                                   <input type="text" name="" class="new_guardsR">
@@ -59,23 +59,24 @@ require_once('connectBooks.php');
                               </tr>
                             </thead>
                               <tbody>
+
                                 <?php 
-                                      $choise = $_SESSION["map_wave"]["wave_number"];
+                                      // $choise = $_SESSION["map_wave"]["wave_number"];
                                       $sql = 'select * from member';
                                       $memberList=$pdo->prepare($sql);
                                       // $member->bindValue(":choise",$choise);
                                       /*問題一:排序*/
                                       $memberList->execute();
                                       $i=0;
-                                        while($eachMember=$memberList->fetch(PDO::FETCH_ASSOC)){
+                                      while($eachMember=$memberList->fetch(PDO::FETCH_ASSOC)){
                                         /*如果抓的到會員資料*/
-                                      $gender=$eachMember['gender'];
-                                      if($gender==1){
-                                        $title="<br>先生";
-                                      }else{$title="<br>女士";}
+                                        $gender=$eachMember['gender'];
+                                        if($gender==1){
+                                          $title="<br>先生";
+                                        }else{$title="<br>女士";}
                                 ?>
 
-                                    <tr class="modeltr t<?php echo $i?>">
+                                    <tr class="memNo modeltr t<?php echo $i?>">
                                         <td><?php echo  $eachMember['member_no']?></td>
                                         <td><?php echo  $eachMember['account']?></td>
                                         <td><?php echo  $eachMember['name'],$title?></td>
@@ -90,10 +91,12 @@ require_once('connectBooks.php');
                                         <td class="sellornotgroup">
                                           <div class="input-group">
                                                 <div class="btn-group">
-                                                    <input type="hidden" value="<?php echo $eachMember['suspension'] ?>" class="suspension">
-                                                    <input type="hidden" value="<?php echo $eachMember['manager_no'] ?>" class="no">
-                                                    <a class="availiblebtn btn btn-primary btn-sm backbooa">啟用</a><br>
-                                                    <a class="stopbtn btn btn-primary btn-sm backboob">停用</a>
+                                                <form action="authority.php?test=2">
+                                                    <input type="hidden" name="suspension" value="<?php echo $eachMember['suspension'] ?>" class="suspension">
+                                                    <input type="hidden" name="member_no" value="<?php echo $eachMember['member_no'] ?>" class="no">
+                                                    <input type="submit"  class="availiblebtn btn btn-primary btn-sm backbooa" <?php echo ($eachMember['suspension']==2)? "":"disabled"; ?> value="啟用"><br>
+                                                    <input type="submit"  class="stopbtn btn btn-primary btn-sm backboob" <?php echo ($eachMember['suspension']==1)? "":"disabled"; ?> value="停權" >
+                                                </form>
                                                 </div>
                                           </div>
                                         </td>
@@ -130,20 +133,6 @@ require_once('connectBooks.php');
       $('.stopbtn').eq(i).css('border-color','#fa0');
    }
   }
-
-  function Change(){
-
-  }
-
-  function Status(){
-    for(var i=0;i<$('.availiblebtn').length;i++){
-      document.getElementsByClassName("availiblebtn")[i].addEventListener('click',Change,false);
-      document.getElementsByClassName("stopbtn")[i].addEventListener('click',Change,false);
-    }
-  }
-
-  window.onload=Status;
-
 </script>
 
 <?php 

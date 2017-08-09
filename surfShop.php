@@ -285,7 +285,7 @@
 <?php 
 try{
     require_once("connectBooks.php");
-	$sql="select * from surfequipped where prod_obj='Leash' and prod_sold='1'";
+	$sql="select * from surfequipped where prod_obj='Leash' and prod_sold='1' order by prod_no DESC";
 	$products = $pdo->query( $sql );
 
     while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -337,7 +337,7 @@ try{
 				<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Fin' and prod_sold='1'";
+				$sql="select * from surfequipped where prod_obj='Fin' and prod_sold='1' order by prod_no DESC";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -388,7 +388,7 @@ try{
 			<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Wax' and prod_sold='1'";
+				$sql="select * from surfequipped where prod_obj='Wax' and prod_sold='1' order by prod_no DESC";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -439,7 +439,7 @@ try{
 				<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Suit' and prod_sold='1'";
+				$sql="select * from surfequipped where prod_obj='Suit' and prod_sold='1' order by prod_no DESC";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){

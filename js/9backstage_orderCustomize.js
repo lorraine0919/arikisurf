@@ -83,25 +83,25 @@ window.addEventListener('load',function(){
         });
     });
 
-    $('.OD_btncancle').click(function(){
-        $ODNo = $('#OD_no').text();
-        $stauts = $('#insideStatus').val();
-        Cstr = confirm("確定要取消嗎");
-        console.log($ODNo);
-        if($stauts == 4){
-            if(Cstr == true){
-                // alert(Cstr);
-                $.post("backstage_ODcancle.php",{
-                    'ODNo':$ODNo,
-                    'status':$stauts
-                },function(rs){
-                    alert("已取消");
-                    location.reload();
-                });
-            }
-        }else{
-            alert("此訂單並不是取消申請狀態");
-        }
+    // $('.OD_btncancle').click(function(){
+    //     $ODNo = $('#OD_no').text();
+    //     $stauts = $('#insideStatus').val();
+    //     Cstr = confirm("確定要取消嗎");
+    //     console.log($ODNo);
+    //     if($stauts == 4){
+    //         if(Cstr == true){
+    //             // alert(Cstr);
+    //             $.post("backstage_ODcancle.php",{
+    //                 'ODNo':$ODNo,
+    //                 'status':$stauts
+    //             },function(rs){
+    //                 alert("已取消");
+    //                 location.reload();
+    //             });
+    //         }
+    //     }else{
+    //         alert("此訂單並不是取消申請狀態");
+    //     }
             
-    });
+    // });
 },false)

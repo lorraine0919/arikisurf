@@ -19,7 +19,7 @@
   <!--header end-->
 <body class="body_28">
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
 <span>購物車</span>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 	<?php

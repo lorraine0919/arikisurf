@@ -56,11 +56,13 @@ window.addEventListener('load',function(){
             var FTOD = rs;
             // console.log(FTOD[0]);
             var orderall=JSON.parse(FTOD);
+            console.log(orderall);
                 for(i in orderall){
                     // console.log('json裡面所有的訂單編號'+orderall[i].surfequipped_orderNo);  
                     // console.log('你從頁面抓的訂單編號'+FT_orderNo);     
                     // console.log('有進來判斷式的圈數'+i);
                     if(i==0){
+                        console.log('狀況一');
                         $('#list-title_FT').after('<tr class="FT-OD-Group"></tr>');
                         $('.FT-OD-Group').eq(i).append('<td class="FT-OD-liNo"></td>');
                         $('.FT-OD-Group').eq(i).append('<td class="FT-OD-Prod"></td>');
@@ -68,7 +70,8 @@ window.addEventListener('load',function(){
                         $('.FT-OD-Group').eq(i).append('<td class="FT-OD-qty"></td>');
                         $('.FT-OD-Group').eq(i).append('<td class="FT-OD-img"><img style="width:50%;"></td>');
                     }else{
-                        $('.FT-OD-Group').after('<tr class="FT-OD-Group"></tr>');
+                        console.log('狀況二');
+                        $('.FT-OD-Group').eq(i-1).after('<tr class="FT-OD-Group"></tr>');
                         $('.FT-OD-Group').eq(i).append('<td class="FT-OD-liNo"></td>');
                         $('.FT-OD-Group').eq(i).append('<td class="FT-OD-Prod"></td>');
                         $('.FT-OD-Group').eq(i).append('<td class="FT-OD-price"></td>');
@@ -88,9 +91,9 @@ window.addEventListener('load',function(){
                 $('.FT-OD-Group').eq(i).children('.FT-OD-img').children('img').attr('src','images/3accessories/'+orderall[i].prod_img);
 
             }
-            // for(i in orderall){
-            //     $('.FT-OD-liNo').eq(i).text(orderall[i][2]);
-            // }
+            for(i in orderall){
+                $('.FT-OD-liNo').eq(i).text(orderall[i][2]);
+            }
         });
     });
     $('#closeLG').click(function(){

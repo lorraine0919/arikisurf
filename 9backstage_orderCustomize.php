@@ -61,7 +61,7 @@ require_once('connectBooks.php');
                                             customize_order.modelNo = customize_model.modelNo and customize_order.customize_order_status<5";
                                     $cust = $pdo->query($sql);
                                     while($OD_CT = $cust->fetch()){
-
+                                        $disInput = $OD_CT["customize_order_status"];
                                     
                                 ?>
 
@@ -84,25 +84,25 @@ require_once('connectBooks.php');
                                             ?>
                                         
                                         <td class="hideinput" style="display:none">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_model_name"] ?>">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_material_name"] ?>">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_color_name"] ?>">
+                                            <input type="hidden" name="model_name" value="<?php echo $OD_CT["customize_model_name"] ?>">
+                                            <input type="hidden" name="material_name" value="<?php echo $OD_CT["customize_material_name"] ?>">
+                                            <input type="hidden" name="color" value="<?php echo $OD_CT["customize_color_name"] ?>">
                                             <?php $custImg = $OD_CT["boarddemo"];?> 
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_tel"] ?>">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_email"] ?>">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_adress"] ?>">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_atm_acount"] ?>">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_usermessage"] ?>">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["account"] ?>">
-                                            <input type="hidden" name="" value="<?php echo $custImg; ?>">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_order_status"] ?>">
-                                            <input type="hidden" name="" value="<?php echo $OD_CT["customize_orderNo"] ?>">
+                                            <input type="hidden" name="tel" value="<?php echo $OD_CT["customize_tel"] ?>">
+                                            <input type="hidden" name="email" value="<?php echo $OD_CT["customize_email"] ?>">
+                                            <input type="hidden" name="adress" value="<?php echo $OD_CT["customize_adress"] ?>">
+                                            <input type="hidden" name="atm" value="<?php echo $OD_CT["customize_atm_acount"] ?>">
+                                            <input type="hidden" name="msg" value="<?php echo $OD_CT["customize_usermessage"] ?>">
+                                            <input type="hidden" name="account" value="<?php echo $OD_CT["account"] ?>">
+                                            <input type="hidden" name="boarddemo" value="<?php echo $custImg; ?>">
+                                            <input type="hidden" name="status" value="<?php echo $OD_CT["customize_order_status"] ?>">
+                                            <input type="hidden" name="orderNo" value="<?php echo $OD_CT["customize_orderNo"] ?>">
                                         </td>
                                         <td>
                                             <input type="hidden" name="" value="<?php echo $OD_CT["customize_orderNo"]; ?>">
                                             <input type="button" value="訂單明細" class="OD_btndetail btn btn-primary btn-sm pressgolightbox">
-                                            <input type="button" value="已匯款" class="OD_btnatm btn btn-primary btn-sm pressgolightbox">
-                                            <input type="button" value="已出貨" class="OD_btngo btn btn-primary btn-sm pressgolightbox">
+                                            <input type="button" value="已匯款" class="OD_btnatm btn btn-primary btn-sm pressgolightbox" <?php if($disInput>1){echo disabled;}else{}; ?> >
+                                            <input type="button" value="已出貨" class="OD_btngo btn btn-primary btn-sm pressgolightbox" <?php if($disInput>2){echo disabled;}else{}; ?> >
                                         </td>
 
                                     </tr>
@@ -179,12 +179,9 @@ require_once('connectBooks.php');
                                 <div class="title">
                                     <h3>訂單編號:<span id="OD_no"></span></h3>
                                 </div>
-                            <?php 
-                                $sql = "select * from"
-                            ?>
                                 <div class="val">
                                     <div class="Order val_sm_item">
-                                        <table>
+                                        <table class="table table-bordered table-striped table-condensed">
                                             <tr>
                                                 <th>會員名稱</th>
                                                 <th>訂單時間</th>
@@ -204,7 +201,7 @@ require_once('connectBooks.php');
                                         </table>
                                     </div>
                                     <div class="model val_sm_item">
-                                        <table>
+                                        <table class="table table-bordered table-striped table-condensed">
                                             <tr>
                                                 <th>板型</th>
                                                 <th>材質</th>
@@ -224,7 +221,7 @@ require_once('connectBooks.php');
                                         </table>
                                     </div>
                                     <div class="buyer val_sm_item">
-                                        <table>
+                                        <table class="table table-bordered table-striped table-condensed">
                                             <tr>
                                                 <th>電話</th>
                                                 <td id="OD_tel"></td>
@@ -257,7 +254,7 @@ require_once('connectBooks.php');
                                 <div class="btn">
                                     <input type="hidden" name="" value="" id="insideStatus">
                                     <input type="button" name="" value="確認完成" id="closeLG" class=" btn btn-primary btn-sm pressgolightbox">
-                                    <input type="button" value="取消交易" class="OD_btncancle btn btn-primary btn-sm pressgolightbox">
+                                    <!-- <input type="button" value="取消交易" class="OD_btncancle btn btn-primary btn-sm pressgolightbox"> -->
                                 </div>
                             </div>
                         </div><!--lightbox-->

@@ -76,7 +76,7 @@
                 right:0;
                 margin:auto;
                 background-color: white;
-                width: 80%;
+                width: 60%;
                 height: 80%;
                 z-index: 2001;
                 overflow-y: scroll;
@@ -94,16 +94,46 @@
                             margin:3% auto;
                             padding:20px;
                             tr{
-                                padding:20px 0;
+                                // padding:20px 0;
                                 border:1px solid #ddd;
                                 th{
                                     background-color:rgba(0,0,0,0.1);
-                                    padding:20px;
+                                    // padding:20px;
                                     border:1px solid #ddd;
                                 }
                                 td{
-                                    padding:20px;
+                                    // padding:20px;
                                     border:1px solid #ddd;
+                                }
+                            }
+                        }
+                    }
+                    .list{
+                        table{
+                            tr{
+                                th:nth-child(1){
+                                    width: 14%;
+                                }
+                                th:nth-child(2){
+                                    width: 50%;
+                                }
+                                th:nth-child(3){
+                                    width: 10%;
+                                }
+                                th:nth-child(4){
+                                    width: 10%;
+                                }
+                                th:nth-child(5){
+                                    width: 18%;
+                                }
+                            }
+                        }
+                    }
+                    .buyer{
+                        table{
+                            tr{
+                                th{
+                                    width: 30%;
                                 }
                             }
                         }
@@ -127,7 +157,7 @@
 
     .model{
         font-size: 1.3em;
-        padding: 20px;
+        padding: 20px 0;
     }
 ul.sidebar-menu li a[href="9backstage_orderSurf.php"] {
     background-color: #e97b23;

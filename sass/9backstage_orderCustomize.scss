@@ -59,11 +59,12 @@
                 right:0;
                 margin:auto;
                 background-color: white;
-                width: 80%;
+                width: 50%;
                 height: 80%;
                 z-index: 2001;
                 overflow-y: scroll;
                 overflow-x: hidden;
+                padding:20px;
                 .title{
                     width: 93%;
                     margin:0 auto;
@@ -78,16 +79,26 @@
                             margin:3% auto;
                             padding:20px;
                             tr{
-                                padding:20px 0;
+                                // padding:20px 0;
                                 border:1px solid #ddd;
                                 th{
+                                    width: 50%;
                                     background-color:rgba(0,0,0,0.1);
-                                    padding:20px;
+                                    // padding:20px;
                                     border:1px solid #ddd;
                                 }
                                 td{
-                                    padding:20px;
+                                    // padding:20px;
                                     border:1px solid #ddd;
+                                }
+                            }
+                        }
+                    }
+                    .buyer{
+                        table{
+                            tr{
+                                th{
+                                    width: 30%;
                                 }
                             }
                         }
@@ -118,8 +129,7 @@
     .tab-content{
             font-size: 1.3em; 
          }
-                     .OD_box{
-               
+         .OD_box{
                 table{
                     width: 100%;
                     padding:20px;
@@ -139,7 +149,7 @@
                 }
             }
            .model{
-            padding: 20px;
+            padding: 20px 0;
            }
 ul.sidebar-menu li a[href="9backstage_orderCustomize.php"] {
     background-color: #e97b23;

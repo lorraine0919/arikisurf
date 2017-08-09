@@ -55,7 +55,7 @@ require_once('connectBooks.php');
                                             surfequipped_order.order_status<5";
                                     $cust = $pdo->query($sql);
                                     while($OD_CT = $cust->fetch()){
-
+                                        $disInput = $OD_CT["order_status"];
                                     
                                 ?>
 
@@ -64,19 +64,19 @@ require_once('connectBooks.php');
                                         <td><?php echo $OD_CT["member_no"]; ?></td>
                                         <td><?php echo $OD_CT["order_date"]; ?></td>
                                         <td><?php echo $OD_CT["order_total"]; ?></td>
-                                        <td>
+                                        
                                             <?php 
                                                 if($OD_CT["order_status"] == 1){
-                                                    echo "未付款";
+                                                    echo "<td style='color:blue'>未付款</td>";
                                                 }else if($OD_CT["order_status"]==2){
-                                                    echo "未出貨";
+                                                    echo "<td style='color:red'>未出貨</td>";
                                                 }else if($OD_CT["order_status"]==3){
-                                                    echo "已出貨";
+                                                    echo "<td style='color:blue'>已出貨</td>";
                                                 }else if($OD_CT["order_status"]==4){
-                                                    echo "申請中";
+                                                    echo "<td style='color:#ed8c00;'>申請中</td>";
                                                 }
                                             ?>
-                                        </td>
+                                        
                                         <td class="hideinput" style="display:none">
                                             <input type="hidden" name="orderNo" value="<?php echo $OD_CT["surfequipped_orderNo"] ?>">
                                             <input type="hidden" name="account" value="<?php echo $OD_CT["account"] ?>"><!--member-->
@@ -94,8 +94,8 @@ require_once('connectBooks.php');
                                             <input type="hidden" name="" value="<?php echo $OD_CT["surfequipped_orderNo"] ?>">
                                             <input type="hidden" name="" value="<?php echo $OD_CT["account"] ?>"><!--member-->
                                             <input type="button" value="訂單明細" class="OD_btndetail btn btn-primary btn-sm pressgolightbox">
-                                            <input type="button" value="已匯款" class="OD_btnatm btn btn-primary btn-sm pressgolightbox">
-                                            <input type="button" value="已出貨" class="OD_btngo btn btn-primary btn-sm pressgolightbox">
+                                            <input type="button" value="已匯款" class="OD_btnatm btn btn-primary btn-sm pressgolightbox" <?php if($disInput>1){echo disabled;}else{}; ?> >
+                                            <input type="button" value="已出貨" class="OD_btngo btn btn-primary btn-sm pressgolightbox" <?php if($disInput>1){echo disabled;}else{}; ?> >
                                         </td>
 
                                     </tr>
@@ -174,7 +174,7 @@ require_once('connectBooks.php');
                             ?>
                                 <div class="val">
                                     <div class="list val_sm_item">
-                                        <table>
+                                        <table class="table table-bordered table-striped table-condensed">
                                             <tr id="list-title_FT">
                                                 <th>明細編號</th>
                                                 <th>商品名稱</th>
@@ -185,7 +185,7 @@ require_once('connectBooks.php');
                                         </table>
                                     </div>
                                     <div class="Order val_sm_item">
-                                        <table>
+                                        <table class="table table-bordered table-striped table-condensed">
                                             <tr>
                                                 <th>會員名稱</th>
                                                 <th>訂單時間</th>
@@ -201,7 +201,7 @@ require_once('connectBooks.php');
                                         </table>
                                     </div>
                                     <div class="buyer val_sm_item">
-                                        <table>
+                                        <table class="table table-bordered table-striped table-condensed">
                                             <tr>
                                                 <th>電話</th>
                                                 <td id="OD_tel"></td>
@@ -230,7 +230,7 @@ require_once('connectBooks.php');
                                 <div class="btn">
                                     <input type="hidden" name="" value="" id="insideStatus">
                                     <input type="button" name="" value="確認完成" id="closeLG" class=" btn btn-primary btn-sm pressgolightbox">
-                                    <input type="button" value="取消交易" class="OD_btncancle btn btn-primary btn-sm pressgolightbox">
+                                    <!-- <input type="button" value="取消交易" class="OD_btncancle btn btn-primary btn-sm pressgolightbox"> -->
                                 </div>
                             </div>
                         </div><!--lightbox-->

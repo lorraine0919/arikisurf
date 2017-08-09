@@ -14,7 +14,7 @@
     $orderdetail->bindvalue(":orderNo",$_REQUEST["FT_no"]);
     $orderdetail->bindvalue(":memberNo",$_REQUEST["member_no"]);
     $orderdetail->execute();
-    $order_FTdetail = $orderdetail->fetchAll();
+    $order_FTdetail = $orderdetail->fetchAll(PDO::FETCH_ASSOC);
     
     $jsonStr = json_encode($order_FTdetail);
     echo $jsonStr;

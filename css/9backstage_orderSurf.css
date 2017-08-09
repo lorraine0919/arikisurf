@@ -57,7 +57,7 @@
       right: 0;
       margin: auto;
       background-color: white;
-      width: 80%;
+      width: 60%;
       height: 80%;
       z-index: 2001;
       overflow-y: scroll;
@@ -74,15 +74,24 @@
             margin: 3% auto;
             padding: 20px; }
             .backstage_orderCustomize #lightbox .LT-item-box .val .val_sm_item table tr {
-              padding: 20px 0;
               border: 1px solid #ddd; }
               .backstage_orderCustomize #lightbox .LT-item-box .val .val_sm_item table tr th {
                 background-color: rgba(0, 0, 0, 0.1);
-                padding: 20px;
                 border: 1px solid #ddd; }
               .backstage_orderCustomize #lightbox .LT-item-box .val .val_sm_item table tr td {
-                padding: 20px;
                 border: 1px solid #ddd; }
+        .backstage_orderCustomize #lightbox .LT-item-box .val .list table tr th:nth-child(1) {
+          width: 14%; }
+        .backstage_orderCustomize #lightbox .LT-item-box .val .list table tr th:nth-child(2) {
+          width: 50%; }
+        .backstage_orderCustomize #lightbox .LT-item-box .val .list table tr th:nth-child(3) {
+          width: 10%; }
+        .backstage_orderCustomize #lightbox .LT-item-box .val .list table tr th:nth-child(4) {
+          width: 10%; }
+        .backstage_orderCustomize #lightbox .LT-item-box .val .list table tr th:nth-child(5) {
+          width: 18%; }
+        .backstage_orderCustomize #lightbox .LT-item-box .val .buyer table tr th {
+          width: 30%; }
       .backstage_orderCustomize #lightbox .LT-item-box .btn {
         width: 50%;
         margin: 0 auto;
@@ -94,7 +103,7 @@
 
 .model {
   font-size: 1.3em;
-  padding: 20px; }
+  padding: 20px 0; }
 
 ul.sidebar-menu li a[href="9backstage_orderSurf.php"] {
   background-color: #e97b23; }

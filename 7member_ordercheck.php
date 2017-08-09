@@ -15,12 +15,14 @@ ob_start();
 </head>
 <body> 
 <!--(bake module/header.html)--><?php require_once('publicpage/header.php'); ?>
-<a href="index.html">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
-<span>會員專區</span>
+<a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
+<span>會員專區</span><i class="fa fa-caret-right" aria-hidden="true"></i>
+<a href="7member_ordercheck.php">訂單查詢</a>
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 <!--(bake module/member_top.html)--> <?php require_once('publicpage/member_top.php'); ?>
 <!-- =================會員專區================== -->
 <div class="member_ordercheck_23">
+
     <?php
         try{
             if(isset($_SESSION["account"]) == false){
@@ -29,6 +31,7 @@ ob_start();
             
         
     ?>
+    <p class="title20">客製浪板訂單</p>
     <input type="hidden" name="" value="<?php echo $_SESSION["member_no"]?>" class="memNo">
     <div class="ordercheck-title">
         <ul>
@@ -191,12 +194,11 @@ ob_start();
                     $sql_CT = "select * from customize_order 
                                join member 
                                where customize_order.member_no = member.member_no and
-                                     customize_order_status = 5 or
-                                     customize_order_status = 6 and
-                                     member.member_no = :account
+                                     customize_order_status > 4 and
+                                     member.member_no = :member_no
                                order by customize_order.customize_orderNo";
                     $HT_sql1 = $pdo->prepare($sql_CT);
-                    $HT_sql1->bindValue(":account",$_SESSION["account"]);
+                    $HT_sql1->bindValue(":member_no",$_SESSION["member_no"]);
                     $HT_sql1->execute();
                     
                     while($HT_IP = $HT_sql1->fetch()){
@@ -240,10 +242,10 @@ ob_start();
                                 where  surfequipped_order.member_no = member.member_no and
                                     order_status = 5 or
                                     order_status = 6 and
-                                    member.member_no = :account
+                                    member.member_no = :member_no
                                 order by surfequipped_order.surfequipped_orderNo";
                     $HT_sql2 = $pdo->prepare($sql_FT);
-                    $HT_sql2->bindValue(":account",$_SESSION["account"]);
+                    $HT_sql2->bindValue(":member_no",$_SESSION["member_no"]);
                     $HT_sql2->execute();
                     
                     while($HT_IP = $HT_sql2->fetch()){
@@ -334,7 +336,7 @@ ob_start();
                         <img src="" class="cust-OD-img"> 
                     </div>
                     <div class="cust-btn">
-                        <div class="arikicommon_bgwhite_btn customize-cancle">取消交易</div>
+                        <!-- <div class="arikicommon_bgwhite_btn customize-cancle">取消交易</div> -->
                         <div class="arikicommon_important_btn customize-exit">確認離開</div>
                     </div>
                     <div class="clearfix"></div>
@@ -387,7 +389,7 @@ ob_start();
                     <div class="clearfix"></div>
                 </div>
                 <div class="FT-btn">
-                    <div class="arikicommon_bgwhite_btn FT-cancle">取消交易</div>
+                    <!-- <div class="arikicommon_bgwhite_btn FT-cancle">取消交易</div> -->
                     <div class="arikicommon_important_btn FT-exit">確認離開</div>
                 </div>
                 <!-- <div class="decoration"></div> -->
@@ -438,7 +440,7 @@ ob_start();
                     <div class="clearfix"></div>
                 </div>
                 <div class="HT-btn">
-                    <div class="arikicommon_bgwhite_btn">取消交易</div>
+                    <!-- <div class="arikicommon_bgwhite_btn">取消交易</div> -->
                     <div class="arikicommon_important_btn HT-exit">確認離開</div>
                 </div>
                 <!-- <div class="decoration"></div> -->

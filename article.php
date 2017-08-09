@@ -39,7 +39,7 @@
 <div class="article_title_15">
     <div class="article_txt_15">
       <h2>最新消息 NEWS</h2>
-        <p>每一次酋長頒布的訊息，流傳千古，族人歌頌，最高領導的象徵，意義非凡。</p>
+        <p>每一次酋長頒布的訊息，流傳千古，族人歌頌，最高領導的象徵。</p>
     </div>
 </div>
 

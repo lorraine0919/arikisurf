@@ -40,10 +40,12 @@ if( $_FILES["newsimg"]["error"] != 0){
 }else{
 	try{
 		require_once("connectBooks.php");
+		$da=date("Y-m-d");
 		$sql = "insert into news values (null,:newstitle, :newsdate, :newsimg, :newstxt)";
 		$news = $pdo->prepare( $sql );
 		$news->bindValue(":newstitle", $_REQUEST["newstitle"]);
-		$news->bindValue(":newsdate", $_REQUEST["newsdate"]);
+		// $news->bindValue(":newsdate", $_REQUEST["newsdate"]);
+		$news->bindValue(":newsdate",$da);
 		$news->bindValue(":newsimg", $fileName);
 		$news->bindValue(":newstxt", $_REQUEST["newstxt"]);
 		$news->execute();

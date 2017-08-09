@@ -70,11 +70,11 @@
 
                                         // echo $_SESSION["account"];
                                         if(isset($_SESSION["account"])){
-                                            echo "<a href='7member_update.php'><img src=",$_SESSION['mugshot']," alt='' id='showlogin'>
+                                            echo "<a href='7member_update.php'><img src=",$_SESSION['mugshot']," alt='會員專區' style='width:30px;height:30px;border-radius:50%;' id='showlogin'>
                                                 <span id='memberArea'></span>
                                                 <span id='login1'>會員專區</span></a>";
                                         }else{
-                                            echo '<a><img src="images/1common/member.png" alt="" id="showlogin"></a>
+                                            echo '<a><img src="images/1common/member.png" alt="會員登入" id="showlogin"></a>
                                                 <span id="memberArea"></span>
                                                 <span id="login1">會員登入</span></a>';
                                         }

@@ -66,13 +66,13 @@
           background-color: #fff;
           box-shadow: 0vh -12px 0vh #fff, 0vh 12px 0vh #fff; }
       .navfix .navimg .menu {
-        width: 40vh;
+        width: 40vw;
         height: 0px;
-        padding-bottom: calc(100vh - 16%);
-        background-color: #49545d;
+        padding-bottom: calc(100vh - 14%);
+        background-color: #4C6E88;
         position: fixed;
         right: -40vh;
-        bottom: 1.1%;
+        bottom: 0%;
         transition: .5s;
         z-index: 20;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2) inset; }

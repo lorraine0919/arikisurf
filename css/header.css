@@ -16,9 +16,8 @@
   height: 0px;
   opacity: 0; }
 
-.hb {
-  font-size: 0px; }
-
+.hb {font-size: 0px;}
+#login1{color:#fff;}
 @media screen and (max-width: 767px) {
   /*=========清除浮動=========*/
   .navimg:after {
@@ -67,19 +66,20 @@
           background-color: #fff;
           box-shadow: 0vh -12px 0vh #fff, 0vh 12px 0vh #fff; }
       .navfix .navimg .menu {
-        width: 40vh;
+        width: 40vw;
         height: 0px;
-        padding-bottom: calc(100vh - 16%);
-        background-color: #49545d;
+        padding-bottom: calc(100vh - 14%);
+        background-color: #4C6E88;
         position: fixed;
         right: -40vh;
-        bottom: 1.1%;
+        bottom: 0%;
         transition: .5s;
         z-index: 20;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2) inset; }
         .navfix .navimg .menu li:hover {
           color: yellow;
-          background-color: rgba(255, 255, 255, 0.1); }
+          background-color: rgba(255, 255, 255, 0.1);
+        }
         .navfix .navimg .menu li a {
           height: 2em;
           line-height: 1.5em;
@@ -208,14 +208,18 @@
               vertical-align: middle;
               box-shadow: 1px 0px 0px #5b5b5b; }
             .navDetail .navfix .navimg .iconGroup ul li img {
-              width: 30px;
               display: block;
-              margin: auto; }
+              margin: auto;
+              width: 30px;
+              height: 30px;
+              cursor: pointer;
+               }
             .navDetail .navfix .navimg .iconGroup ul li a {
               color: #fff;
               transition: 0.5s; }
               .navDetail .navfix .navimg .iconGroup ul li a:hover {
                 color: #ed8c00; }
+              #login1:hover{color: #ed8c00;}
         .navDetail .navfix .navimg ul.menu {
           display: inline-block;
           width: 50%;

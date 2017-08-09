@@ -49,7 +49,7 @@ body{overflow-y: scroll;}
         text-decoration: underline; }
     .setdown26 #form26 #submit26 {  /*修改*/
       display: block;
-      color: #000;
+      color: #fff;
       margin: auto;
       width: 150px; }
 
@@ -139,4 +139,5 @@ body{overflow-y: scroll;}
     width: calc(100% + 65px); }
   .setdown26 #form26 #submit26 {  /*修改*/
     position: relative;
+    color:#fff;
     left: calc(65px/2); } }

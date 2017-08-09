@@ -548,6 +548,13 @@ body{
 			
 
 		}
+		@media screen and (max-width:960px){
+		.showProd .mo-fire {
+			    width: 90px;
+			    left: 27%;
+			}
+
+		}
 		@media screen and (max-width:767px) {
 			.forRwd{
 			     color: rgba(255,255,255,.8);

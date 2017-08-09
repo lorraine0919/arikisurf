@@ -92,9 +92,9 @@
           <input name="newstitle" type="text" class="news-input" maxlength="25" placeholder="文章標題">
         </p>
         
-        <p class="newsdate">
+        <!-- <p class="newsdate">
           <input name="newsdate" type="date" class="news-input">
-        </p>
+        </p> -->
 
         <p class="newsimg">
           <input name="newsimg" type="file" class="news-input">
@@ -127,9 +127,9 @@
           <input name="newstitle" type="text" class="edit_news_title news-input" value="">
         </p>
         
-        <p class="newsdate">
+       <!--  <p class="newsdate">
           <input name="newsdate" type="date" class="edit_news_date news-input" value="">
-        </p>
+        </p> -->
 
         <p class="newsimg">
           <span class="place_img">

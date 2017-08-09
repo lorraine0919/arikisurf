@@ -12,8 +12,7 @@ if(isset($_SESSION["member_no"])==true){
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 $_SESSION["map_reply"]["post_number"] = $_REQUEST["post_number"];
 
-$post_number = $_REQUEST["post_number"];
-
+$post_number=$_REQUEST["post_number"];
 $sqlview = "update map_post set post_view=post_view+1 where post_number=$post_number";
 $pdo->exec($sqlview);
 
@@ -165,7 +164,6 @@ $pdo->exec($sqlview);
                 </script>
           </div>         
       </div><!-- title -->
-
      	<div class="main_11">
             <div class="box_t">
                   <div class="user">
@@ -267,7 +265,7 @@ $pdo->exec($sqlview);
 <script>
         function createTxt(jsonStr){
             var ct = JSON.parse( jsonStr );
-            console.log("接收的JSON字串");
+            console.log(ct);
             var newfeed =  document.createElement("div");
             newfeed.className = "feed";
 

@@ -37,7 +37,7 @@
 <div class="news_title_14">
            <div class="news_title_14_txt">
                 <h2>最新消息 NEWS</h2>
-                <p>每一次酋長頒布的訊息，流傳千古，族人歌頌，最高領導的象徵，意義非凡。</p>
+                <p>每一次酋長頒布的訊息，流傳千古，族人歌頌，最高領導的象徵。</p>
            </div>
            <div class="news_txt">
                 <p>用波里尼西亞文化，打造專屬於你的衝浪板，以酋長的精神，喚醒對大海的靈魂，Ariki Surf的信念「Your Board Always Top」!</p>

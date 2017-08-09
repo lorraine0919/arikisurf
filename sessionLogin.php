@@ -1,6 +1,8 @@
 <?php
-	ob_start();
-	session_start();
+    if(!isset($_SESSION)) {
+      ob_start();
+      session_start(); 
+  	}
 
 	try{
 		require_once("connectBooks.php");
@@ -19,6 +21,7 @@
 			$_SESSION["member_no"] = $memRow["member_no"];
 		    $_SESSION["account"] = $memRow["account"];
 		    $_SESSION["psw"] = $memRow["psw"];
+		    $_SESSION["mugshot"] = $memRow["mugshot"];
 			echo 2;
 		}else{
 			echo 3;

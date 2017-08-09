@@ -99,11 +99,15 @@ $(function(){
 				    processData: false,
 				    contentType: false
 				}).done(function(res) {
+					// alert(res);
 					$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						console.log('1');
 						location.reload(); 
 					});
 				}).fail(function(res) {
-					// alert(res);
+					$('.lightboxgroup').fadeIn(100).delay(1000).queue(function(){
+						location.reload(); 
+					});
 				});
 			/*↑傳送到php處理*/
 

@@ -130,10 +130,18 @@
 <script type="text/javascript">
 	$(document).ready(function(){
          var session_mem =$('.session_acc').text();
+         $('#gotologin').click(function(){
+         	$('.loginremindlightboxgroup').fadeOut(500);
+         	$('#lightbox19').fadeIn(500);
+         });
+         $('#loginremindclosebtn').click(function(){
+         	$('.loginremindlightboxgroup').fadeOut(500);
+         });
 
        $('.goCart').click(function(){
 		  if(session_mem==0){
-			alert('請先登入');
+		  	// alert('請先登入或加入我們');
+		  	$('.loginremindlightboxgroup').fadeIn(500);
 				}else{
 					$(this).parent().parent().parent().parent().parent().submit();
 				}
@@ -143,7 +151,7 @@
 
        $('#gotocart').click(function(){
 			if(session_mem==0){
-			 alert('請先登入');
+			 $('.loginremindlightboxgroup').fadeIn(500);
 				}else{
 					var index = $(this).parent().parent().parent().parent().parent().index();
 					if($('.Leash').eq(0).css('display')!='none'){
@@ -162,7 +170,7 @@
        //-------光箱加入購物車--------
 	$('#addtocart').click(function(){
 		if(session_mem==0){
-			 alert('請先登入');
+			 $('.loginremindlightboxgroup').fadeIn(500);
 				}else{
 		    alert('已加入購物車')
 			console.log(prodImg);
@@ -181,7 +189,7 @@
 //-------加入購物車--------
 	$('.addCart').click(function(){
 		if(session_mem==0){
-			 alert('請先登入');
+			$('.loginremindlightboxgroup').fadeIn(500);
 				}else{
 		  alert('已加入購物車')
 			console.log($(this).parent().parent().parent().parent().siblings('.prodimg').val());
@@ -277,7 +285,7 @@
 <?php 
 try{
     require_once("connectBooks.php");
-	$sql="select * from surfequipped where prod_obj='Leash' and prod_sold='1'";
+	$sql="select * from surfequipped where prod_obj='Leash' and prod_sold='1' order by prod_no DESC";
 	$products = $pdo->query( $sql );
 
     while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -329,7 +337,7 @@ try{
 				<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Fin' and prod_sold='1'";
+				$sql="select * from surfequipped where prod_obj='Fin' and prod_sold='1' order by prod_no DESC";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -380,7 +388,7 @@ try{
 			<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Wax' and prod_sold='1'";
+				$sql="select * from surfequipped where prod_obj='Wax' and prod_sold='1' order by prod_no DESC";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -431,7 +439,7 @@ try{
 				<?php 
 			try{
 			    require_once("connectBooks.php");
-				$sql="select * from surfequipped where prod_obj='Suit' and prod_sold='1'";
+				$sql="select * from surfequipped where prod_obj='Suit' and prod_sold='1' order by prod_no DESC";
 				$products = $pdo->query( $sql );
 
 			    while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
@@ -519,8 +527,8 @@ try{
 	</div>
 	<div class="loginremindlightboxgroup">
 			<div class="loginremindlightboxarea">
-				<h2 class="loginremindlightboxtitle"></h2>
-				<p class="loginremindlightboxcontent">請先登入</p>
+				<h2 class="loginremindlightboxtitle">ArikiSurf</h2>
+				<p class="loginremindlightboxcontent">請先登入或加入會員</p>
 				<a class="arikicommon_next_btn" id="gotologin">前往登入</a>
 				<div id="loginremindclosebtn">
 					<i class="fa fa-times" aria-hidden="true"></i>

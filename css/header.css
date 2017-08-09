@@ -19,6 +19,12 @@
 .hb {font-size: 0px;}
 #login1{color:#fff;}
 @media screen and (max-width: 767px) {
+
+  #picLogo{display: none;}
+  #picLogin{
+    display: block;
+  }
+  #picLogin img{width: 100%;}
   /*=========清除浮動=========*/
   .navimg:after {
     content: '';
@@ -50,14 +56,8 @@
       /*
       ---- Responsive
       */ }
-      .navfix .navimg .logo {
-        float: left;
-        width: 11.73%;
-        height: 0px;
-        padding-bottom: 11.73%;
-        display: none; }
     .navfix .navimg {
-      margin: 0% 2.6%;
+      margin: 0% 3%;
       padding: 2.6% 0%;
       position: relative;
       background-image: url("../images/1common/nav2.png"); }
@@ -66,7 +66,7 @@
         width: 11.73%;
         height: 0px;
         padding-bottom: 11.73%;
-        display: none; }
+        display: block;}  /*這行換圖*/
       .navfix .navimg .hb {
         display: block;
         width: 39px;
@@ -172,6 +172,8 @@
     padding-top: 13%;
     position: relative; } }
 @media screen and (min-width: 768px) {
+  #picLogo{display: block;}
+  #picLogin{display: none;}
 
   .rwd {display: none; }
   .nav_0 {width: 100%; }
@@ -313,6 +315,9 @@
     padding-top: 6%;
     position: relative; } }
 @media screen and (max-width: 910px) {
+  #picLogo{display: none;}
+  #picLogin{display: block;}
+
   .rwdlogo{margin-top: 30px;}
   .nav_0 .navDetail .navfix .navimg .iconGroup {
     width: 18%; }

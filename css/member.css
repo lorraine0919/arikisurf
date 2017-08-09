@@ -99,9 +99,8 @@ body{overflow-y: scroll;}
         width: calc(25% - 4px);
         height: 2.5em;
         line-height: 2.5em;
-        padding: 5px 0px;
+        padding: 0px;
         border: 2px solid #344c63;
-        border-radius: 7px 7px 0px 0px;
         font-size: 18px;
         text-align: center;
         background-color: #0D2941; }
@@ -120,7 +119,7 @@ body{overflow-y: scroll;}
   .main20 {
     width: 80%;
     max-width: 1170px;
-    padding-top: 90px; }
+    padding-top: 150px; }
 
   /*main20*/
   .left20 {

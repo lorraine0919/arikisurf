@@ -1,16 +1,27 @@
 <?php 
 ob_start();
 session_start();
-
+require_once("connectBooks.php");
 
 $reply_state = 1;
 $textarea = $_REQUEST["feed"];
 $member_no = $_SESSION["member_no"];
-$name = $_SESSION["member"]["name"];
-$post_number=$_REQUEST["post_number"];
-$reply_time = date("Y-m-d H:i:s"); 
 
-    require_once("connectBooks.php");
+
+$sql = "select name
+        from member
+        where member_no = :member_no";
+
+$name = $pdo->prepare($sql);
+$name->bindValue(":member_no",$member_no);
+$name->execute();
+$nameRow = $name->fetch(PDO::FETCH_ASSOC);
+$name = $nameRow["name"];
+
+$post_number=$_REQUEST["post_number"];
+$reply_time = date("Y-m-d H:i:s"); ,
+
+    
  	$sql = "insert into map_reply values(null,$reply_state,'$textarea',$member_no,'$name',$post_number,'$reply_time')";
  	$pdo->exec($sql);
 

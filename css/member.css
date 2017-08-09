@@ -112,7 +112,15 @@ body{overflow-y: scroll;}
         text-align: center;
         font-size: 23px;
         font-weight: bold;
-        letter-spacing: 6px; } }
+        letter-spacing: 6px; } 
+    /*以下是慕晨寫的*/
+      .left20 .sidebar20 .menu20 li a{
+        font-size: 14px; 
+  }
+    /*以上是慕晨寫的*/
+
+
+      }
 
 @media screen and (min-width: 950px) {
   .main20 {

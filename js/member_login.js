@@ -57,8 +57,8 @@
 $(function(){
 	// var logined=0;
 	if($('#picLogin').innerHTML=="<img src='images/1common/login.png'>"){
-		$('#picLogin').click(function(){
-			$('#picLogin').innerHTML="<img src='images/1common/logout.png'>"
+		$('#picLogin').img.click(function(){
+			// $('#picLogin').innerHTML="<img src='images/1common/logout.png'>"
 			$('#lightbox19').fadeIn(200);
 		});
 	}else{

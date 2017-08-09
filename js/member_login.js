@@ -56,7 +56,16 @@
 	
 $(function(){
 	// var logined=0;
-	console.log($('#login1').text());
+	if($('#picLogin').innerHTML=="<img src='images/1common/logout.png'>"){
+		$('#picLogin').click(function(){
+			// console.log('進入登入click事件');
+			$('#lightbox19').fadeIn(200);
+		});
+		$('#login2').click(function(){
+			// console.log('進入登入click事件');
+			$('#lightbox19').fadeIn(200);
+		});
+	}
 	if($('#login1').text()=='會員登入'){
 		$('#login1').click(function(){
 			// console.log('進入登入click事件');

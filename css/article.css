@@ -131,6 +131,11 @@ overflow-y:scroll
     color: #fff;
     font-size: 18px; }
 
+  .article_item_content_txt{
+    letter-spacing: 1px;
+    font-size: 20px;
+  }
+
   .btn_15 {
     display: inline-block;
     text-align: center;

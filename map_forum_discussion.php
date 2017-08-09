@@ -199,20 +199,6 @@ $pdo->exec($sqlview);
     }//while end
 ?>             
             <div class="back">
-            <script>
-            var bangarr=[
-<?php 
-  $sqlreplybang="select *   
-                 from  map_replybang 
-                 where post_number=$post_number;";
-  $pdostatement=$pdo->query($sqlreplybang);
-  while($pdorow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
-    echo  $pdorow['reply_number'].',';
-  }
-?>               
-                 ];
-            // console.log(bangarr);
-            </script>
 <?php 
        $sqlreply="select *
                   from member,map_reply

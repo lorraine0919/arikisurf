@@ -70,19 +70,10 @@
                     <input type="checkbox" id="control">
                     <div class="logo">
                         <div class="logofix">
-                            <a href="index.php" id="picLogo">
+                            <a href="index.php">
                                <img src="images/1common/logo.png">
                             </a>
-                            <a href="index.php" id="picLogin">
-                                <?php 
-                                    if(isset($_SESSION["account"])){
-                                        echo "<img src='images/1common/logout.png'>";
-                                    }else{
-                                        echo "<img src='images/1common/login.png'>";
-                                    }
-                                ?>
-                            </a>
-                            <div class="arikicommon_breadcrumb">            
+                            <div class="arikicommon_breadcrumb">                            
                                                      
                             
     

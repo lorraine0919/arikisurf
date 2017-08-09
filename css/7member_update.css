@@ -67,7 +67,6 @@
     width: calc(calc(100% - 8em - 2vw)/2 - 4px - 6vw);
     min-width: 112px;
   }
-  #login1{color:#ed9046;}
 
 }
 
@@ -88,7 +87,6 @@
     width: calc(45px + 5vw);
     padding-left: 1em; }
   .right20 .row21 .dist21 {width: calc(70px + 3vw); }
-  #login1{color:#ed9046;}
   
 }
 

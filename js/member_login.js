@@ -56,17 +56,7 @@
 	
 $(function(){
 	// var logined=0;
-	if($('#picLogin').innerHTML=="<img src='images/1common/login.png'>"){
-		$('#picLogin').img.click(function(){
-			// $('#picLogin').innerHTML="<img src='images/1common/logout.png'>"
-			$('#lightbox19').fadeIn(200);
-		});
-	}else{
-		$('#picLogin').innerHTML="<img src='images/1common/login.png'>"
-		$.post('sessionLogout.php',{},function(rs){
-			window.location='index.php';
-		});
-
+	console.log($('#login1').text());
 	if($('#login1').text()=='會員登入'){
 		$('#login1').click(function(){
 			// console.log('進入登入click事件');

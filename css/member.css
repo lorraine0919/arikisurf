@@ -96,10 +96,9 @@ body{overflow-y: scroll;}
       .left20 .sidebar20 .menu20 li a {
         float: left;
         vertical-align: middle;
-        width: calc(25% - 4px);
+        width: calc(25% - 22px);
         height: 2.5em;
         line-height: 2.5em;
-        padding: 0px;
         border: 2px solid #344c63;
         font-size: 18px;
         text-align: center;

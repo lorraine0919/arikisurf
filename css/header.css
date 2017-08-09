@@ -50,12 +50,6 @@
       /*
       ---- Responsive
       */ }
-      .navfix .navimg .logo {
-        float: left;
-        width: 11.73%;
-        height: 0px;
-        padding-bottom: 11.73%;
-        display: none; }
     .navfix .navimg {
       margin: 0% 2.6%;
       padding: 2.6% 0%;
@@ -66,7 +60,7 @@
         width: 11.73%;
         height: 0px;
         padding-bottom: 11.73%;
-        display: none; }
+        display: block;}
       .navfix .navimg .hb {
         display: block;
         width: 39px;

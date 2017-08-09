@@ -29,7 +29,7 @@ $like = $pdo->query($sql);
 <?php require_once('publicpage/member_top.php'); ?>
 <!-- =================會員專區================== -->
 <div class="member_love_23">
-    <div class="love-title">
+    <div class="love-title title20">
          已收藏的文章
     </div>
 <?php 

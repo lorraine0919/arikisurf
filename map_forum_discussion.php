@@ -95,7 +95,13 @@ $pdo->exec($sqlview);
 <?php 
       $sqllove = "select * from map_like where post_number=$post_number";
       $aba = $pdo->query($sqllove);
-      $love = ($aba->rowCount()!=0) ? "heart_red.png" : "heart_white.png";
+      if($member_no==7){
+         $love = "heart_white.png";
+      }else{
+         $love = ($aba->rowCount()!=0) ? "heart_red.png" : "heart_white.png";
+      }
+      
+
 ?>
           <div class="lovepic">
                <img src="images/4wavepoint/<?php echo $love;?>" id="love">
@@ -199,7 +205,8 @@ $pdo->exec($sqlview);
   while($pdorow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
     echo  $pdorow['reply_number'].',';
   }
- ?>                ];
+?>               
+                 ];
             // console.log(bangarr);
             </script>
 <?php 
@@ -241,10 +248,8 @@ $pdo->exec($sqlview);
         if($('.result').eq(i).val()=="2"){
           $('.many').eq(i).css('color','#f00');
         }
-      }
-      
+      }     
     </script>
-
 
 <?php 
      $sqlimg="select mugshot from member where member_no=$member_no";
@@ -263,6 +268,51 @@ $pdo->exec($sqlview);
                         </div>
                   </div>
 <script>
+        $( document ).ready(function(){
+          $('.many').click(function(){
+              if(<?php echo $member_no ?>==7){
+                alert("請登入會員");
+             }else{
+              console.log("按到內文檢舉");         
+              console.log("目前檢舉內文字 : "+$(this).text());
+
+              if($(this).text()=="檢舉"){
+                  $('#lightbox_12').show();     
+                   
+                   var submit2count=0;
+                   var reply_number = $(this).parent().find('.reply_number').val();   
+                   var post_number = $(this).parent().find('.post_number').val();
+                   var index=$(this).parent().index();
+                     console.log("目前的編號 : "+index);
+                     // $(this).css('color','red');
+
+                 $('#submit2').click(function(){  
+                      console.log("有按到喔");                                       
+                      $('.many').parent().eq(index-1).find('.many').unbind('click');
+                      $('.many').parent().eq(index-1).find('.many').css('color','#ED8C00');
+                      $('.many').parent().eq(index-1).find('.many').text("已檢舉");
+                    if(submit2count==0){         //送出沒點過
+                        var content = $('.report2').val();
+                        console.log("發言 : "+content);
+                        function reqListener(){
+                          console.log(this.responseText);                  
+                        }
+                      var xhr = new XMLHttpRequest();
+                      xhr.onload = reqListener;
+                      var url = "map_quit2toDB.php?post_number="+post_number+"&report="+content+"&reply_number="+reply_number;
+                      console.log(url);
+                      xhr.open("get", url , true);
+                      xhr.send(null);
+                      $('#lightbox_12').hide();         
+                    }//end if
+                    submit2count++;
+                  })//end of確認按鈕被按
+                  console.log("送出按鈕被按次數 : "+submit2count);
+                  }//end of if  
+             }
+          });
+          
+        });
         function createTxt(jsonStr){
             var ct = JSON.parse( jsonStr );
             console.log(ct);

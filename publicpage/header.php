@@ -72,6 +72,7 @@
                         <div class="logofix">
                             <a href="index.php">
                                <img src="images/1common/logo.png">
+                               <!-- 之前預留的左邊方形區就是它 -->
                             </a>
                             <div class="arikicommon_breadcrumb">                            
                                                      

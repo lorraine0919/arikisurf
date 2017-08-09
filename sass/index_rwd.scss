@@ -44,6 +44,17 @@ $top:16vh;
 }
 
 @media screen and (max-width:960px){
+	.Sashimi{
+		overflow-x: hidden;
+		overflow-y: auto;
+
+	}
+
+	.banner_1 .logo_S_canvas2{
+		left: 0;
+		right: 0;
+	}
+
 	.map_box{
 		display: none;
 	}

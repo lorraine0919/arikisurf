@@ -51,12 +51,12 @@
                         <li><a href="about.php">關於酋長</a></li>
                         <li>
                         <?php 
-                                    // echo $_SESSION["account"];
-                                    if(isset($_SESSION["account"])){
-                                        echo "<a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a>";
-                                    }else{
-                                        echo "<a class='rwd'><span id='login2' >會員專區</span></a>";
-                                    }
+                            // echo $_SESSION["account"];
+                            if(isset($_SESSION["account"])){
+                                echo "<a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a>";
+                            }else{
+                                echo "<a class='rwd'><span id='login2'>會員登入</span></a>";
+                            }
                          ?>    
                         </li>
                         <li><a href="cart.php" class="rwd">購物車</a></li>

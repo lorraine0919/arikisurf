@@ -1,8 +1,6 @@
 <?php
-    if(!isset($_SESSION)) {
       ob_start();
       session_start(); 
-  	}
 
 	try{
 		require_once("connectBooks.php");

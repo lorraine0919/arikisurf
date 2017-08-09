@@ -80,7 +80,7 @@ $(function(){
 		                // $("#login1").text("登出");
 		                $("#lightbox19").css('display',"none");
 
-		                logined = 2;
+		                // logined = 2;
 		                location.reload();
 		                return;
 	                 }else{

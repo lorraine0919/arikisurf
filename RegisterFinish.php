@@ -32,6 +32,7 @@
 		$_SESSION["member_no"] = $loginRow["member_no"];
 	    $_SESSION["account"] = $loginRow["account"];
 	    $_SESSION["psw"] = $loginRow["psw"];
+	    $_SESSION["mugshot"] = $memRow["mugshot"];
 
 	}catch(PDOException $ex){
 		echo "資料庫操作失敗,原因：",$ex->getMessage(),"<br>";

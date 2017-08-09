@@ -22,10 +22,12 @@
 		}
 
 		require_once("connectBooks.php");
+		$da=date("Y-m-d");
 		$news = $pdo->prepare( $sql );
 		$news->bindValue(":newsno", $_REQUEST["newsno"]);
 		$news->bindValue(":newstitle", $_REQUEST["newstitle"]);
-		$news->bindValue(":newsdate", $_REQUEST["newsdate"]);
+		// $news->bindValue(":newsdate", $_REQUEST["newsdate"]);
+		$news->bindValue(":newsdate",$da);
 		if( $_FILES["newsimg"]["error"] == 0){
 		$news->bindValue(":newsimg", $fileName);
 		}

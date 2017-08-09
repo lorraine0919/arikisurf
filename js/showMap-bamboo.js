@@ -119,6 +119,7 @@ $(document).ready(function(){
 			}else{
 				rwdarrowcount--;
 			}
+			$('.address_mobile').attr('href','map_session.php?wave_number=10'+(rwdarrowcount+1));
 			$('.bamboo_menu_phone .title').text(titlearr[rwdarrowcount]);
 			$('.bamboo_menu_phone_text .info').text(infoarr[rwdarrowcount]);
 
@@ -136,6 +137,7 @@ $(document).ready(function(){
 			}else{
 				rwdarrowcount++;
 			}
+			$('.address_mobile').attr('href','map_session.php?wave_number=10'+(rwdarrowcount+1));
 			$('.bamboo_menu_phone .title').text(titlearr[rwdarrowcount]);
 			$('.bamboo_menu_phone_text .info').text(infoarr[rwdarrowcount]);
 

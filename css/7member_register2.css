@@ -108,6 +108,9 @@ img {
     margin: 20px auto;
     display: block; }
 
+  .setdown26 .form26 .item26 {
+    text-align: center; }
+
   /*以上是慕晨寫的*/ }
 @media screen and (min-width: 1000px) {
   .register26 {
@@ -149,4 +152,13 @@ img {
           width: calc((calc(100% - 9em - 1vw - 5px)/2) - 4px); }
       .setdown26 .form26 .submit26 {
         position: relative;
-        left: calc(65px/2); } }
+        left: calc(65px/2); }
+
+  /*以下是慕晨寫的*/
+  .setdown26 .form26 .item26 {
+    text-align: right; }
+    .setdown26 .form26 .item26 #submit26 {
+      width: 67%;
+      padding: 10px 0; }
+
+  /*以上是慕晨寫的*/ }

@@ -127,3 +127,6 @@ img {
       .setdown26 .form26 .submit26 {
         position: relative;
         left: calc(65px/2); } }
+/*以下是慕晨寫的*/
+.setdown26 #form26 #submit26 {
+  text-align: center; }

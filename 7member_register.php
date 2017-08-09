@@ -62,7 +62,7 @@
                      </div>
                 </div>
                 <div class="item26">
-                    <input class="arikicommon_btn" id="submit26" value="下一步">
+                    <input type="button" class="arikicommon_btn" id="submit26" value="下一步">
                 </div>
             </div><!-- detail26 -->
 

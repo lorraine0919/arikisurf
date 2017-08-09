@@ -265,7 +265,7 @@ $pdo->exec($sqlview);
 <script>
         function createTxt(jsonStr){
             var ct = JSON.parse( jsonStr );
-            console.log("接收的JSON字串");
+            console.log(ct);
             var newfeed =  document.createElement("div");
             newfeed.className = "feed";
 

@@ -12,14 +12,14 @@ $sql = "select name
         from member
         where member_no = :member_no";
 
-$name = $pdo->prepare($sql);
-$name->bindValue(":member_no",$member_no);
-$name->execute();
-$nameRow = $name->fetch(PDO::FETCH_ASSOC);
+$nameData = $pdo->prepare($sql);
+$nameData->bindValue(":member_no",$member_no);
+$nameData->execute();
+$nameRow = $nameData->fetch(PDO::FETCH_ASSOC);
 $name = $nameRow["name"];
 
 $post_number=$_REQUEST["post_number"];
-$reply_time = date("Y-m-d H:i:s"); ,
+$reply_time = date("Y-m-d H:i:s"); 
 
     
  	$sql = "insert into map_reply values(null,$reply_state,'$textarea',$member_no,'$name',$post_number,'$reply_time')";

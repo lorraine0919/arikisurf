@@ -91,7 +91,7 @@ $pdo->exec($sqlview);
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <input class="gg" type="hidden" value="<?php echo $postRow["star_score"]; ?>">
-          </select>        
+          </select>              
 <?php 
       $sqllove = "select * from map_like 
                   where post_number=$post_number
@@ -272,7 +272,13 @@ $pdo->exec($sqlview);
                         </div>
                   </div>
 <script>
-        $( document ).ready(function(){
+        $(document).ready(function(){
+         var number = <?php echo $member_no ?>;
+         console.log("目前登入會員 : "+number);
+         var score = $('.gg').val();
+         console.log("目前分數 : "+score);
+         $('.star').barrating('set',score);
+
           $('.many').click(function(){
               if(<?php echo $member_no ?>==7){
                 alert("請登入會員");

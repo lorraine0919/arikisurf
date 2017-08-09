@@ -355,6 +355,12 @@ a {
     width: auto;
     height: auto; }
 
+  .bg_11 .main_11 .box_b .pic{
+    width: 100%;
+  }  
+  .bg_11 .main_11 .box_b .txt{
+    font-size: 18px;
+  }
   #lightbox_11 .gun {
     width: 100%;
     height: 130px; }

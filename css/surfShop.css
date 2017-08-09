@@ -103,7 +103,7 @@ body {
     position: absolute;
     left: 24%;
     margin-left: -100px;
-    bottom: 75%; }
+    bottom: 78%; }
   .showProd .mo-fire svg {
     width: 100%;
     height: auto;
@@ -416,8 +416,7 @@ body {
     background-position: 0% -4%; }
 
   .showProd .mo-fire {
-    width: 62px;
-    left: 35%; }
+    display: none; }
 
   .pic_man {
     position: relative; }
@@ -440,10 +439,6 @@ body {
   #info-box {
     max-width: 300px;
     max-height: 510px; }
-
-  .showProd .mo-fire {
-    width: 60px;
-    left: 38%; }
 
   .pic_man {
     position: relative; }

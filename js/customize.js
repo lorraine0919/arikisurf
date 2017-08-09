@@ -389,10 +389,10 @@ window.onload=function(){
 /*↑步驟二rwd按按鈕換顏色*/
 
 /*↓步驟二，色球顏色*/
-	for (var i = 0; i < 3; i++) {
-		var colorarr = ['#fff','#009bd8','#ffd105'];
-		$('.step2_maxContent .colorselectgroup .color .circle').eq(i).css('background-color',colorarr[i]);
-	}
+	// for (var i = 0; i < 3; i++) {
+	// 	var colorarr = ['#fff','#009bd8','#ffd105'];
+	// 	$('.step2_maxContent .colorselectgroup .color .circle').eq(i).css('background-color',colorarr[i]);
+	// }
 /*↑步驟二，色球顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/
@@ -409,6 +409,7 @@ window.onload=function(){
 		'由頂尖品質的賽普里斯木製成，並由環氧樹脂所包覆，顯示出獨有的質感。最高規格的保護，非常適合收藏、裝飾。',
 		'其主要構造為PU泡棉(Foam)＋玻璃纖維布＋保麗樹脂，由於材質的關係所以重量較Epoxy的浪板略重，但是穩定性較佳，尤其是在浪況較大時可以明顯的感受到！<br><br>若要挑剔其缺點的話，就是較不耐撞擊，遭受到硬物的碰撞時可能會發生浪板表面的樹脂破裂的情形，不過這些都是可以經由修補復原的。'
 		];
+		$('.step2_maxContent .texturegorup .head h3').text(texturename[index]);
 		$('#customermaterial').val(texturename[index]);
 		$('.step2_maxContent .introduce .content p').html(textureinfo[index]);
 		$('.step2_maxContent .introduce .head h3').text(texturename[index]);

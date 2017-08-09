@@ -40,9 +40,9 @@ body{overflow-y: scroll;}
         margin-right: 5px; }
     .setdown26 .form26 #submit26 {  /*修改*/
       display: block;
-      color: #000;
+      color: #fff;
       margin: auto;
-      width: 150px; }
+      width: 150px;}
 
 /*setdown26*/
 @media screen and (max-width: 909px) {

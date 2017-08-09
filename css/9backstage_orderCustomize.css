@@ -18,8 +18,6 @@
         padding: 20px; }
       .backstage_orderCustomize .CT_navbar ul .have {
         background-color: rgba(255, 255, 255, 0.8); }
-  .backstage_orderCustomize .tab-content {
-    font-size: 1.3em; }
   .backstage_orderCustomize .item-box {
     background-color: #fff;
     box-sizing: border-box;
@@ -27,19 +25,6 @@
     width: 90%;
     margin: 1% auto;
     margin-top: 0; }
-    .backstage_orderCustomize .item-box .OD_box table {
-      width: 100%;
-      padding: 20px; }
-      .backstage_orderCustomize .item-box .OD_box table tr {
-        padding: 20px 0;
-        border: 1px solid #ddd; }
-        .backstage_orderCustomize .item-box .OD_box table tr th {
-          background-color: rgba(0, 0, 0, 0.1);
-          padding: 20px;
-          border: 1px solid #ddd; }
-        .backstage_orderCustomize .item-box .OD_box table tr td {
-          padding: 20px;
-          border: 1px solid #ddd; }
   .backstage_orderCustomize .HT_box {
     display: none; }
   .backstage_orderCustomize #lightbox {
@@ -99,6 +84,23 @@
           margin: 3% 10%; }
     .backstage_orderCustomize #lightbox #LT-CT-box {
       display: none; }
+
+.tab-content {
+  font-size: 1.3em; }
+
+.OD_box table {
+  width: 100%;
+  padding: 20px; }
+  .OD_box table tr {
+    border: 1px solid #ddd; }
+    .OD_box table tr th {
+      background-color: rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd; }
+    .OD_box table tr td {
+      border: 1px solid #ddd; }
+
+.model {
+  padding: 20px; }
 
 ul.sidebar-menu li a[href="9backstage_orderCustomize.php"] {
   background-color: #e97b23; }

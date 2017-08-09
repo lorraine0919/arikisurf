@@ -554,7 +554,7 @@ body{
 						display: inline-block;
 						background-image: url('../images/1common/insidecircle.png');
 						background-size: contain;
-
+						cursor: pointer;
 						@extend %bgnrpc;
 						text-align: center;
 						position: relative;
@@ -569,13 +569,8 @@ body{
 							margin: auto;
 							z-index: 3;
 						}
-						img:hover{
-							animation: fadeIn 0.5s;
-							cursor: pointer;
-						}
 					}
 					.selected:after{
-						animation: fadeIn 0.5s;
 						content:'';
 						position: absolute;
 						background-image: url('../images/1common/picselected.png');
@@ -624,24 +619,10 @@ body{
 							width: 100%;
 						}
 						.selectpicshow{
-							img{
-								transition:1s;
-							}
-							 @keyframes fadeIn{
-							 	0%{
-									opacity: 0;
-							 	}
-							 	100%{
-									opacity: 1;
-							 	}
-							 }
 							position: absolute;
 							bottom: 1%;
 						    right: 39%;
 						    width: 20%;
-						    .fadeIn{
-						    	animation:fadeIn 1s;
-						    }
 						}
 
 					}

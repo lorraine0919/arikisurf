@@ -24,9 +24,7 @@
                 
             }
         }//navbar
-         .tab-content{
-            font-size: 1.3em; 
-         }
+         
         .item-box{
 
             background-color: #fff;
@@ -38,25 +36,7 @@
             .OD-title{
 
             }
-            .OD_box{
-                table{
-                    width: 100%;
-                    padding:20px;
-                    tr{
-                        padding:20px 0;
-                        border:1px solid #ddd;
-                        th{
-                            background-color:rgba(0,0,0,0.1);
-                            padding:20px;
-                            border:1px solid #ddd;
-                        }
-                        td{
-                            padding:20px;
-                            border:1px solid #ddd;
-                        }
-                    }
-                }
-            }
+
         }
         .HT_box{
             display: none;
@@ -135,6 +115,32 @@
                 
         }
     }
+    .tab-content{
+            font-size: 1.3em; 
+         }
+                     .OD_box{
+               
+                table{
+                    width: 100%;
+                    padding:20px;
+                    tr{
+                        
+                        border:1px solid #ddd;
+                        th{
+                            background-color:rgba(0,0,0,0.1);
+                            
+                            border:1px solid #ddd;
+                        }
+                        td{
+                           
+                            border:1px solid #ddd;
+                        }
+                    }
+                }
+            }
+           .model{
+            padding: 20px;
+           }
 ul.sidebar-menu li a[href="9backstage_orderCustomize.php"] {
     background-color: #e97b23;
 }

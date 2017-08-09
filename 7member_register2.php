@@ -1,7 +1,3 @@
-<?php
-    ob_start();
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head> 
@@ -34,6 +30,9 @@
             </div>
 
             <div class="detail26">
+
+                <input type="hidden"  name="account" id="account" value="<?php echo $_REQUEST['memId26'];?>">
+                <input type="hidden" name="psw" id="psw" value="<?php echo $_REQUEST['memPsw26']?>;">
 
                 <div class="item26">
                     <label class="label26">姓名</label>
@@ -135,6 +134,9 @@ function EachCity(s1){
 
 function VerifyB(){
 
+    account = $id("account").value;
+    console.log(account);
+    psw = $id("psw").value;
     name = $id("name26").value;
     city = $id("slct1").value;
     area = $id("slct2").value;
@@ -212,6 +214,7 @@ function VerifyB(){
             }
             if (judg !== 0){
                 alert('電話欄位格式有誤，只可輸入數字與 - #<br>');
+                return;
             }
     }
 
@@ -227,6 +230,8 @@ function VerifyB(){
 
 
     $.post('RegisterFinish.php',{ 
+        'account' : account,
+        'psw':psw,
         'name' : name,
         'gender' :gender,
         'city' : city,
@@ -235,7 +240,8 @@ function VerifyB(){
         'tel' : tel,
         'mail' : mail
          },function(rs){
-            window.setTimeout("window.location='7member_register3.php'",1000);
+            console.log(rs);
+            window.setTimeout("window.location='7member_register3.php'",800);
             //window.setTimeout("Code1;Code2",時間間隔);
          });
 }

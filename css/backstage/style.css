@@ -10,7 +10,7 @@ Premium: http://www.gridgum.com
 @import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
 
 /* BASIC THEME CONFIGURATION */
-body {
+body {  
     color: #797979;
 	background: #f2f2f2;
     font-family: 'Ruda', sans-serif;
@@ -172,10 +172,18 @@ hr {
 
 
 /*Helpers*/
-
 .centered {
-	text-align: center;
+    text-align: center;
 }
+h5.centered {
+	text-align: center;
+    margin:0 0 20px 0;
+
+}
+.centered img{
+    width: 50%;
+}
+
 
 .goleft {
 	text-align: left;

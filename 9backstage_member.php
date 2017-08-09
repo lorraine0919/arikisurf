@@ -23,8 +23,8 @@ require_once('connectBooks.php');
                         <!-- 內容開始 -->
 
                           <!-- 上table開始 -->
-                          <h4 style="display: none;"><i class="fa fa-angle-right"></i>會員搜尋</h4>
-                          <table class="table table-bordered table-striped table-condensed" style="display: none;">
+                          <h4 style=""><i class="fa fa-angle-right"></i>會員搜尋</h4>
+                          <table class="table table-bordered table-striped table-condensed" style=" ">
                               <tr>
                                 <td>
                                   <input type="text" name="" class="new_guardsR">
@@ -61,7 +61,7 @@ require_once('connectBooks.php');
                               <tbody>
 
                                 <?php 
-                                      // $choise = $_SESSION["map_wave"]["wave_number"];
+                                      // $choise = ;
                                       $sql = 'select * from member';
                                       $memberList=$pdo->prepare($sql);
                                       // $member->bindValue(":choise",$choise);
@@ -94,8 +94,10 @@ require_once('connectBooks.php');
                                                 <form action="authority.php?test=2">
                                                     <input type="hidden" name="suspension" value="<?php echo $eachMember['suspension'] ?>" class="suspension">
                                                     <input type="hidden" name="member_no" value="<?php echo $eachMember['member_no'] ?>" class="no">
-                                                    <input type="submit"  class="availiblebtn btn btn-primary btn-sm backbooa" <?php echo ($eachMember['suspension']==2)? "":"disabled"; ?> value="啟用"><br>
-                                                    <input type="submit"  class="stopbtn btn btn-primary btn-sm backboob" <?php echo ($eachMember['suspension']==1)? "":"disabled"; ?> value="停權" >
+                                                    <input type="submit"  class="availiblebtn btn btn-primary btn-sm backbooa" value="啟用中">
+                                                    <input type="submit"  class="stopbtn btn btn-primary btn-sm backboob" value="停權中" >
+                                                    <!-- <input type="submit"  class="availiblebtn btn btn-primary btn-sm backbooa" <?php echo ($eachMember['suspension']==1)? "disabled":""; ?> value="啟用"> -->
+                                                    <!-- <input type="submit"  class="stopbtn btn btn-primary btn-sm backboob" <?php echo ($eachMember['suspension']==2)? "disabled":""; ?> value="停權" > -->
                                                 </form>
                                                 </div>
                                           </div>
@@ -128,9 +130,11 @@ require_once('connectBooks.php');
    if ($('.suspension').eq(i).val()=='1') {
       $('.availiblebtn').eq(i).css('background-color','#e97b23');
       $('.availiblebtn').eq(i).css('border-color','#fa0');
+      $('.stopbtn').eq(i).css('display','none');
    }else{
-      $('.stopbtn').eq(i).css('background-color','#e97b23');
-      $('.stopbtn').eq(i).css('border-color','#fa0');
+      $('.stopbtn').eq(i).css('background-color','#428bca');
+      $('.stopbtn').eq(i).css('border-color','#357ebd');
+      $('.availiblebtn').eq(i).css('display','none');
    }
   }
 </script>

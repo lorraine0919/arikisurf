@@ -5,6 +5,9 @@
 body {
   overflow-x: hidden; }
 
+.navDetail .navfix .navimg ul.menu li:nth-child(3) a {
+  color: #e97b23; }
+
 .container {
   max-width: 1170px; }
   .container .row2:after {
@@ -348,6 +351,10 @@ body {
 
   .forRwd {
     display: none; } }
+@media screen and (max-width: 960px) {
+  .showProd .mo-fire {
+    width: 90px;
+    left: 27%; } }
 @media screen and (max-width: 767px) {
   .forRwd {
     color: rgba(255, 255, 255, 0.8);

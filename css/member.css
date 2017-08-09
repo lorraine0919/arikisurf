@@ -2,8 +2,8 @@
 .loading_bg{display: none;}
 body{overflow-y: scroll;}
 
-.content20 img {width: 100%;}
 * {text-decoration: none; }
+.content20 img {width: 100%;}
 
 .content20:after, .base20:after {
   content: '';

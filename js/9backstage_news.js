@@ -26,8 +26,8 @@ $(document).ready(function(){
 		    var newstitle = document.getElementsByClassName("edit_news_title")[0];
 			    newstitle.value = allnews[0].newstitle;
 
-			var newsdate = document.getElementsByClassName("edit_news_date")[0];
-			    newsdate.value = allnews[0].newsdate;
+			// var newsdate = document.getElementsByClassName("edit_news_date")[0];
+			//     newsdate.value = allnews[0].newsdate;
 
 			// var newsimg = document.getElementsByClassName("edit_news_img")[0];
 			//     newsimg.value = allnews[0].newsimg;

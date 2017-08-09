@@ -10,9 +10,12 @@
 .clearfix {
   clear: both; }
 
-  .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(5) a{
+/*  .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(5) a{
   color: #e97b23;
-}
+}*/
+    .navDetail .navfix .navimg ul.menu li:nth-child(5) a{
+        color: #e97b23;
+    }
 
 body {
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
@@ -53,7 +56,7 @@ body {
           left: 0;
           margin: auto;
           width: 99%;
-          height: 95%;
+          height: 99%;
           border: 1px solid #95AFBA; }
         .bg_14 .news_title_14 .news_txt p {
           margin-bottom: .4rem; }

@@ -1,9 +1,9 @@
 @charset "UTF-8";
 .loading_bg{display: none;}
 body{overflow-y: scroll;}
-#login1{color:#e97b23;}
-.content20 img {width: 100%;}
+
 * {text-decoration: none; }
+.content20 img {width: 100%;}
 
 .content20:after, .base20:after {
   content: '';

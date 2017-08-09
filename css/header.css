@@ -31,7 +31,31 @@
     background-image: url("../images/1common/nav2.png");
     background: #11314c;
     position: fixed;
-    z-index: 20; }
+    z-index: 20;
+    /*padding: 0 10px;*/
+  }
+    .navfix .navimg {
+      position: relative;
+      background-image: url("../images/1common/nav2.png");
+      /* Sing In Button */
+      /*
+      ---- Overlay
+      */
+      /*        .overlay ul li a:hover:after,
+      .overlay ul li a:focus:after,
+      .overlay ul li a:active:after {
+        width: 100%;
+        background: #ea2e49;
+      }*/
+      /*
+      ---- Responsive
+      */ }
+      .navfix .navimg .logo {
+        float: left;
+        width: 11.73%;
+        height: 0px;
+        padding-bottom: 11.73%;
+        display: none; }
     .navfix .navimg {
       margin: 0% 2.6%;
       padding: 2.6% 0%;
@@ -66,18 +90,19 @@
           background-color: #fff;
           box-shadow: 0vh -12px 0vh #fff, 0vh 12px 0vh #fff; }
       .navfix .navimg .menu {
-        width: 40vw;
+        width: calc(100vw + 5px);
         height: 0px;
+        font-size: 17px;
+        letter-spacing: 5px;
         padding-bottom: calc(100vh - 14%);
         background-color: #4C6E88;
         position: fixed;
-        right: -40vh;
+        right: -100vh;
         bottom: 0%;
         transition: .5s;
         z-index: 20;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2) inset; }
         .navfix .navimg .menu li:hover {
-          color: yellow;
           background-color: rgba(255, 255, 255, 0.1);
         }
         .navfix .navimg .menu li a {
@@ -98,25 +123,58 @@
             display: inline-block;
             padding: 0 0 20% 0; }
             .navfix .navimg .menu li.rwdlogo a.rwd img {
-              width: 36%; }
+              width: 28%; }
+              .navfix .navimg .overlay ul li a:hover, .navfix .navimg .overlay ul li a:focus, .navfix .navimg .overlay ul li a:active {
+                color: #ea2e49; }
+              .navfix .navimg .overlay ul li a:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 43.5%;
+                width: 0%;
+                transform: translateX(-50%);
+                height: 3px;
+                background: #FFF;
+                transition: .35s; }
+      .navfix .navimg button:focus {
+        outline: 0; }
+      .navfix .navimg .open-menu,
+      .navfix .navimg .close-menu,
+      .navfix .navimg .button {
+        cursor: pointer;
+        transition: transform 0.30s; }
+      .navfix .navimg .open-menu:hover,
+      .navfix .navimg .close-menu:hover,
+      .navfix .navimg .button:hover {
+        transform: scale(1.1); }
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%; }
+    100% {
+      opacity: 1;
+      left: 0; } } }
+    @media screen and (max-width: 767px) and (max-width: 670px) {
+      .navfix .navimg .overlay nav {
+        font-size: 30px; } }
+    @media screen and (max-width: 767px) and (max-width: 550px) {
+      .navfix .navimg .overlay nav {
+        font-size: 20px; } }
 
+@media screen and (max-width: 767px) {
   /*=========原max-width:767px開始處=========*/
-  .iconGroup, .idHello {
-    display: none; }
+  .iconGroup, .idHello {display: none; }
 
-  #control:checked ~ .menu {
-    right: -1vh; }
+  #control:checked ~ .menu {right: -5px; }
 
   .topGround_0 {
     width: 10%;
     padding-top: 13%;
     position: relative; } }
 @media screen and (min-width: 768px) {
-  .rwd {
-    display: none; }
 
-  .nav_0 {
-    width: 100%; }
+  .rwd {display: none; }
+  .nav_0 {width: 100%; }
 
   .navDetail {
     width: 100%;
@@ -143,7 +201,9 @@
         background-size: 91%;
         border-radius: 8px;
         position: relative;
-        padding: 2% 0px 1% 0px; }
+        /*padding: 2% 0px 1% 0px;*/
+        padding: 3% 20px 1% 20px;
+      }
         .navDetail .navfix .navimg .navbar {
           display: none; }
         .navDetail .navfix .navimg .overlay {
@@ -161,6 +221,7 @@
                 transition: 0.5s; }
                 .navDetail .navfix .navimg .overlay .overlay-menu .menu li a:hover {
                   color: #ed8c00; }
+                  #login1:hover{color: #ed8c00;}
         .navDetail .navfix .navimg .logo {
           width: 15%;
           display: inline-block;
@@ -192,7 +253,8 @@
         .navDetail .navfix .navimg .iconGroup {
           display: inline-block;
           width: 18%;
-          text-align: right;
+          float: right;
+          margin-right: 5vw;
           vertical-align: middle; }
           .navDetail .navfix .navimg .iconGroup #login1 {
             cursor: pointer; }
@@ -208,22 +270,20 @@
               vertical-align: middle;
               box-shadow: 1px 0px 0px #5b5b5b; }
             .navDetail .navfix .navimg .iconGroup ul li img {
-              display: block;
-              margin: auto;
               width: 30px;
-              height: 30px;
-              cursor: pointer;
-               }
+              display: block;
+              margin: auto; }
             .navDetail .navfix .navimg .iconGroup ul li a {
               color: #fff;
               transition: 0.5s; }
               .navDetail .navfix .navimg .iconGroup ul li a:hover {
                 color: #ed8c00; }
-              #login1:hover{color: #ed8c00;}
         .navDetail .navfix .navimg ul.menu {
           display: inline-block;
-          width: 50%;
-          vertical-align: bottom; }
+          width: 57%;
+          vertical-align: bottom;
+          margin-bottom: 1%;
+        }
           .navDetail .navfix .navimg ul.menu li {
             display: inline-block;
             border-right: 1px solid #0b0b0b;
@@ -234,12 +294,9 @@
               border-right: none;
               box-shadow: none; }
             .navDetail .navfix .navimg ul.menu li a {
-              transition: 0.5s;
               padding: 1.2vw 1vw;
               color: #fff;
               text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
-              .navDetail .navfix .navimg ul.menu li a:hover {
-                color: #ed8c00; }
         .navDetail .navfix .navimg .idHello {
           display: inline-block;
           width: 33%;
@@ -256,12 +313,13 @@
     padding-top: 6%;
     position: relative; } }
 @media screen and (max-width: 910px) {
+  .rwdlogo{margin-top: 30px;}
   .nav_0 .navDetail .navfix .navimg .iconGroup {
-    width: 78%; }
-  .nav_0 .navDetail .navfix .navimg ul.menu {
-    width: 53%; }
+    width: 18%; }
+/*  .nav_0 .navDetail .navfix .navimg ul.menu {
+    width: 53%; }*/
     .nav_0 .navDetail .navfix .navimg ul.menu li a {
-      padding: 1.2vw 0.6vw; }
+      padding: 1.3vh 0.6vw; }
   .nav_0 .navDetail .navfix .navimg .idHello {
     width: 40%; }
 
@@ -278,8 +336,8 @@
 
 #alertBox {
   position: relative;
-  width: 20%;
-  min-height: 150px;
+  width: 25%;
+  min-height: 100px;
   max-height: 300px;
   margin-top: 50px;
   box-shadow: 1px 1px 7px #102c38;
@@ -289,7 +347,7 @@
   background-size: content;
   top: 30%;
   border-radius: 5px;
-  z-index: 100; }
+  z-index: 1000; }
 
 #modalContainer > #alertBox {
   position: fixed; }
@@ -329,7 +387,7 @@
   transition: 0.3s; }
 
 #alertBox #closeBtn:hover {
-  background-color: #e97b23; }
+  background-color: #6cf; }
 
 /* unrelated styles */
 #mContainer {

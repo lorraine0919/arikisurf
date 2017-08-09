@@ -35,7 +35,7 @@ $(function(){
 		$('#rwdcoatingleft').click(function(){
 			if(count<4){
 				count++;
-				$('.coating_1 .demoimg ul').animate({'margin-left':'-=72%'});
+				$('.coating_1 .demoimg ul').animate({'margin-left':'-=77%'});
 				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
 				$('.coating_1 .introduce h2').text(coatinginfotitle[count]);
 				$('.coating_1 .introduce p').text(coatinginfo[count]);
@@ -47,7 +47,7 @@ $(function(){
 		$('#rwdcoatingright').click(function(){
 			if(count>0){
 				count--;
-				$('.coating_1 .demoimg ul').animate({'margin-left':'+=72%'});
+				$('.coating_1 .demoimg ul').animate({'margin-left':'+=77%'});
 				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
 				$('.coating_1 .introduce h2').text(coatinginfotitle[count]);
 				$('.coating_1 .introduce p').text(coatinginfo[count]);

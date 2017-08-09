@@ -1,3 +1,7 @@
+.title20{
+  margin-top: 40px !important;
+  display: block !important;
+}
 .left20 .menu20 a[href="7member_love.php"]{
   color: #ed9046;
   box-shadow: -5px 0px 0px #ed9046;
@@ -7,6 +11,10 @@
   float: left;
   width: 68% !important;
 } 
+
+.navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb{
+  background-color: rgba(13, 38, 58, 0);
+}
 
 .clearfix {
   clear: both; }

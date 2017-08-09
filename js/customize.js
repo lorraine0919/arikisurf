@@ -36,11 +36,12 @@ window.onload=function(){
 					$('.content19').fadeIn(500);
 					$('#submit19').off('click');
 					$('#submit19').click(function(){
-						
+						console.log('1');
 						$.post('customize_update.php',{
 				            'memId2' : $('#memId').val() ,
 				            'memPsw2' :  $('#memPsw').val()
 						},function(rs){
+
 							var rsarr=rs.split('|');
 							if(rsarr[0]=='1'){
 								console.log('1');
@@ -52,7 +53,7 @@ window.onload=function(){
 								$('#customeraddress').val(rsarr[4]);
 								$('#lightbox19').fadeOut(500);
 							}else{
-
+								console.log(rs);
 							}
 						});						
 					});		
@@ -67,6 +68,7 @@ window.onload=function(){
 			$.post('customize_update.php',{
 				'havelogin':'yes'
 			},function(rs){
+				console.log(rs);
 				// alert(rs);
 				var rsarr=rs.split('|');
 				console.log(rsarr);

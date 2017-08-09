@@ -32,7 +32,7 @@
             <div class="detail26">
 
                 <input type="hidden"  name="account" id="account" value="<?php echo $_REQUEST['memId26'];?>">
-                <input type="hidden" name="psw" id="psw" value="<?php echo $_REQUEST['memPsw26']?>;">
+                <input type="hidden" name="psw" id="psw" value="<?php echo $_REQUEST['memPsw26']?>">
 
                 <div class="item26">
                     <label class="label26">姓名</label>

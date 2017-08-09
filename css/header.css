@@ -441,3 +441,10 @@
       position: relative;
       width: 90%;
       top: 30%; } }
+
+.navDetail .navfix .navimg ul.menu li a{
+  transition: 0.5s;
+}
+.navDetail .navfix .navimg ul.menu li a:hover{
+  color: #ffbb58;
+}

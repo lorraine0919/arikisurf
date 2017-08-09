@@ -54,7 +54,7 @@ if(isset($_SESSION["member_no"])==true){
                <div class="poItem i4">
                      <div class="pot">文章內容<span class="sred"> *</span></div>                   
                      <div class="last">
-                           <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                           <textarea name="textarea" id="textarea" cols="30" rows="10"  maxlength="255"></textarea>
                            <div class="bt">
                                  <input type="button" value="送出" id="godb">
                                  <input type="reset" value="清除" id="gg">

@@ -183,7 +183,12 @@ body{overflow-y: scroll;}
       text-align: right;
       font-size: 20px; }
 
-  /*right20*/ }
+  /*right20*/ 
+  
+
+
+
+}
 /*平板*/
 @media screen and (min-width: 1320px) {
   .main20 {
@@ -246,4 +251,23 @@ body{overflow-y: scroll;}
       text-align: right;
       font-size: 20px; }
 
-  /*right20*/ }
+  /*right20*/ 
+
+
+/*以下是慕晨寫的*/
+  .main20{
+    padding-top: 9%;
+  }
+/*以上是慕晨寫的*/
+
+
+
+}
+
+
+
+/*以下是慕晨寫的*/
+.content20{
+  padding: 50px 0;
+}
+/*以上是慕晨寫的*/

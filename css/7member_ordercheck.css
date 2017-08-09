@@ -4,6 +4,11 @@
 .right20 {
   background-image: none;
   padding-right: 0; }
+.left20 .sidebar20 .menu20 a#mem_2{
+  color: #ed9046;
+  box-shadow: -5px 0px 0px #ed9046;
+}
+
 
 @media screen and (min-width: 768px) {
   .member_ordercheck_23 {

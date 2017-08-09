@@ -54,6 +54,7 @@ window.onload=function(){
 								$('#lightbox19').fadeOut(500);
 							}else{
 								console.log(rs);
+								alert('帳號密碼輸入錯誤，請重新輸入');
 							}
 						});						
 					});		
@@ -80,7 +81,7 @@ window.onload=function(){
 					$('#customeraddress').val(rsarr[4]);
 					tostep3();
 				}else{
-
+					alert('帳號密碼輸入錯誤，請重新輸入');
 				}
 			});	
 			

@@ -58,6 +58,7 @@ body{
 		.navDetail .navfix .navimg .logo .logofix .arikicommon_breadcrumb{
 			display: none;
 		}
+
 		.banner_1{
 			width: 100%;
 			padding-top: 55.5%;
@@ -105,7 +106,11 @@ body{
 			}
 			
 		}
-
+@media screen and (min-width:1600px){
+	.banner_1{
+		padding-top: 52%;
+	}
+}
 		
 		.Button_Entrance .Button_Entrance2:hover{
 			color:#ff9630;

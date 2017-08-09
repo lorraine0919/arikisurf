@@ -70,11 +70,19 @@
                     <input type="checkbox" id="control">
                     <div class="logo">
                         <div class="logofix">
-                            <a href="index.php">
+                            <a href="index.php" id="picLogo">
                                <img src="images/1common/logo.png">
-                               <!-- 之前預留的左邊方形區就是它 -->
                             </a>
-                            <div class="arikicommon_breadcrumb">                            
+                            <a href="index.php" id="picLogin">
+                                <?php 
+                                    if(isset($_SESSION["account"])){
+                                        echo "<img src='images/1common/logout.png'>";
+                                    }else{
+                                        echo "<img src='images/1common/login.png'>";
+                                    }
+                                ?>
+                            </a>
+                            <div class="arikicommon_breadcrumb">            
                                                      
                             
     

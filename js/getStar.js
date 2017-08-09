@@ -6,7 +6,7 @@
  	  $('.star').barrating({
 	    theme: 'fontawesome-stars',
 	    onSelect: function(value){
-	  	var sc = value;
+	    var sc = value;
         var post_number2 = $('#post_number').val();
         console.log("目前發文編號 : "+post_number2);
         console.log("評分數 : "+sc);

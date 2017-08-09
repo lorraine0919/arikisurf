@@ -375,6 +375,7 @@ body {
         display: inline-block;
         background-image: url("../images/1common/insidecircle.png");
         background-size: contain;
+        cursor: pointer;
         text-align: center;
         position: relative; }
         .picture_1 .maxContent .photoSelect .photo img {
@@ -386,11 +387,7 @@ body {
           left: 0;
           margin: auto;
           z-index: 3; }
-        .picture_1 .maxContent .photoSelect .photo img:hover {
-          animation: fadeIn 0.5s;
-          cursor: pointer; }
       .picture_1 .maxContent .photoSelect .selected:after {
-        animation: fadeIn 0.5s;
         content: '';
         position: absolute;
         background-image: url("../images/1common/picselected.png");
@@ -431,15 +428,6 @@ body {
           bottom: 1%;
           right: 39%;
           width: 20%; }
-          .picture_1 .maxContent .demo .surfboard .selectpicshow img {
-            transition: 1s; }
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-          .picture_1 .maxContent .demo .surfboard .selectpicshow .fadeIn {
-            animation: fadeIn 1s; }
     .picture_1 .maxContent .demorwd {
       display: none; }
 

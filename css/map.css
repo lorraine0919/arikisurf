@@ -1,6 +1,9 @@
 .loading_bg {
   display: none; }
 
+.info {
+  font-size: 16px; }
+
 body {
   overflow-y: scroll; }
 

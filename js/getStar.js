@@ -1,4 +1,5 @@
  $(document).ready(function(){
+
  	  console.log("目前分數 : "+$('.gg').val());
  	  var score = $('.gg').val();
  	  $('.star').barrating('set',$('.gg').val());

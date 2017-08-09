@@ -44,7 +44,7 @@ window.onload=function(){
 
 							var rsarr=rs.split('|');
 							if(rsarr[0]=='1'){
-								console.log('1');
+								console.log(rs);
 								$('#login1').html("<a href='7member_update.php'>會員專區</a>");
 								$('.memberloginornot').val('1');
 								$('#customername').val(rsarr[1]);
@@ -708,7 +708,7 @@ $('#finishorder').click(function(){
 		'boarddemo':$('.step4_maxContent .boarddemo').attr('src'),
 		'customize_order_total':$('.priceshow').text()
 	},function(rs){
-		// alert(rs);
+		console.log(rs);
 	});
 
 });

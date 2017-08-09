@@ -544,21 +544,28 @@
             color: #fff;
             padding: 10px 1px; }
             .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color .circle {
-              background-color: #f00;
               border-radius: 50%;
               width: 40%;
               padding-top: 40%;
               display: inline-block;
-              position: relative; }
+              position: relative;
+              border: 1px solid rgba(255, 255, 255, 0.6); }
             .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color .circle:after {
               content: '';
-              border: 1px solid rgba(255, 255, 255, 0.6);
+              background-color: #fff;
               border-radius: 50%;
               position: absolute;
-              width: 140%;
-              padding-top: 140%;
-              top: -26%;
-              left: -22.9%; }
+              width: 70%;
+              height: 70%;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto; }
+            .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color:nth-child(2) .circle:after {
+              background-color: #009bd8; }
+            .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color:nth-child(3) .circle:after {
+              background-color: #ffd105; }
             .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .colorgroup .colorselectgroup .color p {
               margin: 10px 0 0 0; }
         .bg_forest_2 .step2_maxContent .selectAndNext .selectAndNextfix .patterngroup {

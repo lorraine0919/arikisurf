@@ -389,10 +389,10 @@ window.onload=function(){
 /*↑步驟二rwd按按鈕換顏色*/
 
 /*↓步驟二，色球顏色*/
-	for (var i = 0; i < 3; i++) {
-		var colorarr = ['#fff','#009bd8','#ffd105'];
-		$('.step2_maxContent .colorselectgroup .color .circle').eq(i).css('background-color',colorarr[i]);
-	}
+	// for (var i = 0; i < 3; i++) {
+	// 	var colorarr = ['#fff','#009bd8','#ffd105'];
+	// 	$('.step2_maxContent .colorselectgroup .color .circle').eq(i).css('background-color',colorarr[i]);
+	// }
 /*↑步驟二，色球顏色*/
 
 /*↓步驟二換材質說明與按鈕外框*/

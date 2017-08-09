@@ -8,6 +8,49 @@ body {
   overflow-y: scroll; }
 
 @media screen and (min-width: 768px) {
+  .loginremindlightboxgroup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none; }
+    .loginremindlightboxgroup .loginremindlightboxarea {
+      max-width: 263px;
+      max-height: 30vh;
+      background-color: white;
+      position: relative;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 27px 27px 61px 27px;
+      transform: translateY(-50%);
+      margin: 0 auto;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-image: url("../images/7member/7member_ordercheck/decoration.png");
+      background-repeat: no-repeat;
+      background-position: 0% 113%; }
+      .loginremindlightboxgroup .loginremindlightboxarea p {
+        height: 15vh;
+        line-height: 15vh;
+        color: #4d6273;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 18px; }
+      .loginremindlightboxgroup .loginremindlightboxarea #loginremindclosebtn {
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .loginremindlightboxgroup .loginremindlightboxarea #loginremindclosebtn .fa {
+          font-size: 30px;
+          margin: 0 5px 0 0;
+          color: #0e2334; }
+
   .navDetail .navfix .navimg .iconGroup ul li:nth-child(3) a {
     color: #e97b23; }
 
@@ -206,7 +249,7 @@ body {
           .cart-body_28 .cart1-pc_28 .total_28 .total-sum .total-num,
           .cart-body_28 .cart1-pc_28 .total_28 .total-sum .total-money {
             display: inline-block;
-            color: #EA8A00;
+            color: #c14d13;
             font-size: 25px;
             margin: 0 5px; }
     .cart-body_28 .notice_28 {
@@ -555,7 +598,7 @@ body {
         padding: 2% 20px;
         background-color: rgba(255, 255, 255, 0.4); }
         .order-confirm_30 .order-confirm-bgbox .ProCfirmInfo-pc .ProCfirmInfo-pc-box .Cfrim-total p span {
-          color: #EA8A00;
+          color: #c14d13;
           font-size: 20px; }
         .order-confirm_30 .order-confirm-bgbox .ProCfirmInfo-pc .ProCfirmInfo-pc-box .Cfrim-total p .getTotalMath,
         .order-confirm_30 .order-confirm-bgbox .ProCfirmInfo-pc .ProCfirmInfo-pc-box .Cfrim-total p .getTotalPrice {
@@ -738,7 +781,7 @@ body {
             box-sizing: border-box;
             padding: 2% 30px; }
             .order-over_31 .Order-box .Odover-pc .Odover-pc-box .Odover-total p span {
-              color: #EA8A00;
+              color: #c14d13;
               font-size: 25px; }
             .order-over_31 .Order-box .Odover-pc .Odover-pc-box .Odover-total p .getOdoTotalMath,
             .order-over_31 .Order-box .Odover-pc .Odover-pc-box .Odover-total p .getOdoTotalPrice {
@@ -771,6 +814,50 @@ body {
         .order-over_31 .Odover-PM-btn .btn-box .Odover-Member-btn {
           margin-left: 10px; } }
 @media screen and (max-width: 767px) {
+  .loginremindlightboxgroup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none; }
+    .loginremindlightboxgroup .loginremindlightboxarea {
+      max-width: 263px;
+      max-height: 30vh;
+      background-color: white;
+      position: relative;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 27px 27px 61px 27px;
+      transform: translateY(-50%);
+      margin: 0 auto;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-image: url("../images/7member/7member_ordercheck/decoration.png");
+      background-repeat: no-repeat;
+      background-position: 0% 113%; }
+      .loginremindlightboxgroup .loginremindlightboxarea p {
+        height: 15vh;
+        line-height: 15vh;
+        color: #4d6273;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 18px; }
+      .loginremindlightboxgroup .loginremindlightboxarea #loginremindclosebtn {
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .loginremindlightboxgroup .loginremindlightboxarea #loginremindclosebtn .fa {
+          font-size: 30px;
+          margin: 0 5px 0 0;
+          color: #0e2334; }
+
   .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(8) a {
     color: #e97b23; }
 
@@ -944,7 +1031,7 @@ body {
       padding-bottom: 5%; }
       .cart-body_28 .cart1-phone_28 .total-phone .total-num,
       .cart-body_28 .cart1-phone_28 .total-phone .total-money {
-        color: #EA8A00;
+        color: #c14d13;
         font-size: 25px;
         margin: 0 1%; }
   .cart-body_28 .notice_28 {
@@ -1296,11 +1383,11 @@ body {
         text-align: center;
         padding-bottom: 5%; }
         .order-confirm_30 .ProCfirmInfo-phone .Cfrim-total .getTotalMath {
-          color: #EA8A00;
+          color: #c14d13;
           font-size: 25px;
           margin: 0 1%; }
         .order-confirm_30 .ProCfirmInfo-phone .Cfrim-total .getTotalPrice {
-          color: #EA8A00;
+          color: #c14d13;
           font-size: 25px;
           margin: 0 1%; }
     .order-confirm_30 .OCfirmInfo {
@@ -1518,11 +1605,11 @@ body {
           padding: 10px; }
           .order-over_31 .Order-box .Odover-phone .Odover-phone-total .Odover-total p .getOdoTotalMath {
             display: inline-block;
-            color: #EA8A00;
+            color: #c14d13;
             font-size: 25px;
             margin: 0 1%; }
           .order-over_31 .Order-box .Odover-phone .Odover-phone-total .Odover-total p .getOdoTotalPrice {
-            color: #EA8A00;
+            color: #c14d13;
             font-size: 25px;
             margin: 0 1%; }
       .order-over_31 .Order-box .Odover-notice {
@@ -1534,11 +1621,12 @@ body {
           margin: 0 5%; }
           .order-over_31 .Order-box .Odover-notice .Odo-notice ul {
             background-color: rgba(255, 255, 255, 0.3);
-            color: white;
+            color: #c1131a;
             box-shadow: border-box;
-            padding: 20px; }
+            padding: 20px 10px;
+            letter-spacing: 1px; }
             .order-over_31 .Order-box .Odover-notice .Odo-notice ul li {
-              width: 80%;
+              width: 88%;
               list-style: circle;
               margin: 2% 10%; }
     .order-over_31 .Odover-PM-btn {

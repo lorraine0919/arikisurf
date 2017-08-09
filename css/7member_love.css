@@ -1,3 +1,8 @@
+.left20 .menu20 a[href="7member_love.php"]{
+  color: #ed9046;
+  box-shadow: -5px 0px 0px #ed9046;
+}
+
 .br-wrapper.br-theme-fontawesome-stars{
   float: left;
   width: 68% !important;
@@ -115,6 +120,9 @@
 }   
 
 @media screen and (max-width: 768px){
+  .left20 .sidebar20 .menu20 li a[href="7member_love.php"]{
+  color: #ed9046;
+  }
   .member_love_23 {
     max-width: 1170px;
     width: 100%;

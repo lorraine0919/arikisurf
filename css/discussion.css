@@ -228,8 +228,10 @@ a {
         .bg_11 .main_11 .box_b .pic img {
           width: 100%; }
       .bg_11 .main_11 .box_b .txt {
-        color: #fff;
-        margin-top: 1.9vh; }
+        color: #383a3c;
+        margin-top: 1.9vh; 
+        font-size: 20px;
+        letter-spacing: 1px;}
     .bg_11 .main_11 .back {
       box-sizing: border-box;
       padding: 1rem;

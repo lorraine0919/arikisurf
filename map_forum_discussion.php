@@ -93,15 +93,19 @@ $pdo->exec($sqlview);
                 <input class="gg" type="hidden" value="<?php echo $postRow["star_score"]; ?>">
           </select>        
 <?php 
-      $sqllove = "select * from map_like where post_number=$post_number";
+      $sqllove = "select * from map_like 
+                  where post_number=$post_number
+                  and member_no=$member_no";
       $aba = $pdo->query($sqllove);
-      if($member_no==7){
+      if($aba->rowCount()==0){
          $love = "heart_white.png";
       }else{
-         $love = ($aba->rowCount()!=0) ? "heart_red.png" : "heart_white.png";
+          if($member_no==7){
+             $love = "heart_white.png";
+          }else{
+             $love = "heart_red.png";
+          }
       }
-      
-
 ?>
           <div class="lovepic">
                <img src="images/4wavepoint/<?php echo $love;?>" id="love">

@@ -1,7 +1,3 @@
-<?php
-    ob_start();
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head> 
@@ -28,7 +24,7 @@
             <p>立即加入會員，享有客製化浪板、搶購限量配備等服務。</p>
         </div><!-- prompt26 -->
 
-        <form id="form26">
+        <form id="form26" action="7member_register2.php">
             <div class="title26">
                 <h2>帳號密碼設定</h2>
             </div>
@@ -36,7 +32,7 @@
             <div class="detail26">
                 <div class="item26">
                     <label class="label26">設定帳號</label>
-                    <input type="text" minlength="4" maxlength="10" placeholder="請輸入4-10碼英數字組合" class="input26 arikicommon_inputtext" id="memId26" name="memId26" onchange="Uniqueness(this.value);" required>
+                    <input type="text" minlength="4" maxlength="20" placeholder="請輸入4-20碼英數字組合" class="input26 arikicommon_inputtext" id="memId26" name="memId26" onchange="Uniqueness(this.value);" required>
                 </div>
                 <div class="item26">
                     <label class="label26">設定密碼</label>
@@ -161,45 +157,12 @@
     </div> 
     <a class="arikicommon_btn" id="submit22">閱讀完畢</a>
 </div>
-<?php require_once('publicpage/footer.php'); ?>
+
+<?php require_once('publicpage/footer.php');?>
+
 <script type="text/javascript">
 
 function $id(id){return document.getElementById(id);}
-
-//=======================會員登入登出(缺rwd版)=========================
-function ShowLightBox(){
-  if( $id("login1").innerHTML === '會員登入'){
-    $id("memId").value="";
-    $id("memPsw").value="";
-    $id("lightbox19").style.display="";
-  }else{
-    $id("login1").innerHTML="會員登入";
-    $id("memberArea").style.display="none";
-  }           
-}
-
-function LoginCheck(){
-
-    memId = $id("memId").value;
-    memPsw = $id("memPsw").value;
-
-    $.post('sessionLogin.php',{ 
-            'memId2' : memId ,
-            'memPsw2' :  memPsw
-             },function(rs){
-            if( rs == 1){
-                $id("memberArea").innerHTML = "<a href='7member_update.php'>會員專區</a>";
-                $id("login1").innerHTML = "登出";
-                $id("lightbox19").style.display="none";
-             }else{
-                alert("帳號或密碼錯誤");
-                return;
-                }
-            }
-    );
-}
-
-function CancelLogin(){$id("lightbox19").style.display = "none";}
 
 //==========================會員註冊A==========================
 //-------------------------檢查帳號--------------------------
@@ -209,7 +172,7 @@ function Uniqueness(ID){
         'accountcheck' : ID ,
          },function(R){
             if( R == 1){
-                alert("此帳號已被使用");
+                alert("此帳號已被使用<br>");
                 return;
              }
         }
@@ -237,35 +200,36 @@ function RemoveNumber(){
 function VerifyA(){
 
     memId26 = $id("memId26").value;
+    // console.log(memId26);
     memPsw26 = $id("memPsw26").value;
     memPswCheck26 = $id("memPswCheck26").value;
     Verify26 = $id("Verify26").value;
-    // console.log(CheckText);
-    // console.log(Verify26);
 
-    IDPattern = /^(?=^.{4,10}$)((?=.*[0-9])(?=.*[a-z|A-Z]))^.*$/;
+    IDPattern = /^.[A-Za-z0-9]+$/;
     PswPattern = /^(?=^.{6,12}$)((?=.*[0-9])(?=.*[a-z|A-Z]))^.*$/;
     // VerifyPattern = /^\w{4,5}$/;
 
     if (!IDPattern.test(memId26)){
-        alert("帳號格式有誤！");
+        alert("帳號格式有誤！<br>");
         return;
     }else if (!PswPattern.test(memPsw26)){
-        alert("密碼格式有誤！");
+        alert("密碼格式有誤！<br>");
         return;
     }else if (memPsw26 !== memPswCheck26){
-        alert("兩次輸入密碼不相符！");
+        alert("兩次輸入密碼不相符！<br>");
         return;
     }else if (Verify26 !== CheckText){
-        alert("請輸入正確驗證碼！");
+        alert("請輸入正確驗證碼！<br>");
         return;
     }else{
-         $.post('Register.php',{ 
-            'memId' : memId26 ,
-            'memPsw':memPsw26
-             },function(rs){
-                window.location="7member_register2.php";
-             }); 
+        $('#form26').submit();
+         // $.post('7member_register2.php',{ 
+         //    'memId26' : memId26 ,
+         //    'memPsw26':memPsw26
+         //     },function(rs){
+         //        console.log(rs);
+         //        // window.location="傳值後再送值又消失，只能用submit。7member_register2.php";
+         //     }); 
          /*注意格式，最後一個不用，function後是必需的格式*/
          /*window.location必須放在function內才管用，不知為何?!*/
     }

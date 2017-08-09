@@ -72,19 +72,18 @@ ob_start();
                     <li class="col-sm-2 col-xs-12 orderDate"><span class="rwdtitleshow">訂購時間</span><span class="shinvalue"><?php echo $order_CK["customize_order_date"]?></span></li>
                     <li class="col-sm-2 col-xs-12 orderTotal"><span class="rwdtitleshow">訂單金額</span><span class="shinvalue"><?php echo $order_CK["customize_order_total"]?></span></li>
                     <li class="col-sm-2 col-xs-12 orderStatus"><span class="rwdtitleshow">訂單狀態</span>
-                        <span class="shinvalue">
+                        
                             <?php 
                                 if($order_CK["customize_order_status"] == 1){
-                                    echo "未付款";
+                                    echo "<span class='shinvalue' style='color:blue'>未付款</span>";
                                 }else if($order_CK["customize_order_status"]==2){
-                                    echo "未出貨";
+                                    echo "<span class='shinvalue' style='color:red'>未出貨</span>";
                                 }else if($order_CK["customize_order_status"]==3){
-                                    echo "已出貨";
+                                    echo "<span class='shinvalue' style='color:blue'>已出貨</span>";
                                 }else if($order_CK["customize_order_status"]==4){
-                                    echo "申請中";
+                                    echo "<span class='shinvalue' style='color:orange'>申請中</span>";
                                 }
                             ?>
-                        </span>
                     </li>
                     <li class="col-sm-4"><span class="rwdtitleshow">訂單明細</span><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn customize-order-btn"></li>
                     <li class="clearfix"></li>
@@ -148,19 +147,19 @@ ob_start();
                     <li class="col-sm-2 col-xs-12"><span><?php echo $order_SF["order_date"];?></span></li>
                     <li class="col-sm-2 col-xs-12"><span><?php echo $order_SF["order_total"];?></span></li>
                     <li class="col-sm-2 col-xs-12">
-                        <span>
+                       
                             <?php 
                                 if($order_SF["order_status"] == 1){
-                                    echo "未付款";
+                                    echo " <span style='color:blue;'>未付款</span>";
                                 }else if($order_SF["order_status"]==2){
-                                    echo "未出貨";
+                                    echo "<span style='color:red'>未出貨</span>";
                                 }else if($order_SF["order_status"]==3){
-                                    echo "已出貨";
+                                    echo "<span>已出貨</span>";
                                 }else if($order_SF["order_status"]==4){
-                                    echo "申請中";
+                                    echo "<span style='color:orange'>申請中</span>";
                                 }
                             ?>
-                        </span>
+                        
                     </li>
                     <li class="col-sm-4 col-xs-12"><input type="button" name="" value="訂單明細" class="arikicommon_bgwhite_btn FT-order-btn"></li>
                 </ul>
@@ -388,7 +387,7 @@ ob_start();
                     <div class="clearfix"></div>
                 </div>
                 <div class="FT-btn">
-                    <div class="arikicommon_bgwhite_btn">取消交易</div>
+                    <div class="arikicommon_bgwhite_btn FT-cancle">取消交易</div>
                     <div class="arikicommon_important_btn FT-exit">確認離開</div>
                 </div>
                 <!-- <div class="decoration"></div> -->

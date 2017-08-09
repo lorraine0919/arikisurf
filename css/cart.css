@@ -8,6 +8,9 @@ body {
   overflow-y: scroll; }
 
 @media screen and (min-width: 768px) {
+  .navDetail .navfix .navimg .iconGroup ul li:nth-child(3) a {
+    color: #e97b23; }
+
   .body_28 {
     background-image: url("../images/8cart/bg_f.jpg");
     background-size: cover; }
@@ -203,7 +206,7 @@ body {
           .cart-body_28 .cart1-pc_28 .total_28 .total-sum .total-num,
           .cart-body_28 .cart1-pc_28 .total_28 .total-sum .total-money {
             display: inline-block;
-            color: orange;
+            color: #EA8A00;
             font-size: 25px;
             margin: 0 5px; }
     .cart-body_28 .notice_28 {
@@ -552,7 +555,7 @@ body {
         padding: 2% 20px;
         background-color: rgba(255, 255, 255, 0.4); }
         .order-confirm_30 .order-confirm-bgbox .ProCfirmInfo-pc .ProCfirmInfo-pc-box .Cfrim-total p span {
-          color: orange;
+          color: #EA8A00;
           font-size: 20px; }
         .order-confirm_30 .order-confirm-bgbox .ProCfirmInfo-pc .ProCfirmInfo-pc-box .Cfrim-total p .getTotalMath,
         .order-confirm_30 .order-confirm-bgbox .ProCfirmInfo-pc .ProCfirmInfo-pc-box .Cfrim-total p .getTotalPrice {
@@ -735,11 +738,11 @@ body {
             box-sizing: border-box;
             padding: 2% 30px; }
             .order-over_31 .Order-box .Odover-pc .Odover-pc-box .Odover-total p span {
-              color: orange;
-              font-size: 20px; }
+              color: #EA8A00;
+              font-size: 25px; }
             .order-over_31 .Order-box .Odover-pc .Odover-pc-box .Odover-total p .getOdoTotalMath,
             .order-over_31 .Order-box .Odover-pc .Odover-pc-box .Odover-total p .getOdoTotalPrice {
-              margin: 0 7px; }
+              margin: 0 1%; }
       .order-over_31 .Order-box .Odover-notice {
         background-color: rgba(255, 255, 255, 0.3);
         box-sizing: border-box;
@@ -768,6 +771,9 @@ body {
         .order-over_31 .Odover-PM-btn .btn-box .Odover-Member-btn {
           margin-left: 10px; } }
 @media screen and (max-width: 767px) {
+  .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(8) a {
+    color: #e97b23; }
+
   .body_28 {
     background-image: url("../images/8cart/bg_f.jpg");
     background-size: cover; }
@@ -938,7 +944,7 @@ body {
       padding-bottom: 5%; }
       .cart-body_28 .cart1-phone_28 .total-phone .total-num,
       .cart-body_28 .cart1-phone_28 .total-phone .total-money {
-        color: orange;
+        color: #EA8A00;
         font-size: 25px;
         margin: 0 1%; }
   .cart-body_28 .notice_28 {
@@ -1269,6 +1275,34 @@ body {
               width: 50%;
               vertical-align: middle;
               display: inline-block; }
+      .order-confirm_30 .ProCfirmInfo-phone .horizontal-phone {
+        max-width: 767px;
+        width: 90%;
+        margin: 0 5%;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.6); }
+        .order-confirm_30 .ProCfirmInfo-phone .horizontal-phone .horizontal-line {
+          width: 90%;
+          height: 1px;
+          margin: 0 5%;
+          background-color: white; }
+      .order-confirm_30 .ProCfirmInfo-phone .Cfrim-total {
+        max-width: 767px;
+        width: 90%;
+        margin: 0 5%;
+        background-color: rgba(255, 255, 255, 0.6);
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 5%; }
+        .order-confirm_30 .ProCfirmInfo-phone .Cfrim-total .getTotalMath {
+          color: #EA8A00;
+          font-size: 25px;
+          margin: 0 1%; }
+        .order-confirm_30 .ProCfirmInfo-phone .Cfrim-total .getTotalPrice {
+          color: #EA8A00;
+          font-size: 25px;
+          margin: 0 1%; }
     .order-confirm_30 .OCfirmInfo {
       max-width: 767px;
       width: 100%;
@@ -1484,10 +1518,13 @@ body {
           padding: 10px; }
           .order-over_31 .Order-box .Odover-phone .Odover-phone-total .Odover-total p .getOdoTotalMath {
             display: inline-block;
-            margin-top: 1%;
-            color: orange; }
+            color: #EA8A00;
+            font-size: 25px;
+            margin: 0 1%; }
           .order-over_31 .Order-box .Odover-phone .Odover-phone-total .Odover-total p .getOdoTotalPrice {
-            color: orange; }
+            color: #EA8A00;
+            font-size: 25px;
+            margin: 0 1%; }
       .order-over_31 .Order-box .Odover-notice {
         max-width: 767px;
         width: 100%;

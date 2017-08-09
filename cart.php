@@ -346,16 +346,7 @@
 						</ul>
 						<div class="clearfix"></div>
 					</div>
-
-					<!-- <div class="Cfirm-pro">
-						<ul>
-							<li class="col-sm-6"><span class="getProName">AKUR海灘褲(藍)</span></li>
-							<li class="col-sm-2"><span class="getPrice">100</span>元</li>
-							<li class="col-sm-2"><span class="getMath">1</span></li>
-							<li class="col-sm-2"><span class="getSum">100</span></li>
-						</ul>
-						<div class="clearfix"></div>
-					</div> -->
+					
 					<?php
 							}
 						}
@@ -390,6 +381,12 @@
 						}	
 					}
 				?>
+				<div class="horizontal-phone">
+					<div class="horizontal-line"></div>
+				</div>
+				<div class="Cfrim-total">
+					<p>共<span class="getTotalMath" id="getTotalMath_phone"></span>項商品，總金額<span class="getTotalPrice" id="getTotalPrice_phone"></span>元</p>
+				</div>
 			</div>
 			
 			<div class="big-title">

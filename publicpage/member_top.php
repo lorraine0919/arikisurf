@@ -1,3 +1,9 @@
+<?php
+    if(!isset($_SESSION)) {
+      ob_start();
+      session_start(); 
+  }
+?>
 <div class="content20">
     <div class="main20">
 

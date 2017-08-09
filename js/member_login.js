@@ -51,10 +51,7 @@
 //     $id("submit19").addEventListener('click',LoginCheck,false);
 //     $id("close19").addEventListener('click',CancelLogin,false);
 
-
 // }
-
-
 
 	
 $(function(){
@@ -76,16 +73,18 @@ $(function(){
 	            'memPsw2' :  $('#memPsw').val()
 	             },function(rs){
 		            if(rs == 1){
-		            	console.log();
+		            	alert("您已被停權<br>");
+		                return;
+		             }else if(rs == 2){
 		            	$('#login1').html("<a href='7member_update.php'>會員專區</a>");
 		                // $("#login1").text("登出");
 		                $("#lightbox19").css('display',"none");
 
 		                logined = 2;
 		                location.reload();
-		             }else{
-		                alert("帳號或密碼錯誤");
 		                return;
+	                 }else{
+	                 	alert("帳號或密碼錯誤或尚未註冊！<br>");
 	                 }
 	            }
 	    );		
@@ -96,3 +95,4 @@ $(function(){
 	})
 });
 
+// showlogin

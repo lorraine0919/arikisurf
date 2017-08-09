@@ -6,6 +6,7 @@ $textarea = $_REQUEST["textarea"];
 $datetime = date("Y-m-d H:i:s"); 
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 $member_no = $_SESSION["member_no"];
+$star_score = 1;
 $a = $_FILES["file"]["name"];
 
 try{
@@ -33,8 +34,8 @@ try{
 		}
 
 		require_once("connectBooks.php");
-		$sql = "insert into map_post values(null,$wave_number,'$a','$datetime','$title','$textarea',1,0,$member_no,1)";
-		$into = $pdo->exec($sql);
+		$sql = "insert into map_post values(null,$wave_number,'$a','$datetime','$title','$textarea',1,0,$member_no,$star_score)";
+		$pdo->exec($sql);
 		header("location:map_forum.php");
 
 }catch(PDOException $ex){

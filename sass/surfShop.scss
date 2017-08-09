@@ -2,7 +2,12 @@
 	background-repeat: no-repeat;
 	background-position: center;
 } 
-		
+body{
+  overflow-x: hidden;
+    }
+    .navDetail .navfix .navimg ul.menu li:nth-child(3) a{
+        color: #e97b23;
+    }
 
 		.container{
 			max-width: 1170px;
@@ -111,6 +116,7 @@
 					      width: 100%;
 					      /*padding-top: 100%;*/
 					      top: 0;
+					      left:0;
 					      
 					    }
 				
@@ -135,7 +141,7 @@
 				  width: 100px;
 				  height: auto;
 				  position: absolute;
-				  left:25%;
+				  left:24%;
 				  margin-left: -100px;
 				  top: -45px;
 				}
@@ -542,6 +548,13 @@
 			
 
 		}
+		@media screen and (max-width:960px){
+		.showProd .mo-fire {
+			    width: 90px;
+			    left: 27%;
+			}
+
+		}
 		@media screen and (max-width:767px) {
 			.forRwd{
 			     color: rgba(255,255,255,.8);
@@ -632,10 +645,29 @@
     	.showProd{
 		   .mo-fire {
 				  width: 62px;
-				  left:36%;
+				  left:33%;
 				  top: -27px;
 				}	
     	 }
+    	 	.pic_man{
+					position: relative;
+					 .aa,.bb,.cc,.dd,.ee,.ff,.gg{
+
+					      position: absolute;
+					      width: 100%;
+					      /*padding-top: 100%;*/
+					      top: 0;
+					      max-width: 350px;
+					      
+					    }
+				
+					img{
+						width: 100%;
+						max-width: 350px;
+					}
+
+				}
+	   
 	   }
 	   @media screen and (max-width:321px){
 	   	.barbg{
@@ -654,10 +686,28 @@
 		  .showProd{
 		   .mo-fire {
 			  width: 60px;
-			  left:39%;
+			  left:36%;
 			  top: -30px;
 			}
          }
+         	.pic_man{
+					position: relative;
+					 .aa,.bb,.cc,.dd,.ee,.ff,.gg{
+
+					      position: absolute;
+					      width: 100%;
+					      /*padding-top: 100%;*/
+					      top: 0;
+					      max-width: 300px;
+					      
+					    }
+				
+					img{
+						width: 100%;
+						max-width: 300px;
+					}
+
+				}
 	   } 
 	  	// body .sl-widget-box{
 	   // 	opacity: 0 !important;

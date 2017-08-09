@@ -29,6 +29,9 @@ window.addEventListener('load',function(){
         var img = $(this).parent().siblings(".hideinput").children("input").eq(9).val();
         console.log(img);
 
+        var Status = $(this).parent().siblings(".hideinput").children("input").eq(10).val();
+        console.log(img);
+
         $('#OD_date').text($(this).parent().siblings("td").eq(2).text());
         $('#OD_status').text($(this).parent().siblings("td").eq(3).text());
         $('#OD_total').text($(this).parent().siblings("td").eq(4).text());
@@ -47,6 +50,8 @@ window.addEventListener('load',function(){
 
         $('#OD_no').text($(this).siblings("input").val());
         // console.log($(this).siblings("input").val());
+
+        $('#insideStatus').val(Status);
     });
     $('#closeLG').click(function(){
         $('#lightbox').hide();
@@ -67,6 +72,8 @@ window.addEventListener('load',function(){
     });
     $('.OD_btngo').click(function(){
         // var statusVal2 = $(this).parent().siblings(".hideinput").children("input").eq(10).val();
+        
+        
         $.post("orderCustomize_status.php",{
             'status':$(this).parent().siblings(".hideinput").children("input").eq(10).val(),
             'odNo':$(this).parent().siblings(".hideinput").children("input").eq(11).val()
@@ -77,15 +84,24 @@ window.addEventListener('load',function(){
     });
 
     $('.OD_btncancle').click(function(){
-        $ODNo = $('#OD_no').val();
-        Cstr = confirm("確定要刪除嗎");
-        if(Cstr == true){
-            // alert(Cstr);
-            $.post("",{
-                'ODNo':$ODNo
-            },function(rs){
-                
-            });
+        $ODNo = $('#OD_no').text();
+        $stauts = $('#insideStatus').val();
+        Cstr = confirm("確定要取消嗎");
+        console.log($ODNo);
+        if($stauts == 4){
+            if(Cstr == true){
+                // alert(Cstr);
+                $.post("backstage_ODcancle.php",{
+                    'ODNo':$ODNo,
+                    'status':$stauts
+                },function(rs){
+                    alert("已取消");
+                    location.reload();
+                });
+            }
+        }else{
+            alert("此訂單並不是取消申請狀態");
         }
+            
     });
 },false)

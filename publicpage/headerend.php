@@ -1,14 +1,14 @@
-
+<!-- 
     </div>
 </div>
                     </div>
-                        <div class="navbar">
+                        <div class="navbar"> -->
                             <!-- <a href="index.php"> -->
-                                <div class="rwdlogoonbar">
+                                <!-- <div class="rwdlogoonbar"> -->
                                     <!-- <img src="images/1common/titlerwd.png"> -->
-                                </div>
+                                <!-- </div> -->
                             <!-- </a> -->
-                          <div class="navbar-buttons">
+<!--                           <div class="navbar-buttons">
                             <span><img class="open-menu" src="images/1common/menu.svg" alt=""/></span>
                           </div>
                         </div>
@@ -22,36 +22,66 @@
                                 <li><a href="map.php">衝浪地圖</a></li>
                                 <li><a href="news.php">最新消息</a></li>
                                 <li><a href="about.php">關於酋長</a></li>
-                                <li>
+                                <li> -->
                                     <?php 
                                         // echo $_SESSION["account"];
-                                        if(isset($_SESSION["account"])){
-                                            echo "<a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a>";
-                                        }else{
-                                            echo "<a class='rwd'><span id='login2' >會員登入</span></a>";
-                                        }
+                                        // if(isset($_SESSION["account"])){
+                                            // echo "<a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a>";
+                                        // }else{
+                                            // echo "<a class='rwd'><span id='login2' >會員登入</span></a>";
+                                        // }
                                      ?>                                    
-                                </li>
+<!--                                 </li>
                                 <li><a href="cart.php" class="rwd">購物車</a></li>
                                 <li class="closerwdmenuli"><img class="close-menu" src="images/1common/close.svg" alt=""/></li>
                             </ul>
-                        </nav>
+                        </nav> -->
+
+
+    </div>
+</div>
+                    </div>
+                    <label class="hb" for="control">選單</label>
+                    <ul class="menu">
+                        <li class="rwdlogo"><a href="index.php" class="rwd"><img src="images/1common/logo.png"></a></li>
+                        <li><a href="customize.php">客製浪板</a></li>
+                        <li><a href="surfshop.php">衝浪配備</a></li>
+                        <li><a href="map.php">衝浪地圖</a></li>
+                        <li><a href="news.php">最新消息</a></li>
+                        <li><a href="about.php">關於酋長</a></li>
+                        <li>
+                        <?php 
+                                    // echo $_SESSION["account"];
+                                    if(isset($_SESSION["account"])){
+                                        echo "<a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a>";
+                                    }else{
+                                        echo "<a class='rwd'><span id='login2' >會員專區</span></a>";
+                                    }
+                         ?>    
+                        </li>
+                        <li><a href="cart.php" class="rwd">購物車</a></li>
+                    </ul>
+
                         <div class="iconGroup">
                             <ul>
-                                <li><a>
-                                    <img src="images/1common/member.png" alt="">
-                                    <span id="memberArea"></span>
-                                    
+                                <li>
+                                    <span>
                                     <?php 
+
                                         // echo $_SESSION["account"];
                                         if(isset($_SESSION["account"])){
-                                            echo "<a href='7member_update.php'><span id='login1'>會員專區</span></a>";
+                                            echo "<a href='7member_update.php'><img src=",$_SESSION['mugshot']," alt='' id='showlogin'>
+                                                <span id='memberArea'></span>
+                                                <span id='login1'>會員專區</span></a>";
                                         }else{
-                                            echo "<span id='login1'>會員登入</span>";
+                                            echo '<a><img src="images/1common/member.png" alt="" id="showlogin"></a>
+                                                <span id="memberArea"></span>
+                                                <span id="login1">會員登入</span></a>';
                                         }
-                                     ?>
+
+                                    ?>
                                     </span>
-                                </a></li>
+                                </li>
                                 <li class="line"></li>
                                 <li><a href="cart.php"><img src="images/1common/shop.png" alt="">購物車</a></li>
                             </ul>

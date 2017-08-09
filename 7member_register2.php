@@ -1,7 +1,3 @@
-<?php
-    ob_start();
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head> 
@@ -34,6 +30,9 @@
             </div>
 
             <div class="detail26">
+
+                <input type="hidden"  name="account" id="account" value="<?php echo $_REQUEST['memId26'];?>">
+                <input type="hidden" name="psw" id="psw" value="<?php echo $_REQUEST['memPsw26']?>;">
 
                 <div class="item26">
                     <label class="label26">姓名</label>
@@ -135,6 +134,9 @@ function EachCity(s1){
 
 function VerifyB(){
 
+    account = $id("account").value;
+    console.log(account);
+    psw = $id("psw").value;
     name = $id("name26").value;
     city = $id("slct1").value;
     area = $id("slct2").value;
@@ -150,10 +152,10 @@ function VerifyB(){
 
     
     if(name==""){
-        alert("請輸入姓名");
+        alert("請輸入姓名<br>");
         return;
     }else if(!namePattern.test(name)){
-        alert("姓名欄位格式有誤，請勿輸入特殊符號及數字！");
+        alert("姓名欄位格式有誤，請勿輸入特殊符號及數字！<br>");
         return;
     }
 
@@ -163,21 +165,21 @@ function VerifyB(){
     }else if($id("female26").checked == true){
         gender = document.getElementsByName("sex")[1].value;
     }else{
-        alert("請選擇性別");
+        alert("請選擇性別<br>");
         return;
     }
 
 
     if(city==""){
-        alert("請選擇所在縣市");
+        alert("請選擇所在縣市<br>");
         return;
     }
     if(area == "0"){
-        alert("請選擇所在區域");
+        alert("請選擇所在區域<br>");
         return;
     }
     if(addr.length < 1){
-        alert("請填寫地址");
+        alert("請填寫地址<br>");
         return;
     }else{
         var result = ' ';
@@ -188,7 +190,7 @@ function VerifyB(){
                 }
             }
         if (result != ' '){
-            alert("地址欄位不可輸入"+result+' '+" 等符號！");
+            alert("地址欄位不可輸入"+result+' '+" 等符號！<br>");
             return;
         }
     }
@@ -199,7 +201,7 @@ function VerifyB(){
     var hint;
     var judg = 0;
     if(tel.length < 6){
-        alert("請填寫電話(至少6碼)");
+        alert("請填寫電話(至少6碼)<br>");
     }else{
             for( var i=0; i<telephone.length; i++){
                 var phone = telPattern.match(telephone[i]);
@@ -211,22 +213,25 @@ function VerifyB(){
                     console.log("judg",judg,"hint",hint);
             }
             if (judg !== 0){
-                alert('電話欄位格式有誤，只可輸入數字與 - #');
+                alert('電話欄位格式有誤，只可輸入數字與 - #<br>');
+                return;
             }
     }
 
 
 
     if(mail.length < 10){
-        alert("電子郵件地址未查填完整!");
+        alert("電子郵件地址未查填完整!<br>");
         return;
     }else if(!mailPattern.test(mail)){
-        alert("電子郵件欄位格式有誤！");
+        alert("電子郵件欄位格式有誤！<br>");
         return;
     }
 
 
     $.post('RegisterFinish.php',{ 
+        'account' : account,
+        'psw':psw,
         'name' : name,
         'gender' :gender,
         'city' : city,
@@ -235,7 +240,8 @@ function VerifyB(){
         'tel' : tel,
         'mail' : mail
          },function(rs){
-            window.setTimeout("window.location='7member_register3.php'",1000);
+            console.log(rs);
+            window.setTimeout("window.location='7member_register3.php'",800);
             //window.setTimeout("Code1;Code2",時間間隔);
          });
 }

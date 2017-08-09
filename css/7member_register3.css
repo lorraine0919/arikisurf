@@ -2,7 +2,7 @@
 .loading_bg{display: none;}
 body{overflow-y: scroll;}
 
-img {width: 100%;}
+.box27 img {width: 100%;}
 /*=========清除浮動=========*/
 body{
   background-image:linear-gradient(-8deg,#136175  44%,#4D7D6B 57%,#158896 79%);

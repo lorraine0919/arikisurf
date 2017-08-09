@@ -135,6 +135,22 @@ function First(){
             });
         }
     });
+    
+    $('.FT-cancle').click(function(){
+        var FT_str;
+        FT_str = prompt("請說出取消原因");
+        if(FT_str==""){
+            alert("已關閉");
+        }else{
+            $.post("surf_cancle.php",{
+                'strMsg':FT_str,
+                'ODNO':$(this).parent().siblings('.FT-Info-val').children('.FT-OD-Info').children("div").eq(0).children("span").text()
+            },function(rs){
+                alert(rs);
+                location.reload();
+            });
+        }
+    });
 }
 
 window.addEventListener('load',First,false);

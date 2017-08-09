@@ -1,8 +1,5 @@
 <?php
-	//記得要使用session之前，要先啟用serssion
-	//啟用輸出緩衝區
 	ob_start();
-	//啟用session
 	session_start();
 
 	try{

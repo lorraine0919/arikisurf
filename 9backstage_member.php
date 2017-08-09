@@ -23,8 +23,8 @@ require_once('connectBooks.php');
                         <!-- 內容開始 -->
 
                           <!-- 上table開始 -->
-                          <h4><i class="fa fa-angle-right"></i>會員搜尋</h4>
-                          <table class="table table-bordered table-striped table-condensed">
+                          <h4 style=""><i class="fa fa-angle-right"></i>會員搜尋</h4>
+                          <table class="table table-bordered table-striped table-condensed" style=" ">
                               <tr>
                                 <td>
                                   <input type="text" name="" class="new_guardsR">
@@ -59,34 +59,24 @@ require_once('connectBooks.php');
                               </tr>
                             </thead>
                               <tbody>
+
                                 <?php 
-                                      $choise = 'member_no';
-                                      $sql = 'select * from member order by :choise';
+                                      // $choise = ;
+                                      $sql = 'select * from member';
                                       $memberList=$pdo->prepare($sql);
-                                      $member->bindValue(":choise",$choise);
+                                      // $member->bindValue(":choise",$choise);
                                       /*問題一:排序*/
                                       $memberList->execute();
                                       $i=0;
-                                        while($eachMember=$memberList->fetch(PDO::FETCH_ASSOC)){
+                                      while($eachMember=$memberList->fetch(PDO::FETCH_ASSOC)){
                                         /*如果抓的到會員資料*/
-                                      $gender=$eachMember['gender'];
-                                      if($gender==1){
-                                        $title="<br>先生";
-                                      }else{$title="<br>女士";}
-
-                                      $suspension==$eachMember['suspension'];
-                                      if($suspension==1){
-                                        
-                                      }else{
-                                      // for (var i = 0; i <$id('slct2').childNodes.length; i++) {
-                                      //     if($id('slct2').childNodes[i].value==area){
-                                      //         $id('slct2').childNodes[i].setAttribute('selected','selected');
-                                      //     }
-                                      // }
-                                      }
+                                        $gender=$eachMember['gender'];
+                                        if($gender==1){
+                                          $title="<br>先生";
+                                        }else{$title="<br>女士";}
                                 ?>
 
-                                    <tr class="modeltr t<?php echo $i?>">
+                                    <tr class="memNo modeltr t<?php echo $i?>">
                                         <td><?php echo  $eachMember['member_no']?></td>
                                         <td><?php echo  $eachMember['account']?></td>
                                         <td><?php echo  $eachMember['name'],$title?></td>
@@ -101,10 +91,14 @@ require_once('connectBooks.php');
                                         <td class="sellornotgroup">
                                           <div class="input-group">
                                                 <div class="btn-group">
-                                                    <input type="hidden" value="<?php echo $eachMember['status'] ?>" class="status">
-                                                    <input type="hidden" value="<?php echo $eachMember['manager_no'] ?>" class="no">
-                                                    <a class="yesbtn btn btn-primary btn-sm backbooa" id="stop38">停用</a><br>
-                                                    <a class="nobtn btn btn-primary btn-sm backboob" id="start38">啟用</a>
+                                                <form action="authority.php?test=2">
+                                                    <input type="hidden" name="suspension" value="<?php echo $eachMember['suspension'] ?>" class="suspension">
+                                                    <input type="hidden" name="member_no" value="<?php echo $eachMember['member_no'] ?>" class="no">
+                                                    <input type="submit"  class="availiblebtn btn btn-primary btn-sm backbooa" value="啟用中">
+                                                    <input type="submit"  class="stopbtn btn btn-primary btn-sm backboob" value="停權中" >
+                                                    <!-- <input type="submit"  class="availiblebtn btn btn-primary btn-sm backbooa" <?php echo ($eachMember['suspension']==1)? "disabled":""; ?> value="啟用"> -->
+                                                    <!-- <input type="submit"  class="stopbtn btn btn-primary btn-sm backboob" <?php echo ($eachMember['suspension']==2)? "disabled":""; ?> value="停權" > -->
+                                                </form>
                                                 </div>
                                           </div>
                                         </td>
@@ -127,15 +121,30 @@ require_once('connectBooks.php');
 <?php require_once('publicpage/backstage_footer.php'); ?>
 
 <script type="text/javascript" src="js/backstage/backstage_backboo.js"></script>
-<script type="text/javascript">
 
-  window.onload = document.getElementById("btn38").addEventListener('click',Order,false);
+<script type="text/javascript">
+  console.log($('.availiblebtn').length);
+
+  for(var i=0;i<$('.availiblebtn').length;i++){
+    console.log($('.suspension').eq(i).val());
+   if ($('.suspension').eq(i).val()=='1') {
+      $('.availiblebtn').eq(i).css('background-color','#e97b23');
+      $('.availiblebtn').eq(i).css('border-color','#fa0');
+      $('.stopbtn').eq(i).css('display','none');
+   }else{
+      $('.stopbtn').eq(i).css('background-color','#428bca');
+      $('.stopbtn').eq(i).css('border-color','#357ebd');
+      $('.availiblebtn').eq(i).css('display','none');
+   }
+  }
 </script>
+
 <?php 
   }catch(PDOException $e){
     echo $e->getLine();
     echo $e->getMessage();
   }
- ?>
+?>
+
 </body>
 </html>

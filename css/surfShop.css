@@ -2,6 +2,12 @@
   background-repeat: no-repeat;
   background-position: center; }
 
+body {
+  overflow-x: hidden; }
+
+.navDetail .navfix .navimg ul.menu li:nth-child(3) a {
+  color: #e97b23; }
+
 .container {
   max-width: 1170px; }
   .container .row2:after {
@@ -76,7 +82,8 @@
       position: absolute;
       width: 100%;
       /*padding-top: 100%;*/
-      top: 0; }
+      top: 0;
+      left: 0; }
     .showProd .pic_man img {
       width: 100%; }
     .showProd .pic_man #man_suit, .showProd .pic_man #man_fin, .showProd .pic_man #man_leash, .showProd .pic_man #man_wax {
@@ -94,7 +101,7 @@
     width: 100px;
     height: auto;
     position: absolute;
-    left: 25%;
+    left: 24%;
     margin-left: -100px;
     top: -45px; }
   .showProd .mo-fire svg {
@@ -344,6 +351,10 @@
 
   .forRwd {
     display: none; } }
+@media screen and (max-width: 960px) {
+  .showProd .mo-fire {
+    width: 90px;
+    left: 27%; } }
 @media screen and (max-width: 767px) {
   .forRwd {
     color: rgba(255, 255, 255, 0.8);
@@ -406,8 +417,20 @@
 
   .showProd .mo-fire {
     width: 62px;
-    left: 36%;
-    top: -27px; } }
+    left: 33%;
+    top: -27px; }
+
+  .pic_man {
+    position: relative; }
+    .pic_man .aa, .pic_man .bb, .pic_man .cc, .pic_man .dd, .pic_man .ee, .pic_man .ff, .pic_man .gg {
+      position: absolute;
+      width: 100%;
+      /*padding-top: 100%;*/
+      top: 0;
+      max-width: 350px; }
+    .pic_man img {
+      width: 100%;
+      max-width: 350px; } }
 @media screen and (max-width: 321px) {
   .barbg .changebar {
     padding-top: 15px; }
@@ -420,7 +443,19 @@
 
   .showProd .mo-fire {
     width: 60px;
-    left: 39%;
-    top: -30px; } }
+    left: 36%;
+    top: -30px; }
+
+  .pic_man {
+    position: relative; }
+    .pic_man .aa, .pic_man .bb, .pic_man .cc, .pic_man .dd, .pic_man .ee, .pic_man .ff, .pic_man .gg {
+      position: absolute;
+      width: 100%;
+      /*padding-top: 100%;*/
+      top: 0;
+      max-width: 300px; }
+    .pic_man img {
+      width: 100%;
+      max-width: 300px; } }
 .navDetail .navfix .navimg .overlay .overlay-menu .menu li:nth-child(3) a {
   color: #e97b23; }

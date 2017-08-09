@@ -23,7 +23,7 @@
           display: inline-block; }
           .footer_0 .maxContent .titlegroup .itemtitle li a {
             opacity: 1; }
-    .footer_0 .maxContent .footermember {
+    .footer_0 .maxContent .footermember, .footer_0 .maxContent .footercart {
       cursor: pointer; }
     .footer_0 .maxContent .titlegroup:after {
       content: '';

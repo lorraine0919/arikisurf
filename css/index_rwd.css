@@ -33,6 +33,9 @@
     .banner_1 .logo_canvas1 {
       display: none; }
 
+  .slogan_1 {
+    display: block; }
+
   .coating_1 .maxContent .demo {
     display: none; }
   .coating_1 .maxContent .about {
@@ -53,10 +56,10 @@
           content: '';
           clear: both; }
         .coating_1 .maxContent .demorwd .demoimg ul li {
-          padding: 10px 25px;
+          padding: 10px 55px;
           display: block;
           float: left;
-          width: 11%;
+          width: 7%;
           text-align: center; }
           .coating_1 .maxContent .demorwd .demoimg ul li img {
             width: 100%; }

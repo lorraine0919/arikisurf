@@ -3,7 +3,12 @@ ob_start();
 session_start();
 require_once("connectBooks.php");
 
-$member_no = $_SESSION["member_no"];
+if(isset($_SESSION["member_no"])==true){
+  $member_no = $_SESSION["member_no"];  
+}else{
+  $member_no = 7;
+}
+
 $wave_number = $_SESSION["map_wave"]["wave_number"];
 $_SESSION["map_reply"]["post_number"] = $_REQUEST["post_number"];
 
@@ -16,13 +21,14 @@ $pdo->exec($sqlview);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
+  <?php require_once('publicpage/head.php'); ?>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/fontawesome-stars.css">
   <link rel="stylesheet" type="text/css" href="css/discussion.css">
   <script src="js/jquery.barrating.min.js" type="text/javascript"></script>
   <script src="js/showMap.js"></script>
   <script src="js/reply.js"></script>
+  <script src="js/getStar.js"></script>
   <style type="text/css">
     .red{
       color: #ed8c00;
@@ -86,16 +92,7 @@ $pdo->exec($sqlview);
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <input class="gg" type="hidden" value="<?php echo $postRow["star_score"]; ?>">
-          </select>
-<script>
-      $(document).ready(function(){
-         $('.star').barrating({
-                theme: 'fontawesome-stars'
-           });
-         console.log($('.gg').val());
-         $('.star').barrating('set',$('.gg').val());
-       });
-</script>          
+          </select>        
 <?php 
       $sqllove = "select * from map_like where post_number=$post_number";
       $aba = $pdo->query($sqllove);
@@ -135,28 +132,36 @@ $pdo->exec($sqlview);
                           $('.report').val('');
                      });
                      var submitcount=0;
-                     $('#submit').click(function(){                           
-                          if(submitcount==0){           //送出沒點過
-                            var a = $('.report').val();
-                            console.log(a);
-                            function reqListener(){
-                              console.log(this.responseText);                  
-                          }
+                     $('#quit').click(function(){
+                        console.log(123);
+                        if(<?php echo $member_no ?>==7){
+                         alert("請登入會員");
+                       }else{
+                         $("#lightbox_11").show();
+                         $('#submit').click(function(){                        
+                            if(submitcount==0){           //送出沒點過
+                                var a = $('.report').val();
+                                console.log(a);
+                                function reqListener(){
+                                  console.log(this.responseText);                  
+                              }
 
-                          var xhr = new XMLHttpRequest();
-                          xhr.onload = reqListener;
-                          var url = "map_quittoDB.php?post_number=<?php echo $post_number?>&report="+a;
-                          console.log(url);
-                          xhr.open("get", url , true);
-                          xhr.send(null);
+                              var xhr = new XMLHttpRequest();
+                              xhr.onload = reqListener;
+                              var url = "map_quittoDB.php?post_number=<?php echo $post_number?>&report="+a;
+                              console.log(url);
+                              xhr.open("get", url , true);
+                              xhr.send(null);
 
-                          $('#lightbox_11').hide(); 
-                          $('#quit').text("已檢舉");
-                          $('#quit').css('color','#ED8C00');
-                          $('#quit').unbind();
-                        }
-                        submitcount++;
-                     })  
+                              $('#lightbox_11').hide(); 
+                              $('#quit').text("已檢舉");
+                              $('#quit').css('color','#ED8C00');
+                              $('#quit').unbind();
+                            }
+                            submitcount++;                                                                      
+                         })
+                       }//else end  
+                      });                       
                 </script>
           </div>         
       </div><!-- title -->
@@ -197,9 +202,8 @@ $pdo->exec($sqlview);
     echo  $pdorow['reply_number'].',';
   }
  ?>                ];
-            console.log(bangarr);
+            // console.log(bangarr);
             </script>
- 
 <?php 
        $sqlreply="select *
                   from member,map_reply
@@ -229,7 +233,7 @@ $pdo->exec($sqlview);
                       }else{
                           echo '<span class="red">已檢舉</sapn>';
                         }?></div>
-                    <input type="hidden" class="result" name="result" value="<?php echo $reRow["result"] ?>">
+                    <input type="hidden" class="result" name="result" value="<?php echo $reRow["reply_state"] ?>">
               </div><!-- feed -->
 <?php 
        }//while end
@@ -297,54 +301,61 @@ $pdo->exec($sqlview);
              console.log("有點到");
              var xhr = new XMLHttpRequest();
              var her = $('#feed_txt').val();
-             $('#feed_txt').val('');//把textarea的內容清空
-             console.log(her);
-             var post_number=<?php echo $post_number?>;
-             var url = "map_replyintoDB.php?feed="+her+"&post_number="+post_number;
-             console.log(url);
-             xhr.open("get", url , true);
-             xhr.send(null);
+             if(<?php echo $member_no ?>==7){
+                alert("請登入會員");
+             }else{               
+                $('#feed_txt').val('');//把textarea的內容清空
+                   console.log(her);
+                   var post_number=<?php echo $post_number?>;
+                   var url = "map_replyintoDB.php?feed="+her+"&post_number="+post_number;
+                   console.log(url);
+                   xhr.open("get", url , true);
+                   xhr.send(null);
 
-             xhr.onreadystatechange = function(){
-              if( xhr.readyState == 4){
-                if( xhr.status == 200){
-                  createTxt(xhr.responseText); 
-                }else{
-                  window.alert("錯誤".xhr.status);
-                }
-              }
-            }
+                   xhr.onreadystatechange = function(){
+                    if( xhr.readyState == 4){
+                      if( xhr.status == 200){
+                        createTxt(xhr.responseText); 
+                      }else{
+                        window.alert("錯誤".xhr.status);
+                      }
+                    }
+                  }
+             }
         });//click
         
         $('#love').click(function(){
-           // console.log("有點到");
-           var a = $('#love').attr('src');
-           // console.log(a);
-           function reqListener () {
-                  console.log(this.responseText);
-                };
-           var xhr = new XMLHttpRequest();
-           xhr.onload = reqListener;
+           console.log("有點到");
+           if(<?php echo $member_no ?>==7){
+               alert("請登入會員");
+           }else{
+               var a = $('#love').attr('src');
+               function reqListener () {
+                      console.log(this.responseText);
+                    };
+               var xhr = new XMLHttpRequest();
+               xhr.onload = reqListener;
 
-           if(a=="images/4wavepoint/heart_white.png"){
-               console.log("AAA");
-               $('#loveinfo').text("已加入收藏").fadeIn(900).fadeOut(500);;           
-               $('#love').attr('src','images/4wavepoint/heart_red.png');
-               
-               var url = "map_liketoDB.php?post_number=<?php echo $post_number?>";
-               console.log(url);
-               xhr.open("get", url , true);
-               xhr.send(null);
+               if(a=="images/4wavepoint/heart_white.png"){
+                   console.log("AAA");
+                   $('#loveinfo').text("已加入收藏").fadeIn(900).fadeOut(500);;           
+                   $('#love').attr('src','images/4wavepoint/heart_red.png');
+                   
+                   var url = "map_liketoDB.php?post_number=<?php echo $post_number?>";
+                   console.log(url);
+                   xhr.open("get", url , true);
+                   xhr.send(null);
 
-           }else{    
-               $('#loveinfo').text("已取消收藏").fadeIn(900).fadeOut(500);;           
-               $('#love').attr('src','images/4wavepoint/heart_white.png');
-               
-               var url = "map_disliketoDB.php?post_number=<?php echo $post_number?>";
-               console.log(url);
-               xhr.open("get", url , true);
-               xhr.send(null);
-           }
+               }else{    
+                   $('#loveinfo').text("已取消收藏").fadeIn(900).fadeOut(500);;           
+                   $('#love').attr('src','images/4wavepoint/heart_white.png');
+                   
+                   var url = "map_disliketoDB.php?post_number=<?php echo $post_number?>";
+                   console.log(url);
+                   xhr.open("get", url , true);
+                   xhr.send(null);
+               }
+           }//else end       
         });
 </script>                  
             </div>

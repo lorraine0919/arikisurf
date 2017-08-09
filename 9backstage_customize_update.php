@@ -43,8 +43,31 @@ try{
 			}
 		// ↑價格修改
 
+
+
+		/*↓刪除官方圖片*/
+			if(isset($_REQUEST['deleteimgnum'])){ 
+				require_once('connectBooks.php');
+				$sql = "DELETE FROM customize_officialimg WHERE officialimgNo=:officialimgNo";	
+				$pdostatement = $pdo->prepare( $sql );
+				$pdostatement->bindValue(":officialimgNo" , $_REQUEST['deleteimgnum']);
+				$pdostatement->execute();				
+			}
+		/*↑刪除官方圖片*/
+
+		/*↓修改圖片價格*/
+			if(isset($_REQUEST['patternprice'])){
+				require_once('connectBooks.php');
+				$sql = "update system_parameter set systemparameter_value = :systemparameter_value where systemparameter_no=	:systemparameter_no";	
+				$pdostatement = $pdo->prepare( $sql );
+				$pdostatement->bindValue(":systemparameter_value" , $_REQUEST['patternprice']);
+				$pdostatement->bindValue(":systemparameter_no" , $_REQUEST['offioruser']);
+				$pdostatement->execute();					
+			}
+		/*↑修改圖片價格*/
+
 		// ↓上傳官方圖片
-			if(isset($_FILES["uploadofficalimg"]["error"])){
+			// if(isset($_REQUEST["uploadofficalimg"])){
 					switch($_FILES["uploadofficalimg"]["error"]){
 					case UPLOAD_ERR_OK :
 						/*準備圖片檔名(把附檔名拿掉)*/
@@ -67,6 +90,7 @@ try{
 							$pdostatement->bindValue(":officialimg_file_name" ,$_FILES["uploadofficalimg"]["name"]);
 							$pdostatement->execute();
 						/*↑把檔名存至資料庫*/
+
 						break;
 					case UPLOAD_ERR_INI_SIZE :
 						echo "上傳檔案太大";
@@ -84,30 +108,9 @@ try{
 						echo "上傳失敗";
 
 				}
-			}
+			// }
 			
 		// ↑上傳官方圖片
-
-		/*↓刪除官方圖片*/
-			if(isset($_REQUEST['deleteimgnum'])){ 
-				require_once('connectBooks.php');
-				$sql = "DELETE FROM customize_officialimg WHERE officialimgNo=:officialimgNo";	
-				$pdostatement = $pdo->prepare( $sql );
-				$pdostatement->bindValue(":officialimgNo" , $_REQUEST['deleteimgnum']);
-				$pdostatement->execute();				
-			}
-		/*↑刪除官方圖片*/
-
-		/*↓修改圖片價格*/
-			if(isset($_REQUEST['patternprice'])){
-				require_once('connectBooks.php');
-				$sql = "update system_parameter set systemparameter_value = :systemparameter_value where systemparameter_no=	:systemparameter_no";	
-				$pdostatement = $pdo->prepare( $sql );
-				$pdostatement->bindValue(":systemparameter_value" , $_REQUEST['patternprice']);
-				$pdostatement->bindValue(":systemparameter_no" , $_REQUEST['offioruser']);
-				$pdostatement->execute();					
-			}
-		/*↑修改圖片價格*/
 }catch(PDOException $e){
   echo $e->getLine();
   echo $e->getMessage();

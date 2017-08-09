@@ -2,7 +2,7 @@
 .loading_bg{display: none;}
 body{overflow-y: scroll;}
 
-img {width: 100%;}
+.register26 img {width: 100%;}
 /*=========清除浮動=========*/
 .setdown26:after {
   content: '';
@@ -49,7 +49,7 @@ img {width: 100%;}
         text-decoration: underline; }
     .setdown26 #form26 #submit26 {  /*修改*/
       display: block;
-      color: #000;
+      color: #fff;
       margin: auto;
       width: 150px; }
 
@@ -139,4 +139,5 @@ img {width: 100%;}
     width: calc(100% + 65px); }
   .setdown26 #form26 #submit26 {  /*修改*/
     position: relative;
+    color:#fff;
     left: calc(65px/2); } }

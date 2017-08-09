@@ -28,13 +28,17 @@ $(function(){
 
 	// var hundred = $('.demoimg').width();
 	// var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
+	var coatinginfotitle=['領先全球的烤漆與塗料技術','顧慮全方位的慢磨弧線','完美呈現你的創作','扎實的填充材質','巴爾沙木手工拼接'];
+	var coatinginfo=['酋長衝浪領先全球的烤漆與塗料技術，創造出猶如稀世珍寶的特殊質感，高雅而不失威風，讓你成為每一個浪點中，居高臨下的征服者。','耐鹽水、耐UV、耐大浪的塗料，與注重流線的烤漆技術，穩重而堅固、不易斷版，讓酋長浪板陪你冒險一輩子','個性化的圖案，在輕薄表層的材質後，仍然顯色出眾而不失質感 ','縝密的填充材質，使浪板有著彈性佳、耐曬、浮力好、質輕、耐撞、不易進水等重要特性','木紋花色，沒有一塊板子會重覆，木製手工藝使每塊板子都像一件藝術品，非常值得收藏保存。']
 	var count = 0;
 	// console.log(ulmarginleft/hundred);
 		$('#rwdcoatingleft').click(function(){
 			if(count<4){
 				count++;
-				$('.coating_1 .demoimg ul').animate({'margin-left':'-=82%'});
+				$('.coating_1 .demoimg ul').animate({'margin-left':'-=72%'});
 				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
+				$('.coating_1 .introduce h2').text(coatinginfotitle[count]);
+				$('.coating_1 .introduce p').text(coatinginfo[count]);
 				// console.log(ulmarginleft/hundred);
 				// console.log(count);				
 			}
@@ -43,8 +47,10 @@ $(function(){
 		$('#rwdcoatingright').click(function(){
 			if(count>0){
 				count--;
-				$('.coating_1 .demoimg ul').animate({'margin-left':'+=82%'});
+				$('.coating_1 .demoimg ul').animate({'margin-left':'+=72%'});
 				var ulmarginleft = parseInt($('.coating_1 .demoimg ul').css('margin-left'));
+				$('.coating_1 .introduce h2').text(coatinginfotitle[count]);
+				$('.coating_1 .introduce p').text(coatinginfo[count]);
 				// console.log(ulmarginleft/hundred);
 				// console.log(count);		
 			}
@@ -56,15 +62,15 @@ $(function(){
 
 /*以下是換圖動畫*/
 	if($( window ).width()>960){
-		$('.picture_1 .photo').mouseover(function(){
-				var index = $(this).index()+1;
-				$(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
-				$(this).addClass('selected');
-			}).mouseleave(function(){
-				var index = $(this).index()+1;
-				$(this).children('img').attr('src','images/1common/picselect'+index+'.png');
-				$(this).removeClass('selected');
-			});
+		// $('.picture_1 .photo').mouseover(function(){
+		// 		var index = $(this).index()+1;
+		// 		// $(this).children('img').attr('src','images/1common/picselect'+index+'_s.png');
+		// 		$(this).addClass('selected');
+		// 	}).mouseleave(function(){
+		// 		var index = $(this).index()+1;
+		// 		// $(this).children('img').attr('src','images/1common/picselect'+index+'.png');
+		// 		$(this).removeClass('selected');
+		// 	});
 
 			$('.picture_1 .photo').click(function(){
 				// var condition = 1;
@@ -79,7 +85,12 @@ $(function(){
 				}).fadeIn(1000);
 				// $('.picture_1 .selectpicshow').children('img').toggleClass('fadeIn');
 				/*背後透明圖*/
+
+				$(this).addClass('selected');
+				$(this).off('mouseleave');
+				$('.picture_1 .photo').not(this).removeClass('selected');
 				$('.picture_1 .maxContent').css({'background-image':'url("images/1common/picselectbg_'+index+'.png")'});
+
 			});
 	}
 	

@@ -23,24 +23,26 @@ require_once('connectBooks.php');
 <body>
 <!-- =================後臺管理================== -->
 <!--(bake module/backstage_header.html)--><?php require_once('publicpage/backstage_header.php'); ?>
+
+
+
+
     <div id="main-content">
         <div class="wrapper">
-            <div class="row mt">
-                <div class="whitearea col-lg-12 table">
-                    <div class="backstage_orderCustomize">
-                        <div class="CT_navbar">
-                            <ul>
-                                <li class="nav-item have" id="nav_CT">客製浪板</li>
-                                <li class="nav-item" id="nav_HT">歷史訂單</li>
-                            </ul>
-                        </div><!-- CT_navbar -->
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">客製浪板</a></li>
+            <li><a data-toggle="tab" href="#menu1">歷史訂單</a></li>
+           
+          </ul>
 
-                        <div class="OD_box item-box" id="OD_box">
+          <div class="tab-content" style="font-size: 1.3em;">
+            <div id="home" class="tab-pane fade in active">
+              <div class="OD_box item-box model content-panel" id="OD_box">
                             <div class="OD-title">
                                 <h3>客製浪板訂單管理</h3>
                             </div>
                             <div class="OD_box">
-                                <table>
+                                <table class="table table-bordered table-striped table-condensed">
                                     <tr>
                                         <th>訂單編號</th>
                                         <th>會員編號</th>
@@ -68,19 +70,19 @@ require_once('connectBooks.php');
                                         <td><?php echo $OD_CT["member_no"]; ?></td>
                                         <td><?php echo $OD_CT["customize_order_date"]; ?></td>
                                         <td><?php echo $OD_CT["customize_order_total"]; ?></td>
-                                        <td>
+                                        
                                             <?php 
                                                 if($OD_CT["customize_order_status"] == 1){
-                                                    echo "未付款";
+                                                    echo "<td style='color:blue'>未付款</td>";
                                                 }else if($OD_CT["customize_order_status"]==2){
-                                                    echo "未出貨";
+                                                    echo "<td style='color:red'>未出貨</td>";
                                                 }else if($OD_CT["customize_order_status"]==3){
-                                                    echo "已出貨";
+                                                    echo "<td style='color:blue'>已出貨</td>";
                                                 }else if($OD_CT["customize_order_status"]==4){
-                                                    echo "申請中";
+                                                    echo "<td style='color:#ed8c00;'>申請中</td>";
                                                 }
                                             ?>
-                                        </td>
+                                        
                                         <td class="hideinput" style="display:none">
                                             <input type="hidden" name="" value="<?php echo $OD_CT["customize_model_name"] ?>">
                                             <input type="hidden" name="" value="<?php echo $OD_CT["customize_material_name"] ?>">
@@ -111,15 +113,16 @@ require_once('connectBooks.php');
                                 ?>
                                 </table>
                             </div>
-                        </div><!-- OD_box -->
-
-                        <div class="HT_box item-box" id="HT_box">
+                        </div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+              <div class="HT_box item-box model content-panel" id="HT_box">
                             <div class="OD-title">
                                 <h3>歷史訂單管理</h3>
                             </div>
 
                             <div class="OD_box">
-                                <table>
+                                <table class="table table-bordered table-striped table-condensed">
                                     <tr>
                                         <th>訂單編號</th>
                                         <th>會員編號</th>
@@ -161,7 +164,14 @@ require_once('connectBooks.php');
                                 </table>
                             </div>
                             
-                        </div> <!-- HT_box -->
+                        </div> 
+            </div>
+           
+          </div>
+           
+                <div class="whitearea col-lg-12 table">
+                    <div class="backstage_orderCustomize">
+                      
 
 
                         <div id="lightbox">
@@ -245,6 +255,7 @@ require_once('connectBooks.php');
                                 <div class="clearfix"></div>
                                 
                                 <div class="btn">
+                                    <input type="hidden" name="" value="" id="insideStatus">
                                     <input type="button" name="" value="確認完成" id="closeLG" class=" btn btn-primary btn-sm pressgolightbox">
                                     <input type="button" value="取消交易" class="OD_btncancle btn btn-primary btn-sm pressgolightbox">
                                 </div>
@@ -252,7 +263,7 @@ require_once('connectBooks.php');
                         </div><!--lightbox-->
                 </div>
             </div>
-        </div>
+        
     </div>
 
 

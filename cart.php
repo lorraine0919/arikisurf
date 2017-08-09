@@ -24,7 +24,22 @@
 <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
 	<?php
 	if(isset($_SESSION["account"]) == false){
-		echo "<script>window.alert('尚未登入,請登入');location.href='index.php';</script>";
+		echo "<script>
+				
+				$(window).load(function(){
+					$('.loginremindlightboxgroup').show();
+					$('#gotologin').click(function(){
+						$('.loginremindlightboxgroup').fadeOut(200).delay(200).queue(function(){
+							$('#lightbox19').fadeIn(200);
+						});
+						$('#close19').click(function(){
+							location.href='index.php';
+						});
+						
+					});
+				});
+		
+			</script>";
 	}else{
 		try{
 			require_once("connectBooks.php");
@@ -443,10 +458,10 @@
 			<div class="give-money">
 				<div class="giveInfo">
 					<ul>
-						<li><h3 class="give-sp-item1">戶名</h3><span class="give-sp-item2">武二参</span></li>
-						<li><h3 class="give-sp-item1">銀行代號</h3><span class="give-sp-item2">700-郵局</span></li>
-						<li><h3 class="give-sp-item1">分行名稱</h3><span class="give-sp-item2">3重貧民窟</span></li>
-						<li><h3 class="give-sp-item1">帳號</h3><span class="give-sp-item2">0123456789</span></li>
+						<li><h3 class="give-sp-item1">戶名</h3><span class="give-sp-item2">和睦沉</span></li>
+						<li><h3 class="give-sp-item1">銀行代號</h3><span class="give-sp-item2">700</span></li>
+						<li><h3 class="give-sp-item1">分行名稱</h3><span class="give-sp-item2">中華郵政</span></li>
+						<li><h3 class="give-sp-item1">帳號</h3><span class="give-sp-item2">700-9487999887</span></li>
 					</ul>
 				</div>
 			</div>
@@ -578,6 +593,16 @@
 		}
 	}
 	?>
+	<div class="loginremindlightboxgroup">
+		<div class="loginremindlightboxarea">
+			<h2 class="loginremindlightboxtitle"></h2>
+			<p class="loginremindlightboxcontent">請先登入</p>
+			<a class="arikicommon_next_btn" id="gotologin">前往登入</a>
+			<div id="loginremindclosebtn">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
 <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
 </body>
 </html>

@@ -18,13 +18,16 @@
 
 .hb {font-size: 0px;}
 #login1{color:#fff;}
+#picLogin img{
+  width: 100%;
+  max-width: 80px;
+}
 @media screen and (max-width: 767px) {
 
   #picLogo{display: none;}
   #picLogin{
     display: block;
   }
-  #picLogin img{width: 100%;}
   /*=========清除浮動=========*/
   .navimg:after {
     content: '';

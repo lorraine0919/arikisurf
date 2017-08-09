@@ -16,7 +16,7 @@
 		$member -> bindValue(":address",$_REQUEST["addr"]);
 		$member -> bindValue(":phone",$_REQUEST["tel"]);
 		$member -> bindValue(":email",$_REQUEST["mail"]);
-		$member -> bindValue(":mugshot","images/7member/mugshots/KimTaeHee.jpg");
+		$member -> bindValue(":mugshot","images/7member/mugshots/guest.jpg");
 		$member -> bindValue(":suspension","1");
 		$member -> bindValue(":join_time",date("Y-m-d H:i:s",time()));
 		$member -> bindValue(":renew_time",date("Y-m-d H:i:s",time()));	
@@ -32,7 +32,7 @@
 		$_SESSION["member_no"] = $loginRow["member_no"];
 	    $_SESSION["account"] = $loginRow["account"];
 	    $_SESSION["psw"] = $loginRow["psw"];
-	    $_SESSION["mugshot"] = $memRow["mugshot"];
+	    $_SESSION["mugshot"] = $loginRow["mugshot"];
 
 	}catch(PDOException $ex){
 		echo "資料庫操作失敗,原因：",$ex->getMessage(),"<br>";

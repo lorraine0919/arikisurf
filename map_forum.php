@@ -134,7 +134,7 @@ if(isset($_SESSION["member_no"])==true){
                          <h3><?php echo $dataItem["post_title"]  ?></h3>
                          <div class="day"><?php echo substr($dataItem["post_date"],0,10)?></div>
                          <div class="tt">
-                               <?php echo $dataItem["post_text"]  ?>
+                             <?php echo $dataItem["post_text"]  ?>
                          </div>             
                      </div>
                  </a>

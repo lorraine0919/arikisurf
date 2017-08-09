@@ -95,7 +95,13 @@ $pdo->exec($sqlview);
 <?php 
       $sqllove = "select * from map_like where post_number=$post_number";
       $aba = $pdo->query($sqllove);
-      $love = ($aba->rowCount()!=0) ? "heart_red.png" : "heart_white.png";
+      if($member_no==7){
+         $love = "heart_white.png";
+      }else{
+         $love = ($aba->rowCount()!=0) ? "heart_red.png" : "heart_white.png";
+      }
+      
+
 ?>
           <div class="lovepic">
                <img src="images/4wavepoint/<?php echo $love;?>" id="love">
@@ -199,7 +205,8 @@ $pdo->exec($sqlview);
   while($pdorow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
     echo  $pdorow['reply_number'].',';
   }
- ?>                ];
+?>               
+                 ];
             // console.log(bangarr);
             </script>
 <?php 

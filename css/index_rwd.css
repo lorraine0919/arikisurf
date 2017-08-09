@@ -4,6 +4,9 @@
   display: none; }
 
 @media screen and (max-width: 960px) {
+  body {
+    overflow-y: scroll; }
+
   .map_box {
     display: none; }
 

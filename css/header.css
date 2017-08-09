@@ -332,7 +332,18 @@
     width: 40%; }
 
   .arikicommon_breadcrumb {
-    display: none; } }
+    display: none; } 
+
+  /*以下是慕晨寫的*/
+  .navfix .navimg .menu{
+    background-color: rgba(0,0,0,0.7);
+    
+  }
+  
+/*以上是慕晨寫的*/
+
+
+  }
   #modalContainer {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -448,3 +459,4 @@
 .navDetail .navfix .navimg ul.menu li a:hover{
   color: #ffbb58;
 }
+

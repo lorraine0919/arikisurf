@@ -59,7 +59,7 @@
                             }
                          ?>    
                         </li>
-                        <li><a href="cart.php" class="rwd">購物車</a></li>
+                        <li><a class="rwd" id="rwdnavcart">購物車</a></li>
                     </ul>
 
                         <div class="iconGroup">
@@ -83,7 +83,7 @@
                                     </span>
                                 </li>
                                 <li class="line"></li>
-                                <li><a href="cart.php"><img src="images/1common/shop.png" alt="">購物車</a></li>
+                                <li><a id="pcnavcart"><img src="images/1common/shop.png" alt="">購物車</a></li>
                             </ul>
                         </div>
                     </div>
@@ -123,5 +123,21 @@
         $('.close-menu').on('click', function() {
           $('.overlay').removeClass('open');
         });
+        /*購物車按下去判斷是否登入*/
+        $('#rwdnavcart').click(function(){
+            if($('#login2').text()=='會員登入'){
+                $('#lightbox19').fadeIn(500);
+            }else{
+                location.href="cart.php";
+            }
+        });
+        $('#pcnavcart').click(function(){
+            if($('#login2').text()=='會員登入'){
+                $('#lightbox19').fadeIn(500);
+            }else{
+                location.href="cart.php";
+            }
+        });
       });
+
     </script>

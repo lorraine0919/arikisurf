@@ -106,9 +106,6 @@
             <input type="password" minlength="6" maxlength="12" placeholder="密碼" class="input19" id="memPsw">
             <p class="help19">
                 <span>
-                    <a href="7member_register.php">忘記密碼</a>  | 
-                </span>
-                <span>
                     <a href="7member_register.php">馬上註冊</a>
                 </span>
             </p>

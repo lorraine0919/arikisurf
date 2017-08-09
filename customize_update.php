@@ -112,6 +112,7 @@ ob_start();
 			    $_SESSION["account"] = $memRow["account"];
 		        $_SESSION["member_no"] = $memRow["member_no"];
 		        $_SESSION["psw"] = $memRow["psw"];
+		        $_SESSION["mugshot"] = $memRow["mugshot"];
 				echo '1'.'|';
 				echo $memRow["name"].'|';
 				echo $memRow["phone"].'|';

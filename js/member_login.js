@@ -72,6 +72,7 @@ $(function(){
 	            'memId2' : $('#memId').val() ,
 	            'memPsw2' :  $('#memPsw').val()
 	             },function(rs){
+	             	console.log(rs);
 		            if(rs == 1){
 		            	alert("您已被停權<br>");
 		                return;

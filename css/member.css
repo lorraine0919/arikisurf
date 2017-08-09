@@ -60,6 +60,15 @@ body{overflow-y: scroll;}
     padding: 0.7em 1.25em;
     background-color: rgba(217, 217, 217, 0.2); }
 
+/*以下是慕晨寫的*/
+
+.navDetail .navfix .navimg .iconGroup #login1{
+  color: #ffbb58;
+}
+
+/*以上是慕晨寫的*/
+
+
 @media screen and (max-width: 949px) {
   .left20 {
     /*sidebar20*/ }
@@ -117,6 +126,7 @@ body{overflow-y: scroll;}
       .left20 .sidebar20 .menu20 li a{
         font-size: 14px; 
   }
+
     /*以上是慕晨寫的*/
 
 

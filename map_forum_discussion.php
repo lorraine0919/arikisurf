@@ -40,6 +40,7 @@ $pdo->exec($sqlview);
      <a href="index.php">首頁</a><i class="fa fa-caret-right" aria-hidden="true"></i>
       <a href="map.php">衝浪地圖</a><i class="fa fa-caret-right" aria-hidden="true"></i><a href="map_forum.php">討論區</a><i class="fa fa-caret-right" aria-hidden="true"></i>討論區內文
       <!--(bake module/headerend.html)--><?php require_once('publicpage/headerend.php'); ?>
+    <input type="hidden" id="post_number" class="post_number" name="post_number" value="<?php echo $post_number ?>">
      <div id="lightbox_11">
           <div class="gun">
                <span class="reason">檢舉原因</span> 
@@ -199,20 +200,6 @@ $pdo->exec($sqlview);
     }//while end
 ?>             
             <div class="back">
-            <script>
-            var bangarr=[
-<?php 
-  $sqlreplybang="select *   
-                 from  map_replybang 
-                 where post_number=$post_number;";
-  $pdostatement=$pdo->query($sqlreplybang);
-  while($pdorow=$pdostatement->fetch(PDO::FETCH_ASSOC)){
-    echo  $pdorow['reply_number'].',';
-  }
-?>               
-                 ];
-            // console.log(bangarr);
-            </script>
 <?php 
        $sqlreply="select *
                   from member,map_reply
@@ -234,7 +221,6 @@ $pdo->exec($sqlview);
                               <?php echo $reRow["reply_content"] ?>                              
                          </div>
                          <input type="hidden" class="reply_number" name="reply_number" value="<?php echo $reRow["reply_number"]; ?>">
-                         <input type="hidden" class="post_number" name="post_number" value="<?php echo $post_number ?>">
                     </div><!-- feed_c -->                                         
                     <div class="quit many"><?php
                     if($reRow["reply_state"]==1){

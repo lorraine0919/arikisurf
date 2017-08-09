@@ -143,7 +143,7 @@ body{
 				  position: absolute;
 				  left:24%;
 				  margin-left: -100px;
-				  top: -45px;
+				  bottom: 78%;;
 				}
 				.mo-fire svg {
 				  width: 100%;
@@ -538,6 +538,8 @@ body{
 	    }
 	}
 		//----lightboxend----
+
+
 		@media screen and (min-width:768px){
 			#prodTitleM{
 				display: none;
@@ -644,9 +646,8 @@ body{
     	   }
     	.showProd{
 		   .mo-fire {
-				  width: 62px;
-				  left:33%;
-				  top: -4%;
+				  display: none;
+				  
 				}	
     	 }
     	 	.pic_man{
@@ -657,6 +658,7 @@ body{
 					      width: 100%;
 					      /*padding-top: 100%;*/
 					      top: 0;
+					      left:0;
 					      max-width: 350px;
 					      
 					    }
@@ -684,11 +686,11 @@ body{
 		  	max-height: 510px;
 		  }
 		  .showProd{
-		   .mo-fire {
-			  width: 60px;
-			  left:36%;
-			  top: -30px;
-			}
+		 //   .mo-fire {
+			//   width: 60px;
+			//   left:38%;
+			 
+			// }
          }
          	.pic_man{
 					position: relative;

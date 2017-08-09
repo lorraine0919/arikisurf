@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    if(sessionStorage.length == 0){
+    if(sessionStorage.getItem("mapcountloading") === null){
         $('.loading_bg').css('display','block');
         $('body').css('overflow-y','scroll');
     }

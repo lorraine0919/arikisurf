@@ -1,6 +1,3 @@
-.br-wrapper.br-theme-fontawesome-stars{
-  
-}
 .loading_bg{
   display: none;
 }
@@ -184,6 +181,7 @@ a {
       display: inline-block; }
     .bg_11 .title .gol{
       float:right;
+      position: relative;
     }  
     .bg_11 .title div {
       float: left;
@@ -401,9 +399,6 @@ a {
         float: none;
         margin: 0 auto;
       }  
-      .bg_11 .title .gol .star_bg{
-        /*margin-left: 12%;*/
-      }
       .bg_11 .title h1 {
         float: none;
         display: block;
@@ -451,7 +446,7 @@ a {
     right: 0px; } }
 
   #loveinfo{
-    display: none;
+    display: none !important;
     position: absolute;
     top: -500%;
     right: 0;

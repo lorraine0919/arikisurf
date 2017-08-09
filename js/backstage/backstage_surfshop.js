@@ -11,6 +11,7 @@ $(function(){
 
 	/*↓按按鈕後改顏色*/
 	$('.btn-primary').click(function(){
+		alert('修改成功');
 		$(this).addClass('active').siblings('input');
 		$(this).siblings('.btn-primary').removeClass('active');
 	});
@@ -33,6 +34,7 @@ $(function(){
 
 	/*↓資料修改*/
 		$('.equchangebtn').click(function(){
+			alert('修改成功');
 			console.log($(this).parent().siblings().children('.quachange').val());
 			$.post('9backstage_surfshop_update.php',{
 				    'prod_no' : $(this).siblings('.prod_no').val() , 

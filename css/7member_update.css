@@ -44,6 +44,12 @@
   .right20 .row21 .gender21 {width: calc(calc(100% - 5.5em - 2vw)/2 - 4px);}
   .right20 .row21 .dist21 {width: calc(calc(100% - 5.5em - 2vw)/2 - 4px - 6vw);}
 
+      /*以下是慕晨寫的*/
+  .right20 .row21 .dist21{
+    width: 31%;
+  }
+  /*以上是慕晨寫的*/
+
 }
 /*平板*/
 @media screen and (min-width: 950px) {
@@ -68,6 +74,9 @@
     min-width: 112px;
   }
 
+
+  
+
 }
 
 /*桌機*/
@@ -87,6 +96,7 @@
     width: calc(45px + 5vw);
     padding-left: 1em; }
   .right20 .row21 .dist21 {width: calc(70px + 3vw); }
-  
+
+
 }
 

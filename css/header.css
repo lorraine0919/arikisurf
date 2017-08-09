@@ -220,8 +220,8 @@
                 padding: 0 20px;
                 transition: 0.5s; }
                 .navDetail .navfix .navimg .overlay .overlay-menu .menu li a:hover {
-                  color: #ed8c00; }
-                  #login1:hover{color: #ed8c00;}
+                  color:  #ffbb58; }
+                  #login1:hover{color: #ffbb58;;}
         .navDetail .navfix .navimg .logo {
           width: 15%;
           display: inline-block;
@@ -277,7 +277,7 @@
               color: #fff;
               transition: 0.5s; }
               .navDetail .navfix .navimg .iconGroup ul li a:hover {
-                color: #ed8c00; }
+                color:  #ffbb58; }
         .navDetail .navfix .navimg ul.menu {
           display: inline-block;
           width: 57%;

@@ -122,7 +122,7 @@ function First(){
 
     $('.customize-cancle').click(function(){
         var str;
-        str = prompt("請說出取消原因");
+        str = prompt("因為製作費昂貴，如不說出取消原因，將無法為您取消訂單。");
         if(str==""){
             alert("已關閉");
         }else{
@@ -138,8 +138,8 @@ function First(){
     
     $('.FT-cancle').click(function(){
         var FT_str;
-        FT_str = prompt("請說出取消原因");
-        if(FT_str==""){
+        FT_str = confirm("確定取消訂單嗎?")
+        if(FT_str=="false"){
             alert("已關閉");
         }else{
             $.post("surf_cancle.php",{

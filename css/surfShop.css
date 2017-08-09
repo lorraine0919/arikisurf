@@ -103,7 +103,7 @@ body {
     position: absolute;
     left: 24%;
     margin-left: -100px;
-    top: -45px; }
+    bottom: 75%; }
   .showProd .mo-fire svg {
     width: 100%;
     height: auto;
@@ -417,8 +417,7 @@ body {
 
   .showProd .mo-fire {
     width: 62px;
-    left: 33%;
-    top: -4%; }
+    left: 35%; }
 
   .pic_man {
     position: relative; }
@@ -427,6 +426,7 @@ body {
       width: 100%;
       /*padding-top: 100%;*/
       top: 0;
+      left: 0;
       max-width: 350px; }
     .pic_man img {
       width: 100%;
@@ -443,8 +443,7 @@ body {
 
   .showProd .mo-fire {
     width: 60px;
-    left: 36%;
-    top: -30px; }
+    left: 38%; }
 
   .pic_man {
     position: relative; }

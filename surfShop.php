@@ -78,28 +78,7 @@
 			<img src="images/3accessories/0.png">
 			<div class="aa">
 			   <img src="images/3accessories/1.png">
-			    <div class="bb">
-			      <img src="images/3accessories/2.png" class="man_bb">
-			      <div class="cc">
-			       <img src="images/3accessories/3.png">
-			        <div class="dd">
-			         <img src="images/3accessories/4.png">
-			          <div class="ee">
-			           <img src="images/3accessories/5.png" class="man_ee">
-			            <div class="ff">
-			             <img src="images/3accessories/6.png" class="man_ff">
-			              <div class="gg">
-			                <img src="images/3accessories/7.png" class="man_gg">
-			              </div>
-			            </div>
-			          </div>
-			        </div>
-			      </div>
-			    </div>
-			  </div>
-			  
-
-			<div class="mo-fire">
+			   <div class="mo-fire">
 			  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 width="125px" height="189.864px" viewBox="0 0 125 189.864" enable-background="new 0 0 125 189.864" xml:space="preserve">
 			<path class="flame-main" fill="#F36E21" d="M76.553,186.09c0,0-10.178-2.976-15.325-8.226s-9.278-16.82-9.278-16.82s-0.241-6.647-4.136-18.465
@@ -121,6 +100,28 @@
 
 
 			</div>
+			    <div class="bb">
+			      <img src="images/3accessories/2.png" class="man_bb">
+			      <div class="cc">
+			       <img src="images/3accessories/3.png">
+			        <div class="dd">
+			         <img src="images/3accessories/4.png">
+			          <div class="ee">
+			           <img src="images/3accessories/5.png" class="man_ee">
+			            <div class="ff">
+			             <img src="images/3accessories/6.png" class="man_ff">
+			              <div class="gg">
+			                <img src="images/3accessories/7.png" class="man_gg">
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			  
+
+			
 		</div>
 	</div>
   </div>

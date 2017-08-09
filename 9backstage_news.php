@@ -97,8 +97,12 @@
         </p> -->
 
         <p class="newsimg">
-          <input name="newsimg" type="file" class="news-input">
+          <input name="newsimg" type="file" class="news-input" id="backstage_news_img">
         </p>
+        <div class="newspic-preview">
+          <div class="newspot">預覽圖片</div>
+          <div class="pic-preview"><img id="preview-image" src=""></div>
+        </div>
         
         <p class="newstxt">
           <textarea name="newstxt" class="news-input" placeholder="請輸入文章內容"></textarea>
@@ -130,14 +134,20 @@
        <!--  <p class="newsdate">
           <input name="newsdate" type="date" class="edit_news_date news-input" value="">
         </p> -->
-
+        
         <p class="newsimg">
+        <div class="nowpic">目前圖片：
           <span class="place_img">
             <img src="" id="place_img">
           </span>
-          <input name="newsimg" type="file" class="edit_news_img news-input">
+        </div>
+        <div class="newspic-preview">
+         <div class="newspot">修改圖片：
+          <div class="pic-preview"><img id="preview-edit-image" src=""></div>
+         </div>
+        </div>
+          <input name="newsimg" type="file" class="edit_news_img news-input" id="backstage_newsedit_img">
         </p>
-        
         <p class="newstxt">
           <textarea name="newstxt" class="edit_news_txt news-input" value=""></textarea>
         </p>
@@ -152,6 +162,8 @@
 </div>
 
 <!--(bake module/backstage_footer.html)--><?php require_once('publicpage/backstage_footer.php'); ?>
+
+<script src="js/9backstage-news-img-preview.js"></script>
 </body>
 
 </html>

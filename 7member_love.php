@@ -28,10 +28,11 @@ $like = $pdo->query($sql);
 <?php require_once('publicpage/headerend.php'); ?>
 <?php require_once('publicpage/member_top.php'); ?>
 <!-- =================會員專區================== -->
-<div class="member_love_23">
-    <div class="love-title title20">
+<div class="love-title title20">
          已收藏的文章
     </div>
+<div class="member_love_23">
+    
 <?php 
      $count=0;
      while ($likeRow = $like->fetch(PDO::FETCH_ASSOC)) {     

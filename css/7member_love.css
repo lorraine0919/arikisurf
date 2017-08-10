@@ -153,6 +153,11 @@
         position: relative;
         margin:3% auto;
         overflow: hidden; }  
+
+    .title20{
+    margin-top: 0px !important;
+    display: block !important;
+  }     
 } 
 
    

@@ -105,4 +105,10 @@ tbody{
 .wave_title{
   width: 10%;
 }
+.model.content-panel .table tr th{
+  font-size: 16px;
+}
+.postBang{
+  width: 24%;
+}
 /*以上是慕晨打的*/

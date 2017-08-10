@@ -6,9 +6,12 @@ $member_no=$_SESSION["member_no"];
 $sql="select *
       from map_like,map_post
       where map_like.post_number = map_post.post_number
-      and map_like.member_no=$member_no
-      order by post_date DESC;";
-$like = $pdo->query($sql);
+      and map_like.member_no=:member_no
+      order by post_date DESC";
+$like = $pdo->prepare($sql);
+$like->bindValue(':member_no',$member_no);
+$like->execute();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

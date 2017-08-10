@@ -8,8 +8,21 @@ if(isset($_SESSION["member_no"])==true){
 }else{
   $member_no = 7;
 }
+echo $_SESSION["map_wave"]["wave_number"];
+echo "有沒有".isset($_SESSION["map_wave"]["wave_number"]);
 
-$wave_number = $_SESSION["map_wave"]["wave_number"];
+if(isset($_SESSION["map_wave"]["wave_number"])==true){
+    $wave_number = $_SESSION["map_wave"]["wave_number"];
+}else{
+    $sqlpic="select wave_number 
+             from map_post
+             where post_number=$post_number";
+    $w_number = $pdo->query($sqlpic);
+    $w_number_data = $w_number->fetch(PDO::FETCH_ASSOC);   
+    $wave_number = $w_number_data["wave_number"]; 
+}
+
+
 $_SESSION["map_reply"]["post_number"] = $_REQUEST["post_number"];
 
 $post_number=$_REQUEST["post_number"];
@@ -76,7 +89,6 @@ $pdo->exec($sqlview);
 <?php 
      $sql2="select * from member,map_post 
             where member.member_no = map_post.member_no 
-            and wave_number=$wave_number 
             and post_number=$post_number";
      $post = $pdo->query($sql2);
      while ($postRow = $post->fetch(PDO::FETCH_ASSOC)) {    
@@ -186,10 +198,11 @@ $pdo->exec($sqlview);
                   </div>
             </div>
             <div class="box_b">
+           
                   <div class="pic">
-                         <?php 
+                    <?php 
                          $src = "images/4wavepoint/".$wave_number."/fou/".$postRow["post_img"]; 
-                         ?>
+                    ?>
                          <img src="<?php echo $src ?>">                       
                   </div>
                   <div class="txt">

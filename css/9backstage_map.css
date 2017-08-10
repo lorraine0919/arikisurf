@@ -80,3 +80,15 @@ ul.sidebar-menu li a[href="9backstage_map.php"] {
 .postT{
   width: 150px !important;
 }
+
+/*以下是慕晨打的*/
+.nav-tabs > li > a{
+  font-size: 18px;
+}
+.table thead{
+  font-size: 18px;
+}
+tbody{
+  font-size: 18px;
+}
+/*以上是慕晨打的*/

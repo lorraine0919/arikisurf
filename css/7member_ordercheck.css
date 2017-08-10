@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .clearfix {
   clear: both; }
 
@@ -156,47 +157,49 @@
           margin: 2% auto; }
       .member_ordercheck_23 .lightbox .customize-LB {
         display: none; }
-        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info {
-          padding: 0;
-          text-align: center;
-          line-height: 30px; }
-          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info .white {
-            background-color: #fff; }
-          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info .cust-OD-txt {
+        .member_ordercheck_23 .lightbox .customize-LB .cust-box {
+          padding: 0 20px; }
+          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info {
+            padding: 0;
+            text-align: center;
+            line-height: 30px; }
+            .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info .white {
+              background-color: #fff; }
+            .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info .cust-OD-txt {
+              background-color: #fff;
+              border-left: 10px solid #ddd;
+              box-sizing: border-box; }
+            .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info h4 {
+              color: #11314c; }
+          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput {
+            box-sizing: border-box;
+            padding: 10px 27px;
             background-color: #fff;
-            border-left: 10px solid #ddd;
+            border-top: 10px solid #ddd;
             box-sizing: border-box; }
-          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-Info-box .cust-OD-Info h4 {
-            color: #11314c; }
-        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput {
-          box-sizing: border-box;
-          padding: 10px 27px;
-          background-color: #fff;
-          border-top: 10px solid #ddd;
-          box-sizing: border-box; }
-          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput ul li h4 {
-            display: inline-block;
-            width: 20%;
-            margin: 1.5% 6%; }
-          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput ul li span {
-            display: inline-block;
-            margin-left: 1%; }
-        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img {
-          width: 50%;
-          margin: 0 auto;
-          padding-top: 170%;
-          position: relative;
-          overflow: hidden; }
-          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img img {
-            width: 100%;
-            position: absolute;
-            top: -14%;
-            left: 0;
-            right: 0;
-            margin: auto; }
-        .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-btn {
-          text-align: center;
-          margin-top: 5%; }
+            .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput ul li h4 {
+              display: inline-block;
+              width: 20%;
+              margin: 1.5% 6%; }
+            .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-userInput ul li span {
+              display: inline-block;
+              margin-left: 1%; }
+          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img {
+            width: 50%;
+            margin: 0 auto;
+            padding-top: 209%;
+            position: relative;
+            overflow: hidden; }
+            .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img img {
+              width: 100%;
+              position: absolute;
+              top: 1%;
+              left: 0;
+              right: 0;
+              margin: auto; }
+          .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-btn {
+            text-align: center;
+            margin-top: 5%; }
       .member_ordercheck_23 .lightbox .fitting-LB {
         display: none; }
         .member_ordercheck_23 .lightbox .fitting-LB .fitt-box .FT-list-title {
@@ -559,3 +562,12 @@
         text-align: center; }
     .member_ordercheck_23 .lightbox #history-LB {
       display: none; } }
+/*以下是慕晨打的*/
+@media screen and (max-width: 910px) {
+  .left20 .sidebar20 .menu20 li a[href="7member_ordercheck.php"] {
+    background-color: #ed9046; } }
+@media screen and (min-width: 911px) {
+  .left20 .menu20 a[href="7member_ordercheck.php"] {
+    color: #ed9046;
+    box-shadow: -5px 0px 0px #ed9046; } }
+/*以上是慕晨打的*/

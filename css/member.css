@@ -60,6 +60,15 @@ body{overflow-y: scroll;}
     padding: 0.7em 1.25em;
     background-color: rgba(217, 217, 217, 0.2); }
 
+/*以下是慕晨寫的*/
+
+.navDetail .navfix .navimg .iconGroup #login1{
+  color: #ffbb58;
+}
+
+/*以上是慕晨寫的*/
+
+
 @media screen and (max-width: 949px) {
   .left20 {
     /*sidebar20*/ }
@@ -92,16 +101,15 @@ body{overflow-y: scroll;}
         font-size: 0px; }
       .left20 .sidebar20 .menu20 li {
         width: 100%;
-        vertical-align: middle; }
+        vertical-align: middle;
+        font-size: 15px; }
       .left20 .sidebar20 .menu20 li a {
         float: left;
         vertical-align: middle;
-        width: calc(25% - 4px);
+        width: calc(25% - 22px);
         height: 2.5em;
         line-height: 2.5em;
-        padding: 0px;
-        border: 2px solid #344c63;
-        font-size: 18px;
+        border: 1px solid #344c63;
         text-align: center;
         background-color: #0D2941; }
       .left20 .sidebar20 .menu20 li a:hover {
@@ -113,7 +121,16 @@ body{overflow-y: scroll;}
         text-align: center;
         font-size: 23px;
         font-weight: bold;
-        letter-spacing: 6px; } }
+        letter-spacing: 6px; } 
+    /*以下是慕晨寫的*/
+      .left20 .sidebar20 .menu20 li a{
+        font-size: 14px; 
+  }
+
+    /*以上是慕晨寫的*/
+
+
+      }
 
 @media screen and (min-width: 950px) {
   .main20 {
@@ -176,7 +193,12 @@ body{overflow-y: scroll;}
       text-align: right;
       font-size: 20px; }
 
-  /*right20*/ }
+  /*right20*/ 
+  
+
+
+
+}
 /*平板*/
 @media screen and (min-width: 1320px) {
   .main20 {
@@ -239,4 +261,23 @@ body{overflow-y: scroll;}
       text-align: right;
       font-size: 20px; }
 
-  /*right20*/ }
+  /*right20*/ 
+
+
+/*以下是慕晨寫的*/
+  .main20{
+    padding-top: 9%;
+  }
+/*以上是慕晨寫的*/
+
+
+
+}
+
+
+
+/*以下是慕晨寫的*/
+.content20{
+  padding: 50px 0;
+}
+/*以上是慕晨寫的*/

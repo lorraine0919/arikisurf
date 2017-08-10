@@ -52,7 +52,7 @@ body {
           color: #0e2334; }
 
   .navDetail .navfix .navimg .iconGroup ul li:nth-child(3) a {
-    color: #e97b23; }
+    color: #ffbb58; }
 
   .body_28 {
     background-image: url("../images/8cart/bg_f.jpg");
@@ -240,7 +240,8 @@ body {
             margin: 0 auto; }
       .cart-body_28 .cart1-pc_28 .total_28 {
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #FFF;
         box-sizing: border-box;
         padding: 2%;
         margin-bottom: 3%; }
@@ -1031,7 +1032,7 @@ body {
       padding-bottom: 5%; }
       .cart-body_28 .cart1-phone_28 .total-phone .total-num,
       .cart-body_28 .cart1-phone_28 .total-phone .total-money {
-        color: #c14d13;
+        color: #ff9630;
         font-size: 25px;
         margin: 0 1%; }
   .cart-body_28 .notice_28 {
@@ -1383,11 +1384,11 @@ body {
         text-align: center;
         padding-bottom: 5%; }
         .order-confirm_30 .ProCfirmInfo-phone .Cfrim-total .getTotalMath {
-          color: #c14d13;
+          color: #d66d06;
           font-size: 25px;
           margin: 0 1%; }
         .order-confirm_30 .ProCfirmInfo-phone .Cfrim-total .getTotalPrice {
-          color: #c14d13;
+          color: #d66d06;
           font-size: 25px;
           margin: 0 1%; }
     .order-confirm_30 .OCfirmInfo {

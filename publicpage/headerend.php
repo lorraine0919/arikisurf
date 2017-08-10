@@ -49,8 +49,17 @@
                         <li><a href="map.php">衝浪地圖</a></li>
                         <li><a href="news.php">最新消息</a></li>
                         <li><a href="about.php">關於酋長</a></li>
-                        <li><a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a></li>
-                        <li><a href="cart.php" class="rwd">購物車</a></li>
+                        <li>
+                        <?php 
+                            // echo $_SESSION["account"];
+                            if(isset($_SESSION["account"])){
+                                echo "<a class='rwd' href='7member_update.php'><span id='login2'>會員專區</span></a>";
+                            }else{
+                                echo "<a class='rwd'><span id='login2'>會員登入</span></a>";
+                            }
+                         ?>    
+                        </li>
+                        <li><a class="rwd" id="rwdnavcart">購物車</a></li>
                     </ul>
 
                         <div class="iconGroup">
@@ -58,6 +67,7 @@
                                 <li>
                                     <span>
                                     <?php 
+
                                         // echo $_SESSION["account"];
                                         if(isset($_SESSION["account"])){
                                             echo "<a href='7member_update.php'><img src=",$_SESSION['mugshot']," alt='會員專區' style='width:30px;height:30px;border-radius:50%;' id='showlogin'></a>
@@ -73,7 +83,7 @@
                                     </span>
                                 </li>
                                 <li class="line"></li>
-                                <li><a href="cart.php"><img src="images/1common/shop.png" alt="">購物車</a></li>
+                                <li><a id="pcnavcart"><img src="images/1common/shop.png" alt="">購物車</a></li>
                             </ul>
                         </div>
                     </div>
@@ -96,9 +106,6 @@
             <input type="password" minlength="6" maxlength="12" placeholder="密碼" class="input19" id="memPsw">
             <p class="help19">
                 <span>
-                    <a href="7member_register.php">忘記密碼</a>  | 
-                </span>
-                <span>
                     <a href="7member_register.php">馬上註冊</a>
                 </span>
             </p>
@@ -116,5 +123,21 @@
         $('.close-menu').on('click', function() {
           $('.overlay').removeClass('open');
         });
+        /*購物車按下去判斷是否登入*/
+        $('#rwdnavcart').click(function(){
+            if($('#login2').text()=='會員登入'){
+                $('#lightbox19').fadeIn(500);
+            }else{
+                location.href="cart.php";
+            }
+        });
+        $('#pcnavcart').click(function(){
+            if($('#login2').text()=='會員登入'){
+                $('#lightbox19').fadeIn(500);
+            }else{
+                location.href="cart.php";
+            }
+        });
       });
+
     </script>

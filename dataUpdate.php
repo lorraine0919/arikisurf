@@ -12,6 +12,7 @@ switch($_FILES["upload21"]["error"] ){
 		$from = $_FILES["upload21"]["tmp_name"];
 
 		$to = "images/7member/mugshots/".mb_convert_encoding($_FILES["upload21"]["name"],"big5","utf-8");
+		$_SESSION["mugshot"] = "images/7member/mugshots/".$_FILES["upload21"]["name"];
 		//不過這種寫法萬一檔案名稱重複就糟了!
 
 		copy( $from, $to);

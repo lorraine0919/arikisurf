@@ -6,4 +6,5 @@
     unset($_SESSION['psw']);
     unset($_SESSION['member_no']);
     unset($_SESSION['mugshot']);
+
  ?>

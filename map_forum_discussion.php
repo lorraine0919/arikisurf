@@ -284,15 +284,16 @@ $pdo->exec($sqlview);
 
                  $('#submit2').click(function(){  
                       console.log("有按到喔");                                       
-                      $('.many').parent().eq(index-1).find('.many').unbind('click');
-                      $('.many').parent().eq(index-1).find('.many').css('color','#ED8C00');
-                      $('.many').parent().eq(index-1).find('.many').text("已檢舉");
+                      $('.many').parent().eq(index).find('.many').unbind('click');
+                      $('.many').parent().eq(index).find('.many').css('color','#ED8C00');
+                      $('.many').parent().eq(index).find('.many').text("已檢舉");
                     if(submit2count==0){         //送出沒點過
                         var content = $('.report2').val();
                         console.log("發言 : "+content);
                         function reqListener(){
                           console.log(this.responseText);                  
                         }
+                       var post_number =  <?php echo $post_number ?>;
                       var xhr = new XMLHttpRequest();
                       xhr.onload = reqListener;
                       var url = "map_quit2toDB.php?post_number="+post_number+"&report="+content+"&reply_number="+reply_number;

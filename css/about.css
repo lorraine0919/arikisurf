@@ -14,7 +14,7 @@
   color: #e97b23;
 }*/
     .navDetail .navfix .navimg ul.menu li:nth-child(6) a{
-        color: #e97b23;
+        color: #ffbb58;
     }
 
 @media screen and (max-width: 767px) {
@@ -662,3 +662,14 @@
 
   }
 /*桌機結束*/
+
+/*以下是慕晨寫的*/
+
+.about_title_17 .about_txt_17{
+  line-height: 26px;
+
+}
+.about_title_17 .about_txt_17 p{
+    opacity: 0.9;
+}
+/*以上是慕晨寫的*/

@@ -1,5 +1,6 @@
 @charset "UTF-8";
-* {text-decoration: none; }
+* {
+  text-decoration: none; }
 
 .content19 {
   width: 100vw;
@@ -14,18 +15,14 @@
 /*主區塊*/
 .main19 {
   position: relative;
-  margin: 25vh auto;
+  margin: 20vh auto;
   border-radius: 10px;
   color: #777;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 0px 10px 0 rgba(100, 100, 255, 0.5);
-}
+  background: white;
+  box-shadow: 0 0px 10px 0 rgba(100, 100, 255, 0.5); }
 
 .head19:first-child {
-  font-size: 25px;
-}
-
-.head19 p:first-child{letter-spacing:6px;}
+  font-size: 25px; }
 
 .head19, .login19 {
   margin: auto;
@@ -33,31 +30,30 @@
 
 .slogan19 {
   padding-top: 1vh;
-  padding-bottom: 2vh;
-  color: #DFA144; }
+  padding-bottom: 5vh;
+  color: #fa0; }
 
 .login19 .input19 {
   display: block;
   border-radius: 8px;
   padding-left: 10px; }
 
-.login19 .help19{
-  padding-top: 10px;
-  padding-bottom: 15px;
-}
-.login19 .help19 a{color: #777;}/*修改*/
-.login19 .help19 a:hover{
-  color: #15344F;
-  font-weight: bold;
-}
+.login19 .help19 a {
+  color: #777; }
 
-#submit19 {   /*刪除與修改*/
+/*修改*/
+#submit19 {
+  /*刪除與修改*/
+  /*  width: 60px;
+    margin-top: 2vw;
+    padding: 2px;*/
   color: #fff;
-  background-color: #DFA144;
+  background-color: #fa0;
   cursor: pointer;
-}
+  /*border-radius: 8px; */ }
 
-#close19 {    /*修改*/
+#close19 {
+  /*修改*/
   display: block;
   width: 40px;
   line-height: 40px;
@@ -73,10 +69,11 @@
   top: 0px;
   right: 0px; }
 
-#submit19:hover {   /*修改*/
+#submit19:hover {
+  /*修改*/
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .main19 {
     width: 80%;
     padding: 5vh 0vh; }
@@ -89,13 +86,10 @@
     max-width: 210px;
     padding: 4px;
     margin: 10px auto; } }
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 601px) {
   .main19 {
     width: 40%;
-    max-width: 450px;
-    padding: 6vh 0vh;
-    padding-top: 7vh
-  }
+    padding: 7vh 0vh; }
 
   .slogan19 {
     font-size: 18px; }
@@ -103,5 +97,5 @@
   .login19 .input19 {
     width: 55%;
     max-width: 220px;
-    padding: 8px;
+    padding: 5px;
     margin: 20px auto; } }

@@ -24,7 +24,7 @@
             <p>立即加入會員，享有客製化浪板、搶購限量配備等服務。</p>
         </div><!-- prompt26 -->
 
-        <form id="form26" action="7member_register2.php">
+        <form id="form26" action="7member_register2.php" method="post">
             <div class="title26">
                 <h2>帳號密碼設定</h2>
             </div>
@@ -62,7 +62,7 @@
                      </div>
                 </div>
                 <div class="item26">
-                    <input type="submit" class="arikicommon_btn" id="submit26" value="下一步">
+                    <input type="button" class="arikicommon_btn" id="submit26" value="下一步">
                 </div>
             </div><!-- detail26 -->
 

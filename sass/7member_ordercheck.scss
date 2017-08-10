@@ -204,6 +204,7 @@
             .customize-LB{
                 display: none; 
                 .cust-box{
+                    padding: 0 20px;
                     .cust-Info-box{
                         .cust-OD-Info{
                             padding:0;
@@ -246,13 +247,13 @@
                         .cust-img{
                             width: 50%;
                             margin:0 auto;
-                            padding-top: 170%;
+                            padding-top: 209%;
                             position: relative;
                             overflow: hidden;
                             img{
                                 width: 100%;
                                 position: absolute;
-                                top:-14%;
+                                top:1%;
                                 left:0;
                                 right:0;
                                 margin:auto;
@@ -795,3 +796,17 @@
     }
 }
 // <span class="rwdtitleshow">訂單編號</span>
+
+
+/*以下是慕晨打的*/
+@media screen and (max-width: 910px){
+    .left20 .sidebar20 .menu20 li a[href="7member_ordercheck.php"] {
+        background-color: #ed9046; }
+}
+@media screen and (min-width: 911px){
+.left20 .menu20 a[href="7member_ordercheck.php"]{
+        color: #ed9046; 
+        box-shadow: -5px 0px 0px #ed9046; 
+  }
+}
+/*以上是慕晨打的*/

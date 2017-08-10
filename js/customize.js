@@ -36,14 +36,15 @@ window.onload=function(){
 					$('.content19').fadeIn(500);
 					$('#submit19').off('click');
 					$('#submit19').click(function(){
-						
+						console.log('1');
 						$.post('customize_update.php',{
 				            'memId2' : $('#memId').val() ,
 				            'memPsw2' :  $('#memPsw').val()
 						},function(rs){
+
 							var rsarr=rs.split('|');
 							if(rsarr[0]=='1'){
-								console.log('1');
+								console.log(rs);
 								$('#login1').html("<a href='7member_update.php'>會員專區</a>");
 								$('.memberloginornot').val('1');
 								$('#customername').val(rsarr[1]);
@@ -52,7 +53,8 @@ window.onload=function(){
 								$('#customeraddress').val(rsarr[4]);
 								$('#lightbox19').fadeOut(500);
 							}else{
-
+								console.log(rs);
+								alert('帳號密碼輸入錯誤，請重新輸入');
 							}
 						});						
 					});		
@@ -67,6 +69,7 @@ window.onload=function(){
 			$.post('customize_update.php',{
 				'havelogin':'yes'
 			},function(rs){
+				console.log(rs);
 				// alert(rs);
 				var rsarr=rs.split('|');
 				console.log(rsarr);
@@ -78,7 +81,7 @@ window.onload=function(){
 					$('#customeraddress').val(rsarr[4]);
 					tostep3();
 				}else{
-
+					alert('帳號密碼輸入錯誤，請重新輸入');
 				}
 			});	
 			
@@ -706,7 +709,7 @@ $('#finishorder').click(function(){
 		'boarddemo':$('.step4_maxContent .boarddemo').attr('src'),
 		'customize_order_total':$('.priceshow').text()
 	},function(rs){
-		// alert(rs);
+		console.log(rs);
 	});
 
 });

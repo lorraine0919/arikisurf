@@ -39,14 +39,14 @@ body{overflow-y: scroll;}
       margin-bottom: 10px; }
       .setdown26 .form26 .item26 .dist26:nth-child(2) {
         margin-right: 5px; }
-    .setdown26 .form26 .submit26 {
+    .setdown26 .form26 #submit26 {
       display: block;
-      color: #000;
+      color: #fff;
       margin: auto;
       width: 150px; }
 
 /*setdown26*/
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 909px) {
   .setdown26 {
     width: 100%; }
     .setdown26 .prompt26 {
@@ -70,20 +70,23 @@ body{overflow-y: scroll;}
         letter-spacing: 10px; }
       .setdown26 .form26 .detail26 {
         width: 90%;
+        max-width: 500px;
         margin: auto; }
         .setdown26 .form26 .detail26 .item26 {
           padding-top: 8vw; }
           .setdown26 .form26 .detail26 .item26:first-child {
             padding-top: 50px; }
           .setdown26 .form26 .detail26 .item26 .label26 {
-            width: 7em; }
+            width: 5em; }
           .setdown26 .form26 .detail26 .item26 .input26 {
-            width: calc(100%  - 22.5px - 7em - 1vw - 4px); }
+            width: calc(100%  - 22.5px - 5em - 1vw - 4px); }
           .setdown26 .form26 .detail26 .item26 .gender26 {
-            width: calc(calc(100% - 7em - 1vw)/2 - 4px - 6vw);
-            margin-left: 6vw; }
+            width: calc(calc(100% - 5em - 1vw)/2 - 4px - 18px); /*修性別跑版*/
+            min-width: 66px;  /*修性別跑版*/
+            margin-left: 18px; } /*修性別跑版*/
+            .arikicommon_radio label span {margin: 0 12px;} /*修性別跑版*/
           .setdown26 .form26 .detail26 .item26 .dist26 {
-            width: calc((calc(100% - 7em - 1vw - 5px)/2) - 4px); }
+            width: calc((calc(100% - 5em - 1vw - 5px)/2) - 4px); }
 
   /*以下是慕晨寫的*/
 /*  .setdown26 .form26 .detail26 .item26 .label26 {
@@ -114,7 +117,7 @@ body{overflow-y: scroll;}
     text-align: center; }*/
 
   /*以上是慕晨寫的*/ }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 910px) {
   .register26 {
     background-image: url(../images/7member/register_bg.png); }
 

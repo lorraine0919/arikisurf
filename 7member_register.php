@@ -62,7 +62,7 @@
                         <label>
                             <input type="checkbox" name="sex" style="display: none" id="Read26" required>
                             <div class="circle"></div>
-                            <span>本人已閱讀並同意
+                            <span>已閱讀並同意
                                 <a href="#" id="rule26">會員條款</a>
                             </span>
                         </label>        

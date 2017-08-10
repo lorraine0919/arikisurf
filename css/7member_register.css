@@ -1,6 +1,8 @@
 @charset "UTF-8";
-img {
-  width: 100%; }
+.loading_bg{display: none;}
+body{overflow-y: scroll;}
+
+.register26 img {width: 100%; }
 
 /*=========清除浮動=========*/
 .setdown26:after {
@@ -128,5 +130,5 @@ img {
         position: relative;
         left: calc(65px/2); } }
 /*以下是慕晨寫的*/
-.setdown26 #form26 #submit26 {
-  text-align: center; }
+/*.setdown26 #form26 #submit26 {
+  text-align: center; }*/

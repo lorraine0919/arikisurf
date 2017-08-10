@@ -27,13 +27,13 @@
   .rule22 .section22 {
     color: #777; }
 
-.submit22 {
+#submit22 {
   margin-top: 2%;
   margin-bottom: 5%; }
 
 @media screen and (max-width: 999px) {
-  .rule22 {
-    height: 90vh; } }
+  .rule22 {height: 87vh;}
+}
 @media screen and (min-width: 1000px) {
   .rule22 .subject22 {
     margin: 5% 0% 2% 0%; }

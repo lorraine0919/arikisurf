@@ -52,6 +52,7 @@
           border-left: 50px solid #194165;
           border-top: 41px solid transparent; }
       .member_ordercheck_23 .ordercheck-title ul .li-click {
+        cursor: pointer;
         background-color: #DDD;
         color: #194165;
         position: relative;

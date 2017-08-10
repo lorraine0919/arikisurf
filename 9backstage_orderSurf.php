@@ -96,7 +96,7 @@ require_once('connectBooks.php');
                                             <input type="hidden" name="" value="<?php echo $OD_CT["account"] ?>"><!--member-->
                                             <input type="button" value="訂單明細" class="OD_btndetail btn btn-primary btn-sm pressgolightbox">
                                             <input type="button" value="已匯款" class="OD_btnatm btn btn-primary btn-sm pressgolightbox" <?php if($disInput>1){echo "disabled";}else{}; ?> >
-                                            <input type="button" value="已出貨" class="OD_btngo btn btn-primary btn-sm pressgolightbox" <?php if($disInput>1){echo "disabled";}else{}; ?> >
+                                            <input type="button" value="已出貨" class="OD_btngo btn btn-primary btn-sm pressgolightbox" <?php if($disInput>2){echo "disabled";}else{}; ?> >
                                         </td>
 
                                     </tr>

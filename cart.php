@@ -455,7 +455,7 @@
 
 		<div class="Order-box">
 			<div class="order-fin">
-				<h2>恭喜你完成交易，請於7日前完成匯款</h2>
+				<h2>恭喜你完成交易，請於7日內完成匯款</h2>
 			</div>
 			
 			<div class="big-title">

@@ -98,7 +98,7 @@
         background-color: #4C6E88;
         position: fixed;
         right: -100vh;
-        bottom: 0%;
+        top: 7.5%;
         transition: .5s;
         z-index: 20;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2) inset; }

@@ -91,4 +91,24 @@ ul.sidebar-menu li a[href="9backstage_map.php"] {
 tbody{
   font-size: 18px;
 }
+
+.g5, .tp{
+  width: 96%;
+}
+
+.g4{
+  width: 100%;
+}
+.title{
+  width: 100%;
+}
+.wave_title{
+  width: 10%;
+}
+.model.content-panel .table tr th{
+  font-size: 16px;
+}
+.postBang{
+  width: 24%;
+}
 /*以上是慕晨打的*/

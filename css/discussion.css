@@ -449,7 +449,7 @@ a {
     right: 0px; } }
 
   #loveinfo{
-    display: none !important;
+    display: none;
     position: absolute;
     top: -500%;
     right: 0;

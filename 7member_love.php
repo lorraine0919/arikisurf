@@ -41,7 +41,7 @@ $like->execute();
      while ($likeRow = $like->fetch(PDO::FETCH_ASSOC)) {     
 ?>    
      <div class="item">
-                 <a href="map_forum_discussion.php?post_number=<?php echo $likeRow["post_number"] ?>" class="map_a">                  
+                 <a class="map_a" href="map_forum_discussion.php?post_number=<?php echo $likeRow["post_number"] ?>&wave_number=<?php echo $likeRow["wave_number"] ?>" >                  
                      <div class="pic_i">                      
                             <img src='images/4wavepoint/<?php echo $likeRow["wave_number"] ?>/fou/<?php echo 
                             $likeRow["post_img"]  ?>'>

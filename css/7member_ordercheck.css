@@ -185,13 +185,13 @@
         .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img {
           width: 50%;
           margin: 0 auto;
-          padding-top: 170%;
+          padding-top: 209%;
           position: relative;
           overflow: hidden; }
           .member_ordercheck_23 .lightbox .customize-LB .cust-box .cust-img-btn-box .cust-img img {
             width: 100%;
             position: absolute;
-            top: -14%;
+            top: 1%;
             left: 0;
             right: 0;
             margin: auto; }

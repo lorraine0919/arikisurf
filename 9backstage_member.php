@@ -23,8 +23,8 @@ require_once('connectBooks.php');
                         <!-- 內容開始 -->
 
                           <!-- 上table開始 -->
-                          <h4 style=""><i class="fa fa-angle-right"></i>會員搜尋</h4>
-                          <table class="table table-bordered table-striped table-condensed" style=" ">
+                          <h4 style="display: none;"><i class="fa fa-angle-right"></i>會員搜尋</h4>
+                          <table class="table table-bordered table-striped table-condensed" style="display: none;">
                               <tr>
                                 <td>
                                   <input type="text" name="" class="new_guardsR">

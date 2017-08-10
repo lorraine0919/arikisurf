@@ -30,7 +30,7 @@ body{overflow-y: scroll;}
     .setdown26 .form26 .item26 .label26 {
       display: inline-block;
       text-align: right;
-      margin-right: 1vw; }
+      margin-right: calc(1vw + 0.5em); }
     .setdown26 .form26 .item26 .gender26 {
       box-sizing: border-box;
       text-align: center;
@@ -77,7 +77,7 @@ body{overflow-y: scroll;}
           .setdown26 .form26 .detail26 .item26:first-child {
             padding-top: 50px; }
           .setdown26 .form26 .detail26 .item26 .label26 {
-            width: 5em; }
+            width: 4.5em; }
           .setdown26 .form26 .detail26 .item26 .input26 {
             width: calc(100%  - 22.5px - 5em - 1vw - 4px); }
           .setdown26 .form26 .detail26 .item26 .gender26 {
@@ -147,7 +147,7 @@ body{overflow-y: scroll;}
       .setdown26 .form26 .item26 {
         padding-top: 25px; }
         .setdown26 .form26 .item26 .label26 {
-          width: 9em; }
+          width: 8.5em; }
         .setdown26 .form26 .item26 .input26 {
           width: calc(100%  - 22.5px - 9em - 1vw - 4px); }
         .setdown26 .form26 .item26 .gender26 {

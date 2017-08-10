@@ -149,10 +149,15 @@
         box-sizing: border-box;
         padding: .5em;
         background-color: #3A3A3A;
-        height: 44vh;
+        height: auto;
         position: relative;
         margin:3% auto;
         overflow: hidden; }  
+
+    .title20{
+    margin-top: 0px !important;
+    display: block !important;
+  }     
 } 
 
    

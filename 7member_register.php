@@ -244,11 +244,11 @@ function VerifyA(){
 //=========================會員條款=========================
 function ShowRule(){
     $id("memberRule").style.display = "";
-    $id("setdown26").style.visibility = "hidden";
+    $id("setdown26").style.display = "none";
 }
 function HaveRead(){
     $id("memberRule").style.display = "none";
-    $id("setdown26").style.visibility = "visible";
+    $id("setdown26").style.display = "";
     $id("Read26").checked = true;
 }
 

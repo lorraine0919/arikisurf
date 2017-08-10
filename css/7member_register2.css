@@ -41,7 +41,6 @@ body{overflow-y: scroll;}
         margin-right: 5px; }
     .setdown26 .form26 #submit26 {
       display: block;
-      color: #fff;
       margin: auto;
       width: 150px; }
 
@@ -87,6 +86,7 @@ body{overflow-y: scroll;}
             .arikicommon_radio label span {margin: 0 12px;} /*修性別跑版*/
           .setdown26 .form26 .detail26 .item26 .dist26 {
             width: calc((calc(100% - 5em - 1vw - 5px)/2) - 4px); }
+          #submit26{color: #000;}
 
   /*以下是慕晨寫的*/
 /*  .setdown26 .form26 .detail26 .item26 .label26 {
@@ -157,6 +157,7 @@ body{overflow-y: scroll;}
           width: calc((calc(100% - 9em - 1vw - 5px)/2) - 4px); }
       .setdown26 .form26 #submit26 {
         position: relative;
+        color: #fff;
         left: calc(65px/2); }
 
   /*以下是慕晨寫的*/

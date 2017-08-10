@@ -417,7 +417,8 @@ body {
             margin: 2% 0; }
             .InputInfo-body_29 .InputInfo-bgbox .InfoArea-Item .InfoArea-box-Item ul li input {
               color: black;
-              margin-left: 13%; }
+              margin-left: 13%;
+              width: 56%; }
             .InputInfo-body_29 .InputInfo-bgbox .InfoArea-Item .InfoArea-box-Item ul li .span-item {
               display: inline-block;
               width: 10%;

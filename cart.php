@@ -273,11 +273,20 @@
 
 			<div class="buyerInfo InfoArea-Item">
 				<div class="buyerInfo-box InfoArea-box-Item">
+					<?php 
+							if(isset($_SESSION["member_no"])==true){
+								$sql="select * from member where member_no = :member_no";
+								$pdostatement=$pdo->prepare($sql);
+								$pdostatement->bindvalue(':member_no',$_SESSION['member_no']);
+								$pdostatement->execute();
+								$pdorow=$pdostatement->fetch(PDO::FETCH_ASSOC);
+							}
+					 ?>
 					<ul>
-						<li><span class="Buyspan span-item">姓名</span><input type="text" class="arikicommon_inputtext buyerName" id="buyerName"></span></li>
-						<li><span class="Buyspan span-item">聯絡電話</span><input type="text" class="arikicommon_inputtext buyerTel" id="buyerTel" placeholder="訂購者常用電話"></span></li>
-						<li><span class="Buyspan span-item">E-mail</span><input type="text" class="arikicommon_inputtext buyerEmail" id="buyerEmail"></span></li>
-						<li><span class="Buyspan span-item">地址</span><input type="text" class="arikicommon_inputtext buyerAdress" id="buyerAdress"></span></li>
+						<li><span class="Buyspan span-item">姓名</span><input type="text" class="arikicommon_inputtext buyerName" id="buyerName" value="<?php echo $pdorow['name'] ?>  "></span></li>
+						<li><span class="Buyspan span-item">聯絡電話</span><input type="text" class="arikicommon_inputtext buyerTel" id="buyerTel" placeholder="訂購者常用電話" value="<?php echo $pdorow['phone'] ?>  "></span></li>
+						<li><span class="Buyspan span-item">E-mail</span><input type="text" class="arikicommon_inputtext buyerEmail" id="buyerEmail" value="<?php echo $pdorow['email'] ?>  "></span></li>
+						<li><span class="Buyspan span-item" >地址</span><input type="text" class="arikicommon_inputtext buyerAdress" id="buyerAdress" value="<?php echo $pdorow['city'].$pdorow['area'].$pdorow['address'] ?>  "></span></li>
 						<li><span class="Buyspan span-item">匯款帳號</span><input type="text" class="arikicommon_inputtext buyerAtm" id="buyerAtm" placeholder="輸入5碼" maxlength="5"></span></li>
 						<!-- <li><input type="checkbox" id="buy-sync-member" class="item-sync-member"><label for="buy-sync-member">同會員資料</label></li> -->
 					</ul>

@@ -6,6 +6,7 @@ $result = 2;
 $member_no=$_SESSION["member_no"];
 $post_number = $_REQUEST["post_number"];
 $reply_number = $_REQUEST["reply_number"];
+echo $reply_number;
 
 try{
 	require_once("connectBooks.php");  

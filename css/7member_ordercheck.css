@@ -15,6 +15,7 @@
       width: 90%;
       margin: 0 auto; }
       .member_ordercheck_23 .ordercheck-title ul li {
+        cursor: pointer;
         display: inline-block;
         box-sizing: border-box;
         padding: 20px;
@@ -52,7 +53,7 @@
           border-left: 50px solid #194165;
           border-top: 41px solid transparent; }
       .member_ordercheck_23 .ordercheck-title ul .li-click {
-        cursor: pointer;
+
         background-color: #DDD;
         color: #194165;
         position: relative;

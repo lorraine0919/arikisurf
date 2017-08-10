@@ -232,9 +232,8 @@
 			<div class="notice-context col-sm-12 col-xs-12">
 				<ul>
 					<li>只接受匯款方式。</li>
-					<li>買家匯款完成才會出貨。</li>
-					<li>如未到7日，才能進行取消交易。</li>
-					<li>匯款後，無法進行取消交易。</li>
+					<li>買家匯款完成後才會出貨。</li>
+					<li>若未於7日內匯款，將視同取消交易。</li>
 				</ul>
 			</div>
 			<div class="clearfix"></div>
@@ -576,10 +575,9 @@
 			<div class="Odover-notice">
 				<div class="Odo-notice">
 					<ul>
-						<li>請於七日內匯款至指定銀行帳戶，若逾期將視同方放棄交易</li>
-						<li>買家匯款完成才會出貨。</li>
-						<li>如未到7日，才能進行取消交易。</li>
-						<li>匯款後，無法進行取消交易。</li>
+						<li>只接受匯款方式。</li>
+						<li>買家匯款完成後才會出貨。</li>
+						<li>若未於7日內匯款，將視同取消交易。</li>
 					</ul>
 				</div>
 			</div>

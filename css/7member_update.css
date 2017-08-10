@@ -1,4 +1,6 @@
 @charset "UTF-8";
+.loading_bg{display: none;}
+body{overflow-y: scroll;}
 
 /*=========清除浮動=========*/
 .personal21:after, .changepsw21:after, .row21:after {

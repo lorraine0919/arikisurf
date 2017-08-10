@@ -1,6 +1,8 @@
 @charset "UTF-8";
-img {
-  width: 100%; }
+.loading_bg{display: none;}
+body{overflow-y: scroll;}
+
+.register26 img {width: 100%; }
 
 /*=========清除浮動=========*/
 .setdown26:after {
@@ -84,7 +86,7 @@ img {
             width: calc((calc(100% - 7em - 1vw - 5px)/2) - 4px); }
 
   /*以下是慕晨寫的*/
-  .setdown26 .form26 .detail26 .item26 .label26 {
+/*  .setdown26 .form26 .detail26 .item26 .label26 {
     width: 16%; }
 
   .setdown26 .form26 .detail26 .item26 .gender26 {
@@ -109,7 +111,7 @@ img {
     display: block; }
 
   .setdown26 .form26 .item26 {
-    text-align: center; }
+    text-align: center; }*/
 
   /*以上是慕晨寫的*/ }
 @media screen and (min-width: 1000px) {
@@ -150,15 +152,15 @@ img {
           margin-left: 2vw; }
         .setdown26 .form26 .item26 .dist26 {
           width: calc((calc(100% - 9em - 1vw - 5px)/2) - 4px); }
-      .setdown26 .form26 .submit26 {
+      .setdown26 .form26 #submit26 {
         position: relative;
         left: calc(65px/2); }
 
   /*以下是慕晨寫的*/
-  .setdown26 .form26 .item26 {
+/*  .setdown26 .form26 .item26 {
     text-align: right; }
     .setdown26 .form26 .item26 #submit26 {
       width: 67%;
-      padding: 10px 0; }
+      padding: 10px 0; }*/
 
   /*以上是慕晨寫的*/ }

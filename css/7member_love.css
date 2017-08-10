@@ -2,10 +2,7 @@
   margin-top: 40px !important;
   display: block !important;
 }
-.left20 .menu20 a[href="7member_love.php"]{
-  color: #ed9046;
-  box-shadow: -5px 0px 0px #ed9046;
-}
+
 
 .br-wrapper.br-theme-fontawesome-stars{
   float: left;
@@ -159,3 +156,18 @@
 } 
 
    
+/*以下是慕晨打的*/
+@media screen and (max-width: 910px){
+    .left20 .sidebar20 .menu20 li a[href="7member_love.php"] {
+        background-color: #ed9046; 
+        color: #fff;
+
+      }
+}
+@media screen and (min-width: 911px){
+.left20 .menu20 a[href="7member_love.php"]{
+        color: #ed9046; 
+        box-shadow: -5px 0px 0px #ed9046; 
+  }
+}
+/*以上是慕晨打的*/

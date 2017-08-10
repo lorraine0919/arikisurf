@@ -1,5 +1,4 @@
 .rule22 {
-  padding-top: 1vh;
   width: 100%;
   text-align: center;
   background-color: #32455B; }
@@ -12,7 +11,7 @@
   .rule22 .article22 {
     width: 80%;
     height: 60vh;
-    padding: 2vw;
+    padding: 20px 30px;
     margin: auto;
     overflow: auto;
     text-align: left;
@@ -27,16 +26,25 @@
   .rule22 .section22 {
     color: #777; }
 
-#submit22 {
-  margin-top: 2%;
-  margin-bottom: 5%; }
+/*#submit22 {margin-bottom: 5%;}*/
 
-@media screen and (max-width: 999px) {
-  .rule22 {height: 87vh;}
+@media screen and (max-width: 909px) {
+  .rule22 {
+    padding-top: 1vh;
+    height: 90vh;
+    padding-bottom: 4%;
+  }
+  .content22{margin-bottom: 4%;}
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 910px) {
+
+  .rule22{
+    padding-top: calc(1vh + 45px);
+    padding-bottom: 6%;
+  }
+  .content22{margin-bottom: 4%;}
   .rule22 .subject22 {
     margin: 5% 0% 2% 0%; }
   .rule22 .article22 {
-    width: 55%;
+    width: 63%;
     height: 50vh; } }

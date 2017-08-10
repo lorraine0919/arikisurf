@@ -12,8 +12,7 @@
   <!--(bake module/head.html)--><?php require_once('publicpage/head.php'); ?>
   <link  rel="stylesheet" type="text/css" href="css/cart.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script type="text/javascript" src="js/cart_process_28.js"></script>
-  <script type="text/javascript" src="js/cart_update.js"></script>
+
   <title>購物車</title>
  </head>
   <!--header end-->
@@ -610,6 +609,9 @@
 			</div>
 		</div>
 	</div>
+  <script type="text/javascript" src="js/cart_process_28.js"></script>
+  <script type="text/javascript" src="js/cart_update.js"></script>
+
 <!--(bake module/footer.html)--><?php require_once('publicpage/footer.php'); ?>
 </body>
 </html>

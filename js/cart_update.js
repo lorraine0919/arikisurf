@@ -126,21 +126,6 @@ var PamountVal2 = sessionStorage;
 
 
 
-    $('#buyerName').keyup(function(){
-        $('#CSget').text($(this).val());
-    });
-    $('#buyerTel').keyup(function(){
-        $('#Telget').text($(this).val());
-    });
-    $('#buyerEmail').keyup(function(){
-        $('#Emailget').text($(this).val());
-    });
-    $('#buyerAdress').keyup(function(){
-        $('#Adressget').text($(this).val());
-    });
-    $('#buyerAtm').keyup(function(){
-        $('#Atm-account').text($(this).val());
-    });
 
     $('.Pchange-deletbtn_PC').click(function(){
         var xhr = new XMLHttpRequest();
@@ -298,5 +283,15 @@ var PamountVal2 = sessionStorage;
         xhr.open("GET",url,true);
         xhr.send(null);
     });
+    
+
+    $('#next-page').click(function(){
+        $('#CSget').text($('#buyerName').val());
+        $('#Telget').text($('#buyerTel').val());
+        $('#Emailget').text( $('#buyerEmail').val());
+         $('#Adressget').text($('#buyerAdress').val());
+         $('#Atm-account').text( $('#buyerAtm').val());
+    });
+
     
 },false);
